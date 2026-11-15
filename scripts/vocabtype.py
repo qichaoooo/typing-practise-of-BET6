@@ -35,6 +35,7 @@ GREEN = "\033[32m"
 RED = "\033[31m"
 DIM = "\033[2m"
 BOLD = "\033[1m"
+UNDERLINE = "\033[4m"
 RESET = "\033[0m"
 
 
@@ -74,6 +75,23 @@ def word_stat(stats, word):
 def meaning(entry, sep="；"):
     return sep.join(f"{t['pos']}. {t['cn']}" if t["pos"] else t["cn"]
                     for t in entry["trans"]) or "（无释义）"
+
+
+def meaning_with_mark(entry, mark_sense):
+    """重建释义行，并把本次要练的义项加下划线。"""
+    senses = entry.get("senses") or []
+    if not senses:
+        return meaning(entry)
+    chunks = []
+    last_pos = None
+    for s in senses:
+        prefix = f"{s['pos']}. " if s["pos"] and s["pos"] != last_pos else ""
+        text = prefix + s["cn"]
+        if s is mark_sense:
+            text = f"{UNDERLINE}{text}{RESET}"
+        chunks.append(text)
+        last_pos = s["pos"]
+    return "；".join(chunks)
 
 
 def select_words(entries, stats, args):
@@ -231,18 +249,19 @@ def color_typed(typed, target):
     return "".join(out)
 
 
-def practice_one(term, entry, idx, total, mode):
+def practice_one(term, entry, idx, total, mode, sense=None):
     """练习一个词。
 
     返回 (ok, elapsed, keystrokes, errors, start) 或 None 表示退出。
     start 是这个词第一次击键的时刻。
     """
     target = entry["word"]
+    shown = meaning_with_mark(entry, sense) if mode == "show" else meaning(entry)
     if mode == "show":
         head = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{target}{RESET}"
-                f"  {DIM}/{entry['phonetic']}/{RESET}  {meaning(entry)}")
+                f"  {DIM}/{entry['phonetic']}/{RESET}  {shown}")
     else:
-        head = f"{DIM}[{idx}/{total}]{RESET} {BOLD}{meaning(entry)}{RESET}"
+        head = f"{DIM}[{idx}/{total}]{RESET} {BOLD}{shown}{RESET}"
 
     print("\r\033[K" + head)
     typed = []
@@ -295,7 +314,7 @@ def practice_one(term, entry, idx, total, mode):
     else:
         sys.stdout.write(f"\r\033[K   > {RED}{answer}{RESET}"
                          f"  →  {GREEN}{BOLD}{target}{RESET}"
-                         f"  {DIM}{meaning(entry)}{RESET}\n")
+                         f"  {DIM}{shown}{RESET}\n")
     sys.stdout.flush()
     return ok, elapsed, keystrokes, errors, start
 
@@ -326,8 +345,10 @@ def run(args):
         try:
             while i < len(queue):
                 entry, is_review = queue[i]
+                sense = (pick_sense(entry)
+                         if args.mode == "show" and not args.no_pinyin else None)
                 result = practice_one(term, entry, min(done + 1, total_planned),
-                                      total_planned, args.mode)
+                                      total_planned, args.mode, sense)
                 if result is None:
                     quit_early = True
                     break
@@ -355,13 +376,11 @@ def run(args):
                         queue.insert(min(i + 6, len(queue)), [entry, True])
 
                 # 标准模式的第二阶段：按逐字拼音把释义打出来（不计入错词和准确率）
-                if ok and args.mode == "show" and not args.no_pinyin:
-                    sense = pick_sense(entry)
-                    if sense:
-                        if practice_pinyin(term, sense) is None:
-                            quit_early = True
-                            break
-                        pinyin_count += 1
+                if ok and sense:
+                    if practice_pinyin(term, sense) is None:
+                        quit_early = True
+                        break
+                    pinyin_count += 1
                 i += 1
         finally:
             termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
