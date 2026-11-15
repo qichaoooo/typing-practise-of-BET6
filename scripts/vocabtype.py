@@ -174,15 +174,58 @@ def same_pos(a, b):
     return pos_group(a) == pos_group(b)
 
 
-def info_lines(entry, sense, index=None, total=None):
-    """按 ; 展示的词源/助记信息。"""
+def sense_keywords(sense):
+    if not sense:
+        return []
+    text = re.sub(r"\[[^\]]*\]", "", sense.get("cn", ""))
+    out = []
+    for part in re.split(r"[，,；;、/]", text):
+        part = part.strip(" 。.…（）()")
+        if len(part) >= 2:
+            out.append(part)
+    return out
+
+
+def matches_any(text, keywords):
+    return bool(text) and any(k in text for k in keywords)
+
+
+def info_lines(entry, sense, index=None, total=None, senses=None):
+    """按 ; 展示的词源/助记信息；能按义项过滤的字段尽量过滤。"""
     lines = []
     if sense:
         label = f"{sense['pos']}. " if sense.get("pos") else ""
-        tag = f" ({index}/{total})" if index else ""
+        tag = f" ({index}/{total})" if index and total and total > 1 else ""
         lines.append(f"{DIM}释义{tag}{RESET}   {label}{sense['cn']}")
+    keywords = sense_keywords(sense)
+    multi = len(senses or []) > 1
+
     if entry.get("method"):
-        lines.append(f"{DIM}助记{RESET}   {entry['method']}")
+        note = ""
+        if sense and multi:
+            method = entry["method"]
+            target = method.split("→")[-1] if "→" in method else method
+            if keywords and any(k in target for k in keywords):
+                note = "（对应本义项）"
+            else:
+                other = None
+                for s in (senses or []):
+                    if s is sense:
+                        continue
+                    if any(k in target for k in sense_keywords(s)):
+                        other = s["cn"]
+                        break
+                note = ("（词级" + (f"，主要对应：{other}" if other else "")
+                        + "）")
+        lines.append(f"{DIM}助记{note}{RESET}   {entry['method']}")
+
+    same_pos_count = 0
+    if sense:
+        same_pos_count = sum(
+            1 for s in (senses or [])
+            if s is not sense and same_pos(s.get("pos"), sense.get("pos")))
+    pos_note = "（词性级）" if same_pos_count else ""
+
     family = entry.get("family") or []
     if sense and sense.get("pos"):
         matched = [f for f in family if same_pos(f.get("pos"), sense["pos"])]
@@ -191,7 +234,8 @@ def info_lines(entry, sense, index=None, total=None):
         fam = "；".join(
             f"{f['pos']}. {f['word']} {f['cn']}".strip()
             for f in family[:4])
-        lines.append(f"{DIM}同根{RESET}   {fam}")
+        lines.append(f"{DIM}同根{pos_note}{RESET}   {fam}")
+
     synonyms = entry.get("synonyms") or []
     if sense and sense.get("pos"):
         matched = [s for s in synonyms if same_pos(s.get("pos"), sense["pos"])]
@@ -201,28 +245,47 @@ def info_lines(entry, sense, index=None, total=None):
         for s in synonyms[:3]:
             prefix = f"{s['pos']}. " if s.get("pos") else ""
             syns.append(prefix + " / ".join(s["words"]))
-        lines.append(f"{DIM}近义{RESET}   " + "；".join(syns))
+        lines.append(f"{DIM}近义{pos_note}{RESET}   " + "；".join(syns))
+
     forms = entry.get("forms") or {}
     if forms:
         parts = [f"{label} {forms[key]}" for key, label in FORM_ORDER
                  if forms.get(key)]
         if parts:
             lines.append(f"{DIM}变形{RESET}   " + "，".join(parts))
-    if entry.get("examples"):
-        ex = entry["examples"][0]
+
+    all_examples = entry.get("examples") or []
+    examples = all_examples
+    if multi and sense and keywords:
+        examples = [ex for ex in all_examples
+                    if matches_any(ex.get("cn"), keywords)]
+    if examples:
+        ex = examples[0]
         line = f"{DIM}例句{RESET}   {ex['en']}"
         if ex.get("cn"):
             line += f"  {DIM}{ex['cn']}{RESET}"
         lines.append(line)
+    elif all_examples and multi and keywords:
+        lines.append(f"{DIM}例句{RESET}   （该义项暂无匹配例句）")
+
     if entry.get("exam"):
         ex = entry["exam"][0]
-        line = f"{DIM}真题{RESET}   {ex['en']}"
+        word_level = "（词级）" if multi and sense else ""
+        line = f"{DIM}真题{word_level}{RESET}   {ex['en']}"
         if ex.get("source"):
             line += f"  {DIM}({ex['source']}){RESET}"
         lines.append(line)
-    if entry.get("phrases"):
-        ph = "；".join(f"{p['en']} {p['cn']}" for p in entry["phrases"][:3])
+
+    all_phrases = entry.get("phrases") or []
+    phrases = all_phrases
+    if multi and sense and keywords:
+        phrases = [p for p in all_phrases
+                   if matches_any(p.get("cn"), keywords)]
+    if phrases:
+        ph = "；".join(f"{p['en']} {p['cn']}" for p in phrases[:3])
         lines.append(f"{DIM}短语{RESET}   {ph}")
+    elif all_phrases and multi and keywords:
+        lines.append(f"{DIM}短语{RESET}   （该义项暂无匹配短语）")
     freq = entry.get("freq") or {}
     if freq:
         parts = []
@@ -267,7 +330,7 @@ def show_info(term, entry, sense, senses):
         current = senses[idx] if idx is not None else sense
         lines = info_lines(entry, current,
                            idx + 1 if idx is not None else None,
-                           len(senses))
+                           len(senses), senses)
         can_switch = idx is not None and len(senses) > 1
         hint_text = ("j/k 查看其他义项 · " if can_switch else "") + "再按 ; 继续拼写"
         hint = f"   {DIM}{hint_text}{RESET}"
