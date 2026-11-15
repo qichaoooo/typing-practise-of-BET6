@@ -140,7 +140,7 @@ def color_pinyin_typed(typed, expected):
     return "".join(out)
 
 
-def practice_pinyin(term, word, sense, idx, total):
+def practice_pinyin(term, sense):
     """第二阶段：照着逐字拼音把释义全拼打出来。打错不记录，Enter 直接过关。"""
     letters = [normalize_pinyin(py) for _, py in sense["tokens"]]
     expected = "".join(letters)
@@ -151,10 +151,7 @@ def practice_pinyin(term, word, sense, idx, total):
     top = "".join(ch + " " * (w - disp_width(ch)) for ch, py, w in cells)
     bottom = "".join(py + " " * (w - len(py)) for ch, py, w in cells)
 
-    print(f"\n   {DIM}[{idx}/{total}] 第 2 步 · 全拼打出释义{RESET}"
-          f"  {BOLD}{word}{RESET}")
-    print(f"   {DIM}空格随意，打错不计入错词，Enter 过关；"
-          f"输入行会提示当前在拼哪个字。{RESET}")
+    print()
     print(f"   {DIM}{sense['pos']}.{RESET} {BOLD}{sense['cn']}{RESET}")
     print("   " + top.rstrip())
     print("   " + bottom.rstrip())
@@ -361,9 +358,7 @@ def run(args):
                 if ok and args.mode == "show" and not args.no_pinyin:
                     sense = pick_sense(entry)
                     if sense:
-                        if practice_pinyin(term, entry["word"], sense,
-                                           min(done, total_planned),
-                                           total_planned) is None:
+                        if practice_pinyin(term, sense) is None:
                             quit_early = True
                             break
                         pinyin_count += 1
