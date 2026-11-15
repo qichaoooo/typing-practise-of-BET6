@@ -1,0 +1,4 @@
+#!/bin/sh
+# vocabtype 启动器：可在任意目录运行，也可软链到 ~/.local/bin
+self=$(readlink -f "$0")
+exec python3 -I "$(dirname "$self")/scripts/vocabtype.py" "$@"
