@@ -1,0 +1,40 @@
+[
+ {
+  "word": "air-condition",
+  "phonetic": "ˈeәkәnˌdiʃən",
+  "trans": [{"pos": "vt", "cn": "设以空调设备，用空调调节"}]
+ },
+ {
+  "word": "canon",
+  "phonetic": "ˈkænən",
+  "trans": [{"pos": "n", "cn": "教会法规；规范，准则；教士"}]
+ },
+ {
+  "word": "correspondent",
+  "phonetic": "ˌkɒrɪˈspɒndənt",
+  "trans": [{"pos": "n", "cn": "通信者，(新闻)通讯员，记者"}]
+ },
+ {
+  "word": "glamour",
+  "phonetic": "ˈglæmә",
+  "trans": [
+   {"pos": "n", "cn": "魅力，迷人的美，魔法"},
+   {"pos": "v", "cn": "迷惑"}
+  ]
+ },
+ {
+  "word": "proceedings",
+  "phonetic": "prəˈsiːdɪŋz",
+  "trans": [{"pos": "n", "cn": "事项，行径，事件；诉讼；会议录，记录汇编"}]
+ },
+ {
+  "word": "telecommunication",
+  "phonetic": "ˈtelikәmjuːniˈkeiʃәn",
+  "trans": [{"pos": "n", "cn": "电讯，远距离通讯，无线电通讯"}]
+ },
+ {
+  "word": "weapon",
+  "phonetic": "ˈwepən",
+  "trans": [{"pos": "n", "cn": "武器，兵器"}]
+ }
+]

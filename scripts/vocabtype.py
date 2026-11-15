@@ -13,7 +13,8 @@
   python3 -I vocabtype.py --new           # 只练还没练过的词
   python3 -I vocabtype.py --stats         # 查看累计进度
 
-按键：Esc / Ctrl-C 退出并查看本次结果。
+按键：Esc / Ctrl-C 退出并查看本次结果；练习中按 ; 查看该词的词根、同根词、
+近义词、变形、例句、真题和词频，再按 ; 继续拼写。
 """
 import argparse
 import json
@@ -143,6 +144,86 @@ def pick_sense(entry):
     return random.choices(senses, weights=weights, k=1)[0]
 
 
+FORM_ORDER = (("p", "过去式"), ("d", "过去分词"), ("i", "现在分词"),
+              ("3", "第三人称单数"), ("s", "复数"),
+              ("r", "比较级"), ("t", "最高级"))
+
+
+def info_lines(entry, sense):
+    """按 ; 展示的词源/助记信息。"""
+    lines = []
+    if sense:
+        label = f"{sense['pos']}. " if sense.get("pos") else ""
+        lines.append(f"{DIM}释义{RESET}   {label}{sense['cn']}")
+    if entry.get("method"):
+        lines.append(f"{DIM}词根{RESET}   {entry['method']}")
+    if entry.get("family"):
+        fam = "；".join(
+            f"{f['pos']}. {f['word']} {f['cn']}".strip()
+            for f in entry["family"][:4])
+        lines.append(f"{DIM}同根{RESET}   {fam}")
+    if entry.get("synonyms"):
+        syns = []
+        for s in entry["synonyms"][:3]:
+            prefix = f"{s['pos']}. " if s.get("pos") else ""
+            syns.append(prefix + " / ".join(s["words"]))
+        lines.append(f"{DIM}近义{RESET}   " + "；".join(syns))
+    forms = entry.get("forms") or {}
+    if forms:
+        parts = [f"{label} {forms[key]}" for key, label in FORM_ORDER
+                 if forms.get(key)]
+        if parts:
+            lines.append(f"{DIM}变形{RESET}   " + "，".join(parts))
+    if entry.get("examples"):
+        ex = entry["examples"][0]
+        line = f"{DIM}例句{RESET}   {ex['en']}"
+        if ex.get("cn"):
+            line += f"  {DIM}{ex['cn']}{RESET}"
+        lines.append(line)
+    if entry.get("exam"):
+        ex = entry["exam"][0]
+        line = f"{DIM}真题{RESET}   {ex['en']}"
+        if ex.get("source"):
+            line += f"  {DIM}({ex['source']}){RESET}"
+        lines.append(line)
+    if entry.get("phrases"):
+        ph = "；".join(f"{p['en']} {p['cn']}" for p in entry["phrases"][:3])
+        lines.append(f"{DIM}短语{RESET}   {ph}")
+    freq = entry.get("freq") or {}
+    if freq:
+        parts = []
+        if freq.get("bnc"):
+            parts.append(f"BNC {freq['bnc']}")
+        if freq.get("frq"):
+            parts.append(f"COCA {freq['frq']}")
+        if freq.get("collins"):
+            parts.append(f"Collins {freq['collins']}星")
+        if freq.get("oxford"):
+            parts.append("Oxford 核心")
+        if parts:
+            lines.append(f"{DIM}词频{RESET}   " + " · ".join(parts))
+    if not lines:
+        lines.append(f"{DIM}暂无更多词源信息{RESET}")
+    return lines
+
+
+def show_info(term, entry, sense):
+    """暂停练习，显示词源/助记；再按 ; 或 Enter 返回。Esc 退出。"""
+    print()
+    for line in info_lines(entry, sense):
+        print("   " + line)
+    print(f"   {DIM}再按 ; 继续拼写{RESET}")
+    while True:
+        try:
+            k = term.key()
+        except KeyboardInterrupt:
+            return None
+        if k == Keys.ESC or k == Keys.CTRL_C:
+            return None
+        if k == ord(";") or k in Keys.ENTER:
+            return True
+
+
 def color_pinyin_typed(typed, expected):
     out = []
     i = 0
@@ -158,7 +239,7 @@ def color_pinyin_typed(typed, expected):
     return "".join(out)
 
 
-def practice_pinyin(term, sense):
+def practice_pinyin(term, entry, sense):
     """第二阶段：照着逐字拼音把释义全拼打出来。打错不记录，Enter 直接过关。"""
     letters = [normalize_pinyin(py) for _, py in sense["tokens"]]
     expected = "".join(letters)
@@ -198,6 +279,11 @@ def practice_pinyin(term, sense):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if k == ord(";"):
+            if show_info(term, entry, sense) is None:
+                return None
+            draw()
+            continue
         if k in Keys.BACKSPACE:
             if typed:
                 typed.pop()
@@ -268,6 +354,7 @@ def practice_one(term, entry, idx, total, mode, sense=None):
     keystrokes = 0
     errors = 0
     start = None
+    paused = 0.0
 
     def draw():
         sys.stdout.write("\r\033[K   > "
@@ -283,6 +370,14 @@ def practice_one(term, entry, idx, total, mode, sense=None):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if k == ord(";"):
+            pause_start = time.monotonic()
+            if show_info(term, entry, sense) is None:
+                return None
+            if start is not None:
+                paused += time.monotonic() - pause_start
+            draw()
+            continue
         if k in Keys.BACKSPACE:
             if typed:
                 typed.pop()
@@ -306,7 +401,7 @@ def practice_one(term, entry, idx, total, mode, sense=None):
             if mode == "show" and "".join(typed) == target:
                 break
 
-    elapsed = time.monotonic() - start if start else 0.0
+    elapsed = (time.monotonic() - start - paused) if start else 0.0
     answer = "".join(typed)
     ok = answer == target
     if ok:
@@ -377,7 +472,7 @@ def run(args):
 
                 # 标准模式的第二阶段：按逐字拼音把释义打出来（不计入错词和准确率）
                 if ok and sense:
-                    if practice_pinyin(term, sense) is None:
+                    if practice_pinyin(term, entry, sense) is None:
                         quit_early = True
                         break
                     pinyin_count += 1
