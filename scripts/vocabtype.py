@@ -159,22 +159,46 @@ FORM_ORDER = (("p", "过去式"), ("d", "过去分词"), ("i", "现在分词"),
               ("r", "比较级"), ("t", "最高级"))
 
 
-def info_lines(entry, sense):
+def pos_group(pos):
+    parts = set((pos or "").lower().replace("&", " ").replace("/", " ").split())
+    if parts & {"v", "vt", "vi"}:
+        return "v"
+    if "n" in parts:
+        return "n"
+    return (pos or "").lower()
+
+
+def same_pos(a, b):
+    if not a or not b:
+        return True
+    return pos_group(a) == pos_group(b)
+
+
+def info_lines(entry, sense, index=None, total=None):
     """按 ; 展示的词源/助记信息。"""
     lines = []
     if sense:
         label = f"{sense['pos']}. " if sense.get("pos") else ""
-        lines.append(f"{DIM}释义{RESET}   {label}{sense['cn']}")
+        tag = f" ({index}/{total})" if index else ""
+        lines.append(f"{DIM}释义{tag}{RESET}   {label}{sense['cn']}")
     if entry.get("method"):
         lines.append(f"{DIM}助记{RESET}   {entry['method']}")
-    if entry.get("family"):
+    family = entry.get("family") or []
+    if sense and sense.get("pos"):
+        matched = [f for f in family if same_pos(f.get("pos"), sense["pos"])]
+        family = matched or family
+    if family:
         fam = "；".join(
             f"{f['pos']}. {f['word']} {f['cn']}".strip()
-            for f in entry["family"][:4])
+            for f in family[:4])
         lines.append(f"{DIM}同根{RESET}   {fam}")
-    if entry.get("synonyms"):
+    synonyms = entry.get("synonyms") or []
+    if sense and sense.get("pos"):
+        matched = [s for s in synonyms if same_pos(s.get("pos"), sense["pos"])]
+        synonyms = matched or synonyms
+    if synonyms:
         syns = []
-        for s in entry["synonyms"][:3]:
+        for s in synonyms[:3]:
             prefix = f"{s['pos']}. " if s.get("pos") else ""
             syns.append(prefix + " / ".join(s["words"]))
         lines.append(f"{DIM}近义{RESET}   " + "；".join(syns))
@@ -229,18 +253,40 @@ def physical_lines(text, cols):
     return max(1, (display_width(text) + cols - 1) // cols)
 
 
-def show_info(term, entry, sense):
-    """暂停练习，显示词源/助记；再按 ; 或 Enter 关闭面板并继续。Esc 退出。"""
+def show_info(term, entry, sense, senses):
+    """暂停练习，显示词源/助记；j/k 切换义项；; 或 Enter 关闭。Esc 退出。"""
     cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
-    lines = info_lines(entry, sense)
-    hint = f"   {DIM}再按 ; 继续拼写{RESET}"
-    print()
-    for line in lines:
-        print("   " + line)
-    sys.stdout.write(hint)
-    sys.stdout.flush()
-    total = (1 + sum(physical_lines("   " + line, cols) for line in lines)
-             + physical_lines(hint, cols))
+    try:
+        idx = senses.index(sense) if sense is not None else None
+    except ValueError:
+        idx = None
+    total_lines = 0
+
+    def render():
+        nonlocal total_lines
+        current = senses[idx] if idx is not None else sense
+        lines = info_lines(entry, current,
+                           idx + 1 if idx is not None else None,
+                           len(senses))
+        can_switch = idx is not None and len(senses) > 1
+        hint_text = ("j/k 查看其他义项 · " if can_switch else "") + "再按 ; 继续拼写"
+        hint = f"   {DIM}{hint_text}{RESET}"
+        print()
+        for line in lines:
+            print("   " + line)
+        sys.stdout.write(hint)
+        sys.stdout.flush()
+        total_lines = (1 + sum(physical_lines("   " + line, cols)
+                               for line in lines)
+                       + physical_lines(hint, cols))
+
+    def clear():
+        nonlocal total_lines
+        sys.stdout.write(f"\r\033[{total_lines - 1}A\033[J")
+        sys.stdout.flush()
+        total_lines = 0
+
+    render()
     while True:
         try:
             k = term.key()
@@ -248,10 +294,19 @@ def show_info(term, entry, sense):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if idx is not None and len(senses) > 1 and k == ord("j"):
+            clear()
+            idx = (idx + 1) % len(senses)
+            render()
+            continue
+        if idx is not None and len(senses) > 1 and k == ord("k"):
+            clear()
+            idx = (idx - 1) % len(senses)
+            render()
+            continue
         if k == ord(";") or k in Keys.ENTER:
             # 清掉本次面板，避免多次按 ; 时内容在屏幕上重复叠加
-            sys.stdout.write(f"\r\033[{total - 1}A\033[J")
-            sys.stdout.flush()
+            clear()
             return True
 
 
@@ -311,7 +366,7 @@ def practice_pinyin(term, entry, sense):
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
         if k == ord(";"):
-            if show_info(term, entry, sense) is None:
+            if show_info(term, entry, sense, entry.get("senses") or []) is None:
                 return None
             draw()
             continue
@@ -409,7 +464,7 @@ def practice_one(term, entry, idx, total, mode, sense=None):
             return None
         if k == ord(";"):
             pause_start = time.monotonic()
-            if show_info(term, entry, sense) is None:
+            if show_info(term, entry, sense, entry.get("senses") or []) is None:
                 return None
             if start is not None:
                 paused += time.monotonic() - pause_start

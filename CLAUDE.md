@@ -65,6 +65,11 @@
   词形变化、例句、真题、短语、词频（有哪项显示哪项）。
 - 再按 `;` 或 `Enter` 关闭面板并继续；关闭时必须清除本次面板占用的终端行，
   避免同一词多次按 `;` 时内容在屏幕上重复叠加。再次按 `;` 会重新显示。
+- 面板内按 `j` / `k` 循环查看该词的其他义项（只查看，不改变正在练的义项）：
+  释义行显示 `(i/n)`，同根词/近义词按当前义项的词性过滤。提示语为
+  `j/k 查看其他义项 · 再按 ; 继续拼写`。
+- 助记是**词级**数据（源数据每词只有一条 `remMethod`），切换义项时不变；
+  不得编造每个义项各自的助记。
 - 再按 `;` 或 `Enter` 返回，已输入的缓冲保留。
 - 阶段 1 的暂停时长必须从 WPM 计时中扣除。
 - `Esc` / `Ctrl-C` 在面板里同样退出。
@@ -152,9 +157,10 @@ python3 -m venv .venv
 - 必须用 `script` 分配 pty；程序要求 `isatty`，且用 cbreak 逐键读取。
 - 输入前延迟约 1 秒：`tty.setcbreak` 用 `TCSAFLUSH`，过早送入的按键会被丢弃。
 - 测试一律用 `--stats-file /tmp/...`，不要污染用户真实进度。
-- 至少覆盖：`show` 完整流程、拼音阶段、`;` 面板（两个阶段）、下划线义项、
-  错词重排、`recall`、`--no-pinyin`、`--stats`、`--level cet6/cet4/extra`、
-  带空格的短语（`according to`）、带重音词（`coup d'état` 敲 `coup d'etat`）。
+- 至少覆盖：`show` 完整流程、拼音阶段、`;` 面板（两个阶段、`j`/`k` 切换义项、
+  关闭时清除面板）、下划线义项、错词重排、`recall`、`--no-pinyin`、`--stats`、
+  `--level cet6/cet4/extra`、带空格的短语（`according to`）、带重音词
+  （`coup d'état` 敲 `coup d'etat`）。
 - 改脚本后先 `python3 -I -m py_compile scripts/vocabtype.py scripts/build_wordlist.py`。
 
 ### 数据改动后的检查
