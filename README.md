@@ -1,14 +1,16 @@
 # vocabtype — CET-6 背单词 + 打字练习
 
-终端里把「背单词」和「练打字」合并成一件事：练习材料是 2352 个六级词汇
-（音标、词性、中文释义、短语、词根/助记、同根词、近义词、例句/真题、词形变化、
-词频，以及每条释义的逐字拼音）。运行期只用 Python 标准库；只有重建数据时才需要
-pypinyin 和 ECDICT。
+终端里把「背单词」和「练打字」合并成一件事：练习材料是 **5,823 个词条**
+（CET4 4,434 / CET6 1,310 / 大纲外扩展 79），按《全国大学英语四、六级考试大纲
+（2016 年修订版）》的官方词表标注级别。每个词条包含音标、词性、中文释义、短语、
+词根/助记、同根词、近义词、例句/真题、词形变化、词频，以及每条释义的逐字拼音。
+运行期只用 Python 标准库；只有重建数据时才需要 pypinyin、ECDICT 和 pymupdf。
 
 ## 快速开始
 
 ```sh
-vocabtype                     # 随机 30 个词：拼英文 + 全拼释义
+vocabtype                     # 随机 30 个词（四级+六级+扩展）：拼英文 + 全拼释义
+vocabtype --level cet6        # 只练官方六级★词（推荐备考时用）
 vocabtype -n 50 --mode recall # 只看中文释义，凭记忆拼写英文
 vocabtype --weak              # 专练错误率最高的词
 vocabtype --new               # 只练还没练过的词
@@ -71,6 +73,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 ```
 -n, --count N      本次词数（默认 30）
 --mode show|recall 练习模式
+--level LEVEL      all（默认）| cet6 | cet4 | extra，按官方级别筛选
 --no-pinyin        标准模式跳过全拼释义阶段
 --weak             按历史错误率优先挑选
 --new              只选没练过的词
@@ -99,40 +102,62 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 
 ## 数据来源与核对
 
-最终词库 **2352 词 / 5390 个义项**：
+### 官方词表
 
-- 主体来自 [kajweb/dict](https://github.com/kajweb/dict) 的 CET6_3 词库（2345 词），
-  清洗后保留全部词条。
-- 与 [mahavivo/english-wordlists](https://github.com/mahavivo/english-wordlists) 的
-  2219 个六级词交叉核对：共同 2211 词；补入对方有而 CET6_3 缺的 7 词
-  （`air-condition`、`canon`、`correspondent`、`glamour`、`proceedings`、
-  `telecommunication`、`weapon`）；其余差异词逐一核对后保留。
-- 用 [ECDICT](https://github.com/skywind3000/ECDICT) 交叉核对：原 2345 词中 2077 个
-  直接带 `cet6` 标签，其余多为六级词表也会收录的 CET4 基础词或词典未收录词。
-- 释义清洗：删除混入中文释义的 IPA 注音（如 `['kɒnvɪkt]`），统一空白和标点。
-- 信息补全（2352 词中）：词根/助记 1819、同根词 1973、近义词 2249、例句 2325、
-  真题句 1193、短语 1792；ECDICT 补齐 2033 词的词形变化、2351 词的 BNC/COCA
-  词频；缺失音标从 ECDICT 回填，个别上游也缺的手工补。
+- 《全国大学英语四、六级考试大纲（2016 年修订版）》由全国大学英语四、六级考试
+  委员会编写，教育部教育考试院（NEEA）官网发布，现行有效。
+  [官方大纲页](https://cet.neea.edu.cn/html1/folder/16113/1588-1.htm) ·
+  [官方 PDF](https://cet.neea.edu.cn/res/Home/1704/55b02330ac17274664f06d9d3db8249d.pdf)
+- 大纲附「四、六级考试词表」：官方口径 **5,418 个词目**（含拼写变体），其中
+  **六级词用 ★ 标出（1,263 个）**。词表**只列词形**，不给词性、释义、读音。
+- `data/official_2016.json` 是从官方 PDF 提取并人工核对过的词表（5,377 行，
+  含 ★ 标记与派生词），随仓库版本化；提取脚本是 `scripts/parse_official.py`。
+- 官方词表没有释义，所以网上所有带中文释义、音标、助记的「大纲词汇」都是二次
+  加工版本。本项目用 ECDICT 补释义/音标/词形/词频，原有 kajweb 数据中的助记、
+  同根词、例句等能保留的继续保留。
+
+### 合并结果
+
+最终 **5,823 个词条 / 13,439 个义项**：
+
+- 级别：CET4 4,434 · CET6 1,310 · 大纲外扩展 79（界面分别标注 `CET4`、
+  `CET6`、`扩展`）。
+- 原 kajweb CET6_3 的 2,345 词保留；新增 **3,471 个官方词目**，释义和音标来自
+  ECDICT；官方词目覆盖率为 100%。
+- 同形异义词（官方分列的 `bank`、`check` 等）合并为一条。
+- 少量复合词/短语在 ECDICT 没有音标（如 `according to`、`brand-new`），界面就不
+  显示音标；带重音或短语的词条用 `typing` 字段给出实际敲击形式，例如
+  `coup d'état` 敲 `coup d'etat`、`cliché` 敲 `cliche`。
+- 信息补全（有则显示）：词根/助记 1,819、同根词 1,973、近义词 2,249、例句
+  2,325、真题句 1,193、短语 1,792；ECDICT 补词形变化和 BNC/COCA 词频。
 - 逐字拼音由 pypinyin 生成，38 个上下文多音字选择经过人工抽查；拼音阶段打错
-  不计分。发现拼音错误时写入 `data/pinyin_fixes.json` 再重建，不要手改生成文件。
-- 发现释义、音标等错误时写入 `data/word_fixes.json` 再重建，可覆盖任意字段；
-  这两个修正文件会随仓库一起版本化。
+  不计分。
+- 发现释义、音标等错误时写入 `data/word_fixes.json`；发现拼音错误写入
+  `data/pinyin_fixes.json`，再重建。两个修正文件随仓库版本化，不要手改生成物。
 
-重建步骤：
+### 重建
 
 ```sh
-# 1. 基础词库（--ecdict 可选，用于补词形和词频）
-python3 -I scripts/build_wordlist.py data/cet6_raw.zip data/extra_words.json \
-    data/cet6.json data/cet6-words.txt --ecdict data/sources/stardict.db
+# 0. 从官方 PDF 生成版本化的官方词表（需要 pymupdf）
+.venv/bin/python -I scripts/parse_official.py \
+    data/sources/official_cet_2016.pdf data/sources/gh_cet_word_list.txt \
+    data/official_2016.json
 
-# 2. 逐字拼音
-python3 -m venv .venv && .venv/bin/pip install pypinyin
+# 1. 合并词库（--official 标级别并补缺失词，--ecdict 提供释义/音标/词形/词频）
+python3 -I scripts/build_wordlist.py data/cet6_raw.zip data/extra_words.json \
+    data/cet6.json data/cet6-words.txt \
+    --ecdict data/sources/stardict.db --official data/official_2016.json
+
+# 2. 逐字拼音（会覆盖 senses）
+python3 -m venv .venv
+.venv/bin/pip install pypinyin pymupdf
 .venv/bin/python -I scripts/add_pinyin.py data/cet6.json
 ```
 
-第二步会覆盖 `data/cet6.json` 里的 `senses`；只跑第一步会丢失拼音数据。
 原始下载文件（`data/sources/`，约 1 GB）不入库：
 
+- 官方 2016 大纲 PDF：`https://cet.neea.edu.cn/res/Home/1704/55b02330ac17274664f06d9d3db8249d.pdf`
+- 官方词表纯文本（用于修复 PDF 排版）：`https://raw.githubusercontent.com/JavaProgrammerLB/cet-word-list/master/word-list.txt`
 - CET6_3：`https://raw.githubusercontent.com/kajweb/dict/master/book/1521164633851_CET6_3.zip`
 - mahavivo：`https://raw.githubusercontent.com/mahavivo/english-wordlists/master/CET6_edited.txt`
 - ECDICT：`https://github.com/skywind3000/ECDICT/releases/download/1.0.28/ecdict-sqlite-28.zip`（解压出 `stardict.db`）

@@ -18,10 +18,12 @@ Sources:
 Pinyin senses are added afterwards by scripts/add_pinyin.py.
 """
 import argparse
+import itertools
 import json
 import os
 import re
 import sqlite3
+import unicodedata
 import zipfile
 
 CJK = re.compile(r"[㐀-鿿]")
@@ -173,6 +175,184 @@ def load_extras(path):
     return extras
 
 
+POS_MAP = {
+    "a": "adj", "adj": "adj", "ad": "adv", "adv": "adv", "n": "n",
+    "v": "v", "vt": "vt", "vi": "vi", "prep": "prep", "conj": "conj",
+    "pron": "pron", "num": "num", "art": "art", "int": "int", "aux": "aux",
+}
+
+
+def expand_official(word):
+    """把官方词表的写法展开成具体拼写。
+
+    armo(u)r -> armor / armour；analyze/-yse -> analyze / analyse；
+    a/an -> a / an；coup (d'état) -> coup d'état。
+    """
+    word = word.replace("Ｇ", "-").strip()
+    if word == "coup (d'état)":
+        return {"coup d'état"}
+    matches = list(re.finditer(r"\((.*?)\)", word))
+    out = set()
+    for bits in itertools.product([0, 1], repeat=len(matches)):
+        text, idx = "", 0
+        for m, keep in zip(matches, bits):
+            text += word[idx:m.start()]
+            if keep:
+                text += m.group(1)
+            idx = m.end()
+        text += word[idx:]
+        out.add(text.strip())
+    result = set(out)
+    for w in list(out):
+        if "/" in w:
+            parts = w.split("/")
+            first = parts[0]
+            result.add(first)
+            for part in parts[1:]:
+                if part.startswith("-"):
+                    letters = part[1:]
+                    result.add(first[:max(0, len(first) - len(letters))] + letters)
+                else:
+                    result.add(part)
+    return {w for w in result if re.search(r"[A-Za-z]", w)}
+
+
+def match_key(text):
+    """匹配用：保留字母（含带音标字母），去掉空格、连字符、撇号等。"""
+    return re.sub(r"[^a-zà-ÿ]", "", text.lower())
+
+
+def ascii_typing(text):
+    """练习时实际要敲的 ASCII 形式（é -> e，去掉声调符号）。"""
+    s = unicodedata.normalize("NFKD", text)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    s = s.replace("’", "'").replace("‘", "'").replace("–", "-").replace("—", "-")
+    s = "".join(c for c in s if ord(c) < 128)
+    return s.strip() or text
+
+
+def build_official_maps(official):
+    level_map, folded_map = {}, {}
+
+    def add(text, level):
+        for variant in expand_official(text):
+            key = match_key(variant)
+            if not key:
+                continue
+            if level_map.get(key) != "cet6":
+                level_map[key] = level
+            folded = match_key(ascii_typing(variant))
+            if folded and folded_map.get(folded) != "cet6":
+                folded_map[folded] = level
+
+    for entry in official:
+        add(entry["word"], entry["level"])
+        for derivative in entry["derivatives"]:
+            add(derivative, entry["level"])
+    return level_map, folded_map
+
+
+def parse_ecdict_translation(text):
+    out = []
+    for line in (text or "").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r"^(?:\[([^\]]+)\]\s*)?([A-Za-z]+\.)?\s*(.+)$", line)
+        if not m:
+            continue
+        domain, pos, cn = m.groups()
+        cn = clean_text(cn)
+        cn = cn.replace(", ", "，").replace(",", "，")
+        if not cn:
+            continue
+        pos = (pos or "")[:-1].lower() if pos else ""
+        pos = POS_MAP.get(pos, pos)
+        if domain:
+            cn = f"[{domain}] {cn}"
+        out.append({"pos": pos, "cn": cn})
+    return out
+
+
+def ecdict_candidates(cur, spelling):
+    """返回 (row, exact) ；先查原拼写，再查去音标后的拼写。"""
+    for candidate, exact in ((spelling, True), (ascii_typing(spelling), False)):
+        row = cur.execute(
+            "SELECT translation, phonetic, exchange, bnc, frq, collins, oxford "
+            "FROM stardict WHERE word = ? COLLATE NOCASE LIMIT 1",
+            (candidate,)).fetchone()
+        if row:
+            return row, exact
+    return None, False
+
+
+def choose_official_spelling(variants, cur):
+    scored = []
+    for variant in variants:
+        row, exact = ecdict_candidates(cur, variant)
+        if not row or not row[0]:
+            continue
+        ranks = [x for x in (row[3], row[4]) if x]
+        rank = min(ranks) if ranks else 10 ** 9
+        scored.append(((0 if exact else 1, rank, len(variant)), variant, row))
+    if not scored:
+        return None
+    scored.sort(key=lambda x: x[0])
+    _, spelling, row = scored[0]
+    return spelling, row
+
+
+def add_official_entries(entries, official, cur):
+    existing = {match_key(e["word"]) for e in entries}
+    folded = {match_key(ascii_typing(e["word"])) for e in entries}
+    next_rank = max((e["rank"] for e in entries), default=0) + 1
+    added, skipped = 0, []
+
+    for oe in official:
+        variants = expand_official(oe["word"])
+        if ({match_key(v) for v in variants} & existing or
+                {match_key(ascii_typing(v)) for v in variants} & folded):
+            continue
+        chosen = choose_official_spelling(variants, cur)
+        if chosen is None:
+            skipped.append(oe["word"])
+            continue
+        spelling, row = chosen
+        trans = parse_ecdict_translation(row[0])
+        if not any(CJK.search(t["cn"]) for t in trans):
+            skipped.append(oe["word"])
+            continue
+        entry = {
+            "word": spelling,
+            "typing": ascii_typing(spelling),
+            "phonetic": (row[1] or "").strip(),
+            "trans": trans,
+            "phrases": [],
+            "method": "",
+            "family": [],
+            "synonyms": [],
+            "examples": [],
+            "exam": [],
+            "rank": next_rank,
+            "level": oe["level"],
+        }
+        forms = parse_exchange(row[2])
+        if forms:
+            entry["forms"] = forms
+        freq = {k: v for k, v in
+                (("bnc", row[3]), ("frq", row[4]), ("collins", row[5]),
+                 ("oxford", row[6])) if v}
+        if freq:
+            entry["freq"] = freq
+        entries.append(entry)
+        existing.add(match_key(spelling))
+        folded.add(match_key(ascii_typing(spelling)))
+        next_rank += 1
+        added += 1
+
+    return added, skipped
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -181,6 +361,8 @@ def main():
     p.add_argument("out_json")
     p.add_argument("out_txt")
     p.add_argument("--ecdict", help="ECDICT stardict.db (optional)")
+    p.add_argument("--official", default="data/official_2016.json",
+                   help="official 2016 word list (optional)")
     p.add_argument("--fixes", default="data/word_fixes.json",
                    help="per-word field overrides (optional)")
     args = p.parse_args()
@@ -199,6 +381,33 @@ def main():
     for i, e in enumerate(extras, 1):
         e["rank"] = max_rank + i
     entries.extend(extras)
+
+    official = []
+    if args.official and os.path.exists(args.official):
+        with open(args.official, encoding="utf-8") as f:
+            official = json.load(f)["entries"]
+        level_map, folded_map = build_official_maps(official)
+        for e in entries:
+            e["level"] = (level_map.get(match_key(e["word"]))
+                          or folded_map.get(match_key(ascii_typing(e["word"])),
+                                           "extra"))
+        if args.ecdict:
+            con = sqlite3.connect(args.ecdict)
+            added, skipped = add_official_entries(entries, official, con.cursor())
+            con.close()
+            print(f"official: added {added} missing headwords, "
+                  f"skipped {len(skipped)}")
+            if skipped:
+                print("  skipped sample:", skipped[:10])
+        else:
+            print("official: levels applied; --ecdict is needed to add "
+                  "missing headwords")
+    else:
+        for e in entries:
+            e.setdefault("level", "extra")
+
+    for e in entries:
+        e.setdefault("typing", ascii_typing(e["word"]))
 
     entries.sort(key=lambda e: e["rank"])
 
@@ -223,13 +432,18 @@ def main():
 
     with open(args.out_json, "w", encoding="utf-8") as f:
         json.dump({
-            "source": "kajweb/dict CET6_3 + mahavivo/english-wordlists + ECDICT",
+            "source": ("kajweb/dict CET6_3 + mahavivo/english-wordlists + "
+                       "全国大学英语四、六级考试大纲（2016 年修订版）词表 + "
+                       "ECDICT"),
             "words": entries,
         }, f, ensure_ascii=False, indent=1)
     with open(args.out_txt, "w", encoding="utf-8") as f:
         f.write("\n".join(e["word"] for e in entries) + "\n")
-    print(f"{len(entries)} words ({len(extras)} added) -> "
-          f"{args.out_json}, {args.out_txt}")
+    levels = {k: sum(1 for e in entries if e.get("level") == k)
+              for k in ("cet4", "cet6", "extra")}
+    print(f"{len(entries)} words ({len(extras)} extras; "
+          f"cet4 {levels['cet4']}, cet6 {levels['cet6']}, "
+          f"extra {levels['extra']}) -> {args.out_json}, {args.out_txt}")
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@
 
 用法示例：
   python3 -I vocabtype.py                 # 随机 30 个词，显示模式
+  python3 -I vocabtype.py --level cet6    # 只练官方六级★词
   python3 -I vocabtype.py -n 50 --mode recall
   python3 -I vocabtype.py --weak          # 专练错得最多的词
   python3 -I vocabtype.py --new           # 只练还没练过的词
@@ -38,6 +39,8 @@ DIM = "\033[2m"
 BOLD = "\033[1m"
 UNDERLINE = "\033[4m"
 RESET = "\033[0m"
+
+LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
 
 
 class Keys:
@@ -97,23 +100,28 @@ def meaning_with_mark(entry, mark_sense):
 
 def select_words(entries, stats, args):
     n = args.count
+    level_pool = [e for e in entries
+                  if args.level == "all" or e.get("level") == args.level]
+    if not level_pool:
+        sys.exit(f"没有 level={args.level} 的单词。")
     if args.weak:
         practiced = []
-        for e in entries:
+        for e in level_pool:
             s = stats["words"].get(e["word"])
             if s and s["n"] > 0:
                 rate = (s["w"] + 0.5) / (s["n"] + 1.0)
                 practiced.append((rate, s["w"], e))
         practiced.sort(key=lambda x: (x[0], x[1]), reverse=True)
         chosen = [e for _, _, e in practiced[:n]]
-        rest = [e for e in entries if e not in chosen]
+        rest = [e for e in level_pool if e not in chosen]
         random.shuffle(rest)
         return chosen + rest[:max(0, n - len(chosen))]
     if args.new:
-        pool = [e for e in entries if stats["words"].get(e["word"], {}).get("n", 0) == 0]
-        pool = pool or entries
+        pool = [e for e in level_pool
+                if stats["words"].get(e["word"], {}).get("n", 0) == 0]
+        pool = pool or level_pool
     else:
-        pool = list(entries)
+        pool = list(level_pool)
     random.shuffle(pool)
     return pool[:n]
 
@@ -341,13 +349,19 @@ def practice_one(term, entry, idx, total, mode, sense=None):
     返回 (ok, elapsed, keystrokes, errors, start) 或 None 表示退出。
     start 是这个词第一次击键的时刻。
     """
-    target = entry["word"]
+    target = entry.get("typing") or entry["word"]
+    display = entry["word"]
+    level = LEVEL_LABEL.get(entry.get("level"))
+    level_tag = f"  {DIM}{level}{RESET}" if level else ""
+    phonetic = (f"  {DIM}/{entry['phonetic']}/{RESET}"
+                if entry.get("phonetic") else "")
     shown = meaning_with_mark(entry, sense) if mode == "show" else meaning(entry)
     if mode == "show":
-        head = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{target}{RESET}"
-                f"  {DIM}/{entry['phonetic']}/{RESET}  {shown}")
+        head = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{display}{RESET}"
+                f"{phonetic}{level_tag}  {shown}")
     else:
-        head = f"{DIM}[{idx}/{total}]{RESET} {BOLD}{shown}{RESET}"
+        tag = f"{DIM}{level}{RESET} " if level else ""
+        head = f"{DIM}[{idx}/{total}]{RESET} {tag}{BOLD}{shown}{RESET}"
 
     print("\r\033[K" + head)
     typed = []
@@ -408,7 +422,7 @@ def practice_one(term, entry, idx, total, mode, sense=None):
         sys.stdout.write(f"\r\033[K   > {GREEN}{answer}{RESET}\n")
     else:
         sys.stdout.write(f"\r\033[K   > {RED}{answer}{RESET}"
-                         f"  →  {GREEN}{BOLD}{target}{RESET}"
+                         f"  →  {GREEN}{BOLD}{display}{RESET}"
                          f"  {DIM}{shown}{RESET}\n")
     sys.stdout.flush()
     return ok, elapsed, keystrokes, errors, start
@@ -463,7 +477,7 @@ def run(args):
                 if ok:
                     s["r"] += 1
                     ok_words += 1
-                    correct_chars += len(entry["word"])
+                    correct_chars += len(entry.get("typing") or entry["word"])
                 else:
                     s["w"] += 1
                     missed.append(entry)
@@ -525,6 +539,10 @@ def show_stats(args):
     right = sum(s.get("r", 0) for s in ws.values())
     wrong = sum(s.get("w", 0) for s in ws.values())
     print(f"已练单词: {practiced} / {len(entries)}")
+    counts = {k: sum(1 for e in entries if e.get("level") == k)
+              for k in ("cet6", "cet4", "extra")}
+    print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
+          f"扩展 {counts['extra']}")
     if right + wrong:
         print(f"累计正确 {right}  错误 {wrong}  准确率 {right / (right + wrong) * 100:.1f}%")
     weak = sorted(
@@ -556,6 +574,10 @@ def main():
                    help="show=显示单词照着打（含全拼释义阶段）；recall=只看释义拼写")
     p.add_argument("--no-pinyin", action="store_true",
                    help="标准模式不进行第二阶段的释义全拼")
+    p.add_argument("--level", choices=["all", "cet6", "cet4", "extra"],
+                   default="all",
+                   help="按官方级别筛选：all=全部（默认），cet6=六级★词，"
+                        "cet4=四级词，extra=大纲外扩展词")
     p.add_argument("--weak", action="store_true", help="优先练错误率最高的词")
     p.add_argument("--new", action="store_true", help="只练尚未练过的词")
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
