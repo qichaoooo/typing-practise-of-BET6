@@ -156,7 +156,7 @@ def info_lines(entry, sense):
         label = f"{sense['pos']}. " if sense.get("pos") else ""
         lines.append(f"{DIM}释义{RESET}   {label}{sense['cn']}")
     if entry.get("method"):
-        lines.append(f"{DIM}词根{RESET}   {entry['method']}")
+        lines.append(f"{DIM}助记{RESET}   {entry['method']}")
     if entry.get("family"):
         fam = "；".join(
             f"{f['pos']}. {f['word']} {f['cn']}".strip()

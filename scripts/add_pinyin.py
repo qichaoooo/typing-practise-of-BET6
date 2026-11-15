@@ -11,6 +11,7 @@
 tokens 与 cn 逐字符对齐，标点/非中文字符的拼音为空串。
 """
 import json
+import os
 import re
 import sys
 
@@ -44,7 +45,19 @@ def tokens_for(text):
     return tokens
 
 
-def split_senses(entry):
+def apply_fix(tokens, readings, key):
+    """用 data/pinyin_fixes.json 里的读音覆盖自动结果。"""
+    cjk = [i for i, (ch, _) in enumerate(tokens) if is_cjk(ch)]
+    if len(readings) != len(cjk):
+        print(f"warning: pinyin fix for {key!r} has {len(readings)} readings "
+              f"but {len(cjk)} CJK chars; ignored", file=sys.stderr)
+        return tokens
+    for idx, reading in zip(cjk, readings):
+        tokens[idx][1] = str(reading).lower()
+    return tokens
+
+
+def split_senses(entry, fixes):
     senses = []
     for t in entry.get("trans", []):
         pos = t.get("pos", "")
@@ -54,6 +67,9 @@ def split_senses(entry):
             if not chunk or not CJK.search(chunk):
                 continue
             tokens = tokens_for(chunk)
+            key = f"{entry['word']}|{chunk}"
+            if key in fixes:
+                tokens = apply_fix(tokens, fixes[key], key)
             if not any(py for _, py in tokens):
                 continue
             senses.append({"pos": pos, "cn": chunk, "tokens": tokens})
@@ -64,15 +80,21 @@ def main(path):
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 
+    fixes_path = os.path.join(os.path.dirname(os.path.abspath(path)),
+                              "pinyin_fixes.json")
+    fixes = {}
+    if os.path.exists(fixes_path):
+        with open(fixes_path, encoding="utf-8") as f:
+            fixes = json.load(f)
+
     n = 0
     for entry in data["words"]:
-        entry["senses"] = split_senses(entry)
+        entry["senses"] = split_senses(entry, fixes)
         n += len(entry["senses"])
 
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    import os
     os.replace(tmp, path)
     print(f"{len(data['words'])} words, {n} senses -> {path}")
 

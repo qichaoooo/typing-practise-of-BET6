@@ -19,6 +19,7 @@ Pinyin senses are added afterwards by scripts/add_pinyin.py.
 """
 import argparse
 import json
+import os
 import re
 import sqlite3
 import zipfile
@@ -180,6 +181,8 @@ def main():
     p.add_argument("out_json")
     p.add_argument("out_txt")
     p.add_argument("--ecdict", help="ECDICT stardict.db (optional)")
+    p.add_argument("--fixes", default="data/word_fixes.json",
+                   help="per-word field overrides (optional)")
     args = p.parse_args()
 
     with zipfile.ZipFile(args.zip_path) as zf:
@@ -204,6 +207,19 @@ def main():
     for e in entries:
         if not e["phonetic"] and e["word"] in PHONETIC_FIXES:
             e["phonetic"] = PHONETIC_FIXES[e["word"]]
+
+    # 人工核对后的逐词覆盖（优先级最高），例如改正释义或音标。
+    if args.fixes and os.path.exists(args.fixes):
+        with open(args.fixes, encoding="utf-8") as f:
+            fixes = {k.lower(): v for k, v in json.load(f).items()}
+        applied = 0
+        for e in entries:
+            fix = fixes.get(e["word"].lower())
+            if fix:
+                e.update(fix)
+                applied += 1
+        if applied:
+            print(f"fixes: applied {applied} overrides from {args.fixes}")
 
     with open(args.out_json, "w", encoding="utf-8") as f:
         json.dump({
