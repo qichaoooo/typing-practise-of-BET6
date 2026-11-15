@@ -21,6 +21,8 @@ import argparse
 import json
 import os
 import random
+import re
+import shutil
 import sys
 import termios
 import time
@@ -215,12 +217,30 @@ def info_lines(entry, sense):
     return lines
 
 
+ANSI_RE = re.compile(r"\033\[[0-9;]*[A-Za-z]")
+
+
+def display_width(text):
+    text = ANSI_RE.sub("", text)
+    return sum(disp_width(ch) for ch in text)
+
+
+def physical_lines(text, cols):
+    return max(1, (display_width(text) + cols - 1) // cols)
+
+
 def show_info(term, entry, sense):
-    """暂停练习，显示词源/助记；再按 ; 或 Enter 返回。Esc 退出。"""
+    """暂停练习，显示词源/助记；再按 ; 或 Enter 关闭面板并继续。Esc 退出。"""
+    cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
+    lines = info_lines(entry, sense)
+    hint = f"   {DIM}再按 ; 继续拼写{RESET}"
     print()
-    for line in info_lines(entry, sense):
+    for line in lines:
         print("   " + line)
-    print(f"   {DIM}再按 ; 继续拼写{RESET}")
+    sys.stdout.write(hint)
+    sys.stdout.flush()
+    total = (1 + sum(physical_lines("   " + line, cols) for line in lines)
+             + physical_lines(hint, cols))
     while True:
         try:
             k = term.key()
@@ -229,6 +249,9 @@ def show_info(term, entry, sense):
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
         if k == ord(";") or k in Keys.ENTER:
+            # 清掉本次面板，避免多次按 ; 时内容在屏幕上重复叠加
+            sys.stdout.write(f"\r\033[{total - 1}A\033[J")
+            sys.stdout.flush()
             return True
 
 
