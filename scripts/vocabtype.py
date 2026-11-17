@@ -57,6 +57,13 @@ LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
 DEFAULT_INTERVALS = (1, 3, 7, 15, 30)  # 熟词 5 级复习间隔（天）
 
 
+def colorize(text, color):
+    """给可能含内部 RESET 的文本整体着色。"""
+    if not color:
+        return text
+    return f"{color}{text.replace(RESET, RESET + color)}{RESET}"
+
+
 class Keys:
     ESC = 0x1B
     ENTER = (0x0D, 0x0A)
@@ -474,9 +481,12 @@ def show_info(term, entry, sense, senses):
                                for line in lines)
                        + physical_lines(hint, cols))
 
-    def clear():
+    def clear(to_input=False):
         nonlocal total_lines
-        sys.stdout.write(f"\r\033[{total_lines - 1}A\033[J")
+        seq = f"\r\033[{total_lines - 1}A\033[J"
+        if to_input:
+            seq += "\033[A"  # 回到面板上方那一行输入行
+        sys.stdout.write(seq)
         sys.stdout.flush()
         total_lines = 0
 
@@ -499,8 +509,8 @@ def show_info(term, entry, sense, senses):
             render()
             continue
         if k == ord(";") or k in Keys.ENTER:
-            # 清掉本次面板，避免多次按 ; 时内容在屏幕上重复叠加
-            clear()
+            # 清掉本次面板并回到输入行，避免内容叠加、光标错位
+            clear(to_input=True)
             return True
 
 
@@ -1384,6 +1394,9 @@ def practice_one(term, entry, idx, total, mode, sense=None):
 
     返回 (ok, elapsed, keystrokes, errors, start) 或 None 表示退出。
     start 是这个词第一次击键的时刻。
+
+    show 模式会自动重绘首行：目标单词按已输入字符逐字标绿/红，释义按当前
+    拼写状态整体标绿/红；其他行为保持不变。
     """
     target = entry.get("typing") or entry["word"]
     display = entry["word"]
@@ -1391,28 +1404,84 @@ def practice_one(term, entry, idx, total, mode, sense=None):
     level_tag = f"  {DIM}{level}{RESET}" if level else ""
     phonetic = (f"  {DIM}/{entry['phonetic']}/{RESET}"
                 if entry.get("phonetic") else "")
-    shown = meaning_with_mark(entry, sense) if mode == "show" else meaning(entry)
-    if mode == "show":
-        head = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{display}{RESET}"
-                f"{phonetic}{level_tag}  {shown}")
-    else:
-        tag = f"{DIM}{level}{RESET} " if level else ""
-        head = f"{DIM}[{idx}/{total}]{RESET} {tag}{BOLD}{shown}{RESET}"
-
-    print("\r\033[K" + head)
+    show_mode = mode == "show"
+    base_shown = (meaning_with_mark(entry, sense) if show_mode
+                  else meaning(entry))
     typed = []
     keystrokes = 0
     errors = 0
     start = None
     paused = 0.0
+    cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
+    header_lines = 0
+    input_lines = 0
+    first = True
 
-    def draw():
-        sys.stdout.write("\r\033[K   > "
-                         + (color_typed(typed, target) if mode == "show"
-                            else "".join(typed)))
+    def typed_text():
+        return "".join(typed)
+
+    def prefix_ok(text):
+        return (bool(text) and len(text) <= len(target) and
+                all(text[i] == target[i] for i in range(len(text))))
+
+    def build_head():
+        text = typed_text()
+        if len(display) == len(target):
+            parts = []
+            for i, ch in enumerate(display):
+                if i < len(text):
+                    color = GREEN if text[i] == target[i] else RED
+                    parts.append(f"{BOLD}{color}{ch}{RESET}")
+                else:
+                    parts.append(f"{BOLD}{ch}{RESET}")
+            word_text = "".join(parts)
+        else:
+            if text:
+                color = GREEN if prefix_ok(text) else RED
+                word_text = f"{BOLD}{color}{display}{RESET}"
+            else:
+                word_text = f"{BOLD}{display}{RESET}"
+        status = GREEN if (text and prefix_ok(text)) else (RED if text else "")
+        shown_text = colorize(base_shown, status)
+        return (f"{DIM}[{idx}/{total}]{RESET} {word_text}"
+                f"{phonetic}{level_tag}  {shown_text}")
+
+    def input_text():
+        return ("   > " + (color_typed(typed, target) if show_mode
+                           else "".join(typed)))
+
+    def draw_input():
+        sys.stdout.write("\r\033[K" + input_text())
         sys.stdout.flush()
 
-    draw()
+    def refresh_header():
+        nonlocal header_lines, input_lines, first
+        if not first:
+            up = (input_lines - 1) + header_lines
+            sys.stdout.write(f"\r\033[{up}A\033[J")
+        head = build_head()
+        sys.stdout.write(head + "\n")
+        text = input_text()
+        sys.stdout.write(text)
+        sys.stdout.flush()
+        header_lines = physical_lines(head, cols)
+        input_lines = physical_lines(text, cols)
+        first = False
+
+    if show_mode:
+        refresh_header()
+    else:
+        tag = f"{DIM}{level}{RESET} " if level else ""
+        head = f"{DIM}[{idx}/{total}]{RESET} {tag}{BOLD}{base_shown}{RESET}"
+        print("\r\033[K" + head)
+        draw_input()
+
+    def redraw():
+        if show_mode:
+            refresh_header()
+        else:
+            draw_input()
+
     while True:
         try:
             k = term.key()
@@ -1426,16 +1495,16 @@ def practice_one(term, entry, idx, total, mode, sense=None):
                 return None
             if start is not None:
                 paused += time.monotonic() - pause_start
-            draw()
+            redraw()
             continue
         if k in Keys.BACKSPACE:
             if typed:
                 typed.pop()
-            draw()
+            redraw()
             continue
         if k == Keys.CTRL_U:
             typed.clear()
-            draw()
+            redraw()
             continue
         if k in Keys.ENTER:
             break
@@ -1447,19 +1516,19 @@ def practice_one(term, entry, idx, total, mode, sense=None):
             if pos >= len(target) or chr(k) != target[pos]:
                 errors += 1
             typed.append(chr(k))
-            draw()
-            if mode == "show" and "".join(typed) == target:
+            redraw()
+            if show_mode and typed_text() == target:
                 break
 
     elapsed = (time.monotonic() - start - paused) if start else 0.0
-    answer = "".join(typed)
+    answer = typed_text()
     ok = answer == target
     if ok:
         sys.stdout.write(f"\r\033[K   > {GREEN}{answer}{RESET}\n")
     else:
         sys.stdout.write(f"\r\033[K   > {RED}{answer}{RESET}"
                          f"  →  {GREEN}{BOLD}{display}{RESET}"
-                         f"  {DIM}{shown}{RESET}\n")
+                         f"  {DIM}{base_shown}{RESET}\n")
     sys.stdout.flush()
     return ok, elapsed, keystrokes, errors, start
 
