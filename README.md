@@ -14,6 +14,7 @@ vocabtype --level cet6        # 只练官方六级★词（推荐备考时用）
 vocabtype --no-quiz           # 只做拼写练习，不做释义检测
 vocabtype --check single      # 释义检测改用四选一（默认是拆分多选）
 vocabtype --review            # 复习模式：只检测生词和今天到期的熟词
+vocabtype --review-known 20   # 熟词加练：从熟词里抽 20 个义项，不看是否到期
 vocabtype --stats             # 查看拼写、生词/熟词和到期数量
 vocabtype -n 50 --mode recall # 只看中文释义，凭记忆拼写英文
 vocabtype --weak              # 专练错误率最高的词
@@ -169,6 +170,22 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 本项目取 1/3/7/15/30 天作为 5 级默认值，适合按天使用的终端工具；5 分钟/30 分钟/
 12 小时这类同日周期没有做成主调度（同一会话内错词已有重排）。
 
+### 熟词加练（`--review-known N`）
+
+没有生词、也没有到期熟词时，可以从熟词中额外抽题复习：
+
+```sh
+vocabtype --review-known 20              # 从熟词义项中均匀抽 20 个
+vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
+```
+
+- 抽取单位是**义项**：一个词有几个已登记为熟词的义项，就可能被抽中几题。
+- **不看到期日**：刚到期的、远未到期的熟词都可能出现，N 就是本轮题数。
+- 测的还是该义项；四选一/拆分多选、空格看助记等行为与普通检测相同。
+- **答对只巩固**：等级和到期日都不变（避免加练把词刷到高等级）；**答错回生词**
+  （L0，当天到期），之后正常复习会优先抽到。
+- 不能与 `--review`、`--no-quiz`、`--new`、`--weak`、`--quiz-size` 同用。
+
 ### 进度
 
 - 每个义项的状态、等级、到期日保存在 `stats.json` 的 `review[word][义项key]`；
@@ -190,6 +207,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 --new               只选没练过的词
 --no-requeue        错词不在本次重复
 --review            复习模式：只做释义检测
+--review-known N    熟词加练：从熟词义项中抽 N 个，不看到期日
 --check single|split 检查方式：split=拆分多选（默认）；single=四选一
 --no-quiz           普通模式跳过释义检测
 --quiz-size N       释义检测最多几题（0=全部）

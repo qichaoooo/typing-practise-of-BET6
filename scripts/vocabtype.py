@@ -197,8 +197,12 @@ def normalize_review(stats, entries):
             del review[word]
 
 
-def mark_review_result(stats, entry, sense, correct, intervals, day=None):
-    """首次检测结果决定该义项的状态；重抽不调用本函数。"""
+def mark_review_result(stats, entry, sense, correct, intervals, day=None,
+                       early=False):
+    """首次检测结果决定该义项的状态；重抽不调用本函数。
+
+    early=True 用于熟词加练：答对只巩固，不升级、不改到期日；答错仍回生词。
+    """
     day = day or date.today()
     recs = ensure_word_review(stats, entry, day=day)
     rec = recs.setdefault(sense_key(sense), new_review_record(day))
@@ -206,6 +210,8 @@ def mark_review_result(stats, entry, sense, correct, intervals, day=None):
     if correct:
         rec["correct"] = rec.get("correct", 0) + 1
         rec["streak"] = rec.get("streak", 0) + 1
+        if early:
+            return rec
         level = (min(int(rec.get("level", 0)) + 1, len(intervals))
                  if rec.get("state") == "known" else 1)
         rec["state"] = "known"
@@ -739,9 +745,27 @@ def build_quiz_scope(entries, stats, args, session_items=None):
     """返回 [(entry, sense, rec_or_None)]。
 
     普通模式：本次练习的义项 + 复习池；复习模式：只取复习池。
+    熟词加练（--review-known N）：从全部熟词义项中均匀抽 N 个，忽略到期日。
     """
     intervals = args.intervals
     by_word = {e["word"]: e for e in entries}
+    n_known = getattr(args, "review_known", None)
+    if n_known:
+        pool = []
+        for word, recs in stats.get("review", {}).items():
+            entry = by_word.get(word)
+            if not entry or not isinstance(recs, dict) or "state" in recs:
+                continue
+            if args.level != "all" and entry.get("level") != args.level:
+                continue
+            sense_map = {sense_key(s): s for s in entry.get("senses", [])}
+            for skey, rec in recs.items():
+                sense = sense_map.get(skey)
+                if (sense is not None and isinstance(rec, dict)
+                        and rec.get("state") == "known"):
+                    pool.append((entry, sense, rec))
+        return random.sample(pool, min(n_known, len(pool)))
+
     seen = set()
     scope = []
     if session_items:
@@ -1336,14 +1360,21 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
 
     scope = build_quiz_scope(entries, stats, args, session_items)
     if not scope:
-        print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
+        if getattr(args, "review_known", None):
+            print("没有可加练的熟词。")
+        else:
+            print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
         return
 
     all_options = [(e, s) for e in entries for s in e.get("senses", [])]
     label = "四选一" if args.check == "single" else "拆分多选"
     print(f"\n{BOLD}──── 释义检测（{label}）────{RESET}")
-    print(f"{DIM}本轮 {len(scope)} 个义项；首次结果决定各义项的状态，"
-          f"错题随后重刷。{RESET}")
+    if kind == "known":
+        print(f"{DIM}本轮从熟词中抽取 {len(scope)} 个义项；答对只巩固，"
+              f"不升级、不改到期日；答错回生词。{RESET}")
+    else:
+        print(f"{DIM}本轮 {len(scope)} 个义项；首次结果决定各义项的状态，"
+              f"错题随后重刷。{RESET}")
 
     def ask(term, entry, sense, i, total):
         question = build_question(entry, all_options, sense)
@@ -1373,7 +1404,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                     break
                 first_total += 1
                 mark_review_result(stats, entry, question["correct"], result,
-                                   args.intervals)
+                                   args.intervals, early=(kind == "known"))
                 if result:
                     first_correct += 1
                 else:
@@ -1785,6 +1816,7 @@ def main():
   vocabtype --no-quiz               只做拼写练习
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
+  vocabtype --review-known 20       从熟词中抽 20 个义项加练（不看是否到期）
   vocabtype --stats                 查看复习进度
 """
     p = ChineseArgumentParser(
@@ -1809,6 +1841,9 @@ def main():
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
     p.add_argument("--review", action="store_true",
                    help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
+    p.add_argument("--review-known", type=int, metavar="N", default=None,
+                   help="熟词加练：从熟词中抽 N 个义项检测，不看是否到期；"
+                        "答对不升级、不改到期日，答错回生词")
     p.add_argument("--check", choices=["single", "split"], default="split",
                    help="检查方式：split=拆分多选（默认）；single=四选一")
     p.add_argument("--no-quiz", action="store_true",
@@ -1828,10 +1863,24 @@ def main():
     args.intervals = parse_intervals(args.intervals)
     if args.quiz_size < 0:
         sys.exit("--quiz-size 不能为负数")
+    if args.review_known is not None:
+        if args.review_known < 1:
+            sys.exit("--review-known 需要正整数 N，例如 --review-known 20")
+        if args.review:
+            sys.exit("--review-known 不能与 --review 同用。")
+        if args.no_quiz:
+            sys.exit("--review-known 本身就是释义检测，不能与 --no-quiz 同用。")
+        if args.new or args.weak:
+            sys.exit("--review-known 不支持 --new / --weak。")
+        if args.quiz_size:
+            sys.exit("--review-known 已指定题数，不能与 --quiz-size 同用。")
     if args.seed is not None:
         random.seed(args.seed)
     if args.stats:
         show_stats(args)
+        return
+    if args.review_known is not None:
+        run_quiz(args, kind="known")
         return
     if args.review:
         if args.no_quiz:

@@ -92,6 +92,28 @@ class IntervalTest(unittest.TestCase):
         self.assertEqual((new, learning, known, due, words), (0, 0, 1, 0, 1))
         self.assertEqual(levels, {1: 1})
 
+    def test_early_correct_keeps_level_and_due(self):
+        stats = {}
+        self.mark(stats, True)
+        rec = vocabtype.mark_review_result(
+            stats, self.e, self.s0, True, self.intervals,
+            day=self.day, early=True)
+        self.assertEqual(rec["state"], "known")
+        self.assertEqual(rec["level"], 1)
+        self.assertEqual(rec["due"], "2026-11-18")
+        self.assertEqual(rec["correct"], 2)
+
+    def test_early_wrong_demotes_to_learning(self):
+        stats = {}
+        self.mark(stats, True)
+        rec = vocabtype.mark_review_result(
+            stats, self.e, self.s0, False, self.intervals,
+            day=self.day, early=True)
+        self.assertEqual(rec["state"], "learning")
+        self.assertEqual(rec["level"], 0)
+        self.assertEqual(rec["due"], "2026-11-17")
+        self.assertEqual(rec["wrong"], 1)
+
     def test_parse_intervals(self):
         self.assertEqual(vocabtype.parse_intervals("1,2,4"), (1, 2, 4))
 
@@ -165,6 +187,58 @@ class ScopeTest(unittest.TestCase):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args, session_items)
         self.assertIn(("c", "丙"), self.scope_senses(scope))
+
+
+class KnownReviewTest(unittest.TestCase):
+    def setUp(self):
+        self.args = SimpleNamespace(intervals=(1, 3, 7, 15, 30),
+                                    level="all", quiz_size=0,
+                                    review_known=10)
+        self.entries = [
+            entry("a", senses=[sense("n", "甲", "jia"),
+                               sense("v", "乙", "yi")]),
+            entry("b", level="cet4", senses=[sense("n", "丙", "bing")]),
+            entry("c", senses=[sense("n", "丁", "ding")]),
+        ]
+        self.stats = {"review": {
+            # 两个熟词义项，都远未到期
+            "a": {"n|甲": {"state": "known", "level": 1,
+                           "due": "2999-01-01"},
+                  "v|乙": {"state": "known", "level": 3,
+                           "due": "2999-01-02"}},
+            # 生词、旧版未测义项都不应被加练抽到
+            "b": {"n|丙": {"state": "learning", "level": 0,
+                           "due": "2000-01-01"}},
+            "c": {"n|丁": {"state": "new", "level": 0,
+                           "due": "2999-01-01"}},
+        }}
+
+    def scope_senses(self, scope):
+        return {(e["word"], s["cn"]) for e, s, _ in scope}
+
+    def test_draws_known_even_when_not_due(self):
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        self.assertEqual(self.scope_senses(scope), {("a", "甲"), ("a", "乙")})
+
+    def test_only_known_senses_are_drawn(self):
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        words = {e["word"] for e, _, _ in scope}
+        self.assertEqual(words, {"a"})
+
+    def test_count_caps_and_samples_by_sense(self):
+        self.args.review_known = 1
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        self.assertEqual(len(scope), 1)
+        self.assertIn(self.scope_senses(scope).pop()[1], {"甲", "乙"})
+
+    def test_level_filter(self):
+        self.args.level = "cet4"
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        self.assertEqual(scope, [])
 
 
 class FuzzyTest(unittest.TestCase):
