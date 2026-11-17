@@ -943,7 +943,7 @@ def quiz_one(term, question, mode, idx, total):
             print(f"   {DIM}你选中的是：{options[chosen]['cn']}{RESET}")
     if len(entry.get("senses", [])) > 1:
         print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
-    print(f"   {DIM}按 Enter 继续{RESET}")
+    print(f"   {DIM}按 ; 或 Enter 继续{RESET}")
     while True:
         try:
             k = term.key()
@@ -951,7 +951,7 @@ def quiz_one(term, question, mode, idx, total):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
-        if k in Keys.ENTER:
+        if k in Keys.ENTER or k == ord(";"):
             return ok
 
 
