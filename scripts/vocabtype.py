@@ -9,15 +9,13 @@
 释义检测（背单词模式）：
   普通模式拼写结束后自动检测释义；首答答对进熟词表，答错进生词表。
   复习按义项进行：一个词第一次进入检测时会登记它的所有义项，逐个复习。
-  --quiz pinyin（默认）输入拼音模糊匹配，唯一匹配后按 ;/Enter 确定；
-  --quiz choice 四选一。
+  检测时按数字直选，或输入拼音模糊筛选，再按 ; 或 Enter 确定。
   --review 只复习未测/生词义项和今天到期的熟词义项；--no-quiz 跳过检测。
 
 用法示例：
   python3 -I vocabtype.py                 # 拼写 + 释义检测
   python3 -I vocabtype.py --level cet6    # 只练官方六级★词
   python3 -I vocabtype.py --review        # 复习生词/到期熟词
-  python3 -I vocabtype.py --quiz choice   # 释义检测用四选一
   python3 -I vocabtype.py --no-quiz       # 只拼写
   python3 -I vocabtype.py --stats         # 查看累计进度
 
@@ -780,21 +778,26 @@ def build_question(entry, all_options, preferred=None):
             "correct_index": correct_index}
 
 
-def read_pinyin(term, match_fn=None, on_comma=None, on_match_change=None):
+def read_quiz_input(term, option_count, state_fn, on_state_change=None,
+                    on_comma=None):
+    """统一的答题输入：数字直选，或输入拼音模糊匹配，再按 ;/Enter 确定。
+
+    state_fn(text, selected) 返回 (输入行提示, 可确认的下标或 None, 渲染状态)。
+    渲染状态变化时调用 on_state_change(render_state) 重绘选项。
+    """
     typed = []
-    last_matches = None
+    selected = None
+    last_state = "unset"
 
     def draw():
-        nonlocal last_matches
-        hint, unique, matches = "", None, None
-        if match_fn is not None:
-            hint_text, unique, matches = match_fn("".join(typed))
-            if hint_text:
-                hint = f"   {hint_text}"
-        if on_match_change is not None and matches != last_matches:
-            on_match_change(matches)
-            last_matches = matches
-        sys.stdout.write("\r\033[K   > " + "".join(typed) + hint)
+        nonlocal last_state
+        text = "".join(typed)
+        hint, _confirm, render_state = state_fn(text, selected)
+        if on_state_change is not None and render_state != last_state:
+            on_state_change(render_state)
+            last_state = render_state
+        suffix = f"   {hint}" if hint else ""
+        sys.stdout.write("\r\033[K   > " + text + suffix)
         sys.stdout.flush()
 
     draw()
@@ -805,32 +808,44 @@ def read_pinyin(term, match_fn=None, on_comma=None, on_match_change=None):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if ord("1") <= k <= ord("9"):
+            idx = k - ord("1")
+            if idx < option_count:
+                selected = idx
+                typed.clear()
+                draw()
+            continue
         if k == ord(",") and on_comma is not None:
+            selected = None
             on_comma()
-            last_matches = "force"
+            last_state = "unset"
             draw()
             continue
         if k in Keys.BACKSPACE:
             if typed:
                 typed.pop()
+            elif selected is not None:
+                selected = None
             draw()
             continue
         if k == Keys.CTRL_U:
             typed.clear()
+            selected = None
             draw()
             continue
         if k in Keys.ENTER or k == ord(";"):
-            if match_fn is not None:
-                _, unique, _ = match_fn("".join(typed))
-                if unique is None:
-                    continue
-            return "".join(typed)
+            _, confirm, _ = state_fn("".join(typed), selected)
+            if confirm is None:
+                continue
+            return "".join(typed), confirm
         if 32 <= k <= 126:
+            if selected is not None:
+                selected = None
             typed.append(chr(k))
             draw()
 
 
-def quiz_one(term, question, mode, idx, total):
+def quiz_one(term, question, idx, total):
     entry = question["entry"]
     options = question["options"]
     correct = question["correct"]
@@ -845,20 +860,19 @@ def quiz_one(term, question, mode, idx, total):
     cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
     block_lines = 0
 
-    def render(note="", matched=None):
+    def render(note="", matched=None, selected=None):
         nonlocal block_lines
-        if mode == "pinyin":
-            hint = (f"   {DIM}输入拼音（可拼错/少拼）；唯一匹配后按 ;/Enter "
-                    f"确定；, 打乱；Esc 退出{note}{RESET}")
-        else:
-            hint = f"   {DIM}按 1-{len(options)} 选择，Esc 退出{RESET}"
+        hint = (f"   {DIM}输入拼音模糊筛选（可拼错/少拼），或按 1-{len(options)} "
+                f"直接选；再按 ; 或 Enter 确定；, 打乱；Esc 退出{note}{RESET}")
         print(header)
         option_texts = []
         for i, s in enumerate(options, 1):
-            idx = i - 1
-            if matched is None:
+            oi = i - 1
+            if selected is not None:
+                color = BOLD + UNDERLINE + GREEN if oi == selected else GREEN
+            elif matched is None:
                 color = GREEN
-            elif idx in matched:
+            elif oi in matched:
                 color = BOLD + UNDERLINE + GREEN if len(matched) == 1 else GREEN
             else:
                 color = DIM
@@ -875,72 +889,60 @@ def quiz_one(term, question, mode, idx, total):
     print()
     render()
 
-    if mode == "pinyin":
-        def match_state(text):
-            norm = normalize_pinyin(text)
-            if not norm:
-                return "", None, None
-            matches, _scores = fuzzy_matches(text, options)
-            if len(matches) == 1:
-                return (f"{GREEN}唯一匹配：{matches[0] + 1}，"
-                        f"按 ; 或 Enter 确定{RESET}",
-                        matches[0], tuple(matches))
-            if matches:
-                return (f"{DIM}匹配 {len(matches)} 项，继续输入…{RESET}",
-                        None, tuple(matches))
-            return f"{RED}无匹配，Backspace 修改{RESET}", None, ()
-
-        def show_match(matches):
-            nonlocal block_lines
-            sys.stdout.write(f"\r\033[{block_lines}A\033[J")
-            sys.stdout.flush()
-            block_lines = render(matched=matches)
-
-        def reshuffle():
-            nonlocal correct_index
-            sys.stdout.write(f"\r\033[{block_lines}A\033[J")
-            sys.stdout.flush()
-            random.shuffle(options)
-            correct_index = next(i for i, s in enumerate(options) if s is correct)
-            render("（已打乱）")
-
-        text = read_pinyin(term, match_fn=match_state, on_comma=reshuffle,
-                           on_match_change=show_match)
-        if text is None:
-            return None
+    def state_fn(text, selected):
+        if selected is not None:
+            return (f"{GREEN}已选：{selected + 1}，按 ; 或 Enter 确定{RESET}",
+                    selected, ("selected", selected))
+        norm = normalize_pinyin(text)
+        if not norm:
+            return "", None, ("matches", None)
         matches, _scores = fuzzy_matches(text, options)
-        chosen = matches[0] if len(matches) == 1 else None
-        ok = chosen == correct_index
-    else:
-        chosen = None
-        while True:
-            try:
-                k = term.key()
-            except KeyboardInterrupt:
-                return None
-            if k == Keys.ESC or k == Keys.CTRL_C:
-                return None
-            if ord("1") <= k <= ord("9"):
-                candidate = k - ord("1")
-                if candidate < len(options):
-                    chosen = candidate
-                    break
-        ok = chosen == correct_index
+        if len(matches) == 1:
+            return (f"{GREEN}唯一匹配：{matches[0] + 1}，"
+                    f"按 ; 或 Enter 确定{RESET}",
+                    matches[0], ("matches", tuple(matches)))
+        if matches:
+            return (f"{DIM}匹配 {len(matches)} 项，继续输入…（也可按数字选）"
+                    f"{RESET}", None, ("matches", tuple(matches)))
+        return (f"{RED}无匹配，Backspace 修改；也可按数字选{RESET}",
+                None, ("matches", ()))
+
+    def show_state(state):
+        nonlocal block_lines
+        sys.stdout.write(f"\r\033[{block_lines}A\033[J")
+        sys.stdout.flush()
+        kind, value = state
+        if kind == "selected":
+            block_lines = render(selected=value)
+        else:
+            block_lines = render(matched=value)
+
+    def reshuffle():
+        nonlocal correct_index
+        sys.stdout.write(f"\r\033[{block_lines}A\033[J")
+        sys.stdout.flush()
+        random.shuffle(options)
+        correct_index = next(i for i, s in enumerate(options) if s is correct)
+        render("（已打乱）")
+
+    result = read_quiz_input(term, len(options), state_fn,
+                             on_state_change=show_state,
+                             on_comma=reshuffle)
+    if result is None:
+        return None
+    text, chosen = result
+    ok = chosen == correct_index
 
     if ok:
         print(f"   {GREEN}✓ 正确{RESET}   {pos} {correct['cn']}")
     else:
         print(f"   {RED}✗ 错误{RESET}   正确：{pos} {correct['cn']}")
-        if mode == "pinyin":
-            answer_py = " ".join(py for _, py in correct.get("tokens", []) if py)
-            print(f"   {DIM}正确拼音：{answer_py}{RESET}")
+        answer_py = " ".join(py for _, py in correct.get("tokens", []) if py)
+        print(f"   {DIM}正确拼音：{answer_py}{RESET}")
+        if text:
             print(f"   {DIM}你输入的是：{text}{RESET}")
-            if chosen is not None:
-                print(f"   {DIM}模糊匹配到：{options[chosen]['cn']}{RESET}")
-            else:
-                print(f"   {DIM}输入未匹配到任何选项{RESET}")
-        elif chosen is not None:
-            print(f"   {DIM}你选中的是：{options[chosen]['cn']}{RESET}")
+        if chosen is not None:
+            print(f"   {DIM}你选择的是：{options[chosen]['cn']}{RESET}")
     if len(entry.get("senses", [])) > 1:
         print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
     print(f"   {DIM}按 ; 或 Enter 继续{RESET}")
@@ -1008,7 +1010,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
         return
 
     all_options = [(e, s) for e in entries for s in e.get("senses", [])]
-    print(f"\n{BOLD}──── 释义检测（{args.quiz}）────{RESET}")
+    print(f"\n{BOLD}──── 释义检测 ────{RESET}")
     print(f"{DIM}本轮 {len(scope)} 个义项；首次结果决定各义项的状态，"
           f"错题随后重刷。{RESET}")
 
@@ -1024,7 +1026,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                 question = build_question(entry, all_options, sense)
                 if question is None:
                     continue
-                result = quiz_one(term, question, args.quiz, i, len(scope))
+                result = quiz_one(term, question, i, len(scope))
                 if result is None:
                     quit_early = True
                     break
@@ -1049,7 +1051,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                         question = build_question(entry, all_options, sense)
                         if question is None:
                             continue
-                        result = quiz_one(term, question, args.quiz,
+                        result = quiz_one(term, question,
                                           j, len(wrong))
                         if result is None:
                             quit_early = True
@@ -1082,7 +1084,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
     stats.setdefault("quiz_sessions", []).append({
         "time": time.strftime("%Y-%m-%d %H:%M"),
         "kind": kind,
-        "quiz": args.quiz,
+        "quiz": "mixed",
         "scope": len(scope),
         "total": first_total,
         "correct": first_correct,
@@ -1380,7 +1382,6 @@ def main():
     epilog = """\
 示例:
   vocabtype                         普通模式：拼写 + 全拼释义 + 释义检测
-  vocabtype --quiz choice           释义检测用四选一
   vocabtype --no-quiz               只做拼写练习
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
@@ -1408,9 +1409,6 @@ def main():
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
     p.add_argument("--review", action="store_true",
                    help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
-    p.add_argument("--quiz", choices=["pinyin", "choice"], default="pinyin",
-                   help="释义检测方式：pinyin=输入拼音模糊匹配（默认，"
-                        "唯一匹配后按 ; 或 Enter 确定）；choice=四选一")
     p.add_argument("--no-quiz", action="store_true",
                    help="普通模式结束后不做释义检测")
     p.add_argument("--quiz-size", type=int, default=0,
