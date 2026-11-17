@@ -49,11 +49,11 @@ class IntervalTest(unittest.TestCase):
         self.assertEqual(rec["level"], 1)
         self.assertEqual(rec["due"], "2026-11-18")
 
-    def test_all_senses_are_registered(self):
+    def test_only_tested_sense_is_registered(self):
         stats = {}
         self.mark(stats, True)
-        self.assertEqual(len(stats["review"]["w"]), 2)
-        self.assertEqual(rec_for(stats, "w", self.s1)["state"], "new")
+        self.assertEqual(list(stats["review"]["w"]),
+                         [vocabtype.sense_key(self.s0)])
 
     def test_learning_wrong_stays_learning(self):
         stats = {}
@@ -88,8 +88,8 @@ class IntervalTest(unittest.TestCase):
         stats = {}
         self.mark(stats, True)
         new, learning, known, levels, due, words = vocabtype.review_counts(stats)
-        # 熟词 due 是明天，所以今天只有未测的第二个义项待复习
-        self.assertEqual((new, learning, known, due, words), (1, 0, 1, 1, 1))
+        # 只登记检测过的义项；熟词 due 是明天，所以今天没有待复习
+        self.assertEqual((new, learning, known, due, words), (0, 0, 1, 0, 1))
         self.assertEqual(levels, {1: 1})
 
     def test_parse_intervals(self):
@@ -103,7 +103,17 @@ class IntervalTest(unittest.TestCase):
         }}}
         vocabtype.normalize_review(stats, [self.e])
         self.assertEqual(rec_for(stats, "w", self.s0)["level"], 2)
-        self.assertEqual(rec_for(stats, "w", self.s1)["state"], "new")
+        self.assertNotIn(vocabtype.sense_key(self.s1), stats["review"]["w"])
+
+    def test_normalize_drops_untested_senses(self):
+        stats = {"review": {"w": {
+            vocabtype.sense_key(self.s0): {
+                "state": "known", "level": 1, "due": "2026-11-20"},
+            vocabtype.sense_key(self.s1): vocabtype.new_review_record(self.day),
+        }}}
+        vocabtype.normalize_review(stats, [self.e])
+        self.assertIn(vocabtype.sense_key(self.s0), stats["review"]["w"])
+        self.assertNotIn(vocabtype.sense_key(self.s1), stats["review"]["w"])
 
 
 class ScopeTest(unittest.TestCase):
@@ -127,10 +137,16 @@ class ScopeTest(unittest.TestCase):
     def scope_senses(self, scope):
         return {(e["word"], s["cn"]) for e, s, _ in scope}
 
-    def test_scope_includes_new_and_due_only(self):
+    def test_scope_includes_only_learning_and_due(self):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args)
-        self.assertEqual(self.scope_senses(scope), {("a", "甲"), ("b", "乙")})
+        # a 是未测义项（没学过），不应进入复习池
+        self.assertEqual(self.scope_senses(scope), {("b", "乙")})
+
+    def test_untested_senses_are_not_drawn(self):
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        self.assertNotIn("a", {e["word"] for e, _, _ in scope})
 
     def test_level_filter(self):
         self.args.level = "cet4"

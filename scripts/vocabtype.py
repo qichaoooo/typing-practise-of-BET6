@@ -8,10 +8,10 @@
 
 释义检测（背单词模式）：
   普通模式拼写结束后自动检测释义；首答答对进熟词表，答错进生词表。
-  复习按义项进行：一个词第一次进入检测时会登记它的所有义项，逐个复习。
+  复习按义项进行：只登记实际检测过的义项，没练过的释义不会进入复习。
   检测默认 --check split：候选释义按逗号拆开，多选全部正确片段。
   可选 --check single：四选一，按数字或输入拼音模糊筛选，再按 ;/Enter 确定。
-  --review 只复习未测/生词义项和今天到期的熟词义项；--no-quiz 跳过检测。
+  --review 只复习生词义项和今天到期的熟词义项；--no-quiz 跳过检测。
 
 用法示例：
   python3 -I vocabtype.py                 # 拼写 + 拆分多选检测
@@ -140,8 +140,12 @@ def find_sense(entry, ref):
     return None
 
 
-def ensure_word_review(stats, entry, create_all=False, day=None):
-    """把 review[word] 规范为 {义项 key: 记录}，并可按需补齐所有义项。"""
+def ensure_word_review(stats, entry, day=None):
+    """把 review[word] 规范为 {义项 key: 记录}。
+
+    只为已经检测过的义项建记录；没练过的义项不预先登记，避免复习模式
+    抽到「学过单词但没学过的释义」。
+    """
     day = day or date.today()
     review = stats.setdefault("review", {})
     recs = review.get(entry["word"])
@@ -167,29 +171,36 @@ def ensure_word_review(stats, entry, create_all=False, day=None):
                 "wrong": int(old.get("wrong", 0)),
                 "last": old.get("last"),
             }
-    if create_all:
-        valid = {sense_key(s) for s in senses}
-        for key in list(recs):
-            if key not in valid:  # 词条释义变了，丢弃过期记录
-                del recs[key]
-        for s in senses:
-            recs.setdefault(sense_key(s), new_review_record(day))
     return recs
 
 
 def normalize_review(stats, entries):
-    """把旧进度迁移成按义项记录，并为已进入复习的词补齐所有义项。"""
+    """迁移旧进度，并清掉从未检测过的义项记录。
+
+    旧版本会把一个词的所有义项都登记为 new；这些义项从未练过，不应进入
+    复习池。同时丢弃词条释义已变化留下的过期记录。
+    """
     by_word = {e["word"]: e for e in entries}
-    for word in list(stats.get("review", {})):
+    review = stats.get("review", {})
+    for word in list(review):
         entry = by_word.get(word)
-        if entry:
-            ensure_word_review(stats, entry, create_all=True)
+        if not entry:
+            continue
+        recs = ensure_word_review(stats, entry)
+        valid = {sense_key(s) for s in entry.get("senses", [])}
+        for key in list(recs):
+            rec = recs[key]
+            if key not in valid or (isinstance(rec, dict)
+                                    and rec.get("state") == "new"):
+                del recs[key]
+        if not recs:
+            del review[word]
 
 
 def mark_review_result(stats, entry, sense, correct, intervals, day=None):
     """首次检测结果决定该义项的状态；重抽不调用本函数。"""
     day = day or date.today()
-    recs = ensure_word_review(stats, entry, create_all=True, day=day)
+    recs = ensure_word_review(stats, entry, day=day)
     rec = recs.setdefault(sense_key(sense), new_review_record(day))
     rec["last"] = day.isoformat()
     if correct:
@@ -756,7 +767,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
             if sense is None or (word, skey) in seen:
                 continue
             state = rec.get("state")
-            if state in ("new", "learning"):
+            if state == "learning":
                 review_items.append(((entry, sense, rec), 1.0))
             elif state == "known" and is_due(rec):
                 level = max(1, min(int(rec.get("level", 1)), len(intervals)))
@@ -1264,7 +1275,10 @@ def quiz_one_split(term, sq, idx, total):
 
 
 def review_counts(stats):
-    """按义项统计：未测 / 生词 / 熟词 / 待复习 / 覆盖词数。"""
+    """按义项统计：生词 / 熟词 / 待复习 / 覆盖词数。
+
+    返回值第一项是旧数据里残留的「未测」义项数，正常应为 0。
+    """
     new_count = 0
     learning = 0
     known = 0
@@ -1383,7 +1397,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
         finally:
             termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
 
-    new_count, learning, known, levels, due, words = review_counts(stats)
+    _new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
     print(f"\n{BOLD}──── 检测结果 ────{RESET}")
     print(f"首次检测：{first_total} 个义项，正确 {first_correct}，"
@@ -1391,7 +1405,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
     if retry_rounds:
         print(f"错题重刷：{retry_rounds} 轮，答对 {retry_correct}，"
               f"仍错 {retry_wrong}")
-    print(f"当前：未测 {new_count} 义项 · 生词 {learning} · 熟词 {known}"
+    print(f"当前：生词 {learning} 义项 · 熟词 {known}"
           f"{('（' + level_text + '）') if level_text else ''} · "
           f"待复习 {due} · 覆盖 {words} 词")
     if quit_early:
@@ -1707,9 +1721,9 @@ def show_stats(args):
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
     normalize_review(stats, entries)
-    new_count, learning, known, levels, due, words = review_counts(stats)
+    _new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
-    print(f"复习条目: 未测 {new_count} · 生词 {learning} · 熟词 {known}"
+    print(f"复习条目: 生词 {learning} · 熟词 {known}"
           f"{('（' + level_text + '）') if level_text else ''} · "
           f"待复习 {due} · 覆盖 {words} 词")
     if right + wrong:
