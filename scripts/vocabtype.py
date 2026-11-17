@@ -1077,7 +1077,7 @@ def quiz_one(term, question, idx, total):
             print(f"   {DIM}你选择的是：{options[chosen]['cn']}{RESET}")
     if len(entry.get("senses", [])) > 1:
         print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
-    print(f"   {DIM}按 ; 或 Enter 继续{RESET}")
+    print(f"   {DIM}空格 查看助记；; 或 Enter 继续{RESET}")
     while True:
         try:
             k = term.key()
@@ -1085,6 +1085,11 @@ def quiz_one(term, question, idx, total):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if k == ord(" "):
+            if show_info(term, entry, correct,
+                         entry.get("senses") or []) is None:
+                return None
+            continue
         if k in Keys.ENTER or k == ord(";"):
             return ok
 
@@ -1262,7 +1267,7 @@ def quiz_one_split(term, sq, idx, total):
                   f"{RESET}")
     if len(entry.get("senses", [])) > 1:
         print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
-    print(f"   {DIM}按 ; 或 Enter 继续{RESET}")
+    print(f"   {DIM}空格 查看助记；; 或 Enter 继续{RESET}")
     while True:
         try:
             k = term.key()
@@ -1270,6 +1275,11 @@ def quiz_one_split(term, sq, idx, total):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
+        if k == ord(" "):
+            if show_info(term, entry, correct_sense,
+                         entry.get("senses") or []) is None:
+                return None
+            continue
         if k in Keys.ENTER or k == ord(";"):
             return ok
 
