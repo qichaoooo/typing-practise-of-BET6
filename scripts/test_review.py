@@ -76,6 +76,13 @@ class IntervalTest(unittest.TestCase):
         self.assertEqual(vocabtype.parse_intervals("1,2,4"),
                          (1, 2, 4))
 
+    def test_records_tested_sense(self):
+        stats = {}
+        s = sense("n", "甲", "jia")
+        rec = vocabtype.mark_review_result(
+            stats, "w", True, self.intervals, day=self.day, sense=s)
+        self.assertEqual(rec["sense"], {"pos": "n", "cn": "甲"})
+
 
 class ScopeTest(unittest.TestCase):
     def setUp(self):
@@ -126,6 +133,17 @@ class QuestionTest(unittest.TestCase):
         self.assertEqual(len({s["cn"] for s in q["options"]}), len(q["options"]))
         self.assertEqual(len({vocabtype.sense_pinyin(s) for s in q["options"]}),
                          len(q["options"]))
+
+    def test_preferred_sense_is_used(self):
+        target = entry("a", senses=[sense("n", "甲", "jia"),
+                                    sense("v", "乙", "yi")])
+        entries = [target,
+                   entry("b", senses=[sense("n", "丙", "bing")]),
+                   entry("c", senses=[sense("n", "丁", "ding")])]
+        all_options = [(e, s) for e in entries for s in e["senses"]]
+        q = vocabtype.build_question(target, all_options,
+                                     preferred=target["senses"][1])
+        self.assertIs(q["correct"], target["senses"][1])
 
 
 if __name__ == "__main__":

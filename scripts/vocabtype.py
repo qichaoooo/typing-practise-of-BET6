@@ -115,7 +115,7 @@ def is_due(rec, day=None):
         return True
 
 
-def mark_review_result(stats, word, correct, intervals, day=None):
+def mark_review_result(stats, word, correct, intervals, day=None, sense=None):
     """首次检测结果决定生词/熟词状态；重抽不调用本函数。"""
     day = day or date.today()
     review = stats.setdefault("review", {})
@@ -124,6 +124,8 @@ def mark_review_result(stats, word, correct, intervals, day=None):
         "streak": 0, "correct": 0, "wrong": 0, "last": None,
     })
     rec["last"] = day.isoformat()
+    if sense:
+        rec["sense"] = {"pos": sense.get("pos", ""), "cn": sense.get("cn", "")}
     if correct:
         rec["correct"] = rec.get("correct", 0) + 1
         rec["streak"] = rec.get("streak", 0) + 1
@@ -582,12 +584,25 @@ def build_quiz_scope(entries, stats, args, session_words=None):
     return scope
 
 
-def build_question(entry, all_options):
-    """生成一道题：一个正确义项 + 最多 3 个来自其他词的干扰义项。"""
+def build_question(entry, all_options, preferred=None):
+    """生成一道题：一个正确义项 + 最多 3 个来自其他词的干扰义项。
+
+    preferred 是本次拼写时下划线标出的义项（或复习时记录的上次义项）；
+    没给或找不到时退回该词的第一个义项。
+    """
     senses = [s for s in entry.get("senses", []) if sense_pinyin(s)]
     if not senses:
         return None
-    correct = random.choice(senses)
+    correct = None
+    if preferred:
+        for s in senses:
+            if (s is preferred or
+                    (s.get("cn") == preferred.get("cn") and
+                     s.get("pos") == preferred.get("pos"))):
+                correct = s
+                break
+    if correct is None:
+        correct = senses[0]
     correct_cn = {s["cn"] for s in entry.get("senses", [])}
     used_cn = {correct["cn"]}
     used_py = {sense_pinyin(correct)}
@@ -784,9 +799,10 @@ def review_counts(stats):
     return learning, known, levels, due
 
 
-def run_quiz(args, kind="review", session_words=None):
+def run_quiz(args, kind="review", session_words=None, session_senses=None):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
+    session_senses = session_senses or {}
     scope = build_quiz_scope(entries, stats, args, session_words)
     if not scope:
         print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
@@ -802,11 +818,20 @@ def run_quiz(args, kind="review", session_words=None):
     wrong = []
     quit_early = False
     retry_rounds = retry_correct = retry_wrong = 0
+    tested_senses = {}
+
+    def preferred_sense(entry):
+        preferred = session_senses.get(entry["word"])
+        if preferred is not None:
+            return preferred
+        rec = stats.get("review", {}).get(entry["word"]) or {}
+        return rec.get("sense")
 
     with Terminal() as term:
         try:
             for i, entry in enumerate(scope, 1):
-                question = build_question(entry, all_options)
+                question = build_question(entry, all_options,
+                                          preferred_sense(entry))
                 if question is None:
                     continue
                 result = quiz_one(term, question, args.quiz, i, len(scope))
@@ -814,7 +839,9 @@ def run_quiz(args, kind="review", session_words=None):
                     quit_early = True
                     break
                 first_total += 1
-                mark_review_result(stats, entry["word"], result, args.intervals)
+                tested_senses[entry["word"]] = question["correct"]
+                mark_review_result(stats, entry["word"], result, args.intervals,
+                                   sense=question["correct"])
                 if result:
                     first_correct += 1
                 else:
@@ -830,7 +857,9 @@ def run_quiz(args, kind="review", session_words=None):
                           f"{len(wrong)} 个 ────{RESET}")
                     print(f"{DIM}重刷只作巩固，不改变首次检测决定的生词/熟词。{RESET}")
                     for j, entry in enumerate(wrong, 1):
-                        question = build_question(entry, all_options)
+                        question = build_question(
+                            entry, all_options,
+                            tested_senses.get(entry["word"]))
                         if question is None:
                             continue
                         result = quiz_one(term, question, args.quiz,
@@ -1012,6 +1041,7 @@ def run(args):
     start_time = None
     missed = []
     pinyin_count = 0
+    session_senses = {}
     i = 0
     quit_early = False
 
@@ -1021,6 +1051,8 @@ def run(args):
                 entry, is_review = queue[i]
                 sense = (pick_sense(entry)
                          if args.mode == "show" and not args.no_pinyin else None)
+                if sense is not None:
+                    session_senses[entry["word"]] = sense
                 result = practice_one(term, entry, min(done + 1, total_planned),
                                       total_planned, args.mode, sense)
                 if result is None:
@@ -1061,7 +1093,7 @@ def run(args):
 
     if done == 0:
         print("\n已退出，本次没有练习记录。")
-        return [], True, 0
+        return [], True, 0, {}
 
     elapsed_total = (time.monotonic() - start_time) if start_time else 0.0
     minutes = max(typing_seconds / 60.0, 1e-9)
@@ -1094,7 +1126,7 @@ def run(args):
     stats["sessions"] = stats["sessions"][-500:]
     save_stats(args.stats_file, stats)
     print(f"{DIM}进度已保存到 {args.stats_file}{RESET}")
-    return words, quit_early, done
+    return words, quit_early, done, session_senses
 
 
 def show_stats(args):
@@ -1217,14 +1249,15 @@ def main():
             sys.exit("复习模式不支持 --new / --weak。")
         run_quiz(args, kind="review")
         return
-    words, quit_early, done = run(args)
+    words, quit_early, done, session_senses = run(args)
     if args.no_quiz:
         return
     if quit_early:
         print(f"{DIM}已退出，本次未进行释义检测。{RESET}")
         return
     if done:
-        run_quiz(args, kind="normal", session_words=words)
+        run_quiz(args, kind="normal", session_words=words,
+                 session_senses=session_senses)
 
 
 if __name__ == "__main__":
