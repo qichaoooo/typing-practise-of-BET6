@@ -43,7 +43,6 @@ DEFAULT_STATS = os.path.join(
     "vocabtype", "stats.json")
 
 GREEN = "\033[32m"
-YELLOW = "\033[33m"
 RED = "\033[31m"
 DIM = "\033[2m"
 BOLD = "\033[1m"
@@ -870,7 +869,7 @@ def quiz_one(term, question, idx, total):
         for i, s in enumerate(options, 1):
             oi = i - 1
             if selected is not None:
-                color = BOLD + UNDERLINE + YELLOW if oi == selected else GREEN
+                color = (BOLD + UNDERLINE + GREEN if oi == selected else DIM)
             elif matched is None:
                 color = GREEN
             elif oi in matched:
@@ -892,7 +891,7 @@ def quiz_one(term, question, idx, total):
 
     def state_fn(text, selected):
         if selected is not None:
-            return (f"{YELLOW}已选：{selected + 1}，按 ; 或 Enter 确定{RESET}",
+            return (f"{GREEN}已选：{selected + 1}，按 ; 或 Enter 确定{RESET}",
                     selected, ("selected", selected))
         norm = normalize_pinyin(text)
         if not norm:
