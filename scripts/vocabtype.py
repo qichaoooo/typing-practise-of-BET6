@@ -9,11 +9,13 @@
 释义检测（背单词模式）：
   普通模式拼写结束后自动检测释义；首答答对进熟词表，答错进生词表。
   复习按义项进行：一个词第一次进入检测时会登记它的所有义项，逐个复习。
-  检测时按数字直选，或输入拼音模糊筛选，再按 ; 或 Enter 确定。
+  检测默认 --check split：候选释义按逗号拆开，多选全部正确片段。
+  可选 --check single：四选一，按数字或输入拼音模糊筛选，再按 ;/Enter 确定。
   --review 只复习未测/生词义项和今天到期的熟词义项；--no-quiz 跳过检测。
 
 用法示例：
-  python3 -I vocabtype.py                 # 拼写 + 释义检测
+  python3 -I vocabtype.py                 # 拼写 + 拆分多选检测
+  python3 -I vocabtype.py --check single  # 释义检测改用四选一
   python3 -I vocabtype.py --level cet6    # 只练官方六级★词
   python3 -I vocabtype.py --review        # 复习生词/到期熟词
   python3 -I vocabtype.py --no-quiz       # 只拼写
@@ -1631,9 +1633,9 @@ class ChineseArgumentParser(argparse.ArgumentParser):
 def main():
     epilog = """\
 示例:
-  vocabtype                         普通模式：拼写 + 全拼释义 + 释义检测
+  vocabtype                         普通模式：拼写 + 全拼释义 + 拆分多选检测
+  vocabtype --check single          释义检测改用四选一
   vocabtype --no-quiz               只做拼写练习
-  vocabtype --check split           释义检测改为拆分多选
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
   vocabtype --stats                 查看复习进度
@@ -1660,9 +1662,8 @@ def main():
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
     p.add_argument("--review", action="store_true",
                    help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
-    p.add_argument("--check", choices=["single", "split"], default="single",
-                   help="检查方式：single=四选一（默认）；split=把候选释义"
-                        "按逗号拆开，多选全部正确片段")
+    p.add_argument("--check", choices=["single", "split"], default="split",
+                   help="检查方式：split=拆分多选（默认）；single=四选一")
     p.add_argument("--no-quiz", action="store_true",
                    help="普通模式结束后不做释义检测")
     p.add_argument("--quiz-size", type=int, default=0,

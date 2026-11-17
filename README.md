@@ -9,10 +9,10 @@
 ## 快速开始
 
 ```sh
-vocabtype                     # 普通模式：拼写 + 全拼释义 + 释义检测
+vocabtype                     # 普通模式：拼写 + 全拼释义 + 拆分多选检测
 vocabtype --level cet6        # 只练官方六级★词（推荐备考时用）
 vocabtype --no-quiz           # 只做拼写练习，不做释义检测
-vocabtype --check split       # 释义检测改为拆分多选
+vocabtype --check single      # 释义检测改用四选一（默认是拆分多选）
 vocabtype --review            # 复习模式：只检测生词和今天到期的熟词
 vocabtype --stats             # 查看拼写、生词/熟词和到期数量
 vocabtype -n 50 --mode recall # 只看中文释义，凭记忆拼写英文
@@ -86,7 +86,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 
 普通模式在拼写结束后自动进入释义检测；`--no-quiz` 跳过。
 
-### 四选一方式（默认，`--check single`）
+### 四选一方式（`--check single`，可选）
 
 每道题给出英文单词和 4 个打乱的中文释义，选项一开始全部绿色。可以用两种方式
 选择，然后按 `;` 或 `Enter` 确定：
@@ -110,7 +110,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 
 每题作答后会显示正确/错误结果，按 `;` 或 `Enter` 进入下一题（`Esc` 退出）。
 
-### 拆分多选（`--check split`）
+### 拆分多选（默认，`--check split`）
 
 同一道题的四条候选释义都会按中文/英文逗号拆成片段，去重、打乱后一起显示。你
 需要选出属于正确释义的**全部片段**，再按 `;` 或 `Enter` 提交：
@@ -177,7 +177,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 --new               只选没练过的词
 --no-requeue        错词不在本次重复
 --review            复习模式：只做释义检测
---check single|split 检查方式：single=四选一（默认）；split=拆分多选
+--check single|split 检查方式：split=拆分多选（默认）；single=四选一
 --no-quiz           普通模式跳过释义检测
 --quiz-size N       释义检测最多几题（0=全部）
 --no-retry          首次答错的词不在本轮重刷
