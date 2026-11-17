@@ -1127,7 +1127,11 @@ def quiz_one_split(term, sq, idx, total):
                 else:
                     color = DIM
             elif oi in selected:
-                color = BOLD + UNDERLINE + GREEN
+                # 下划线表示已选；颜色仍跟随拼音筛选，绿色只代表匹配
+                if matched is None or oi in matched:
+                    color = BOLD + UNDERLINE + GREEN
+                else:
+                    color = DIM + UNDERLINE
             elif matched is None or oi in matched:
                 color = GREEN
             else:
@@ -1148,7 +1152,9 @@ def quiz_one_split(term, sq, idx, total):
         if norm:
             matched = current_matches() or ()
             if len(matched) == 1:
-                hint = f"{GREEN}唯一匹配：{matched[0] + 1}，空格切换{RESET}"
+                oi = matched[0]
+                action = "已选，空格取消" if oi in selected else "空格选中"
+                hint = f"{GREEN}唯一匹配：{oi + 1}，{action}{RESET}"
             elif matched:
                 hint = f"{DIM}匹配 {len(matched)} 项，继续输入…{RESET}"
             else:
