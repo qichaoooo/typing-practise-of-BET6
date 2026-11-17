@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """vocabtype — 边背 CET-6 单词边练打字。
 
-两种模式：
+拼写模式：
   show   （默认）两阶段：先照着英文单词拼写；再从该词的义项中按词频顺序
          加权抽一条，看着逐字拼音把释义全拼打出来（打错不计入错词）
   recall 只显示中文释义，凭记忆拼出英文单词
 
+释义检测（背单词模式）：
+  普通模式拼写结束后自动检测释义；首答答对进熟词表，答错进生词表。
+  --quiz pinyin（默认）输入所选释义的完整拼音；--quiz choice 四选一。
+  --review 只复习生词和今天到期的熟词；--no-quiz 跳过检测。
+
 用法示例：
-  python3 -I vocabtype.py                 # 随机 30 个词，显示模式
+  python3 -I vocabtype.py                 # 拼写 + 释义检测
   python3 -I vocabtype.py --level cet6    # 只练官方六级★词
-  python3 -I vocabtype.py -n 50 --mode recall
-  python3 -I vocabtype.py --weak          # 专练错得最多的词
-  python3 -I vocabtype.py --new           # 只练还没练过的词
+  python3 -I vocabtype.py --review        # 复习生词/到期熟词
+  python3 -I vocabtype.py --quiz choice   # 释义检测用四选一
+  python3 -I vocabtype.py --no-quiz       # 只拼写
   python3 -I vocabtype.py --stats         # 查看累计进度
 
 按键：Esc / Ctrl-C 退出并查看本次结果；练习中按 ; 查看该词的词根、同根词、
@@ -28,6 +33,7 @@ import termios
 import time
 import tty
 import unicodedata
+from datetime import date, timedelta
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DATA = os.path.join(PROJECT_DIR, "data", "cet6.json")
@@ -43,6 +49,8 @@ UNDERLINE = "\033[4m"
 RESET = "\033[0m"
 
 LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
+
+DEFAULT_INTERVALS = (1, 3, 7, 15, 30)  # 熟词 5 级复习间隔（天）
 
 
 class Keys:
@@ -61,9 +69,14 @@ def load_words(path):
 def load_stats(path):
     try:
         with open(path, encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
-        return {"words": {}, "sessions": []}
+        data = {"words": {}, "sessions": []}
+    data.setdefault("words", {})
+    data.setdefault("sessions", [])
+    data.setdefault("review", {})
+    data.setdefault("quiz_sessions", [])
+    return data
 
 
 def save_stats(path, stats):
@@ -76,6 +89,56 @@ def save_stats(path, stats):
 
 def word_stat(stats, word):
     return stats["words"].setdefault(word, {"r": 0, "w": 0, "n": 0, "t": 0.0})
+
+
+def parse_intervals(text):
+    try:
+        vals = tuple(int(x) for x in str(text).split(",") if x.strip())
+    except ValueError:
+        sys.exit("--intervals 需要逗号分隔的正整数，例如 1,3,7,15,30")
+    if not vals or any(v <= 0 for v in vals):
+        sys.exit("--intervals 必须是正整数，例如 1,3,7,15,30")
+    return vals
+
+
+def today_iso():
+    return date.today().isoformat()
+
+
+def is_due(rec, day=None):
+    due = rec.get("due")
+    if not due:
+        return True
+    try:
+        return date.fromisoformat(due) <= (day or date.today())
+    except ValueError:
+        return True
+
+
+def mark_review_result(stats, word, correct, intervals, day=None):
+    """首次检测结果决定生词/熟词状态；重抽不调用本函数。"""
+    day = day or date.today()
+    review = stats.setdefault("review", {})
+    rec = review.setdefault(word, {
+        "state": "learning", "level": 0, "due": day.isoformat(),
+        "streak": 0, "correct": 0, "wrong": 0, "last": None,
+    })
+    rec["last"] = day.isoformat()
+    if correct:
+        rec["correct"] = rec.get("correct", 0) + 1
+        rec["streak"] = rec.get("streak", 0) + 1
+        level = (min(int(rec.get("level", 0)) + 1, len(intervals))
+                 if rec.get("state") == "known" else 1)
+        rec["state"] = "known"
+        rec["level"] = level
+        rec["due"] = (day + timedelta(days=intervals[level - 1])).isoformat()
+    else:
+        rec["wrong"] = rec.get("wrong", 0) + 1
+        rec["streak"] = 0
+        rec["state"] = "learning"
+        rec["level"] = 0
+        rec["due"] = day.isoformat()
+    return rec
 
 
 def meaning(entry, sep="；"):
@@ -455,6 +518,367 @@ def practice_pinyin(term, entry, sense):
     return True
 
 
+def sense_pinyin(sense):
+    return normalize_pinyin("".join(py for _, py in sense.get("tokens", [])))
+
+
+def weighted_sample(items, k):
+    """items: [(entry, weight)]，不放回加权抽样。"""
+    pool = list(items)
+    if k <= 0 or not pool:
+        return []
+    k = min(k, len(pool))
+    out = []
+    for _ in range(k):
+        total = sum(w for _, w in pool)
+        r = random.random() * total
+        acc = 0.0
+        picked = None
+        for i, (entry, weight) in enumerate(pool):
+            acc += weight
+            if r <= acc:
+                picked = pool.pop(i)[0]
+                break
+        out.append(picked if picked is not None else pool.pop()[0])
+    return out
+
+
+def build_quiz_scope(entries, stats, args, session_words=None):
+    """普通模式：本次词 + 复习池；复习模式：只取复习池。"""
+    intervals = args.intervals
+    by_word = {e["word"]: e for e in entries}
+    seen = set()
+    scope = []
+    if session_words:
+        for e in session_words:
+            if e["word"] in seen or not e.get("senses"):
+                continue
+            scope.append(e)
+            seen.add(e["word"])
+
+    learning, due = [], []
+    for word, rec in stats.get("review", {}).items():
+        e = by_word.get(word)
+        if not e or e["word"] in seen or not e.get("senses"):
+            continue
+        if args.level != "all" and e.get("level") != args.level:
+            continue
+        if rec.get("state") == "learning":
+            learning.append((e, 1.0))
+        elif rec.get("state") == "known" and is_due(rec):
+            level = max(1, min(int(rec.get("level", 1)), len(intervals)))
+            due.append((e, 1.0 / intervals[level - 1]))
+
+    cap = args.quiz_size or 0
+    if cap > 0:
+        if len(scope) >= cap:
+            random.shuffle(scope)
+            return scope[:cap]
+        scope.extend(weighted_sample(learning + due, cap - len(scope)))
+    else:
+        scope.extend(e for e, _ in learning)
+        scope.extend(e for e, _ in due)
+    random.shuffle(scope)
+    return scope
+
+
+def build_question(entry, all_options):
+    """生成一道题：一个正确义项 + 最多 3 个来自其他词的干扰义项。"""
+    senses = [s for s in entry.get("senses", []) if sense_pinyin(s)]
+    if not senses:
+        return None
+    correct = random.choice(senses)
+    correct_cn = {s["cn"] for s in entry.get("senses", [])}
+    used_cn = {correct["cn"]}
+    used_py = {sense_pinyin(correct)}
+
+    def usable(e, s):
+        if e["word"] == entry["word"]:
+            return False
+        if s["cn"] in correct_cn or s["cn"] in used_cn:
+            return False
+        py = sense_pinyin(s)
+        return bool(py) and py not in used_py
+
+    def tier(e, s, n):
+        if n == 0:
+            return (e.get("level") == entry.get("level") and
+                    same_pos(s.get("pos"), correct.get("pos")))
+        if n == 1:
+            return e.get("level") == entry.get("level")
+        if n == 2:
+            return same_pos(s.get("pos"), correct.get("pos"))
+        return True
+
+    chosen = []
+    for n in range(4):
+        candidates = [(e, s) for e, s in all_options
+                      if usable(e, s) and tier(e, s, n)]
+        random.shuffle(candidates)
+        for e, s in candidates:
+            if s["cn"] in used_cn or sense_pinyin(s) in used_py:
+                continue
+            chosen.append(s)
+            used_cn.add(s["cn"])
+            used_py.add(sense_pinyin(s))
+            if len(chosen) == 3:
+                break
+        if len(chosen) == 3:
+            break
+
+    options = [correct] + chosen
+    if len(options) < 2:
+        return None
+    random.shuffle(options)
+    correct_index = next(i for i, s in enumerate(options) if s is correct)
+    return {"entry": entry, "correct": correct, "options": options,
+            "correct_index": correct_index}
+
+
+def read_pinyin(term, on_comma=None):
+    typed = []
+
+    def draw():
+        sys.stdout.write("\r\033[K   > " + "".join(typed))
+        sys.stdout.flush()
+
+    draw()
+    while True:
+        try:
+            k = term.key()
+        except KeyboardInterrupt:
+            return None
+        if k == Keys.ESC or k == Keys.CTRL_C:
+            return None
+        if k == ord(",") and on_comma is not None:
+            on_comma()
+            draw()
+            continue
+        if k in Keys.BACKSPACE:
+            if typed:
+                typed.pop()
+            draw()
+            continue
+        if k == Keys.CTRL_U:
+            typed.clear()
+            draw()
+            continue
+        if k in Keys.ENTER:
+            return "".join(typed)
+        if 32 <= k <= 126:
+            typed.append(chr(k))
+            draw()
+
+
+def quiz_one(term, question, mode, idx, total):
+    entry = question["entry"]
+    options = question["options"]
+    correct = question["correct"]
+    correct_index = question["correct_index"]
+    pos = f"{correct['pos']}." if correct.get("pos") else ""
+    level = LEVEL_LABEL.get(entry.get("level"), "")
+    phonetic = (f"  {DIM}/{entry['phonetic']}/{RESET}"
+                if entry.get("phonetic") else "")
+    level_tag = f"  {DIM}{level}{RESET}" if level else ""
+    header = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{entry['word']}{RESET}"
+              f"{phonetic}{level_tag}  {DIM}{pos}{RESET}")
+    cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
+    block_lines = 0
+
+    def render(note=""):
+        nonlocal block_lines
+        if mode == "pinyin":
+            hint = (f"   {DIM}输入所选释义的全拼（空格可有可无），Enter 提交，"
+                    f"Esc 退出；按 , 重新打乱选项{note}{RESET}")
+        else:
+            hint = f"   {DIM}按 1-{len(options)} 选择，Esc 退出{RESET}"
+        print(header)
+        option_texts = []
+        for i, s in enumerate(options, 1):
+            line = f"   {i}. {s['cn']}"
+            print(line)
+            option_texts.append(line)
+        print(hint)
+        block_lines = (physical_lines(header, cols)
+                       + sum(physical_lines(line, cols)
+                             for line in option_texts)
+                       + physical_lines(hint, cols))
+
+    print()
+    render()
+
+    if mode == "pinyin":
+        def reshuffle():
+            nonlocal correct_index
+            sys.stdout.write(f"\r\033[{block_lines}A\033[J")
+            sys.stdout.flush()
+            random.shuffle(options)
+            correct_index = next(i for i, s in enumerate(options) if s is correct)
+            render("（已打乱）")
+
+        text = read_pinyin(term, on_comma=reshuffle)
+        if text is None:
+            return None
+        typed = normalize_pinyin(text)
+        matches = [i for i, s in enumerate(options) if sense_pinyin(s) == typed]
+        chosen = matches[0] if matches else None
+        ok = bool(typed) and typed == sense_pinyin(correct)
+    else:
+        chosen = None
+        while True:
+            try:
+                k = term.key()
+            except KeyboardInterrupt:
+                return None
+            if k == Keys.ESC or k == Keys.CTRL_C:
+                return None
+            if ord("1") <= k <= ord("9"):
+                candidate = k - ord("1")
+                if candidate < len(options):
+                    chosen = candidate
+                    break
+        ok = chosen == correct_index
+
+    if ok:
+        print(f"   {GREEN}✓ 正确{RESET}   {pos} {correct['cn']}")
+    else:
+        print(f"   {RED}✗ 错误{RESET}   正确：{pos} {correct['cn']}")
+        if mode == "pinyin":
+            answer_py = " ".join(py for _, py in correct.get("tokens", []) if py)
+            print(f"   {DIM}正确拼音：{answer_py}{RESET}")
+            if chosen is not None:
+                print(f"   {DIM}你选中的是：{options[chosen]['cn']}{RESET}")
+            else:
+                print(f"   {DIM}输入未匹配到任何选项{RESET}")
+        elif chosen is not None:
+            print(f"   {DIM}你选中的是：{options[chosen]['cn']}{RESET}")
+    if len(entry.get("senses", [])) > 1:
+        print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
+    print(f"   {DIM}按 Enter 继续{RESET}")
+    while True:
+        try:
+            k = term.key()
+        except KeyboardInterrupt:
+            return None
+        if k == Keys.ESC or k == Keys.CTRL_C:
+            return None
+        if k in Keys.ENTER:
+            return ok
+
+
+def review_counts(stats):
+    review = stats.get("review", {})
+    learning = 0
+    known = 0
+    due = 0
+    levels = {}
+    for rec in review.values():
+        if rec.get("state") == "learning":
+            learning += 1
+        elif rec.get("state") == "known":
+            known += 1
+            lvl = int(rec.get("level", 1))
+            levels[lvl] = levels.get(lvl, 0) + 1
+            if is_due(rec):
+                due += 1
+    return learning, known, levels, due
+
+
+def run_quiz(args, kind="review", session_words=None):
+    entries = load_words(args.file)
+    stats = load_stats(args.stats_file)
+    scope = build_quiz_scope(entries, stats, args, session_words)
+    if not scope:
+        print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
+        return
+
+    all_options = [(e, s) for e in entries for s in e.get("senses", [])]
+    print(f"\n{BOLD}──── 释义检测（{args.quiz}）────{RESET}")
+    print(f"{DIM}本轮 {len(scope)} 个词；首次结果决定生词/熟词，"
+          f"错题随后重刷。{RESET}")
+
+    first_total = first_correct = 0
+    first_wrong = 0
+    wrong = []
+    quit_early = False
+    retry_rounds = retry_correct = retry_wrong = 0
+
+    with Terminal() as term:
+        try:
+            for i, entry in enumerate(scope, 1):
+                question = build_question(entry, all_options)
+                if question is None:
+                    continue
+                result = quiz_one(term, question, args.quiz, i, len(scope))
+                if result is None:
+                    quit_early = True
+                    break
+                first_total += 1
+                mark_review_result(stats, entry["word"], result, args.intervals)
+                if result:
+                    first_correct += 1
+                else:
+                    wrong.append(entry)
+            first_wrong = len(wrong)
+
+            if not args.no_retry and wrong and not quit_early:
+                while wrong:
+                    retry_rounds += 1
+                    random.shuffle(wrong)
+                    next_wrong = []
+                    print(f"\n{BOLD}──── 错题重刷 第 {retry_rounds} 轮："
+                          f"{len(wrong)} 个 ────{RESET}")
+                    print(f"{DIM}重刷只作巩固，不改变首次检测决定的生词/熟词。{RESET}")
+                    for j, entry in enumerate(wrong, 1):
+                        question = build_question(entry, all_options)
+                        if question is None:
+                            continue
+                        result = quiz_one(term, question, args.quiz,
+                                          j, len(wrong))
+                        if result is None:
+                            quit_early = True
+                            break
+                        if result:
+                            retry_correct += 1
+                        else:
+                            retry_wrong += 1
+                            next_wrong.append(entry)
+                    if quit_early:
+                        break
+                    wrong = next_wrong
+        finally:
+            termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
+
+    learning, known, levels, due = review_counts(stats)
+    level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
+    print(f"\n{BOLD}──── 检测结果 ────{RESET}")
+    print(f"首次检测：{first_total} 词，正确 {first_correct}，错误 {first_wrong}")
+    if retry_rounds:
+        print(f"错题重刷：{retry_rounds} 轮，答对 {retry_correct}，"
+              f"仍错 {retry_wrong}")
+    print(f"当前：生词 {learning} · 熟词 {known}"
+          f"{('（' + level_text + '）') if level_text else ''} · 今日到期 {due}")
+    if quit_early:
+        print(f"{DIM}中途退出，剩余单词未检测。{RESET}")
+
+    stats.setdefault("quiz_sessions", []).append({
+        "time": time.strftime("%Y-%m-%d %H:%M"),
+        "kind": kind,
+        "quiz": args.quiz,
+        "scope": len(scope),
+        "total": first_total,
+        "correct": first_correct,
+        "wrong": first_wrong,
+        "retry_rounds": retry_rounds,
+        "retry_correct": retry_correct,
+        "retry_wrong": retry_wrong,
+        "quit_early": quit_early,
+    })
+    stats["quiz_sessions"] = stats["quiz_sessions"][-500:]
+    save_stats(args.stats_file, stats)
+    print(f"{DIM}进度已保存到 {args.stats_file}{RESET}")
+
+
 class Terminal:
     def __init__(self):
         self.fd = sys.stdin.fileno()
@@ -637,7 +1061,7 @@ def run(args):
 
     if done == 0:
         print("\n已退出，本次没有练习记录。")
-        return
+        return [], True, 0
 
     elapsed_total = (time.monotonic() - start_time) if start_time else 0.0
     minutes = max(typing_seconds / 60.0, 1e-9)
@@ -670,6 +1094,7 @@ def run(args):
     stats["sessions"] = stats["sessions"][-500:]
     save_stats(args.stats_file, stats)
     print(f"{DIM}进度已保存到 {args.stats_file}{RESET}")
+    return words, quit_early, done
 
 
 def show_stats(args):
@@ -684,6 +1109,10 @@ def show_stats(args):
               for k in ("cet6", "cet4", "extra")}
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
+    learning, known, levels, due = review_counts(stats)
+    level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
+    print(f"复习进度: 生词 {learning} · 熟词 {known}"
+          f"{('（' + level_text + '）') if level_text else ''} · 今日到期 {due}")
     if right + wrong:
         print(f"累计正确 {right}  错误 {wrong}  准确率 {right / (right + wrong) * 100:.1f}%")
     weak = sorted(
@@ -703,16 +1132,48 @@ def show_stats(args):
         recent = sessions[-5:]
         print("最近记录:")
         for s in recent:
-            print(f"  {s['time']}  {s['mode']:<6} {s['done']:>3} 词  "
-                  f"{s['wpm']:>5.0f} WPM  {s['accuracy']:>5.1f}%")
+            print(f"  {s.get('time', '')}  {s.get('mode', ''):<6} "
+                  f"{s.get('done', 0):>3} 词  "
+                  f"{s.get('wpm', 0):>5.0f} WPM  "
+                  f"{s.get('accuracy', 0):>5.1f}%")
+    quiz_sessions = stats.get("quiz_sessions", [])
+    if quiz_sessions:
+        print("最近释义检测:")
+        for q in quiz_sessions[-5:]:
+            print(f"  {q.get('time', '')}  {q.get('kind', ''):<6} "
+                  f"{q.get('quiz', ''):<6} {q.get('total', 0):>3} 词  "
+                  f"正确 {q.get('correct', 0)}  错误 {q.get('wrong', 0)}")
+
+
+class ChineseArgumentParser(argparse.ArgumentParser):
+    def format_help(self):
+        text = super().format_help()
+        return (text.replace("usage:", "用法:")
+                    .replace("options:", "选项:")
+                    .replace("positional arguments:", "位置参数:"))
 
 
 def main():
-    p = argparse.ArgumentParser(description="CET-6 单词 + 打字练习")
+    epilog = """\
+示例:
+  vocabtype                         普通模式：拼写 + 全拼释义 + 释义检测
+  vocabtype --quiz choice           释义检测用四选一
+  vocabtype --no-quiz               只做拼写练习
+  vocabtype --review                复习模式：检测生词和到期熟词
+  vocabtype --review --quiz-size 50 本次最多检测 50 个
+  vocabtype --stats                 查看复习进度
+"""
+    p = ChineseArgumentParser(
+        description="CET-6 单词 + 打字练习 + 释义检测",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=epilog, add_help=False)
+    p.add_argument("-h", "--help", action="help", help="显示本帮助并退出")
     p.add_argument("-f", "--file", default=DEFAULT_DATA, help="单词数据文件")
-    p.add_argument("-n", "--count", type=int, default=30, help="本次练习词数（默认 30）")
+    p.add_argument("-n", "--count", type=int, default=30,
+                   help="普通模式本次拼写练习词数（默认 30）")
     p.add_argument("--mode", choices=["show", "recall"], default="show",
-                   help="show=显示单词照着打（含全拼释义阶段）；recall=只看释义拼写")
+                   help="show=显示单词照着打（含全拼释义阶段）；"
+                        "recall=只看释义拼写")
     p.add_argument("--no-pinyin", action="store_true",
                    help="标准模式不进行第二阶段的释义全拼")
     p.add_argument("--level", choices=["all", "cet6", "cet4", "extra"],
@@ -722,16 +1183,48 @@ def main():
     p.add_argument("--weak", action="store_true", help="优先练错误率最高的词")
     p.add_argument("--new", action="store_true", help="只练尚未练过的词")
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
+    p.add_argument("--review", action="store_true",
+                   help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
+    p.add_argument("--quiz", choices=["pinyin", "choice"], default="pinyin",
+                   help="释义检测方式：pinyin=输入所选释义全拼（默认）；"
+                        "choice=四选一")
+    p.add_argument("--no-quiz", action="store_true",
+                   help="普通模式结束后不做释义检测")
+    p.add_argument("--quiz-size", type=int, default=0,
+                   help="释义检测最多几题；0=全部（默认）")
+    p.add_argument("--no-retry", action="store_true",
+                   help="首次检测答错的词不在本轮重刷")
+    p.add_argument("--intervals", default=",".join(map(str, DEFAULT_INTERVALS)),
+                   help="熟词各级复习间隔（天），逗号分隔；"
+                        "默认 1,3,7,15,30")
     p.add_argument("--stats", action="store_true", help="显示累计进度")
-    p.add_argument("--stats-file", default=DEFAULT_STATS)
-    p.add_argument("--seed", type=int, default=None)
+    p.add_argument("--stats-file", default=DEFAULT_STATS,
+                   help="进度保存路径")
+    p.add_argument("--seed", type=int, default=None, help="固定随机种子")
     args = p.parse_args()
+    args.intervals = parse_intervals(args.intervals)
+    if args.quiz_size < 0:
+        sys.exit("--quiz-size 不能为负数")
     if args.seed is not None:
         random.seed(args.seed)
     if args.stats:
         show_stats(args)
-    else:
-        run(args)
+        return
+    if args.review:
+        if args.no_quiz:
+            sys.exit("复习模式本身就是释义检测，不能与 --no-quiz 同用。")
+        if args.new or args.weak:
+            sys.exit("复习模式不支持 --new / --weak。")
+        run_quiz(args, kind="review")
+        return
+    words, quit_early, done = run(args)
+    if args.no_quiz:
+        return
+    if quit_early:
+        print(f"{DIM}已退出，本次未进行释义检测。{RESET}")
+        return
+    if done:
+        run_quiz(args, kind="normal", session_words=words)
 
 
 if __name__ == "__main__":

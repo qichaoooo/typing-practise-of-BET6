@@ -77,14 +77,53 @@
 - 阶段 1 的暂停时长必须从 WPM 计时中扣除。
 - `Esc` / `Ctrl-C` 在面板里同样退出。
 
+### 释义检测与生词/熟词
+
+- 普通模式在拼写结束后自动进入释义检测；`--no-quiz` 跳过；拼写中途 Esc 退出时
+  不进入检测。
+- `--review` 复习模式：只做释义检测，不拼写；不能与 `--no-quiz`、`--new`、
+  `--weak` 同用。
+- 检测范围：
+  - 普通模式 = 本次练习词 + 复习池（全部生词 + 今天到期的熟词）。
+  - 复习模式 = 复习池。
+  - 默认全部刷完；`--quiz-size N` 限制题数（0=全部），普通模式优先保留本次词。
+- 检测方式：
+  - `--quiz pinyin`（默认）：显示英文单词、词性、打乱的中文选项；用户输入所选
+    释义的**完整拼音**。比较时忽略大小写、空格、标点、`v/u` 差异；匹配不到或
+    匹配到错误选项都算错。允许退格和 Ctrl-U，Enter 提交；按 `,` 重新打乱选项
+    （清除并重绘选项块，已输入的拼音保留）。
+  - `--quiz choice`：四选一，按 `1-4`。
+  - 干扰项来自其他词，排除原词的所有义项，避免多正确答案；优先同级别、同词性。
+- 首次结果决定状态，重刷不改变状态：
+  - 未分类/生词 + 对 → 熟词 L1；错 → 生词。
+  - 熟词 Lk + 对 → L(k+1)（最高级不变），按新等级排下次复习。
+  - 熟词 + 错 → 回生词表（L0）。
+  - 首次答错的词在本轮结束后循环重刷，直到答对或用户退出；重刷只作巩固。
+- 间隔：默认 5 级 `1,3,7,15,30` 天，`--intervals` 可调。熟词到期才进入复习池；
+  池内抽取权重 ∝ `1/间隔`；生词每轮都参与。间隔依据 Ebbinghaus 复现与 SM-2/
+  Anki 的扩展间隔，文档中不得声称权重本身来自实验数据。
+- 进度存 `stats.json`：
+  ```json
+  "review": {"word": {"state": "known", "level": 2, "due": "2026-11-20",
+                      "streak": 2, "correct": 2, "wrong": 0, "last": "2026-11-17"}}
+  ```
+  以及 `quiz_sessions` 列表。旧进度文件自动补键；未检测过的词视为未分类。
+- `--help` 全部中文，包含用法和示例。新增选项时同步更新 README、本文档和
+  `--help`。
+- 单元测试在 `scripts/test_review.py`，覆盖状态转移、到期判断、池子过滤和选项
+  唯一性。
+
 ### 统计与按键
 
 - WPM/击键准确率只统计阶段 1 的英文拼写；不含阶段 2 拼音，不含看题/暂停时间。
 - 统计文件：`$XDG_DATA_HOME/vocabtype/stats.json`，默认
   `~/.local/share/vocabtype/stats.json`。
 - 参数：`-n/--count`、`--mode show|recall`、`--level all|cet6|cet4|extra`、
-  `--no-pinyin`、`--weak`、`--new`、`--no-requeue`、`--stats`、`--stats-file`、
-  `--seed`、`-f/--file`。`--weak`/`--new` 在 `--level` 过滤后的池子里选词。
+  `--no-pinyin`、`--weak`、`--new`、`--no-requeue`、`--review`、
+  `--quiz pinyin|choice`、`--no-quiz`、`--quiz-size`、`--no-retry`、
+  `--intervals`、`--stats`、`--stats-file`、`--seed`、`-f/--file`。
+  `--weak`/`--new` 在 `--level` 过滤后的池子里选词；复习模式不支持它们。
+- `--help` 输出必须为中文（用法、选项说明、示例），新增参数时同步更新。
 - 按键：`Esc`/`Ctrl-C` 退出；退格删除；`Ctrl-U` 清空当前输入。
 
 ## 文件结构
@@ -96,6 +135,7 @@
 | `scripts/parse_official.py` | 从官方 PDF 生成 `official_2016.json`（构建期依赖 pymupdf） |
 | `scripts/build_wordlist.py` | 数据构建：原始 zip + 官方词表 + ECDICT + 补充词 |
 | `scripts/add_pinyin.py` | 数据构建：生成逐字拼音 `senses` |
+| `scripts/test_review.py` | 复习状态机/检测池的 unittest |
 | `data/official_2016.json` | 官方 2016 词表的版本化提取（5,377 行，含 ★） |
 | `data/cet6.json` | 生成物，5,823 词 / 13,439 义项，**勿手改** |
 | `data/extra_words.json` | 人工补充的词（部分已属于官方词表，级别以官方为准） |
@@ -150,7 +190,16 @@ python3 -m venv .venv
 
 ## 测试
 
-没有自动化测试，用伪终端验证交互：
+单元测试：
+
+```sh
+python3 -I scripts/test_review.py -v
+```
+
+覆盖状态转移（生词/熟词、升级、答错回生词、满级）、到期判断、检测池过滤、
+`--quiz-size` 上限和选项唯一性。改状态机或间隔逻辑必须补/改测试。
+
+交互用伪终端验证：
 
 ```sh
 (sleep 1; printf 'stalk'; sleep 0.3; printf ';'; sleep 0.3; printf ';'; sleep 0.2; printf '\r') \
@@ -164,7 +213,10 @@ python3 -m venv .venv
   关闭时清除面板）、下划线义项、错词重排、`recall`、`--no-pinyin`、`--stats`、
   `--level cet6/cet4/extra`、带空格的短语（`according to`）、带重音词
   （`coup d'état` 敲 `coup d'etat`）。
-- 改脚本后先 `python3 -I -m py_compile scripts/vocabtype.py scripts/build_wordlist.py`。
+- 释义检测至少覆盖：`--quiz pinyin` 正确/错误/未匹配、`--quiz choice` 正确/错误、
+  错题重刷、首次答错后状态仍为生词、`--no-retry`、`--review`、`--quiz-size`、
+  `--intervals` 自定义、`--stats` 的生词/熟词/到期显示。
+- 修改码后先 `python3 -I -m py_compile scripts/vocabtype.py scripts/build_wordlist.py`。
 
 ### 数据改动后的检查
 
@@ -199,3 +251,10 @@ python3 -m venv .venv
 - 例句/真题来自源数据，可能是带省略号的片段。
 - 义项频率是顺序近似，不是语料统计。
 - 终端 UI 依赖 ANSI 颜色和 CJK 双宽字符；长信息行在窄终端会换行。
+- 普通模式的释义检测紧跟在拼写之后，测的是短期记忆；长期效果靠复习模式的
+  1/3/7/15/30 天间隔。
+- 拼音检测要求完整拼音，只忽略空格/标点/大小写和 v-u 差异；拼写错误按答错处理。
+- 错题重刷只作巩固，不改变首次检测决定的生词/熟词；这是刻意设计。
+- 默认检测范围是全部生词 + 到期熟词 + 本次词，可能很长；用 `--quiz-size` 限制。
+- 旧进度文件里的词在第一次被释义检测前不属于生词或熟词（未分类）。
+- 干扰项不足时选项会少于 4 个；优先同级别、同词性，但不保证语义难度完全一致。
