@@ -43,6 +43,7 @@ DEFAULT_STATS = os.path.join(
     "vocabtype", "stats.json")
 
 GREEN = "\033[32m"
+YELLOW = "\033[33m"
 RED = "\033[31m"
 DIM = "\033[2m"
 BOLD = "\033[1m"
@@ -1040,17 +1041,30 @@ def quiz_one_split(term, sq, idx, total):
         matches, _scores = fuzzy_matches(norm, options)
         return tuple(matches)
 
-    def render():
+    def render(result=False):
         nonlocal block_lines
-        hint = (f"   {DIM}输入拼音筛选，空格切换唯一匹配；数字 1-9 切换；"
-                f"; 或 Enter 提交；Esc 退出{RESET}")
+        if result:
+            hint = (f"   {DIM}绿色=选对  黄色=漏选  红色=多选  "
+                    f"灰色=未选{RESET}")
+        else:
+            hint = (f"   {DIM}输入拼音筛选，空格切换唯一匹配；数字 1-9 切换；"
+                    f"; 或 Enter 提交；Esc 退出{RESET}")
         print(header)
-        matched = current_matches()
+        matched = None if result else current_matches()
         option_texts = []
         for i, piece in enumerate(options, 1):
             oi = i - 1
             check = "x" if oi in selected else " "
-            if oi in selected:
+            if result:
+                if oi in selected and oi in correct:
+                    color = GREEN
+                elif oi in selected:
+                    color = RED
+                elif oi in correct:
+                    color = YELLOW
+                else:
+                    color = DIM
+            elif oi in selected:
                 color = BOLD + UNDERLINE + GREEN
             elif matched is None or oi in matched:
                 color = GREEN
@@ -1143,6 +1157,12 @@ def quiz_one_split(term, sq, idx, total):
             redraw()
 
     ok = selected == correct
+
+    # 提交后重绘选项：绿色=选对，黄色=漏选，红色=多选，灰色=未选
+    sys.stdout.write(f"\r\033[{block_lines}A\033[J")
+    sys.stdout.flush()
+    render(result=True)
+
     if ok:
         chosen = " / ".join(options[i]["cn"] for i in sorted(selected))
         print(f"   {GREEN}✓ 正确{RESET}   {chosen}")
