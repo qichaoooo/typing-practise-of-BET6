@@ -168,6 +168,14 @@ class FuzzyTest(unittest.TestCase):
     def test_empty_is_none(self):
         self.assertIsNone(vocabtype.fuzzy_match_index("", self.options)[0])
 
+    def test_narrows_to_unique(self):
+        opts = [sense("n", "甲", "jia"), sense("n", "乙", "jing"),
+                sense("n", "丙", "yi")]
+        partial, _ = vocabtype.fuzzy_matches("ji", opts)
+        self.assertEqual(len(partial), 2)
+        exact, _ = vocabtype.fuzzy_matches("jia", opts)
+        self.assertEqual(exact, [0])
+
 
 class QuestionTest(unittest.TestCase):
     def test_options_are_unique_and_include_correct(self):
