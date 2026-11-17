@@ -26,40 +26,53 @@ def entry(word, level="cet6", senses=None):
             "senses": senses or [sense("n", "测试", "ce shi")]}
 
 
+def rec_for(stats, word, s):
+    return stats["review"][word][vocabtype.sense_key(s)]
+
+
 class IntervalTest(unittest.TestCase):
     def setUp(self):
         self.intervals = (1, 3, 7, 15, 30)
         self.day = date(2026, 11, 17)
+        self.e = entry("w", senses=[sense("n", "甲", "jia"),
+                                    sense("v", "乙", "yi")])
+        self.s0, self.s1 = self.e["senses"]
+
+    def mark(self, stats, correct):
+        return vocabtype.mark_review_result(
+            stats, self.e, self.s0, correct, self.intervals, day=self.day)
 
     def test_learning_correct_enters_l1(self):
         stats = {}
-        rec = vocabtype.mark_review_result(
-            stats, "w", True, self.intervals, day=self.day)
+        rec = self.mark(stats, True)
         self.assertEqual(rec["state"], "known")
         self.assertEqual(rec["level"], 1)
         self.assertEqual(rec["due"], "2026-11-18")
 
+    def test_all_senses_are_registered(self):
+        stats = {}
+        self.mark(stats, True)
+        self.assertEqual(len(stats["review"]["w"]), 2)
+        self.assertEqual(rec_for(stats, "w", self.s1)["state"], "new")
+
     def test_learning_wrong_stays_learning(self):
         stats = {}
-        rec = vocabtype.mark_review_result(
-            stats, "w", False, self.intervals, day=self.day)
+        rec = self.mark(stats, False)
         self.assertEqual(rec["state"], "learning")
         self.assertEqual(rec["level"], 0)
         self.assertEqual(rec["wrong"], 1)
 
     def test_known_level_up_uses_next_interval(self):
         stats = {}
-        vocabtype.mark_review_result(stats, "w", True, self.intervals, day=self.day)
-        rec = vocabtype.mark_review_result(
-            stats, "w", True, self.intervals, day=self.day)
+        self.mark(stats, True)
+        rec = self.mark(stats, True)
         self.assertEqual(rec["level"], 2)
         self.assertEqual(rec["due"], "2026-11-20")  # 17 + 3
 
     def test_known_wrong_returns_to_learning(self):
         stats = {}
-        vocabtype.mark_review_result(stats, "w", True, self.intervals, day=self.day)
-        rec = vocabtype.mark_review_result(
-            stats, "w", False, self.intervals, day=self.day)
+        self.mark(stats, True)
+        rec = self.mark(stats, False)
         self.assertEqual(rec["state"], "learning")
         self.assertEqual(rec["level"], 0)
         self.assertEqual(rec["wrong"], 1)
@@ -67,21 +80,30 @@ class IntervalTest(unittest.TestCase):
     def test_max_level_stays_max(self):
         stats = {}
         for _ in range(10):
-            rec = vocabtype.mark_review_result(
-                stats, "w", True, self.intervals, day=self.day)
+            rec = self.mark(stats, True)
         self.assertEqual(rec["level"], 5)
         self.assertEqual(rec["due"], "2026-12-17")  # 17 + 30
 
-    def test_parse_intervals(self):
-        self.assertEqual(vocabtype.parse_intervals("1,2,4"),
-                         (1, 2, 4))
-
-    def test_records_tested_sense(self):
+    def test_review_counts(self):
         stats = {}
-        s = sense("n", "甲", "jia")
-        rec = vocabtype.mark_review_result(
-            stats, "w", True, self.intervals, day=self.day, sense=s)
-        self.assertEqual(rec["sense"], {"pos": "n", "cn": "甲"})
+        self.mark(stats, True)
+        new, learning, known, levels, due, words = vocabtype.review_counts(stats)
+        # 熟词 due 是明天，所以今天只有未测的第二个义项待复习
+        self.assertEqual((new, learning, known, due, words), (1, 0, 1, 1, 1))
+        self.assertEqual(levels, {1: 1})
+
+    def test_parse_intervals(self):
+        self.assertEqual(vocabtype.parse_intervals("1,2,4"), (1, 2, 4))
+
+    def test_migrate_old_word_level_record(self):
+        stats = {"review": {"w": {
+            "state": "known", "level": 2, "due": "2026-11-20",
+            "streak": 2, "correct": 2, "wrong": 0, "last": "2026-11-17",
+            "sense": {"pos": "n", "cn": "甲"},
+        }}}
+        vocabtype.normalize_review(stats, [self.e])
+        self.assertEqual(rec_for(stats, "w", self.s0)["level"], 2)
+        self.assertEqual(rec_for(stats, "w", self.s1)["state"], "new")
 
 
 class ScopeTest(unittest.TestCase):
@@ -94,21 +116,26 @@ class ScopeTest(unittest.TestCase):
             entry("c", level="cet4", senses=[sense("n", "丙", "bing")]),
         ]
         self.stats = {"review": {
-            "a": {"state": "learning", "level": 0, "due": "2999-01-01"},
-            "b": {"state": "known", "level": 1, "due": "2000-01-01"},
-            "c": {"state": "known", "level": 2, "due": "2999-01-01"},
+            "a": {"n|甲": {"state": "new", "level": 0,
+                           "due": "2999-01-01"}},
+            "b": {"n|乙": {"state": "known", "level": 1,
+                           "due": "2000-01-01"}},
+            "c": {"n|丙": {"state": "known", "level": 2,
+                           "due": "2999-01-01"}},
         }}
 
-    def test_scope_includes_learning_and_due_only(self):
+    def scope_senses(self, scope):
+        return {(e["word"], s["cn"]) for e, s, _ in scope}
+
+    def test_scope_includes_new_and_due_only(self):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args)
-        self.assertEqual({e["word"] for e in scope}, {"a", "b"})
+        self.assertEqual(self.scope_senses(scope), {("a", "甲"), ("b", "乙")})
 
     def test_level_filter(self):
         self.args.level = "cet4"
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args)
-        # c 是 CET4 但未到期；a/b 是 CET6
         self.assertEqual(scope, [])
 
     def test_quiz_size_cap(self):
@@ -116,6 +143,12 @@ class ScopeTest(unittest.TestCase):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args)
         self.assertEqual(len(scope), 1)
+
+    def test_session_items_are_included(self):
+        session_items = [(self.entries[2], self.entries[2]["senses"][0])]
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args, session_items)
+        self.assertIn(("c", "丙"), self.scope_senses(scope))
 
 
 class QuestionTest(unittest.TestCase):

@@ -8,8 +8,9 @@
 
 释义检测（背单词模式）：
   普通模式拼写结束后自动检测释义；首答答对进熟词表，答错进生词表。
+  复习按义项进行：一个词第一次进入检测时会登记它的所有义项，逐个复习。
   --quiz pinyin（默认）输入所选释义的完整拼音；--quiz choice 四选一。
-  --review 只复习生词和今天到期的熟词；--no-quiz 跳过检测。
+  --review 只复习未测/生词义项和今天到期的熟词义项；--no-quiz 跳过检测。
 
 用法示例：
   python3 -I vocabtype.py                 # 拼写 + 释义检测
@@ -115,17 +116,79 @@ def is_due(rec, day=None):
         return True
 
 
-def mark_review_result(stats, word, correct, intervals, day=None, sense=None):
-    """首次检测结果决定生词/熟词状态；重抽不调用本函数。"""
+def sense_key(sense):
+    return f"{sense.get('pos', '')}|{sense.get('cn', '')}"
+
+
+def new_review_record(day=None):
+    day = day or date.today()
+    return {"state": "new", "level": 0, "due": day.isoformat(),
+            "streak": 0, "correct": 0, "wrong": 0, "last": None}
+
+
+def find_sense(entry, ref):
+    if not ref:
+        return None
+    for s in entry.get("senses", []):
+        if (s is ref or
+                (s.get("cn") == ref.get("cn") and
+                 s.get("pos") == ref.get("pos"))):
+            return s
+    return None
+
+
+def ensure_word_review(stats, entry, create_all=False, day=None):
+    """把 review[word] 规范为 {义项 key: 记录}，并可按需补齐所有义项。"""
     day = day or date.today()
     review = stats.setdefault("review", {})
-    rec = review.setdefault(word, {
-        "state": "learning", "level": 0, "due": day.isoformat(),
-        "streak": 0, "correct": 0, "wrong": 0, "last": None,
-    })
+    recs = review.get(entry["word"])
+    senses = entry.get("senses") or []
+    if not isinstance(recs, dict):
+        recs = {}
+        review[entry["word"]] = recs
+    elif "state" in recs:
+        # 兼容旧格式：每个词一条记录
+        old = recs
+        recs = {}
+        review[entry["word"]] = recs
+        target = find_sense(entry, old.get("sense"))
+        if target is None and senses:
+            target = senses[0]
+        if target is not None:
+            recs[sense_key(target)] = {
+                "state": old.get("state", "learning"),
+                "level": int(old.get("level", 0)),
+                "due": old.get("due") or day.isoformat(),
+                "streak": int(old.get("streak", 0)),
+                "correct": int(old.get("correct", 0)),
+                "wrong": int(old.get("wrong", 0)),
+                "last": old.get("last"),
+            }
+    if create_all:
+        valid = {sense_key(s) for s in senses}
+        for key in list(recs):
+            if key not in valid:  # 词条释义变了，丢弃过期记录
+                del recs[key]
+        for s in senses:
+            recs.setdefault(sense_key(s), new_review_record(day))
+    return recs
+
+
+def normalize_review(stats, entries):
+    """把旧进度迁移成按义项记录，并为已进入复习的词补齐所有义项。"""
+    by_word = {e["word"]: e for e in entries}
+    for word in list(stats.get("review", {})):
+        entry = by_word.get(word)
+        if entry:
+            ensure_word_review(stats, entry, create_all=True)
+
+
+def mark_review_result(stats, entry, sense, correct, intervals, day=None):
+    """首次检测结果决定该义项的状态；重抽不调用本函数。"""
+    day = day or date.today()
+    recs = ensure_word_review(stats, entry, create_all=True, day=day)
+    rec = recs.setdefault(sense_key(sense), new_review_record(day))
     rec["last"] = day.isoformat()
-    if sense:
-        rec["sense"] = {"pos": sense.get("pos", ""), "cn": sense.get("cn", "")}
     if correct:
         rec["correct"] = rec.get("correct", 0) + 1
         rec["streak"] = rec.get("streak", 0) + 1
@@ -525,7 +588,7 @@ def sense_pinyin(sense):
 
 
 def weighted_sample(items, k):
-    """items: [(entry, weight)]，不放回加权抽样。"""
+    """items: [(item, weight)]，不放回加权抽样，返回 item 列表。"""
     pool = list(items)
     if k <= 0 or not pool:
         return []
@@ -545,41 +608,53 @@ def weighted_sample(items, k):
     return out
 
 
-def build_quiz_scope(entries, stats, args, session_words=None):
-    """普通模式：本次词 + 复习池；复习模式：只取复习池。"""
+def build_quiz_scope(entries, stats, args, session_items=None):
+    """返回 [(entry, sense, rec_or_None)]。
+
+    普通模式：本次练习的义项 + 复习池；复习模式：只取复习池。
+    """
     intervals = args.intervals
     by_word = {e["word"]: e for e in entries}
     seen = set()
     scope = []
-    if session_words:
-        for e in session_words:
-            if e["word"] in seen or not e.get("senses"):
+    if session_items:
+        for entry, sense in session_items:
+            key = (entry["word"], sense_key(sense))
+            if key in seen:
                 continue
-            scope.append(e)
-            seen.add(e["word"])
+            scope.append((entry, sense, None))
+            seen.add(key)
 
-    learning, due = [], []
-    for word, rec in stats.get("review", {}).items():
-        e = by_word.get(word)
-        if not e or e["word"] in seen or not e.get("senses"):
+    review_items = []
+    for word, recs in stats.get("review", {}).items():
+        entry = by_word.get(word)
+        if not entry or not isinstance(recs, dict) or "state" in recs:
             continue
-        if args.level != "all" and e.get("level") != args.level:
+        if args.level != "all" and entry.get("level") != args.level:
             continue
-        if rec.get("state") == "learning":
-            learning.append((e, 1.0))
-        elif rec.get("state") == "known" and is_due(rec):
-            level = max(1, min(int(rec.get("level", 1)), len(intervals)))
-            due.append((e, 1.0 / intervals[level - 1]))
+        sense_map = {sense_key(s): s for s in entry.get("senses", [])}
+        for skey, rec in recs.items():
+            sense = sense_map.get(skey)
+            if not isinstance(rec, dict):
+                continue
+            if sense is None or (word, skey) in seen:
+                continue
+            state = rec.get("state")
+            if state in ("new", "learning"):
+                review_items.append(((entry, sense, rec), 1.0))
+            elif state == "known" and is_due(rec):
+                level = max(1, min(int(rec.get("level", 1)), len(intervals)))
+                review_items.append(((entry, sense, rec),
+                                     1.0 / intervals[level - 1]))
 
     cap = args.quiz_size or 0
     if cap > 0:
         if len(scope) >= cap:
             random.shuffle(scope)
             return scope[:cap]
-        scope.extend(weighted_sample(learning + due, cap - len(scope)))
+        scope.extend(weighted_sample(review_items, cap - len(scope)))
     else:
-        scope.extend(e for e, _ in learning)
-        scope.extend(e for e, _ in due)
+        scope.extend(item for item, _ in review_items)
     random.shuffle(scope)
     return scope
 
@@ -782,35 +857,60 @@ def quiz_one(term, question, mode, idx, total):
 
 
 def review_counts(stats):
-    review = stats.get("review", {})
+    """按义项统计：未测 / 生词 / 熟词 / 待复习 / 覆盖词数。"""
+    new_count = 0
     learning = 0
     known = 0
     due = 0
     levels = {}
-    for rec in review.values():
-        if rec.get("state") == "learning":
-            learning += 1
-        elif rec.get("state") == "known":
-            known += 1
-            lvl = int(rec.get("level", 1))
-            levels[lvl] = levels.get(lvl, 0) + 1
-            if is_due(rec):
+    words = set()
+    for word, recs in stats.get("review", {}).items():
+        if not isinstance(recs, dict) or "state" in recs:
+            continue
+        for rec in recs.values():
+            if not isinstance(rec, dict):
+                continue
+            words.add(word)
+            state = rec.get("state")
+            if state == "new":
+                new_count += 1
                 due += 1
-    return learning, known, levels, due
+            elif state == "learning":
+                learning += 1
+                due += 1
+            elif state == "known":
+                known += 1
+                lvl = int(rec.get("level", 1))
+                levels[lvl] = levels.get(lvl, 0) + 1
+                if is_due(rec):
+                    due += 1
+    return new_count, learning, known, levels, due, len(words)
 
 
 def run_quiz(args, kind="review", session_words=None, session_senses=None):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
     session_senses = session_senses or {}
-    scope = build_quiz_scope(entries, stats, args, session_words)
+    normalize_review(stats, entries)
+
+    session_items = []
+    if session_words:
+        for entry in session_words:
+            sense = session_senses.get(entry["word"])
+            if sense is None:
+                senses = entry.get("senses") or []
+                sense = senses[0] if senses else None
+            if sense is not None:
+                session_items.append((entry, sense))
+
+    scope = build_quiz_scope(entries, stats, args, session_items)
     if not scope:
         print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
         return
 
     all_options = [(e, s) for e in entries for s in e.get("senses", [])]
     print(f"\n{BOLD}──── 释义检测（{args.quiz}）────{RESET}")
-    print(f"{DIM}本轮 {len(scope)} 个词；首次结果决定生词/熟词，"
+    print(f"{DIM}本轮 {len(scope)} 个义项；首次结果决定各义项的状态，"
           f"错题随后重刷。{RESET}")
 
     first_total = first_correct = 0
@@ -818,20 +918,11 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
     wrong = []
     quit_early = False
     retry_rounds = retry_correct = retry_wrong = 0
-    tested_senses = {}
-
-    def preferred_sense(entry):
-        preferred = session_senses.get(entry["word"])
-        if preferred is not None:
-            return preferred
-        rec = stats.get("review", {}).get(entry["word"]) or {}
-        return rec.get("sense")
 
     with Terminal() as term:
         try:
-            for i, entry in enumerate(scope, 1):
-                question = build_question(entry, all_options,
-                                          preferred_sense(entry))
+            for i, (entry, sense, _rec) in enumerate(scope, 1):
+                question = build_question(entry, all_options, sense)
                 if question is None:
                     continue
                 result = quiz_one(term, question, args.quiz, i, len(scope))
@@ -839,13 +930,12 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                     quit_early = True
                     break
                 first_total += 1
-                tested_senses[entry["word"]] = question["correct"]
-                mark_review_result(stats, entry["word"], result, args.intervals,
-                                   sense=question["correct"])
+                mark_review_result(stats, entry, question["correct"], result,
+                                   args.intervals)
                 if result:
                     first_correct += 1
                 else:
-                    wrong.append(entry)
+                    wrong.append((entry, question["correct"]))
             first_wrong = len(wrong)
 
             if not args.no_retry and wrong and not quit_early:
@@ -854,12 +944,10 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                     random.shuffle(wrong)
                     next_wrong = []
                     print(f"\n{BOLD}──── 错题重刷 第 {retry_rounds} 轮："
-                          f"{len(wrong)} 个 ────{RESET}")
-                    print(f"{DIM}重刷只作巩固，不改变首次检测决定的生词/熟词。{RESET}")
-                    for j, entry in enumerate(wrong, 1):
-                        question = build_question(
-                            entry, all_options,
-                            tested_senses.get(entry["word"]))
+                          f"{len(wrong)} 个义项 ────{RESET}")
+                    print(f"{DIM}重刷只作巩固，不改变首次检测决定的状态。{RESET}")
+                    for j, (entry, sense) in enumerate(wrong, 1):
+                        question = build_question(entry, all_options, sense)
                         if question is None:
                             continue
                         result = quiz_one(term, question, args.quiz,
@@ -871,24 +959,26 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                             retry_correct += 1
                         else:
                             retry_wrong += 1
-                            next_wrong.append(entry)
+                            next_wrong.append((entry, question["correct"]))
                     if quit_early:
                         break
                     wrong = next_wrong
         finally:
             termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
 
-    learning, known, levels, due = review_counts(stats)
+    new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
     print(f"\n{BOLD}──── 检测结果 ────{RESET}")
-    print(f"首次检测：{first_total} 词，正确 {first_correct}，错误 {first_wrong}")
+    print(f"首次检测：{first_total} 个义项，正确 {first_correct}，"
+          f"错误 {first_wrong}")
     if retry_rounds:
         print(f"错题重刷：{retry_rounds} 轮，答对 {retry_correct}，"
               f"仍错 {retry_wrong}")
-    print(f"当前：生词 {learning} · 熟词 {known}"
-          f"{('（' + level_text + '）') if level_text else ''} · 今日到期 {due}")
+    print(f"当前：未测 {new_count} 义项 · 生词 {learning} · 熟词 {known}"
+          f"{('（' + level_text + '）') if level_text else ''} · "
+          f"待复习 {due} · 覆盖 {words} 词")
     if quit_early:
-        print(f"{DIM}中途退出，剩余单词未检测。{RESET}")
+        print(f"{DIM}中途退出，剩余义项未检测。{RESET}")
 
     stats.setdefault("quiz_sessions", []).append({
         "time": time.strftime("%Y-%m-%d %H:%M"),
@@ -1141,10 +1231,12 @@ def show_stats(args):
               for k in ("cet6", "cet4", "extra")}
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
-    learning, known, levels, due = review_counts(stats)
+    normalize_review(stats, entries)
+    new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
-    print(f"复习进度: 生词 {learning} · 熟词 {known}"
-          f"{('（' + level_text + '）') if level_text else ''} · 今日到期 {due}")
+    print(f"复习条目: 未测 {new_count} · 生词 {learning} · 熟词 {known}"
+          f"{('（' + level_text + '）') if level_text else ''} · "
+          f"待复习 {due} · 覆盖 {words} 词")
     if right + wrong:
         print(f"累计正确 {right}  错误 {wrong}  准确率 {right / (right + wrong) * 100:.1f}%")
     weak = sorted(
