@@ -57,13 +57,6 @@ LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
 DEFAULT_INTERVALS = (1, 3, 7, 15, 30)  # 熟词 5 级复习间隔（天）
 
 
-def colorize(text, color):
-    """给可能含内部 RESET 的文本整体着色。"""
-    if not color:
-        return text
-    return f"{color}{text.replace(RESET, RESET + color)}{RESET}"
-
-
 class Keys:
     ESC = 0x1B
     ENTER = (0x0D, 0x0A)
@@ -530,22 +523,25 @@ def color_pinyin_typed(typed, expected):
 
 
 def practice_pinyin(term, entry, sense):
-    """第二阶段：照着逐字拼音把释义全拼打出来。打错不记录，Enter 直接过关。"""
+    """第二阶段：照着逐字拼音把释义全拼打出来。
+
+    对照行（汉字行 + 拼音行）按输入进度变色：已正确输入的字母/已完成字符
+    变绿，输入错误的字母/字符变红，未输入保持默认。打错不记录，Enter 过关。
+    """
     letters = [normalize_pinyin(py) for _, py in sense["tokens"]]
     expected = "".join(letters)
     cells = []
     for (ch, py), let in zip(sense["tokens"], letters):
         w = max(disp_width(ch), len(py), 1) + 1
         cells.append((ch, py, w))
-    top = "".join(ch + " " * (w - disp_width(ch)) for ch, py, w in cells)
-    bottom = "".join(py + " " * (w - len(py)) for ch, py, w in cells)
-
-    print()
-    print(f"   {DIM}{sense['pos']}.{RESET} {BOLD}{sense['cn']}{RESET}")
-    print("   " + top.rstrip())
-    print("   " + bottom.rstrip())
-
     typed = []
+    cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
+    header_lines = 0
+    input_lines = 0
+    first = True
+
+    def norm_typed():
+        return normalize_pinyin("".join(typed))
 
     def hint(nletters):
         acc = 0
@@ -555,13 +551,67 @@ def practice_pinyin(term, entry, sense):
                 return f"{ch} {py}".strip()
         return "✓"
 
-    def draw():
-        norm = normalize_pinyin("".join(typed))
-        sys.stdout.write("\r\033[K   > " + color_pinyin_typed(typed, expected)
-                         + f"   {DIM}{hint(len(norm))}{RESET}")
-        sys.stdout.flush()
+    def colored_guide(norm):
+        top_parts, bottom_parts = [], []
+        pos = 0
+        for (ch, py, w), let in zip(cells, letters):
+            if let:
+                span = norm[pos:pos + len(let)]
+                if span and any(span[i] != let[i] for i in range(len(span))):
+                    ch_color = RED
+                elif span and len(span) == len(let):
+                    ch_color = GREEN
+                else:
+                    ch_color = ""
+            else:
+                ch_color = ""
+            top_ch = f"{ch_color}{ch}{RESET}" if ch_color else ch
+            top_parts.append(top_ch + " " * (w - disp_width(ch)))
 
-    draw()
+            py_parts = []
+            for j, letter in enumerate(py):
+                if pos + j < len(norm):
+                    exp = let[j] if j < len(let) else ""
+                    color = GREEN if norm[pos + j] == exp else RED
+                    py_parts.append(f"{color}{letter}{RESET}")
+                else:
+                    py_parts.append(letter)
+            py_text = "".join(py_parts)
+            bottom_parts.append(py_text + " " * (w - len(py)))
+            pos += len(let)
+        return "".join(top_parts), "".join(bottom_parts)
+
+    def build_header():
+        norm = norm_typed()
+        top, bottom = colored_guide(norm)
+        sense_line = f"   {DIM}{sense['pos']}.{RESET} {BOLD}{sense['cn']}{RESET}"
+        top_line = "   " + top.rstrip()
+        bottom_line = "   " + bottom.rstrip()
+        header = "\n" + sense_line + "\n" + top_line + "\n" + bottom_line
+        return header, sense_line, top_line, bottom_line
+
+    def input_text():
+        norm = norm_typed()
+        return ("   > " + color_pinyin_typed(typed, expected)
+                + f"   {DIM}{hint(len(norm))}{RESET}")
+
+    def refresh():
+        nonlocal header_lines, input_lines, first
+        if not first:
+            up = (input_lines - 1) + header_lines
+            sys.stdout.write(f"\r\033[{up}A\033[J")
+        header, sense_line, top_line, bottom_line = build_header()
+        sys.stdout.write(header + "\n")
+        text = input_text()
+        sys.stdout.write(text)
+        sys.stdout.flush()
+        header_lines = (1 + physical_lines(sense_line, cols)
+                        + physical_lines(top_line, cols)
+                        + physical_lines(bottom_line, cols))
+        input_lines = physical_lines(text, cols)
+        first = False
+
+    refresh()
     while True:
         try:
             k = term.key()
@@ -572,23 +622,23 @@ def practice_pinyin(term, entry, sense):
         if k == ord(";"):
             if show_info(term, entry, sense, entry.get("senses") or []) is None:
                 return None
-            draw()
+            refresh()
             continue
         if k in Keys.BACKSPACE:
             if typed:
                 typed.pop()
-            draw()
+            refresh()
             continue
         if k == Keys.CTRL_U:
             typed.clear()
-            draw()
+            refresh()
             continue
         if k in Keys.ENTER:
             break
         if 32 <= k <= 126:
             typed.append(chr(k))
-            draw()
-            if expected and normalize_pinyin("".join(typed)) == expected:
+            refresh()
+            if expected and norm_typed() == expected:
                 break
     sys.stdout.write("\r\033[K   > " + color_pinyin_typed(typed, expected)
                      + f"  {GREEN}✓{RESET}\n")
@@ -1441,10 +1491,8 @@ def practice_one(term, entry, idx, total, mode, sense=None):
                 word_text = f"{BOLD}{color}{display}{RESET}"
             else:
                 word_text = f"{BOLD}{display}{RESET}"
-        status = GREEN if (text and prefix_ok(text)) else (RED if text else "")
-        shown_text = colorize(base_shown, status)
         return (f"{DIM}[{idx}/{total}]{RESET} {word_text}"
-                f"{phonetic}{level_tag}  {shown_text}")
+                f"{phonetic}{level_tag}  {base_shown}")
 
     def input_text():
         return ("   > " + (color_typed(typed, target) if show_mode
