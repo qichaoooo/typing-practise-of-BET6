@@ -177,23 +177,37 @@ class FuzzyTest(unittest.TestCase):
         self.assertEqual(exact, [0])
 
 
+def piece_sense(cn, tokens):
+    return {"pos": "n", "cn": cn, "tokens": tokens}
+
+
 class SplitTest(unittest.TestCase):
     def test_split_pieces(self):
         self.assertEqual(vocabtype.split_pieces("甲，乙, 丙 "),
                          ["甲", "乙", "丙"])
         self.assertEqual(vocabtype.split_pieces(""), [])
 
+    def test_split_sense_pieces_keep_pinyin(self):
+        s = piece_sense("甲，乙", [["甲", "jia"], ["，", ""], ["乙", "yi"]])
+        pieces = vocabtype.split_sense_pieces(s)
+        self.assertEqual(
+            [(p["cn"], vocabtype.sense_pinyin(p)) for p in pieces],
+            [("甲", "jia"), ("乙", "yi")])
+
     def test_build_split_question_marks_all_correct_pieces(self):
-        correct = sense("n", "甲，乙", "jia yi")
-        distractors = [sense("n", "丙，丁", "bing ding"),
-                       sense("n", "戊", "wu"),
-                       sense("n", "甲，己", "jia ji")]
+        correct = piece_sense("甲，乙", [["甲", "jia"], ["，", ""], ["乙", "yi"]])
+        distractors = [
+            piece_sense("丙，丁", [["丙", "bing"], ["，", ""], ["丁", "ding"]]),
+            piece_sense("戊", [["戊", "wu"]]),
+            piece_sense("甲，己", [["甲", "jia"], ["，", ""], ["己", "ji"]]),
+        ]
         question = {"entry": entry("a"), "correct": correct,
                     "options": [correct] + distractors, "correct_index": 0}
         sq = vocabtype.build_split_question(question)
         self.assertIsNotNone(sq)
-        self.assertEqual(set(sq["options"]), {"甲", "乙", "丙", "丁", "戊", "己"})
-        correct_texts = {sq["options"][i] for i in sq["correct"]}
+        self.assertEqual({p["cn"] for p in sq["options"]},
+                         {"甲", "乙", "丙", "丁", "戊", "己"})
+        correct_texts = {sq["options"][i]["cn"] for i in sq["correct"]}
         self.assertEqual(correct_texts, {"甲", "乙"})
 
 

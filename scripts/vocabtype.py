@@ -782,6 +782,33 @@ def split_pieces(text):
     return [p.strip() for p in re.split(r"[，,]", text or "") if p.strip()]
 
 
+def split_sense_pieces(sense):
+    """按逗号拆分义项，同时保留每个片段的逐字拼音 tokens。"""
+    cn = sense.get("cn", "")
+    tokens = sense.get("tokens") or []
+    if not tokens or "".join(ch for ch, _ in tokens) != cn:
+        return [{"cn": p, "pos": sense.get("pos", ""),
+                 "tokens": [[ch, ""] for ch in p]}
+                for p in split_pieces(cn)]
+    pieces = []
+    chars, buf = [], []
+    for ch, py in tokens:
+        if ch in "，,":
+            text = "".join(chars).strip()
+            if text:
+                pieces.append({"cn": text, "pos": sense.get("pos", ""),
+                               "tokens": buf})
+            chars, buf = [], []
+        else:
+            chars.append(ch)
+            buf.append([ch, py])
+    text = "".join(chars).strip()
+    if text:
+        pieces.append({"cn": text, "pos": sense.get("pos", ""),
+                       "tokens": buf})
+    return pieces
+
+
 def build_split_question(question):
     """把四选一的候选释义逐个按逗号拆成片段，返回多选题目。"""
     options = question["options"]
@@ -790,21 +817,22 @@ def build_split_question(question):
     index_by_text = {}
     for oi, sense in enumerate(options):
         is_correct = oi == correct_index
-        for piece in split_pieces(sense.get("cn", "")):
-            if piece in index_by_text:
+        for piece in split_sense_pieces(sense):
+            text = piece["cn"]
+            if text in index_by_text:
                 if is_correct:
-                    pieces[index_by_text[piece]][1] = True
+                    pieces[index_by_text[text]]["correct"] = True
             else:
-                index_by_text[piece] = len(pieces)
-                pieces.append([piece, is_correct])
+                piece["correct"] = is_correct
+                index_by_text[text] = len(pieces)
+                pieces.append(piece)
     if not pieces:
         return None
     random.shuffle(pieces)
-    texts = [p[0] for p in pieces]
-    correct = {i for i, (_text, is_corr) in enumerate(pieces) if is_corr}
+    correct = {i for i, piece in enumerate(pieces) if piece.get("correct")}
     if not correct:
         return None
-    return {"entry": question["entry"], "options": texts,
+    return {"entry": question["entry"], "options": pieces,
             "correct": correct, "source": question}
 
 
@@ -988,7 +1016,7 @@ def quiz_one(term, question, idx, total):
 
 
 def quiz_one_split(term, sq, idx, total):
-    """拆分多选：按逗号拆开的片段中，选出属于正确释义的全部片段。"""
+    """拆分多选：拼音筛选/数字切换 + 空格切换唯一匹配，; 或 Enter 提交。"""
     entry = sq["entry"]
     options = sq["options"]
     correct = sq["correct"]
@@ -1002,21 +1030,33 @@ def quiz_one_split(term, sq, idx, total):
               f"{phonetic}{level_tag}  {DIM}{pos}{RESET}")
     cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
     block_lines = 0
-    cursor = 0
     selected = set()
+    typed = []
+
+    def current_matches():
+        norm = normalize_pinyin("".join(typed))
+        if not norm:
+            return None
+        matches, _scores = fuzzy_matches(norm, options)
+        return tuple(matches)
 
     def render():
         nonlocal block_lines
-        hint = (f"   {DIM}j/k 移动，空格或数字 1-9 切换，; 或 Enter 提交，"
-                f"Esc 退出{RESET}")
+        hint = (f"   {DIM}输入拼音筛选，空格切换唯一匹配；数字 1-9 切换；"
+                f"; 或 Enter 提交；Esc 退出{RESET}")
         print(header)
+        matched = current_matches()
         option_texts = []
-        for i, text in enumerate(options, 1):
+        for i, piece in enumerate(options, 1):
             oi = i - 1
-            marker = ">" if oi == cursor else " "
             check = "x" if oi in selected else " "
-            color = BOLD + UNDERLINE + GREEN if oi in selected else GREEN
-            line = f" {marker} {i:>2}. [{check}] {color}{text}{RESET}"
+            if oi in selected:
+                color = BOLD + UNDERLINE + GREEN
+            elif matched is None or oi in matched:
+                color = GREEN
+            else:
+                color = DIM
+            line = f"   {i:>2}. [{check}] {color}{piece['cn']}{RESET}"
             print(line)
             option_texts.append(line)
         print(hint)
@@ -1027,13 +1067,20 @@ def quiz_one_split(term, sq, idx, total):
         return block_lines
 
     def draw_input():
-        items = sorted(selected)
-        if not items:
-            text = "未选择"
-        else:
-            shown = ", ".join(str(i + 1) for i in items[:10])
-            text = shown + (f" 等 {len(items)} 项" if len(items) > 10 else "")
-        sys.stdout.write("\r\033[K   > 已选：" + text)
+        norm = normalize_pinyin("".join(typed))
+        hint = ""
+        if norm:
+            matched = current_matches() or ()
+            if len(matched) == 1:
+                hint = f"{GREEN}唯一匹配：{matched[0] + 1}，空格切换{RESET}"
+            elif matched:
+                hint = f"{DIM}匹配 {len(matched)} 项，继续输入…{RESET}"
+            else:
+                hint = f"{RED}无匹配，Backspace 修改{RESET}"
+        count = f"已选 {len(selected)} 项" if selected else "未选择"
+        suffix = f"   {hint}" if hint else ""
+        sys.stdout.write("\r\033[K   > " + "".join(typed) + suffix
+                         + f"   {DIM}{count}{RESET}")
         sys.stdout.flush()
 
     def redraw():
@@ -1053,20 +1100,17 @@ def quiz_one_split(term, sq, idx, total):
             return None
         if k == Keys.ESC or k == Keys.CTRL_C:
             return None
-        if k == ord("j"):
-            cursor = (cursor + 1) % len(options)
-            redraw()
-            continue
-        if k == ord("k"):
-            cursor = (cursor - 1) % len(options)
-            redraw()
-            continue
         if k == ord(" "):
-            if cursor in selected:
-                selected.remove(cursor)
-            else:
-                selected.add(cursor)
-            redraw()
+            if typed:
+                matched = current_matches() or ()
+                if len(matched) == 1:
+                    oi = matched[0]
+                    if oi in selected:
+                        selected.remove(oi)
+                    else:
+                        selected.add(oi)
+                    typed.clear()
+                    redraw()
             continue
         if ord("1") <= k <= ord("9"):
             oi = k - ord("1")
@@ -1075,24 +1119,36 @@ def quiz_one_split(term, sq, idx, total):
                     selected.remove(oi)
                 else:
                     selected.add(oi)
+                typed.clear()
+                redraw()
+            continue
+        if k in Keys.BACKSPACE:
+            if typed:
+                typed.pop()
                 redraw()
             continue
         if k == Keys.CTRL_U:
-            selected.clear()
+            if typed:
+                typed.clear()
+            else:
+                selected.clear()
             redraw()
             continue
         if k in Keys.ENTER or k == ord(";"):
             if not selected:
                 continue
             break
+        if 32 <= k <= 126:
+            typed.append(chr(k))
+            redraw()
 
     ok = selected == correct
     if ok:
-        chosen = " / ".join(options[i] for i in sorted(selected))
+        chosen = " / ".join(options[i]["cn"] for i in sorted(selected))
         print(f"   {GREEN}✓ 正确{RESET}   {chosen}")
     else:
-        correct_text = " / ".join(options[i] for i in sorted(correct))
-        chosen_text = (" / ".join(options[i] for i in sorted(selected))
+        correct_text = " / ".join(options[i]["cn"] for i in sorted(correct))
+        chosen_text = (" / ".join(options[i]["cn"] for i in sorted(selected))
                        or "（空）")
         missing = sorted(correct - selected)
         extra = sorted(selected - correct)
@@ -1100,10 +1156,10 @@ def quiz_one_split(term, sq, idx, total):
         print(f"   {DIM}正确：{correct_text}{RESET}")
         print(f"   {DIM}你选了：{chosen_text}{RESET}")
         if missing:
-            print(f"   {DIM}漏选：{' / '.join(options[i] for i in missing)}"
+            print(f"   {DIM}漏选：{' / '.join(options[i]['cn'] for i in missing)}"
                   f"{RESET}")
         if extra:
-            print(f"   {DIM}多选：{' / '.join(options[i] for i in extra)}"
+            print(f"   {DIM}多选：{' / '.join(options[i]['cn'] for i in extra)}"
                   f"{RESET}")
     if len(entry.get("senses", [])) > 1:
         print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
