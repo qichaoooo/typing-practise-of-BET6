@@ -177,6 +177,26 @@ class FuzzyTest(unittest.TestCase):
         self.assertEqual(exact, [0])
 
 
+class SplitTest(unittest.TestCase):
+    def test_split_pieces(self):
+        self.assertEqual(vocabtype.split_pieces("甲，乙, 丙 "),
+                         ["甲", "乙", "丙"])
+        self.assertEqual(vocabtype.split_pieces(""), [])
+
+    def test_build_split_question_marks_all_correct_pieces(self):
+        correct = sense("n", "甲，乙", "jia yi")
+        distractors = [sense("n", "丙，丁", "bing ding"),
+                       sense("n", "戊", "wu"),
+                       sense("n", "甲，己", "jia ji")]
+        question = {"entry": entry("a"), "correct": correct,
+                    "options": [correct] + distractors, "correct_index": 0}
+        sq = vocabtype.build_split_question(question)
+        self.assertIsNotNone(sq)
+        self.assertEqual(set(sq["options"]), {"甲", "乙", "丙", "丁", "戊", "己"})
+        correct_texts = {sq["options"][i] for i in sq["correct"]}
+        self.assertEqual(correct_texts, {"甲", "乙"})
+
+
 class QuestionTest(unittest.TestCase):
     def test_options_are_unique_and_include_correct(self):
         entries = [

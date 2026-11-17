@@ -778,6 +778,36 @@ def build_question(entry, all_options, preferred=None):
             "correct_index": correct_index}
 
 
+def split_pieces(text):
+    return [p.strip() for p in re.split(r"[，,]", text or "") if p.strip()]
+
+
+def build_split_question(question):
+    """把四选一的候选释义逐个按逗号拆成片段，返回多选题目。"""
+    options = question["options"]
+    correct_index = question["correct_index"]
+    pieces = []
+    index_by_text = {}
+    for oi, sense in enumerate(options):
+        is_correct = oi == correct_index
+        for piece in split_pieces(sense.get("cn", "")):
+            if piece in index_by_text:
+                if is_correct:
+                    pieces[index_by_text[piece]][1] = True
+            else:
+                index_by_text[piece] = len(pieces)
+                pieces.append([piece, is_correct])
+    if not pieces:
+        return None
+    random.shuffle(pieces)
+    texts = [p[0] for p in pieces]
+    correct = {i for i, (_text, is_corr) in enumerate(pieces) if is_corr}
+    if not correct:
+        return None
+    return {"entry": question["entry"], "options": texts,
+            "correct": correct, "source": question}
+
+
 def read_quiz_input(term, option_count, state_fn, on_state_change=None,
                     on_comma=None):
     """统一的答题输入：数字直选，或输入拼音模糊匹配，再按 ;/Enter 确定。
@@ -957,6 +987,138 @@ def quiz_one(term, question, idx, total):
             return ok
 
 
+def quiz_one_split(term, sq, idx, total):
+    """拆分多选：按逗号拆开的片段中，选出属于正确释义的全部片段。"""
+    entry = sq["entry"]
+    options = sq["options"]
+    correct = sq["correct"]
+    correct_sense = sq["source"]["correct"]
+    pos = f"{correct_sense['pos']}." if correct_sense.get("pos") else ""
+    level = LEVEL_LABEL.get(entry.get("level"), "")
+    phonetic = (f"  {DIM}/{entry['phonetic']}/{RESET}"
+                if entry.get("phonetic") else "")
+    level_tag = f"  {DIM}{level}{RESET}" if level else ""
+    header = (f"{DIM}[{idx}/{total}]{RESET} {BOLD}{entry['word']}{RESET}"
+              f"{phonetic}{level_tag}  {DIM}{pos}{RESET}")
+    cols = shutil.get_terminal_size(fallback=(80, 24)).columns or 80
+    block_lines = 0
+    cursor = 0
+    selected = set()
+
+    def render():
+        nonlocal block_lines
+        hint = (f"   {DIM}j/k 移动，空格或数字 1-9 切换，; 或 Enter 提交，"
+                f"Esc 退出{RESET}")
+        print(header)
+        option_texts = []
+        for i, text in enumerate(options, 1):
+            oi = i - 1
+            marker = ">" if oi == cursor else " "
+            check = "x" if oi in selected else " "
+            color = BOLD + UNDERLINE + GREEN if oi in selected else GREEN
+            line = f" {marker} {i:>2}. [{check}] {color}{text}{RESET}"
+            print(line)
+            option_texts.append(line)
+        print(hint)
+        block_lines = (physical_lines(header, cols)
+                       + sum(physical_lines(line, cols)
+                             for line in option_texts)
+                       + physical_lines(hint, cols))
+        return block_lines
+
+    def draw_input():
+        items = sorted(selected)
+        if not items:
+            text = "未选择"
+        else:
+            shown = ", ".join(str(i + 1) for i in items[:10])
+            text = shown + (f" 等 {len(items)} 项" if len(items) > 10 else "")
+        sys.stdout.write("\r\033[K   > 已选：" + text)
+        sys.stdout.flush()
+
+    def redraw():
+        sys.stdout.write(f"\r\033[{block_lines}A\033[J")
+        sys.stdout.flush()
+        render()
+        draw_input()
+
+    print()
+    block_lines = render()
+    draw_input()
+
+    while True:
+        try:
+            k = term.key()
+        except KeyboardInterrupt:
+            return None
+        if k == Keys.ESC or k == Keys.CTRL_C:
+            return None
+        if k == ord("j"):
+            cursor = (cursor + 1) % len(options)
+            redraw()
+            continue
+        if k == ord("k"):
+            cursor = (cursor - 1) % len(options)
+            redraw()
+            continue
+        if k == ord(" "):
+            if cursor in selected:
+                selected.remove(cursor)
+            else:
+                selected.add(cursor)
+            redraw()
+            continue
+        if ord("1") <= k <= ord("9"):
+            oi = k - ord("1")
+            if oi < len(options):
+                if oi in selected:
+                    selected.remove(oi)
+                else:
+                    selected.add(oi)
+                redraw()
+            continue
+        if k == Keys.CTRL_U:
+            selected.clear()
+            redraw()
+            continue
+        if k in Keys.ENTER or k == ord(";"):
+            if not selected:
+                continue
+            break
+
+    ok = selected == correct
+    if ok:
+        chosen = " / ".join(options[i] for i in sorted(selected))
+        print(f"   {GREEN}✓ 正确{RESET}   {chosen}")
+    else:
+        correct_text = " / ".join(options[i] for i in sorted(correct))
+        chosen_text = (" / ".join(options[i] for i in sorted(selected))
+                       or "（空）")
+        missing = sorted(correct - selected)
+        extra = sorted(selected - correct)
+        print(f"   {RED}✗ 错误{RESET}")
+        print(f"   {DIM}正确：{correct_text}{RESET}")
+        print(f"   {DIM}你选了：{chosen_text}{RESET}")
+        if missing:
+            print(f"   {DIM}漏选：{' / '.join(options[i] for i in missing)}"
+                  f"{RESET}")
+        if extra:
+            print(f"   {DIM}多选：{' / '.join(options[i] for i in extra)}"
+                  f"{RESET}")
+    if len(entry.get("senses", [])) > 1:
+        print(f"   {DIM}全部释义：{meaning(entry)}{RESET}")
+    print(f"   {DIM}按 ; 或 Enter 继续{RESET}")
+    while True:
+        try:
+            k = term.key()
+        except KeyboardInterrupt:
+            return None
+        if k == Keys.ESC or k == Keys.CTRL_C:
+            return None
+        if k in Keys.ENTER or k == ord(";"):
+            return ok
+
+
 def review_counts(stats):
     """按义项统计：未测 / 生词 / 熟词 / 待复习 / 覆盖词数。"""
     new_count = 0
@@ -1010,9 +1172,21 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
         return
 
     all_options = [(e, s) for e in entries for s in e.get("senses", [])]
-    print(f"\n{BOLD}──── 释义检测 ────{RESET}")
+    label = "四选一" if args.check == "single" else "拆分多选"
+    print(f"\n{BOLD}──── 释义检测（{label}）────{RESET}")
     print(f"{DIM}本轮 {len(scope)} 个义项；首次结果决定各义项的状态，"
           f"错题随后重刷。{RESET}")
+
+    def ask(term, entry, sense, i, total):
+        question = build_question(entry, all_options, sense)
+        if question is None:
+            return None, None
+        if args.check == "split":
+            sq = build_split_question(question)
+            if sq is None:
+                return None, None
+            return quiz_one_split(term, sq, i, total), question
+        return quiz_one(term, question, i, total), question
 
     first_total = first_correct = 0
     first_wrong = 0
@@ -1023,10 +1197,9 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
     with Terminal() as term:
         try:
             for i, (entry, sense, _rec) in enumerate(scope, 1):
-                question = build_question(entry, all_options, sense)
+                result, question = ask(term, entry, sense, i, len(scope))
                 if question is None:
                     continue
-                result = quiz_one(term, question, i, len(scope))
                 if result is None:
                     quit_early = True
                     break
@@ -1048,11 +1221,10 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
                           f"{len(wrong)} 个义项 ────{RESET}")
                     print(f"{DIM}重刷只作巩固，不改变首次检测决定的状态。{RESET}")
                     for j, (entry, sense) in enumerate(wrong, 1):
-                        question = build_question(entry, all_options, sense)
+                        result, question = ask(term, entry, sense,
+                                               j, len(wrong))
                         if question is None:
                             continue
-                        result = quiz_one(term, question,
-                                          j, len(wrong))
                         if result is None:
                             quit_early = True
                             break
@@ -1085,6 +1257,7 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
         "time": time.strftime("%Y-%m-%d %H:%M"),
         "kind": kind,
         "quiz": "mixed",
+        "check": args.check,
         "scope": len(scope),
         "total": first_total,
         "correct": first_correct,
@@ -1365,8 +1538,9 @@ def show_stats(args):
     if quiz_sessions:
         print("最近释义检测:")
         for q in quiz_sessions[-5:]:
+            mode = q.get("check") or q.get("quiz", "")
             print(f"  {q.get('time', '')}  {q.get('kind', ''):<6} "
-                  f"{q.get('quiz', ''):<6} {q.get('total', 0):>3} 词  "
+                  f"{mode:<6} {q.get('total', 0):>3} 词  "
                   f"正确 {q.get('correct', 0)}  错误 {q.get('wrong', 0)}")
 
 
@@ -1383,6 +1557,7 @@ def main():
 示例:
   vocabtype                         普通模式：拼写 + 全拼释义 + 释义检测
   vocabtype --no-quiz               只做拼写练习
+  vocabtype --check split           释义检测改为拆分多选
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
   vocabtype --stats                 查看复习进度
@@ -1409,6 +1584,9 @@ def main():
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
     p.add_argument("--review", action="store_true",
                    help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
+    p.add_argument("--check", choices=["single", "split"], default="single",
+                   help="检查方式：single=四选一（默认）；split=把候选释义"
+                        "按逗号拆开，多选全部正确片段")
     p.add_argument("--no-quiz", action="store_true",
                    help="普通模式结束后不做释义检测")
     p.add_argument("--quiz-size", type=int, default=0,
