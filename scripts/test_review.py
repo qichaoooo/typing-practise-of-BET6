@@ -151,6 +151,24 @@ class ScopeTest(unittest.TestCase):
         self.assertIn(("c", "丙"), self.scope_senses(scope))
 
 
+class FuzzyTest(unittest.TestCase):
+    def setUp(self):
+        self.options = [sense("n", "甲", "jia"),
+                        sense("n", "乙", "yi"),
+                        sense("n", "丙", "bing")]
+
+    def test_exact_and_prefix(self):
+        self.assertEqual(vocabtype.fuzzy_match_index("jia", self.options)[0], 0)
+        self.assertEqual(vocabtype.fuzzy_match_index("ji", self.options)[0], 0)
+
+    def test_typo_and_omission(self):
+        self.assertEqual(vocabtype.fuzzy_match_index("jai", self.options)[0], 0)
+        self.assertEqual(vocabtype.fuzzy_match_index("bing", self.options)[0], 2)
+
+    def test_empty_is_none(self):
+        self.assertIsNone(vocabtype.fuzzy_match_index("", self.options)[0])
+
+
 class QuestionTest(unittest.TestCase):
     def test_options_are_unique_and_include_correct(self):
         entries = [
