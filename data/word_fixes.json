@@ -2001,7 +2001,8 @@
   "method": "ex(出) ＋ act(驱动，拉丁 agere) → 按标准量出 → 精确的；引申为强求"
  },
  "exaggerate": {
-  "method": "ex-（向外、向上）+ agger（堆，拉丁 aggerō『堆起』）→ 越堆越高 → 夸大、夸张。"
+  "method": "ex-（向外、向上）+ agger（堆，拉丁 aggerō『堆起』）→ 越堆越高 → 夸大、夸张。",
+  "phonetic": "ɪg'zædʒəreit"
  },
  "excerpt": {
   "method": "ex(出) ＋ cerpt(采摘) → 摘出来 → 摘录"
@@ -3909,7 +3910,13 @@
   "method": "over(超过)＋state(陈述) → 陈述超过事实 → 夸大，夸张"
  },
  "overtake": {
-  "method": "over（越过）+ take（拿、取）→ 越过去抢到前面 → 赶上、超过；情绪突然『越过』人就是压倒、突然降临。"
+  "method": "over（越过）+ take（拿、取）→ 越过去抢到前面 → 赶上、超过；情绪突然『越过』人就是压倒、突然降临。",
+  "trans": [
+   {
+    "pos": "vt",
+    "cn": "赶上，突然降临于，压倒"
+   }
+  ]
  },
  "overwhelming": {
   "method": "over(在上、越过) + whelm(淹没、盖过) + -ing → 铺天盖地压过来 → 压倒性的，势不可挡的"
@@ -4259,7 +4266,13 @@
   ]
  },
  "prevalence": {
-  "method": "prae（在前）+ val（强，拉丁 valēre）+ -ence → 力量占上风 → 盛行、流行；流行病学中指患病率。"
+  "method": "prae（在前）+ val（强，拉丁 valēre）+ -ence → 力量占上风 → 盛行、流行；流行病学中指患病率。",
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "普遍，流行，广泛"
+   }
+  ]
  },
  "print": {
   "trans": [
@@ -6071,7 +6084,13 @@
   "method": "源自古法语 werreur：werra「战争」+ -eur（人）→ 战士、勇士。"
  },
  "wary": {
-  "method": "ware（警觉的，古英语 wær）+ -y → 时刻留神的 → 谨慎的、小心的；与 beware（当心）同源。"
+  "method": "ware（警觉的，古英语 wær）+ -y → 时刻留神的 → 谨慎的、小心的；与 beware（当心）同源。",
+  "trans": [
+   {
+    "pos": "adj",
+    "cn": "谨慎的，小心的，机警的"
+   }
+  ]
  },
  "watt": {
   "method": "联想：功率单位名取自改良蒸汽机的 James Watt（瓦特） → 瓦"
