@@ -54531,7 +54531,7 @@
      "cn": "自卑感"
     }
    ],
-   "method": "",
+   "method": "inferior（较低的、较差的）+ -ity（名词后缀）→ 次等；引申为自卑。",
    "family": [
     {
      "pos": "adj",
@@ -84795,7 +84795,7 @@
      "cn": "冲击荷载"
     }
    ],
-   "method": "",
+   "method": "源自拉丁语 impulsivus；可联想 impulse（冲动）+ -ive（形容词后缀）→ 冲动的。",
    "family": [
     {
      "pos": "adv",
@@ -93735,7 +93735,7 @@
   },
   {
    "word": "considerate",
-   "phonetic": "kənˈsɪdərɪt",
+   "phonetic": "kən'sɪdərət",
    "trans": [
     {
      "pos": "adj",
@@ -93752,7 +93752,7 @@
      "cn": "体谅；体贴"
     }
    ],
-   "method": "",
+   "method": "联想：consider（考虑）+ -ate（形容词后缀），凡事替别人考虑→ 考虑周到的、体贴的。",
    "family": [],
    "synonyms": [
     {
@@ -220642,7 +220642,7 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "唯物主义"
+     "cn": "唯物主义，物质主义，实利主义"
     }
    ],
    "phrases": [
@@ -220655,7 +220655,7 @@
      "cn": "n. 辩证唯物主义"
     }
    ],
-   "method": "",
+   "method": "material（物质）+ -ism（主义）→ 唯物主义；也指过度看重物质利益。",
    "family": [
     {
      "pos": "adj",
@@ -220705,7 +220705,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "唯物主义",
+     "cn": "唯物主义，物质主义，实利主义",
      "tokens": [
       [
        "唯",
@@ -220714,6 +220714,46 @@
       [
        "物",
        "wu"
+      ],
+      [
+       "主",
+       "zhu"
+      ],
+      [
+       "义",
+       "yi"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "物",
+       "wu"
+      ],
+      [
+       "质",
+       "zhi"
+      ],
+      [
+       "主",
+       "zhu"
+      ],
+      [
+       "义",
+       "yi"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "实",
+       "shi"
+      ],
+      [
+       "利",
+       "li"
       ],
       [
        "主",
@@ -236523,7 +236563,7 @@
   },
   {
    "word": "notification",
-   "phonetic": "'notəfə'keʃən",
+   "phonetic": ".nəutifi'keiʃən",
    "trans": [
     {
      "pos": "n",
@@ -338613,7 +338653,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ad-（附加）+ verb（词、动词）+ -ium；拉丁语 adverbium 指附加在其他词上的词→副词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -342572,7 +342612,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自阿拉伯语 al-jabr（“复原、重接断片”），出自花拉子米著作标题，经中世纪拉丁语 algebra 进入英语。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -353971,7 +354011,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "一般认为由 a- + 中古英语 stonen（击晕）演变，原义“被打晕”，引申为“使惊讶”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -356119,15 +356159,15 @@
    "trans": [
     {
      "pos": "vt",
-     "cn": "vi. (使)自动化"
+     "cn": "使自动化"
     },
     {
-     "pos": "",
-     "cn": "[计] 自动化"
+     "pos": "vi",
+     "cn": "自动化"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "由 automation（自动化）逆构而来；auto- 源自希腊语 autós（自己），automatic 即「自动的」→ 使自动化。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -356149,35 +356189,11 @@
    "senses": [
     {
      "pos": "vt",
-     "cn": "vi. (使)自动化",
+     "cn": "使自动化",
      "tokens": [
-      [
-       "v",
-       ""
-      ],
-      [
-       "i",
-       ""
-      ],
-      [
-       ".",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "(",
-       ""
-      ],
       [
        "使",
        "shi"
-      ],
-      [
-       ")",
-       ""
       ],
       [
        "自",
@@ -356194,25 +356210,9 @@
      ]
     },
     {
-     "pos": "",
-     "cn": "[计] 自动化",
+     "pos": "vi",
+     "cn": "自动化",
      "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "计",
-       "ji"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
       [
        "自",
        "zi"
@@ -357545,7 +357545,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：baby（婴儿）+ boom（激增）→ 婴儿激增 → 生育高峰期。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358498,7 +358498,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：Badminton House（英国格洛斯特郡庄园）是这项运动最早开展的地方，故以地名命名。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -360108,7 +360108,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bank（银行）+ note（票据）→ 银行开出的票据 → 钞票。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -367011,11 +367011,11 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "畅销书或唱片;畅销书作者"
+     "cn": "畅销书，畅销唱片"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "best（最好）+ seller（卖得…的东西）→ 卖得最好的书或唱片 → 畅销书。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -367028,7 +367028,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "畅销书或唱片",
+     "cn": "畅销书，畅销唱片",
      "tokens": [
       [
        "畅",
@@ -367043,8 +367043,16 @@
        "shu"
       ],
       [
-       "或",
-       "huo"
+       "，",
+       ""
+      ],
+      [
+       "畅",
+       "chang"
+      ],
+      [
+       "销",
+       "xiao"
       ],
       [
        "唱",
@@ -367053,32 +367061,6 @@
       [
        "片",
        "pian"
-      ]
-     ]
-    },
-    {
-     "pos": "n",
-     "cn": "畅销书作者",
-     "tokens": [
-      [
-       "畅",
-       "chang"
-      ],
-      [
-       "销",
-       "xiao"
-      ],
-      [
-       "书",
-       "shu"
-      ],
-      [
-       "作",
-       "zuo"
-      ],
-      [
-       "者",
-       "zhe"
       ]
      ]
     }
@@ -368665,14 +368647,10 @@
     {
      "pos": "n",
      "cn": "生物化学"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 生物化学;生化"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bio-（生物；希腊语 bios）+ chemistry（化学）→ 生物化学，简称生化。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -368707,58 +368685,6 @@
       [
        "学",
        "xue"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 生物化学",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "生",
-       "sheng"
-      ],
-      [
-       "物",
-       "wu"
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "学",
-       "xue"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "生化",
-     "tokens": [
-      [
-       "生",
-       "sheng"
-      ],
-      [
-       "化",
-       "hua"
       ]
      ]
     }
@@ -377030,7 +376956,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：brand 有“火、火印、烙铁”的古义，new 是“新”；像刚打好火印、刚出厂一样 → 崭新的，比 new 语气更强。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -378564,7 +378490,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 brȳd（新娘）+ guma（男人）= 新郎；guma 后来被民间词源改成了 groom。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -380065,7 +379991,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "breakfast（早餐）+ lunch（午餐）的混成词 → 早午餐。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -381249,7 +381175,7 @@
     },
     {
      "pos": "adj",
-     "cn": "大胜利的"
+     "cn": "巨大的，丰盛的"
     }
    ],
    "phrases": [],
@@ -381301,19 +381227,31 @@
     },
     {
      "pos": "adj",
-     "cn": "大胜利的",
+     "cn": "巨大的，丰盛的",
      "tokens": [
+      [
+       "巨",
+       "ju"
+      ],
       [
        "大",
        "da"
       ],
       [
-       "胜",
-       "sheng"
+       "的",
+       "de"
       ],
       [
-       "利",
-       "li"
+       "，",
+       ""
+      ],
+      [
+       "丰",
+       "feng"
+      ],
+      [
+       "盛",
+       "sheng"
       ],
       [
        "的",
@@ -391177,7 +391115,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：以瑞典天文学家 Anders Celsius 的姓氏命名 → 摄氏的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -391682,7 +391620,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "centi-（百）+ grade（度）→ 百分度的 → 摄氏的（冰点 0 度、沸点 100 度）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -397086,7 +397024,7 @@
   {
    "word": "chopstick",
    "typing": "chopstick",
-   "phonetic": "'tʃɔpstik",
+   "phonetic": "'tʃɒpstik",
    "trans": [
     {
      "pos": "n",
@@ -397094,7 +397032,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：chop + stick（棍）→ 筷子；chop 的确切含义不明，勿信“chop=快”的洋泾浜解释（年代对不上）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -400144,14 +400082,10 @@
     {
      "pos": "adj",
      "cn": "轮廓清晰的，明确的，清楚的"
-    },
-    {
-     "pos": "",
-     "cn": "[法] 清晰的，明确的，轮廓清楚的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "clear（清楚、明确）+ cut（切）→ 切得干净利落、边界分明 → 轮廓清晰的、明确的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -400212,80 +400146,6 @@
       [
        "，",
        ""
-      ],
-      [
-       "清",
-       "qing"
-      ],
-      [
-       "楚",
-       "chu"
-      ],
-      [
-       "的",
-       "de"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[法] 清晰的，明确的，轮廓清楚的",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "法",
-       "fa"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "清",
-       "qing"
-      ],
-      [
-       "晰",
-       "xi"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "明",
-       "ming"
-      ],
-      [
-       "确",
-       "que"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "轮",
-       "lun"
-      ],
-      [
-       "廓",
-       "kuo"
       ],
       [
        "清",
@@ -409050,7 +408910,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：由 Confucius（孔子）加 -an 构成 → 孔子的、儒家的；孔子的门徒即儒家。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -415190,14 +415050,10 @@
     {
      "pos": "n",
      "cn": "倒计数"
-    },
-    {
-     "pos": "",
-     "cn": "[电] 指示串联中的操作数固定的记录减少"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "count（计数）+ down（向下）→ 数字往下数，倒计数、倒计时。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -415228,92 +415084,6 @@
       [
        "数",
        "shu"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[电] 指示串联中的操作数固定的记录减少",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "电",
-       "dian"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "指",
-       "zhi"
-      ],
-      [
-       "示",
-       "shi"
-      ],
-      [
-       "串",
-       "chuan"
-      ],
-      [
-       "联",
-       "lian"
-      ],
-      [
-       "中",
-       "zhong"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "操",
-       "cao"
-      ],
-      [
-       "作",
-       "zuo"
-      ],
-      [
-       "数",
-       "shu"
-      ],
-      [
-       "固",
-       "gu"
-      ],
-      [
-       "定",
-       "ding"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "记",
-       "ji"
-      ],
-      [
-       "录",
-       "lu"
-      ],
-      [
-       "减",
-       "jian"
-      ],
-      [
-       "少",
-       "shao"
       ]
      ]
     }
@@ -422888,7 +422658,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "custom（习俗、惯例）的复数；customs 专指海关、关税，可联系“按惯例征收的税”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -445654,7 +445424,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "easy（轻松、自在）+ going（行走、行事）→ 行事轻松、不较真 → 随和的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -448068,15 +447838,19 @@
   {
    "word": "email",
    "typing": "email",
-   "phonetic": "'i:'meil",
+   "phonetic": "'i:meil",
    "trans": [
     {
      "pos": "n",
      "cn": "电子信函"
+    },
+    {
+     "pos": "vt",
+     "cn": "用电子邮件发送"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "e-（electronic 电子）+ mail（邮件）→ 电子邮件；源自 electronic mail 的缩略。另有同形词 email 指“珐琅”，勿混。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -448109,6 +447883,40 @@
       [
        "函",
        "han"
+      ]
+     ]
+    },
+    {
+     "pos": "vt",
+     "cn": "用电子邮件发送",
+     "tokens": [
+      [
+       "用",
+       "yong"
+      ],
+      [
+       "电",
+       "dian"
+      ],
+      [
+       "子",
+       "zi"
+      ],
+      [
+       "邮",
+       "you"
+      ],
+      [
+       "件",
+       "jian"
+      ],
+      [
+       "发",
+       "fa"
+      ],
+      [
+       "送",
+       "song"
       ]
      ]
     }
@@ -458302,7 +458110,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "express（特快，如 express train）+ way（道路）→ 供车辆快速行驶的公路，高速公路。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -458929,7 +458737,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "eye（眼睛）+ sight（视力）→ 视力、目力。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -462373,7 +462181,7 @@
     },
     {
      "pos": "adv",
-     "cn": "更远的，此外，far的比较级"
+     "cn": "更远地，far的比较级"
     }
    ],
    "phrases": [],
@@ -462429,7 +462237,7 @@
     },
     {
      "pos": "adv",
-     "cn": "更远的，此外，far的比较级",
+     "cn": "更远地，far的比较级",
      "tokens": [
       [
        "更",
@@ -462440,20 +462248,8 @@
        "yuan"
       ],
       [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "此",
-       "ci"
-      ],
-      [
-       "外",
-       "wai"
+       "地",
+       "di"
       ],
       [
        "，",
@@ -475952,7 +475748,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fore-（预先）+ sight（看）→ 预先看到 → 远见、深谋远虑；仿拉丁语 providentia 构成。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -491819,7 +491615,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "grav-（重，拉丁语 gravis）+ -itation → 重的性质或作用 → 引力、重力。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -504541,7 +504337,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "here（此）+ by（凭、借）→ 凭此、据此 → 因此。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -505462,10 +505258,14 @@
     {
      "pos": "n",
      "cn": "高科技"
+    },
+    {
+     "pos": "adj",
+     "cn": "高科技的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "high（高）的缩略 hi + tech（technology 科技）→ 高科技；high-tech 是 hi-tech 的另一拼写。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -505491,6 +505291,28 @@
       [
        "技",
        "ji"
+      ]
+     ]
+    },
+    {
+     "pos": "adj",
+     "cn": "高科技的",
+     "tokens": [
+      [
+       "高",
+       "gao"
+      ],
+      [
+       "科",
+       "ke"
+      ],
+      [
+       "技",
+       "ji"
+      ],
+      [
+       "的",
+       "de"
       ]
      ]
     }
@@ -510114,7 +509936,7 @@
   {
    "word": "hospitable",
    "typing": "hospitable",
-   "phonetic": "'hɒspitəbl",
+   "phonetic": "hɒs'pitəbl",
    "trans": [
     {
      "pos": "adj",
@@ -510122,7 +509944,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hospit-（拉丁语 hospitare 的词根）+ -able（能…的）→ 好客的、招待周到的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -510565,12 +510387,16 @@
    "phonetic": "",
    "trans": [
     {
+     "pos": "n",
+     "cn": "热狗"
+    },
+    {
      "pos": "v",
      "cn": "卖弄"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：hot（热）+ dog（狗）→ 热狗；动词“卖弄”像耍热狗杂技一样炫耀。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -510584,6 +510410,20 @@
     "frq": 26201
    },
    "senses": [
+    {
+     "pos": "n",
+     "cn": "热狗",
+     "tokens": [
+      [
+       "热",
+       "re"
+      ],
+      [
+       "狗",
+       "gou"
+      ]
+     ]
+    },
     {
      "pos": "v",
      "cn": "卖弄",
@@ -513217,7 +513057,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊语 huphen（合为一）：hupo-（在下）+ hen（一）→ 把词连成一个的符号，连字符。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -513674,12 +513514,16 @@
    "phonetic": "'aiskri:m",
    "trans": [
     {
+     "pos": "n",
+     "cn": "冰淇淋"
+    },
+    {
      "pos": "adj",
      "cn": "冰淇淋的，乳白色的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ice（冰）+ cream（奶油）→ 冰冻的奶油 → 冰淇淋；也可形容冰淇淋般的乳白色。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -513690,6 +513534,24 @@
     "s": "ice-creams"
    },
    "senses": [
+    {
+     "pos": "n",
+     "cn": "冰淇淋",
+     "tokens": [
+      [
+       "冰",
+       "bing"
+      ],
+      [
+       "淇",
+       "qi"
+      ],
+      [
+       "淋",
+       "lin"
+      ]
+     ]
+    },
     {
      "pos": "adj",
      "cn": "冰淇淋的，乳白色的",
@@ -515824,16 +515686,12 @@
    "phonetic": "'imigreit",
    "trans": [
     {
-     "pos": "vt",
-     "cn": "使移居入境"
-    },
-    {
      "pos": "vi",
-     "cn": "移入"
+     "cn": "移居入境，移入"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：im-（向内）+ migrate（迁移）→ 移入、移居入境；源自拉丁语 immigro（迁入）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -515852,13 +515710,9 @@
    },
    "senses": [
     {
-     "pos": "vt",
-     "cn": "使移居入境",
+     "pos": "vi",
+     "cn": "移居入境，移入",
      "tokens": [
-      [
-       "使",
-       "shi"
-      ],
       [
        "移",
        "yi"
@@ -515874,13 +515728,11 @@
       [
        "境",
        "jing"
-      ]
-     ]
-    },
-    {
-     "pos": "vi",
-     "cn": "移入",
-     "tokens": [
+      ],
+      [
+       "，",
+       ""
+      ],
       [
        "移",
        "yi"
@@ -520702,7 +520554,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in-（使…）+ nov（拉丁语 novus，新）+ -ate（动词后缀）→ 使更新，创新、改革。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -521423,7 +521275,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in-（不）+ tangible（有形的、可触知的）→ 无形的；难以捉摸、难以明了的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -524150,7 +524002,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "irrig-（拉丁语 irrigō 的词干，过去分词 irrigātus）+ -ate（动词后缀）→ 灌溉、冲洗。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -526369,7 +526221,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "jet（喷气式飞机）+ lag（滞后、延迟）→ 乘喷气机跨时区后生物钟滞后 → 时差综合症。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -532649,15 +532501,15 @@
   {
    "word": "knowhow",
    "typing": "knowhow",
-   "phonetic": "",
+   "phonetic": "'nəuhau",
    "trans": [
     {
      "pos": "n",
-     "cn": "情报；实际的能力；专门技术；诀窍，技巧"
+     "cn": "实际的能力，专门技术，诀窍，技巧"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "know（知道）+ how（怎样）→ 知道怎么做 → 诀窍、专门技术。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -532673,21 +532525,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "情报",
-     "tokens": [
-      [
-       "情",
-       "qing"
-      ],
-      [
-       "报",
-       "bao"
-      ]
-     ]
-    },
-    {
-     "pos": "n",
-     "cn": "实际的能力",
+     "cn": "实际的能力，专门技术，诀窍，技巧",
      "tokens": [
       [
        "实",
@@ -532708,13 +532546,11 @@
       [
        "力",
        "li"
-      ]
-     ]
-    },
-    {
-     "pos": "n",
-     "cn": "专门技术",
-     "tokens": [
+      ],
+      [
+       "，",
+       ""
+      ],
       [
        "专",
        "zhuan"
@@ -532730,13 +532566,11 @@
       [
        "术",
        "shu"
-      ]
-     ]
-    },
-    {
-     "pos": "n",
-     "cn": "诀窍，技巧",
-     "tokens": [
+      ],
+      [
+       "，",
+       ""
+      ],
       [
        "诀",
        "jue"
@@ -546433,7 +546267,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "living（生活、起居）+ room（房间）→ 日常起居的房间 → 起居室、客厅。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -559682,7 +559516,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：mechan-（机械，参见 mechanic/mechanism）+ -ize（使…化）→ 使机械化。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -560033,7 +559867,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：medical（医疗）+ care（照顾）→ 医疗照顾方案、公办的医疗保险。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -563596,12 +563430,16 @@
    "phonetic": "'midl'klɑ:s; -'klæs",
    "trans": [
     {
+     "pos": "n",
+     "cn": "中产阶级"
+    },
+    {
      "pos": "adj",
      "cn": "中层社会的，中产阶级的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "middle（中间）+ class（社会阶级）→ 位于上层与工人阶层之间的中产阶级（的）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -563612,6 +563450,28 @@
     "s": "middle-classes"
    },
    "senses": [
+    {
+     "pos": "n",
+     "cn": "中产阶级",
+     "tokens": [
+      [
+       "中",
+       "zhong"
+      ],
+      [
+       "产",
+       "chan"
+      ],
+      [
+       "阶",
+       "jie"
+      ],
+      [
+       "级",
+       "ji"
+      ]
+     ]
+    },
     {
      "pos": "adj",
      "cn": "中层社会的，中产阶级的",
@@ -586380,7 +586240,7 @@
   {
    "word": "old-fashioned",
    "typing": "old-fashioned",
-   "phonetic": "'əjld'fæʃənd",
+   "phonetic": ".əuld'fæʃənd",
    "trans": [
     {
      "pos": "adj",
@@ -586388,7 +586248,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "old（旧）+ fashioned（做成某种样式的，fashion 的过去分词）→ 旧样式的、过时的；指人时常含保守义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -596853,7 +596713,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：谐音「胖达」，胖乎乎的大熊猫（也指小熊猫）；词源本身不确定。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -607664,7 +607524,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "per-（贯穿、始终）+ 拉丁语 severus（严格、认真）→ 始终认真坚持 → 坚持不懈。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -608199,7 +608059,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pessim- 来自拉丁语 pessimus（最坏的，malus 的最高级）+ -ism（主义）→ 凡事往最坏处想 → 悲观主义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -618630,7 +618490,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "plur-（拉丁语 plus/plūris，更多）+ -al（形容词后缀）→ 多于一个的，复数的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -619181,7 +619041,7 @@
   {
    "word": "podcast",
    "typing": "podcast",
-   "phonetic": "",
+   "phonetic": "'pɒdkɑ:st",
    "trans": [
     {
      "pos": "n",
@@ -619189,7 +619049,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "iPod（苹果播放器）+ broadcast（广播）的混成词 → 通过网络播出的节目，播客。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -627032,7 +626892,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pre-（在前）+ position（位置）→ 放在名词前面的词 → 介词、前置词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -632841,14 +632701,10 @@
     {
      "pos": "n",
      "cn": "谚语，格言，箴言"
-    },
-    {
-     "pos": "vt",
-     "cn": "使众所周知，用谚语表达"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：pro-（向前）+ verb（话语）→ 前人向前传下的话 → 谚语、格言。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -632898,56 +632754,6 @@
       [
        "言",
        "yan"
-      ]
-     ]
-    },
-    {
-     "pos": "vt",
-     "cn": "使众所周知，用谚语表达",
-     "tokens": [
-      [
-       "使",
-       "shi"
-      ],
-      [
-       "众",
-       "zhong"
-      ],
-      [
-       "所",
-       "suo"
-      ],
-      [
-       "周",
-       "zhou"
-      ],
-      [
-       "知",
-       "zhi"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "用",
-       "yong"
-      ],
-      [
-       "谚",
-       "yan"
-      ],
-      [
-       "语",
-       "yu"
-      ],
-      [
-       "表",
-       "biao"
-      ],
-      [
-       "达",
-       "da"
       ]
      ]
     }
@@ -634741,19 +634547,15 @@
   {
    "word": "punctual",
    "typing": "punctual",
-   "phonetic": "'pəŋktʃuəl",
+   "phonetic": "'pʌŋktʃuəl",
    "trans": [
     {
      "pos": "adj",
      "cn": "准时的，守时的，点状的，中肯的"
-    },
-    {
-     "pos": "",
-     "cn": "[经] 准时的，不误期的，准时"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "punct-（点，源自拉丁语 pūnctus）+ -ual：正好落在约定的时间“点”上，即准时的、守时的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -634829,72 +634631,6 @@
       [
        "的",
        "de"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[经] 准时的，不误期的，准时",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "经",
-       "jing"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "准",
-       "zhun"
-      ],
-      [
-       "时",
-       "shi"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "不",
-       "bu"
-      ],
-      [
-       "误",
-       "wu"
-      ],
-      [
-       "期",
-       "qi"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "准",
-       "zhun"
-      ],
-      [
-       "时",
-       "shi"
       ]
      ]
     }
@@ -640996,7 +640732,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "rain（雨）+ coat（外套）→ 雨衣。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -653364,7 +653100,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re-（再）+ tell（讲）→ 再讲一遍，复述、重说。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -671927,7 +671663,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "second（第二）+ hand（手）→ 经第二只手 → 二手的、用过的；消息经人转手则指“间接的”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -691117,7 +690853,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "smart（聪明的、智能的）+ phone（电话）→ 能装应用、上网的“聪明电话” → 智能手机。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -691528,7 +691264,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "smoke（烟）+ fog（雾）的混成词 → 烟雾。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -693775,14 +693511,10 @@
     {
      "pos": "adj",
      "cn": "所谓的，号称的"
-    },
-    {
-     "pos": "",
-     "cn": "[法] 所谓的，据称的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "so（如此）+ called（被称作）→ 被如此称呼的 → 所谓的；常含“名不副实”的怀疑语气。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -693813,56 +693545,6 @@
       [
        "号",
        "hao"
-      ],
-      [
-       "称",
-       "cheng"
-      ],
-      [
-       "的",
-       "de"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[法] 所谓的，据称的",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "法",
-       "fa"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "所",
-       "suo"
-      ],
-      [
-       "谓",
-       "wei"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "据",
-       "ju"
       ],
       [
        "称",
@@ -727561,7 +727243,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "与 sweep（扫）、swoop（俯冲）同源，古义为“猛击、挥打”，核心是挥扫的动作 → 用力挥击、强打。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -730528,7 +730210,7 @@
   {
    "word": "takeoff",
    "typing": "takeoff",
-   "phonetic": "'teikɒ:f",
+   "phonetic": "'teikɒf",
    "trans": [
     {
      "pos": "n",
@@ -760282,7 +759964,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：under（不足、低于）+ developed（已发展的）→ 开发不充分的、不发达的、发育不全的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -764096,14 +763778,10 @@
     {
      "pos": "adj",
      "cn": "直到现在的，最近的，现代化的"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 最新的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "up（到）+ to（至）+ date（日期）→ 一直更新到今天的 → 最新的、现代化的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -764166,40 +763844,6 @@
       [
        "化",
        "hua"
-      ],
-      [
-       "的",
-       "de"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 最新的",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "最",
-       "zui"
-      ],
-      [
-       "新",
-       "xin"
       ],
       [
        "的",
@@ -769259,14 +768903,10 @@
     {
      "pos": "n",
      "cn": "伏特"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 伏特"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "以意大利物理学家 Alessandro Volta 的姓氏命名，电压单位“伏特”即由此而来。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -769285,36 +768925,6 @@
      "pos": "n",
      "cn": "伏特",
      "tokens": [
-      [
-       "伏",
-       "fu"
-      ],
-      [
-       "特",
-       "te"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 伏特",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
       [
        "伏",
        "fu"
@@ -775524,7 +775134,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "web（网络）+ -cast（播送，来自 broadcast）→ 网络广播、网络直播。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -777083,15 +776693,15 @@
   {
    "word": "well-being",
    "typing": "well-being",
-   "phonetic": "'welbiiŋ",
+   "phonetic": ".wel'bi:iŋ",
    "trans": [
     {
-     "pos": "adj",
-     "cn": "安宁的，康乐的"
+     "pos": "n",
+     "cn": "安康，幸福"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "well（好）+ being（存在、生活状态）→ 处于良好状态 → 安康、幸福；注意它是名词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -777106,36 +776716,28 @@
    },
    "senses": [
     {
-     "pos": "adj",
-     "cn": "安宁的，康乐的",
+     "pos": "n",
+     "cn": "安康，幸福",
      "tokens": [
       [
        "安",
        "an"
       ],
       [
-       "宁",
-       "ning"
-      ],
-      [
-       "的",
-       "de"
+       "康",
+       "kang"
       ],
       [
        "，",
        ""
       ],
       [
-       "康",
-       "kang"
+       "幸",
+       "xing"
       ],
       [
-       "乐",
-       "le"
-      ],
-      [
-       "的",
-       "de"
+       "福",
+       "fu"
       ]
      ]
     }
@@ -777152,7 +776754,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "well（充分）+ known（被知道的）→ 被大家充分知道的 → 众所周知的、有名的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -777218,7 +776820,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：well（好）+ off（境况、处境）→ 境况好、手头宽裕的；off 在此不表示“离开”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -781685,7 +781287,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "will（意志）+ power（力量）→ 意志的力量，意志力、毅力。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -786960,7 +786562,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "worst 是 bad / worse 的最高级：worse（更坏）→ worst（最坏），古英语 wierrest 即最高级形式。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -788199,6 +787801,10 @@
    "phonetic": "'eks'rei",
    "trans": [
     {
+     "pos": "n",
+     "cn": "X射线，X光"
+    },
+    {
      "pos": "adj",
      "cn": "X射线的"
     },
@@ -788212,7 +787818,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：X 表示当时未知的射线 + ray（光线）→ X 射线；作动词指用 X 光检查。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -788230,6 +787836,36 @@
     "collins": 2
    },
    "senses": [
+    {
+     "pos": "n",
+     "cn": "X射线，X光",
+     "tokens": [
+      [
+       "X",
+       ""
+      ],
+      [
+       "射",
+       "she"
+      ],
+      [
+       "线",
+       "xian"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "X",
+       ""
+      ],
+      [
+       "光",
+       "guang"
+      ]
+     ]
+    },
     {
      "pos": "adj",
      "cn": "X射线的",
@@ -790931,7 +790567,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "zoo-（动物，希腊语 zōion）+ -logy（学科，logos）→ 动物学。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -791383,7 +791019,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "chair（席位、主持会议）+ person（人）→ 主席；是兼顾男女的中性说法。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -791512,7 +791148,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊语 gymnasion（操练场），源于 gymnos（裸体的）：古希腊运动员裸体训练 → 体育馆。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -791737,7 +791373,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自意大利语 influenza，意为“影响”，与英语 influence 同源；借指流行性感冒。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -792629,7 +792265,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sports（运动）+ -woman（女性）→ 女运动员。",
    "family": [],
    "synonyms": [],
    "examples": [],
