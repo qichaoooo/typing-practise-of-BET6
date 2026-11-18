@@ -290,12 +290,41 @@ def meaning_with_mark(entry, mark_sense):
     return "；".join(chunks)
 
 
-def select_words(entries, stats, args):
+def sense_is_known(stats, entry, sense):
+    """该义项是否已经在熟词表（按义项判断，不看同词其他释义）。"""
+    recs = stats.get("review", {}).get(entry["word"])
+    if not isinstance(recs, dict) or "state" in recs:
+        return False
+    rec = recs.get(sense_key(sense))
+    return isinstance(rec, dict) and rec.get("state") == "known"
+
+
+def select_items(entries, stats, args):
+    """返回本次要练的 [(entry, sense)]，按释义抽取。
+
+    默认排除已经变熟的义项；--all-senses 时从全部词库抽取（包含熟词）。
+    抽取单位是义项，所以同一个词的不同释义可能各占一次。每个词内部仍按
+    义项顺序做 Zipf 加权（第 1 个 1、第 2 个 1/2……），再归一化，使每个词
+    的总权重为 1，近似原来的「先均匀选词，再按频率选义项」。
+    """
     n = args.count
+    include_known = getattr(args, "all_senses", False)
     level_pool = [e for e in entries
                   if args.level == "all" or e.get("level") == args.level]
     if not level_pool:
         sys.exit(f"没有 level={args.level} 的单词。")
+
+    def weighted_senses(entry):
+        senses = entry.get("senses") or []
+        picked = []
+        for idx, s in enumerate(senses):
+            if include_known or not sense_is_known(stats, entry, s):
+                picked.append((s, 1.0 / (idx + 1)))
+        total = sum(w for _, w in picked)
+        if not total:
+            return []
+        return [((entry, s), w / total) for s, w in picked]
+
     if args.weak:
         practiced = []
         for e in level_pool:
@@ -304,18 +333,28 @@ def select_words(entries, stats, args):
                 rate = (s["w"] + 0.5) / (s["n"] + 1.0)
                 practiced.append((rate, s["w"], e))
         practiced.sort(key=lambda x: (x[0], x[1]), reverse=True)
-        chosen = [e for _, _, e in practiced[:n]]
-        rest = [e for e in level_pool if e not in chosen]
-        random.shuffle(rest)
-        return chosen + rest[:max(0, n - len(chosen))]
+        chosen = []
+        chosen_words = set()
+        for _rate, _wrong, e in practiced:
+            if len(chosen) >= n:
+                break
+            items = weighted_senses(e)
+            if items:
+                chosen.append(weighted_sample(items, 1)[0])
+                chosen_words.add(e["word"])
+        rest = [item for e in level_pool if e["word"] not in chosen_words
+                for item in weighted_senses(e)]
+        return chosen + weighted_sample(rest, max(0, n - len(chosen)))
+
     if args.new:
-        pool = [e for e in level_pool
-                if stats["words"].get(e["word"], {}).get("n", 0) == 0]
-        pool = pool or level_pool
+        pool = [item for e in level_pool
+                if stats["words"].get(e["word"], {}).get("n", 0) == 0
+                for item in weighted_senses(e)]
+        if not pool:
+            pool = [item for e in level_pool for item in weighted_senses(e)]
     else:
-        pool = list(level_pool)
-    random.shuffle(pool)
-    return pool[:n]
+        pool = [item for e in level_pool for item in weighted_senses(e)]
+    return weighted_sample(pool, n)
 
 
 def fmt_time(seconds):
@@ -330,18 +369,6 @@ def normalize_pinyin(text):
 
 def disp_width(ch):
     return 2 if unicodedata.east_asian_width(ch) in ("W", "F") else 1
-
-
-def pick_sense(entry):
-    """按义项顺序做 Zipf 加权（1/(i+1)），越靠前的义项越常出现。
-
-    词表本身没有义项频率数据，用顺序近似真实频率。
-    """
-    senses = entry.get("senses") or []
-    if not senses:
-        return None
-    weights = [1.0 / (i + 1) for i in range(len(senses))]
-    return random.choices(senses, weights=weights, k=1)[0]
 
 
 FORM_ORDER = (("p", "过去式"), ("d", "过去分词"), ("i", "现在分词"),
@@ -1384,21 +1411,11 @@ def review_counts(stats, day=None):
     return new_count, learning, known, levels, due, len(words)
 
 
-def run_quiz(args, kind="review", session_words=None, session_senses=None):
+def run_quiz(args, kind="review", session_items=None):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
-    session_senses = session_senses or {}
     normalize_review(stats, entries)
-
-    session_items = []
-    if session_words:
-        for entry in session_words:
-            sense = session_senses.get(entry["word"])
-            if sense is None:
-                senses = entry.get("senses") or []
-                sense = senses[0] if senses else None
-            if sense is not None:
-                session_items.append((entry, sense))
+    session_items = session_items or []
 
     scope = build_quiz_scope(entries, stats, args, session_items)
     if not scope:
@@ -1698,12 +1715,14 @@ def practice_one(term, entry, idx, total, mode, sense=None):
 def run(args):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
-    words = select_words(entries, stats, args)
-    if not words:
-        sys.exit("没有符合条件的单词。")
+    normalize_review(stats, entries)
+    items = select_items(entries, stats, args)
+    if not items:
+        sys.exit("没有可练习的义项（默认排除熟词；"
+                 "可用 --all-senses 从全部词库抽取）。")
 
-    queue = [[e, False] for e in words]
-    total_planned = len(words)
+    queue = [[e, s, False] for e, s in items]
+    total_planned = len(items)
     done = 0
     reviews = 0
     ok_words = 0
@@ -1714,7 +1733,6 @@ def run(args):
     start_time = None
     missed = []
     pinyin_count = 0
-    session_senses = {}
     i = 0
     quit_early = False
     encountered = False
@@ -1722,20 +1740,14 @@ def run(args):
     with Terminal() as term:
         try:
             while i < len(queue):
-                entry, is_review = queue[i]
-                sense = (pick_sense(entry)
-                         if args.mode == "show" and not args.no_pinyin else None)
-                if sense is not None:
-                    session_senses[entry["word"]] = sense
+                entry, sense, is_review = queue[i]
+                practice_sense = (sense if args.mode == "show"
+                                  and not args.no_pinyin else None)
                 if not args.no_quiz:
-                    review_sense = sense
-                    if review_sense is None:
-                        senses = entry.get("senses") or []
-                        review_sense = senses[0] if senses else None
-                    if register_encountered(stats, entry, review_sense):
+                    if register_encountered(stats, entry, sense):
                         encountered = True
                 result = practice_one(term, entry, min(done + 1, total_planned),
-                                      total_planned, args.mode, sense)
+                                      total_planned, args.mode, practice_sense)
                 if result is None:
                     quit_early = True
                     break
@@ -1760,11 +1772,12 @@ def run(args):
                     s["w"] += 1
                     missed.append(entry)
                     if not is_review and not args.no_requeue:
-                        queue.insert(min(i + 6, len(queue)), [entry, True])
+                        queue.insert(min(i + 6, len(queue)),
+                                     [entry, sense, True])
 
                 # 标准模式的第二阶段：按逐字拼音把释义打出来（不计入错词和准确率）
-                if ok and sense:
-                    if practice_pinyin(term, entry, sense) is None:
+                if ok and practice_sense:
+                    if practice_pinyin(term, entry, practice_sense) is None:
                         quit_early = True
                         break
                     pinyin_count += 1
@@ -1778,7 +1791,7 @@ def run(args):
             print("\n已退出；本次遇到的单词已记入生词表。")
         else:
             print("\n已退出，本次没有练习记录。")
-        return [], True, 0, {}
+        return [], True, 0
 
     elapsed_total = (time.monotonic() - start_time) if start_time else 0.0
     minutes = max(typing_seconds / 60.0, 1e-9)
@@ -1811,7 +1824,7 @@ def run(args):
     stats["sessions"] = stats["sessions"][-500:]
     save_stats(args.stats_file, stats)
     print(f"{DIM}进度已保存到 {args.stats_file}{RESET}")
-    return words, quit_early, done, session_senses
+    return items, quit_early, done
 
 
 def show_stats(args):
@@ -1882,6 +1895,7 @@ def main():
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
   vocabtype --review-known 20       从熟词中抽 20 个义项加练（不看是否到期）
+  vocabtype --all-senses            拼写选词包含熟词，从全部词库按释义抽取
   vocabtype --stats                 查看复习进度
 """
     p = ChineseArgumentParser(
@@ -1891,7 +1905,7 @@ def main():
     p.add_argument("-h", "--help", action="help", help="显示本帮助并退出")
     p.add_argument("-f", "--file", default=DEFAULT_DATA, help="单词数据文件")
     p.add_argument("-n", "--count", type=int, default=30,
-                   help="普通模式本次拼写练习词数（默认 30）")
+                   help="普通模式本次拼写练习的义项数（默认 30）")
     p.add_argument("--mode", choices=["show", "recall"], default="show",
                    help="show=显示单词照着打（含全拼释义阶段）；"
                         "recall=只看释义拼写")
@@ -1903,6 +1917,9 @@ def main():
                         "cet4=四级词，extra=大纲外扩展词")
     p.add_argument("--weak", action="store_true", help="优先练错误率最高的词")
     p.add_argument("--new", action="store_true", help="只练尚未练过的词")
+    p.add_argument("--all-senses", action="store_true",
+                   help="拼写选词从全部词库按释义抽取（包含熟词）；"
+                        "默认只抽还没变熟的义项")
     p.add_argument("--no-requeue", action="store_true", help="错词不在本次重复")
     p.add_argument("--review", action="store_true",
                    help="复习模式：只做释义检测，抽取生词和今天到期的熟词")
@@ -1954,15 +1971,14 @@ def main():
             sys.exit("复习模式不支持 --new / --weak。")
         run_quiz(args, kind="review")
         return
-    words, quit_early, done, session_senses = run(args)
+    session_items, quit_early, done = run(args)
     if args.no_quiz:
         return
     if quit_early:
         print(f"{DIM}已退出，本次未进行释义检测。{RESET}")
         return
     if done:
-        run_quiz(args, kind="normal", session_words=words,
-                 session_senses=session_senses)
+        run_quiz(args, kind="normal", session_items=session_items)
 
 
 if __name__ == "__main__":

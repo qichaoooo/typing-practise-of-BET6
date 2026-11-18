@@ -202,6 +202,69 @@ class EncounterTest(unittest.TestCase):
         self.assertEqual(rec["wrong"], 1)
 
 
+class SelectionTest(unittest.TestCase):
+    def setUp(self):
+        self.args = SimpleNamespace(count=10, level="all", weak=False,
+                                    new=False, all_senses=False)
+        self.entries = [
+            entry("a", senses=[sense("n", "甲", "jia"),
+                               sense("v", "乙", "yi")]),
+            entry("b", level="cet4", senses=[sense("n", "丙", "bing")]),
+        ]
+        self.stats = {"words": {}, "review": {
+            "a": {"n|甲": {"state": "known", "level": 1,
+                           "due": "2999-01-01"}},
+        }}
+
+    def senses(self, items):
+        return {(e["word"], s["cn"]) for e, s in items}
+
+    def test_default_excludes_known_senses_only(self):
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        # a 的甲义项已熟，乙义项没学过，仍然可以抽到
+        self.assertEqual(self.senses(items),
+                         {("a", "乙"), ("b", "丙")})
+
+    def test_all_senses_includes_known(self):
+        self.args.all_senses = True
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(self.senses(items),
+                         {("a", "甲"), ("a", "乙"), ("b", "丙")})
+
+    def test_count_limits_senses(self):
+        self.args.count = 2
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(len(items), 2)
+
+    def test_same_word_can_be_drawn_for_two_senses(self):
+        self.args.count = 2
+        stats = {"words": {}, "review": {}}
+        items = vocabtype.select_items([self.entries[0]], stats, self.args)
+        self.assertEqual(self.senses(items), {("a", "甲"), ("a", "乙")})
+
+    def test_level_filter(self):
+        self.args.level = "cet4"
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(self.senses(items), {("b", "丙")})
+
+    def test_new_filters_at_word_level(self):
+        self.stats["words"]["a"] = {"n": 1}
+        self.args.new = True
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(self.senses(items), {("b", "丙")})
+
+    def test_all_known_returns_empty_without_all_senses(self):
+        self.stats["review"]["a"]["v|乙"] = {
+            "state": "known", "level": 1, "due": "2999-01-01"}
+        self.stats["review"]["b"] = {
+            "n|丙": {"state": "known", "level": 1, "due": "2999-01-01"}}
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(items, [])
+        self.args.all_senses = True
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(len(items), 3)
+
+
 class ScopeTest(unittest.TestCase):
     def setUp(self):
         self.args = SimpleNamespace(intervals=(1, 3, 7, 15, 30),
@@ -251,6 +314,14 @@ class ScopeTest(unittest.TestCase):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args, session_items)
         self.assertIn(("c", "丙"), self.scope_senses(scope))
+
+    def test_session_items_keep_two_senses_of_same_word(self):
+        e = entry("a", senses=[sense("n", "甲", "jia"),
+                               sense("v", "乙", "yi")])
+        session_items = [(e, e["senses"][0]), (e, e["senses"][1])]
+        scope = vocabtype.build_quiz_scope(
+            [e], {"review": {}}, self.args, session_items)
+        self.assertEqual(self.scope_senses(scope), {("a", "甲"), ("a", "乙")})
 
 
 class KnownReviewTest(unittest.TestCase):
