@@ -24,8 +24,9 @@
   其他 CET-6 词书）。
 - 来源字段 `remMethod` 是「助记」，**部分是词根拆分，部分只是联想记忆/谐音文字游戏**
   （例如 abandon → `a + band + on`）。UI 与文档一律标为「助记」，不得说成历史词源。
-- 拼音由 pypinyin 自动生成，常见多音字基本正确；已人工抽查 38 个上下文相关的
-  非默认读音。仍可能有罕见错误，拼音只作提示，且第二阶段打错不计分。
+- 拼音由 pypinyin 自动生成；已修正 `] ` / `...` 触发的逐字回退造成的 44 处
+  读音错误，并人工抽查过 38 个上下文相关的非默认读音。仍可能有罕见错误，
+  拼音只作提示，且第二阶段打错不计分。
 - ECDICT 的 `cet6` 标签有 5407 条，范围过宽，**不能**当官方词表用；它的用途是
   补释义/音标/词形/词频，以及交叉核对。
 - 词条的 `level` 只能是 `cet4`、`cet6`、`extra`；`extra` 表示不在官方词表中，
@@ -233,8 +234,9 @@
 | `scripts/add_pinyin.py` | 数据构建：生成逐字拼音 `senses` |
 | `scripts/test_review.py` | 复习状态机/检测池的 unittest |
 | `data/official_2016.json` | 官方 2016 词表的版本化提取（5,377 行，含 ★） |
-| `data/cet6.json` | 生成物，5,823 词 / 13,439 义项，**勿手改** |
+| `data/cet6.json` | 生成物，5,847 词 / 13,467 义项，**勿手改** |
 | `data/extra_words.json` | 人工补充的词（部分已属于官方词表，级别以官方为准） |
+| `data/official_variants.json` | 人工挑选的官方词形补充（语义/角色不同或常用完整形式；不是全部拼写变体） |
 | `data/word_fixes.json` | 逐词字段覆盖（最高优先级），发现释义/音标错误时使用 |
 | `data/pinyin_fixes.json` | 逐义项拼音覆盖 |
 | `data/cet6-words.txt` | 纯单词表，可喂给 mitype 等 |
@@ -265,10 +267,12 @@
     data/sources/official_cet_2016.pdf data/sources/gh_cet_word_list.txt \
     data/official_2016.json
 
-# 1. 合并词库（--official 标级别并补缺失词，--ecdict 提供释义/音标/词形/词频）
+# 1. 合并词库（--official 标级别并补缺失词，--variants 补人工挑选的官方词形，
+#    --ecdict 提供释义/音标/词形/词频）
 python3 -I scripts/build_wordlist.py data/cet6_raw.zip data/extra_words.json \
     data/cet6.json data/cet6-words.txt \
-    --ecdict data/sources/stardict.db --official data/official_2016.json
+    --ecdict data/sources/stardict.db --official data/official_2016.json \
+    --variants data/official_variants.json
 
 # 2. 逐字拼音（会覆盖 senses）
 python3 -m venv .venv
@@ -280,9 +284,13 @@ python3 -m venv .venv
 - `add_pinyin.py` 从输出 JSON 同目录读取 `pinyin_fixes.json`。
 - 原始数据下载地址见 README；`data/sources/`、`.venv/` 不入库。
 - 数据来源：官方 2016 词表（范围与级别）+ kajweb/dict CET6_3（助记/例句等）
-  + ECDICT（新增词的释义/音标/词形/词频）+ mahavivo（补充词）。
-- 官方词表覆盖率为 100%；新增词的释义只来自 ECDICT，没有助记/例句时面板就不
-  显示这两项，不要为了填满而编造。
+  + ECDICT（新增词的释义/音标/词形/词频）+ mahavivo（补充词）+
+  `data/official_variants.json`（人工挑选的官方词形补充）。
+- 官方行级覆盖 5,377/5,377；官方主词目拼写变体 5,320/5,405（按本项目展开
+  5,377 行的口径）单独收录，剩余 85 个拼写变体/替代形式不单独建词条；官方
+  派生词列不逐条收录（现有 453 个是源数据已有）。
+  新增词（含 24 个人工挑选的官方词形）的释义只来自 ECDICT，没有助记/例句时
+  面板就不显示这两项，不要为了填满而编造。
 
 ## 测试
 
@@ -324,8 +332,8 @@ python3 -I scripts/test_review.py -v
 ### 数据改动后的检查
 
 - 无空词/空释义/空 `senses`；无大小写重复词；无重复的 `typing` 目标。
-- 官方词表覆盖率 100%（`official_2016.json` 的每个词目都能在最终数据中匹配到，
-  含拼写变体归一化）。
+- 官方行级覆盖 5,377/5,377；主词目拼写变体 5,320/5,405（提取口径）；
+  派生词 457/2,616。
 - 每个汉字 token 都有拼音；`senses` 数量与按 `；` 切分一致。
 - 释义中不应残留 IPA 方括号注音（如 `['kɒnvɪkt]`）。
 - `level` 计数合理；大纲外词必须是 `extra`，官方词不得误标 extra。
@@ -342,15 +350,19 @@ python3 -I scripts/test_review.py -v
 ## 已知限制
 
 - 官方大纲词表是 **5,418 个词目**（按拼写变体计）；`official_2016.json` 提取为
-  5,377 行，按词形归一化后覆盖率 100%，但行数与官方口径不完全相等。
-- 新增的 3,471 个官方词目的释义/音标来自 ECDICT，没有助记、同根词、例句；
-  面板只显示已有的信息。
+  5,377 行。按本项目展开口径，当前行级覆盖 5,377/5,377；主词目拼写变体
+  5,320/5,405（85 个拼写变体/替代形式未单独收录）；派生词 457/2,616（2,159
+  个未收录，现有 453 个是源数据已有），行数与官方口径不完全相等。
+- 新增的 3,471 个官方词目 + 24 个人工挑选的官方词形，释义/音标来自 ECDICT，
+  没有助记、同根词、例句；面板只显示已有的信息。
 - 官方同形异义词（bank/check 等）在本项目中合并为一条，可能少一个独立义项。
 - 79 个 `extra` 词不在官方词表（如 paternity、canon），UI 标「扩展」；其中个别
   只是拼写/派生变体，不一定是超纲词。
-- 助记覆盖率 1,819/5,823，且不保证历史词源真实性。
-- 30 个复合词/短语在 ECDICT 没有音标，界面不显示音标。
-- 拼音自动生成；个别多音字可能有误，但拼音阶段不计分。
+- 助记覆盖率 1,819/5,847，且不保证历史词源真实性。
+- 31 个词在 ECDICT 没有可用音标（30 个复合词/短语，以及音标损坏的
+  `chairperson`），界面不显示音标。
+- 拼音自动生成；括号/省略号回退造成的 44 处错误已修正，仍可能有个别多音字
+  有误，但拼音阶段不计分。
 - 例句/真题来自源数据，可能是带省略号的片段。
 - 义项频率是顺序近似，不是语料统计。
 - 终端 UI 依赖 ANSI 颜色和 CJK 双宽字符；长信息行在窄终端会换行。

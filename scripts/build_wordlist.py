@@ -5,7 +5,9 @@ Usage:
     python3 -I scripts/build_wordlist.py \
         data/cet6_raw.zip data/extra_words.json \
         data/cet6.json data/cet6-words.txt \
-        [--ecdict data/sources/stardict.db]
+        [--ecdict data/sources/stardict.db] \
+        [--official data/official_2016.json] \
+        [--variants data/official_variants.json]
 
 Sources:
   - kajweb/dict CET6_3: headwords, phonetics, translations, phrases,
@@ -13,7 +15,10 @@ Sources:
     and the 词根记忆 (mnemonic) field.
   - data/extra_words.json: CET-6 words present in mahavivo/english-wordlists
     but missing from CET6_3.
-  - ECDICT 1.0.28 (optional): word forms (exchange) and frequency ranks.
+  - data/official_variants.json: 人工挑选的官方词形补充（语义/角色不同
+    或常用完整形式）；不是完整的拼写变体列表。
+  - ECDICT 1.0.28 (optional): word forms (exchange) and frequency ranks,
+    plus definitions for missing official words/variants.
 
 Pinyin senses are added afterwards by scripts/add_pinyin.py.
 """
@@ -297,7 +302,8 @@ def choose_official_spelling(variants, cur):
         scored.append(((0 if exact else 1, rank, len(variant)), variant, row))
     if not scored:
         return None
-    scored.sort(key=lambda x: x[0])
+    # 分数相同时固定优先级，避免 set 迭代顺序导致构建结果不稳定。
+    scored.sort(key=lambda x: (x[0], not x[1].islower(), x[1]))
     _, spelling, row = scored[0]
     return spelling, row
 
@@ -353,6 +359,80 @@ def add_official_entries(entries, official, cur):
     return added, skipped
 
 
+def load_variant_words(path):
+    """读取人工挑选的官方词形补充清单；兼容 {"words": [...]} 或列表。"""
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    words = data.get("words") if isinstance(data, dict) else data
+    out, seen = [], set()
+    for word in words or []:
+        word = str(word).strip()
+        if word and word.lower() not in seen:
+            seen.add(word.lower())
+            out.append(word)
+    return out
+
+
+def add_official_variants(entries, words, cur, level_map, folded_map):
+    """从 ECDICT 补入人工挑选的官方词形。
+
+    只补官方词表里存在、但当前词库没有的拼写；级别按官方映射赋值，
+    不重算现有词条。rank 追加在当前最大值之后，避免打乱已有顺序。
+    """
+    existing = {match_key(e["word"]) for e in entries}
+    folded = {match_key(ascii_typing(e["word"])) for e in entries}
+    next_rank = max((e["rank"] for e in entries), default=0) + 1
+    added, skipped = 0, []
+
+    for word in words:
+        key = match_key(word)
+        fkey = match_key(ascii_typing(word))
+        if key in existing or fkey in folded:
+            skipped.append((word, "already present"))
+            continue
+        level = level_map.get(key) or folded_map.get(fkey)
+        if level not in ("cet4", "cet6"):
+            skipped.append((word, "not in official word list"))
+            continue
+        row, _exact = ecdict_candidates(cur, word)
+        if not row:
+            skipped.append((word, "no ECDICT row"))
+            continue
+        trans = parse_ecdict_translation(row[0])
+        if not any(CJK.search(t["cn"]) for t in trans):
+            skipped.append((word, "no Chinese ECDICT definition"))
+            continue
+        entry = {
+            "word": word,
+            "typing": ascii_typing(word),
+            "phonetic": (row[1] or "").strip(),
+            "trans": trans,
+            "phrases": [],
+            "method": "",
+            "family": [],
+            "synonyms": [],
+            "examples": [],
+            "exam": [],
+            "rank": next_rank,
+            "level": level,
+        }
+        forms = parse_exchange(row[2])
+        if forms:
+            entry["forms"] = forms
+        freq = {k: v for k, v in
+                (("bnc", row[3]), ("frq", row[4]), ("collins", row[5]),
+                 ("oxford", row[6])) if v}
+        if freq:
+            entry["freq"] = freq
+        entries.append(entry)
+        existing.add(key)
+        folded.add(fkey)
+        next_rank += 1
+        added += 1
+
+    return added, skipped
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -363,6 +443,8 @@ def main():
     p.add_argument("--ecdict", help="ECDICT stardict.db (optional)")
     p.add_argument("--official", default="data/official_2016.json",
                    help="official 2016 word list (optional)")
+    p.add_argument("--variants", default="data/official_variants.json",
+                   help="curated official variant words (optional)")
     p.add_argument("--fixes", default="data/word_fixes.json",
                    help="per-word field overrides (optional)")
     args = p.parse_args()
@@ -393,15 +475,29 @@ def main():
                                            "extra"))
         if args.ecdict:
             con = sqlite3.connect(args.ecdict)
-            added, skipped = add_official_entries(entries, official, con.cursor())
+            cur = con.cursor()
+            added, skipped = add_official_entries(entries, official, cur)
+            vadded, vskipped = 0, []
+            has_variants = bool(args.variants and os.path.exists(args.variants))
+            if has_variants:
+                vadded, vskipped = add_official_variants(
+                    entries, load_variant_words(args.variants), cur,
+                    level_map, folded_map)
             con.close()
             print(f"official: added {added} missing headwords, "
                   f"skipped {len(skipped)}")
             if skipped:
                 print("  skipped sample:", skipped[:10])
+            if has_variants:
+                print(f"variants: added {vadded} curated official variants, "
+                      f"skipped {len(vskipped)}")
+                if vskipped:
+                    print("  skipped:", vskipped[:10])
+            elif args.variants:
+                print(f"variants: {args.variants} not found; skipped")
         else:
             print("official: levels applied; --ecdict is needed to add "
-                  "missing headwords")
+                  "missing headwords and variants")
     else:
         for e in entries:
             e.setdefault("level", "extra")
@@ -434,7 +530,7 @@ def main():
         json.dump({
             "source": ("kajweb/dict CET6_3 + mahavivo/english-wordlists + "
                        "全国大学英语四、六级考试大纲（2016 年修订版）词表 + "
-                       "ECDICT"),
+                       "ECDICT + 人工挑选的官方词形补充"),
             "words": entries,
         }, f, ensure_ascii=False, indent=1)
     with open(args.out_txt, "w", encoding="utf-8") as f:

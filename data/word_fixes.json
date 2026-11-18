@@ -1,1 +1,80 @@
-{}
+{
+ "an": {
+  "forms": {}
+ },
+ "automobile": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "汽车"
+   }
+  ]
+ },
+ "chairperson": {
+  "phonetic": ""
+ },
+ "gasoline": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "汽油"
+   }
+  ]
+ },
+ "gymnasium": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "健身房，体育馆"
+   }
+  ]
+ },
+ "heroine": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "巾帼英雄，烈妇，女主角"
+   }
+  ]
+ },
+ "influenza": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "流行性感冒"
+   }
+  ]
+ },
+ "laboratory": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "实验室，研究室，化工厂"
+   }
+  ]
+ },
+ "mathematics": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "数学"
+   }
+  ]
+ },
+ "memorandum": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "备忘录，外交备忘录，交易备忘录"
+   }
+  ]
+ },
+ "television": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "电视"
+   }
+  ]
+ }
+}

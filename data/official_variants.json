@@ -1,0 +1,29 @@
+{
+ "source": "人工挑选的官方词形补充：语义/角色不同或常用完整形式；不含纯拼写变体和派生词。构建时从 ECDICT 补释义/音标，级别按官方词表赋值。",
+ "words": [
+  "an",
+  "automobile",
+  "bicycle",
+  "chairperson",
+  "dormitory",
+  "gasoline",
+  "gymnasium",
+  "hamburger",
+  "heroine",
+  "influenza",
+  "inquire",
+  "insure",
+  "jail",
+  "laboratory",
+  "landlady",
+  "mathematics",
+  "memorandum",
+  "photograph",
+  "princess",
+  "spaceship",
+  "spokeswoman",
+  "sportswoman",
+  "telephone",
+  "television"
+ ]
+}

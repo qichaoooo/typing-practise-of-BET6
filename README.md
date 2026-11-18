@@ -1,9 +1,9 @@
 # vocabtype — CET-6 背单词 + 打字练习
 
-终端里把「背单词」和「练打字」合并成一件事：练习材料是 **5,823 个词条**
-（CET4 4,434 / CET6 1,310 / 大纲外扩展 79），按《全国大学英语四、六级考试大纲
+终端里把「背单词」和「练打字」合并成一件事：练习材料是 **5,847 个词条**
+（CET4 4,458 / CET6 1,310 / 大纲外扩展 79），按《全国大学英语四、六级考试大纲
 （2016 年修订版）》的官方词表标注级别。每个词条包含音标、词性、中文释义、短语、
-词根/助记、同根词、近义词、例句/真题、词形变化、词频，以及每条释义的逐字拼音。
+助记、同根词、近义词、例句/真题、词形变化、词频，以及每条释义的逐字拼音。
 运行期只用 Python 标准库；只有重建数据时才需要 pypinyin、ECDICT 和 pymupdf。
 
 ## 快速开始
@@ -287,20 +287,25 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
 
 ### 合并结果
 
-最终 **5,823 个词条 / 13,439 个义项**：
+最终 **5,847 个词条 / 13,467 个义项**：
 
-- 级别：CET4 4,434 · CET6 1,310 · 大纲外扩展 79（界面分别标注 `CET4`、
+- 级别：CET4 4,458 · CET6 1,310 · 大纲外扩展 79（界面分别标注 `CET4`、
   `CET6`、`扩展`）。
-- 原 kajweb CET6_3 的 2,345 词保留；新增 **3,471 个官方词目**，释义和音标来自
-  ECDICT；官方词目覆盖率为 100%。
+- 原 kajweb CET6_3 的 2,345 词保留；新增 **3,471 个官方词目**，另从官方行中
+  人工挑选 24 个语义不同/常用完整形式的拼写（`data/official_variants.json`），
+  释义和音标来自 ECDICT。
+- 官方行级覆盖 **5,377/5,377**；官方主词目拼写变体 **5,320/5,405**（按本项目
+  展开口径）单独收录，剩余 85 个拼写变体/替代形式不单独建词条；官方派生词列
+  不逐条收录，现有 453 个派生词是源数据已有。
 - 同形异义词（官方分列的 `bank`、`check` 等）合并为一条。
 - 少量复合词/短语在 ECDICT 没有音标（如 `according to`、`brand-new`），界面就不
   显示音标；带重音或短语的词条用 `typing` 字段给出实际敲击形式，例如
   `coup d'état` 敲 `coup d'etat`、`cliché` 敲 `cliche`。
-- 信息补全（有则显示）：词根/助记 1,819、同根词 1,973、近义词 2,249、例句
-  2,325、真题句 1,193、短语 1,792；ECDICT 补词形变化和 BNC/COCA 词频。
-- 逐字拼音由 pypinyin 生成，38 个上下文多音字选择经过人工抽查；拼音阶段打错
-  不计分。
+- 信息补全（有则显示）：助记 1,819（源数据为词根拆分或联想记忆，不保证历史
+  词源）、同根词 1,973、近义词 2,249、例句 2,325、真题句 1,193、短语 1,792；
+  ECDICT 补词形变化和 BNC/COCA 词频。
+- 逐字拼音由 pypinyin 生成；已修正括号/省略号触发的逐字回退造成的 44 处读音
+  错误，并对上下文多音字做了人工抽查；拼音阶段打错不计分。
 - 发现释义、音标等错误时写入 `data/word_fixes.json`；发现拼音错误写入
   `data/pinyin_fixes.json`，再重建。两个修正文件随仓库版本化，不要手改生成物。
 
@@ -312,10 +317,12 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
     data/sources/official_cet_2016.pdf data/sources/gh_cet_word_list.txt \
     data/official_2016.json
 
-# 1. 合并词库（--official 标级别并补缺失词，--ecdict 提供释义/音标/词形/词频）
+# 1. 合并词库（--official 标级别并补缺失词，--variants 补人工挑选的官方词形，
+#    --ecdict 提供释义/音标/词形/词频）
 python3 -I scripts/build_wordlist.py data/cet6_raw.zip data/extra_words.json \
     data/cet6.json data/cet6-words.txt \
-    --ecdict data/sources/stardict.db --official data/official_2016.json
+    --ecdict data/sources/stardict.db --official data/official_2016.json \
+    --variants data/official_variants.json
 
 # 2. 逐字拼音（会覆盖 senses）
 python3 -m venv .venv

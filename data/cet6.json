@@ -1,5 +1,5 @@
 {
- "source": "kajweb/dict CET6_3 + mahavivo/english-wordlists + 全国大学英语四、六级考试大纲（2016 年修订版）词表 + ECDICT",
+ "source": "kajweb/dict CET6_3 + mahavivo/english-wordlists + 全国大学英语四、六级考试大纲（2016 年修订版）词表 + ECDICT + 人工挑选的官方词形补充",
  "words": [
   {
    "word": "cancel",
@@ -798433,6 +798433,1614 @@
       [
        "放",
        "fang"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "an",
+   "typing": "an",
+   "phonetic": "æn",
+   "trans": [
+    {
+     "pos": "art",
+     "cn": "一"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5824,
+   "level": "cet4",
+   "forms": {},
+   "freq": {
+    "bnc": 30
+   },
+   "senses": [
+    {
+     "pos": "art",
+     "cn": "一",
+     "tokens": [
+      [
+       "一",
+       "yi"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "automobile",
+   "typing": "automobile",
+   "phonetic": "'ɒ:tәmәbi:l",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "汽车"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5825,
+   "level": "cet4",
+   "forms": {
+    "s": "automobiles"
+   },
+   "freq": {
+    "bnc": 11452,
+    "frq": 4005,
+    "collins": 2
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "汽车",
+     "tokens": [
+      [
+       "汽",
+       "qi"
+      ],
+      [
+       "车",
+       "che"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "bicycle",
+   "typing": "bicycle",
+   "phonetic": "'baisikl",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "自行车"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5826,
+   "level": "cet4",
+   "forms": {
+    "s": "bicycles",
+    "p": "bicycled",
+    "i": "bicycling",
+    "d": "bicycled",
+    "3": "bicycles"
+   },
+   "freq": {
+    "bnc": 5312,
+    "frq": 4366,
+    "collins": 2,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "自行车",
+     "tokens": [
+      [
+       "自",
+       "zi"
+      ],
+      [
+       "行",
+       "xing"
+      ],
+      [
+       "车",
+       "che"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "chairperson",
+   "typing": "chairperson",
+   "phonetic": "",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "主席"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5827,
+   "level": "cet4",
+   "forms": {
+    "s": "chairpersons"
+   },
+   "freq": {
+    "bnc": 15879,
+    "frq": 16812
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "主席",
+     "tokens": [
+      [
+       "主",
+       "zhu"
+      ],
+      [
+       "席",
+       "xi"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "dormitory",
+   "typing": "dormitory",
+   "phonetic": "'dɒ:mitәri",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "宿舍"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5828,
+   "level": "cet4",
+   "forms": {
+    "s": "dormitories"
+   },
+   "freq": {
+    "bnc": 14248,
+    "frq": 10947,
+    "collins": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "宿舍",
+     "tokens": [
+      [
+       "宿",
+       "su"
+      ],
+      [
+       "舍",
+       "she"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "gasoline",
+   "typing": "gasoline",
+   "phonetic": "'gæsәli:n",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "汽油"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5829,
+   "level": "cet4",
+   "forms": {
+    "s": "gasolines"
+   },
+   "freq": {
+    "bnc": 23359,
+    "frq": 4082,
+    "collins": 2,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "汽油",
+     "tokens": [
+      [
+       "汽",
+       "qi"
+      ],
+      [
+       "油",
+       "you"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "gymnasium",
+   "typing": "gymnasium",
+   "phonetic": "dʒim'neiziәm",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "健身房，体育馆"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5830,
+   "level": "cet4",
+   "forms": {
+    "s": "gymnasiums"
+   },
+   "freq": {
+    "bnc": 15478,
+    "frq": 13057,
+    "collins": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "健身房，体育馆",
+     "tokens": [
+      [
+       "健",
+       "jian"
+      ],
+      [
+       "身",
+       "shen"
+      ],
+      [
+       "房",
+       "fang"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "体",
+       "ti"
+      ],
+      [
+       "育",
+       "yu"
+      ],
+      [
+       "馆",
+       "guan"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "hamburger",
+   "typing": "hamburger",
+   "phonetic": "'hæmbә:gә",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "汉堡(德国港口)，肉饼，汉堡包，纯精牛肉，汉堡牛排"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5831,
+   "level": "cet4",
+   "forms": {
+    "s": "hamburgers"
+   },
+   "freq": {
+    "bnc": 14356,
+    "frq": 7483,
+    "collins": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "汉堡(德国港口)，肉饼，汉堡包，纯精牛肉，汉堡牛排",
+     "tokens": [
+      [
+       "汉",
+       "han"
+      ],
+      [
+       "堡",
+       "bao"
+      ],
+      [
+       "(",
+       ""
+      ],
+      [
+       "德",
+       "de"
+      ],
+      [
+       "国",
+       "guo"
+      ],
+      [
+       "港",
+       "gang"
+      ],
+      [
+       "口",
+       "kou"
+      ],
+      [
+       ")",
+       ""
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "肉",
+       "rou"
+      ],
+      [
+       "饼",
+       "bing"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "汉",
+       "han"
+      ],
+      [
+       "堡",
+       "bao"
+      ],
+      [
+       "包",
+       "bao"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "纯",
+       "chun"
+      ],
+      [
+       "精",
+       "jing"
+      ],
+      [
+       "牛",
+       "niu"
+      ],
+      [
+       "肉",
+       "rou"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "汉",
+       "han"
+      ],
+      [
+       "堡",
+       "bao"
+      ],
+      [
+       "牛",
+       "niu"
+      ],
+      [
+       "排",
+       "pai"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "heroine",
+   "typing": "heroine",
+   "phonetic": "'herәuin",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "巾帼英雄，烈妇，女主角"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5832,
+   "level": "cet4",
+   "forms": {
+    "s": "heroines"
+   },
+   "freq": {
+    "bnc": 8840,
+    "frq": 8342,
+    "collins": 2
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "巾帼英雄，烈妇，女主角",
+     "tokens": [
+      [
+       "巾",
+       "jin"
+      ],
+      [
+       "帼",
+       "guo"
+      ],
+      [
+       "英",
+       "ying"
+      ],
+      [
+       "雄",
+       "xiong"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "烈",
+       "lie"
+      ],
+      [
+       "妇",
+       "fu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "主",
+       "zhu"
+      ],
+      [
+       "角",
+       "jue"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "influenza",
+   "typing": "influenza",
+   "phonetic": ".influ'enzә",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "流行性感冒"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5833,
+   "level": "cet4",
+   "forms": {
+    "s": "influenzas"
+   },
+   "freq": {
+    "bnc": 19731,
+    "frq": 12570
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "流行性感冒",
+     "tokens": [
+      [
+       "流",
+       "liu"
+      ],
+      [
+       "行",
+       "xing"
+      ],
+      [
+       "性",
+       "xing"
+      ],
+      [
+       "感",
+       "gan"
+      ],
+      [
+       "冒",
+       "mao"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "inquire",
+   "typing": "inquire",
+   "phonetic": "in'kwaiә",
+   "trans": [
+    {
+     "pos": "v",
+     "cn": "询问，问明，查究"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5834,
+   "level": "cet4",
+   "forms": {
+    "p": "inquired",
+    "i": "inquiring",
+    "d": "inquired",
+    "3": "inquires"
+   },
+   "freq": {
+    "bnc": 8760,
+    "frq": 6687,
+    "collins": 2
+   },
+   "senses": [
+    {
+     "pos": "v",
+     "cn": "询问，问明，查究",
+     "tokens": [
+      [
+       "询",
+       "xun"
+      ],
+      [
+       "问",
+       "wen"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "问",
+       "wen"
+      ],
+      [
+       "明",
+       "ming"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "查",
+       "cha"
+      ],
+      [
+       "究",
+       "jiu"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "insure",
+   "typing": "insure",
+   "phonetic": "in'ʃuә",
+   "trans": [
+    {
+     "pos": "vt",
+     "cn": "保险，确保"
+    },
+    {
+     "pos": "vi",
+     "cn": "投保"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5835,
+   "level": "cet4",
+   "forms": {
+    "d": "insured",
+    "p": "insured",
+    "i": "insuring",
+    "3": "insures",
+    "s": "insures"
+   },
+   "freq": {
+    "bnc": 5378,
+    "frq": 6180,
+    "collins": 2
+   },
+   "senses": [
+    {
+     "pos": "vt",
+     "cn": "保险，确保",
+     "tokens": [
+      [
+       "保",
+       "bao"
+      ],
+      [
+       "险",
+       "xian"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "确",
+       "que"
+      ],
+      [
+       "保",
+       "bao"
+      ]
+     ]
+    },
+    {
+     "pos": "vi",
+     "cn": "投保",
+     "tokens": [
+      [
+       "投",
+       "tou"
+      ],
+      [
+       "保",
+       "bao"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "jail",
+   "typing": "jail",
+   "phonetic": "dʒeil",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "监牢，监狱，拘留所"
+    },
+    {
+     "pos": "vt",
+     "cn": "监禁，下狱"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5836,
+   "level": "cet4",
+   "forms": {
+    "d": "jailed",
+    "s": "jails",
+    "p": "jailed",
+    "i": "jailing",
+    "3": "jails"
+   },
+   "freq": {
+    "bnc": 5079,
+    "frq": 2528,
+    "collins": 3
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "监牢，监狱，拘留所",
+     "tokens": [
+      [
+       "监",
+       "jian"
+      ],
+      [
+       "牢",
+       "lao"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "监",
+       "jian"
+      ],
+      [
+       "狱",
+       "yu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "拘",
+       "ju"
+      ],
+      [
+       "留",
+       "liu"
+      ],
+      [
+       "所",
+       "suo"
+      ]
+     ]
+    },
+    {
+     "pos": "vt",
+     "cn": "监禁，下狱",
+     "tokens": [
+      [
+       "监",
+       "jian"
+      ],
+      [
+       "禁",
+       "jin"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "下",
+       "xia"
+      ],
+      [
+       "狱",
+       "yu"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "laboratory",
+   "typing": "laboratory",
+   "phonetic": "'læbrәtәri",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "实验室，研究室，化工厂"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5837,
+   "level": "cet4",
+   "forms": {
+    "s": "laboratories"
+   },
+   "freq": {
+    "bnc": 2316,
+    "frq": 3132,
+    "collins": 3,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "实验室，研究室，化工厂",
+     "tokens": [
+      [
+       "实",
+       "shi"
+      ],
+      [
+       "验",
+       "yan"
+      ],
+      [
+       "室",
+       "shi"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "研",
+       "yan"
+      ],
+      [
+       "究",
+       "jiu"
+      ],
+      [
+       "室",
+       "shi"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "化",
+       "hua"
+      ],
+      [
+       "工",
+       "gong"
+      ],
+      [
+       "厂",
+       "chang"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "landlady",
+   "typing": "landlady",
+   "phonetic": "'lændleidi",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "女房东，女地主"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5838,
+   "level": "cet4",
+   "forms": {
+    "s": "landladies"
+   },
+   "freq": {
+    "bnc": 10202,
+    "frq": 17554,
+    "collins": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "女房东，女地主",
+     "tokens": [
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "房",
+       "fang"
+      ],
+      [
+       "东",
+       "dong"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "地",
+       "di"
+      ],
+      [
+       "主",
+       "zhu"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "mathematics",
+   "typing": "mathematics",
+   "phonetic": ".mæθә'mætiks",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "数学"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5839,
+   "level": "cet4",
+   "freq": {
+    "bnc": 3593,
+    "frq": 4257,
+    "collins": 2,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "数学",
+     "tokens": [
+      [
+       "数",
+       "shu"
+      ],
+      [
+       "学",
+       "xue"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "memorandum",
+   "typing": "memorandum",
+   "phonetic": ".memә'rændәm",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "备忘录，外交备忘录，交易备忘录"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5840,
+   "level": "cet4",
+   "forms": {
+    "s": "memoranda"
+   },
+   "freq": {
+    "bnc": 5460,
+    "frq": 10968,
+    "collins": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "备忘录，外交备忘录，交易备忘录",
+     "tokens": [
+      [
+       "备",
+       "bei"
+      ],
+      [
+       "忘",
+       "wang"
+      ],
+      [
+       "录",
+       "lu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "外",
+       "wai"
+      ],
+      [
+       "交",
+       "jiao"
+      ],
+      [
+       "备",
+       "bei"
+      ],
+      [
+       "忘",
+       "wang"
+      ],
+      [
+       "录",
+       "lu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "交",
+       "jiao"
+      ],
+      [
+       "易",
+       "yi"
+      ],
+      [
+       "备",
+       "bei"
+      ],
+      [
+       "忘",
+       "wang"
+      ],
+      [
+       "录",
+       "lu"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "photograph",
+   "typing": "photograph",
+   "phonetic": "'fәutәgrɑ:f",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "相片，照片，逼真的描绘"
+    },
+    {
+     "pos": "v",
+     "cn": "照相，摄影"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5841,
+   "level": "cet4",
+   "forms": {
+    "s": "photographs",
+    "d": "photographed",
+    "p": "photographed",
+    "i": "photographing",
+    "3": "photographs"
+   },
+   "freq": {
+    "bnc": 1611,
+    "frq": 1481,
+    "collins": 4,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "相片，照片，逼真的描绘",
+     "tokens": [
+      [
+       "相",
+       "xiang"
+      ],
+      [
+       "片",
+       "pian"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "照",
+       "zhao"
+      ],
+      [
+       "片",
+       "pian"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "逼",
+       "bi"
+      ],
+      [
+       "真",
+       "zhen"
+      ],
+      [
+       "的",
+       "de"
+      ],
+      [
+       "描",
+       "miao"
+      ],
+      [
+       "绘",
+       "hui"
+      ]
+     ]
+    },
+    {
+     "pos": "v",
+     "cn": "照相，摄影",
+     "tokens": [
+      [
+       "照",
+       "zhao"
+      ],
+      [
+       "相",
+       "xiang"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "摄",
+       "she"
+      ],
+      [
+       "影",
+       "ying"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "princess",
+   "typing": "princess",
+   "phonetic": "'prinsis",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "公主，王妃，女巨头"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5842,
+   "level": "cet4",
+   "forms": {
+    "s": "princesses"
+   },
+   "freq": {
+    "bnc": 2691,
+    "frq": 6039,
+    "collins": 4,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "公主，王妃，女巨头",
+     "tokens": [
+      [
+       "公",
+       "gong"
+      ],
+      [
+       "主",
+       "zhu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "王",
+       "wang"
+      ],
+      [
+       "妃",
+       "fei"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "巨",
+       "ju"
+      ],
+      [
+       "头",
+       "tou"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "spaceship",
+   "typing": "spaceship",
+   "phonetic": "'speisʃip",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "宇宙飞船"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5843,
+   "level": "cet4",
+   "forms": {
+    "s": "spaceships"
+   },
+   "freq": {
+    "bnc": 16374,
+    "frq": 11577
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "宇宙飞船",
+     "tokens": [
+      [
+       "宇",
+       "yu"
+      ],
+      [
+       "宙",
+       "zhou"
+      ],
+      [
+       "飞",
+       "fei"
+      ],
+      [
+       "船",
+       "chuan"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "spokeswoman",
+   "typing": "spokeswoman",
+   "phonetic": "'spәuks,wumәn",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "女发言人，女代言人"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5844,
+   "level": "cet4",
+   "forms": {
+    "s": "spokeswomen"
+   },
+   "freq": {
+    "bnc": 8340,
+    "frq": 6255,
+    "collins": 2
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "女发言人，女代言人",
+     "tokens": [
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "发",
+       "fa"
+      ],
+      [
+       "言",
+       "yan"
+      ],
+      [
+       "人",
+       "ren"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "代",
+       "dai"
+      ],
+      [
+       "言",
+       "yan"
+      ],
+      [
+       "人",
+       "ren"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "sportswoman",
+   "typing": "sportswoman",
+   "phonetic": "'spɒ:tswumәn",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "女运动员"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5845,
+   "level": "cet4",
+   "forms": {
+    "s": "sportswomen"
+   },
+   "freq": {
+    "bnc": 43136,
+    "frq": 37549
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "女运动员",
+     "tokens": [
+      [
+       "女",
+       "nv"
+      ],
+      [
+       "运",
+       "yun"
+      ],
+      [
+       "动",
+       "dong"
+      ],
+      [
+       "员",
+       "yuan"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "telephone",
+   "typing": "telephone",
+   "phonetic": "'telifәun",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "电话，电话机"
+    },
+    {
+     "pos": "v",
+     "cn": "打电话"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5846,
+   "level": "cet4",
+   "forms": {
+    "p": "telephoned",
+    "s": "telephones",
+    "i": "telephoning",
+    "d": "telephoned",
+    "3": "telephones"
+   },
+   "freq": {
+    "bnc": 1327,
+    "frq": 1865,
+    "collins": 4,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "电话，电话机",
+     "tokens": [
+      [
+       "电",
+       "dian"
+      ],
+      [
+       "话",
+       "hua"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "电",
+       "dian"
+      ],
+      [
+       "话",
+       "hua"
+      ],
+      [
+       "机",
+       "ji"
+      ]
+     ]
+    },
+    {
+     "pos": "v",
+     "cn": "打电话",
+     "tokens": [
+      [
+       "打",
+       "da"
+      ],
+      [
+       "电",
+       "dian"
+      ],
+      [
+       "话",
+       "hua"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "word": "television",
+   "typing": "television",
+   "phonetic": "'teli.viʒәn",
+   "trans": [
+    {
+     "pos": "n",
+     "cn": "电视"
+    }
+   ],
+   "phrases": [],
+   "method": "",
+   "family": [],
+   "synonyms": [],
+   "examples": [],
+   "exam": [],
+   "rank": 5847,
+   "level": "cet4",
+   "forms": {
+    "s": "televisions"
+   },
+   "freq": {
+    "bnc": 978,
+    "frq": 794,
+    "collins": 4,
+    "oxford": 1
+   },
+   "senses": [
+    {
+     "pos": "n",
+     "cn": "电视",
+     "tokens": [
+      [
+       "电",
+       "dian"
+      ],
+      [
+       "视",
+       "shi"
       ]
      ]
     }
