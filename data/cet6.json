@@ -24,7 +24,7 @@
      "cn": "核销"
     }
    ],
-   "method": "",
+   "method": "拉丁 cancelli(格子栏杆) → 画格子线划掉 → 取消，撤销，删去",
    "family": [
     {
      "pos": "n",
@@ -3599,7 +3599,7 @@
      "cn": "叙事疗法"
     }
    ],
-   "method": "",
+   "method": "narr(讲述) ＋ -ative → 用来讲述的 → 叙述文，故事",
    "family": [
     {
      "pos": "n",
@@ -20890,7 +20890,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "myth 来自希腊语 mythos(话语、故事) → 流传下来的故事 → 神话",
    "family": [
     {
      "pos": "adj",
@@ -63891,7 +63891,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "contro(相反) ＋ vers(转) ＋ -ial → 双方对着转、针锋相对 → 有争议的",
    "family": [
     {
      "pos": "adv",
@@ -65392,7 +65392,7 @@
      "cn": "边坡保护，护坡；护坡工程"
     }
    ],
-   "method": "",
+   "method": "联想：s ＋ lope(慢跑)，慢跑上坡时身体前倾 → 倾斜，斜面",
    "family": [
     {
      "pos": "adj",
@@ -78160,7 +78160,7 @@
      "cn": "标准格式；标准书型"
     }
    ],
-   "method": "",
+   "method": "form(形状) ＋ -at → 给书页定下形状 → 版式，格式",
    "family": [
     {
      "pos": "adj",
@@ -106671,7 +106671,7 @@
      "cn": "电源；电功率"
     }
    ],
-   "method": "",
+   "method": "electric(电的，源自希腊语 ēlektron 琥珀) ＋ -al → 电的；电气科学的",
    "family": [
     {
      "pos": "adj",
@@ -109200,7 +109200,7 @@
      "cn": "农业机械"
     }
    ],
-   "method": "",
+   "method": "machine(机器) ＋ -ery(集合名词) → 机器的总称 → 机械",
    "family": [
     {
      "pos": "adj",
@@ -128427,7 +128427,7 @@
      "cn": "国家广场"
     }
    ],
-   "method": "",
+   "method": "联想：mall 源自伦敦林荫道 The Mall（原为槌球道）→ 步行街 → 购物中心",
    "family": [],
    "synonyms": [
     {
@@ -145315,7 +145315,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "over(在上) ＋ look(看) → 从上面看是俯瞰；看漏了是忽视；宽容地不看是宽恕",
    "family": [],
    "synonyms": [
     {
@@ -153022,7 +153022,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "under(在下) ＋ go(走) → 在下面走过、承受 → 经历，经受，忍受",
    "family": [],
    "synonyms": [
     {
@@ -156282,7 +156282,7 @@
      "cn": "浮阀"
     }
    ],
-   "method": "",
+   "method": "古英语 flotian，与 flow(流)同源 → 在水上随流而动 → 漂浮，浮动",
    "family": [
     {
      "pos": "adj",
@@ -160641,7 +160641,7 @@
      "cn": "常客；熟客"
     }
    ],
-   "method": "",
+   "method": "frequ(拥挤、密集，拉丁语 frequens) ＋ -ent → 反复密集出现 → 时常发生的，常见的",
    "family": [
     {
      "pos": "adv",
@@ -172455,7 +172455,7 @@
      "cn": "逻辑结构"
     }
    ],
-   "method": "",
+   "method": "logic(逻辑) ＋ -al(……的) → 逻辑的，合乎常理的",
    "family": [
     {
      "pos": "adj",
@@ -216269,7 +216269,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "wealth(财富) ＋ -y(形容词后缀) → 拥有财富的 → 富的，富裕的",
    "family": [
     {
      "pos": "adv",
@@ -222054,7 +222054,7 @@
      "cn": "商业繁荣，生意兴隆"
     }
    ],
-   "method": "",
+   "method": "拟声：boom 模仿隆隆声 → 发出隆隆声；经济「轰」地兴起 → 激增，繁荣",
    "family": [
     {
      "pos": "adj",
@@ -245893,7 +245893,7 @@
      "cn": "转让方法；指定分配方法"
     }
    ],
-   "method": "",
+   "method": "assign(分配) ＋ -ment(名词后缀) → 分配下来的事 → 任务，指定的作业",
    "family": [
     {
      "pos": "adj",
@@ -253589,7 +253589,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "consequent(随之发生的) ＋ -ly(副词后缀) → 因而，因此，所以",
    "family": [
     {
      "pos": "adj",
@@ -267329,7 +267329,7 @@
      "cn": "长冲程"
     }
    ],
-   "method": "",
+   "method": "日耳曼语 straik(击、划) → 一击、一笔；血管被“击”中即中风；轻击成抚摸",
    "family": [
     {
      "pos": "n",
@@ -296648,7 +296648,7 @@
      "cn": "幽居病"
     }
    ],
-   "method": "",
+   "method": "源自中世纪拉丁语 capanna(茅屋) → 小屋；船、机上隔出的小房间 → 船舱，机舱",
    "family": [],
    "synonyms": [
     {
@@ -297231,7 +297231,7 @@
      "cn": "唯一的致命的弱点"
     }
    ],
-   "method": "",
+   "method": "heel 源自古英语 hēla（脚跟）→ 脚后跟，踵；鞋后跟",
    "family": [],
    "synonyms": [
     {
@@ -297934,7 +297934,7 @@
      "cn": "攻击性武器"
     }
    ],
-   "method": "",
+   "method": "offend(冒犯) ＋ -ive → 冒犯的，无礼的；转为主动出击 → 进攻的，攻势",
    "family": [
     {
      "pos": "adj",
@@ -315533,7 +315533,7 @@
      "cn": "革命委员会"
     }
    ],
-   "method": "",
+   "method": "revolution(革命) ＋ -ary(……的) → 革命的；带来巨变 → 革新的",
    "family": [
     {
      "pos": "adj",
@@ -330678,7 +330678,7 @@
      "cn": "目标定向；目标取向"
     }
    ],
-   "method": "",
+   "method": "orient(太阳升起的方向，东方) ＋ -ation → 定方向 → 方向，方位；帮新人熟悉情况 → 情况介绍",
    "family": [
     {
      "pos": "adj",
@@ -353227,7 +353227,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a(处于…状态) ＋ sleep(睡眠) → 睡着的，熟睡的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -355979,7 +355979,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "auto(自己，希腊语 autos) → 自己会动的车 → 汽车",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -360733,7 +360733,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 bær(赤裸的)，PIE *bʰos-(赤脚、赤裸) → 赤裸的；无遮蔽的，缺少的；直说不隐 → 坦率的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -361441,7 +361441,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：木桶由一根根 bar(木条) 箍成 → 桶",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -362810,7 +362810,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "batter(连续猛打) ＋ -y → 一组炮台齐轰 → 电池组；保留原义「殴打」",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -369959,7 +369959,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 bītan 即「咬」，与 bit(一小块) 同源 → 咬；咬下的量 → 一口",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -370057,7 +370057,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bitter 与 bite(咬) 同源 → 咬到舌头、刺舌的味道 → 苦的；痛苦、怀恨",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -370377,7 +370377,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 blæd 意为「叶」，与 bloom(开花) 同源 → 叶片；刀身扁平如叶 → 刀锋，刀片",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -382330,7 +382330,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "burst 源自原始印欧语 bʰres-（破裂、裂开）→ 爆裂，突发，爆发",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -387659,7 +387659,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "carbon 源自拉丁 carbo（木炭）→ 碳；早期复写纸用炭黑制成 → 副本，复写纸",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -388604,7 +388604,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "carri(运载，源自古法语 carier) ＋ -age(名词后缀) → 用来运载人的车 → 马车，客车",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -394616,7 +394616,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "chart(文书，纸) ＋ -er → 官方写在纸上授予权利的文书 → 特许状，执照，宪章",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -395625,7 +395625,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "法语 chef ← 拉丁 caput(头) → 厨房的头儿 → 厨师；与 chief(首领) 同源",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -401181,7 +401181,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：c ＋ lever(杠杆) → 会借杠杆省力的 → 聪明的，精明的（词源不确定，仅联想）",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -405246,7 +405246,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "col(共同，com-) ＋ lect(收集) ＋ -ive → 收集到一起的 → 集体的，共同的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -415149,7 +415149,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：cotton 发音像“可弹”，棉花可弹成松软棉絮 → 棉花",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -417449,7 +417449,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：crack 模仿东西爆裂的响声 → 裂缝，爆裂声；啪地一声",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -422137,7 +422137,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：cur 像 care(关心)，对什么都关心追问 → 好奇的，求知的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -440393,7 +440393,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "down(向下) ＋ town(城镇) → 城镇地势较低的核心区 → 市中心区",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -444966,7 +444966,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "eager 源自拉丁语 acer(尖锐、锐利) → 心思锐利急切 → 渴望的，热心的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -445679,7 +445679,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：ease 与 easy 同族，想象瘫在沙发上什么都不用做 → 安逸，轻松",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -446975,7 +446975,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁 ēducō（引出、培养）→ 把潜能引出来 → 教育，培养，训练",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -449464,7 +449464,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "imper(命令，拉丁 imperō) ＋ -ator(人) → 发号施令者 → 皇帝，君主",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -457402,7 +457402,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ex(向外) ＋ caus(原因，拉丁 causa) ＋ e → 把原因说出来 → 申辩，借口；由此获原谅",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -458322,7 +458322,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ex(向外) ＋ plode(拍手，拉丁语 plaudere) → 拍手把演员轰下台 → 爆开，爆炸",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -471644,7 +471644,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 flamma(火焰)，与 PIE *bʰel-(闪光) 有关 → 火焰，火舌；炽热之情 → 热情",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -472100,7 +472100,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fla(吹，拉丁语 flare) ＋ -vor → 随风飘来的气味 → 滋味，调味品",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -472542,7 +472542,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "flesh 源自原始印欧语 *pleh₁ḱ-（撕开、剥下）→ 从骨上剥下的肉 → 肉，肉体",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -485033,7 +485033,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "gar(收容、保护，法语 garer) ＋ -age → 把车收起来保护的地方 → 车库，修理厂",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -485534,7 +485534,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "petr(石) ＋ ol(油，源自希腊语 elaion) → 从石头里炼出的油 → 汽油",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -488880,7 +488880,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "glove ＝ ge-(一起) ＋ lof(手掌) → 把整只手掌包起来 → 手套",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -490725,7 +490725,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "govern 源自希腊语 kybernaō（掌舵、驾驭）→ 掌舵管理 → 统治，管理，支配",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -495587,7 +495587,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "希腊语 kólpos(怀抱；海湾) → 海湾；深陷如怀 → 深渊，隔阂",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -500343,7 +500343,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 hearm，日耳曼语 *harmaz(伤害、痛苦) → 伤害，害处",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -504296,7 +504296,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "helico(螺旋) ＋ pter(翼) → 靠螺旋翼升空的飞行器 → 直升机",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -510375,7 +510375,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "horiz(边界，希腊语 horos) ＋ -on → 天与地的边界线 → 地平线；引申为眼界",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -512616,7 +512616,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "humor 源自拉丁 hūmor（液体）：古医学认为四种体液决定性情 → 心情；引申为幽默",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -513283,7 +513283,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：hur-ry 读音短促，像气喘吁吁地赶路 → 匆忙，急忙",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -517410,7 +517410,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "im(进入) ＋ press(压) → 压进去 → 印记，印象；使有印象",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -520982,7 +520982,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in(不) ＋ iur(法、权利) → 不合法、不公正 → 伤害，损害",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -540775,7 +540775,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "阿拉伯语 laymūn ← 梵语 nimbū(柑橘类) → 柠檬，柠檬树，柠檬色",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -549174,7 +549174,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "希腊语 logos(言语、理性) ＋ -ic → 研究推理的学问 → 逻辑，逻辑学，推理",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -551664,7 +551664,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "loud 与 listen 同源，PIE *ḱlew-(听见) → 大得能被听见 → 大声的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -558705,7 +558705,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "mate 与 meat(食物) 同源：*ga-(共同) ＋ *matiz(食物) → 同桌吃饭的人 → 伙伴，配偶",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -562711,7 +562711,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "menu 源自法语 menu(细小的) → 列得很细的清单 → 菜单",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -574593,7 +574593,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 nacod，PIE *negʷ-(赤裸) → 裸体的；不加装饰 → 无装饰的，无保护的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -578017,7 +578017,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "nerve 源自拉丁 nervus（筋、腱）→ 神经；筋腱象征力量 → 勇气，精神",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -590276,7 +590276,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "orange 经阿拉伯语 nāranj 源自梵语 nāraṅga(橘树) → 柑橘，橘色",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -590881,7 +590881,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "organ 源自希腊语 organon(工具、器具) → 身体里的器具是器官，能演奏的器具是风琴 → 器官，风琴，机构",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -591007,7 +591007,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "organ(器官) ＋ -ic(…的) → 器官的；引申为有机的、有组织的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -592460,7 +592460,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "out(外) ＋ -er(比较级) → 更靠外的 → 外部的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -600679,7 +600679,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "part(部分) ＋ -icle(小) → 小部分 → 颗粒，粒子，极小量",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -603435,7 +603435,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：patch 词源不确定，可能来自古英语 plæċċ（斑点、补块）→ 补丁，碎片，斑",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -613029,7 +613029,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁 pila（柱子、桥墩）：把东西堆成柱状 → 堆，大堆；也指大厦、建筑群",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -614764,7 +614764,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 pīnus 就是松树 → 松树，松木；「消瘦、渴望」义另源自 pain(痛苦)，同形异源",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -632901,7 +632901,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pro(向前) ＋ empt(拿取，拉丁语 emere) → 把话拿到眼前 → 提示；迅速的；付款期限",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -640485,7 +640485,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：rabbit 词源不确定，可能借自荷兰语 robbe（兔子）→ 兔子；谐音‘拉比特’",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -653288,7 +653288,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re(再、加强) ＋ semble(看起来) → 看起来相像 → 相似，类似",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -657812,7 +657812,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "rifle 原义「给枪膛刻出螺旋槽」，来复枪即膛线枪 → 步枪",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -682506,7 +682506,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 sċītan(拉屎)，与 shed(排出、脱落) 同源 → 拉屎；粪，屎",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -686666,7 +686666,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：sigh 读音拖长，像长长地吐出一口气 → 叹息",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -687364,7 +687364,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：silk 读音近“丝”，柔软光滑 → 丝，绸，丝织品",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -702698,7 +702698,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "spec(看) ＋ -men → 摆出来给人看的东西 → 样品，标本",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -719373,7 +719373,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "strict 来自拉丁语 stringere(拉紧) → 把规则拉得紧紧的 → 严格的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -726641,7 +726641,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sus(在下，sub-) ＋ pend(悬挂) → 挂在下面 → 悬，吊；引申为暂停，推迟",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -737688,7 +737688,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tent 与 tense/tend 同源，拉丁语 tendere(拉伸) → 拉开撑起的布 → 帐篷",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -747397,7 +747397,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：tobacco 借自西班牙语 tabaco，可能源自加勒比语‘烟管’→ 烟草，香烟",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -755922,7 +755922,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：魔术师在台上变戏法，观众明知是假 → 把戏，诡计，诀窍",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -763443,7 +763443,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "un(不) ＋ doubt(怀疑) ＋ -ed ＋ -ly → 不被怀疑地 → 无疑，必定",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -763792,7 +763792,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "uni(一) ＋ form(形式) → 同一形式 → 统一的；制服",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -765941,7 +765941,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "up(向上) ＋ stairs(楼梯) → 沿楼梯往上走 → 楼上的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -768118,7 +768118,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 venum(出售) ＋ dare(给) → 给出货物换钱的人 → 卖主，小贩；自动售货机",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -773390,7 +773390,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "wander 源自日耳曼语 *wandōn（转、改变）→ 转来转去 → 游荡，漫步，迷路",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -785528,7 +785528,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "wise 与 vision(看) 同源，PIE *weyd-(看见) → 看得透的人 → 明智的",
    "family": [],
    "synonyms": [],
    "examples": [],
