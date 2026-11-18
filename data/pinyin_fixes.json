@@ -1,4 +1,196 @@
 {
+ "accent|重读，加重音号于，强调": [
+  "zhong",
+  "du",
+  "jia",
+  "zhong",
+  "yin",
+  "hao",
+  "yu",
+  "qiang",
+  "diao"
+ ],
+ "bandage|用绷带绑扎": [
+  "yong",
+  "beng",
+  "dai",
+  "bang",
+  "za"
+ ],
+ "band|用带绑扎": [
+  "yong",
+  "dai",
+  "bang",
+  "za"
+ ],
+ "bench|长椅子": [
+  "chang",
+  "yi",
+  "zi"
+ ],
+ "boot|长靴，踢，解雇，效用": [
+  "chang",
+  "xue",
+  "ti",
+  "jie",
+  "gu",
+  "xiao",
+  "yong"
+ ],
+ "bound|弹回，反跃": [
+  "tan",
+  "hui",
+  "fan",
+  "yue"
+ ],
+ "crunch|嘎吱嘎吱的咬嚼，压碎，嘎吱嘎吱地踏过": [
+  "ga",
+  "zhi",
+  "ga",
+  "zhi",
+  "de",
+  "yao",
+  "jiao",
+  "ya",
+  "sui",
+  "ga",
+  "zhi",
+  "ga",
+  "zhi",
+  "di",
+  "ta",
+  "guo"
+ ],
+ "dress|穿着": [
+  "chuan",
+  "zhuo"
+ ],
+ "drop|滴，微量，落下，空投": [
+  "di",
+  "wei",
+  "liang",
+  "luo",
+  "xia",
+  "kong",
+  "tou"
+ ],
+ "dual|双的，两重的": [
+  "shuang",
+  "de",
+  "liang",
+  "chong",
+  "de"
+ ],
+ "earn|赚得，获得，博得": [
+  "zhuan",
+  "de",
+  "huo",
+  "de",
+  "bo",
+  "de"
+ ],
+ "eject|弹出": [
+  "tan",
+  "chu"
+ ],
+ "fall|倒下，落下，来临，失守，阵亡，下跌，减弱，倾斜，垮台，轮到，变成，降低": [
+  "dao",
+  "xia",
+  "luo",
+  "xia",
+  "lai",
+  "lin",
+  "shi",
+  "shou",
+  "zhen",
+  "wang",
+  "xia",
+  "die",
+  "jian",
+  "ruo",
+  "qing",
+  "xie",
+  "kua",
+  "tai",
+  "lun",
+  "dao",
+  "bian",
+  "cheng",
+  "jiang",
+  "di"
+ ],
+ "fall|落下，瀑布，采伐量，下降，落差，降低，堕落，秋天": [
+  "luo",
+  "xia",
+  "pu",
+  "bu",
+  "cai",
+  "fa",
+  "liang",
+  "xia",
+  "jiang",
+  "luo",
+  "cha",
+  "jiang",
+  "di",
+  "duo",
+  "luo",
+  "qiu",
+  "tian"
+ ],
+ "flask|长颈瓶，酒瓶，烧瓶": [
+  "chang",
+  "jing",
+  "ping",
+  "jiu",
+  "ping",
+  "shao",
+  "ping"
+ ],
+ "flirt|忽然弹出，轻快摆动，挥动": [
+  "hu",
+  "ran",
+  "tan",
+  "chu",
+  "qing",
+  "kuai",
+  "bai",
+  "dong",
+  "hui",
+  "dong"
+ ],
+ "ghost|鬼似地游荡": [
+  "gui",
+  "shi",
+  "de",
+  "you",
+  "dang"
+ ],
+ "glue|胶，粘性物": [
+  "jiao",
+  "nian",
+  "xing",
+  "wu"
+ ],
+ "grid|格子，栅格": [
+  "ge",
+  "zi",
+  "shan",
+  "ge"
+ ],
+ "gum|涂以树胶，用胶粘，使有粘性": [
+  "tu",
+  "yi",
+  "shu",
+  "jiao",
+  "yong",
+  "jiao",
+  "zhan",
+  "shi",
+  "you",
+  "nian",
+  "xing"
+ ],
  "hail|向...欢呼，致敬，招呼，使象下雹样落下": [
   "xiang",
   "huan",
@@ -15,6 +207,46 @@
   "luo",
   "xia"
  ],
+ "in|在...期间，在...之内，处于...之中，从事于，按照，穿着": [
+  "zai",
+  "qi",
+  "jian",
+  "zai",
+  "zhi",
+  "nei",
+  "chu",
+  "yu",
+  "zhi",
+  "zhong",
+  "cong",
+  "shi",
+  "yu",
+  "an",
+  "zhao",
+  "chuan",
+  "zhuo"
+ ],
+ "lace|用系带束紧": [
+  "yong",
+  "xi",
+  "dai",
+  "shu",
+  "jin"
+ ],
+ "lace|鞋带，系带": [
+  "xie",
+  "dai",
+  "xi",
+  "dai"
+ ],
+ "multiple|多重的，多样的": [
+  "duo",
+  "chong",
+  "de",
+  "duo",
+  "yang",
+  "de"
+ ],
  "organic|[医] 器官的，有生命的，有机的，器质的": [
   "yi",
   "qi",
@@ -30,5 +262,147 @@
   "qi",
   "zhi",
   "de"
+ ],
+ "phrase|惯用语，词组，成语，措词，乐句": [
+  "guan",
+  "yong",
+  "yu",
+  "ci",
+  "zu",
+  "cheng",
+  "yu",
+  "cuo",
+  "ci",
+  "yue",
+  "ju"
+ ],
+ "rain|使大量落下": [
+  "shi",
+  "da",
+  "liang",
+  "luo",
+  "xia"
+ ],
+ "repeat|重做，重复，复述，使再现，复制": [
+  "chong",
+  "zuo",
+  "chong",
+  "fu",
+  "fu",
+  "shu",
+  "shi",
+  "zai",
+  "xian",
+  "fu",
+  "zhi"
+ ],
+ "sheet|大片落下": [
+  "da",
+  "pian",
+  "luo",
+  "xia"
+ ],
+ "snap|猛地": [
+  "meng",
+  "de"
+ ],
+ "snow|下雪，似雪般落下": [
+  "xia",
+  "xue",
+  "shi",
+  "xue",
+  "ban",
+  "luo",
+  "xia"
+ ],
+ "snow|使雪白，用雪覆盖，使像雪般落下": [
+  "shi",
+  "xue",
+  "bai",
+  "yong",
+  "xue",
+  "fu",
+  "gai",
+  "shi",
+  "xiang",
+  "xue",
+  "ban",
+  "luo",
+  "xia"
+ ],
+ "sock|正着地，不偏不倚地": [
+  "zheng",
+  "zhao",
+  "di",
+  "bu",
+  "pian",
+  "bu",
+  "yi",
+  "di"
+ ],
+ "spring|跳，弹跳，涌出，生长，裂开，高耸": [
+  "tiao",
+  "tan",
+  "tiao",
+  "yong",
+  "chu",
+  "sheng",
+  "zhang",
+  "lie",
+  "kai",
+  "gao",
+  "song"
+ ],
+ "stress|加压力于，着重，重读": [
+  "jia",
+  "ya",
+  "li",
+  "yu",
+  "zhuo",
+  "zhong",
+  "zhong",
+  "du"
+ ],
+ "tone|颜色调和": [
+  "yan",
+  "se",
+  "tiao",
+  "he"
+ ],
+ "wear|穿着，戴，使用，耗损，服装，耐久性": [
+  "chuan",
+  "zhuo",
+  "dai",
+  "shi",
+  "yong",
+  "hao",
+  "sun",
+  "fu",
+  "zhuang",
+  "nai",
+  "jiu",
+  "xing"
+ ],
+ "wear|穿着，戴，留(须、发等)，呈现，磨损，磨成，耗损，使疲乏，消磨": [
+  "chuan",
+  "zhuo",
+  "dai",
+  "liu",
+  "xu",
+  "fa",
+  "deng",
+  "cheng",
+  "xian",
+  "mo",
+  "sun",
+  "mo",
+  "cheng",
+  "hao",
+  "sun",
+  "shi",
+  "pi",
+  "fa",
+  "xiao",
+  "mo"
  ]
 }
