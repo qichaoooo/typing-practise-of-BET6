@@ -675,6 +675,12 @@
    }
   ]
  },
+ "pudding": {
+  "method": ""
+ },
+ "quart": {
+  "method": ""
+ },
  "quartz": {
   "forms": {}
  },
@@ -905,6 +911,9 @@
     "cn": "天鹅绒的"
    }
   ]
+ },
+ "watt": {
+  "method": ""
  },
  "wreck": {
   "trans": [
