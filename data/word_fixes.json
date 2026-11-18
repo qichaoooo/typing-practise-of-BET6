@@ -472,7 +472,8 @@
   "method": "原义「弯曲、转折」 → 一次转身交锋 → 一回，回合，较量"
  },
  "brass": {
-  "method": "联想：brass 与 bronze 都以 br- 开头，都是铜合金——brass 是发黄的黄铜，bronze 是青铜。"
+  "method": "联想：brass 与 bronze 都以 br- 开头，都是铜合金——brass 是发黄的黄铜，bronze 是青铜。",
+  "phonetic": "brɑ:s"
  },
  "brave": {
   "method": "联想：意大利语 bravo 是喝彩『好样的』，勇敢的人值得全场喊 bravo；brave 的最终词源不明。"
@@ -1763,7 +1764,13 @@
   "method": "由 gas（气）+ -ol（表示油）+ -ine（表示衍生物）构成；最初用于增富家用煤气，后指汽油。"
  },
  "genius": {
-  "method": "拉丁 genius 指与生俱来的天性，也指守护神，源自动词 gignere（产生）；天赋、天才由此而来。"
+  "method": "拉丁 genius 指与生俱来的天性，也指守护神，源自动词 gignere（产生）；天赋、天才由此而来。",
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "天才，天赋，精神，神魔"
+   }
+  ]
  },
  "genre": {
   "method": "源自法语 genre，与拉丁 genus(种类)同源 → 类型、流派"
@@ -2731,7 +2738,14 @@
   ]
  },
  "o'clock": {
-  "method": "o' 是 of 的缩略，o'clock 即 'of the clock'（按钟面）的合写：几点钟。"
+  "method": "o' 是 of 的缩略，o'clock 即 'of the clock'（按钟面）的合写：几点钟。",
+  "phonetic": "ə'klɒk",
+  "trans": [
+   {
+    "pos": "adv",
+    "cn": "...点钟，钟头"
+   }
+  ]
  },
  "oar": {
   "method": "联想：oar 与 row(划船) 只差首字母，划船靠桨 → 桨，桨手"
