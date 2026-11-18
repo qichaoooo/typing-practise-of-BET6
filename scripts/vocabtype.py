@@ -1924,6 +1924,7 @@ def build_review_rows(entries, stats):
                 "level": entry.get("level") if entry else "",
                 "pos": pos,
                 "cn": cn,
+                "pinyin": sense_pinyin(sense) if sense else "",
                 "rec": rec,
                 "state": rec.get("state", ""),
                 "due": rec.get("due"),
@@ -1961,11 +1962,25 @@ def review_row_matches(row, filt):
     return True
 
 
+def review_row_matches_search(row, query):
+    """搜索：英文单词子串，或释义全拼（忽略空格/标点，v 视为 u）。"""
+    query = query.strip()
+    if not query:
+        return True
+    if query.lower() in row["word"].lower():
+        return True
+    needle = normalize_pinyin(query)
+    return bool(needle) and needle in row["pinyin"]
+
+
 def show_review_detail(entries, stats):
     """全屏义项状态浏览器：j/k 移动，f 筛选，q 退出。"""
     rows = build_review_rows(entries, stats)
     filter_idx = 0
     pos = 0
+    search = ""
+    search_before = ""
+    searching = False
     sys.stdout.write("\033[?1049h\033[?2J\033[H")
     sys.stdout.flush()
     try:
@@ -1975,7 +1990,9 @@ def show_review_detail(entries, stats):
                 cols = size.columns or 80
                 height = size.lines or 24
                 filt, label = DETAIL_FILTERS[filter_idx]
-                filtered = [r for r in rows if review_row_matches(r, filt)]
+                filtered = [r for r in rows
+                            if review_row_matches(r, filt)
+                            and review_row_matches_search(r, search)]
                 if filtered:
                     pos = min(max(0, pos), len(filtered) - 1)
                 else:
@@ -2005,11 +2022,15 @@ def show_review_detail(entries, stats):
                 counts_plain = (f"全部 {len(rows)} · 生词 {learning} · "
                                 f"熟词 {known} · 待复习 {due_count} · "
                                 f"筛选：{label} {len(filtered)}")
+                if search:
+                    counts_plain += f" · 搜索：{search}"
                 lines.append(DIM + truncate_display(counts_plain, cols)
                              + RESET)
 
                 if not filtered:
-                    lines.append(f"{DIM}   （该筛选下没有义项）{RESET}")
+                    empty = ("（没有匹配的义项）" if search
+                             else "（该筛选下没有义项）")
+                    lines.append(f"{DIM}   {empty}{RESET}")
                 for idx in range(start, end):
                     row = filtered[idx]
                     selected = idx == pos
@@ -2049,11 +2070,18 @@ def show_review_detail(entries, stats):
                 lines.append(DIM + truncate_display(detail_plain, cols)
                              + RESET)
 
-                controls_plain = (
-                    "j/k 移动 · Ctrl-D/U 翻页 · g/G 首尾 · f 筛选 · q 退出"
-                    f"    {start + 1 if filtered else 0}-{end}/{len(filtered)}")
-                lines.append(DIM + truncate_display(controls_plain, cols)
-                             + RESET)
+                if searching:
+                    search_plain = (f"/ {search}_    "
+                                    "Enter 确认 · Esc 取消 · Ctrl-U 清空")
+                    lines.append(truncate_display(search_plain, cols))
+                else:
+                    controls_plain = (
+                        "j/k 移动 · Ctrl-D/U 翻页 · g/G 首尾 · f 筛选 · "
+                        "/ 搜索 · q 退出"
+                        f"    {start + 1 if filtered else 0}-"
+                        f"{end}/{len(filtered)}")
+                    lines.append(DIM + truncate_display(controls_plain, cols)
+                                 + RESET)
 
                 sys.stdout.write("\033[H\033[2J")
                 sys.stdout.write("\n".join(lines))
@@ -2063,9 +2091,32 @@ def show_review_detail(entries, stats):
                     k = term.key()
                 except KeyboardInterrupt:
                     break
+                if searching:
+                    if k in Keys.ENTER:
+                        searching = False
+                    elif k == Keys.ESC:
+                        search = search_before
+                        pos = 0
+                        searching = False
+                    elif k == Keys.CTRL_C:
+                        break
+                    elif k in Keys.BACKSPACE:
+                        search = search[:-1]
+                        pos = 0
+                    elif k == Keys.CTRL_U:
+                        search = ""
+                        pos = 0
+                    elif 32 <= k <= 126:
+                        search += chr(k)
+                        pos = 0
+                    continue
                 if k in (ord("q"), Keys.ESC, Keys.CTRL_C):
                     break
-                if k == ord("j"):
+                if k == ord("/"):
+                    search_before = search
+                    searching = True
+                    pos = 0
+                elif k == ord("j"):
                     pos += 1
                 elif k == ord("k"):
                     pos -= 1

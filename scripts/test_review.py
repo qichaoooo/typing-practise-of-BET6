@@ -240,6 +240,18 @@ class DetailTest(unittest.TestCase):
                          "2026-11-17（今天）")
         self.assertEqual(vocabtype.due_short(None, day), "—")
 
+    def test_pinyin_is_stored_for_search(self):
+        self.assertEqual([r["pinyin"] for r in self.rows], ["jia", "yi"])
+
+    def test_search_by_word_and_pinyin(self):
+        row = self.rows[0]
+        self.assertTrue(vocabtype.review_row_matches_search(row, "w"))
+        self.assertTrue(vocabtype.review_row_matches_search(row, "jia"))
+        self.assertTrue(vocabtype.review_row_matches_search(row, "ji a"))
+        self.assertFalse(vocabtype.review_row_matches_search(row, "yi"))
+        self.assertFalse(vocabtype.review_row_matches_search(row, "zzz"))
+        self.assertTrue(vocabtype.review_row_matches_search(row, ""))
+
 
 class SelectionTest(unittest.TestCase):
     def setUp(self):
