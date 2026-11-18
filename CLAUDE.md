@@ -234,7 +234,7 @@
 | `scripts/add_pinyin.py` | 数据构建：生成逐字拼音 `senses` |
 | `scripts/test_review.py` | 复习状态机/检测池的 unittest |
 | `data/official_2016.json` | 官方 2016 词表的版本化提取（5,377 行，含 ★） |
-| `data/cet6.json` | 生成物，5,847 词 / 13,467 义项，**勿手改** |
+| `data/cet6.json` | 生成物，5,847 词 / 13,406 义项，**勿手改** |
 | `data/extra_words.json` | 人工补充的词（部分已属于官方词表，级别以官方为准） |
 | `data/official_variants.json` | 人工挑选的官方词形补充（语义/角色不同或常用完整形式；不是全部拼写变体） |
 | `data/word_fixes.json` | 逐词字段覆盖（最高优先级），发现释义/音标错误时使用 |
@@ -357,6 +357,8 @@ python3 -I scripts/test_review.py -v
   个未收录，现有 453 个是源数据已有），行数与官方口径不完全相等。
 - 新增的 3,471 个官方词目 + 24 个人工挑选的官方词形，释义/音标来自 ECDICT，
   没有助记、同根词、例句；面板只显示已有的信息。
+- 已移除 42 个词的 DOS/NetWare 命令义和 4 个缩写错配义；其他领域标签义仍保留，
+  不能把领域义一概当错误。
 - 官方同形异义词（bank/check 等）在本项目中合并为一条，可能少一个独立义项。
 - 79 个 `extra` 词不在官方词表（如 paternity、canon），UI 标「扩展」；其中个别
   只是拼写/派生变体，不一定是超纲词。
