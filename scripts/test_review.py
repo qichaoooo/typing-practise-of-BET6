@@ -228,9 +228,24 @@ class DetailTest(unittest.TestCase):
     def test_filter_counts(self):
         counts = {f: len([r for r in self.rows
                           if vocabtype.review_row_matches(r, f)])
-                  for f in ("all", "learning", "known", "due")}
-        self.assertEqual(counts, {"all": 2, "learning": 1,
-                                  "known": 1, "due": 1})
+                  for f in ("all", "learning", "known", "due",
+                            "unlearned")}
+        self.assertEqual(counts, {"all": 2, "learning": 1, "known": 1,
+                                  "due": 1, "unlearned": 0})
+
+    def test_unlearned_rows_only_contain_untouched_senses(self):
+        e2 = entry("x", senses=[sense("n", "丙", "bing")])
+        unlearned = vocabtype.build_unlearned_rows(
+            [self.e, e2], self.stats)
+        self.assertEqual([(r["word"], r["cn"]) for r in unlearned],
+                         [("x", "丙")])
+        row = unlearned[0]
+        self.assertEqual(row["state"], "unlearned")
+        self.assertEqual(vocabtype.review_state_label(row), "未学习")
+        self.assertTrue(vocabtype.review_row_matches(row, "unlearned"))
+        self.assertFalse(vocabtype.review_row_matches(row, "due"))
+        self.assertTrue(vocabtype.review_row_matches_search(row, "bing"))
+        self.assertTrue(vocabtype.review_row_matches_search(row, "x"))
 
     def test_due_labels(self):
         day = date(2026, 11, 17)

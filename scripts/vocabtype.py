@@ -1850,8 +1850,9 @@ def run(args):
     return items, quit_early, done
 
 
-DETAIL_FILTERS = (("all", "全部"), ("learning", "生词"),
-                  ("known", "熟词"), ("due", "待复习"))
+DETAIL_FILTERS = (("all", "已学"), ("learning", "生词"),
+                  ("known", "熟词"), ("due", "待复习"),
+                  ("unlearned", "未学习"))
 
 
 def due_relative(due, day=None):
@@ -1935,6 +1936,37 @@ def build_review_rows(entries, stats):
     return rows
 
 
+def build_unlearned_rows(entries, stats):
+    """所有没有生词/熟词记录的义项，用于「未学习」筛选。"""
+    review = stats.get("review", {})
+    rows = []
+    for entry in sorted(entries, key=lambda e: e["word"].lower()):
+        recs = review.get(entry["word"])
+        if not isinstance(recs, dict) or "state" in recs:
+            recs = {}
+        for sense in entry.get("senses", []):
+            key = sense_key(sense)
+            rec = recs.get(key)
+            if (isinstance(rec, dict)
+                    and rec.get("state") in ("learning", "known")):
+                continue
+            rows.append({
+                "word": entry["word"],
+                "level": entry.get("level", ""),
+                "pos": sense.get("pos", ""),
+                "cn": sense.get("cn", ""),
+                "pinyin": sense_pinyin(sense),
+                "rec": {"state": "unlearned", "level": 0, "due": None,
+                        "correct": 0, "wrong": 0, "last": None},
+                "state": "unlearned",
+                "due": None,
+                "correct": 0,
+                "wrong": 0,
+                "last": None,
+            })
+    return rows
+
+
 def review_state_label(row):
     state = row["state"]
     if state == "known":
@@ -1947,6 +1979,8 @@ def review_state_label(row):
         return "生词"
     if state == "new":
         return "未测"
+    if state == "unlearned":
+        return "未学习"
     return state or "?"
 
 
@@ -1958,7 +1992,10 @@ def review_row_matches(row, filt):
     if filt == "known":
         return row["state"] == "known"
     if filt == "due":
-        return row["state"] != "known" or is_due(row["rec"])
+        return (row["state"] in ("learning", "new")
+                or (row["state"] == "known" and is_due(row["rec"])))
+    if filt == "unlearned":
+        return row["state"] == "unlearned"
     return True
 
 
@@ -1976,6 +2013,8 @@ def review_row_matches_search(row, query):
 def show_review_detail(entries, stats):
     """全屏义项状态浏览器：j/k 移动，f 筛选，q 退出。"""
     rows = build_review_rows(entries, stats)
+    unlearned_rows = build_unlearned_rows(entries, stats)
+    width_rows = rows + unlearned_rows
     filter_idx = 0
     pos = 0
     search = ""
@@ -1990,9 +2029,14 @@ def show_review_detail(entries, stats):
                 cols = size.columns or 80
                 height = size.lines or 24
                 filt, label = DETAIL_FILTERS[filter_idx]
-                filtered = [r for r in rows
-                            if review_row_matches(r, filt)
-                            and review_row_matches_search(r, search)]
+                if filt == "unlearned":
+                    filtered = list(unlearned_rows)
+                else:
+                    filtered = [r for r in rows
+                                if review_row_matches(r, filt)]
+                if search:
+                    filtered = [r for r in filtered
+                                if review_row_matches_search(r, search)]
                 if filtered:
                     pos = min(max(0, pos), len(filtered) - 1)
                 else:
@@ -2005,12 +2049,12 @@ def show_review_detail(entries, stats):
                 else:
                     start = end = 0
 
-                word_w = min(18, max([display_width(r["word"]) for r in rows]
-                                     + [8]))
-                state_w = min(10, max([display_width(review_state_label(r))
-                                       for r in rows] + [6]))
+                word_w = min(18, max([display_width(r["word"])
+                                      for r in width_rows] + [8]))
+                state_w = min(12, max([display_width(review_state_label(r))
+                                       for r in width_rows] + [6]))
                 due_w = min(16, max([display_width(due_short(r["due"]))
-                                     for r in rows] + [8]))
+                                     for r in width_rows] + [8]))
                 fixed = 2 + word_w + 2 + state_w + 2 + due_w + 2
                 sense_w = max(4, cols - fixed)
 
@@ -2019,8 +2063,9 @@ def show_review_detail(entries, stats):
                 due_count = sum(1 for r in rows
                                 if r["state"] != "known" or is_due(r["rec"]))
                 lines = [f"{BOLD}──── 义项状态 ────{RESET}"]
-                counts_plain = (f"全部 {len(rows)} · 生词 {learning} · "
+                counts_plain = (f"已学 {len(rows)} · 生词 {learning} · "
                                 f"熟词 {known} · 待复习 {due_count} · "
+                                f"未学习 {len(unlearned_rows)} · "
                                 f"筛选：{label} {len(filtered)}")
                 if search:
                     counts_plain += f" · 搜索：{search}"
@@ -2058,13 +2103,15 @@ def show_review_detail(entries, stats):
                     row = filtered[pos]
                     level = LEVEL_LABEL.get(row.get("level"), "")
                     word = row["word"] + (f"（{level}）" if level else "")
-                    detail_plain = (
-                        f"所选：{word} · {row['pos']}. {row['cn']} · "
-                        f"{review_state_label(row)} · 到期 "
-                        f"{due_full(row['due'])} · 对 {row['correct']} "
-                        f"错 {row['wrong']}")
-                    if row["last"]:
-                        detail_plain += f" · 上次 {row['last']}"
+                    detail_plain = (f"所选：{word} · {row['pos']}. "
+                                    f"{row['cn']} · "
+                                    f"{review_state_label(row)}")
+                    if row["state"] != "unlearned":
+                        detail_plain += (
+                            f" · 到期 {due_full(row['due'])}"
+                            f" · 对 {row['correct']} 错 {row['wrong']}")
+                        if row["last"]:
+                            detail_plain += f" · 上次 {row['last']}"
                 else:
                     detail_plain = "所选：—"
                 lines.append(DIM + truncate_display(detail_plain, cols)
