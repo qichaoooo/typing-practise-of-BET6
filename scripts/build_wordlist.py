@@ -60,6 +60,18 @@ def clean_text(text):
     return text
 
 
+def clean_phonetic(text):
+    """统一音标写法：去零宽字符/外层斜杠，替换 ECDICT 里的西里尔字母。"""
+    text = (text or "").replace("\u200b", "").strip()
+    if len(text) > 2 and text.startswith("/") and text.endswith("/"):
+        text = text[1:-1].strip()
+    return (text.replace("\u04d9", "\u0259")   # ә -> ə
+                .replace("\u0454", "\u025b")   # є -> ɛ
+                .replace("\uff1b", ";")        # ；
+                .replace("\u2018", "'")        # ‘
+                .replace("\u2019", "'"))       # ’
+
+
 def parse_entry(obj):
     word = obj["content"]["word"]
     head = word["wordHead"].strip()
@@ -525,6 +537,10 @@ def main():
                 applied += 1
         if applied:
             print(f"fixes: applied {applied} overrides from {args.fixes}")
+
+    # 统一音标写法（源数据里混有零宽字符、西里尔字母和全角标点）。
+    for e in entries:
+        e["phonetic"] = clean_phonetic(e.get("phonetic", ""))
 
     with open(args.out_json, "w", encoding="utf-8") as f:
         json.dump({
