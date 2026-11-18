@@ -733,7 +733,7 @@
   },
   {
    "word": "spontaneous",
-   "phonetic": "spɑn'tenɪəs",
+   "phonetic": "spɒn'teiniəs",
    "trans": [
     {
      "pos": "adj",
@@ -754,7 +754,7 @@
      "cn": "自然流产；自发性流产"
     }
    ],
-   "method": "",
+   "method": "源自晚期拉丁语 spontāneus，词根 sponte 意为“自愿地” → 自发的、无意识的。",
    "family": [
     {
      "pos": "adv",
@@ -48028,7 +48028,7 @@
      "cn": "居住；存在于"
     }
    ],
-   "method": "",
+   "method": "re-（在后）+ 拉丁语 sedeō（坐）：留在某处住下，即居住、定居；引申为存在、在于。",
    "family": [
     {
      "pos": "adj",
@@ -70884,7 +70884,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：wallet 里有 wall（墙）+ let；钱包贴身藏着，像塞在墙缝里的小包。",
    "family": [],
    "synonyms": [
     {
@@ -131629,7 +131629,7 @@
      "cn": "从一开始"
     }
    ],
-   "method": "",
+   "method": "out-（出）+ set（放置）→ 一开始就摆出来的地方 → 开始、开端。",
    "family": [],
    "synonyms": [
     {
@@ -155532,7 +155532,7 @@
      "cn": "时间跨度"
     }
    ],
-   "method": "",
+   "method": "本义是张开手掌量出的长度（handbreadth），词源与“伸展”有关 → 跨度、一段时间。",
    "family": [
     {
      "pos": "n",
@@ -162541,7 +162541,7 @@
   },
   {
    "word": "repay",
-   "phonetic": "ri'pɛi",
+   "phonetic": "ri'pei",
    "trans": [
     {
      "pos": "vt",
@@ -162549,7 +162549,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re-（回）+ pay（支付）：把钱付回去，即归还；把恩情付回去，即报答。",
    "family": [
     {
      "pos": "adj",
@@ -183853,7 +183853,7 @@
      "cn": "押金"
     }
    ],
-   "method": "",
+   "method": "联想：源自古法语 plege‘保证、抵押’；把东西押上作担保，就是誓言、保证。",
    "family": [
     {
      "pos": "n",
@@ -202693,7 +202693,7 @@
      "cn": "主观价值"
     }
    ],
-   "method": "",
+   "method": "subject（主体）+ -ive（形容词后缀）→ 从主体出发的，就是主观的、个人的。",
    "family": [
     {
      "pos": "adj",
@@ -212144,7 +212144,7 @@
      "cn": "刺激气味"
     }
    ],
-   "method": "",
+   "method": "联想：拉丁语 odor 就是“气味”，英语原样借来；两个 o 像鼻孔，正凑近闻气味。",
    "family": [
     {
      "pos": "adj",
@@ -220890,7 +220890,7 @@
   },
   {
    "word": "cane",
-   "phonetic": "ken",
+   "phonetic": "'kein",
    "trans": [
     {
      "pos": "n",
@@ -220911,7 +220911,7 @@
      "cn": "柺杖糖；甘蔗"
     }
    ],
-   "method": "",
+   "method": "源自拉丁语 canna（芦苇）：芦苇秆可做手杖，也指甘蔗这类植物的茎。",
    "family": [
     {
      "pos": "n",
@@ -251407,7 +251407,7 @@
      "cn": "危险区；危险场地"
     }
    ],
-   "method": "",
+   "method": "hazard（危险）+ -ous（形容词后缀）→ 充满危险的、冒险的。记：hazard 是危险，加 -ous 变形容词。",
    "family": [
     {
      "pos": "n",
@@ -253924,7 +253924,7 @@
      "cn": "磁阻发电机"
     }
    ],
-   "method": "",
+   "method": "re-（反）+ luct（挣扎，拉丁 luctor）→ 反着挣扎、不愿意 → 不愿、勉强。",
    "family": [
     {
      "pos": "adj",
@@ -256596,7 +256596,7 @@
      "cn": "签证办事处"
     }
    ],
-   "method": "",
+   "method": "词源：拉丁语 visa 意为“被看过的（文件）”，来自 vidēre（看）→ 签证；与 vision、video 同源。",
    "family": [],
    "synonyms": [
     {
@@ -289154,7 +289154,7 @@
      "cn": "国内贸易"
     }
    ],
-   "method": "",
+   "method": "in（在内）+ land（陆地）→ 位于陆地内部的，即内陆的、在内地。",
    "family": [],
    "synonyms": [
     {
@@ -305579,7 +305579,7 @@
      "cn": "小吃街"
     }
    ],
-   "method": "",
+   "method": "拟声：snack 模仿咂嘴吃东西的声音；小吃、点心就是随口吃的东西。",
    "family": [],
    "synonyms": [
     {
@@ -321204,7 +321204,7 @@
      "cn": "增加合唱的音量；参加合唱；附和别人意见"
     }
    ],
-   "method": "",
+   "method": "源自希腊语 khorós（歌舞队）：一群人一起唱，即合唱队、合唱曲；主歌之外众人齐唱的部分是副歌。",
    "family": [
     {
      "pos": "adj",
@@ -333140,7 +333140,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：proceed（继续进行）+ -ing（名词后缀）+ -s（复数）→ 正在进行的事：事项、会议录；法律上指诉讼。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -335571,7 +335571,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "account（账目、说明）+ -able（能…的）→ 能把账说清楚的 → 负有责任的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -344281,7 +344281,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a-（处于…状态）+ loud（大声）→ 处于出声的状态 → 出声地、大声地。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -349214,7 +349214,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：ap-（ad，朝向）+ petere（追求）→ 追求食物就是食欲；引申为欲望、爱好。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -352864,7 +352864,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a-（处于…状态）+ shame（羞耻）+ -ed：处于羞耻状态，即惭愧的、羞耻的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -354086,14 +354086,10 @@
     {
      "pos": "n",
      "cn": "太空旅行者，宇航员"
-    },
-    {
-     "pos": "",
-     "cn": "[法] 美国太空人"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "astro-（星，希腊 ἄστρον）+ -naut（航行者，ναύτης）→ 在星际航行的人 → 宇航员。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -354148,48 +354144,6 @@
       [
        "员",
        "yuan"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[法] 美国太空人",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "法",
-       "fa"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "美",
-       "mei"
-      ],
-      [
-       "国",
-       "guo"
-      ],
-      [
-       "太",
-       "tai"
-      ],
-      [
-       "空",
-       "kong"
-      ],
-      [
-       "人",
-       "ren"
       ]
      ]
     }
@@ -357910,7 +357864,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "back（向后、背后）+ up（向上、支持）→ 后援、备份；动词短语 back up 也有倒车、支持义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358061,7 +358015,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "back（向后）+ -ward（朝……方向）→ 向后的、向后地，也可指相反地。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -359428,7 +359382,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：意大利语 balcone 源自伦巴第语 balk（梁）——由梁撑出的平台→ 阳台、戏院楼厅。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -360330,7 +360284,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古法语 baniere（旗帜），与 band（一队人）同源：一队人共举的标识，即旗帜。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -363819,14 +363773,10 @@
     {
      "pos": "n",
      "cn": "举止，轴承，忍受，关系，意义，方向，生育"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 轴承"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bear（承受、携带）+ -ing：承受重量的机件是轴承；一个人承载并表现自己的样子是举止。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -363925,36 +363875,6 @@
       [
        "育",
        "yu"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 轴承",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "轴",
-       "zhou"
-      ],
-      [
-       "承",
-       "cheng"
       ]
      ]
     }
@@ -369746,7 +369666,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古英语 biċċe，本义“母狗”，与 bicker（争吵）同源；引申为对女性的贬称，属粗俗用语，慎用。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -376495,7 +376415,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "box 作动词是‘用拳打’，加 -ing 构成名词 boxing，即拳击。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -379903,7 +379823,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：eyebrow（眉毛）里的 brow 就是眉、额；皱眉时额上的纹路也归 brow。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -381608,7 +381528,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bund- 与“捆绑”有关（中古英语 byndelle 意为 binding）→ 捆、束；动词包扎。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -384753,7 +384673,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：小牛 calf 跑起来，后腿的小腿肚（calf）一鼓一鼓；一个词记“小牛／腓肠”两个义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -396953,7 +396873,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：读音像“抽咳”——喉咙被堵住时又抽气又咳嗽，即噎住、窒息；引申为阻塞、抑制。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -397873,7 +397793,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：cigar 形似 cigarette（香烟）去掉 -ette；更粗大的那根就是雪茄。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -399504,7 +399424,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "class（班级）+ mate（同伴）：在同一个班级里的同伴，即同班同学。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -413137,7 +413057,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "copy（复制）+ right（权利）→ 复制的权利→ 版权、著作权。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -417116,7 +417036,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：螃蟹横着走，crab 既指螃蟹，也指脾气乖戾的人；中间的 b 像伸出的蟹钳。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -421224,7 +421144,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：拉丁语 cultivare（耕作）来自 colere（耕种、照料），cult- 是词干→ 耕作，引申为培养。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -422084,7 +422004,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：curl 读似‘卷儿’，头发卷成圈就是 curl；c 的形状也像弯钩。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -424057,7 +423977,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dey（挤奶女工）+ -ery（场所）→ 挤奶、卖奶的地方 → 乳牛场、乳品店。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -425381,7 +425301,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：dash 读音短促，像猛地一冲；破折号“—”也像一道冲出去的横线。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -426058,7 +425978,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "day（白天）+ light（光）：白天的光，即日光、白昼。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -437558,7 +437478,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：dive 与 deep、dip 同源，核心都是‘往下’；跳水、潜水、俯冲都向下。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -457135,7 +457055,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ex-（向外）+ 拉丁语 cieō（召唤）：把情绪召唤出来，即刺激、使兴奋、激励。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -461047,7 +460967,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fae（源自拉丁 fāta，命运女神）+ -ry → 仙女、精灵；fairy 与 fay 同源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -469551,7 +469471,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fire（火）+ place（地方）→ 生火的地方→ 壁炉。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -472759,7 +472679,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古英语 flocc（人群、队伍），可能与 folk（人们）相关：鸟兽聚成一群，动词即成群而行。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -473406,7 +473326,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：与 flower（花）同源，来自拉丁语 flōrēre（开花）→ 像开花一样繁茂→ 繁荣、茂盛；也指挥舞。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -478467,14 +478387,10 @@
     {
      "pos": "n",
      "cn": "水源，源，喷泉，泉水，本源"
-    },
-    {
-     "pos": "",
-     "cn": "[医] 泉"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 fons（泉、源）：涌出的泉水、喷泉，引申为水源、本源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -478545,32 +478461,6 @@
       [
        "源",
        "yuan"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[医] 泉",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "医",
-       "yi"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "泉",
-       "quan"
       ]
      ]
     }
@@ -481068,7 +480958,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：青蛙 frog 蹲在木头 log 上——frog 与 log 押韵，都是 -og。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -489992,7 +489882,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：goose 中 oo 像两个鹅蛋；鹅叫“嘎嘎”，复数是不规则的 geese，要单独记。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -491011,7 +490901,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 gradus（步）：一步接一步，逐步发生，即逐渐的、渐增的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -493126,7 +493016,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "green（绿色植物）+ house（房子）→ 种绿色植物的房子，就是温室。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -493506,7 +493396,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：gr- 开头像石磨转动的“咯吱”声；磨碎粮食是苦差，所以 grind 也指苦干。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -504860,7 +504750,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：草原上一群牛羊挤在一起就是 herd；作动词表示聚成群、放牧。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -513589,7 +513479,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hydro（水）+ gen（产生）→ 燃烧时生成水的元素，中文叫氢。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -519837,7 +519727,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：拉丁语 inficere 本义‘染上、沾污’，病菌‘染’到人身上就是感染。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -526390,7 +526280,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊 zēlos（热情、嫉妒），经拉丁 zelosus、古法语 jalous 而来；与 zealous 同源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -531031,7 +530921,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "key（键）+ board（板）→ 键盘。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -538867,7 +538757,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：leak 与 lake 只差一个字母——湖（lake）底漏（leak）水；引申为泄露。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -545758,7 +545648,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁 liquor（液体），来自 liquere（呈液态）；与 liquid 同源 → 酒、液体。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -548416,7 +548306,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古法语 loge（凉亭、有顶走道），与 lobby 同源：由供人停留的棚舍引申为小屋、旅舍；动词指投宿。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -552995,7 +552885,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：maid 是 maiden（少女）的缩略；由‘少女、未婚女子’引申指女仆。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -553595,7 +553485,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "main（主要的）+ land（陆地）→ 主要的陆地→ 大陆、本土。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -554899,14 +554789,10 @@
     {
      "pos": "n",
      "cn": "哺乳动物"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 哺乳动物"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 mamma（乳房）+ -al：用乳房哺育幼崽的动物，即哺乳动物（1758 年林奈定名）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -554926,44 +554812,6 @@
      "pos": "n",
      "cn": "哺乳动物",
      "tokens": [
-      [
-       "哺",
-       "bu"
-      ],
-      [
-       "乳",
-       "ru"
-      ],
-      [
-       "动",
-       "dong"
-      ],
-      [
-       "物",
-       "wu"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 哺乳动物",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
       [
        "哺",
        "bu"
@@ -561649,7 +561497,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：memo 是 memorandum 的缩略，取开头四个字母，意思就是备忘录。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -564074,15 +563922,11 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "扩音器，麦克风"
-    },
-    {
-     "pos": "",
-     "cn": "[医] 扩音器，传声器"
+     "cn": "麦克风，话筒，传声器"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "micro-（微小）+ -phone（声音）→ 把微弱声音放大的东西，即麦克风、扩音器。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -564100,24 +563944,8 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "扩音器，麦克风",
+     "cn": "麦克风，话筒，传声器",
      "tokens": [
-      [
-       "扩",
-       "kuo"
-      ],
-      [
-       "音",
-       "yin"
-      ],
-      [
-       "器",
-       "qi"
-      ],
-      [
-       "，",
-       ""
-      ],
       [
        "麦",
        "mai"
@@ -564129,40 +563957,18 @@
       [
        "风",
        "feng"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[医] 扩音器，传声器",
-     "tokens": [
+      ],
       [
-       "[",
+       "，",
        ""
       ],
       [
-       "医",
-       "yi"
+       "话",
+       "hua"
       ],
       [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "扩",
-       "kuo"
-      ],
-      [
-       "音",
-       "yin"
-      ],
-      [
-       "器",
-       "qi"
+       "筒",
+       "tong"
       ],
       [
        "，",
@@ -569078,7 +568884,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "同形异源：模子义经古法语 modle 源自拉丁 modulus；霉义来自古诺斯语 mygla，别硬串成一个词根。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -586040,7 +585846,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ob-（对着、相反）+ fendere（打）→ 冲撞、冒犯；引申为犯罪、违反、进攻。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -601962,7 +601768,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pass（通过）+ port（港口）：过港口的凭证，即护照、通行证；引申为达到目的的手段。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -604122,14 +603928,10 @@
     {
      "pos": "n",
      "cn": "工资名单，饷金名单，发放的工资总额"
-    },
-    {
-     "pos": "",
-     "cn": "[计] 工资表，工资单"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pay（工资）+ roll（名册）：领工资者的名册，即工资名单；也指发放的工资总额。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -604216,56 +604018,6 @@
       [
        "额",
        "e"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[计] 工资表，工资单",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "计",
-       "ji"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "工",
-       "gong"
-      ],
-      [
-       "资",
-       "zi"
-      ],
-      [
-       "表",
-       "biao"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "工",
-       "gong"
-      ],
-      [
-       "资",
-       "zi"
-      ],
-      [
-       "单",
-       "dan"
       ]
      ]
     }
@@ -604507,7 +604259,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：拉丁语 mālum persicum 字面是“波斯苹果”，经古法语 pesche 进入英语→ 桃子；peach 也指桃色。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -611434,7 +611186,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：picnic 里有 pic（照片）——去野餐顺便拍照片；本词借自法语 pique-nique。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -613127,7 +612879,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：拉丁语 pila 就是“柱子、桥墩”；pillar 是支撑建筑的柱，也比喻栋梁、台柱。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -619467,7 +619219,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：plug 既指塞子又指插头，核心动作都是“塞进去”；把插头塞进插座。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -620995,7 +620747,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：拉丁语 pōtio 是“饮料、饮剂”，poison 与 potion 同源——一杯有毒的饮剂→ 毒药。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -625080,7 +624832,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "post-（在后）+ 拉丁语 pōnō（放）：把事情放到后面，即推迟、延期。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -642095,7 +641847,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "rain（雨）+ bow（弓形）→ 雨后的弓 → 彩虹；形容词义“五彩缤纷的”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -659414,7 +659166,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：roar 读音像野兽拖长的低吼，r-o-a-r 口形越张越大；指吼叫、咆哮、轰鸣。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -664010,7 +663762,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 rudis 意为粗糙、未加工的 → 粗鲁的、粗陋的、原始的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -667061,7 +666813,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sale（销售）+ -s + man（人）→ 做销售的人→ 售货员、推销员。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -669287,7 +669039,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁 salsus（盐腌的），与 salt（盐）同源 → 用盐腌制的肉肠 → 香肠。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -682192,7 +681944,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：冷得发抖时发出‘sh—sh—’的吸气声，shiver 就是颤抖、哆嗦。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -695628,7 +695380,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "音译：soda 就是‘苏打’，指碳酸水、纯碱；气泡水入口嘶嘶作响。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -716039,7 +715791,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：stool 来自古英语 stōl（座位），源头是原始印欧语 *steh₂-（站）——供人坐的支撑物→ 凳子；医学上也指大便。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -721517,7 +721269,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sub-（在下面）+ way（道路）→ 地下的路→ 地铁；也指地下通道。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -722788,7 +722540,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "suit（一套衣服）+ case（箱子）→ 装一套衣服的箱子 → 手提箱。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -741719,7 +741471,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "与 through（穿过）同源，是其强调形式：从头穿到尾、没有遗漏，即彻底的、十分的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -749267,7 +749019,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：torch 原指拧成束的草把，可能来自拉丁语‘扭’；后来指火把、火炬。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -749443,7 +749195,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 torquēre（扭、拧）：把人扭拧折磨，即拷问、折磨；也指苦闷。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -755118,7 +754870,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tri-（三）+ angle（角）：有三个角的图形，即三角形；也指三个一组、三角关系。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -760999,7 +760751,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：拉丁语 umbra（阴影）+ 指小后缀 -ella→ 小遮影→ 伞；保护伞义由此而来。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -761837,7 +761589,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "under（下面）+ ground（地面）：在地面之下，即地下的；名词指地铁、地道，也指秘密活动。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -762292,7 +762044,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "under（在下面）+ neath（下方，古语）→ 在……下面；neath 现在多只出现在 beneath、underneath 里。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -762910,7 +762662,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "un-（不）+ easy（安适）→ 不安适的，即心神不安的、不自在的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -768993,7 +768745,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "view（看）+ point（点）→ 看问题的那个点，就是观点、看法。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -769175,7 +768927,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "vin（葡萄酒）+ aigre（酸）→ 酒放酸了就成了醋；也可形容人尖酸刻薄。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -777713,7 +777465,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：两个 e 像两行眼泪，weep 就是哭泣、流泪；w 的发音也像呜咽声。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -793473,7 +793225,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in-（=en-，使……）+ sure（确定的）→ 使有确定保障→ 保险、确保；与 ensure 同源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -793835,7 +793587,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "借自拉丁语 memorandum，字面是“应被记住的东西”→ 备忘录；外交、交易备忘录同此。",
    "family": [],
    "synonyms": [],
    "examples": [],
