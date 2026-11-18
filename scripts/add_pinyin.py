@@ -15,7 +15,7 @@ import os
 import re
 import sys
 
-from pypinyin import Style, lazy_pinyin
+from pypinyin import Style, pinyin
 
 CJK = re.compile(r"[㐀-鿿]")
 
@@ -32,12 +32,19 @@ def strip_phonetic_brackets(text):
 
 
 def tokens_for(text):
-    parts = lazy_pinyin(text, style=Style.NORMAL)
-    if len(parts) != len(text):
-        # 整句转换无法逐字对齐时，退化为逐字转换
-        parts = [lazy_pinyin(ch, style=Style.NORMAL)[0] for ch in text]
+    """逐字返回拼音，同时保留整句的短语级多音字判断。
+
+    lazy_pinyin 会把连续的 "] " 或 "..." 合并成一个 token，导致长度与
+    原文对不上；旧逻辑此时退化为逐字转换，丢掉上下文（例如“偿还”会被
+    读成 chang hai）。这里用 pinyin(..., errors=...) 让非中文字符也逐字
+    返回，既能对齐原文，又不需要放弃整句转换。
+    """
+    aligned = pinyin(text, style=Style.NORMAL, errors=lambda s: list(s))
+    if len(aligned) != len(text):
+        raise ValueError(f"pinyin 无法逐字对齐：{text!r}")
     tokens = []
-    for ch, py in zip(text, parts):
+    for ch, readings in zip(text, aligned):
+        py = readings[0] if readings else ""
         if is_cjk(ch) and py and py != ch:
             tokens.append([ch, py.lower()])
         else:
