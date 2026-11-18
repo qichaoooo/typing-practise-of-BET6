@@ -42,6 +42,9 @@
  "abreast": {
   "method": "a(在) ＋ breast(胸) → 胸与胸齐平 → 并肩地，并列地"
  },
+ "absent": {
+  "method": "拉丁 ab-（离开）+ sum（在、存在）：人不在场 → 缺席的、缺乏的"
+ },
  "accent": {
   "method": "词根：拉丁 ad-（向）+ canō（唱）→ accentus“配唱、声调”；引申为重音、口音。"
  },
@@ -71,6 +74,12 @@
  },
  "adversary": {
   "method": "ad(向) ＋ vers(转) ＋ ary(人) → 转向你对面的人 → 敌手，对手"
+ },
+ "advertise": {
+  "method": "经中古英语 advertisen 来自古法语 advertir（通知、警告）：把消息告知众人 → 做广告、公布。"
+ },
+ "affection": {
+  "method": "affect（影响、感动）+ -ion（名词后缀）：被触动而产生的状态 → 感情、爱慕。"
  },
  "affix": {
   "method": "af(＝ad，向) ＋ fix(固定) → 固定上去 → 粘贴，附加；词缀"
@@ -111,6 +120,9 @@
  "allergic": {
   "method": "all(其他、异，希腊 allos) ＋ erg(作用，ergon) ＋ -ic → 对异物起反应 → 过敏的，极反感的"
  },
+ "alley": {
+  "method": "出自盎格鲁-诺曼语 aleie，源于 aler（走）：供人行走的窄通道 → 小巷、小路"
+ },
  "allot": {
   "method": "al(去) ＋ lot(份额/抽签) → 按份分给 → 分配，分摊"
  },
@@ -125,6 +137,9 @@
  },
  "aloft": {
   "method": "a(在…上，古诺斯语 á) ＋ loft(天空、高处) → 在高处，在上"
+ },
+ "aluminum": {
+  "method": "名字取自拉丁语 alumen（明矾）+ 金属后缀 -um：铝曾从明矾中提炼 → 铝。"
  },
  "am": {
   "trans": [
@@ -215,6 +230,9 @@
  "array": {
   "method": "与 ready 同源：古法语 arraier 本义「使就序」→ 排列，一系列；陈列，展示"
  },
+ "arrow": {
+  "method": "源自原始日耳曼语 *arhwō「箭」，与 arc（弧、弓）同源——弓上搭的正是箭。"
+ },
  "artifact": {
   "method": "arte(技艺) ＋ fact(制作) → 用技艺做出的东西 → 人工制品"
  },
@@ -247,6 +265,9 @@
  },
  "asylum": {
   "method": "a(不) ＋ syl(夺取) → 不可被夺走之地 → 庇护，收容所"
+ },
+ "atom": {
+  "method": "希腊语 a-（不）+ tomos（切）→ 不可再切分的最小单位 → 原子。"
  },
  "atrocity": {
   "method": "atroc(凶恶，拉丁 atrōx，源于 āter「黑」) ＋ -ity → 凶恶之举 → 残暴，暴行"
@@ -381,6 +402,12 @@
  "binoculars": {
   "method": "构词：bi-(双) ＋ ocular(眼的) ＋ -s → 双眼用的 → 双目镜，双筒望远镜"
  },
+ "biology": {
+  "method": "bio-（希腊语 bios，生命）+ -logy（学科、研究）→ 研究生命的学科 → 生物学。"
+ },
+ "biscuit": {
+  "method": "源自拉丁语 bis（两次）+ coctus（烤过的）→ 烤两次的面食，便于保存 → 饼干。"
+ },
  "bishop": {
   "method": "epi(在上) ＋ scop(看) → 在上面看的人 → 主教，监督者"
  },
@@ -396,6 +423,9 @@
  "blade": {
   "method": "古英语 blæd 意为「叶」，与 bloom(开花) 同源 → 叶片；刀身扁平如叶 → 刀锋，刀片"
  },
+ "blank": {
+  "method": "源自古法语 blanc（白），与 blanch（漂白）同源：一片白、什么也没写 → 空白的"
+ },
  "blanket": {
   "method": "古法语 blanc(白) ＋ et(小称) → 白色毛织物 → 毛毯，毯子"
  },
@@ -408,6 +438,9 @@
  "blend": {
   "method": "联想：b + lend（借）——你借我、我借你，东西混在一起就分不清了，即 blend 混合。"
  },
+ "bless": {
+  "method": "古英语 bletsian 原指「以血祝圣」，词源与 blood（血）相关；由「祝圣」引申为祝福、祈佑。"
+ },
  "bloc": {
   "method": "bloc 借自法语「块」，与 block 同源 → 抱成一团的一块势力 → 集团"
  },
@@ -416,6 +449,9 @@
  },
  "blush": {
   "method": "词源：古英语 blysċan「发红、发亮」，本与火光、燃烧义相关 → 脸发红 → 脸红"
+ },
+ "boil": {
+  "method": "来自拉丁语 bulla（气泡）→ bullīre（冒泡）→ 煮沸、沸腾；水冒泡就是开了。疖义另源自古英语 bȳl。"
  },
  "bold": {
   "method": "联想：bold 里藏着 old——老手见得多、胆子大（bold 大胆的）；粗体字也显得醒目“胆大”。"
@@ -434,6 +470,9 @@
  },
  "bout": {
   "method": "原义「弯曲、转折」 → 一次转身交锋 → 一回，回合，较量"
+ },
+ "brass": {
+  "method": "联想：brass 与 bronze 都以 br- 开头，都是铜合金——brass 是发黄的黄铜，bronze 是青铜。"
  },
  "brave": {
   "method": "联想：意大利语 bravo 是喝彩『好样的』，勇敢的人值得全场喊 bravo；brave 的最终词源不明。"
@@ -461,14 +500,33 @@
  "breed": {
   "method": "词根：古英语 brēdan < 原始日耳曼语 *brōdijaną“孵、育” < PIE *bʰreh₁-“温暖”→ 孵化、养育→繁殖、培育。"
  },
+ "breeze": {
+  "method": "联想：breeze 开头 br- 与 breathe（呼吸）相近，微风就像大地在轻轻呼吸",
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "微风，煤屑，轻而易举的事"
+   },
+   {
+    "pos": "vi",
+    "cn": "吹微风"
+   }
+  ]
+ },
  "brigade": {
   "method": "词源：经法语 brigade 借入，原指一队人 → 旅，队"
  },
  "broadcast": {
   "method": "broad（广泛）+ cast（撒、投）→ 广泛撒播；原指撒种，后指广播。"
  },
+ "broker": {
+  "method": "源自盎格鲁-诺曼语 brocour（小商人），可溯至古荷兰语 *brokere，与 broke（使用、交易）相关：做交易的人，即经纪人。"
+ },
  "brush": {
   "method": "古法语 broisse ← 日耳曼语 *bursti(鬃毛) → 鬃毛制的刷子 → 刷子，毛笔，争吵"
+ },
+ "buddy": {
+  "method": "联想：可能来自小孩把 brother（兄弟）说成的 bruddy，也可能源自 butty（伙伴）：好朋友、伙伴。"
  },
  "buffalo": {
   "method": "希腊语 boúbalos(野牛、羚羊) → 水牛"
@@ -500,6 +558,9 @@
  "cabin": {
   "method": "源自中世纪拉丁语 capanna(茅屋) → 小屋；船、机上隔出的小房间 → 船舱，机舱"
  },
+ "cage": {
+  "method": "联想：cage 与 jail（监狱）相关——笼子就是关动物的小监狱；c 像围住动物的栏杆。"
+ },
  "call": {
   "trans": [
    {
@@ -515,6 +576,9 @@
     "cn": "叫喊，访问，叫牌"
    }
   ]
+ },
+ "calm": {
+  "method": "词尾 l 不发音，读 /kɑːm/——静悄悄的 l 正像 calm 的「平静」；海面 calm，心里也 calm。"
  },
  "campus": {
   "forms": {
@@ -563,6 +627,9 @@
  },
  "carton": {
   "method": "cartone(厚纸板，意大利语) → carton 硬纸盒，纸板箱"
+ },
+ "cartoon": {
+  "method": "源自法语 carton（草图、纸板），与 card/carton（纸板）同源——画在纸板上的草图 → 漫画、卡通。"
  },
  "carve": {
   "method": "与德语 kerben(刻痕) 同源，本义「刮、刻」→ 雕刻；切碎"
@@ -655,6 +722,9 @@
  "clamp": {
   "method": "词源：中古荷兰语 clamp「钩子、夹钳」→ 夹紧，夹住，固定；夹钳，夹具"
  },
+ "classify": {
+  "method": "class（类别）+ -ify（使……化）→ 把事物按类别分开 → 分类、归类。"
+ },
  "clay": {
   "method": "源自 PIE 词根 *gleyH-“粘、贴”，与 glue（胶水）同源——黏土（clay）就是能粘住的东西。"
  },
@@ -682,6 +752,9 @@
  "cling": {
   "method": "源自古英语 clingan「粘住、依附」，与 clump 同源 → 紧紧抓住、依恋、坚持。"
  },
+ "clip": {
+  "method": "一词两源：夹住义来自古英语 clyppan（紧抱、扣住）；剪义来自古诺尔斯语 klippa（剪羊毛、剪发）。"
+ },
  "cloak": {
   "method": "cloak 与 clock 同源，源自中世纪拉丁 clocca「钟」：斗篷张开像钟形 → 斗篷；引申为掩护"
  },
@@ -703,6 +776,9 @@
  "coincidence": {
   "method": "coincide(同时发生、一致) ＋ -ence(名词后缀) → 巧合；一致"
  },
+ "collar": {
+  "method": "来自拉丁语 collum（脖子）：套在脖子上的东西 → 衣领、颈圈；动词即“抓住衣领” → 控制。"
+ },
  "collective": {
   "method": "col(共同，com-) ＋ lect(收集) ＋ -ive → 收集到一起的 → 集体的，共同的"
  },
@@ -714,6 +790,9 @@
  },
  "comedy": {
   "method": "komos(狂欢)＋oid(歌) → 狂欢之歌 → 喜剧，有趣的事情"
+ },
+ "commerce": {
+  "method": "联想：commerce 中的 merce 近似 market 的 merc，大家共同（com-）在市场做买卖 → 商业、贸易。"
  },
  "comparable": {
   "method": "compare（比较）＋-able（可…的）：可以拿来比较的；彼此比得上，也就成了类似的。"
@@ -765,6 +844,9 @@
  },
  "connotation": {
   "method": "con(一起、附带) ＋ not(标记) ＋ ation → 附带的意义 → 内涵，含蓄"
+ },
+ "conscience": {
+  "method": "拉丁语 com-（共同）+ scire（知道）→ 内心共同知道的事 → 良心；拼写可记 con + science。"
  },
  "consensus": {
   "forms": {
@@ -828,11 +910,17 @@
  "coral": {
   "method": "联想：coral 形近 color(颜色) → 珊瑚色；由珊瑚虫骨骼堆成 → 珊瑚"
  },
+ "cord": {
+  "method": "拉丁 chorda 来自希腊语 khordē（肠线、琴弦）：用肠衣搓成的细绳 → 索、粗线"
+ },
  "corporal": {
   "method": "下士义源自法语 caporal ← 意大利语 caporale ← capo(头目)：一个小队的头目 → 下士（与「肉体的」同形不同源）"
  },
  "correspond": {
   "method": "cor(=com，共同)＋respond(回应) → 彼此回应 → 符合，通信，相当"
+ },
+ "correspondence": {
+  "method": "correspond（相符、通信）+ -ence（名词后缀）→ 通信、信件；彼此相符即「一致」。"
  },
  "cosmetic": {
   "method": "cosm(秩序、装饰) + -etic → 用于修饰打扮 → 化妆品"
@@ -903,6 +991,9 @@
  },
  "credential": {
   "method": "cred(相信) ＋ -ential(…的) → 让人相信的东西 → 凭据，证明书，国书"
+ },
+ "creep": {
+  "method": "词根 *grewbʰ-「弯曲、缠绕」→ 身子弯着慢慢爬；creep 爬行、蔓延、潜行。"
  },
  "cricket": {
   "method": "拟声：crick(咔嗒) ＋ et(小) → 会叫的小虫 → 蟋蟀；板球"
@@ -1002,6 +1093,9 @@
  "defer": {
   "method": "de(离开) + fer(带) → 把事往后带 → 推迟；把话带给对方 → 听从"
  },
+ "definite": {
+  "method": "源自拉丁 definitus（definio 的过去分词），与 define 同源：已被确定下来的 → 明确的、一定的。"
+ },
  "delegate": {
   "method": "联想：delegate 与 legate（使节）同源，拉丁语 delegare 意为派出、委派；被派出去办事的人就是代表。"
  },
@@ -1055,6 +1149,9 @@
  "desolate": {
   "method": "de(彻底) ＋ sol(孤单，同 solo) ＋ ate → 彻底孤零零 → 荒凉的"
  },
+ "dessert": {
+  "method": "法语 dessert 原义“撤走已上的菜”：des-（去掉）+ servir（上菜）→ 正餐后撤菜再上甜点 → 餐后甜点。注意与 desert（沙漠）拼写只差一个 s。"
+ },
  "deter": {
   "method": "de(离开) ＋ terr(使害怕) → 吓得人离开 → 制止，吓住，威慑"
  },
@@ -1072,6 +1169,9 @@
  },
  "devour": {
   "method": "de(向下) + vor(吞) → 吞下去 → 吞食；吞没；挥霍"
+ },
+ "diabetes": {
+  "method": "源自希腊语 diabetēs（虹吸管），出自 diabaínō（穿过、流过）；病名取其液体穿流之意，指糖尿病。"
  },
  "diagram": {
   "method": "词源：希腊语 dia-（穿过、横跨）+ -gram（画、写，γράφω）→ 画出的线条 → 图表、图解。"
@@ -1097,11 +1197,17 @@
  "discord": {
   "method": "dis(分开) ＋ cord(心，拉丁 cor) → 心不在一处 → 不和，不调和"
  },
+ "discourage": {
+  "method": "dis-（相反）+ courage（勇气）：把勇气拿走 → 使气馁；进而阻拦、阻碍。"
+ },
  "discourse": {
   "method": "dis(分开) ＋ cours(跑) → 话题跑来跑去 → 谈话，论述"
  },
  "dispense": {
   "method": "dis-(分开) ＋ pens(称重) → 称好分量分给各人 → 分发，分配"
+ },
+ "dispose": {
+  "method": "联想：记固定搭配 dispose of（处理掉、丢弃）；把杂物处置完，桌面就清空了 → 处理、去掉。"
  },
  "dissent": {
   "method": "dis-(分开) ＋ sent(感觉，拉丁 sentire) → 感觉不一致 → 异议；持异议，不同意"
@@ -1112,8 +1218,14 @@
  "dissident": {
   "method": "dis(分开) ＋ sid(坐) ＋ ent → 分开坐 → 意见不同的，持不同政见的"
  },
+ "dissolve": {
+  "method": "dis-（分开）+ solve（松开）：把结合的东西松开分开 → 溶解；把人分散开 → 解散。"
+ },
  "distill": {
   "method": "de-(向下) ＋ still(滴落，拉丁 stillare) → 一滴滴落下 → 蒸馏；提炼"
+ },
+ "distress": {
+  "method": "拉丁 dis-（分开）+ stringere（拉紧）：身心被向两边拉扯 → 痛苦、苦恼"
  },
  "disturb": {
   "method": "dis(加强) ＋ turb(搅动，拉丁 turbare) → 搅乱 → 扰乱，使不安"
@@ -1132,6 +1244,9 @@
  },
  "doll": {
   "method": "词源：来自女子名 Dorothy 的昵称 Doll——像用「小美」给玩偶起名一样 → 洋娃娃。"
+ },
+ "dolphin": {
+  "method": "联想：dol- 近似 doll（玩偶），海豚像水里可爱的玩偶；词源上来自希腊语 delphís。"
  },
  "dose": {
   "method": "希腊语 dosis(给予) ← didōmi(给) → 给出的一份 → 剂量，服用量"
@@ -1152,6 +1267,9 @@
  "doze": {
   "method": "联想：doze 与 dizzy(头晕) 同源，头晕犯困 → 打瞌睡，假寐"
  },
+ "drawer": {
+  "method": "draw（拉）+ -er（物/人）→ 能拉出来的盒子是抽屉；开票人（开支票、汇票的人）也是 drawer。"
+ },
  "dreadful": {
   "method": "dread(恐惧) ＋ -ful(充满…的) → 充满恐惧的 → 可怕的；糟透了的"
  },
@@ -1160,6 +1278,9 @@
  },
  "drift": {
   "method": "drive（驱动）+ -t → 被水流推着走 → 漂流、动向"
+ },
+ "drum": {
+  "method": "联想：dr- 开头短促，像鼓点“咚、咚”；drum 既指鼓，也作动词击鼓（词源不确定）。"
  },
  "drunk": {
   "method": "词根：drink 的过去分词（不是过去式），原始日耳曼语 *drunkanaz；酒喝多了→喝醉的。",
@@ -1194,6 +1315,9 @@
  },
  "eager": {
   "method": "eager 源自拉丁语 acer(尖锐、锐利) → 心思锐利急切 → 渴望的，热心的"
+ },
+ "earthquake": {
+  "method": "earth（大地）+ quake（古英语 cwacian，摇晃）→ 大地摇晃 → 地震。"
  },
  "ease": {
   "method": "联想：ease 与 easy 同族，想象瘫在沙发上什么都不用做 → 安逸，轻松"
@@ -1245,8 +1369,14 @@
  "electrical": {
   "method": "electric(电的，源自希腊语 ēlektron 琥珀) ＋ -al → 电的；电气科学的"
  },
+ "electron": {
+  "method": "electric（电）+ ion（离子）的合成词，1891 年由斯托尼创制 → 电子。"
+ },
  "elegant": {
   "method": "词源：拉丁 ēlegāns ← ēligere（ex- 出 + legō 挑选）→ 被挑出来的、有品位的 → 优雅的。"
+ },
+ "elephant": {
+  "method": "联想：希腊语 elephas 本指象牙、象，再往前可能借自北非语言；长牙巨兽 → 大象"
  },
  "emancipate": {
   "method": "e-(向外) ＋ mancip(占有、转让，拉丁 manceps) ＋ -ate → 放出所有权 → 释放，解放"
@@ -1290,6 +1420,9 @@
  "enlist": {
   "method": "en(使进入) + list(名单) → 列入名册 → 征募，从军"
  },
+ "enquire": {
+  "method": "古法语 en-（进入）+ querre（寻找），源自拉丁 quaerere：去打听 → 询问"
+ },
  "entrust": {
   "method": "en(使) + trust(信任) → 使信任某人 → 交托，委托"
  },
@@ -1307,6 +1440,9 @@
  },
  "epidemic": {
   "method": "epi(在…之中) + dem(人民，希腊语 demos) + ic → 在人群中流行 → 传染病，流行病"
+ },
+ "equality": {
+  "method": "equal（相等的）+ -ity（名词后缀）→ 相等、平等；词源上来自拉丁语 aequālitās。"
  },
  "equate": {
   "method": "equ(相等) ＋ ate(动词后缀) → 使相等，视为平等"
@@ -1622,7 +1758,11 @@
     "pos": "n",
     "cn": "汽油"
    }
-  ]
+  ],
+  "method": "由 gas（气）+ -ol（表示油）+ -ine（表示衍生物）构成；最初用于增富家用煤气，后指汽油。"
+ },
+ "genius": {
+  "method": "拉丁 genius 指与生俱来的天性，也指守护神，源自动词 gignere（产生）；天赋、天才由此而来。"
  },
  "genre": {
   "method": "源自法语 genre，与拉丁 genus(种类)同源 → 类型、流派"
@@ -1662,6 +1802,9 @@
  },
  "govern": {
   "method": "govern 源自希腊语 kybernaō（掌舵、驾驭）→ 掌舵管理 → 统治，管理，支配"
+ },
+ "grace": {
+  "method": "拉丁 gratia 意为善意、恩惠，出自 gratus（令人愉快的、受欢迎的）：令人愉悦的风度 → 优雅；施予善意 → 恩惠。"
  },
  "grasp": {
   "method": "中古英语 graspen「摸索、抓」，与 grab 同出原始日耳曼语 *graipisōn（抓取）→ 抓住、领会。"
@@ -1752,6 +1895,9 @@
  "hectic": {
   "method": "词源：希腊 hektikós(惯常的、消耗性的)，源自 héxis(状态) → 持续不退的发热 → 潮热的，脸上发红"
  },
+ "hedge": {
+  "method": "古英语 hecġ 意为围栏、篱笆，可溯至原始印欧语 *kagʰyóm（围场）：围起来的一圈 → 树篱，引申为障碍。"
+ },
  "heel": {
   "method": "heel 源自古英语 hēla（脚跟）→ 脚后跟，踵；鞋后跟"
  },
@@ -1805,6 +1951,9 @@
  },
  "hockey": {
   "method": "联想 hook(钩)：曲棍球杆末端带弯钩 → 曲棍球、冰球（词源不确定）"
+ },
+ "homeland": {
+  "method": "home（家）+ land（土地）→ 家所在的那片土地 → 祖国、故国。"
  },
  "hook": {
   "method": "联想：hook 中的 oo 像两个弯钩，末尾 k 是钩尖；鱼咬钩被钩住就是 hook。"
@@ -1952,6 +2101,9 @@
  "inmate": {
   "method": "in(里面) ＋ mate(同伴) → 住在同一处的人 → 同住者；被收容者"
  },
+ "inspect": {
+  "method": "in-（向内）+ spect（看）：向里面仔细看 → 检查、检验"
+ },
  "instructional": {
   "method": "in(向内) ＋ struct(建造) ＋ -ion → 把知识建进头脑 → 指导；instructional 指导的，教育的"
  },
@@ -2049,6 +2201,12 @@
  "lad": {
   "method": "联想：lad 与 boy 押韵 → 少年，家伙"
  },
+ "ladder": {
+  "method": "词根 *ḱley-「倾斜、倚靠」→ 梯子斜靠墙边；可联想 lean（倚靠）。"
+ },
+ "lamb": {
+  "method": "原始日耳曼语 *lambaz「羔羊」，与德语 Lamm 同源；词尾 b 不发音，读 /læm/，记「小羊不叫 b」。"
+ },
  "lamp": {
   "method": "希腊 lampas(火炬) ← lampein(发光) → 发光之物 → 灯"
  },
@@ -2124,6 +2282,12 @@
  "lipstick": {
   "method": "lip(嘴唇) ＋ stick(棒) → 涂唇的棒 → 口红，唇膏"
  },
+ "liquid": {
+  "method": "拉丁 liquidus 来自 liqueō（呈液态、流动）：会流动的东西 → 液体"
+ },
+ "lively": {
+  "method": "life（生命）+ -ly（……的）→ 有生命力的 → 活泼的、鲜明的、生动的。"
+ },
  "liver": {
   "method": "器官义源自古英语 lifer「肝」；「生活者、居民」义才是 live + -er，两义同形不同源。"
  },
@@ -2190,6 +2354,9 @@
  "lucrative": {
   "method": "lucr(利益，拉丁语 lucrum) ＋ -ative → 能带来收益的 → 获利的，合算的"
  },
+ "lump": {
+  "method": "联想：lump 读音短促，像重物落地「嘭」的一声；砸出的一团 → 块、肿块"
+ },
  "lung": {
   "method": "原始印欧语 *h₁lengʷʰ-(轻) → 体内“轻”的器官 → 肺，肺脏"
  },
@@ -2249,6 +2416,12 @@
    }
   ],
   "method": "希腊 mathēma(知识、学问) + -ics(学科) → 数学；同源 mathematic"
+ },
+ "maturity": {
+  "method": "mature（成熟的）+-ity（名词后缀）：成熟的状态 → 成熟"
+ },
+ "mechanic": {
+  "method": "源自希腊语 mēkhanē（机器、装置）+ -ic（从事…的人）→ 跟机器打交道的人 → 机械工、技工。"
  },
  "mechanical": {
   "method": "希腊 mēkhanē（机械）+ -ical → 机械的；引申“呆板的”"
@@ -2370,6 +2543,9 @@
  "monotony": {
   "method": "mono(单一) ＋ ton(音调) ＋ y → 只有一个音调 → 单调，缺乏变化"
  },
+ "monument": {
+  "method": "拉丁 monumentum 意为纪念物、墓碑，出自 monere（提醒）：提醒后人记住，即纪念碑。"
+ },
  "morale": {
   "method": "词源：法语 morale 来自拉丁 mōrālis(道德的)，源于 mōs(习俗) → 道德；团队精神 → 士气"
  },
@@ -2413,6 +2589,10 @@
  },
  "multilateral": {
   "method": "multi(多) ＋ lateral(边的) → 多边的，多国的"
+ },
+ "mushroom": {
+  "method": "联想：mush + room，蘑菇像森林里撑开的小房间；词源不确定，可能来自法语 mosse（苔藓），蘑菇常生于苔藓。",
+  "phonetic": "'mʌʃru:m"
  },
  "myth": {
   "method": "myth 来自希腊语 mythos(话语、故事) → 流传下来的故事 → 神话"
@@ -2494,8 +2674,14 @@
   ],
   "method": "none(没有) ＋ the ＋ less(更少) → 一点也不少 → 尽管如此，依然，然而"
  },
+ "nonsense": {
+  "method": "non-（无、非）+ sense（意义、道理）：没有意义的话或事 → 胡说、荒唐。"
+ },
  "noon": {
   "method": "词源：拉丁 nōna hōra「第九时」；古罗马从日出计时，第九时约在下午三点，词义后移到正午。"
+ },
+ "northeast": {
+  "method": "north（北）+ east（东）复合而成：东北；也可作形容词和副词。"
  },
  "northwest": {
   "method": "north(北) ＋ west(西) → 西北（方）；西北的，向西北"
@@ -2507,7 +2693,8 @@
   "method": "not(不) ＋ withstanding(阻挡、承受) → 不构成阻挡 → 尽管"
  },
  "nowadays": {
-  "forms": {}
+  "forms": {},
+  "method": "now（现在）+ adays 复合而成，整体意为“如今的日子”：现今、时下。"
  },
  "numb": {
   "method": "谐音联想：numb 读近「难」→ 冻得难受、手脚发木 → 麻木的，失去知觉的"
@@ -2531,6 +2718,9 @@
     "cn": "坚果，核心，螺帽"
    }
   ]
+ },
+ "o'clock": {
+  "method": "o' 是 of 的缩略，o'clock 即 'of the clock'（按钟面）的合写：几点钟。"
  },
  "oar": {
   "method": "联想：oar 与 row(划船) 只差首字母，划船靠桨 → 桨，桨手"
@@ -2567,6 +2757,9 @@
  },
  "orange": {
   "method": "orange 经阿拉伯语 nāranj 源自梵语 nāraṅga(橘树) → 柑橘，橘色"
+ },
+ "orbit": {
+  "method": "拉丁语 orbita 指「轨迹、路线」→ 天体运行的轨道；作动词即「沿轨道运行」。"
  },
  "ordeal": {
   "method": "or-(出) ＋ deal(分、判) → 古代神判给出的结果 → 严酷考验，煎熬"
@@ -2723,6 +2916,9 @@
  "penguin": {
   "method": "词源不确定：一说威尔士语 pen(头) ＋ gwyn(白) → 白头鸟 → 企鹅；另说拉丁语 pinguis(肥)"
  },
+ "penny": {
+  "method": "联想：penny 音近「盆里」——存钱盆里叮当落下的最小硬币 → 便士、一分钱"
+ },
  "perch": {
   "method": "pertica(长杆) → 栖木、高位；同形词 pérkē 指河鲈"
  },
@@ -2818,6 +3014,9 @@
  "pore": {
   "method": "联想：动词 pore 源自古英语 pūrian「凝视」，pore over a book 即埋头细读 → 仔细阅读，审视"
  },
+ "pork": {
+  "method": "来自拉丁语 porcus（猪），经古法语 porc 进入英语 → 猪肉；可对比 pig 指活猪。"
+ },
  "porridge": {
   "method": "联想：por- 音近 pot(锅)，在锅里熬得稠稠的 → 粥，糊"
  },
@@ -2862,6 +3061,9 @@
  },
  "predominate": {
   "method": "pre(在前) ＋ dominate(支配) → 抢先支配 → 掌握、控制、占主导"
+ },
+ "premier": {
+  "method": "经法语 premier 来自拉丁 primarius（第一的）：prim- 表第一，故为首要的、首相。"
  },
  "preoccupy": {
   "method": "pre-(预先) ＋ occupy(占据) → 先占据 → 抢先占领；使全神贯注"
@@ -2944,6 +3146,9 @@
  "pudding": {
   "method": "词源：古法语 boudin(血肠)、拉丁 botellus(小肠) → 早期指肠状食物 → 布丁"
  },
+ "pulse": {
+  "method": "拉丁 pulsus（搏动）来自 pellō（推、击打）：血液被一下下推出 → 脉搏、脉冲；豆类义另有来源"
+ },
  "pump": {
   "method": "拟声：pump 模仿泵抽水打气的「噗噗」声 → 泵，抽水机，打气筒"
  },
@@ -2955,6 +3160,9 @@
  },
  "pursuit": {
   "method": "词源：古法语 poursuite ← porsuir（追赶、追求）→ 追求、追赶；短语 in pursuit of 即「追捕、追求」。"
+ },
+ "puzzle": {
+  "method": "联想：puzzle 里的 zz 像绕来绕去的迷宫，越想越乱 → 难题、使困惑。"
  },
  "pyramid": {
   "method": "联想：pyramid 中的 y 像向上的塔尖，字母排成尖顶形 → 角锥，金字塔"
@@ -2986,11 +3194,17 @@
  "rabbit": {
   "method": "联想：rabbit 词源不确定，可能借自荷兰语 robbe（兔子）→ 兔子；谐音‘拉比特’"
  },
+ "rack": {
+  "method": "联想：rack 是「架子」，也指古代把人拉开的拷问台，所以又表示「折磨」；行李架也是 rack。"
+ },
  "rage": {
   "method": "古法语 rage 源自拉丁 rabiēs「狂怒」，与 rabies（狂犬病）同源 → 愤怒、狂暴。"
  },
  "raid": {
   "method": "古英语 rād(骑马出行、远征) → 骑马奔袭 → 袭击、突袭；警方突击 → 搜捕"
+ },
+ "rally": {
+  "method": "源自法语 rallier：re-（再次）+ ligare（绑）→ 重新绑到一起 → 集合、团结、重整旗鼓。"
  },
  "ranch": {
   "method": "借自西班牙语 rancho(小农场) → 大牧场；经营牧场"
@@ -3034,6 +3248,9 @@
  "referendum": {
   "method": "refer(提交) ＋ -endum(应…之事) → 应交民众决定之事 → 全民公决"
  },
+ "refrigerator": {
+  "method": "联想：中世纪拉丁语 refrīgerātor 意为「冷却器」——让食物变冷的就是冰箱；口语简称 fridge。"
+ },
  "refusal": {
   "method": "refuse(拒绝) + -al(名词后缀) → 拒绝"
  },
@@ -3048,6 +3265,9 @@
  },
  "rehearse": {
   "method": "词源：古法语 reherser(逐字重复) → 反复练到能复述 → 排练，预演，复述"
+ },
+ "rejection": {
+  "method": "拉丁 re-（向后）+ iacere（扔）：被扔回去 → 拒绝"
  },
  "relentless": {
   "method": "relent(心软、退让) ＋ -less(无) → 毫不退让的 → 无情的，冷酷的，残酷的"
@@ -3091,6 +3311,9 @@
  "repress": {
   "method": "re(向后) ＋ press(压) → 往回压 → 镇压，抑制"
  },
+ "reproduce": {
+  "method": "re-（再）+ produce（产生）→ 再生产、复制；生物「再产生」后代就是繁殖。"
+ },
  "repute": {
   "method": "re(反复) ＋ put(思考) ＋ e → 反复被人念及 → 名望，名气，声望"
  },
@@ -3108,6 +3331,9 @@
  },
  "restless": {
   "method": "rest(休息) ＋ less(无) → 得不到休息 → 不安静的，慌张的"
+ },
+ "restraint": {
+  "method": "拉丁 re-（回）+ stringere（拉紧）：把人往后拉紧 → 抑制、克制、约束"
  },
  "retail": {
   "method": "联想：re（再）+ tail（尾巴）——把整批货的“尾巴”再切下来零卖 → 零售"
@@ -3164,6 +3390,9 @@
     "cn": "浪费，挥霍"
    }
   ]
+ },
+ "rocket": {
+  "method": "来自意大利语 rocchetta，本义“线轴”（rocca 纺锤的指小词）：早期火箭形似线轴，遂借其名。"
  },
  "rope": {
   "method": "古英语 rāp(绳、索) → 绳，粗绳；引申为绞索、诀窍"
@@ -3252,6 +3481,9 @@
  "seemingly": {
   "method": "seem(似乎) + -ing(形容词后缀) + -ly(副词后缀) → 看上去，表面上"
  },
+ "seldom": {
+  "method": "古英语 seldan（稀少地）来自原始日耳曼语 *seldanē，与德语 selten 同源 → 很少"
+ },
  "sensational": {
   "method": "sens(感觉) ＋ -ation ＋ -al → 激起强烈感觉的 → 轰动的，耸人听闻的；也可指非常好的"
  },
@@ -3274,6 +3506,9 @@
     "cn": "决心的，规定的，故意的，持久的，固定的，老套的，准备好的"
    }
   ]
+ },
+ "shallow": {
+  "method": "联想：shallow 结尾是 low（低）——水浅则水位低；shallow water 是浅水，引申为「肤浅的」。"
  },
  "shame": {
   "method": "联想：shame 可看成 sha + me——“羞（sha）我（me）”，使我羞耻、羞愧。"
@@ -3363,6 +3598,9 @@
  "shred": {
   "method": "词根义：切下(原始日耳曼语 *skraudō) → 切成的细条 → 碎布条，细片，少量；撕碎"
  },
+ "shrimp": {
+  "method": "联想：shrimp 可能与 shrink（收缩）同族——虾身蜷缩、又常指「矮个子」，可借此记住。"
+ },
  "sigh": {
   "method": "拟声：sigh 读音拖长，像长长地吐出一口气 → 叹息"
  },
@@ -3389,6 +3627,12 @@
  },
  "slam": {
   "method": "拟声：slam 读起来像「砰」的关门声 → 砰然声；猛然，猛烈的抨击"
+ },
+ "slap": {
+  "method": "拟声：slap 模仿手掌拍打的“啪”声；作动词指掴、掌击，作名词指一巴掌。"
+ },
+ "sleeve": {
+  "method": "联想：袖子像套筒，手臂从 sleeve 穿过；词中两个 e 像两只袖口，也指「套管」。"
  },
  "slice": {
   "method": "日耳曼语 slit(劈开) → 劈下来的一块 → 薄片，切片，部分"
@@ -3430,6 +3674,9 @@
  "snob": {
   "method": "联想：snob 中藏着 noble(贵族)的影子——一心攀附贵族的人 → 势利的人，假内行"
  },
+ "soap": {
+  "method": "古英语 sāpe 来自原始日耳曼语 *saipǭ，与德语 Seife 同源：起泡的洗涤物 → 肥皂"
+ },
  "sob": {
   "method": "联想：sob 读音像哭到抽气的声音「嗦啵」→ 啜泣，呜咽"
  },
@@ -3438,6 +3685,27 @@
  },
  "socialism": {
   "method": "social（社会的）+ -ism（主义）→ 社会主义；1832 年起见于法语 socialisme 或英语构词。"
+ },
+ "sock": {
+  "method": "源自拉丁 soccus（轻便鞋），经古英语 socc 进入英语：套在脚上的轻便物 → 短袜",
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "短袜，鞋垫，一击"
+   },
+   {
+    "pos": "vt",
+    "cn": "重击，猛投，给...穿袜"
+   },
+   {
+    "pos": "vi",
+    "cn": "打击"
+   },
+   {
+    "pos": "adj",
+    "cn": "非常成功的"
+   }
+  ]
  },
  "socket": {
   "method": "联想（非词源）：sock(袜子) 破了个小洞 → 洞孔、穴窝、插座孔、眼窝"
@@ -3523,6 +3791,9 @@
  "sponsor": {
   "method": "拉丁 spōnsor（担保人）→ 保证人、赞助者、发起者；赞助就是替活动“担保”"
  },
+ "spoon": {
+  "method": "古英语 spōn 原指「木片、木屑」：削木片做成的舀具 → 匙、调羹"
+ },
  "spotlight": {
   "method": "spot(点) ＋ light(光) → 把光聚成一点 → 聚光灯、照明灯"
  },
@@ -3531,6 +3802,9 @@
  },
  "stab": {
   "method": "联想：与 stub(尖桩) 可能相关，尖物猛地扎入 → 刺，戳"
+ },
+ "stadium": {
+  "method": "源自希腊语 στάδιον（跑道、长度单位），与 stand（站立）同根——观众站着看的跑道，引申为运动场。"
  },
  "stagnate": {
   "method": "stagn(池塘，拉丁 stagnum) ＋ -ate → 池水不流动 → 停滞，淤塞"
@@ -3588,6 +3862,9 @@
  "steward": {
   "method": "stig(房屋) ＋ weard(守护者) → 看守房屋的人 → 管理人，乘务员"
  },
+ "stiff": {
+  "method": "古英语 stif 直接继承，本义僵硬、挺直，与德语 steif 同源；由“僵硬”引申出生硬、严厉。"
+ },
  "stifle": {
   "method": "联想（词源不确定）：stifle 形近 stiff(僵硬) → 被闷到身体僵硬 → 使窒息；抑止，扼杀"
  },
@@ -3617,6 +3894,9 @@
  },
  "strangle": {
   "method": "strang(绞紧；希腊 strangálē“绳套”) ＋ -le → 用绳套勒住 → 勒死，扼死，压制"
+ },
+ "straw": {
+  "method": "与 strew（撒、铺）同源，原始日耳曼语 *strawą 即「被铺撒之物」→ 稻草、麦秆"
  },
  "strict": {
   "method": "strict 来自拉丁语 stringere(拉紧) → 把规则拉得紧紧的 → 严格的"
@@ -3657,8 +3937,14 @@
  "superb": {
   "method": "联想：super(超级) 级别的好 → 极好的，华丽的，极度的"
  },
+ "supermarket": {
+  "method": "super-（超级）+ market（市场），1933 年美式英语新造词：超级市场。"
+ },
  "superstition": {
   "method": "super(在上) ＋ stit(站) ＋ ion → 凌驾理性之上 → 迷信"
+ },
+ "supper": {
+  "method": "supper 与 soup（汤）同源——由表示「汤」的古法语 sope 而来，晚餐先喝汤。"
  },
  "surplus": {
   "forms": {
@@ -3691,6 +3977,12 @@
  },
  "sword": {
   "method": "联想：sword 的 w 不发音，读 /sɔːd/；古英语 sweord 与德语 Schwert 同源，就是刀剑。"
+ },
+ "symbolic": {
+  "method": "symbol（符号）+ -ic（……的）→ 符号的；用符号代表某物 → 象征性的。"
+ },
+ "sympathetic": {
+  "method": "sym-（共同）+ pathy（感受）+-etic：能与人共同感受 → 同情的"
  },
  "symposium": {
   "method": "sym(一起) ＋ pos(饮) ＋ ium → 一起饮酒的聚会 → 讨论会，专题报告会"
@@ -3741,6 +4033,9 @@
  },
  "temporal": {
   "method": "拉丁 tempus(时间) ＋ -al → 时间的、暂时的；另一同形词源自 tempora(太阳穴)，故也指颞的"
+ },
+ "tender": {
+  "method": "来自拉丁语 tener（柔软、娇嫩）→ 嫩的、柔软的；由物及人，引申为温柔的、脆弱的。"
  },
  "tennis": {
   "forms": {}
@@ -3839,6 +4134,15 @@
  "toilet": {
   "method": "法语 toilette(小块布，toile 的指小词) → 梳妆用布 → 梳妆 → 厕所"
  },
+ "tolerate": {
+  "method": "拉丁 tolerare 意为「忍受、承担」，与古英语 þolian（忍耐）同源 → 容忍、容许",
+  "trans": [
+   {
+    "pos": "vt",
+    "cn": "容忍，忍受，容许"
+   }
+  ]
+ },
  "topple": {
   "method": "top(顶) ＋ le(反复动词后缀) → 顶部反复翻倒 → 倒塌；推翻，颠覆"
  },
@@ -3878,6 +4182,9 @@
  },
  "tread": {
   "method": "联想：古英语 tredan 即「踩踏」 → 踏、步态；楼梯所踩之级 → 梯级；鞋底"
+ },
+ "treasure": {
+  "method": "经古法语 tresor 来自拉丁 thesaurus，再溯至希腊语 thesauros（宝库）：宝库中的财物即宝物；同源词 thesaurus 仍指宝库。"
  },
  "treasury": {
   "method": "treasure(财宝) ＋ y → 放财宝的地方 → 国库"
@@ -3923,6 +4230,9 @@
  },
  "trunk": {
   "method": "拉丁 truncus(树干；被砍断的) → 树干、躯干；古法语 tronc 也指施舍箱 → 箱子"
+ },
+ "tumor": {
+  "method": "词根 *tewh₂-「膨胀」→ 肿起来的块 → 肿块、肿瘤；拉丁 tumor 本义就是「肿胀」。"
  },
  "tune": {
   "method": "中古英语 tune 是 tone 的变体，源自拉丁 tonus、希腊 tonos「音调」→ 曲调、调音。"
@@ -4073,6 +4383,12 @@
  "vow": {
   "method": "词源：拉丁 vōtum(承诺、誓言)、vovēre(发誓) → 誓约，誓言"
  },
+ "wagon": {
+  "method": "源自荷兰语 wagen，与 way（路）、weigh（运载）同源：在路上运货的车 → 四轮马车、货车。"
+ },
+ "waist": {
+  "method": "一般认为源自古英语 *wæst（生长、身材），与 wax（增大）同源：长身体的那一段 → 腰"
+ },
  "waive": {
   "method": "源自古法语 waif(被遗弃之物) → 任其流落 → 放弃、不坚持要求、推迟考虑；与 wave(挥手) 同音不同源"
  },
@@ -4091,6 +4407,9 @@
  "wealthy": {
   "method": "wealth(财富) ＋ -y(形容词后缀) → 拥有财富的 → 富的，富裕的"
  },
+ "whale": {
+  "method": "联想：whale 读音近似 wail（哀号），想象鲸鱼在海中发出低沉的哀号 → 鲸。"
+ },
  "wharf": {
   "method": "词源：古英语 hwearf(土堤、岸) → 船靠岸装卸的地方 → 码头"
  },
@@ -4099,6 +4418,9 @@
  },
  "whereby": {
   "method": "where(由此) ＋ by(凭借) → 凭此；借以，由于"
+ },
+ "whip": {
+  "method": "来自中古英语 whippen（猛挥、抽打），与中古荷兰语 wippen（摆动）同源；挥鞭抽打 → 鞭子、鞭打。"
  },
  "whisky": {
   "method": "词源：苏格兰盖尔语 uisge-beatha“生命之水”（uisge 水 + beatha 生命），是拉丁 aqua vitae 的仿译→威士忌。"
@@ -4139,8 +4461,14 @@
  "wither": {
   "method": "词源：wither 与 weather(天气) 同源，经风吹日晒而干枯 → 枯萎，凋谢"
  },
+ "wolf": {
+  "method": "源自原始印欧语 *wĺ̥kʷos，与 lupus（狼）同源；w 像狼露出的两排尖牙。"
+ },
  "wool": {
   "method": "谐音『捂』：羊毛、毛线织成衣物捂在身上保暖；wool 就是羊毛、毛线。"
+ },
+ "workforce": {
+  "method": "work（工作）+ force（人力、力量）→ 投入工作的人力 → 劳动力、职工总数。"
  },
  "wound": {
   "method": "联想：读 /wuːnd/ 像疼得“呜”一声 → 创伤，伤口；与 wind 的过去式同形但读音不同"
@@ -4183,6 +4511,9 @@
  },
  "zeal": {
   "method": "词源：希腊语 zelos(热衷、嫉妒)，与 jealous 同源 → 热心、热衷、热诚"
+ },
+ "zero": {
+  "method": "经意大利语借自阿拉伯语 ṣifr（空、无），同源词 cipher 也有「零」义 → 零"
  },
  "zigzag": {
   "method": "联想：字母 Z 连写两遍 zig-zag，就是来回折的 Z 字形 → 曲折线条，Z 字形道路"
