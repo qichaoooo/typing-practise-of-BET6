@@ -24,6 +24,9 @@
    }
   ]
  },
+ "aide": {
+  "method": "aid(帮助) ＋ e → 助手"
+ },
  "am": {
   "trans": [
    {
@@ -34,6 +37,9 @@
  },
  "an": {
   "forms": {}
+ },
+ "audit": {
+  "method": "aud(听) ＋ it → 听账 → 审计"
  },
  "automobile": {
   "trans": [
@@ -58,6 +64,9 @@
     "cn": "候补的，支持的"
    }
   ]
+ },
+ "bishop": {
+  "method": "epi(在上) ＋ scop(看) → 在上面看的人 → 主教，监督者"
  },
  "break": {
   "trans": [
@@ -107,8 +116,14 @@
    "3": "cans"
   }
  },
+ "celebrity": {
+  "method": "celebr(庆祝，闻名) ＋ ity → 被大家庆祝的人 → 名人"
+ },
  "chairperson": {
   "phonetic": ""
+ },
+ "chamber": {
+  "method": "camera(拱顶房间) → chamber 室，房间，枪膛"
  },
  "champion": {
   "trans": [
@@ -121,6 +136,9 @@
     "cn": "保卫，拥护"
    }
   ]
+ },
+ "chancellor": {
+  "method": "cancell(栅栏) ＋ or(人) → 守在栅栏边办事的人 → 大臣，校长"
  },
  "choice": {
   "trans": [
@@ -189,6 +207,9 @@
    }
   ]
  },
+ "cricket": {
+  "method": "拟声：crick(咔嗒) ＋ et(小) → 会叫的小虫 → 蟋蟀；板球"
+ },
  "customs": {
   "forms": {}
  },
@@ -207,6 +228,12 @@
     "cn": "删除"
    }
   ]
+ },
+ "discourse": {
+  "method": "dis(分开) ＋ cours(跑) → 话题跑来跑去 → 谈话，论述"
+ },
+ "dividend": {
+  "method": "divid(分) ＋ end → 要被分的东西 → 被除数，股利"
  },
  "downstairs": {
   "forms": {}
@@ -321,6 +348,12 @@
  "fortnight": {
   "method": "fourteen nights → 十四夜 → 两星期"
  },
+ "galaxy": {
+  "method": "galax(乳) ＋ y → 乳白色的河 → 银河"
+ },
+ "garlic": {
+  "method": "gar(矛) ＋ lic(韭葱) → 叶子像矛的葱 → 大蒜"
+ },
  "gasoline": {
   "trans": [
    {
@@ -416,6 +449,9 @@
    }
   ]
  },
+ "jack": {
+  "method": "联想：Jack(杰克)是常见男子名，像万能帮手 → 千斤顶、插座、男人"
+ },
  "jazz": {
   "forms": {
    "i": "jazzing",
@@ -454,6 +490,12 @@
     "cn": "实验室，研究室，化工厂"
    }
   ]
+ },
+ "lad": {
+  "method": "联想：lad 与 boy 押韵 → 少年，家伙"
+ },
+ "lawsuit": {
+  "method": "law(法律) ＋ suit(诉讼) → 诉讼"
  },
  "legacy": {
   "method": "leg(送，遗留) ＋ acy → 传下来的东西 → 遗产"
@@ -635,6 +677,12 @@
    }
   ]
  },
+ "pant": {
+  "method": "联想：pant 像喘气声“喷、喷” → 喘息"
+ },
+ "parish": {
+  "method": "para(旁边) ＋ oikos(家) → 住在旁边的一群人 → 教区"
+ },
  "path": {
   "trans": [
    {
@@ -667,6 +715,9 @@
    "s": "picnics"
   }
  },
+ "plaintiff": {
+  "method": "plaint(抱怨，控诉) ＋ iff(人) → 提出控诉的人 → 原告"
+ },
  "politics": {
   "forms": {}
  },
@@ -684,6 +735,12 @@
     "cn": "使...有力量，供以动力，激励"
    }
   ]
+ },
+ "practitioner": {
+  "method": "联想：practice(实践) ＋ ioner(人) → 实践的人 → 从业者"
+ },
+ "presumably": {
+  "method": "presume(推测) ＋ ably(可…地) → 可推测地 → 大概"
  },
  "print": {
   "trans": [
@@ -837,6 +894,9 @@
    }
   ]
  },
+ "snap": {
+  "method": "拟声：snap 像“啪”的一声 → 猛咬，突然折断"
+ },
  "sneak": {
   "trans": [
    {
@@ -852,6 +912,9 @@
     "cn": "暗中进行的"
    }
   ]
+ },
+ "solicitor": {
+  "method": "solicit(请求，招揽) ＋ or(人) → 替人请求/办事的人 → 事务律师"
  },
  "sort": {
   "trans": [
@@ -873,6 +936,9 @@
    }
   ]
  },
+ "sue": {
+  "method": "sue 与 suit 同源，跟着追讨 → 起诉，请求"
+ },
  "suicide": {
   "method": "sui(自己) ＋ cide(杀) → 自己杀自己 → 自杀"
  },
@@ -883,6 +949,9 @@
  },
  "syndrome": {
   "method": "syn(一起) ＋ drome(跑) → 一起出现的一组症状 → 综合征"
+ },
+ "tactic": {
+  "method": "takt(排列，排兵布阵) ＋ ic → 战术"
  },
  "telecommunications": {
   "forms": {}
@@ -926,8 +995,14 @@
    }
   ]
  },
+ "tournament": {
+  "method": "tourn(转) ＋ ament → 骑马转圈比武 → 锦标赛"
+ },
  "transition": {
   "method": "trans(穿过) ＋ it(走) ＋ ion → 走过去 → 过渡，转变"
+ },
+ "treasury": {
+  "method": "treasure(财宝) ＋ y → 放财宝的地方 → 国库"
  },
  "tree": {
   "trans": [
