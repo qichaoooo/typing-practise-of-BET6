@@ -7204,7 +7204,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "con(一起) ＋ ced(走) ＋ e → 一起退一步 → 让步",
    "family": [],
    "synonyms": [
     {
@@ -25224,7 +25224,7 @@
      "cn": "肾病综合征；肾病症候群"
     }
    ],
-   "method": "",
+   "method": "syn(一起) ＋ drome(跑) → 一起出现的一组症状 → 综合征",
    "family": [],
    "synonyms": [],
    "examples": [
@@ -90587,7 +90587,7 @@
      "cn": "[电]转移温度"
     }
    ],
-   "method": "",
+   "method": "trans(穿过) ＋ it(走) ＋ ion → 走过去 → 过渡，转变",
    "family": [
     {
      "pos": "adj",
@@ -398780,7 +398780,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "civ(公民) ＋ ic → 公民的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -450724,7 +450724,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "en(在...上) ＋ dors(背) ＋ e → 在背面签字 → 背书，支持",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -453575,7 +453575,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "equ(相等) ＋ ity → 公平，公正",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -470361,7 +470361,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fisc(国库) ＋ al → 国库的 → 财政的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -477984,7 +477984,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fourteen nights → 十四夜 → 两星期",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -519832,7 +519832,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "indi(在内) ＋ gen(出生) ＋ ous → 本地出生的 → 本土的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -529412,7 +529412,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "judic(判断) ＋ ial → 审判的 → 司法的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -530398,7 +530398,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "juris(法律) ＋ dict(说) ＋ ion → 说法律的权力 → 司法权，管辖权",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -540561,7 +540561,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "leg(送，遗留) ＋ acy → 传下来的东西 → 遗产",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -545257,7 +545257,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "lingu(语言) ＋ istic → 语言的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -555659,7 +555659,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "man(手) ＋ date(给) → 亲手交给 → 命令，授权",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -564025,7 +564025,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "meta(改变) ＋ phor(带) → 把意思带到别处 → 隐喻",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -624264,7 +624264,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "port(带) ＋ folio(纸) → 带着纸张的包 → 公文包",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -632027,7 +632027,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pro(向前) ＋ fil(线) ＋ e → 前面的轮廓线 → 侧面，轮廓",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -670356,7 +670356,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "scen(舞台) ＋ ario → 舞台上的情节 → 剧本，情景",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -723041,7 +723041,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sui(自己) ＋ cide(杀) → 自己杀自己 → 自杀",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -767393,7 +767393,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "vacc(牛) ＋ ine → 牛痘疫苗 → 疫苗",
    "family": [],
    "synonyms": [],
    "examples": [],

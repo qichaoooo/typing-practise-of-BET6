@@ -138,6 +138,12 @@
    }
   ]
  },
+ "civic": {
+  "method": "civ(公民) ＋ ic → 公民的"
+ },
+ "concede": {
+  "method": "con(一起) ＋ ced(走) ＋ e → 一起退一步 → 让步"
+ },
  "consensus": {
   "forms": {
    "s": "consensuses"
@@ -232,6 +238,12 @@
    }
   ]
  },
+ "endorse": {
+  "method": "en(在...上) ＋ dors(背) ＋ e → 在背面签字 → 背书，支持"
+ },
+ "equity": {
+  "method": "equ(相等) ＋ ity → 公平，公正"
+ },
  "erase": {
   "trans": [
    {
@@ -279,6 +291,9 @@
  "fireworks": {
   "forms": {}
  },
+ "fiscal": {
+  "method": "fisc(国库) ＋ al → 国库的 → 财政的"
+ },
  "for": {
   "trans": [
    {
@@ -302,6 +317,9 @@
     "cn": "在最前"
    }
   ]
+ },
+ "fortnight": {
+  "method": "fourteen nights → 十四夜 → 两星期"
  },
  "gasoline": {
   "trans": [
@@ -387,6 +405,9 @@
    }
   ]
  },
+ "indigenous": {
+  "method": "indi(在内) ＋ gen(出生) ＋ ous → 本地出生的 → 本土的"
+ },
  "influenza": {
   "trans": [
    {
@@ -403,6 +424,12 @@
    "d": "jazzed",
    "s": "jazzes"
   }
+ },
+ "judicial": {
+  "method": "judic(判断) ＋ ial → 审判的 → 司法的"
+ },
+ "jurisdiction": {
+  "method": "juris(法律) ＋ dict(说) ＋ ion → 说法律的权力 → 司法权，管辖权"
  },
  "kill": {
   "trans": [
@@ -428,6 +455,9 @@
    }
   ]
  },
+ "legacy": {
+  "method": "leg(送，遗留) ＋ acy → 传下来的东西 → 遗产"
+ },
  "liberal": {
   "trans": [
    {
@@ -440,8 +470,14 @@
    }
   ]
  },
+ "linguistic": {
+  "method": "lingu(语言) ＋ istic → 语言的"
+ },
  "logistics": {
   "forms": {}
+ },
+ "mandate": {
+  "method": "man(手) ＋ date(给) → 亲手交给 → 命令，授权"
  },
  "mathematics": {
   "trans": [
@@ -470,6 +506,9 @@
     "cn": "备忘录，外交备忘录，交易备忘录"
    }
   ]
+ },
+ "metaphor": {
+  "method": "meta(改变) ＋ phor(带) → 把意思带到别处 → 隐喻"
  },
  "midst": {
   "trans": [
@@ -631,6 +670,9 @@
  "politics": {
   "forms": {}
  },
+ "portfolio": {
+  "method": "port(带) ＋ folio(纸) → 带着纸张的包 → 公文包"
+ },
  "power": {
   "trans": [
    {
@@ -654,6 +696,9 @@
     "cn": "打印，印刷，铭记，留印记于，用印刷体写"
    }
   ]
+ },
+ "profile": {
+  "method": "pro(向前) ＋ fil(线) ＋ e → 前面的轮廓线 → 侧面，轮廓"
  },
  "prompt": {
   "trans": [
@@ -716,6 +761,9 @@
     "cn": "代替，替换，放回，归还"
    }
   ]
+ },
+ "scenario": {
+  "method": "scen(舞台) ＋ ario → 舞台上的情节 → 剧本，情景"
  },
  "set": {
   "trans": [
@@ -825,10 +873,16 @@
    }
   ]
  },
+ "suicide": {
+  "method": "sui(自己) ＋ cide(杀) → 自己杀自己 → 自杀"
+ },
  "surplus": {
   "forms": {
    "s": "surpluses"
   }
+ },
+ "syndrome": {
+  "method": "syn(一起) ＋ drome(跑) → 一起出现的一组症状 → 综合征"
  },
  "telecommunications": {
   "forms": {}
@@ -872,6 +926,9 @@
    }
   ]
  },
+ "transition": {
+  "method": "trans(穿过) ＋ it(走) ＋ ion → 走过去 → 过渡，转变"
+ },
  "tree": {
   "trans": [
    {
@@ -899,6 +956,9 @@
     "cn": "作为代表，测定类型，用打字机打"
    }
   ]
+ },
+ "vaccine": {
+  "method": "vacc(牛) ＋ ine → 牛痘疫苗 → 疫苗"
  },
  "velvet": {
   "trans": [
