@@ -526,6 +526,14 @@
  "brush": {
   "method": "古法语 broisse ← 日耳曼语 *bursti(鬃毛) → 鬃毛制的刷子 → 刷子，毛笔，争吵"
  },
+ "bucket": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "桶"
+   }
+  ]
+ },
  "buddy": {
   "method": "联想：可能来自小孩把 brother（兄弟）说成的 bruddy，也可能源自 butty（伙伴）：好朋友、伙伴。"
  },
@@ -1801,6 +1809,22 @@
  "gleam": {
   "method": "词根 *ǵʰley-(发光) → 古英语 glǣm(光亮) → 微光一闪 → 闪亮，闪烁"
  },
+ "glimpse": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "一瞥，一闪"
+   },
+   {
+    "pos": "vi",
+    "cn": "投以一瞥"
+   },
+   {
+    "pos": "vt",
+    "cn": "瞥见"
+   }
+  ]
+ },
  "glory": {
   "method": "联想：拉丁语 gloria 意为荣耀、名声；古罗马人追求的光荣，引申为壮丽、繁荣。"
  },
@@ -2203,6 +2227,9 @@
    }
   ]
  },
+ "kilometre": {
+  "phonetic": "'kiləmi:tə(r)"
+ },
  "knight": {
   "method": "古英语 cniht 本指少年、侍从，后指骑士 → 骑士，爵士（k 不发音）"
  },
@@ -2286,6 +2313,18 @@
  },
  "lieutenant": {
   "method": "lieu(位置) ＋ tenant(持有者) → 代替他人掌权者 → 陆军中尉；海军上尉"
+ },
+ "lightning": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "闪电"
+   },
+   {
+    "pos": "adj",
+    "cn": "闪电的"
+   }
+  ]
  },
  "lime": {
   "method": "词源：古英语 līm(胶) 源于「涂抹」，故有石灰、粘鸟胶；酸橙另来自阿拉伯语 līma"
@@ -2565,6 +2604,22 @@
  },
  "monarchy": {
   "method": "mon(单一) ＋ archy(统治) → 一人统治 → 君主政体，君主国"
+ },
+ "monkey": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "猴子，打桩锤"
+   },
+   {
+    "pos": "vi",
+    "cn": "淘气，胡闹"
+   },
+   {
+    "pos": "vt",
+    "cn": "嘲弄"
+   }
+  ]
  },
  "monotony": {
   "method": "mono(单一) ＋ ton(音调) ＋ y → 只有一个音调 → 单调，缺乏变化"
@@ -3468,6 +3523,18 @@
  },
  "saddle": {
   "method": "联想：骑马时坐在马背上的那个座位 → 鞍，马鞍，车座"
+ },
+ "saint": {
+  "trans": [
+   {
+    "pos": "n",
+    "cn": "圣徒，圣人"
+   },
+   {
+    "pos": "adj",
+    "cn": "神圣的"
+   }
+  ]
  },
  "saleable": {
   "method": "sale(销售) ＋ -able(能…的) → 能卖出去的 → 适合销售的"
