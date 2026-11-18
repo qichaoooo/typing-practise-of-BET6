@@ -70791,7 +70791,7 @@
      "cn": "[古语]从此 [亦作 henceforward]"
     }
    ],
-   "method": "",
+   "method": "hence(从此) ＋ forth(向前) → 从此向前 → 从今以后，从此以后",
    "family": [
     {
      "pos": "adv",
@@ -82030,7 +82030,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "de-(向下) ＋ still(滴落，拉丁 stillare) → 一滴滴落下 → 蒸馏；提炼",
    "family": [
     {
      "pos": "n",
@@ -89314,7 +89314,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "lubric(滑，拉丁 lubricus) ＋ -ate → 使变滑 → 润滑",
    "family": [
     {
      "pos": "adj",
@@ -140394,7 +140394,7 @@
      "cn": "[化]转化糖"
     }
    ],
-   "method": "",
+   "method": "in(向内) ＋ vert(转，拉丁 vertere) → 向里翻转 → 使倒转，使倒置",
    "family": [
     {
      "pos": "adj",
@@ -240700,7 +240700,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "aisthet(感知，源自希腊 aisthētikós) ＋ -ic → 关乎感官感知 → 审美的，美学的",
    "family": [
     {
      "pos": "adj",
@@ -328716,7 +328716,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "quart(第四，四分之一，拉丁 quartus) → 四分之一加仑 → 夸脱",
    "family": [
     {
      "pos": "n",
@@ -333638,7 +333638,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ab-(ad，向) ＋ brev(短，拉丁 brevis) ＋ iation → 使变短 → 缩写，缩写词",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -334039,7 +334039,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ab(不/离开) ＋ ori(产生，拉丁 orīrī) ＋ t → 未能产生 → 流产，中途失败",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -334427,7 +334427,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a(在) ＋ breast(胸) → 胸与胸齐平 → 并肩地，并列地",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -335267,7 +335267,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ac(＝ad，向) ＋ claim(喊，拉丁 clāmāre) → 向人连声喊 → 喝彩，欢呼，赞同",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -337153,7 +337153,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "acu(针，拉丁 acus) ＋ puncture(刺，穿刺) → 用针刺 → 针刺，针刺疗法",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -339220,7 +339220,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "af(＝ad，向) ＋ fix(固定) → 固定上去 → 粘贴，附加；词缀",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -340303,7 +340303,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ag(驱动，拉丁 agere) ＋ it ＋ ate(反复) → 反复驱动 → 搅动，使激动",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -341060,7 +341060,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：ail 与 ill(生病)只差一个字母；生病使人苦恼 → 使苦恼，生病",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -343527,7 +343527,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "al(＝ad，向) ＋ lure(诱饵) → 用诱饵把…引过来 → 引诱，吸引",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -343892,7 +343892,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a(在…上，古诺斯语 á) ＋ loft(天空、高处) → 在高处，在上",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -345353,7 +345353,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ami(爱，拉丁 amō) ＋ able(可…的) → 可爱的 → 亲切的，和蔼可亲的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -345892,7 +345892,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ana(按照，类似) ＋ logue(比例) → 按比例对应之物 → 类似物",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -346898,7 +346898,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "anim(呼吸、灵魂，拉丁 anima) ＋ ate → 给…注入气息 → 使有生气，赋予生命",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -347103,7 +347103,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "an(＝ad，向) ＋ nex(绑，拉丁 nectere) → 绑到主体上 → 附加物；并吞",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -348130,7 +348130,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ant-(相反，希腊 anti-) ＋ onym(名称、词) → 意思相反的词 → 反义词",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -350288,7 +350288,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "arbitr(仲裁人，拉丁 arbiter) ＋ -ate → 由仲裁人裁断 → 仲裁，公断",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -353981,7 +353981,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "a ＋ stray(走离) → 走岔了路 → 迷途地，入歧途地",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -356360,7 +356360,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "auxili(帮助) ＋ ary → 提供帮助的 → 辅助的，辅助者；助动词",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -356493,7 +356493,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：a ＋ venge，尾部 venge 与 revenge(报复)相同 → 为…报复，报仇",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -361213,7 +361213,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "baro(重、压，希腊语 baros 重量) ＋ meter(测量) → 测量大气压力的仪器 → 气压计",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -367016,7 +367016,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "be(周围) ＋ siege(围攻) → 围在四周 → 围攻，包围",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -370312,7 +370312,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "black(黑) ＋ mail(古义：租金、贡金) → 暗中交纳的黑钱 → 勒索",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -370919,7 +370919,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 blǣċan＝使变白，与 bleak(苍白的) 同源 → 漂白",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -375199,7 +375199,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：botanical(植物的)去掉 -ical 即 botany；如 botanical garden 植物园 → 植物学",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -390817,7 +390817,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "cole(甘蓝，源自拉丁 caulis) ＋ flower(花) → 甘蓝的花球 → 花椰菜",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -408279,7 +408279,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "con(共同、加强) ＋ ceit(拿、取，拉丁 capere) → 心里拿定的想法 → 自负，空想",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -409129,7 +409129,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "con(共同) ＋ dol(痛苦) ＋ ence → 共同分担痛苦 → 哀悼，吊唁",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -409869,7 +409869,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "con(共同) ＋ greg(羊群，拉丁 grex) ＋ ate → 聚成一群 → 集合，聚集",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -410589,7 +410589,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "consul(领事) ＋ ate(表职位或机构的词尾) → 领事的职位、驻地 → 领事馆",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -414630,7 +414630,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "cosmo(世界) ＋ polit(公民) ＋ an → 世界公民 → 世界性的，不偏狭的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -415946,7 +415946,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "counter(相反、对着) ＋ feit(做，拉丁 facere) → 对着真品做 → 赝品，伪造",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -416319,7 +416319,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "coup(打击) ＋ d'(的) ＋ état(国家) → 对国家的一击 → 政变",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -426463,7 +426463,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dead(死的、不动) ＋ lock(锁) → 锁死转不动 → 僵局，停顿",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -429598,7 +429598,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "de(向下、加强) ＋ lud(玩弄、嘲弄，拉丁 ludere) → 把人当玩物 → 迷惑，蛊惑",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -431018,7 +431018,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "de-(向下) ＋ preci(价格，拉丁 pretium) ＋ -ate → 价格下走 → 贬值",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -431367,7 +431367,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "de(去除) ＋ regulate(管制) → 去掉管制 → 解除管制",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -431772,7 +431772,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "de(彻底) ＋ sol(孤单，同 solo) ＋ ate → 彻底孤零零 → 荒凉的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -435711,7 +435711,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dis(分开) ＋ cord(心，拉丁 cor) → 心不在一处 → 不和，不调和",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -438606,7 +438606,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dog(希腊 dokeîn：认为) ＋ ma(名词后缀) → 被视为正确的信条 → 教条",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -440125,7 +440125,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "down(向下) ＋ grade(等级) → 把等级往下调 → 降低，贬低",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -448673,7 +448673,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "e-(向外) ＋ mancip(占有、转让，拉丁 manceps) ＋ -ate → 放出所有权 → 释放，解放",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -476795,7 +476795,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fore-(预先) ＋ tell(说) → 预先说出 → 预言，预告",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -477864,7 +477864,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fort(强壮) ＋ ify(使…) → 使变强壮 → 加强，设要塞于",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -488764,7 +488764,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "gloss(舌头→语言、注解，希腊语 glossa) ＋ ary(集合) → 词语注解的集合 → 术语集，词表",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -498444,7 +498444,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hand(手) ＋ i ＋ craft(技艺) → 手上的技艺 → 手工艺，手艺",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -505847,7 +505847,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hibern(冬天，拉丁 hibernus) ＋ -ate → 在冬天蛰伏 → 冬眠，过冬",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -516204,7 +516204,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "il(＝in，不) ＋ liter(字母，拉丁 littera) ＋ ate → 不识字 → 文盲",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -517735,7 +517735,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in(在…中) ＋ promptu(现成，备好) → 现成拿出 → 即席的，即兴曲",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -518277,7 +518277,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：in(里面) ＋ born(出生) → 出生时就带在里面的 → 天生的，先天的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -518944,7 +518944,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：in(在…中) ＋ debt(债务) ＋ ed → 处在债务中 → 负债的；引申为受惠的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -540999,7 +540999,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "len(柔软、缓和，拉丁 lenis) ＋ ient → 心变软 → 宽大的，温和的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -544608,7 +544608,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "lime(石灰) ＋ light(光) → 石灰灯照亮的舞台 → 石灰光，引人注目",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -549878,7 +549878,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "long(长) ＋ itude(名词后缀) → 长度 → 经度(东西方向量出的“长度”)",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -565097,7 +565097,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "mid(与…一起，古英语 mid) ＋ wife(女人) → 陪在产妇身边的女人 → 助产士，接生婆",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -566232,7 +566232,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "mind(思想) ＋ set(固定的设定) → 思想定势 → 心态，精神状态",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -570280,7 +570280,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "mono(单一) ＋ ton(音调) ＋ y → 只有一个音调 → 单调，缺乏变化",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -584329,7 +584329,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：oar 与 row(划船) 只差首字母，划船靠桨 → 桨，桨手",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -584907,7 +584907,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ob(在…前) ＋ sess(坐，拉丁 sedere) → 坐在面前不走、围困 → 使困扰，迷住",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -590000,7 +590000,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "opt(看，希腊语 optos 可见) ＋ ic(形容词后缀) → 与看有关的 → 眼睛的，视觉的，光学的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -598478,7 +598478,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pan(全) ＋ orama(景象) → 全部景象 → 全景，全貌",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -602260,7 +602260,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "passer(经过者) ＋ by(旁边) → 从旁边经过的人 → 过路人，行人",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -605315,7 +605315,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：peck 与 pick(啄、捡)同源，鸟用尖嘴一下下啄 → 啄食，啄痕；配克是干量单位",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -605709,7 +605709,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：pi:p 像小鸟吱吱叫；也指偷偷瞄一眼 → 偷看，一瞥，吱吱声",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -609023,7 +609023,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "per(穿过) ＋ secut(跟随) ＋ e → 一路追着不放 → 迫害，困扰",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -610247,7 +610247,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "petro-(岩石、石油，希腊 petra) ＋ chemical(化学的) → 石化的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -623971,7 +623971,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：por- 音近 pot(锅)，在锅里熬得稠稠的 → 粥，糊",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -628328,7 +628328,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pre-(预先) ＋ occupy(占据) → 先占据 → 抢先占领；使全神贯注",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -633250,7 +633250,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "proof(检验) ＋ read(读) → 读一遍以检验 → 校对，校正",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -634738,7 +634738,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "proxim(最近，拉丁 proximus) ＋ -ate → 最近的，将临的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -651093,7 +651093,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re-(反复) ＋ noun(名字) → 名字被反复提起 → 名声，声望",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -652402,7 +652402,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re(向后) ＋ press(压) → 往回压 → 镇压，抑制",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -654760,7 +654760,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re(回) ＋ tali(拉丁 talis：同样的) ＋ ate → 以同样方式回敬 → 报复",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -669104,7 +669104,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sarc(肉，希腊 sárx) ＋ asm → 像撕肉般刺痛人的话 → 挖苦，讽刺",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -682317,7 +682317,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ship(船) ＋ yard(场地) → 造船、修船的场地 → 造船厂",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -694603,7 +694603,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：snob 中藏着 noble(贵族)的影子——一心攀附贵族的人 → 势利的人，假内行",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -708417,7 +708417,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "stagn(池塘，拉丁 stagnum) ＋ -ate → 池水不流动 → 停滞，淤塞",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -709124,7 +709124,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：stam- 模仿结巴时重复卡顿的音 → 口吃，结结巴巴地说",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -710098,7 +710098,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "stand(站) ＋ by(在旁边) → 站在旁边随时待命 → 备用品，可依靠的人",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -730972,7 +730972,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tact(触摸) → 待人接物有“手感” → 机智，老练",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -747789,7 +747789,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：toil 与 till(耕种) 形近——耕种是苦活 → 辛苦，苦工；亦指罗网",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -755796,7 +755796,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "trib(部落) ＋ une → 部落首领 → 护民官，军团指挥官（另义“讲坛”）",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -757276,7 +757276,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "trop(转，希腊 tropē) ＋ -ic → 太阳转身处 → 回归线",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -761407,7 +761407,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ultra(超越，在…之外) → 超出常规 → 过分的，极端的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -779911,7 +779911,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：古英语 hwearf(土堤、岸) → 船靠岸装卸的地方 → 码头",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -782314,7 +782314,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "whole(完好) ＋ some(…的) → 完好健全的 → 有益健康的",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -792287,7 +792287,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：字母 Z 连写两遍 zig-zag，就是来回折的 Z 字形 → 曲折线条，Z 字形道路",
    "family": [],
    "synonyms": [],
    "examples": [],

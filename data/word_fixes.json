@@ -30,11 +30,26 @@
    }
   ]
  },
+ "abbreviation": {
+  "method": "ab-(ad，向) ＋ brev(短，拉丁 brevis) ＋ iation → 使变短 → 缩写，缩写词"
+ },
  "abide": {
   "method": "a-(加强) + bide(停留、等待) → 留下来 → 停留；遵守；忍受"
  },
+ "abort": {
+  "method": "ab(不/离开) ＋ ori(产生，拉丁 orīrī) ＋ t → 未能产生 → 流产，中途失败"
+ },
+ "abreast": {
+  "method": "a(在) ＋ breast(胸) → 胸与胸齐平 → 并肩地，并列地"
+ },
+ "acclaim": {
+  "method": "ac(＝ad，向) ＋ claim(喊，拉丁 clāmāre) → 向人连声喊 → 喝彩，欢呼，赞同"
+ },
  "activate": {
   "method": "active(活动的) ＋ -ate(使…) → 使活动起来"
+ },
+ "acupuncture": {
+  "method": "acu(针，拉丁 acus) ＋ puncture(刺，穿刺) → 用针刺 → 针刺，针刺疗法"
  },
  "advent": {
   "method": "源自拉丁 adventus(到达) → 来到，来临；advent calendar 即降临历"
@@ -42,14 +57,23 @@
  "adversary": {
   "method": "ad(向) ＋ vers(转) ＋ ary(人) → 转向你对面的人 → 敌手，对手"
  },
+ "affix": {
+  "method": "af(＝ad，向) ＋ fix(固定) → 固定上去 → 粘贴，附加；词缀"
+ },
  "afloat": {
   "method": "a(在) ＋ float(漂浮) → 在水上漂着 → 飘浮着的，在海上的"
  },
  "aftermath": {
   "method": "after(之后) ＋ math(割草) → 割草后再生之草 → 结果，后果"
  },
+ "agitate": {
+  "method": "ag(驱动，拉丁 agere) ＋ it ＋ ate(反复) → 反复驱动 → 搅动，使激动"
+ },
  "aide": {
   "method": "aid(帮助) ＋ e → 助手"
+ },
+ "ail": {
+  "method": "联想：ail 与 ill(生病)只差一个字母；生病使人苦恼 → 使苦恼，生病"
  },
  "airborne": {
   "method": "air(空气) ＋ borne(被携带) → 由空气携带 → 升空的，空运的，空降的"
@@ -72,8 +96,14 @@
  "allude": {
   "method": "ad(向) ＋ lud(玩，戏弄) → 朝着某处戏弄地指向 → 暗指，提及"
  },
+ "allure": {
+  "method": "al(＝ad，向) ＋ lure(诱饵) → 用诱饵把…引过来 → 引诱，吸引"
+ },
  "almighty": {
   "method": "al(全) ＋ might(力量) ＋ y → 拥有全部力量 → 万能的，全能的"
+ },
+ "aloft": {
+  "method": "a(在…上，古诺斯语 á) ＋ loft(天空、高处) → 在高处，在上"
  },
  "am": {
   "trans": [
@@ -86,14 +116,26 @@
  "amass": {
   "method": "a(ad 向) ＋ mass(一团，堆) → 堆成一团 → 积聚，堆积"
  },
+ "amiable": {
+  "method": "ami(爱，拉丁 amō) ＋ able(可…的) → 可爱的 → 亲切的，和蔼可亲的"
+ },
  "an": {
   "forms": {}
+ },
+ "analogue": {
+  "method": "ana(按照，类似) ＋ logue(比例) → 按比例对应之物 → 类似物"
  },
  "anecdote": {
   "method": "an-(不) ＋ ek-(出) ＋ dot(给，希腊 didónai) → 未公开的事 → 轶事，奇闻"
  },
  "anguish": {
   "method": "拉丁 angere(挤压) → angustus(狭窄) → 被紧紧挤压的痛 → 剧痛，痛苦"
+ },
+ "animate": {
+  "method": "anim(呼吸、灵魂，拉丁 anima) ＋ ate → 给…注入气息 → 使有生气，赋予生命"
+ },
+ "annex": {
+  "method": "an(＝ad，向) ＋ nex(绑，拉丁 nectere) → 绑到主体上 → 附加物；并吞"
  },
  "antagonism": {
   "method": "ant(相反) ＋ agon(竞赛) ＋ ism → 对着干 → 对立，敌对，敌意"
@@ -103,6 +145,9 @@
  },
  "antibiotic": {
   "method": "anti(反) + bio(生命，希腊语 bios) + tic → 抗生 → 抗生素"
+ },
+ "antonym": {
+  "method": "ant-(相反，希腊 anti-) ＋ onym(名称、词) → 意思相反的词 → 反义词"
  },
  "ape": {
   "method": "联想：ape 作动词是“模仿”，猿猴最会模仿人 → 无尾猿"
@@ -121,6 +166,9 @@
  },
  "apron": {
   "method": "词源：原作 napron，因 a napron 被误切分成 an apron；本义「小桌布」→ 围裙"
+ },
+ "arbitrate": {
+  "method": "arbitr(仲裁人，拉丁 arbiter) ＋ -ate → 由仲裁人裁断 → 仲裁，公断"
  },
  "arch": {
   "method": "arc(弓、弧) → 弓形 → 拱门，拱形"
@@ -158,6 +206,9 @@
  "assortment": {
   "method": "assort(按种类分配，法语 assortir) ＋ -ment → 分门别类的一批 → 分类，各种各样"
  },
+ "astray": {
+  "method": "a ＋ stray(走离) → 走岔了路 → 迷途地，入歧途地"
+ },
  "asylum": {
   "method": "a(不) ＋ syl(夺取) → 不可被夺走之地 → 庇护，收容所"
  },
@@ -180,6 +231,12 @@
     "cn": "汽车"
    }
   ]
+ },
+ "auxiliary": {
+  "method": "auxili(帮助) ＋ ary → 提供帮助的 → 辅助的，辅助者；助动词"
+ },
+ "avenge": {
+  "method": "联想：a ＋ venge，尾部 venge 与 revenge(报复)相同 → 为…报复，报仇"
  },
  "backup": {
   "trans": [
@@ -209,6 +266,9 @@
  "barn": {
   "method": "bere(大麦) ＋ ærn(房屋) → 存放大麦的房子 → 谷仓"
  },
+ "barometer": {
+  "method": "baro(重、压，希腊语 baros 重量) ＋ meter(测量) → 测量大气压力的仪器 → 气压计"
+ },
  "barracks": {
   "method": "联想：bar(横木) ＋ racks(架子) → 一排排木板床架 → 兵营，营房"
  },
@@ -236,6 +296,9 @@
  "beset": {
   "method": "be(在周围)＋set(放置) → 放在四周 → 围绕；困扰"
  },
+ "besiege": {
+  "method": "be(周围) ＋ siege(围攻) → 围在四周 → 围攻，包围"
+ },
  "beware": {
   "method": "be(处于) ＋ ware(警觉，同 aware) → 保持警觉 → 小心，谨防"
  },
@@ -247,6 +310,12 @@
  },
  "bishop": {
   "method": "epi(在上) ＋ scop(看) → 在上面看的人 → 主教，监督者"
+ },
+ "blackmail": {
+  "method": "black(黑) ＋ mail(古义：租金、贡金) → 暗中交纳的黑钱 → 勒索"
+ },
+ "bleach": {
+  "method": "古英语 blǣċan＝使变白，与 bleak(苍白的) 同源 → 漂白"
  },
  "bleak": {
   "method": "古英语 blāc(苍白) → 苍白荒凉 → 萧瑟的，荒凉的，阴冷的"
@@ -262,6 +331,9 @@
  },
  "bolster": {
   "method": "词源：古英语 bolster「长枕」→ 垫在身下支撑 → 支持；长枕"
+ },
+ "botany": {
+  "method": "联想：botanical(植物的)去掉 -ical 即 botany；如 botanical garden 植物园 → 植物学"
  },
  "bouquet": {
   "method": "bochet(小树林，古法语；源自法兰克语 *busk) → bouquet 花束；一丛花"
@@ -352,6 +424,9 @@
  },
  "casino": {
   "method": "casa(房子) ＋ -ino(小) → 小屋 → 聚会娱乐之处 → 赌场"
+ },
+ "cauliflower": {
+  "method": "cole(甘蓝，源自拉丁 caulis) ＋ flower(花) → 甘蓝的花球 → 花椰菜"
  },
  "celebrity": {
   "method": "celebr(庆祝，闻名) ＋ ity → 被大家庆祝的人 → 名人"
@@ -456,8 +531,14 @@
  "concede": {
   "method": "con(一起) ＋ ced(走) ＋ e → 一起退一步 → 让步"
  },
+ "conceit": {
+  "method": "con(共同、加强) ＋ ceit(拿、取，拉丁 capere) → 心里拿定的想法 → 自负，空想"
+ },
  "concurrent": {
   "method": "con(一起)＋curr(跑，拉丁 currere)＋ent → 一起跑 → 同时发生的"
+ },
+ "condolence": {
+  "method": "con(共同) ＋ dol(痛苦) ＋ ence → 共同分担痛苦 → 哀悼，吊唁"
  },
  "conducive": {
   "method": "con(一起)＋duc(引导，拉丁 ducere)＋ive → 引向某结果 → 有助于…的"
@@ -467,6 +548,9 @@
  },
  "confide": {
   "method": "con-(共同) ＋ fid(信任，拉丁 fidēre) ＋ -e → 托付给信任的人 → 吐露；委托"
+ },
+ "congregate": {
+  "method": "con(共同) ＋ greg(羊群，拉丁 grex) ＋ ate → 聚成一群 → 集合，聚集"
  },
  "connotation": {
   "method": "con(一起、附带) ＋ not(标记) ＋ ation → 附带的意义 → 内涵，含蓄"
@@ -478,6 +562,9 @@
  },
  "conspire": {
   "method": "con(共同) ＋ spir(呼吸) ＋ e → 同呼吸 → 共谋，阴谋"
+ },
+ "consulate": {
+  "method": "consul(领事) ＋ ate(表职位或机构的词尾) → 领事的职位、驻地 → 领事馆"
  },
  "contagious": {
   "method": "con(相互) ＋ tag(接触) ＋ ious → 一接触就传 → 触染性的，会蔓延的"
@@ -512,8 +599,14 @@
  "cosmetic": {
   "method": "cosm(秩序、装饰) + -etic → 用于修饰打扮 → 化妆品"
  },
+ "cosmopolitan": {
+  "method": "cosmo(世界) ＋ polit(公民) ＋ an → 世界公民 → 世界性的，不偏狭的"
+ },
  "counteract": {
   "method": "counter(反) ＋ act(行动) → 反向行动 → 抵消，中和，阻碍"
+ },
+ "counterfeit": {
+  "method": "counter(相反、对着) ＋ feit(做，拉丁 facere) → 对着真品做 → 赝品，伪造"
  },
  "country": {
   "trans": [
@@ -526,6 +619,9 @@
     "cn": "乡下的，农村的"
    }
   ]
+ },
+ "coup d'état": {
+  "method": "coup(打击) ＋ d'(的) ＋ état(国家) → 对国家的一击 → 政变"
  },
  "court": {
   "trans": [
@@ -617,6 +713,9 @@
    }
   ]
  },
+ "deadlock": {
+  "method": "dead(死的、不动) ＋ lock(锁) → 锁死转不动 → 僵局，停顿"
+ },
  "debris": {
   "method": "de-(分开) ＋ bris(破碎) → 破碎散开之物 → 碎片，残骸"
  },
@@ -637,6 +736,9 @@
  "delicacy": {
   "method": "delic(拉丁 delicatus 精美、娇嫩) ＋ acy(名词后缀) → 精致，微妙，精美食品"
  },
+ "delude": {
+  "method": "de(向下、加强) ＋ lud(玩弄、嘲弄，拉丁 ludere) → 把人当玩物 → 迷惑，蛊惑"
+ },
  "delusion": {
   "method": "de(彻底)＋lus(玩弄，拉丁 ludere)＋ion → 彻底戏弄人 → 欺骗，哄骗；引申为妄想"
  },
@@ -655,8 +757,17 @@
  "depot": {
   "method": "de(向下) ＋ pot(放置，拉丁语 depositum) → 把货物放下存放之处 → 仓库；车站，停车场"
  },
+ "depreciate": {
+  "method": "de-(向下) ＋ preci(价格，拉丁 pretium) ＋ -ate → 价格下走 → 贬值"
+ },
  "derail": {
   "method": "de(离开)＋rail(铁轨) → 使离开铁轨 → 出轨"
+ },
+ "deregulate": {
+  "method": "de(去除) ＋ regulate(管制) → 去掉管制 → 解除管制"
+ },
+ "desolate": {
+  "method": "de(彻底) ＋ sol(孤单，同 solo) ＋ ate → 彻底孤零零 → 荒凉的"
  },
  "deter": {
   "method": "de(离开) ＋ terr(使害怕) → 吓得人离开 → 制止，吓住，威慑"
@@ -685,6 +796,9 @@
  "disarm": {
   "method": "dis-(去除) ＋ arm(武器) → 拿走武器 → 解除武装，裁军；引申缓和局势"
  },
+ "discord": {
+  "method": "dis(分开) ＋ cord(心，拉丁 cor) → 心不在一处 → 不和，不调和"
+ },
  "discourse": {
   "method": "dis(分开) ＋ cours(跑) → 话题跑来跑去 → 谈话，论述"
  },
@@ -700,17 +814,26 @@
  "dissident": {
   "method": "dis(分开) ＋ sid(坐) ＋ ent → 分开坐 → 意见不同的，持不同政见的"
  },
+ "distill": {
+  "method": "de-(向下) ＋ still(滴落，拉丁 stillare) → 一滴滴落下 → 蒸馏；提炼"
+ },
  "dividend": {
   "method": "divid(分) ＋ end → 要被分的东西 → 被除数，股利"
  },
  "divine": {
   "method": "div(神，拉丁 divus) ＋ -ine(形容词) → 神的，神授的；引申为极好的"
  },
+ "dogma": {
+  "method": "dog(希腊 dokeîn：认为) ＋ ma(名词后缀) → 被视为正确的信条 → 教条"
+ },
  "dole": {
   "method": "dole(一份，分配；与 deal 同源) → 分给穷人的一份 → 救济，救济金"
  },
  "dough": {
   "method": "源自古日耳曼语 *daigaz「揉捏成的东西」，与「揉、塑形」同源 → 生面团"
+ },
+ "downgrade": {
+  "method": "down(向下) ＋ grade(等级) → 把等级往下调 → 降低，贬低"
  },
  "downstairs": {
   "forms": {}
@@ -759,6 +882,9 @@
  },
  "electoral": {
   "method": "elector(选举人) ＋ -al(形容词后缀) → 选举人的，选举的"
+ },
+ "emancipate": {
+  "method": "e-(向外) ＋ mancip(占有、转让，拉丁 manceps) ＋ -ate → 放出所有权 → 释放，解放"
  },
  "embargo": {
   "method": "em-(进入) ＋ bar(栏杆、障碍) ＋ -go → 用栏杆拦住港口 → 封港令，禁运"
@@ -845,6 +971,9 @@
  },
  "esteem": {
   "method": "联想：与 estimate 同源（拉丁 aestimare 估价）→ 把某人看得很高 → 尊敬，尊重"
+ },
+ "esthetic": {
+  "method": "aisthet(感知，源自希腊 aisthētikós) ＋ -ic → 关乎感官感知 → 审美的，美学的"
  },
  "etiquette": {
   "method": "法语 étiquette(标签) → 贴在宫廷的规矩标签 → 礼仪，礼节，成规"
@@ -960,8 +1089,14 @@
    }
   ]
  },
+ "foretell": {
+  "method": "fore-(预先) ＋ tell(说) → 预先说出 → 预言，预告"
+ },
  "forfeit": {
   "method": "for(越界/在外) ＋ fait(做) → 越界犯错受罚 → 罚金，没收物，丧失"
+ },
+ "fortify": {
+  "method": "fort(强壮) ＋ ify(使…) → 使变强壮 → 加强，设要塞于"
  },
  "fortnight": {
   "method": "fourteen nights → 十四夜 → 两星期"
@@ -1013,6 +1148,9 @@
  "gleam": {
   "method": "词根 *ǵʰley-(发光) → 古英语 glǣm(光亮) → 微光一闪 → 闪亮，闪烁"
  },
+ "glossary": {
+  "method": "gloss(舌头→语言、注解，希腊语 glossa) ＋ ary(集合) → 词语注解的集合 → 术语集，词表"
+ },
  "gorge": {
   "method": "源自古法语 gorge(咽喉) → 咽喉般的狭道 → 峡谷；往咽喉里塞 → 塞饱、狼吞虎咽"
  },
@@ -1048,6 +1186,9 @@
    }
   ]
  },
+ "handicraft": {
+  "method": "hand(手) ＋ i ＋ craft(技艺) → 手上的技艺 → 手工艺，手艺"
+ },
  "harass": {
   "method": "来源：古法语 harasser「使精疲力竭」，可能源自放狗追咬的号令 → 使困扰，折磨"
  },
@@ -1082,6 +1223,9 @@
    }
   ]
  },
+ "henceforth": {
+  "method": "hence(从此) ＋ forth(向前) → 从此向前 → 从今以后，从此以后"
+ },
  "herald": {
   "method": "古法语 heraut 源自日耳曼语 *heriwald：hari(军队) ＋ wald(强力) → 传令官，使者，先驱；引申为预报"
  },
@@ -1095,6 +1239,9 @@
     "cn": "巾帼英雄，烈妇，女主角"
    }
   ]
+ },
+ "hibernate": {
+  "method": "hibern(冬天，拉丁 hibernus) ＋ -ate → 在冬天蛰伏 → 冬眠，过冬"
  },
  "hive": {
   "method": "联想：hive 形近 home，蜜蜂的家 → 蜂房；蜂群拥挤如闹市 → 闹区"
@@ -1160,6 +1307,9 @@
  "illicit": {
   "method": "il-(不) ＋ licit(允许的) → 不被允许的 → 不法的，不正当的，禁止的"
  },
+ "illiterate": {
+  "method": "il(＝in，不) ＋ liter(字母，拉丁 littera) ＋ ate → 不识字 → 文盲"
+ },
  "imminent": {
   "method": "im-(在上) ＋ min(突出、悬伸) → 悬在头顶 → 即将来临的，逼近的"
  },
@@ -1168,6 +1318,12 @@
  },
  "imprison": {
   "method": "im(进入) ＋ prison(监狱) → 关进监狱 → 监禁，拘禁，限制"
+ },
+ "impromptu": {
+  "method": "in(在…中) ＋ promptu(现成，备好) → 现成拿出 → 即席的，即兴曲"
+ },
+ "inborn": {
+  "method": "联想：in(里面) ＋ born(出生) → 出生时就带在里面的 → 天生的，先天的"
  },
  "include": {
   "trans": [
@@ -1179,6 +1335,9 @@
  },
  "incumbent": {
   "method": "in-(在…上) ＋ cumb(躺，拉丁 cumbō) ＋ -ent → 躺在职位上 → 现任的；靠在上面 → 依靠的；责任压身 → 负有义务的"
+ },
+ "indebted": {
+  "method": "联想：in(在…中) ＋ debt(债务) ＋ ed → 处在债务中 → 负债的；引申为受惠的"
  },
  "indict": {
   "method": "in(对着) ＋ dict(说) → 当庭宣告指控 → 起诉，控告（c 不发音）"
@@ -1208,6 +1367,9 @@
  },
  "interrogate": {
   "method": "inter(在…之间) ＋ rog(问，拉丁语 rogāre) ＋ -ate → 反复盘问 → 质问、讯问、审问"
+ },
+ "invert": {
+  "method": "in(向内) ＋ vert(转，拉丁 vertere) → 向里翻转 → 使倒转，使倒置"
  },
  "irritate": {
   "method": "词源：拉丁 irritāre(激怒、刺激) → 使恼怒；刺激皮肤 → 使不适"
@@ -1290,6 +1452,9 @@
  "legacy": {
   "method": "leg(送，遗留) ＋ acy → 传下来的东西 → 遗产"
  },
+ "lenient": {
+  "method": "len(柔软、缓和，拉丁 lenis) ＋ ient → 心变软 → 宽大的，温和的"
+ },
  "lesbian": {
   "method": "Lesbos(希腊莱斯博斯岛，女诗人萨福的故乡) ＋ -ian → 女同性恋的"
  },
@@ -1311,6 +1476,9 @@
  "lime": {
   "method": "词源：古英语 līm(胶) 源于「涂抹」，故有石灰、粘鸟胶；酸橙另来自阿拉伯语 līma"
  },
+ "limelight": {
+  "method": "lime(石灰) ＋ light(光) → 石灰灯照亮的舞台 → 石灰光，引人注目"
+ },
  "limp": {
   "method": "词源：PIE *(s)lemb-(松垂) → 日耳曼语 limpan(下垂) → 腿脚松垂无力 → 一瘸一拐地走"
  },
@@ -1330,6 +1498,9 @@
   "forms": {},
   "method": "词源：法语 logis(住所、宿营) → logistique → 安排军队宿营 → 后勤学，后勤"
  },
+ "longitude": {
+  "method": "long(长) ＋ itude(名词后缀) → 长度 → 经度(东西方向量出的“长度”)"
+ },
  "loop": {
   "method": "源自古诺斯语 hlaup「奔跑」：会滑动的活结 → 环、圈；循环"
  },
@@ -1341,6 +1512,9 @@
  },
  "lottery": {
   "method": "lot(签，份额) ＋ -ery(名词) → 抽签分配 → 彩票，运气"
+ },
+ "lubricate": {
+  "method": "lubric(滑，拉丁 lubricus) ＋ -ate → 使变滑 → 润滑"
  },
  "lucrative": {
   "method": "lucr(利益，拉丁语 lucrum) ＋ -ative → 能带来收益的 → 获利的，合算的"
@@ -1433,11 +1607,17 @@
    }
   ]
  },
+ "midwife": {
+  "method": "mid(与…一起，古英语 mid) ＋ wife(女人) → 陪在产妇身边的女人 → 助产士，接生婆"
+ },
  "milestone": {
   "method": "mile(英里) ＋ stone(石头) → 标里程的石柱 → 里程碑，里程标"
  },
  "militia": {
   "method": "milit(士兵，拉丁 miles) + ia(集合名词) → 士兵组成的队伍 → 民兵组织"
+ },
+ "mindset": {
+  "method": "mind(思想) ＋ set(固定的设定) → 思想定势 → 心态，精神状态"
  },
  "minibus": {
   "forms": {
@@ -1460,6 +1640,9 @@
  },
  "monarchy": {
   "method": "mon(单一) ＋ archy(统治) → 一人统治 → 君主政体，君主国"
+ },
+ "monotony": {
+  "method": "mono(单一) ＋ ton(音调) ＋ y → 只有一个音调 → 单调，缺乏变化"
  },
  "morale": {
   "method": "词源：法语 morale 来自拉丁 mōrālis(道德的)，源于 mōs(习俗) → 道德；团队精神 → 士气"
@@ -1580,8 +1763,14 @@
    }
   ]
  },
+ "oar": {
+  "method": "联想：oar 与 row(划船) 只差首字母，划船靠桨 → 桨，桨手"
+ },
  "observatory": {
   "method": "observe(观测) ＋ -atory(场所) → 观测天象之处 → 天文台，气象台"
+ },
+ "obsess": {
+  "method": "ob(在…前) ＋ sess(坐，拉丁 sedere) → 坐在面前不走、围困 → 使困扰，迷住"
  },
  "obstruct": {
   "method": "ob(对着、反) ＋ struct(堆建) → 在对面堆起障碍 → 阻塞，妨碍"
@@ -1591,6 +1780,9 @@
  },
  "operative": {
   "method": "operate(运作；动手术) ＋ -ive → 运转中的、起作用的 → 有效的、手术的；名词＝技工、侦探"
+ },
+ "optic": {
+  "method": "opt(看，希腊语 optos 可见) ＋ ic(形容词后缀) → 与看有关的 → 眼睛的，视觉的，光学的"
  },
  "ordeal": {
   "method": "or-(出) ＋ deal(分、判) → 古代神判给出的结果 → 严酷考验，煎熬"
@@ -1622,6 +1814,9 @@
  "owl": {
   "method": "拟声：猫头鹰的叫声「呜—呜」，古日耳曼语即模仿其鸣声 → 猫头鹰"
  },
+ "panorama": {
+  "method": "pan(全) ＋ orama(景象) → 全部景象 → 全景，全貌"
+ },
  "pant": {
   "method": "联想：pant 像喘气声“喷、喷” → 喘息"
  },
@@ -1642,6 +1837,9 @@
  },
  "partisan": {
   "method": "part(部分、党派) ＋ -isan(人) → 属于某党派的人 → 党羽，同党；游击队员"
+ },
+ "passerby": {
+  "method": "passer(经过者) ＋ by(旁边) → 从旁边经过的人 → 过路人，行人"
  },
  "pasta": {
   "method": "源自意大利语 pasta「面团、面食」，与 paste(糊)同源 → 意大利面食"
@@ -1672,8 +1870,14 @@
    }
   ]
  },
+ "peck": {
+  "method": "联想：peck 与 pick(啄、捡)同源，鸟用尖嘴一下下啄 → 啄食，啄痕；配克是干量单位"
+ },
  "peddle": {
   "method": "联想：ped- 像“脚”，挑担用脚走街串巷 → 沿街叫卖，兜售"
+ },
+ "peep": {
+  "method": "拟声：pi:p 像小鸟吱吱叫；也指偷偷瞄一眼 → 偷看，一瞥，吱吱声"
  },
  "peg": {
   "method": "联想：peg 与「配」谐音 → 配一根小钉把牌子挂住 → 小钉，挂物钉，桩"
@@ -1687,11 +1891,17 @@
  "perch": {
   "method": "pertica(长杆) → 栖木、高位；同形词 pérkē 指河鲈"
  },
+ "persecute": {
+  "method": "per(穿过) ＋ secut(跟随) ＋ e → 一路追着不放 → 迫害，困扰"
+ },
  "pest": {
   "method": "词源：拉丁 pestis「瘟疫」→ 传播瘟疫、毁坏作物的小东西 → 害虫，有害生物"
  },
  "pesticide": {
   "method": "pest(害虫) + i + cide(杀，拉丁 caedere) → 杀虫剂"
+ },
+ "petrochemical": {
+  "method": "petro-(岩石、石油，希腊 petra) ＋ chemical(化学的) → 石化的"
  },
  "pharmacy": {
   "method": "pharmac(药，希腊语 pharmakon) ＋ -y(场所、学科) → 配药卖药之处 → 药房；药学"
@@ -1738,6 +1948,9 @@
  "porcelain": {
   "method": "词源：意大利语 porcellana 原指一种贝壳，因瓷器光泽似贝壳而得名 → 瓷器，瓷"
  },
+ "porridge": {
+  "method": "联想：por- 音近 pot(锅)，在锅里熬得稠稠的 → 粥，糊"
+ },
  "portfolio": {
   "method": "port(带) ＋ folio(纸) → 带着纸张的包 → 公文包"
  },
@@ -1770,6 +1983,9 @@
  },
  "predominate": {
   "method": "pre(在前) ＋ dominate(支配) → 抢先支配 → 掌握、控制、占主导"
+ },
+ "preoccupy": {
+  "method": "pre-(预先) ＋ occupy(占据) → 先占据 → 抢先占领；使全神贯注"
  },
  "prerequisite": {
   "method": "pre(预先) ＋ requisite(必需之物) → 事先必需 → 先决条件、必要的"
@@ -1812,6 +2028,9 @@
    }
   ]
  },
+ "proofread": {
+  "method": "proof(检验) ＋ read(读) → 读一遍以检验 → 校对，校正"
+ },
  "prop": {
   "method": "联想：prop 是 property/propeller 的缩写；道具、螺旋桨、支持者都起支撑作用 → 支柱，支持者，道具，螺旋桨"
  },
@@ -1824,6 +2043,9 @@
  "protocol": {
   "method": "proto(第一) ＋ coll(希腊语 kolla：胶水) → 粘在卷首的第一页 → 草案、礼仪、协议"
  },
+ "proximate": {
+  "method": "proxim(最近，拉丁 proximus) ＋ -ate → 最近的，将临的"
+ },
  "psychiatry": {
   "method": "psych(心灵) ＋ iatr(医治) ＋ y → 医治心灵 → 精神病学"
  },
@@ -1834,7 +2056,7 @@
   "method": "联想：pyramid 中的 y 像向上的塔尖，字母排成尖顶形 → 角锥，金字塔"
  },
  "quart": {
-  "method": ""
+  "method": "quart(第四，四分之一，拉丁 quartus) → 四分之一加仑 → 夸脱"
  },
  "quartz": {
   "forms": {}
@@ -1906,6 +2128,9 @@
    }
   ]
  },
+ "renown": {
+  "method": "re-(反复) ＋ noun(名字) → 名字被反复提起 → 名声，声望"
+ },
  "replace": {
   "trans": [
    {
@@ -1913,6 +2138,9 @@
     "cn": "代替，替换，放回，归还"
    }
   ]
+ },
+ "repress": {
+  "method": "re(向后) ＋ press(压) → 往回压 → 镇压，抑制"
  },
  "repute": {
   "method": "re(反复) ＋ put(思考) ＋ e → 反复被人念及 → 名望，名气，声望"
@@ -1925,6 +2153,9 @@
  },
  "restless": {
   "method": "rest(休息) ＋ less(无) → 得不到休息 → 不安静的，慌张的"
+ },
+ "retaliate": {
+  "method": "re(回) ＋ tali(拉丁 talis：同样的) ＋ ate → 以同样方式回敬 → 报复"
  },
  "retarded": {
   "method": "re(向后) ＋ tard(慢，拉丁语 tardus) ＋ -ed → 使变慢 → 智力上迟钝的"
@@ -1979,6 +2210,9 @@
  },
  "sanitation": {
   "method": "sanitary(卫生的) ＋ -ation(名词后缀) → 环境卫生、卫生设备"
+ },
+ "sarcasm": {
+  "method": "sarc(肉，希腊 sárx) ＋ asm → 像撕肉般刺痛人的话 → 挖苦，讽刺"
  },
  "satire": {
   "method": "源自拉丁 satura(拼盘、杂烩)，后被误连到 satyr(半羊神) → 杂烩式讽刺 → 讽刺文学"
@@ -2076,6 +2310,9 @@
    }
   ]
  },
+ "shipyard": {
+  "method": "ship(船) ＋ yard(场地) → 造船、修船的场地 → 造船厂"
+ },
  "shorthand": {
   "method": "short(短) ＋ hand(手写) → 简短地记 → 速记"
  },
@@ -2121,6 +2358,9 @@
     "cn": "暗中进行的"
    }
   ]
+ },
+ "snob": {
+  "method": "联想：snob 中藏着 noble(贵族)的影子——一心攀附贵族的人 → 势利的人，假内行"
  },
  "sob": {
   "method": "联想：sob 读音像哭到抽气的声音「嗦啵」→ 啜泣，呜咽"
@@ -2178,8 +2418,17 @@
  "stab": {
   "method": "联想：与 stub(尖桩) 可能相关，尖物猛地扎入 → 刺，戳"
  },
+ "stagnate": {
+  "method": "stagn(池塘，拉丁 stagnum) ＋ -ate → 池水不流动 → 停滞，淤塞"
+ },
+ "stammer": {
+  "method": "拟声：stam- 模仿结巴时重复卡顿的音 → 口吃，结结巴巴地说"
+ },
  "stance": {
   "method": "sta(站) ＋ -nce(名词后缀) → 站立的姿势 → 姿势，位置，姿态"
+ },
+ "standby": {
+  "method": "stand(站) ＋ by(在旁边) → 站在旁边随时待命 → 备用品，可依靠的人"
  },
  "stark": {
   "method": "词源：古英语 stearc「僵硬、强硬」→ 僵硬的；完全的；荒凉的"
@@ -2270,6 +2519,9 @@
  "taboo": {
   "method": "词源：汤加语 tapu(神圣而禁止) → 禁忌、禁止接近；英语把 p 听成了 b"
  },
+ "tact": {
+  "method": "tact(触摸) → 待人接物有“手感” → 机智，老练"
+ },
  "tactic": {
   "method": "takt(排列，排兵布阵) ＋ ic → 战术"
  },
@@ -2336,6 +2588,9 @@
    }
   ]
  },
+ "toil": {
+  "method": "联想：toil 与 till(耕种) 形近——耕种是苦活 → 辛苦，苦工；亦指罗网"
+ },
  "topple": {
   "method": "top(顶) ＋ le(反复动词后缀) → 顶部反复翻倒 → 倒塌；推翻，颠覆"
  },
@@ -2375,6 +2630,9 @@
  "trek": {
   "method": "trek(拖、拉，南非荷兰语 trekken) → 牛车拖行长途 → 艰苦跋涉；牛车旅行"
  },
+ "tribune": {
+  "method": "trib(部落) ＋ une → 部落首领 → 护民官，军团指挥官（另义“讲坛”）"
+ },
  "trickle": {
   "method": "拟声：trickle 模仿水滴断续落下的声音 → 滴，细流；慢慢流淌"
  },
@@ -2386,6 +2644,9 @@
  },
  "trophy": {
   "method": "trop(转向、败退) ＋ -y → 敌人转身败逃的纪念物 → 战利品，奖品"
+ },
+ "tropic": {
+  "method": "trop(转，希腊 tropē) ＋ -ic → 太阳转身处 → 回归线"
  },
  "trumpet": {
   "method": "拟声：trump- 模仿号角嘟嘟声，-et 表小 → 小号，喇叭；引申吹嘘"
@@ -2414,6 +2675,9 @@
     "cn": "作为代表，测定类型，用打字机打"
    }
   ]
+ },
+ "ultra": {
+  "method": "ultra(超越，在…之外) → 超出常规 → 过分的，极端的"
  },
  "underlie": {
   "method": "under(在下面) ＋ lie(躺) → 躺在下面 → 位于…之下，成为…的基础"
@@ -2494,6 +2758,9 @@
  "watt": {
   "method": "联想：功率单位名取自改良蒸汽机的 James Watt（瓦特） → 瓦"
  },
+ "wharf": {
+  "method": "词源：古英语 hwearf(土堤、岸) → 船靠岸装卸的地方 → 码头"
+ },
  "whereabouts": {
   "method": "where(哪里) + about(附近) + -s → 在何处附近 → 下落，所在之处"
  },
@@ -2502,6 +2769,9 @@
  },
  "wholesale": {
   "method": "whole(整个) ＋ sale(卖) → 整批出售 → 批发；引申为大规模的"
+ },
+ "wholesome": {
+  "method": "whole(完好) ＋ some(…的) → 完好健全的 → 有益健康的"
  },
  "wicked": {
   "method": "联想：与 witch(巫婆) 形近，巫婆作恶 → 邪恶的，缺德的"
@@ -2550,6 +2820,9 @@
  },
  "zeal": {
   "method": "词源：希腊语 zelos(热衷、嫉妒)，与 jealous 同源 → 热心、热衷、热诚"
+ },
+ "zigzag": {
+  "method": "联想：字母 Z 连写两遍 zig-zag，就是来回折的 Z 字形 → 曲折线条，Z 字形道路"
  },
  "zip": {
   "method": "拟声：zip 模仿拉链“唰”地闭合或飞驰的尖啸声 → 拉链；尖啸声；活力"
