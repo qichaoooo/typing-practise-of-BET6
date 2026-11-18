@@ -62,6 +62,7 @@ class Keys:
     ENTER = (0x0D, 0x0A)
     BACKSPACE = (0x7F, 0x08)
     CTRL_U = 0x15
+    CTRL_D = 0x04
     CTRL_C = 0x03
 
 
@@ -531,6 +532,28 @@ def display_width(text):
 
 def physical_lines(text, cols):
     return max(1, (display_width(text) + cols - 1) // cols)
+
+
+def truncate_display(text, width):
+    """按终端显示宽度截断纯文本（超出部分用省略号）。"""
+    if width <= 0:
+        return ""
+    if display_width(text) <= width:
+        return text
+    out = []
+    used = 0
+    limit = max(1, width - 1)
+    for ch in text:
+        cw = disp_width(ch)
+        if used + cw > limit:
+            break
+        out.append(ch)
+        used += cw
+    return "".join(out) + "…"
+
+
+def pad_display(text, width):
+    return text + " " * max(0, width - display_width(text))
 
 
 def show_info(term, entry, sense, senses):
@@ -1827,6 +1850,241 @@ def run(args):
     return items, quit_early, done
 
 
+DETAIL_FILTERS = (("all", "全部"), ("learning", "生词"),
+                  ("known", "熟词"), ("due", "待复习"))
+
+
+def due_relative(due, day=None):
+    try:
+        d = date.fromisoformat(due)
+    except (TypeError, ValueError):
+        return None
+    day = day or date.today()
+    delta = (d - day).days
+    if delta == 0:
+        return "今天"
+    if delta > 0:
+        return f"{delta}天后"
+    return f"过{-delta}天"
+
+
+def due_short(due, day=None):
+    rel = due_relative(due, day)
+    if rel is None:
+        return "—"
+    d = date.fromisoformat(due)
+    day = day or date.today()
+    date_text = (f"{d.month:02d}-{d.day:02d}"
+                 if d.year == day.year else d.isoformat())
+    return f"{date_text} {rel}"
+
+
+def due_full(due, day=None):
+    rel = due_relative(due, day)
+    if rel is None:
+        return due or "—"
+    return f"{due}（{rel}）"
+
+
+def build_review_rows(entries, stats):
+    """把 review 记录展开成按词/义项排序的展示行。"""
+    by_word = {e["word"]: e for e in entries}
+    rows = []
+    review = stats.get("review", {})
+    if not isinstance(review, dict):
+        return rows
+    for word in sorted(review, key=str.lower):
+        recs = review[word]
+        if not isinstance(recs, dict) or "state" in recs:
+            continue
+        entry = by_word.get(word)
+        senses = entry.get("senses", []) if entry else []
+        ordered = []
+        seen = set()
+        for sense in senses:
+            key = sense_key(sense)
+            if key in recs and key not in seen:
+                ordered.append((key, sense))
+                seen.add(key)
+        for key in recs:
+            if key not in seen:
+                ordered.append((key, None))
+        for key, sense in ordered:
+            rec = recs.get(key)
+            if not isinstance(rec, dict):
+                continue
+            if sense:
+                pos, cn = sense.get("pos", ""), sense.get("cn", "")
+            elif "|" in key:
+                pos, cn = key.split("|", 1)
+            else:
+                pos, cn = "", key
+            rows.append({
+                "word": word,
+                "level": entry.get("level") if entry else "",
+                "pos": pos,
+                "cn": cn,
+                "rec": rec,
+                "state": rec.get("state", ""),
+                "due": rec.get("due"),
+                "correct": int(rec.get("correct", 0) or 0),
+                "wrong": int(rec.get("wrong", 0) or 0),
+                "last": rec.get("last"),
+            })
+    return rows
+
+
+def review_state_label(row):
+    state = row["state"]
+    if state == "known":
+        try:
+            level = int(row["rec"].get("level", 1))
+        except (TypeError, ValueError):
+            level = 1
+        return f"熟词 L{level}"
+    if state == "learning":
+        return "生词"
+    if state == "new":
+        return "未测"
+    return state or "?"
+
+
+def review_row_matches(row, filt):
+    if filt == "all":
+        return True
+    if filt == "learning":
+        return row["state"] == "learning"
+    if filt == "known":
+        return row["state"] == "known"
+    if filt == "due":
+        return row["state"] != "known" or is_due(row["rec"])
+    return True
+
+
+def show_review_detail(entries, stats):
+    """全屏义项状态浏览器：j/k 移动，f 筛选，q 退出。"""
+    rows = build_review_rows(entries, stats)
+    filter_idx = 0
+    pos = 0
+    sys.stdout.write("\033[?1049h\033[?2J\033[H")
+    sys.stdout.flush()
+    try:
+        with Terminal() as term:
+            while True:
+                size = shutil.get_terminal_size(fallback=(80, 24))
+                cols = size.columns or 80
+                height = size.lines or 24
+                filt, label = DETAIL_FILTERS[filter_idx]
+                filtered = [r for r in rows if review_row_matches(r, filt)]
+                if filtered:
+                    pos = min(max(0, pos), len(filtered) - 1)
+                else:
+                    pos = 0
+                page = max(1, height - 5)
+                if filtered:
+                    start = min(max(0, pos - page // 2),
+                                max(0, len(filtered) - page))
+                    end = min(start + page, len(filtered))
+                else:
+                    start = end = 0
+
+                word_w = min(18, max([display_width(r["word"]) for r in rows]
+                                     + [8]))
+                state_w = min(10, max([display_width(review_state_label(r))
+                                       for r in rows] + [6]))
+                due_w = min(16, max([display_width(due_short(r["due"]))
+                                     for r in rows] + [8]))
+                fixed = 2 + word_w + 2 + state_w + 2 + due_w + 2
+                sense_w = max(4, cols - fixed)
+
+                learning = sum(1 for r in rows if r["state"] == "learning")
+                known = sum(1 for r in rows if r["state"] == "known")
+                due_count = sum(1 for r in rows
+                                if r["state"] != "known" or is_due(r["rec"]))
+                lines = [f"{BOLD}──── 义项状态 ────{RESET}"]
+                counts_plain = (f"全部 {len(rows)} · 生词 {learning} · "
+                                f"熟词 {known} · 待复习 {due_count} · "
+                                f"筛选：{label} {len(filtered)}")
+                lines.append(DIM + truncate_display(counts_plain, cols)
+                             + RESET)
+
+                if not filtered:
+                    lines.append(f"{DIM}   （该筛选下没有义项）{RESET}")
+                for idx in range(start, end):
+                    row = filtered[idx]
+                    selected = idx == pos
+                    marker = f"{GREEN}>{RESET}" if selected else " "
+                    word_text = truncate_display(row["word"], word_w)
+                    word_pad = pad_display(word_text, word_w)
+                    if selected:
+                        word_pad = f"{BOLD}{word_pad}{RESET}"
+                    state_text = truncate_display(review_state_label(row),
+                                                  state_w)
+                    state_color = (GREEN if row["state"] == "known"
+                                   else YELLOW if row["state"] == "learning"
+                                   else DIM)
+                    state_pad = (f"{state_color}"
+                                 f"{pad_display(state_text, state_w)}{RESET}")
+                    due_text = pad_display(
+                        truncate_display(due_short(row["due"]), due_w), due_w)
+                    sense_prefix = (f"{row['pos']}. " if row["pos"] else "")
+                    sense_text = truncate_display(
+                        sense_prefix + row["cn"], sense_w)
+                    lines.append(f"{marker} {word_pad}  {state_pad}  "
+                                 f"{due_text}  {sense_text}")
+
+                if filtered:
+                    row = filtered[pos]
+                    level = LEVEL_LABEL.get(row.get("level"), "")
+                    word = row["word"] + (f"（{level}）" if level else "")
+                    detail_plain = (
+                        f"所选：{word} · {row['pos']}. {row['cn']} · "
+                        f"{review_state_label(row)} · 到期 "
+                        f"{due_full(row['due'])} · 对 {row['correct']} "
+                        f"错 {row['wrong']}")
+                    if row["last"]:
+                        detail_plain += f" · 上次 {row['last']}"
+                else:
+                    detail_plain = "所选：—"
+                lines.append(DIM + truncate_display(detail_plain, cols)
+                             + RESET)
+
+                controls_plain = (
+                    "j/k 移动 · Ctrl-D/U 翻页 · g/G 首尾 · f 筛选 · q 退出"
+                    f"    {start + 1 if filtered else 0}-{end}/{len(filtered)}")
+                lines.append(DIM + truncate_display(controls_plain, cols)
+                             + RESET)
+
+                sys.stdout.write("\033[H\033[2J")
+                sys.stdout.write("\n".join(lines))
+                sys.stdout.flush()
+
+                try:
+                    k = term.key()
+                except KeyboardInterrupt:
+                    break
+                if k in (ord("q"), Keys.ESC, Keys.CTRL_C):
+                    break
+                if k == ord("j"):
+                    pos += 1
+                elif k == ord("k"):
+                    pos -= 1
+                elif k == ord("g"):
+                    pos = 0
+                elif k == ord("G"):
+                    pos = len(filtered) - 1
+                elif k == Keys.CTRL_D:
+                    pos += max(1, page // 2)
+                elif k == Keys.CTRL_U:
+                    pos -= max(1, page // 2)
+                elif k == ord("f"):
+                    filter_idx = (filter_idx + 1) % len(DETAIL_FILTERS)
+                    pos = 0
+    finally:
+        sys.stdout.write("\033[?1049l")
+        sys.stdout.flush()
+
+
 def show_stats(args):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
@@ -1876,6 +2134,18 @@ def show_stats(args):
             print(f"  {q.get('time', '')}  {q.get('kind', ''):<6} "
                   f"{mode:<6} {q.get('total', 0):>3} 词  "
                   f"正确 {q.get('correct', 0)}  错误 {q.get('wrong', 0)}")
+    if sys.stdin.isatty() and sys.stdout.isatty():
+        print(f"{DIM}按 d 查看每个义项的详细状态，其他键退出{RESET}",
+              end="", flush=True)
+        try:
+            with Terminal() as term:
+                k = term.key()
+        except (KeyboardInterrupt, EOFError):
+            k = None
+        sys.stdout.write("\r\033[K")
+        sys.stdout.flush()
+        if k in (ord("d"), ord("D")):
+            show_review_detail(entries, stats)
 
 
 class ChineseArgumentParser(argparse.ArgumentParser):

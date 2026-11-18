@@ -202,6 +202,45 @@ class EncounterTest(unittest.TestCase):
         self.assertEqual(rec["wrong"], 1)
 
 
+class DetailTest(unittest.TestCase):
+    def setUp(self):
+        self.e = entry("w", senses=[sense("n", "甲", "jia"),
+                                    sense("v", "乙", "yi")])
+        self.stats = {"review": {"w": {
+            "n|甲": {"state": "learning", "level": 0,
+                     "due": "2026-11-18", "correct": 0, "wrong": 2,
+                     "last": "2026-11-17"},
+            "v|乙": {"state": "known", "level": 2,
+                     "due": "2999-01-01", "correct": 3, "wrong": 0,
+                     "last": "2026-11-17"},
+        }}}
+        self.rows = vocabtype.build_review_rows([self.e], self.stats)
+
+    def test_expands_every_sense(self):
+        self.assertEqual(
+            [(r["word"], r["cn"], r["state"]) for r in self.rows],
+            [("w", "甲", "learning"), ("w", "乙", "known")])
+
+    def test_state_labels(self):
+        self.assertEqual([vocabtype.review_state_label(r)
+                          for r in self.rows], ["生词", "熟词 L2"])
+
+    def test_filter_counts(self):
+        counts = {f: len([r for r in self.rows
+                          if vocabtype.review_row_matches(r, f)])
+                  for f in ("all", "learning", "known", "due")}
+        self.assertEqual(counts, {"all": 2, "learning": 1,
+                                  "known": 1, "due": 1})
+
+    def test_due_labels(self):
+        day = date(2026, 11, 17)
+        self.assertEqual(vocabtype.due_short("2026-11-18", day),
+                         "11-18 1天后")
+        self.assertEqual(vocabtype.due_full("2026-11-17", day),
+                         "2026-11-17（今天）")
+        self.assertEqual(vocabtype.due_short(None, day), "—")
+
+
 class SelectionTest(unittest.TestCase):
     def setUp(self):
         self.args = SimpleNamespace(count=10, level="all", weak=False,
