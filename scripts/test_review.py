@@ -87,7 +87,8 @@ class IntervalTest(unittest.TestCase):
     def test_review_counts(self):
         stats = {}
         self.mark(stats, True)
-        new, learning, known, levels, due, words = vocabtype.review_counts(stats)
+        new, learning, known, levels, due, words = vocabtype.review_counts(
+            stats, day=self.day)
         # 只登记检测过的义项；熟词 due 是明天，所以今天没有待复习
         self.assertEqual((new, learning, known, due, words), (0, 0, 1, 0, 1))
         self.assertEqual(levels, {1: 1})
@@ -136,6 +137,69 @@ class IntervalTest(unittest.TestCase):
         vocabtype.normalize_review(stats, [self.e])
         self.assertIn(vocabtype.sense_key(self.s0), stats["review"]["w"])
         self.assertNotIn(vocabtype.sense_key(self.s1), stats["review"]["w"])
+
+
+class EncounterTest(unittest.TestCase):
+    def setUp(self):
+        self.day = date(2026, 11, 17)
+        self.intervals = (1, 3, 7, 15, 30)
+        self.e = entry("w", senses=[sense("n", "甲", "jia"),
+                                    sense("v", "乙", "yi")])
+        self.s0, self.s1 = self.e["senses"]
+
+    def test_register_marks_learning_without_counts(self):
+        stats = {}
+        changed = vocabtype.register_encountered(
+            stats, self.e, self.s0, day=self.day)
+        self.assertTrue(changed)
+        rec = rec_for(stats, "w", self.s0)
+        self.assertEqual(rec["state"], "learning")
+        self.assertEqual(rec["level"], 0)
+        self.assertEqual(rec["due"], "2026-11-17")
+        self.assertEqual(rec["wrong"], 0)
+        self.assertNotIn(vocabtype.sense_key(self.s1), stats["review"]["w"])
+
+    def test_register_does_not_demote_known(self):
+        stats = {}
+        vocabtype.mark_review_result(
+            stats, self.e, self.s0, True, self.intervals, day=self.day)
+        before = dict(rec_for(stats, "w", self.s0))
+        changed = vocabtype.register_encountered(
+            stats, self.e, self.s0, day=self.day)
+        self.assertFalse(changed)
+        self.assertEqual(rec_for(stats, "w", self.s0), before)
+
+    def test_register_replaces_legacy_new(self):
+        stats = {"review": {"w": {
+            vocabtype.sense_key(self.s0):
+                vocabtype.new_review_record(self.day)}}}
+        vocabtype.register_encountered(stats, self.e, self.s0, day=self.day)
+        self.assertEqual(rec_for(stats, "w", self.s0)["state"], "learning")
+
+    def test_demote_keeps_due_known(self):
+        stats = {"review": {"w": {
+            vocabtype.sense_key(self.s0): {
+                "state": "known", "level": 2, "due": "2026-11-17"},
+            vocabtype.sense_key(self.s1): {
+                "state": "known", "level": 3, "due": "2026-12-01"},
+        }}}
+        vocabtype.demote_unfinished(
+            stats, [(self.e, self.s0), (self.e, self.s1)], day=self.day)
+        due_rec = rec_for(stats, "w", self.s0)
+        other_rec = rec_for(stats, "w", self.s1)
+        self.assertEqual((due_rec["state"], due_rec["level"]), ("known", 2))
+        self.assertEqual((other_rec["state"], other_rec["level"]),
+                         ("learning", 0))
+        self.assertEqual(other_rec["due"], "2026-11-17")
+
+    def test_demote_keeps_learning_counts(self):
+        stats = {}
+        vocabtype.mark_review_result(
+            stats, self.e, self.s0, False, self.intervals, day=self.day)
+        vocabtype.demote_unfinished(stats, [(self.e, self.s0)], day=self.day)
+        rec = rec_for(stats, "w", self.s0)
+        self.assertEqual(rec["state"], "learning")
+        self.assertEqual(rec["wrong"], 1)
 
 
 class ScopeTest(unittest.TestCase):

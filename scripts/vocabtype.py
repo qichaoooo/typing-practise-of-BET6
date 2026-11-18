@@ -197,6 +197,48 @@ def normalize_review(stats, entries):
             del review[word]
 
 
+def register_encountered(stats, entry, sense, day=None):
+    """开始练习一个义项时先记入生词表。
+
+    已有生词/熟词记录保持不变（不能因为重新练一次就降级）；
+    没有记录或只有旧版 new 记录时，建立 learning 记录。
+    """
+    if sense is None:
+        return False
+    day = day or date.today()
+    recs = ensure_word_review(stats, entry, day=day)
+    key = sense_key(sense)
+    rec = recs.get(key)
+    if isinstance(rec, dict) and rec.get("state") in ("learning", "known"):
+        return False
+    rec = new_review_record(day)
+    rec["state"] = "learning"
+    rec["due"] = day.isoformat()
+    recs[key] = rec
+    return True
+
+
+def demote_unfinished(stats, items, day=None):
+    """检测提前退出时处理未作答的义项。
+
+    到期的熟词保持不变；其余未作答的义项进入生词表（不增加 wrong 次数）。
+    """
+    day = day or date.today()
+    for entry, sense in items:
+        recs = ensure_word_review(stats, entry, day=day)
+        key = sense_key(sense)
+        rec = recs.get(key)
+        if (isinstance(rec, dict) and rec.get("state") == "known"
+                and is_due(rec, day)):
+            continue
+        if rec is None:
+            rec = recs[key] = new_review_record(day)
+        rec["state"] = "learning"
+        rec["level"] = 0
+        rec["due"] = day.isoformat()
+        rec["streak"] = 0
+
+
 def mark_review_result(stats, entry, sense, correct, intervals, day=None,
                        early=False):
     """首次检测结果决定该义项的状态；重抽不调用本函数。
@@ -1308,7 +1350,7 @@ def quiz_one_split(term, sq, idx, total):
             return ok
 
 
-def review_counts(stats):
+def review_counts(stats, day=None):
     """按义项统计：生词 / 熟词 / 待复习 / 覆盖词数。
 
     返回值第一项是旧数据里残留的「未测」义项数，正常应为 0。
@@ -1337,7 +1379,7 @@ def review_counts(stats):
                 known += 1
                 lvl = int(rec.get("level", 1))
                 levels[lvl] = levels.get(lvl, 0) + 1
-                if is_due(rec):
+                if is_due(rec, day):
                     due += 1
     return new_count, learning, known, levels, due, len(words)
 
@@ -1393,14 +1435,18 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
     quit_early = False
     retry_rounds = retry_correct = retry_wrong = 0
 
+    skipped = []
+    unfinished = []
     with Terminal() as term:
         try:
             for i, (entry, sense, _rec) in enumerate(scope, 1):
                 result, question = ask(term, entry, sense, i, len(scope))
                 if question is None:
+                    skipped.append((entry, sense))
                     continue
                 if result is None:
                     quit_early = True
+                    unfinished = skipped + [(e, s) for e, s, _ in scope[i - 1:]]
                     break
                 first_total += 1
                 mark_review_result(stats, entry, question["correct"], result,
@@ -1438,6 +1484,9 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
         finally:
             termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
 
+    if quit_early and unfinished:
+        demote_unfinished(stats, unfinished)
+
     _new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
     print(f"\n{BOLD}──── 检测结果 ────{RESET}")
@@ -1450,7 +1499,11 @@ def run_quiz(args, kind="review", session_words=None, session_senses=None):
           f"{('（' + level_text + '）') if level_text else ''} · "
           f"待复习 {due} · 覆盖 {words} 词")
     if quit_early:
-        print(f"{DIM}中途退出，剩余义项未检测。{RESET}")
+        if unfinished:
+            print(f"{DIM}中途退出；未作答的义项已记入生词表"
+                  f"（到期的熟词保持不变）。{RESET}")
+        else:
+            print(f"{DIM}中途退出。{RESET}")
 
     stats.setdefault("quiz_sessions", []).append({
         "time": time.strftime("%Y-%m-%d %H:%M"),
@@ -1664,6 +1717,7 @@ def run(args):
     session_senses = {}
     i = 0
     quit_early = False
+    encountered = False
 
     with Terminal() as term:
         try:
@@ -1673,6 +1727,13 @@ def run(args):
                          if args.mode == "show" and not args.no_pinyin else None)
                 if sense is not None:
                     session_senses[entry["word"]] = sense
+                if not args.no_quiz:
+                    review_sense = sense
+                    if review_sense is None:
+                        senses = entry.get("senses") or []
+                        review_sense = senses[0] if senses else None
+                    if register_encountered(stats, entry, review_sense):
+                        encountered = True
                 result = practice_one(term, entry, min(done + 1, total_planned),
                                       total_planned, args.mode, sense)
                 if result is None:
@@ -1712,7 +1773,11 @@ def run(args):
             termios.tcsetattr(term.fd, termios.TCSADRAIN, term.old)
 
     if done == 0:
-        print("\n已退出，本次没有练习记录。")
+        if encountered:
+            save_stats(args.stats_file, stats)
+            print("\n已退出；本次遇到的单词已记入生词表。")
+        else:
+            print("\n已退出，本次没有练习记录。")
         return [], True, 0, {}
 
     elapsed_total = (time.monotonic() - start_time) if start_time else 0.0
