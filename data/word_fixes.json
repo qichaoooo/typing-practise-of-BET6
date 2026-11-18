@@ -75,6 +75,9 @@
  "ail": {
   "method": "联想：ail 与 ill(生病)只差一个字母；生病使人苦恼 → 使苦恼，生病"
  },
+ "air-condition": {
+  "method": "air(空气) ＋ condition(调节) → 调节空气 → 设以空调设备，用空调调节"
+ },
  "airborne": {
   "method": "air(空气) ＋ borne(被携带) → 由空气携带 → 升空的，空运的，空降的"
  },
@@ -410,6 +413,9 @@
  "canoe": {
   "method": "词源：加勒比 Taíno 语 kanowa「掏空的独木舟」→ 独木舟"
  },
+ "canon": {
+  "method": "希腊语 kanōn「量尺、标准」→ 规范，准则；教会法规。另：指「教士」时源自拉丁 canonicus"
+ },
  "caravan": {
   "method": "词源：波斯语 kârvân 指丝路上结队而行的商旅 → 旅行队"
  },
@@ -566,6 +572,9 @@
  "consulate": {
   "method": "consul(领事) ＋ ate(表职位或机构的词尾) → 领事的职位、驻地 → 领事馆"
  },
+ "consultancy": {
+  "method": "consult(咨询) ＋ -ancy(名词后缀) → 咨询业务 → 顾问；顾问服务公司"
+ },
  "contagious": {
   "method": "con(相互) ＋ tag(接触) ＋ ious → 一接触就传 → 触染性的，会蔓延的"
  },
@@ -674,6 +683,9 @@
  },
  "crust": {
   "method": "词源：拉丁 crusta(坚硬外层) → 外壳、面包皮、地壳；结硬皮"
+ },
+ "crystallize": {
+  "method": "crystal(水晶，希腊语 krystallos「冰」) ＋ -ize(使…化) → 结晶；变得清晰明确"
  },
  "cub": {
   "method": "联想：童军中的 Cub Scout（幼童军）→ cub 指幼兽、年轻人"
@@ -846,6 +858,9 @@
  },
  "dressing": {
   "method": "dress(穿衣、调制) ＋ -ing → 穿衣、化妆；给菜肴「打扮」的酱料 → 调味品"
+ },
+ "dutiful": {
+  "method": "duty(责任，义务) ＋ -ful(充满…的) → 尽责的；恭敬顺从的"
  },
  "dwarf": {
   "method": "联想：童话《白雪公主》里的 dwarf 小矮人 → 矮子；adj. 矮小的"
@@ -1027,6 +1042,9 @@
  "feat": {
   "method": "来源：拉丁 facere「做」的完成分词 factum → 做成之事 → 壮举，功绩"
  },
+ "femininity": {
+  "method": "feminine(女性的) ＋ -ity(名词后缀) → 女性气质"
+ },
  "find": {
   "trans": [
    {
@@ -1052,6 +1070,9 @@
  },
  "fiscal": {
   "method": "fisc(国库) ＋ al → 国库的 → 财政的"
+ },
+ "fitting": {
+  "method": "fit(合身，适合) ＋ -ing → 合身的 → 适合的，恰当的；配件"
  },
  "flip": {
   "method": "flip 是 flippant(轻率的) 的截短 → 无理的，轻率的；本义「轻弹、翻动」"
@@ -1264,6 +1285,9 @@
  "hurl": {
   "method": "拟声：中古英语 hurlen，摹拟用力甩掷时的风声 → 猛投，狠掷；引申为大声叫骂"
  },
+ "hustle": {
+  "method": "源自荷兰语 hutselen「来回摇动」→ 推来挤去 → 猛推，挤；催促，赶紧做"
+ },
  "hybrid": {
   "trans": [
    {
@@ -1361,6 +1385,9 @@
  },
  "inmate": {
   "method": "in(里面) ＋ mate(同伴) → 住在同一处的人 → 同住者；被收容者"
+ },
+ "instructional": {
+  "method": "in(向内) ＋ struct(建造) ＋ -ion → 把知识建进头脑 → 指导；instructional 指导的，教育的"
  },
  "insulation": {
   "method": "insul(岛，拉丁 insula) ＋ -ation → 使成孤岛、与外界隔开 → 绝缘"
@@ -1847,6 +1874,9 @@
  "pasture": {
   "method": "词源：拉丁 pastūra 来自 pāscor(吃草、放牧) → 放牧之地 → 牧场，牧草地"
  },
+ "paternity": {
+  "method": "pater(父亲) ＋ -nity(名词后缀) → 父亲的身份 → 父权，父子关系"
+ },
  "path": {
   "trans": [
    {
@@ -1948,6 +1978,9 @@
  "porcelain": {
   "method": "词源：意大利语 porcellana 原指一种贝壳，因瓷器光泽似贝壳而得名 → 瓷器，瓷"
  },
+ "pore": {
+  "method": "联想：动词 pore 源自古英语 pūrian「凝视」，pore over a book 即埋头细读 → 仔细阅读，审视"
+ },
  "porridge": {
   "method": "联想：por- 音近 pot(锅)，在锅里熬得稠稠的 → 粥，糊"
  },
@@ -1990,6 +2023,9 @@
  "prerequisite": {
   "method": "pre(预先) ＋ requisite(必需之物) → 事先必需 → 先决条件、必要的"
  },
+ "prescient": {
+  "method": "prae(预先) ＋ sci(知道) ＋ -ent → 预先知道的 → 预知的，预见的"
+ },
  "presumably": {
   "method": "presume(推测) ＋ ably(可…地) → 可推测地 → 大概"
  },
@@ -2004,6 +2040,9 @@
     "cn": "打印，印刷，铭记，留印记于，用印刷体写"
    }
   ]
+ },
+ "processing": {
+  "method": "process(过程；处理) ＋ -ing(名词后缀) → 处理"
  },
  "profile": {
   "method": "pro(向前) ＋ fil(线) ＋ e → 前面的轮廓线 → 侧面，轮廓"
@@ -2046,6 +2085,9 @@
  "proximate": {
   "method": "proxim(最近，拉丁 proximus) ＋ -ate → 最近的，将临的"
  },
+ "prune": {
+  "method": "联想：prune 名词是「李子」，动词「修剪」与之同形异源；把多余枝条像李子一样剪掉 → 修剪；删除，削减"
+ },
  "psychiatry": {
   "method": "psych(心灵) ＋ iatr(医治) ＋ y → 医治心灵 → 精神病学"
  },
@@ -2087,6 +2129,12 @@
  },
  "rattle": {
   "method": "拟声：rat-tle 模拟连续碰撞的嘎嘎声 → 使嘎嘎响；引申为喋喋不休地说"
+ },
+ "reaffirm": {
+  "method": "re(再) ＋ affirm(断言，肯定) → 再肯定一次 → 重申；再确认"
+ },
+ "reassess": {
+  "method": "re(再) ＋ assess(评估) → 再评估一次 → 再评价"
  },
  "reconciliation": {
   "method": "re(再) ＋ concili(使和好) ＋ ation(名词) → 重新和好 → 和解，调和"
@@ -2193,6 +2241,9 @@
  "saddle": {
   "method": "联想：骑马时坐在马背上的那个座位 → 鞍，马鞍，车座"
  },
+ "saleable": {
+  "method": "sale(销售) ＋ -able(能…的) → 能卖出去的 → 适合销售的"
+ },
  "salmon": {
   "method": "联想：salmon 的 l 不发音（后人按拉丁拼写加进去的）→ 鲑鱼，也叫三文鱼"
  },
@@ -2219,6 +2270,12 @@
  },
  "scenario": {
   "method": "scen(舞台) ＋ ario → 舞台上的情节 → 剧本，情景"
+ },
+ "scoop": {
+  "method": "源自中古荷兰语 schoppe「铲子」→ 用铲斗舀 → 舀出；抢先拿到新闻 → 抢先报道"
+ },
+ "seam": {
+  "method": "与 sew(缝) 同族，古英语 sēam 指「缝线处」→ 缝，接缝；地层中的缝 → 煤层"
  },
  "secular": {
   "method": "secul(拉丁 saeculum：世代、世间) ＋ ar → 属于世间而非教会的 → 世俗的；修道院外的教士"
@@ -2325,6 +2382,9 @@
  "sinister": {
   "method": "拉丁 sinister 本义『左边的』，古人以左为不祥 → 不吉利的，凶恶的；医学上指左边的"
  },
+ "situated": {
+  "method": "situate(使位于，拉丁语 situs「位置」) ＋ -ed → 位于…的；处于…境地的"
+ },
  "skeptical": {
   "method": "skept(希腊语 skeptomai 察看、审视) + ical → 反复审视 → 表示怀疑的"
  },
@@ -2333,6 +2393,9 @@
  },
  "slam": {
   "method": "拟声：slam 读起来像「砰」的关门声 → 砰然声；猛然，猛烈的抨击"
+ },
+ "slick": {
+  "method": "与 sleek 同源，本义「光滑」→ 光滑的；引申为圆滑的、口齿伶俐的；技艺光滑 → 精巧的"
  },
  "slump": {
   "method": "联想：slump 读起来像重物“咚”地塌下 → 突然倒下；引申为（价格）暴跌"
@@ -2439,6 +2502,9 @@
  "stationery": {
   "method": "联想：station(车站) 小卖部卖纸笔 → 文具、信纸；-ery 是文具，-ary 是静止的"
  },
+ "statistics": {
+  "method": "源自德语 Statistik，原指「对国家数据的分析」→ 统计学；统计表"
+ },
  "statute": {
   "method": "拉丁 statu-(设立、确立) ＋ -te → 被设立下来的条文 → 法令，成文法律，法规"
  },
@@ -2471,6 +2537,9 @@
  },
  "strangle": {
   "method": "strang(绞紧；希腊 strangálē“绳套”) ＋ -le → 用绳套勒住 → 勒死，扼死，压制"
+ },
+ "subculture": {
+  "method": "sub(次，下面) ＋ culture(文化) → 次一级的文化 → 亚文化"
  },
  "submerge": {
   "method": "sub(在下)＋merg(沉，拉丁 mergere) → 沉到水下 → 淹没，浸入"
@@ -2531,6 +2600,9 @@
  "tariff": {
   "method": "源自阿拉伯语 ta'rif(通知、说明) → 明示的收费表 → 关税，税率"
  },
+ "telecommunication": {
+  "method": "tele(远) ＋ communication(通讯) → 远距离通讯 → 电讯，无线电通讯"
+ },
  "telecommunications": {
   "forms": {}
  },
@@ -2553,6 +2625,9 @@
  },
  "tertiary": {
   "method": "terti(第三，拉丁 tertius)＋ary(形容词后缀) → 第三的；第三产业"
+ },
+ "thereafter": {
+  "method": "there(那里) ＋ after(之后) → 在那之后 → 之后，以后"
  },
  "thrift": {
   "method": "thrive(兴旺) ＋ -t → 会持家让家业兴旺 → 节约；(草木)茂盛"
@@ -2703,6 +2778,9 @@
  "urine": {
   "method": "ur(拉丁语「水、液体」) ＋ -ine → 身体排出的液体 → 尿，小便"
  },
+ "utopian": {
+  "method": "Utopia(乌托邦，希腊语 ou「无」＋ topos「地方」) ＋ -an → 乌托邦的；理想的"
+ },
  "vaccine": {
   "method": "vacc(牛) ＋ ine → 牛痘疫苗 → 疫苗"
  },
@@ -2778,6 +2856,9 @@
  },
  "wield": {
   "method": "来源：古英语 wealdan「统治、掌控」→ 手握武器/权力 → 挥舞，运用"
+ },
+ "willful": {
+  "method": "will(意志) ＋ -ful(充满…的) → 一意孤行 → 故意的，特意的；任性的"
  },
  "wink": {
   "method": "词源：古英语 wincian「闭眼、示意」→ 眨眼、使眼色；闭眼的一瞬间 → 瞬间"

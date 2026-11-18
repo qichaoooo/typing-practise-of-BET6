@@ -53308,7 +53308,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re(再) ＋ assess(评估) → 再评估一次 → 再评价",
    "family": [
     {
      "pos": "n",
@@ -83855,7 +83855,7 @@
      "cn": "数据拟合"
     }
    ],
-   "method": "",
+   "method": "fit(合身，适合) ＋ -ing → 合身的 → 适合的，恰当的；配件",
    "family": [
     {
      "pos": "adj",
@@ -87944,7 +87944,7 @@
      "cn": "故意的不良行为 条约法律；渎职"
     }
    ],
-   "method": "",
+   "method": "will(意志) ＋ -ful(充满…的) → 一意孤行 → 故意的，特意的；任性的",
    "family": [
     {
      "pos": "adj",
@@ -95890,7 +95890,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "there(那里) ＋ after(之后) → 在那之后 → 之后，以后",
    "family": [
     {
      "pos": "adv",
@@ -101095,7 +101095,7 @@
      "cn": "空想社会主义；乌托邦社会主义"
     }
    ],
-   "method": "",
+   "method": "Utopia(乌托邦，希腊语 ou「无」＋ topos「地方」) ＋ -an → 乌托邦的；理想的",
    "family": [
     {
      "pos": "n",
@@ -129855,7 +129855,7 @@
      "cn": "信号处理"
     }
    ],
-   "method": "",
+   "method": "process(过程；处理) ＋ -ing(名词后缀) → 处理",
    "family": [],
    "synonyms": [
     {
@@ -130553,7 +130553,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "crystal(水晶，希腊语 krystallos「冰」) ＋ -ize(使…化) → 结晶；变得清晰明确",
    "family": [
     {
      "pos": "adj",
@@ -154920,7 +154920,7 @@
      "cn": "陪产假"
     }
    ],
-   "method": "",
+   "method": "pater(父亲) ＋ -nity(名词后缀) → 父亲的身份 → 父权，父子关系",
    "family": [],
    "synonyms": [
     {
@@ -169420,7 +169420,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sub(次，下面) ＋ culture(文化) → 次一级的文化 → 亚文化",
    "family": [],
    "synonyms": [],
    "examples": [
@@ -169895,7 +169895,7 @@
      "cn": "孔隙压力；中性压力"
     }
    ],
-   "method": "",
+   "method": "联想：动词 pore 源自古英语 pūrian「凝视」，pore over a book 即埋头细读 → 仔细阅读，审视",
    "family": [],
    "synonyms": [
     {
@@ -179845,7 +179845,7 @@
      "cn": "用铲子取；兜接，舀上来"
     }
    ],
-   "method": "",
+   "method": "源自中古荷兰语 schoppe「铲子」→ 用铲斗舀 → 舀出；抢先拿到新闻 → 抢先报道",
    "family": [
     {
      "pos": "n",
@@ -190275,7 +190275,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sale(销售) ＋ -able(能…的) → 能卖出去的 → 适合销售的",
    "family": [
     {
      "pos": "adj",
@@ -205026,7 +205026,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：prune 名词是「李子」，动词「修剪」与之同形异源；把多余枝条像李子一样剪掉 → 修剪；删除，削减",
    "family": [
     {
      "pos": "adj",
@@ -211863,7 +211863,7 @@
      "cn": "教学策略"
     }
    ],
-   "method": "",
+   "method": "in(向内) ＋ struct(建造) ＋ -ion → 把知识建进头脑 → 指导；instructional 指导的，教育的",
    "family": [
     {
      "pos": "adj",
@@ -223770,7 +223770,7 @@
      "cn": "情境学习"
     }
    ],
-   "method": "",
+   "method": "situate(使位于，拉丁语 situs「位置」) ＋ -ed → 位于…的；处于…境地的",
    "family": [
     {
      "pos": "adj",
@@ -229377,7 +229377,7 @@
      "cn": "水面浮油"
     }
    ],
-   "method": "",
+   "method": "与 sleek 同源，本义「光滑」→ 光滑的；引申为圆滑的、口齿伶俐的；技艺光滑 → 精巧的",
    "family": [
     {
      "pos": "adv",
@@ -233359,7 +233359,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "feminine(女性的) ＋ -ity(名词后缀) → 女性气质",
    "family": [
     {
      "pos": "adj",
@@ -235456,7 +235456,7 @@
      "cn": "据统计"
     }
    ],
-   "method": "",
+   "method": "源自德语 Statistik，原指「对国家数据的分析」→ 统计学；统计表",
    "family": [
     {
      "pos": "adj",
@@ -260049,7 +260049,7 @@
      "cn": "点子公司"
     }
    ],
-   "method": "",
+   "method": "consult(咨询) ＋ -ancy(名词后缀) → 咨询业务 → 顾问；顾问服务公司",
    "family": [
     {
      "pos": "adj",
@@ -265535,7 +265535,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "duty(责任，义务) ＋ -ful(充满…的) → 尽责的；恭敬顺从的",
    "family": [
     {
      "pos": "adj",
@@ -284117,7 +284117,7 @@
      "cn": "焊缝"
     }
    ],
-   "method": "",
+   "method": "与 sew(缝) 同族，古英语 sēam 指「缝线处」→ 缝，接缝；地层中的缝 → 煤层",
    "family": [
     {
      "pos": "adj",
@@ -294713,7 +294713,7 @@
      "cn": "熙熙攘攘，忙碌"
     }
    ],
-   "method": "",
+   "method": "源自荷兰语 hutselen「来回摇动」→ 推来挤去 → 猛推，挤；催促，赶紧做",
    "family": [
     {
      "pos": "n",
@@ -299376,7 +299376,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "prae(预先) ＋ sci(知道) ＋ -ent → 预先知道的 → 预知的，预见的",
    "family": [
     {
      "pos": "n",
@@ -326372,7 +326372,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re(再) ＋ affirm(断言，肯定) → 再肯定一次 → 重申；再确认",
    "family": [
     {
      "pos": "n",
@@ -332776,7 +332776,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "air(空气) ＋ condition(调节) → 调节空气 → 设以空调设备，用空调调节",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -332857,7 +332857,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "希腊语 kanōn「量尺、标准」→ 规范，准则；教会法规。另：指「教士」时源自拉丁 canonicus",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -333246,7 +333246,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tele(远) ＋ communication(通讯) → 远距离通讯 → 电讯，无线电通讯",
    "family": [],
    "synonyms": [],
    "examples": [],
