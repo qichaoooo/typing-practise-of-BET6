@@ -11792,7 +11792,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 imitor（模仿、复制）：照着样子做→模仿、仿效、仿制。",
    "family": [
     {
      "pos": "adj",
@@ -24914,7 +24914,7 @@
      "cn": "流行率"
     }
    ],
-   "method": "",
+   "method": "prae（在前）+ val（强，拉丁 valēre）+ -ence → 力量占上风 → 盛行、流行；流行病学中指患病率。",
    "family": [
     {
      "pos": "adj",
@@ -100824,7 +100824,7 @@
   },
   {
    "word": "tuition",
-   "phonetic": "tʊ'ɪʃən",
+   "phonetic": "tju'ɪʃən",
    "trans": [
     {
      "pos": "n",
@@ -100841,7 +100841,7 @@
      "cn": "学费减免"
     }
    ],
-   "method": "",
+   "method": "源自拉丁语 tuitiō「看守、保护」，与 tutor（导师）同源；现在的 tuition 指教学，也常指学费。",
    "family": [],
    "synonyms": [
     {
@@ -157739,7 +157739,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ex-（向外、向上）+ agger（堆，拉丁 aggerō『堆起』）→ 越堆越高 → 夸大、夸张。",
    "family": [
     {
      "pos": "adj",
@@ -159057,7 +159057,7 @@
      "cn": "焊接夹具"
     }
    ],
-   "method": "",
+   "method": "联想：与 fix（固定）相关，-ure 为名词后缀：固定装置；旧词 fixure 仿 mixture 改成 fixture。",
    "family": [
     {
      "pos": "adj",
@@ -214237,7 +214237,7 @@
      "cn": "故障检测；探伤"
     }
    ],
-   "method": "",
+   "method": "detect（察觉、探测）+ -ion（名词后缀）→ 察觉、侦查。",
    "family": [
     {
      "pos": "adj",
@@ -231230,7 +231230,7 @@
      "cn": "偷盗习惯；小偷小摸的人"
     }
    ],
-   "method": "",
+   "method": "stick（粘贴）+ -y（形容词后缀）：能粘住的→黏性的；天气像胶水一样黏人，就是湿热的。",
    "family": [
     {
      "pos": "adj",
@@ -242322,7 +242322,7 @@
   },
   {
    "word": "terrify",
-   "phonetic": "ˈtɛrəˌfaɪ",
+   "phonetic": "'terifai",
    "trans": [
     {
      "pos": "vt",
@@ -242330,7 +242330,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 terrificare「使害怕」；同源的 terror 就是恐惧——terrify 即使人恐惧。",
    "family": [
     {
      "pos": "adj",
@@ -256575,7 +256575,7 @@
   },
   {
    "word": "visa",
-   "phonetic": "'vizə",
+   "phonetic": "'vi:zə",
    "trans": [
     {
      "pos": "n",
@@ -331564,7 +331564,7 @@
      "cn": "有机肥；有机肥料；有机质"
     }
    ],
-   "method": "",
+   "method": "fertilize（施肥）+ -er（表物）→ 肥料；fertile 源自拉丁 fertilis「多产的」。",
    "family": [
     {
      "pos": "adj",
@@ -337686,11 +337686,11 @@
     },
     {
      "pos": "adj",
-     "cn": "形容词的，从属的"
+     "cn": "形容词的"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 adiectīvus＝ad-（向）+ iaciō（投）→ 附加到名词上的词，即形容词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -337726,7 +337726,7 @@
     },
     {
      "pos": "adj",
-     "cn": "形容词的，从属的",
+     "cn": "形容词的",
      "tokens": [
       [
        "形",
@@ -337739,22 +337739,6 @@
       [
        "词",
        "ci"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "从",
-       "cong"
-      ],
-      [
-       "属",
-       "shu"
       ],
       [
        "的",
@@ -344599,7 +344583,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 altus（高的）+ -tūdō（名词后缀）→ 高度、海拔；alt- 即「高」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -345710,7 +345694,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 amplus 意为「宽大的、充足的」，ample 直接由此而来，即大量的、充足的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -355222,7 +355206,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "20 世纪截短自 audio-，源自拉丁 audiō『我听』——与听觉有关，即音频的、声音的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -357177,7 +357161,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "awe（敬畏）+ -some（……的）→ 令人敬畏的、可怕的；口语又表示「极好的」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -357584,7 +357568,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：bachelor 兼指单身汉与学士——本科毕业的学士；经古法语 bacheler 来自中世纪拉丁语。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358192,14 +358176,10 @@
     {
      "pos": "n",
      "cn": "熏猪肉"
-    },
-    {
-     "pos": "",
-     "cn": "[机] 腌肉"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "与 back（背）同源：取猪背部的肉→熏猪肉、培根。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358226,36 +358206,6 @@
       [
        "猪",
        "zhu"
-      ],
-      [
-       "肉",
-       "rou"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[机] 腌肉",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "机",
-       "ji"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "腌",
-       "yan"
       ],
       [
        "肉",
@@ -358358,7 +358308,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：bad（坏）+ ge（哥）——干了坏事的哥哥被别上标记徽章。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -359003,7 +358953,7 @@
     },
     {
      "pos": "vt",
-     "cn": "以饵引诱，欺负"
+     "cn": "以饵引诱"
     },
     {
      "pos": "vi",
@@ -359011,7 +358961,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古诺尔斯语 beita（饵、食物），与 bite（咬）同源——鱼咬的饵，引申为引诱。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -359043,7 +358993,7 @@
     },
     {
      "pos": "vt",
-     "cn": "以饵引诱，欺负",
+     "cn": "以饵引诱",
      "tokens": [
       [
        "以",
@@ -359060,18 +359010,6 @@
       [
        "诱",
        "you"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "欺",
-       "qi"
-      ],
-      [
-       "负",
-       "fu"
       ]
      ]
     },
@@ -360909,7 +360847,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "树皮的 bark 来自古诺斯语 bǫrkr；狗吠的 bark 来自古英语 beorcan——同形不同源。联想：狗对着树皮叫。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -366617,7 +366555,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：berry 是常见构词成分，strawberry、blueberry 都指浆果。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -377110,7 +377048,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "brandy 是 brandywine 的缩略，源自荷兰语 brandewijn，字面「烧过的酒」——蒸馏葡萄酒得到的烈酒。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -379816,10 +379754,6 @@
     {
      "pos": "n",
      "cn": "眉毛，额"
-    },
-    {
-     "pos": "",
-     "cn": "[医] 额，眉，睫毛"
     }
    ],
    "phrases": [],
@@ -379858,52 +379792,6 @@
       [
        "额",
        "e"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[医] 额，眉，睫毛",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "医",
-       "yi"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "额",
-       "e"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "眉",
-       "mei"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "睫",
-       "jie"
-      ],
-      [
-       "毛",
-       "mao"
       ]
      ]
     }
@@ -384254,15 +384142,15 @@
   {
    "word": "cafe",
    "typing": "cafe",
-   "phonetic": "kɑ:'fei",
+   "phonetic": "'kæfei",
    "trans": [
     {
      "pos": "n",
-     "cn": "咖啡馆，酒店"
+     "cn": "咖啡馆，小餐馆"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "直接借自法语 café（咖啡、咖啡馆），与 coffee 同源；英语也常写作 café。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -384280,7 +384168,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "咖啡馆，酒店",
+     "cn": "咖啡馆，小餐馆",
      "tokens": [
       [
        "咖",
@@ -384299,12 +384187,16 @@
        ""
       ],
       [
-       "酒",
-       "jiu"
+       "小",
+       "xiao"
       ],
       [
-       "店",
-       "dian"
+       "餐",
+       "can"
+      ],
+      [
+       "馆",
+       "guan"
       ]
      ]
     }
@@ -391478,7 +391370,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 caementum（碎石、石屑）← caedō（切割）→ 碎石拌成的胶结材料 → 水泥。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -392896,7 +392788,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 ċealc 借自拉丁 calx『石灰岩』，再上溯希腊 khálix『石子』——石灰质的小棒就是粉笔、白垩。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -396202,7 +396094,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 camīnus「炉子」（更早是希腊语 kámīnos「炉灶」）——烟囱正是炉灶排烟的通道。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -397389,7 +397281,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：由中古英语 char（零活）演变，源自古英语 ċerr『一次轮转』——轮到手头的活，就是杂务、家务。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -404619,7 +404511,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 col-（con-，共同）+ labōrāre（劳作）→ 一起干活 → 合作；也可指勾结。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -407525,7 +407417,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "com-（一起）+ plic（折叠，拉丁 plicāre）→ 层层折在一起 → 弄复杂、使错综。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -409589,7 +409481,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "con-（共同）+ grat（喜悦、感谢，拉丁 grātus）+ -ulate → 一起表达喜悦 → 祝贺、庆贺。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -415164,7 +415056,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：模仿咳嗽的「喀」声，古英语 *cohhian 即由此而来；注意 -ough 在这里读 /f/。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -416538,7 +416430,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "court（庭院）+ yard（场地）→ 围起来的场地，即庭院、天井。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -420653,7 +420545,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊语 kúbos「骰子、立方体」——骰子就是小立方体，cube 即立方体、立方。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -422668,7 +422560,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 coxa（髋、大腿）→ 垫在臀髋下的软垫；引申为缓冲、掩盖。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -428819,7 +428711,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 dēlēre「涂掉、抹去」＝dē-（去掉）+ linere（涂抹）；键盘上的 Delete 就是删除。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -432869,7 +432761,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 dies（日、天）→ dialis（每日的）→ 日晷→ 表盘、刻度盘、拨号。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -435356,7 +435248,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "缩略自 discothèque（迪斯科舞厅），源自法语；disco 既是迪斯科音乐，也指放这种音乐的夜店。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -437379,7 +437271,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 dīċ（沟、壕）→ 沟渠；与 dike（堤、渠）同源，是它的同源双式词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -441596,7 +441488,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：原始日耳曼语 *drupjaną『滴落』，与 drop（水滴）同出 *drupô『滴』——drip 是动作，drop 是那一滴。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -449051,7 +448943,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 ēmittō 由 ex-（向外）+ mittō（送）构成：向外送出→发出、放射、散发。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -451078,7 +450970,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "en-（使……）+ large（大）→ 使变大 → 扩大、增大；enlarge on 详述。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -453554,7 +453446,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 ērādere＝ex-（出去）+ radere（刮）→ 刮掉，即抹去、擦除。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -479926,7 +479818,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "free（自由、畅通）+ way（道路）：畅通无阻的大路→高速公路。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -480183,7 +480075,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "与 fraught 同源，来自中古荷兰语 vrecht「货物、运费」；gh 不发音，别按拼写读。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -483030,15 +482922,15 @@
     },
     {
      "pos": "vi",
-     "cn": "无事自扰，焦急，焦燥，忙乱"
+     "cn": "无事自扰，焦急，焦躁，忙乱"
     },
     {
      "pos": "vt",
-     "cn": "使激动，使烦燥"
+     "cn": "使激动，使烦躁"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：fuss 读似「发嘶」——为点小事急得直发嘶声，大惊小怪、忙乱。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -483114,7 +483006,7 @@
     },
     {
      "pos": "vi",
-     "cn": "无事自扰，焦急，焦燥，忙乱",
+     "cn": "无事自扰，焦急，焦躁，忙乱",
      "tokens": [
       [
        "无",
@@ -483153,7 +483045,7 @@
        "jiao"
       ],
       [
-       "燥",
+       "躁",
        "zao"
       ],
       [
@@ -483172,7 +483064,7 @@
     },
     {
      "pos": "vt",
-     "cn": "使激动，使烦燥",
+     "cn": "使激动，使烦躁",
      "tokens": [
       [
        "使",
@@ -483199,7 +483091,7 @@
        "fan"
       ],
       [
-       "燥",
+       "躁",
        "zao"
       ]
      ]
@@ -483805,7 +483697,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "音译：gallon 译作『加仑』；源自法语 galun（液量单位）← 拉丁 galum『酒的量器』，可能出自高卢语。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -489878,7 +489770,7 @@
     },
     {
      "pos": "vt",
-     "cn": "与...性交，突然加大油门，使生色，喝倒彩"
+     "cn": "突然加大油门，使生色，喝倒彩"
     }
    ],
    "phrases": [],
@@ -489958,36 +489850,8 @@
     },
     {
      "pos": "vt",
-     "cn": "与...性交，突然加大油门，使生色，喝倒彩",
+     "cn": "突然加大油门，使生色，喝倒彩",
      "tokens": [
-      [
-       "与",
-       "yu"
-      ],
-      [
-       ".",
-       ""
-      ],
-      [
-       ".",
-       ""
-      ],
-      [
-       ".",
-       ""
-      ],
-      [
-       "性",
-       "xing"
-      ],
-      [
-       "交",
-       "jiao"
-      ],
-      [
-       "，",
-       ""
-      ],
       [
        "突",
        "tu"
@@ -492198,7 +492062,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 grātus（感激的、令人感谢的）+ -tūdō（名词后缀）→ 感激之情。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -496468,7 +496332,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：同形异源——冰雹（古英语 hæġl）与欢呼致敬（古诺斯语 heill，健康）本是两个词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -498545,7 +498409,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hand（手）+ -y（形容词后缀）→ 就在手边的、用起来顺手的 → 便利的；手巧就是敏捷的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -499671,7 +499535,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hard（艰难）+ -ship（名词后缀，表状态）→ 艰难、辛苦、苦难。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -503213,7 +503077,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hect-（百，希腊 hekatón）+ are（公亩）→ 一百公亩就是一公顷。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -507599,7 +507463,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：中古英语 hoby 指小马（词源不确定）；旧时骑木马玩具 hobby horse 作为消遣，后以 hobby 指业余爱好、嗜好。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -511389,7 +511253,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "house（房子）+ wife（妻子）→ 在家操持的妻子，即主妇、家庭妇女。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -513472,10 +513336,6 @@
     {
      "pos": "n",
      "cn": "氢"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 氢H-2"
     }
    ],
    "phrases": [],
@@ -513502,44 +513362,6 @@
       [
        "氢",
        "qing"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 氢H-2",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "氢",
-       "qing"
-      ],
-      [
-       "H",
-       ""
-      ],
-      [
-       "-",
-       ""
-      ],
-      [
-       "2",
-       ""
       ]
      ]
     }
@@ -519508,7 +519330,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in（在……内）+ door（门）：门内的→室内的、户内的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -526967,7 +526789,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：珠宝让人 joy（喜悦）；词源不确定，经古法语 jouel 而来，不要硬拆词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -530556,15 +530378,11 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "茶壶，罐"
-    },
-    {
-     "pos": "",
-     "cn": "[化] 釜体釜;锅"
+     "cn": "水壶，烧水壶，罐"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：tea kettle 就是烧水泡茶的壶——kettle 指烧水壶（英式英语常指电水壶），不是茶壶。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -530582,11 +530400,27 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "茶壶，罐",
+     "cn": "水壶，烧水壶，罐",
      "tokens": [
       [
-       "茶",
-       "cha"
+       "水",
+       "shui"
+      ],
+      [
+       "壶",
+       "hu"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "烧",
+       "shao"
+      ],
+      [
+       "水",
+       "shui"
       ],
       [
        "壶",
@@ -530599,50 +530433,6 @@
       [
        "罐",
        "guan"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[化] 釜体釜",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "化",
-       "hua"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "釜",
-       "fu"
-      ],
-      [
-       "体",
-       "ti"
-      ],
-      [
-       "釜",
-       "fu"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "锅",
-     "tokens": [
-      [
-       "锅",
-       "guo"
       ]
      ]
     }
@@ -531864,7 +531654,7 @@
   {
    "word": "kindergarten",
    "typing": "kindergarten",
-   "phonetic": "'kində.gɑ:tn",
+   "phonetic": "'kindəgɑ:tən",
    "trans": [
     {
      "pos": "n",
@@ -531872,7 +531662,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "德语 Kinder（儿童，Kind 的复数）+ Garten（花园）：儿童的花园→幼儿园。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -532342,7 +532132,7 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "风筝，筝帆，空头支票，骗子"
+     "cn": "风筝，空头支票"
     },
     {
      "pos": "vi",
@@ -532350,11 +532140,11 @@
     },
     {
      "pos": "vt",
-     "cn": "使上升，骗钱"
+     "cn": "使上升"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 cȳta 指鸢（一种猛禽）；风筝因像鸢一样在空中盘旋而得名，后来又有「空头支票」等义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -532376,7 +532166,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "风筝，筝帆，空头支票，骗子",
+     "cn": "风筝，空头支票",
      "tokens": [
       [
        "风",
@@ -532385,18 +532175,6 @@
       [
        "筝",
        "zheng"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "筝",
-       "zheng"
-      ],
-      [
-       "帆",
-       "fan"
       ],
       [
        "，",
@@ -532417,18 +532195,6 @@
       [
        "票",
        "piao"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "骗",
-       "pian"
-      ],
-      [
-       "子",
-       "zi"
       ]
      ]
     },
@@ -532516,7 +532282,7 @@
     },
     {
      "pos": "vt",
-     "cn": "使上升，骗钱",
+     "cn": "使上升",
      "tokens": [
       [
        "使",
@@ -532529,18 +532295,6 @@
       [
        "升",
        "sheng"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "骗",
-       "pian"
-      ],
-      [
-       "钱",
-       "qian"
       ]
      ]
     }
@@ -537991,14 +537745,10 @@
     {
      "pos": "adj",
      "cn": "懒惰的，怠惰的，缓慢的"
-    },
-    {
-     "pos": "vi",
-     "cn": "懒散"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：谐音“累死”→累得不想动→懒惰的；词源不确定，可能来自低地德语 lasich（松弛无力）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -538063,20 +537813,6 @@
       [
        "的",
        "de"
-      ]
-     ]
-    },
-    {
-     "pos": "vi",
-     "cn": "懒散",
-     "tokens": [
-      [
-       "懒",
-       "lan"
-      ],
-      [
-       "散",
-       "san"
       ]
      ]
     }
@@ -542282,7 +542018,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：原始印欧语 *leyǵʰ- 就是『舔』，德语 lecken、法语 lécher 同源；a lick of 表示『一点点』。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -546159,7 +545895,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "经法语 litre 源自希腊语 lítra（西西里的重量单位/钱币）；今天 litre 指容量单位「公升」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -548958,7 +548694,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "1937 年由 logogram（语标）或 logotype 截短而来；logo- 源自希腊 lógos『言词』——用图形代表一个词，即徽标。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -555844,7 +555580,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊地名 Marathon（马拉松），传说士兵由此跑回雅典报捷；地名意为「茴香之地」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -564090,7 +563826,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "micro-（微小）+ wave（波）→ 微波；微波炉即 microwave oven。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -577407,7 +577143,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 nepos（孙子、外甥）→ nephew；同源法语 neveu、意大利语 nipote。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -582382,7 +582118,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 nōmen（名字）→ noun：给事物命名的词→名词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -584045,7 +583781,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁 ob-（向）+ ligāre（捆绑）→ 把人绑住 → 强制、使承担义务；施恩使人感激。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -592229,7 +591965,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "out（出外）+ -ing（名词化）→ 到外面走一走 → 郊游、远足。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -594699,7 +594435,7 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "勘漏，失察，失败，照料"
+     "cn": "疏漏，失察，照料"
     },
     {
      "pos": "",
@@ -594707,7 +594443,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "over（越过）+ sight（看）：目光越过去没看见→勘漏、失察；从旁照看则是监督。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -594725,11 +594461,11 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "勘漏，失察，失败，照料",
+     "cn": "疏漏，失察，照料",
      "tokens": [
       [
-       "勘",
-       "kan"
+       "疏",
+       "shu"
       ],
       [
        "漏",
@@ -594746,18 +594482,6 @@
       [
        "察",
        "cha"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "失",
-       "shi"
-      ],
-      [
-       "败",
-       "bai"
       ],
       [
        "，",
@@ -594957,7 +594681,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "over（越过）+ take（拿、取）→ 越过去抢到前面 → 赶上、超过；情绪突然『越过』人就是压倒、突然降临。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -612322,7 +612046,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：拉丁语 pipio（雏鸽）源自 pipiare（啾啾叫），鸽子咕咕叫→pigeon。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -618314,7 +618038,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "play（玩）+ ground（场地）→ 玩耍的场地，即操场、游乐场。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -624714,7 +624438,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "post（邮政、邮寄）+ card（卡片）→ 邮寄用的卡片，就是明信片。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -626935,7 +626659,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pre-（预先）+ caution（小心，拉丁 cavere『提防』）→ 预先提防 → 预防、留心、警戒。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -630929,7 +630653,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "pro-（向前）+ cess（走，拉丁 cēdere）+ -ion → 向前行进的一群人 → 队伍、列队行进。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -658414,7 +658138,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "与 reap（收割）同源：庄稼长熟才能收割；ripe 即成熟的、熟练的、成年的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -664931,7 +664655,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "run（跑）+ way（路）→ 飞机起跑、滑跑的路，就是跑道；也指河床、通道。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -680348,7 +680072,7 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "修面，刮胡子，幸免，剃刀"
+     "cn": "修面，刮胡子"
     },
     {
      "pos": "vt",
@@ -680360,7 +680084,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 sċafan「刮、削」，与德语 schaben 同源，本义是刮去表层——刮胡子、刨削都是它。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -680383,7 +680107,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "修面，刮胡子，幸免，剃刀",
+     "cn": "修面，刮胡子",
      "tokens": [
       [
        "修",
@@ -680408,30 +680132,6 @@
       [
        "子",
        "zi"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "幸",
-       "xing"
-      ],
-      [
-       "免",
-       "mian"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "剃",
-       "ti"
-      ],
-      [
-       "刀",
-       "dao"
       ]
      ]
     },
@@ -689397,7 +689097,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自荷兰语 schaats「冰鞋」，更早与古法语 escache「高跷」有关——像踩高跷一样在冰上滑行。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -698135,7 +697835,7 @@
    "trans": [
     {
      "pos": "adj",
-     "cn": "悲伤的，痛的，引起痛苦的"
+     "cn": "痛的，酸痛的，引起痛苦的"
     },
     {
      "pos": "n",
@@ -698143,7 +697843,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 sār（疼痛、伤口）→ 痛的、痛处；与 sorry、sorrow 形近但词源无关。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -698164,15 +697864,11 @@
    "senses": [
     {
      "pos": "adj",
-     "cn": "悲伤的，痛的，引起痛苦的",
+     "cn": "痛的，酸痛的，引起痛苦的",
      "tokens": [
       [
-       "悲",
-       "bei"
-      ],
-      [
-       "伤",
-       "shang"
+       "痛",
+       "tong"
       ],
       [
        "的",
@@ -698181,6 +697877,10 @@
       [
        "，",
        ""
+      ],
+      [
+       "酸",
+       "suan"
       ],
       [
        "痛",
@@ -698267,7 +697967,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 sorg（忧虑、悲伤）→ sorrow；注意它和 sorry、sore 形近，但词源无关。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -700491,11 +700191,11 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "航天飞船"
+     "cn": "航天器，宇宙飞船"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "space（太空）+ craft（技艺→飞行器）→ 航天飞船；craft 古义为「技艺、力量」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -700513,7 +700213,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "航天飞船",
+     "cn": "航天器，宇宙飞船",
      "tokens": [
       [
        "航",
@@ -700522,6 +700222,22 @@
       [
        "天",
        "tian"
+      ],
+      [
+       "器",
+       "qi"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "宇",
+       "yu"
+      ],
+      [
+       "宙",
+       "zhou"
       ],
       [
        "飞",
@@ -707760,7 +707476,7 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "污染，污点，着色剂"
+     "cn": "污渍，污点，着色剂"
     },
     {
      "pos": "vt",
@@ -707772,7 +707488,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古诺斯语 steina「给…上色」，与 stone 同源（steinn 有「石头、矿物蓝」义）——染色留下污点。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -707794,15 +707510,15 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "污染，污点，着色剂",
+     "cn": "污渍，污点，着色剂",
      "tokens": [
       [
        "污",
        "wu"
       ],
       [
-       "染",
-       "ran"
+       "渍",
+       "zi"
       ],
       [
        "，",
@@ -715784,10 +715500,6 @@
     {
      "pos": "vi",
      "cn": "长新枝"
-    },
-    {
-     "pos": "vt",
-     "cn": "引诱，诱捕"
     }
    ],
    "phrases": [],
@@ -715876,32 +715588,6 @@
       [
        "枝",
        "zhi"
-      ]
-     ]
-    },
-    {
-     "pos": "vt",
-     "cn": "引诱，诱捕",
-     "tokens": [
-      [
-       "引",
-       "yin"
-      ],
-      [
-       "诱",
-       "you"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "诱",
-       "you"
-      ],
-      [
-       "捕",
-       "bu"
       ]
      ]
     }
@@ -717803,7 +717489,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊语 stróphos『绳索』，与 stréphō『扭转』同源——扭编成的窄带就是皮带；动词即用带子捆扎。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -719284,7 +718970,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自日耳曼语 *strīpô（条带），同源德语 Streifen（条纹），即斑纹、条纹。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -723467,7 +723153,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sun（太阳）+ set（落下）→ 日落；也比喻人生的晚年。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -726275,7 +725961,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：古英语 *swǣġan『弯曲、俯身』，本义是歪斜、倒下，引申为摇摆；再引申为左右局面的影响力、支配。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -727672,7 +727358,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "词源：古英语 swift 意为『迅速的』，源自原始日耳曼语 *swiftaz；同源词 swivel 意为『旋转』。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -736793,7 +736479,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "形容词、动词义源自拉丁 tēnsus『拉紧的』（tendō『拉伸』的分词）→ 拉紧、紧张；名词『时态』是另一来源（拉丁 tempus 时间）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -744064,7 +743750,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 tide（时间）+ -y → 合时宜的 → 收拾得合宜 → 整齐的；tidy up 收拾。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -746491,7 +746177,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 tostus「烤过的」，先指烤面包；「干杯」义是 17 世纪由酒里放香料烤面包的旧俗引申。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -752811,7 +752497,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 transcriptum（抄本）来自 transcribere（誊写）：誊写下来的文本→抄本、副本、成绩单。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -753132,7 +752818,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "trans（穿过）+ par（出现，拉丁 parēre）→ 光穿过、后面清晰可见 → 透明的；引申为显然的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -756155,7 +755841,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "troll（滚动）+ -ey（指小后缀），可能由此而来：能滚动的小车→手推车、电车。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -762455,7 +762141,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "un-（相反）+ do（做）→ 把做过的事反过来 → 解开、取消、撤销。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -765342,7 +765028,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "up（向上）+ -ward（朝……方向）→ 向上的、以上。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -766258,11 +765944,11 @@
     },
     {
      "pos": "vt",
-     "cn": "发出声音，做声，发表，发射，流通"
+     "cn": "发出声音，做声，发表"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "形容词来自古英语 ūtera（更外面的，out 的比较级），utter 即全然的、绝对的；动词“说出”来自中古英语 outren。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -766334,7 +766020,7 @@
     },
     {
      "pos": "vt",
-     "cn": "发出声音，做声，发表，发射，流通",
+     "cn": "发出声音，做声，发表",
      "tokens": [
       [
        "发",
@@ -766375,30 +766061,6 @@
       [
        "表",
        "biao"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "发",
-       "fa"
-      ],
-      [
-       "射",
-       "she"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "流",
-       "liu"
-      ],
-      [
-       "通",
-       "tong"
       ]
      ]
     }
@@ -770318,7 +769980,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自意大利语 vulcano，来自罗马火神 Vulcan（武尔坎）——火神之山即火山。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -774024,7 +773686,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ware（警觉的，古英语 wær）+ -y → 时刻留神的 → 谨慎的、小心的；与 beware（当心）同源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -780655,7 +780317,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：whistle 的 /hwɪs/ 就像吹口哨的「嘘」声；古英语 hwistlian 即吹哨。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -793918,7 +793580,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "spoke（speak 的过去分词）+ -s- + woman（女性）：负责说话的女性→女发言人。",
    "family": [],
    "synonyms": [],
    "examples": [],
