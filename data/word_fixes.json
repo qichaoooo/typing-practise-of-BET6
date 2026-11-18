@@ -1,4 +1,7 @@
 {
+ "AIDS": {
+  "forms": {}
+ },
  "an": {
   "forms": {}
  },
@@ -10,8 +13,37 @@
    }
   ]
  },
+ "campus": {
+  "forms": {
+   "s": "campuses"
+  }
+ },
+ "can": {
+  "forms": {
+   "s": "cans",
+   "p": "could",
+   "3": "cans"
+  }
+ },
  "chairperson": {
   "phonetic": ""
+ },
+ "consensus": {
+  "forms": {
+   "s": "consensuses"
+  }
+ },
+ "customs": {
+  "forms": {}
+ },
+ "downstairs": {
+  "forms": {}
+ },
+ "economics": {
+  "forms": {}
+ },
+ "fireworks": {
+  "forms": {}
  },
  "gasoline": {
   "trans": [
@@ -20,6 +52,15 @@
     "cn": "汽油"
    }
   ]
+ },
+ "ground": {
+  "forms": {
+   "s": "grounds",
+   "d": "grounded",
+   "p": "grounded",
+   "i": "grounding",
+   "3": "grounds"
+  }
  },
  "gymnasium": {
   "trans": [
@@ -48,6 +89,15 @@
    }
   ]
  },
+ "jazz": {
+  "forms": {
+   "i": "jazzing",
+   "p": "jazzed",
+   "3": "jazzes",
+   "d": "jazzed",
+   "s": "jazzes"
+  }
+ },
  "laboratory": {
   "trans": [
    {
@@ -55,6 +105,9 @@
     "cn": "实验室，研究室，化工厂"
    }
   ]
+ },
+ "logistics": {
+  "forms": {}
  },
  "mathematics": {
   "trans": [
@@ -84,6 +137,23 @@
    }
   ]
  },
+ "minibus": {
+  "forms": {
+   "s": "minibuses"
+  }
+ },
+ "nowadays": {
+  "forms": {}
+ },
+ "number": {
+  "forms": {
+   "s": "numbers",
+   "d": "numbered",
+   "p": "numbered",
+   "i": "numbering",
+   "3": "numbers"
+  }
+ },
  "ounce": {
   "trans": [
    {
@@ -96,6 +166,41 @@
    }
   ]
  },
+ "physics": {
+  "forms": {}
+ },
+ "picnic": {
+  "forms": {
+   "d": "picnicked",
+   "i": "picnicking",
+   "3": "picnics",
+   "p": "picnicked",
+   "s": "picnics"
+  }
+ },
+ "politics": {
+  "forms": {}
+ },
+ "quartz": {
+  "forms": {}
+ },
+ "quiz": {
+  "forms": {
+   "d": "quizzed",
+   "p": "quizzed",
+   "i": "quizzing",
+   "3": "quizzes",
+   "s": "quizzes"
+  }
+ },
+ "surplus": {
+  "forms": {
+   "s": "surpluses"
+  }
+ },
+ "telecommunications": {
+  "forms": {}
+ },
  "television": {
   "trans": [
    {
@@ -103,5 +208,13 @@
     "cn": "电视"
    }
   ]
+ },
+ "tennis": {
+  "forms": {}
+ },
+ "yes": {
+  "forms": {
+   "s": "yeses"
+  }
  }
 }

@@ -70,7 +70,7 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
 助记   s ＋ talk(说话) → 悄悄跟踪时不敢说话 → 悄悄地跟踪
 同根   adj. stalked 有茎的；n. stalker 高视阔步者
 近义   n. stem / tracking / handle；vt. trail / follow up on
-变形   过去式 stalked，过去分词 stalked，现在分词 stalking，复数 stalks
+变形   过去式 stalked，过去分词 stalked，现在分词 stalking，第三人称单数/复数 stalks
 例句   celery stalks  芹菜茎
 短语   corn stalk 玉米杆；flower stalk 花柄
 词频   BNC 10135 · COCA 6634 · Collins 2星

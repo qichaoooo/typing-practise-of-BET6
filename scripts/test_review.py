@@ -502,6 +502,47 @@ class SplitTest(unittest.TestCase):
         self.assertEqual(correct_texts, {"甲", "乙"})
 
 
+class FormTest(unittest.TestCase):
+    def form_entry(self, pos, forms):
+        return {"word": "w", "trans": [{"pos": pos, "cn": "测试"}],
+                "senses": [sense(pos, "测试", "ce shi")], "forms": forms}
+
+    def test_verb_s_is_third_person_not_plural(self):
+        e = self.form_entry("v", {"s": "cancels", "3": "cancels"})
+        self.assertEqual(vocabtype.form_parts(e), ["第三人称单数 cancels"])
+
+    def test_noun_only_s_is_plural(self):
+        e = self.form_entry("n", {"s": "books", "3": "books"})
+        self.assertEqual(vocabtype.form_parts(e), ["复数 books"])
+
+    def test_noun_and_verb_same_form_is_combined(self):
+        e = self.form_entry("n&vt", {"s": "cans", "3": "cans"})
+        self.assertEqual(vocabtype.form_parts(e),
+                         ["第三人称单数/复数 cans"])
+
+    def test_noun_and_verb_different_forms(self):
+        e = self.form_entry("n&v", {"s": "foci", "3": "focuses"})
+        self.assertEqual(vocabtype.form_parts(e),
+                         ["第三人称单数 focuses", "复数 foci"])
+
+    def test_verb_forms_require_verb_pos(self):
+        e = self.form_entry("n", {"p": "courted", "d": "courted",
+                                  "i": "courting", "3": "courts",
+                                  "s": "courts"})
+        self.assertEqual(vocabtype.form_parts(e), ["复数 courts"])
+
+    def test_comparatives_require_adjective_pos(self):
+        e = self.form_entry("n", {"s": "busts", "r": "buster",
+                                  "t": "bustest"})
+        self.assertEqual(vocabtype.form_parts(e), ["复数 busts"])
+
+    def test_adjective_hides_fake_plural(self):
+        e = self.form_entry("adj", {"s": "remotes", "r": "remoter",
+                                    "t": "remotest"})
+        self.assertEqual(vocabtype.form_parts(e),
+                         ["比较级 remoter", "最高级 remotest"])
+
+
 class QuestionTest(unittest.TestCase):
     def test_options_are_unique_and_include_correct(self):
         entries = [

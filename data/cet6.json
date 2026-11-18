@@ -50737,7 +50737,7 @@
    "level": "cet4",
    "typing": "surplus",
    "forms": {
-    "s": "surpluss"
+    "s": "surpluses"
    },
    "freq": {
     "bnc": 4815,
@@ -98340,9 +98340,7 @@
    "rank": 700,
    "level": "cet4",
    "typing": "telecommunications",
-   "forms": {
-    "s": "telecommunicationss"
-   },
+   "forms": {},
    "freq": {
     "frq": 6038,
     "collins": 2
@@ -199871,7 +199869,7 @@
    "level": "extra",
    "typing": "minibus",
    "forms": {
-    "s": "minibuss"
+    "s": "minibuses"
    },
    "freq": {
     "bnc": 15504,
@@ -203461,9 +203459,7 @@
    "rank": 1445,
    "level": "extra",
    "typing": "quartz",
-   "forms": {
-    "s": "quartzs"
-   },
+   "forms": {},
    "freq": {
     "bnc": 13134,
     "frq": 16587
@@ -214719,7 +214715,7 @@
    "level": "cet4",
    "typing": "consensus",
    "forms": {
-    "s": "consensuss"
+    "s": "consensuses"
    },
    "freq": {
     "bnc": 3897,
@@ -340524,9 +340520,7 @@
    "exam": [],
    "rank": 2416,
    "level": "cet4",
-   "forms": {
-    "s": "aidss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 3757,
     "frq": 1793,
@@ -386254,7 +386248,7 @@
    "rank": 2835,
    "level": "cet4",
    "forms": {
-    "s": "campuss"
+    "s": "campuses"
    },
    "freq": {
     "bnc": 8068,
@@ -386331,7 +386325,7 @@
    "forms": {
     "s": "cans",
     "p": "could",
-    "3": "can"
+    "3": "cans"
    },
    "freq": {
     "bnc": 35,
@@ -424213,9 +424207,7 @@
    "exam": [],
    "rank": 3154,
    "level": "cet4",
-   "forms": {
-    "s": "customss"
-   },
+   "forms": {},
    "freq": {
     "collins": 2,
     "oxford": 1
@@ -441313,9 +441305,7 @@
    "exam": [],
    "rank": 3313,
    "level": "cet4",
-   "forms": {
-    "s": "downstairss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 4046,
     "frq": 5467,
@@ -447614,9 +447604,7 @@
    "exam": [],
    "rank": 3363,
    "level": "cet4",
-   "forms": {
-    "s": "economicss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 2785,
     "frq": 3186,
@@ -471629,9 +471617,7 @@
    "exam": [],
    "rank": 3558,
    "level": "cet4",
-   "forms": {
-    "s": "fireworkss"
-   },
+   "forms": {},
    "freq": {
     "frq": 7823
    },
@@ -495983,8 +495969,8 @@
     "s": "grounds",
     "d": "grounded",
     "p": "grounded",
-    "i": "grinding",
-    "3": "grinds"
+    "i": "grounding",
+    "3": "grounds"
    },
    "freq": {
     "bnc": 455,
@@ -529111,7 +529097,7 @@
     "p": "jazzed",
     "3": "jazzes",
     "d": "jazzed",
-    "s": "jazzs"
+    "s": "jazzes"
    },
    "freq": {
     "bnc": 5759,
@@ -551927,9 +551913,7 @@
    "exam": [],
    "rank": 4157,
    "level": "cet6",
-   "forms": {
-    "s": "logisticss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 15076,
     "frq": 9920
@@ -586307,9 +586291,7 @@
    "exam": [],
    "rank": 4425,
    "level": "cet4",
-   "forms": {
-    "s": "nowadayss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 4094,
     "frq": 6788,
@@ -586862,7 +586844,7 @@
     "d": "numbered",
     "p": "numbered",
     "i": "numbering",
-    "3": "numbs"
+    "3": "numbers"
    },
    "freq": {
     "bnc": 143,
@@ -614807,9 +614789,7 @@
    "exam": [],
    "rank": 4629,
    "level": "cet4",
-   "forms": {
-    "s": "physicss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 3720,
     "frq": 3417,
@@ -615186,7 +615166,7 @@
    "forms": {
     "d": "picnicked",
     "i": "picnicking",
-    "3": "picnic",
+    "3": "picnics",
     "p": "picnicked",
     "s": "picnics"
    },
@@ -625269,9 +625249,7 @@
    "exam": [],
    "rank": 4686,
    "level": "cet4",
-   "forms": {
-    "s": "politicss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 1285,
     "frq": 951,
@@ -644050,7 +644028,7 @@
     "p": "quizzed",
     "i": "quizzing",
     "3": "quizzes",
-    "s": "quizs"
+    "s": "quizzes"
    },
    "freq": {
     "bnc": 9113,
@@ -742167,9 +742145,7 @@
    "exam": [],
    "rank": 5420,
    "level": "cet4",
-   "forms": {
-    "s": "tenniss"
-   },
+   "forms": {},
    "freq": {
     "bnc": 2846,
     "frq": 3082,
@@ -795995,7 +795971,7 @@
    "rank": 5804,
    "level": "cet4",
    "forms": {
-    "s": "yess"
+    "s": "yeses"
    },
    "freq": {
     "bnc": 144,

@@ -372,11 +372,6 @@ def disp_width(ch):
     return 2 if unicodedata.east_asian_width(ch) in ("W", "F") else 1
 
 
-FORM_ORDER = (("p", "过去式"), ("d", "过去分词"), ("i", "现在分词"),
-              ("3", "第三人称单数"), ("s", "复数"),
-              ("r", "比较级"), ("t", "最高级"))
-
-
 def pos_group(pos):
     parts = set((pos or "").lower().replace("&", " ").replace("/", " ").split())
     if parts & {"v", "vt", "vi"}:
@@ -406,6 +401,49 @@ def sense_keywords(sense):
 
 def matches_any(text, keywords):
     return bool(text) and any(k in text for k in keywords)
+
+
+def form_pos_flags(entry):
+    """返回 (名词, 动词, 形容词/副词) 是否出现在释义词性中。"""
+    noun = verb = adj = False
+    for item in entry.get("trans") or entry.get("senses") or []:
+        pos = (item.get("pos") or "").lower()
+        parts = {p for p in re.split(r"[^a-z]+", pos) if p}
+        if parts & {"n", "pl"}:
+            noun = True
+        if parts & {"v", "vt", "vi", "aux"}:
+            verb = True
+        if parts & {"adj", "a", "adv"}:
+            adj = True
+    return noun, verb, adj
+
+
+def form_parts(entry):
+    """按词性生成词形标签，避免把动词的 -s 当成名词复数。"""
+    forms = entry.get("forms") or {}
+    if not forms:
+        return []
+    noun, verb, adj = form_pos_flags(entry)
+    third = forms.get("3") if verb else None
+    plural = forms.get("s") if noun else None
+    parts = []
+    if verb:
+        for key, label in (("p", "过去式"), ("d", "过去分词"),
+                           ("i", "现在分词")):
+            if forms.get(key):
+                parts.append(f"{label} {forms[key]}")
+    if third and plural and third == plural:
+        parts.append(f"第三人称单数/复数 {third}")
+    else:
+        if third:
+            parts.append(f"第三人称单数 {third}")
+        if plural:
+            parts.append(f"复数 {plural}")
+    if adj:
+        for key, label in (("r", "比较级"), ("t", "最高级")):
+            if forms.get(key):
+                parts.append(f"{label} {forms[key]}")
+    return parts
 
 
 def info_lines(entry, sense, index=None, total=None, senses=None):
@@ -465,12 +503,9 @@ def info_lines(entry, sense, index=None, total=None, senses=None):
             syns.append(prefix + " / ".join(s["words"]))
         lines.append(f"{DIM}近义{pos_note}{RESET}   " + "；".join(syns))
 
-    forms = entry.get("forms") or {}
-    if forms:
-        parts = [f"{label} {forms[key]}" for key, label in FORM_ORDER
-                 if forms.get(key)]
-        if parts:
-            lines.append(f"{DIM}变形{RESET}   " + "，".join(parts))
+    parts = form_parts(entry)
+    if parts:
+        lines.append(f"{DIM}变形{RESET}   " + "，".join(parts))
 
     all_examples = entry.get("examples") or []
     examples = all_examples
