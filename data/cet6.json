@@ -1395,7 +1395,7 @@
      "cn": "失事列车；训练残骸"
     }
    ],
-   "method": "",
+   "method": "源自古诺斯语 *wrek，经盎格鲁-诺曼语进入英语；指船只失事、残骸，也指身心垮掉的人；w 不发音。",
    "family": [
     {
      "pos": "adj",
@@ -2276,7 +2276,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "gloom（阴暗、愁闷）+ -y（形容词后缀）→ 阴沉的、忧郁的。",
    "family": [
     {
      "pos": "adv",
@@ -19241,7 +19241,7 @@
      "cn": "引起轰动；发出溅泼声"
     }
    ],
-   "method": "",
+   "method": "拟声：spl- 像水花迸开的「啪」声，-ash 收尾如泼水——溅、泼。",
    "family": [
     {
      "pos": "adj",
@@ -59897,7 +59897,7 @@
      "cn": "耐磨的；耐磨性"
     }
    ],
-   "method": "",
+   "method": "resist（抵抗）+ -ant（形容词后缀）→ 抵抗的；抗…的、耐…的。",
    "family": [
     {
      "pos": "adj",
@@ -99676,7 +99676,7 @@
      "cn": "太阴月；朔望月"
     }
    ],
-   "method": "",
+   "method": "拉丁语 lūna（月亮）+ -āris（形容词后缀）→ 月的、月球的；lunar calendar 即阴历。",
    "family": [
     {
      "pos": "n",
@@ -121253,7 +121253,7 @@
      "cn": "餐巾纸；纸餐巾"
     }
    ],
-   "method": "",
+   "method": "nape（布）+ -kin（表小）→ 小布块 → 餐巾。",
    "family": [
     {
      "pos": "adj",
@@ -146759,7 +146759,7 @@
      "cn": "虚数"
     }
    ],
-   "method": "",
+   "method": "imagine（想象）+ -ary（形容词后缀）→ 想象中的、假想的。",
    "family": [
     {
      "pos": "adj",
@@ -157629,7 +157629,7 @@
      "cn": "粗纹理的；粗颗粒的"
     }
    ],
-   "method": "",
+   "method": "由 course（常规、进程）的形容词用法分化而来：寻常的 → 普通的 → 不精细的 → 粗糙、粗俗。",
    "family": [
     {
      "pos": "adv",
@@ -190077,7 +190077,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "希腊语 dráō（做）→ drâsis（效力）→ drastikós（有力的）→ 激烈的、极端的、严厉的。",
    "family": [
     {
      "pos": "adv",
@@ -201712,15 +201712,19 @@
   },
   {
    "word": "harden",
-   "phonetic": "'hɑrdn",
+   "phonetic": "'hɑ:dn",
    "trans": [
     {
-     "pos": "v",
-     "cn": "变硬"
+     "pos": "vt",
+     "cn": "使变硬，使坚强，使冷酷"
+    },
+    {
+     "pos": "vi",
+     "cn": "变硬，变冷酷"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hard（硬）+ -en（使…）→ 使变硬、变硬。",
    "family": [
     {
      "pos": "adj",
@@ -201781,8 +201785,58 @@
    },
    "senses": [
     {
-     "pos": "v",
-     "cn": "变硬",
+     "pos": "vt",
+     "cn": "使变硬，使坚强，使冷酷",
+     "tokens": [
+      [
+       "使",
+       "shi"
+      ],
+      [
+       "变",
+       "bian"
+      ],
+      [
+       "硬",
+       "ying"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "使",
+       "shi"
+      ],
+      [
+       "坚",
+       "jian"
+      ],
+      [
+       "强",
+       "qiang"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "使",
+       "shi"
+      ],
+      [
+       "冷",
+       "leng"
+      ],
+      [
+       "酷",
+       "ku"
+      ]
+     ]
+    },
+    {
+     "pos": "vi",
+     "cn": "变硬，变冷酷",
      "tokens": [
       [
        "变",
@@ -201791,6 +201845,22 @@
       [
        "硬",
        "ying"
+      ],
+      [
+       "，",
+       ""
+      ],
+      [
+       "变",
+       "bian"
+      ],
+      [
+       "冷",
+       "leng"
+      ],
+      [
+       "酷",
+       "ku"
       ]
      ]
     }
@@ -209121,7 +209191,7 @@
      "cn": "东方明珠；东方之珠；东方珍珠"
     }
    ],
-   "method": "",
+   "method": "联想：pearl 里藏着 pear（梨）——像小梨一样圆润的珍珠。",
    "family": [
     {
      "pos": "adj",
@@ -226326,7 +226396,7 @@
      "cn": "适时调节"
     }
    ],
-   "method": "",
+   "method": "time（时间）+ -ly → 合乎时间的 → 及时的；-ly 此处构成形容词，也可作副词。",
    "family": [
     {
      "pos": "adj",
@@ -232272,7 +232342,7 @@
      "cn": "光学纯度"
     }
    ],
-   "method": "",
+   "method": "pure（纯的）+ -ity（名词后缀）→ 纯净、纯洁；pure 源自拉丁语 pūrus。",
    "family": [
     {
      "pos": "adj",
@@ -256508,7 +256578,7 @@
    "phonetic": "'plænətɛri",
    "trans": [
     {
-     "pos": "n",
+     "pos": "adj",
      "cn": "行星的"
     }
    ],
@@ -256526,7 +256596,7 @@
      "cn": "行星齿轮变速箱"
     }
    ],
-   "method": "",
+   "method": "planet（行星）+ -ary（形容词后缀）→ 行星的；记住 planet 加 -ary 即可。",
    "family": [
     {
      "pos": "adj",
@@ -256578,7 +256648,7 @@
    },
    "senses": [
     {
-     "pos": "n",
+     "pos": "adj",
      "cn": "行星的",
      "tokens": [
       [
@@ -276811,7 +276881,7 @@
      "cn": "否决；禁止"
     }
    ],
-   "method": "",
+   "method": "联想：拉丁语 veto 意为“我禁止”；古罗马官员以此否决法案，记“否决”。",
    "family": [],
    "synonyms": [
     {
@@ -301985,7 +302055,7 @@
      "cn": "行李架"
     }
    ],
-   "method": "",
+   "method": "lug（拖、拉）+ -age（名词后缀）→ 被拖着走的东西，即行李；luggage 不可数。",
    "family": [],
    "synonyms": [
     {
@@ -303715,7 +303785,7 @@
      "cn": "正直的人"
     }
    ],
-   "method": "",
+   "method": "up（向上）+ right（直）→ 竖直的；引申为为人正直的。",
    "family": [
     {
      "pos": "adv",
@@ -339384,7 +339454,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "af-（=ad，向）+ flu（流，拉丁语 fluere）+ -ent → 财富源源流向此处 → 富裕的；本义“流入、支流”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -354168,7 +354238,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "astro-（星）+ -nomy（法则、学科）→ 研究星辰的学问：天文学。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -355019,7 +355089,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自希腊 Attica（阿提卡）：顶层仿“阿提卡式”建筑装饰，后指阁楼、顶楼。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358794,7 +358864,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "bag（包）+ -age（名词后缀）→ 一堆包 → 行李；baggage 不可数。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -358872,7 +358942,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：bail 首字母 b 像「保」的拼音首字母——bail 即保释；bail out 还可指把水舀出。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -360499,7 +360569,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：俗称 BBQ，谐音「巴比Q」；源自泰诺语 barbakoa（架起的木架），原指在木架上烤肉。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -362617,7 +362687,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：与 battle（战斗）同以 bat- 开头（词源只追溯到法语 battaillon）；记“上战场以营为单位”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -371796,7 +371866,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：bloom 与 blossom 同义近形，都以 blo- 开头，指开花。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -371975,7 +372045,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：blouse 开头 blou- 拼写近似 blue——想象一件蓝色宽松上衣。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -384070,14 +384140,10 @@
     {
      "pos": "n",
      "cn": "卷心菜"
-    },
-    {
-     "pos": "",
-     "cn": "[医] 卷心菜，甘兰"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "借自盎格鲁-诺曼语 caboche（头）——卷心菜像一颗大头；更早是否来自拉丁 caput 尚无定论。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -384112,52 +384178,6 @@
       [
        "菜",
        "cai"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[医] 卷心菜，甘兰",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "医",
-       "yi"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "卷",
-       "juan"
-      ],
-      [
-       "心",
-       "xin"
-      ],
-      [
-       "菜",
-       "cai"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "甘",
-       "gan"
-      ],
-      [
-       "兰",
-       "lan"
       ]
      ]
     }
@@ -385171,7 +385191,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自闪米特语 *gamal-（阿拉伯语 jamal 即骆驼），经希腊语 kámēlos、拉丁语 camēlus 进入英语。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -386236,7 +386256,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：can + teen——青少年（teen）能（can）在食堂、小卖部买东西；实际借自法语 cantine。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -395464,11 +395484,11 @@
     },
     {
      "pos": "",
-     "cn": "[建] 雀麦"
+     "cn": "[植] 雀麦"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自波斯语 shah（国王），经阿拉伯语 shāh 进入古法语 eschés；国际象棋原是“国王的游戏”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -395508,15 +395528,15 @@
     },
     {
      "pos": "",
-     "cn": "[建] 雀麦",
+     "cn": "[植] 雀麦",
      "tokens": [
       [
        "[",
        ""
       ],
       [
-       "建",
-       "jian"
+       "植",
+       "zhi"
       ],
       [
        "]",
@@ -398899,7 +398919,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：clap 读起来像「啪」的一声——拍手、鼓掌，也指啪地关上。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -399528,7 +399548,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 clawu（爪），源自原始日耳曼语 *klawō；claw 即爪、用爪抓。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -402649,7 +402669,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：clown 与 crown（王冠）形近——戴不上王冠的乡下人，成了马戏团小丑；原义指笨拙的乡下人。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -405145,7 +405165,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：冒号（:）；冒号义源自希腊语 kōlon（分句、肢体），结肠义来自另一个词 kólon（大肠），同形不同源。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -405761,7 +405781,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 camb，词根义为“齿”（PIE *ǵómbʰos）；梳齿如牙 → 梳子；注意 b 不发音。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -406890,7 +406910,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "com-（一起）+ passus（步）→ 一步步围成一圈 → 范围、指南针；动词即“包围”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -407542,7 +407562,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 comprehendere＝com-（完全、一起）+ prehendere（抓住）→ 抓住全部 → 理解、包括。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -407786,7 +407806,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自西班牙语 camarada「同屋的人」（camera 房间）→ 同志、伙伴。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -409930,7 +409950,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 con-（完全）+ quaerere（寻求、取得）→ 全力求得 → 征服、克服；与 inquire 同根。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -429769,7 +429789,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dent-（拉丁语 dēns，牙齿）+ -al（形容词后缀）→ 牙齿的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -432870,7 +432890,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "dia-（相互、贯穿）+ -lect（说，希腊语 legein）→ 一个地区的人相互说的话 → 方言。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -438533,7 +438553,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：dun 是灰褐色，*donekie 指小灰马，驴和矮马个头相近；真正词源只是推测，不能当词根。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -443906,7 +443926,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 dox 意为“暗、黑”；dusk 与 dust（灰尘）同源，联想黄昏尘雾弥漫、天色转暗。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -445003,7 +445023,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 eornost 意为认真、热切，与德语 Ernst（严肃）同源；“定金”一义另有来源，是另一个同形词。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -450276,7 +450296,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "en-（使进入）+ danger（危险）→ 使陷入危险 → 危及。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -454379,7 +454399,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "希腊语 ēthos 意为品格、道德本性，加 -ikos 构成形容词；ethic 即伦理、道德规范。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -456568,7 +456588,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ex-（出）+ cell-（高；见 culminate、column）→ 高出他人 → 胜过、擅长。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -462392,7 +462412,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fare（行走、旅程）+ well（好）——祝远行者一路走好，引申为告别、再会。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -463071,7 +463091,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fast（牢固的）+ -en（使…）→ 使牢固 → 拴紧、系住、扣紧。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -465484,7 +465504,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fer-（拉丁语 ferre，带来、承载）+ -tile → 能带来果实的 → 肥沃的、多产的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -468743,7 +468763,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "finger（手指）+ print（印痕）→ 指纹；作动词即“采指纹”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -469286,7 +469306,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "fire（火）+ man（人）→ 救火的人：消防队员。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -481301,7 +481321,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自原始印欧语 *prews-（冰冻），经原始日耳曼语 *frustaz 变为古英语 frost；霜就是冻出来的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -488434,7 +488454,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 glūten（胶）→ 胶；与 clay（黏土）同源，联想黏土般的黏性 → 粘合。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -497469,7 +497489,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "hamburger 的截短词；hamburger 来自德国城市 Hamburg + -er → 汉堡包。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -508128,7 +508148,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 holh（洞），与 hole 同源，可追到印欧语 *ḱel-（遮盖）——被盖住的空腔 → 中空的、洞。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -508817,7 +508837,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "homo-（希腊语 homós，相同）+ sexual（性的）→ 同性恋的、同性恋者；此处 homo- 不是拉丁语「人」。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -511340,7 +511360,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "house（家）+ work（活儿）→ 家里的活儿 → 家务；不可数。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -515029,7 +515049,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 ignōrāns（不知道的）＝ignore + -ant；be ignorant of 即不知道、无知。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -519679,7 +519699,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in-（向内）+ fer（拉丁语 ferre，携带）→ 把前提带进来得出结论 → 推断。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -521522,7 +521542,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "in-（向）+ sal（跳，拉丁语 salire）→ 跳到别人身上 → 侮辱。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -524327,7 +524347,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ir-（否定前缀，in- 在 r 前）+ regular（规则的）→ 不规则的、不整齐的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -536726,7 +536746,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 lavāre（洗）+ -ōrium（场所）→ 洗手的房间 → 盥洗室、厕所。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -547097,7 +547117,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：一条面包是 a loaf of bread；动词 loaf（游荡）来自 loafer，与面包义不同源，分开记。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -552318,7 +552338,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古法语 madame＝ma（我的）+ dame（夫人），即「我的夫人」；madam 正反拼写相同，也好记。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -555009,11 +555029,11 @@
    "trans": [
     {
      "pos": "n",
-     "cn": "人类，男性"
+     "cn": "人类"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "man（人）+ kind（种类）→ 人类这一种类；mankind 泛指全人类。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -555031,7 +555051,7 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "人类，男性",
+     "cn": "人类",
      "tokens": [
       [
        "人",
@@ -555040,18 +555060,6 @@
       [
        "类",
        "lei"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "男",
-       "nan"
-      ],
-      [
-       "性",
-       "xing"
       ]
      ]
     }
@@ -557144,19 +557152,15 @@
   {
    "word": "Marxism",
    "typing": "Marxism",
-   "phonetic": "'mɑ:ksizm",
+   "phonetic": "'mɑ:ksizəm",
    "trans": [
     {
      "pos": "n",
      "cn": "马克思主义"
-    },
-    {
-     "pos": "",
-     "cn": "[法] 马克思的，马克思主义的;马克思主义"
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：Marx（马克思）+ -ism（主义，如 socialism 也以 -ism 结尾）→ 马克思主义。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -557174,98 +557178,6 @@
    "senses": [
     {
      "pos": "n",
-     "cn": "马克思主义",
-     "tokens": [
-      [
-       "马",
-       "ma"
-      ],
-      [
-       "克",
-       "ke"
-      ],
-      [
-       "思",
-       "si"
-      ],
-      [
-       "主",
-       "zhu"
-      ],
-      [
-       "义",
-       "yi"
-      ]
-     ]
-    },
-    {
-     "pos": "",
-     "cn": "[法] 马克思的，马克思主义的",
-     "tokens": [
-      [
-       "[",
-       ""
-      ],
-      [
-       "法",
-       "fa"
-      ],
-      [
-       "]",
-       ""
-      ],
-      [
-       " ",
-       ""
-      ],
-      [
-       "马",
-       "ma"
-      ],
-      [
-       "克",
-       "ke"
-      ],
-      [
-       "思",
-       "si"
-      ],
-      [
-       "的",
-       "de"
-      ],
-      [
-       "，",
-       ""
-      ],
-      [
-       "马",
-       "ma"
-      ],
-      [
-       "克",
-       "ke"
-      ],
-      [
-       "思",
-       "si"
-      ],
-      [
-       "主",
-       "zhu"
-      ],
-      [
-       "义",
-       "yi"
-      ],
-      [
-       "的",
-       "de"
-      ]
-     ]
-    },
-    {
-     "pos": "",
      "cn": "马克思主义",
      "tokens": [
       [
@@ -557307,7 +557219,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "法语 masser（按摩、揉）+ -age（名词后缀）→ 按摩；masser 更早的来源有阿拉伯语、葡萄牙语两说。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -562420,7 +562332,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 myrge 意为“令人愉快、惬意”，后指快乐；今常见于 Merry Christmas。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -563643,7 +563555,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "法语 métro 是 métropolitain 的截短，源自希腊语 mētēr（母亲）+ polis（城市）→ 大都市铁路 → 地铁。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -563765,7 +563677,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "micro-（微小，希腊语 mikros）+ -scope（看）→ 用来看微小物的仪器 → 显微镜。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -568510,7 +568422,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：moist 读起来像「摸一湿」——一摸湿漉漉，就是潮湿的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -572618,7 +572530,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：mule 读音近「木了」——倔得像块木头，这就是骡子和倔强之人。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -575307,7 +575219,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "naught（无、零；古义“邪恶”）+ -y → 一无是处、没规矩的 → 顽皮的；原义比今义重。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -576385,7 +576297,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "neck（脖子）+ lace（带子）→ 挂在脖子上的带子：项链。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -578830,7 +578742,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 neptis（孙女、侄甥女）；记：niece 侄女/甥女，与 nephew 侄子配对。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -592879,7 +592791,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "ov（拉丁语 ōvum，卵）+ -al（…的）→ 卵形的、椭圆形的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -596013,7 +595925,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：paddy 音近「耙地」——耙地种稻，paddy 指稻、稻谷；源自马来语 padi。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -604279,7 +604191,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 pirum（梨），经古英语 pere 进入英语；pear 与 pair（一对）同音，别写混。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -611691,7 +611603,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 pertundō＝per-（穿过）+ tundō（打、捣）→ 打通、刺穿；pierce 即刺穿、穿透。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -618820,7 +618732,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 plōh／古诺斯语 plógr（犁）→ 犁、耕；美式拼作 plow。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -647090,7 +647002,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "re-（再、反复）+ fine（精细、纯）→ 反复提纯：精炼、使优雅。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -669206,7 +669118,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：scarce 与 scare（害怕）只差一个字母 c——物资短缺让人害怕；意为稀少的、缺乏的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -670237,7 +670149,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古法语 escouter（听）→ 侦察员先听动静；scout 即侦察、侦察员。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -685577,7 +685489,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "side（边、侧）+ -ways（方向）→ 向旁边、侧着。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -687144,7 +687056,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自拉丁语 sincerus（纯正、真诚）；常见拆解 sine（无）+ cera（蜡）是民间词源，不可信。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -690909,7 +690821,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：slender 与 slim 都以 sl- 开头，都形容苗条纤细。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -710135,7 +710047,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "古英语 steorfan 本义“死、灭亡”，后专指饿死；记“饿到死”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -715114,7 +715026,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "stock（覆盖、套上）+ -ing（名词后缀）→ 套在腿上的东西：长袜。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -723098,7 +723010,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "sun（太阳）+ rise（升起）→ 日出、黎明。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -732042,7 +731954,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tang-（拉丁语 tangere，触摸）+ -ible（可…的）→ 可触摸的、有形的，引申为“明确的”。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -743121,7 +743033,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拟声：thunder 读起来像闷雷滚过，轰隆一声——雷、雷声。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -750986,7 +750898,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "tract（拉，拉丁语 trahere）+ -or（物）→ 拉农具的机器：拖拉机。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -752323,7 +752235,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：tram 与 train（火车）形近，都是轨道交通工具；词源不确定，来自人名 Outram 的说法是假的。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -762101,7 +762013,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "under（在下、里面）+ wear（穿）→ 穿在里面的衣物：内衣。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -768678,7 +768590,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自意大利语 violino：viola（提琴）+ -ino（小）→ 小提琴。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -770706,7 +770618,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "联想：voyage 的 voy 读音像 boy——想象男孩第一次出海远航。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -785406,7 +785318,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "with-（对抗）+ stand（站）→ 站着顶住 → 抵住、顶住、经得起。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -787610,7 +787522,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "源自古英语 wiersa，是 bad 的不规则比较级：bad–worse–worst，意为更坏的（地）。",
    "family": [],
    "synonyms": [],
    "examples": [],
@@ -792793,7 +792705,7 @@
     }
    ],
    "phrases": [],
-   "method": "",
+   "method": "拉丁语 inquīrō＝in-（向内）+ quaerere（寻求）→ 深入寻求 → 询问、查究；同根词 require、query。",
    "family": [],
    "synonyms": [],
    "examples": [],
