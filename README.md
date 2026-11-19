@@ -211,7 +211,10 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
 - 每个义项的状态、等级、到期日保存在 `stats.json` 的 `review[word][义项key]`；
   旧版按词存储的进度会自动迁移到对应义项。旧版自动登记但从未检测过的
   「未测」义项会被清理，不再进入复习。
-- `--stats` 按义项显示：生词 / 熟词各等级 / 待复习 / 覆盖词数。
+- `--stats` 按**当前存档绑定的难度**统计：生词 / 熟词各等级 / 待复习 / 覆盖词数；
+  显式加 `--level` 时改看该难度的进度。覆盖数显示为「已覆盖/该难度总词数」。
+- `--profiles` 列出每个存档时，覆盖数同样按该存档绑定的难度计算，例如
+  `core` 存档显示 `覆盖 12/3015 词`。
 
 在交互终端里运行 `vocabtype --stats`，末尾会提示「按 d 查看每个义项的详细
 状态」，按 `d` 进入全屏列表：
@@ -249,8 +252,10 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 - 名称只能使用字母、数字、点、下划线和短横线，最长 40 个字符。
 - `--profile` 会记住选择：之后再直接运行 `vocabtype`，使用的仍是该存档。
   当前存档记录在 `~/.local/share/vocabtype/current_profile`。
-- `--profile-level` 给存档绑定默认难度：`all`、`cet4+6`、`cet6`、`cet4` 或
-  `extra`。新建存档时可以一起指定；之后不写 `--level` 就用这个难度。
+- `--profile-level` 给存档绑定默认难度：`all`、`core`、`core+`、`cet4+6`、
+  `cet6`、`cet4` 或 `extra`。新建存档时可以一起指定；之后不写 `--level` 就用
+  这个难度。修改已有存档也是同一条命令，例如
+  `vocabtype --profile official --profile-level cet4+6`。
 - 显式写 `--level` 只覆盖本次运行，不改变存档绑定。例如存档绑定 `cet4+6` 时，
   `vocabtype --level cet6` 本次只练六级词，下次仍回到 `cet4+6`。
 - `--profile default` 切回默认存档；各存档互不影响。可以直接复制这些 JSON 文件
@@ -278,7 +283,7 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 --quiz-size N       释义检测最多几题（0=全部）
 --no-retry          首次答错的词不在本轮重刷
 --intervals LIST    熟词各级间隔（天），默认 1,3,7,15,30
---stats             显示累计统计
+--stats             按当前难度显示累计统计
 --profiles          列出全部学习存档
 --profile NAME      切换并记住当前存档（default=原 stats.json）
 --profile-level LEVEL

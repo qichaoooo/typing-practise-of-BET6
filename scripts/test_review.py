@@ -94,6 +94,17 @@ class IntervalTest(unittest.TestCase):
         self.assertEqual((new, learning, known, due, words), (0, 0, 1, 0, 1))
         self.assertEqual(levels, {1: 1})
 
+    def test_review_counts_can_scope_to_words(self):
+        stats = {}
+        self.mark(stats, True)
+        scoped = vocabtype.review_counts(
+            stats, day=self.day, allowed_words={"other"})
+        self.assertEqual(scoped[:3], (0, 0, 0))
+        self.assertEqual(scoped[5], 0)
+        included = vocabtype.review_counts(
+            stats, day=self.day, allowed_words={"w"})
+        self.assertEqual(included[5], 1)
+
     def test_early_correct_keeps_level_and_due(self):
         stats = {}
         self.mark(stats, True)

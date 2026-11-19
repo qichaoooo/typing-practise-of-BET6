@@ -1546,9 +1546,10 @@ def quiz_one_split(term, sq, idx, total):
             return ok
 
 
-def review_counts(stats, day=None):
+def review_counts(stats, day=None, allowed_words=None):
     """按义项统计：生词 / 熟词 / 待复习 / 覆盖词数。
 
+    allowed_words 为可选的单词小写集合；用于只统计某个难度范围。
     返回值第一项是旧数据里残留的「未测」义项数，正常应为 0。
     """
     new_count = 0
@@ -1558,6 +1559,8 @@ def review_counts(stats, day=None):
     levels = {}
     words = set()
     for word, recs in stats.get("review", {}).items():
+        if allowed_words is not None and word.lower() not in allowed_words:
+            continue
         if not isinstance(recs, dict) or "state" in recs:
             continue
         for rec in recs.values():
@@ -2340,7 +2343,11 @@ def show_profiles(args):
     for name, path in rows:
         stats = load_stats(path)
         normalize_review(stats, entries)
-        _new_count, learning, known, _levels, due, words = review_counts(stats)
+        level = get_profile_level(path)
+        level_entries = [e for e in entries if level_matches(e, level)]
+        allowed = {e["word"].lower() for e in level_entries}
+        _new_count, learning, known, _levels, due, words = review_counts(
+            stats, allowed_words=allowed)
         suffix = "" if os.path.exists(path) else f"  {DIM}(空){RESET}"
         tags = []
         if name == "default":
@@ -2348,9 +2355,8 @@ def show_profiles(args):
         if name == current:
             tags.append("当前")
         tag = f"{DIM}{'/'.join(tags)}{RESET} " if tags else ""
-        level = get_profile_level(path)
         print(f"  {name:<20} [{level}] {tag}生词 {learning} · 熟词 {known} · "
-              f"待复习 {due} · 覆盖 {words} 词{suffix}")
+              f"待复习 {due} · 覆盖 {words}/{len(level_entries)} 词{suffix}")
     print(f"{DIM}当前存档：{current} · 进度目录："
           f"{os.path.dirname(DEFAULT_STATS)}{RESET}")
 
@@ -2361,23 +2367,26 @@ def show_stats(args):
     if getattr(args, "profile_name", None):
         print(f"存档: {args.profile_name} · 绑定难度: "
               f"{get_profile_level(args.stats_file)}")
-    ws = stats["words"]
-    practiced = sum(1 for w, s in ws.items() if s.get("n"))
+    level_entries = [e for e in entries if level_matches(e, args.level)]
+    allowed = {e["word"].lower() for e in level_entries}
+    ws = {w: s for w, s in stats["words"].items()
+          if w.lower() in allowed}
+    practiced = sum(1 for s in ws.values() if s.get("n"))
     right = sum(s.get("r", 0) for s in ws.values())
     wrong = sum(s.get("w", 0) for s in ws.values())
-    print(f"已练单词: {practiced} / {len(entries)}")
+    print(f"统计范围: {args.level}（{len(level_entries)} 词）")
+    print(f"已练单词: {practiced} / {len(level_entries)}")
     counts = {k: sum(1 for e in entries if e.get("level") == k)
               for k in ("cet6", "cet4", "extra")}
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
-    if args.level in ("core", "core+"):
-        print(f"高频范围: {args.level}（{len(core_levels()[args.level])} 词）")
     normalize_review(stats, entries)
-    _new_count, learning, known, levels, due, words = review_counts(stats)
+    _new_count, learning, known, levels, due, words = review_counts(
+        stats, allowed_words=allowed)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
     print(f"复习条目: 生词 {learning} · 熟词 {known}"
           f"{('（' + level_text + '）') if level_text else ''} · "
-          f"待复习 {due} · 覆盖 {words} 词")
+          f"待复习 {due} · 覆盖 {words}/{len(level_entries)} 词")
     if right + wrong:
         print(f"累计正确 {right}  错误 {wrong}  准确率 {right / (right + wrong) * 100:.1f}%")
     weak = sorted(
@@ -2386,7 +2395,7 @@ def show_stats(args):
     )[:10]
     if weak:
         print("最需要复习:")
-        lookup = {e["word"]: e for e in entries}
+        lookup = {e["word"]: e for e in level_entries}
         for rate, w, word in weak:
             if w == 0:
                 break
@@ -2395,7 +2404,8 @@ def show_stats(args):
     sessions = stats.get("sessions", [])
     if sessions:
         recent = sessions[-5:]
-        print("最近记录:")
+        print("最近记录:" if args.level == "all"
+              else "最近记录（存档全部）:")
         for s in recent:
             print(f"  {s.get('time', '')}  {s.get('mode', ''):<6} "
                   f"{s.get('done', 0):>3} 词  "
@@ -2403,7 +2413,8 @@ def show_stats(args):
                   f"{s.get('accuracy', 0):>5.1f}%")
     quiz_sessions = stats.get("quiz_sessions", [])
     if quiz_sessions:
-        print("最近释义检测:")
+        print("最近释义检测:" if args.level == "all"
+              else "最近释义检测（存档全部）:")
         for q in quiz_sessions[-5:]:
             mode = q.get("check") or q.get("quiz", "")
             print(f"  {q.get('time', '')}  {q.get('kind', ''):<6} "
@@ -2420,7 +2431,7 @@ def show_stats(args):
         sys.stdout.write("\r\033[K")
         sys.stdout.flush()
         if k in (ord("d"), ord("D")):
-            show_review_detail(entries, stats)
+            show_review_detail(level_entries, stats)
 
 
 class ChineseArgumentParser(argparse.ArgumentParser):
@@ -2490,7 +2501,8 @@ def main():
     p.add_argument("--intervals", default=",".join(map(str, DEFAULT_INTERVALS)),
                    help="熟词各级复习间隔（天），逗号分隔；"
                         "默认 1,3,7,15,30")
-    p.add_argument("--stats", action="store_true", help="显示累计进度")
+    p.add_argument("--stats", action="store_true",
+                   help="显示累计进度（按当前难度范围）")
     p.add_argument("--profiles", action="store_true",
                    help="列出全部学习存档及进度概况，并标出当前存档")
     p.add_argument("--profile", metavar="NAME",
