@@ -192,17 +192,23 @@
   一次）、只登记已检测义项、练到即预登记且不降级熟词、检测提前退出的降级规则、
   义项明细行展开/状态标签/筛选/未学习义项枚举/到期文案/单词与全拼搜索、旧格式
   迁移、拼音模糊匹配（前缀/拼错/少拼/多项匹配收窄到唯一），以及拆分多选的片段
-  切分/正确片段标记。
+  切分/正确片段标记，以及存档名解析/非法名拒绝/存档列表。
 
 ### 统计与按键
 
 - WPM/击键准确率只统计阶段 1 的英文拼写；不含阶段 2 拼音，不含看题/暂停时间。
 - 统计文件：`$XDG_DATA_HOME/vocabtype/stats.json`，默认
   `~/.local/share/vocabtype/stats.json`。
+- 多存档：`--profile NAME` 使用命名存档；`default` 仍映射到上面的 `stats.json`，
+  其他存档在 `.../vocabtype/profiles/NAME.json`。`--profiles` 列出全部存档及
+  生词/熟词/待复习/覆盖词数。`--profile` 与 `--stats-file` 互斥；名称必须匹配
+  `[A-Za-z0-9][A-Za-z0-9._-]{0,39}`，防止路径穿越。`--profile` 只影响本次运行，
+  不持久化当前选择；各存档完全独立，首次保存时创建文件。
 - 参数：`-n/--count`、`--mode show|recall`、`--level all|cet6|cet4|extra`、
   `--no-pinyin`、`--all-senses`、`--weak`、`--new`、`--no-requeue`、`--review`、
   `--review-known`、`--check single|split`、`--no-quiz`、`--quiz-size`、
-  `--no-retry`、`--intervals`、`--stats`、`--stats-file`、`--seed`、`-f/--file`。
+  `--no-retry`、`--intervals`、`--stats`、`--profiles`、`--profile`、
+  `--stats-file`、`--seed`、`-f/--file`。
   `--weak`/`--new` 在 `--level` 过滤后的池子里按义项选；复习模式不支持它们。
 - `--help` 输出必须为中文（用法、选项说明、示例），新增参数时同步更新。
 - 按键：`Esc`/`Ctrl-C` 退出；退格删除；`Ctrl-U` 清空当前输入。

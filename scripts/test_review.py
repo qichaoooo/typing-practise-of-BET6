@@ -6,6 +6,7 @@
 """
 import os
 import sys
+import tempfile
 import unittest
 from datetime import date
 from types import SimpleNamespace
@@ -541,6 +542,41 @@ class FormTest(unittest.TestCase):
                                     "t": "remotest"})
         self.assertEqual(vocabtype.form_parts(e),
                          ["比较级 remoter", "最高级 remotest"])
+
+
+class ProfileTest(unittest.TestCase):
+    def with_paths(self, root):
+        old_stats = vocabtype.DEFAULT_STATS
+        old_dir = vocabtype.PROFILES_DIR
+        vocabtype.DEFAULT_STATS = os.path.join(root, "stats.json")
+        vocabtype.PROFILES_DIR = os.path.join(root, "profiles")
+        self.addCleanup(setattr, vocabtype, "DEFAULT_STATS", old_stats)
+        self.addCleanup(setattr, vocabtype, "PROFILES_DIR", old_dir)
+
+    def test_default_profile_keeps_legacy_path(self):
+        self.assertEqual(vocabtype.profile_stats_path("default"),
+                         vocabtype.DEFAULT_STATS)
+
+    def test_named_profile_path(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            self.assertEqual(vocabtype.profile_stats_path("cet6"),
+                             os.path.join(root, "profiles", "cet6.json"))
+
+    def test_invalid_profile_names_are_rejected(self):
+        for name in ("", "../x", "a/b", "-x", "x" * 41):
+            with self.assertRaises(SystemExit):
+                vocabtype.profile_stats_path(name)
+
+    def test_profile_paths_lists_default_and_valid_files(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            os.makedirs(vocabtype.PROFILES_DIR)
+            for filename in ("work.json", "bad name.json", "default.json"):
+                open(os.path.join(vocabtype.PROFILES_DIR, filename),
+                     "w").close()
+            names = [name for name, _path in vocabtype.profile_paths()]
+            self.assertEqual(names, ["default", "work"])
 
 
 class QuestionTest(unittest.TestCase):

@@ -43,6 +43,8 @@ DEFAULT_DATA = os.path.join(PROJECT_DIR, "data", "cet6.json")
 DEFAULT_STATS = os.path.join(
     os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share")),
     "vocabtype", "stats.json")
+PROFILES_DIR = os.path.join(os.path.dirname(DEFAULT_STATS), "profiles")
+PROFILE_NAME_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,39}\Z")
 
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
@@ -90,6 +92,30 @@ def save_stats(path, stats):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False)
     os.replace(tmp, path)
+
+
+def profile_stats_path(name):
+    """把存档名解析为进度文件路径；default 保持旧版 stats.json。"""
+    if name == "default":
+        return DEFAULT_STATS
+    if not PROFILE_NAME_RE.fullmatch(name):
+        sys.exit("存档名只能使用字母、数字、点、下划线和短横线，"
+                 "需以字母或数字开头，最长 40 个字符。")
+    return os.path.join(PROFILES_DIR, name + ".json")
+
+
+def profile_paths():
+    """返回已有存档名与路径，default 始终列在最前。"""
+    rows = [("default", DEFAULT_STATS)]
+    if os.path.isdir(PROFILES_DIR):
+        for filename in sorted(os.listdir(PROFILES_DIR)):
+            if not filename.endswith(".json"):
+                continue
+            name = filename[:-5]
+            if name == "default" or not PROFILE_NAME_RE.fullmatch(name):
+                continue
+            rows.append((name, os.path.join(PROFILES_DIR, filename)))
+    return rows
 
 
 def word_stat(stats, word):
@@ -2218,6 +2244,21 @@ def show_review_detail(entries, stats):
         sys.stdout.flush()
 
 
+def show_profiles(args):
+    """列出全部存档及复习概况。"""
+    entries = load_words(args.file)
+    print(f"{BOLD}存档{RESET}{DIM}（用 --profile 名称 选择）{RESET}")
+    for name, path in profile_paths():
+        stats = load_stats(path)
+        normalize_review(stats, entries)
+        _new_count, learning, known, _levels, due, words = review_counts(stats)
+        suffix = "" if os.path.exists(path) else f"  {DIM}(空){RESET}"
+        label = f"{DIM}默认{RESET} " if name == "default" else ""
+        print(f"  {name:<20} {label}生词 {learning} · 熟词 {known} · "
+              f"待复习 {due} · 覆盖 {words} 词{suffix}")
+    print(f"{DIM}进度目录：{os.path.dirname(DEFAULT_STATS)}{RESET}")
+
+
 def show_stats(args):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
@@ -2300,6 +2341,8 @@ def main():
   vocabtype --review-known 20       从熟词中抽 20 个义项加练（不看是否到期）
   vocabtype --all-senses            拼写选词包含熟词，从全部词库按释义抽取
   vocabtype --stats                 查看复习进度
+  vocabtype --profiles              列出多个学习存档
+  vocabtype --profile cet6          使用名为 cet6 的存档练习
 """
     p = ChineseArgumentParser(
         description="CET-6 单词 + 打字练习 + 释义检测",
@@ -2341,10 +2384,22 @@ def main():
                    help="熟词各级复习间隔（天），逗号分隔；"
                         "默认 1,3,7,15,30")
     p.add_argument("--stats", action="store_true", help="显示累计进度")
-    p.add_argument("--stats-file", default=DEFAULT_STATS,
-                   help="进度保存路径")
+    p.add_argument("--profiles", action="store_true",
+                   help="列出全部学习存档及进度概况")
+    p.add_argument("--profile", metavar="NAME",
+                   help="使用命名存档（default 即原 stats.json）")
+    p.add_argument("--stats-file", default=None,
+                   help="自定义进度文件路径；不能与 --profile 同用")
     p.add_argument("--seed", type=int, default=None, help="固定随机种子")
     args = p.parse_args()
+    if args.profiles and args.profile:
+        sys.exit("--profiles 与 --profile 不能同用。")
+    if args.profile and args.stats_file:
+        sys.exit("--profile 与 --stats-file 不能同用。")
+    if args.profile:
+        args.stats_file = profile_stats_path(args.profile)
+    elif args.stats_file is None:
+        args.stats_file = DEFAULT_STATS
     args.intervals = parse_intervals(args.intervals)
     if args.quiz_size < 0:
         sys.exit("--quiz-size 不能为负数")
@@ -2361,6 +2416,9 @@ def main():
             sys.exit("--review-known 已指定题数，不能与 --quiz-size 同用。")
     if args.seed is not None:
         random.seed(args.seed)
+    if args.profiles:
+        show_profiles(args)
+        return
     if args.stats:
         show_stats(args)
         return
