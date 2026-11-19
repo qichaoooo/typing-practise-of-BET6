@@ -11,6 +11,7 @@
 ```sh
 vocabtype                     # 普通模式：拼写 + 全拼释义 + 拆分多选检测
 vocabtype --level cet6        # 只练官方六级★词（推荐备考时用）
+vocabtype --level core        # 高频核心：多来源整合的约 3 千词
 vocabtype --no-quiz           # 只做拼写练习，不做释义检测
 vocabtype --check single      # 释义检测改用四选一（默认是拆分多选）
 vocabtype --review            # 复习模式：只检测生词和今天到期的熟词
@@ -237,6 +238,8 @@ vocabtype --profiles              # 查看已有存档，标出当前存档
 vocabtype --profile cet6          # 切换到 cet6，之后的运行都使用它
 vocabtype --profile cet4only --profile-level cet4
                                   # 新建存档并绑定四级难度
+vocabtype --profile core3k --profile-level core
+                                  # 新建存档并绑定高频核心
 vocabtype --profile default       # 切回默认存档
 vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 ```
@@ -261,8 +264,8 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 ```
 -n, --count N       普通模式本次拼写练习的义项数（默认 30）
 --mode show|recall  拼写练习模式
---level LEVEL       all | cet4+6 | cet6 | cet4 | extra，按官方级别筛选；
-                    未指定时使用当前存档绑定难度
+--level LEVEL       all | core | core+ | cet4+6 | cet6 | cet4 | extra，
+                    按难度筛选；未指定时使用当前存档绑定难度
 --no-pinyin         标准模式跳过全拼释义阶段
 --all-senses        拼写选词包含熟词，从全部词库按释义抽取
 --weak              按历史错误率优先挑选
@@ -279,7 +282,7 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 --profiles          列出全部学习存档
 --profile NAME      切换并记住当前存档（default=原 stats.json）
 --profile-level LEVEL
-                    设置存档绑定难度：all/cet4+6/cet6/cet4/extra
+                    设置存档绑定难度：all/core/core+/cet4+6/cet6/cet4/extra
 --stats-file FILE   自定义进度文件（不能与 --profile 同用）
 -f FILE             换用其他单词数据文件
 --seed N            固定随机顺序（复现同一组词）
@@ -292,6 +295,33 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 速度（WPM）和击键准确率只统计第一阶段拼英文单词的过程：不含看题停顿，也不含
 第二阶段的释义拼音。所以数字会比网页测速偏高一些——更适合用来看自己的趋势，
 而不是和别人的分数比较。
+
+## 高频难度（core / core+）
+
+除了四六级级别，还可以用两组按「近年高频 + 多来源交叉」整合出的性价比难度：
+
+```sh
+vocabtype --level core            # 高频核心，约 3,015 词
+vocabtype --level core+           # 高频进阶，约 4,810 词
+vocabtype --profile core3k --profile-level core
+vocabtype --profile core5k --profile-level core+
+```
+
+- **core**：NGSL 1.2、Oxford 3000、Longman Communication 3000 的并集，再并入
+  当前词库中 COCA 排名 ≤3000 的词。共 3,015 词：CET4 2,954 · CET6 58 ·
+  扩展 3。
+- **core+**：core 再并入 Oxford 5000 的额外词和 COCA 排名 ≤8000 的词。
+  共 4,810 词：CET4 4,061 · CET6 731 · 扩展 18。
+- 这是**词级**筛选。词库没有义项级频率数据，所以义项仍按原有顺序加权；
+  不声称某条具体义项的频率来自语料。
+- 这些是多个来源的并集，不是每个来源都逐词认可；这样做的目的是尽量不漏掉
+  现代高频词，同时保持一个可控的学习量。
+
+数据保存在 `data/core_words.json`，来源、生成日期和规则也记录在该文件里。
+参考来源：[NGSL 1.2](https://www.newgeneralservicelist.com/new-general-service-list)、
+[Oxford 3000/5000](https://www.oxfordlearnersdictionaries.com/about/wordlists/oxford3000-5000)、
+[Longman Communication 3000](https://www.lextutor.ca/freq/lists_download/longman_3000_list.pdf)、
+[COCA](https://www.wordfrequency.info/)。
 
 ## 建议的练法
 

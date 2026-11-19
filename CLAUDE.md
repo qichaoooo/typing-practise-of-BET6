@@ -57,9 +57,10 @@
   和检测。
 - `--all-senses`：拼写选词时从全部词库按义项抽取（包含熟词）。默认只抽还没变熟
   的义项。
-- `--level all|cet4+6|cet6|cet4|extra`：按官方级别筛选候选词。`cet4+6` 表示
-  四级+六级（不含扩展）。未显式指定时使用当前存档绑定的难度；默认存档无绑定时
-  为 `all`。
+- `--level all|core|core+|cet4+6|cet6|cet4|extra`：按难度筛选候选词。
+  `core`/`core+` 使用 `data/core_words.json` 的高频词集合（规则见下文），
+  按词形匹配；`cet4+6` 表示四级+六级（不含扩展）。未显式指定时使用当前存档绑定
+  的难度；默认存档无绑定时为 `all`。
 - 头部显示 `CET4` / `CET6` / `扩展` 标签；级别来自 `level` 字段。
 - 阶段 1 的比较目标是 `typing` 字段（纯 ASCII），显示仍是 `word`。带重音或短语
   的词条按 `typing` 敲，例如 `coup d'état` 敲 `coup d'etat`、`cliché` 敲 `cliche`；
@@ -195,7 +196,7 @@
   义项明细行展开/状态标签/筛选/未学习义项枚举/到期文案/单词与全拼搜索、旧格式
   迁移、拼音模糊匹配（前缀/拼错/少拼/多项匹配收窄到唯一）、拆分多选的片段
   切分/正确片段标记，以及存档名解析/非法名拒绝/存档列表/当前存档持久化与回退、
-  难度匹配与存档难度绑定。
+  难度匹配（含 core/core+）与存档难度绑定。
 
 ### 统计与按键
 
@@ -213,13 +214,18 @@
   `cet4`/`extra`）。`--profile-level` 可新建或修改绑定；未显式传 `--level` 时
   使用该绑定，显式 `--level` 只覆盖本次运行。`--profile-level` 不能与
   `--stats-file` 或 `--profiles` 同用。`--profiles` 和 `--stats` 会显示绑定难度。
-- 参数：`-n/--count`、`--mode show|recall`、`--level all|cet4+6|cet6|cet4|extra`、
+- 参数：`-n/--count`、`--mode show|recall`、`--level all|core|core+|cet4+6|cet6|cet4|extra`、
   `--no-pinyin`、`--all-senses`、`--weak`、`--new`、`--no-requeue`、`--review`、
   `--review-known`、`--check single|split`、`--no-quiz`、`--quiz-size`、
   `--no-retry`、`--intervals`、`--stats`、`--profiles`、`--profile`、
   `--profile-level`、`--stats-file`、`--seed`、`-f/--file`。
   `--weak`/`--new` 在 `--level` 过滤后的池子里按义项选；复习模式不支持它们。
 - `--help` 输出必须为中文（用法、选项说明、示例），新增参数时同步更新。
+- 高频难度：`core` 为 NGSL 1.2 + Oxford 3000 + Longman Communication 3000 的
+  并集，再并入 COCA 排名 ≤3000 的词；`core+` 再并入 Oxford 5000 额外词和
+  COCA 排名 ≤8000 的词。两档都只按词形筛选，**不得声称义项级频率来自语料**。
+  `data/core_words.json` 记录来源、生成日期和选择规则；修改规则时必须同步更新
+  该文件和 README。`--stats` 会显示当前 core 范围词数。
 - 按键：`Esc`/`Ctrl-C` 退出；退格删除；`Ctrl-U` 清空当前输入。
 - **`--stats` 义项明细**：仅在 `stdin` 是 TTY 时，在统计末尾提示「按 d 查看每个
   义项的详细状态」，读一个键；`d` 进入 `show_review_detail` 全屏界面，其他键退出。
@@ -251,6 +257,7 @@
 | `scripts/test_review.py` | 复习状态机/检测池的 unittest |
 | `data/official_2016.json` | 官方 2016 词表的版本化提取（5,377 行，含 ★） |
 | `data/cet6.json` | 生成物，5,847 词 / 13,350 义项，**勿手改** |
+| `data/core_words.json` | 高频难度词集合（core/core+）及来源说明 |
 | `data/extra_words.json` | 人工补充的词（部分已属于官方词表，级别以官方为准） |
 | `data/official_variants.json` | 人工挑选的官方词形补充（语义/角色不同或常用完整形式；不是全部拼写变体） |
 | `data/word_fixes.json` | 逐词字段覆盖（最高优先级），发现释义/音标错误时使用 |
@@ -386,7 +393,8 @@ python3 -I scripts/test_review.py -v
 - 拼音自动生成；括号/省略号回退造成的 44 处错误已修正，仍可能有个别多音字
   有误，但拼音阶段不计分。
 - 例句/真题来自源数据，可能是带省略号的片段。
-- 义项频率是顺序近似，不是语料统计。
+- 义项频率是顺序近似，不是语料统计；`core`/`core+` 也只按词形筛选，
+  不能声称具体义项的频率来自语料。
 - 终端 UI 依赖 ANSI 颜色和 CJK 双宽字符；长信息行在窄终端会换行。
 - 普通模式的释义检测紧跟在拼写之后，测的是短期记忆；长期效果靠复习模式的
   1/3/7/15/30 天间隔。

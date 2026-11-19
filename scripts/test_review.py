@@ -550,13 +550,38 @@ class FormTest(unittest.TestCase):
 
 
 class LevelTest(unittest.TestCase):
+    def e(self, level, word="w"):
+        return {"word": word, "level": level}
+
     def test_level_choices(self):
-        self.assertTrue(vocabtype.level_matches("cet4", "all"))
-        self.assertTrue(vocabtype.level_matches("cet4", "cet4+6"))
-        self.assertTrue(vocabtype.level_matches("cet6", "cet4+6"))
-        self.assertFalse(vocabtype.level_matches("extra", "cet4+6"))
-        self.assertTrue(vocabtype.level_matches("cet6", "cet6"))
-        self.assertFalse(vocabtype.level_matches("cet4", "cet6"))
+        self.assertTrue(vocabtype.level_matches(self.e("cet4"), "all"))
+        self.assertTrue(vocabtype.level_matches(self.e("cet4"), "cet4+6"))
+        self.assertTrue(vocabtype.level_matches(self.e("cet6"), "cet4+6"))
+        self.assertFalse(vocabtype.level_matches(self.e("extra"), "cet4+6"))
+        self.assertTrue(vocabtype.level_matches(self.e("cet6"), "cet6"))
+        self.assertFalse(vocabtype.level_matches(self.e("cet4"), "cet6"))
+
+    def test_core_levels_use_word_lists(self):
+        old = vocabtype._CORE_LEVELS
+        vocabtype._CORE_LEVELS = {"core": {"alpha"}, "core+": {"alpha", "beta"}}
+        self.addCleanup(setattr, vocabtype, "_CORE_LEVELS", old)
+        self.assertTrue(vocabtype.level_matches(
+            self.e("cet4", "alpha"), "core"))
+        self.assertFalse(vocabtype.level_matches(
+            self.e("cet6", "beta"), "core"))
+        self.assertTrue(vocabtype.level_matches(
+            self.e("cet6", "beta"), "core+"))
+
+    def test_core_word_file_is_consistent(self):
+        old = vocabtype._CORE_LEVELS
+        vocabtype._CORE_LEVELS = None
+        self.addCleanup(setattr, vocabtype, "_CORE_LEVELS", old)
+        levels = vocabtype.core_levels()
+        self.assertIn("core", levels)
+        self.assertIn("core+", levels)
+        self.assertLessEqual(levels["core"], levels["core+"])
+        self.assertGreater(len(levels["core"]), 2900)
+        self.assertGreater(len(levels["core+"]), 4700)
 
 
 class ProfileTest(unittest.TestCase):

@@ -40,6 +40,7 @@ from datetime import date, timedelta
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DATA = os.path.join(PROJECT_DIR, "data", "cet6.json")
+CORE_DATA = os.path.join(PROJECT_DIR, "data", "core_words.json")
 DEFAULT_STATS = os.path.join(
     os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share")),
     "vocabtype", "stats.json")
@@ -56,7 +57,7 @@ UNDERLINE = "\033[4m"
 RESET = "\033[0m"
 
 LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
-LEVEL_CHOICES = ("all", "cet4+6", "cet6", "cet4", "extra")
+LEVEL_CHOICES = ("all", "core", "core+", "cet4+6", "cet6", "cet4", "extra")
 
 DEFAULT_INTERVALS = (1, 3, 7, 15, 30)  # 熟词 5 级复习间隔（天）
 
@@ -171,10 +172,36 @@ def word_stat(stats, word):
     return stats["words"].setdefault(word, {"r": 0, "w": 0, "n": 0, "t": 0.0})
 
 
-def level_matches(level, selected):
-    """判断词条级别是否符合 --level 选择。"""
+_CORE_LEVELS = None
+
+
+def core_levels():
+    """加载 data/core_words.json 中的高频词集合。"""
+    global _CORE_LEVELS
+    if _CORE_LEVELS is None:
+        try:
+            with open(CORE_DATA, encoding="utf-8") as f:
+                data = json.load(f)
+        except (OSError, json.JSONDecodeError) as exc:
+            sys.exit(f"无法读取高频词表 {CORE_DATA}：{exc}")
+        raw = data.get("levels")
+        if not isinstance(raw, dict):
+            sys.exit(f"高频词表格式错误：{CORE_DATA}")
+        _CORE_LEVELS = {
+            name: {str(word).lower() for word in words}
+            for name, words in raw.items() if isinstance(words, list)
+        }
+    return _CORE_LEVELS
+
+
+def level_matches(entry, selected):
+    """判断词条是否符合 --level 选择（含 core/core+ 高频词表）。"""
     if selected == "all":
         return True
+    if selected in ("core", "core+"):
+        word = (entry.get("word") or "").lower()
+        return word in core_levels().get(selected, set())
+    level = entry.get("level")
     if selected == "cet4+6":
         return level in ("cet4", "cet6")
     return level == selected
@@ -395,7 +422,7 @@ def select_items(entries, stats, args):
     n = args.count
     include_known = getattr(args, "all_senses", False)
     level_pool = [e for e in entries
-                  if level_matches(e.get("level"), args.level)]
+                  if level_matches(e, args.level)]
     if not level_pool:
         sys.exit(f"没有 level={args.level} 的单词。")
 
@@ -967,7 +994,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
             entry = by_word.get(word)
             if not entry or not isinstance(recs, dict) or "state" in recs:
                 continue
-            if not level_matches(entry.get("level"), args.level):
+            if not level_matches(entry, args.level):
                 continue
             sense_map = {sense_key(s): s for s in entry.get("senses", [])}
             for skey, rec in recs.items():
@@ -992,7 +1019,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
         entry = by_word.get(word)
         if not entry or not isinstance(recs, dict) or "state" in recs:
             continue
-        if not level_matches(entry.get("level"), args.level):
+        if not level_matches(entry, args.level):
             continue
         sense_map = {sense_key(s): s for s in entry.get("senses", [])}
         for skey, rec in recs.items():
@@ -2332,7 +2359,7 @@ def show_stats(args):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
     if getattr(args, "profile_name", None):
-        print(f"存档: {args.profile_name} · 难度: "
+        print(f"存档: {args.profile_name} · 绑定难度: "
               f"{get_profile_level(args.stats_file)}")
     ws = stats["words"]
     practiced = sum(1 for w, s in ws.items() if s.get("n"))
@@ -2343,6 +2370,8 @@ def show_stats(args):
               for k in ("cet6", "cet4", "extra")}
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
+    if args.level in ("core", "core+"):
+        print(f"高频范围: {args.level}（{len(core_levels()[args.level])} 词）")
     normalize_review(stats, entries)
     _new_count, learning, known, levels, due, words = review_counts(stats)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
@@ -2417,6 +2446,8 @@ def main():
   vocabtype --profile cet6          切换并记住名为 cet6 的存档
   vocabtype --profile cet4only --profile-level cet4
                                     新建存档并绑定四级难度
+  vocabtype --profile core3k --profile-level core
+                                    新建存档并绑定高频核心
   vocabtype --profile default       切回默认存档
 """
     p = ChineseArgumentParser(
@@ -2433,7 +2464,8 @@ def main():
     p.add_argument("--no-pinyin", action="store_true",
                    help="标准模式不进行第二阶段的释义全拼")
     p.add_argument("--level", choices=LEVEL_CHOICES, default=None,
-                   help="按官方级别筛选：all=全部（无绑定时默认），cet4+6="
+                   help="按难度筛选：all=全部（无绑定时默认），core=高频核心"
+                        "（约3千词），core+=高频进阶（约4.8千词），cet4+6="
                         "四级+六级（不含扩展），cet6=六级★词，cet4=四级词，"
                         "extra=大纲外扩展词；未指定时使用当前存档的绑定难度")
     p.add_argument("--weak", action="store_true", help="优先练错误率最高的词")
@@ -2464,8 +2496,8 @@ def main():
     p.add_argument("--profile", metavar="NAME",
                    help="切换并记住当前存档（default 即原 stats.json）")
     p.add_argument("--profile-level", choices=LEVEL_CHOICES, metavar="LEVEL",
-                   help="设置当前/指定存档绑定的难度：all、cet4+6、cet6、"
-                        "cet4、extra；新建存档时可用")
+                   help="设置当前/指定存档绑定的难度：all、core、core+、"
+                        "cet4+6、cet6、cet4、extra；新建存档时可用")
     p.add_argument("--stats-file", default=None,
                    help="自定义进度文件路径；不能与 --profile 同用")
     p.add_argument("--seed", type=int, default=None, help="固定随机种子")
