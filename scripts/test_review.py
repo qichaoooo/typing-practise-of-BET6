@@ -644,8 +644,9 @@ class CoreSenseTest(unittest.TestCase):
         self.assertGreater(len(exclusions), 600)
         # Real data check: every excluded key must exist and never remove all senses.
         import json as _json
-        data = _json.load(open(vocabtype.DEFAULT_DATA, encoding="utf-8"))
-        data_words = {e["word"]: e for e in data["words"]}
+        with open(vocabtype.DEFAULT_DATA, encoding="utf-8") as f:
+            data = _json.load(f)
+        data_words = {e["word"].lower(): e for e in data["words"]}
         for word, keys in exclusions.items():
             entry = data_words[word]
             valid = {f"{s.get('pos', '')}|{s['cn']}" for s in entry["senses"]}

@@ -1,10 +1,10 @@
 {
  "generated": "2026-11-19",
- "scope": "core 核心词中带有领域标签或 4 个以上义项的高风险词；其他核心词保留全部义项。",
+ "scope": "core 中所有多义词（2+ 义项）及带领域标签的词；core+ 新增但不在 core 中的词尚未逐义项核对。",
  "method": "逐词对照当前中文义项、Kaikki/Wiktionary 英文义项及标签、ECDICT/词库释义；只排除明确重复、低频、古旧、俚俗、专业噪声或缩写展开，拿不准时保留。",
- "reviewed_words": 952,
- "words_with_exclusions": 674,
- "excluded_senses": 838,
+ "reviewed_words": 2391,
+ "words_with_exclusions": 891,
+ "excluded_senses": 1078,
  "sources": [
   {
    "name": "Kaikki.org / English Wiktionary",
@@ -15,6 +15,23 @@
    "url": "https://github.com/skywind3000/ECDICT"
   }
  ],
+ "manual_rescues": {
+  "firm": [
+   "adv|稳固地"
+  ],
+  "core": [
+   "|[计] 内核，核心网"
+  ],
+  "cut": [
+   "|[计] 剪切"
+  ],
+  "address": [
+   "|[计] 地址，寻址"
+  ],
+  "switch": [
+   "|[计] 交换机"
+  ]
+ },
  "excluded": {
   "a": [
    {
@@ -5553,23 +5570,1640 @@
     "reason": "与名词义项「地带，带，地区」重复，不构成独立义项。",
     "source": "当前 n|地带，带，地区 已含「区域」义；Kaikki noun 仅 region/area 一类释义"
    }
-  ]
- },
- "manual_rescues": {
-  "firm": [
-   "adv|稳固地"
   ],
-  "core": [
-   "|[计] 内核，核心网"
+  "Sunday": [
+   {
+    "key": "vi|度星期日",
+    "reason": "「度星期日」是汉英词典对 Sunday 的生硬动词化，现代英语无此常用动词用法",
+    "source": "Kaikki 无数据；语言常识判断"
+   }
   ],
-  "cut": [
-   "|[计] 剪切"
+  "abroad": [
+   {
+    "key": "adj|往国外的，在室外的，广泛四散的",
+    "reason": "abroad 的名词/形容词定语用法非标准，Kaikki 该形容词义标 nonstandard；且与 adv 义重复",
+    "source": "Kaikki adj gloss 'International.' tags: nonstandard"
+   }
   ],
-  "address": [
-   "|[计] 地址，寻址"
+  "absolute": [
+   {
+    "key": "n|绝对事物",
+    "reason": "「绝对事物」为哲学名词化用法，CET 学习者几乎不用；Kaikki 该词条只列形容词义，无名词义",
+    "source": "Kaikki absolute 无 noun 条目"
+   }
   ],
-  "switch": [
-   "|[计] 交换机"
+  "admire": [
+   {
+    "key": "vi|称赞，惊奇",
+    "reason": "「惊奇」对应已过时的「to be amazed at」义，且 vi「称赞」与 vt 义重复",
+    "source": "Kaikki: 'To be amazed at; to view with surprise' tags: obsolete"
+   }
+  ],
+  "affect": [
+   {
+    "key": "n|自觉感情",
+    "reason": "affect 作名词是心理学/精神病学术语（情感），且「自觉感情」译法生硬，非日常高频义",
+    "source": "Kaikki noun gloss: 'A subjective feeling experienced in response to a thought or other stimulus'（心理学义）"
+   }
+  ],
+  "analyse": [
+   {
+    "key": "vt|分解，解析",
+    "reason": "「分解，解析」与保留的「分析」是同一动词义（break down into components）的不同措辞，属重复拆分；Kaikki 该词只给一条动词义（UK spelling of analyze），未单列分解义。",
+    "source": "Kaikki: analyse 仅 'UK standard spelling of analyze'，无独立「分解」义；current 两条 vt 义近义重复"
+   }
+  ],
+  "analysis": [
+   {
+    "key": "n|分解，解析",
+    "reason": "「分解，解析」与保留的「分析，分析报告」同源同义，是化学/语法语境下的细分说法，对 CET6 学习者与「分析」重复。",
+    "source": "Kaikki noun: 'The process of breaking down a substance into its constituent parts'（physical 标签），即「分析」义的具体化；current 两条 n 义重复"
+   }
+  ],
+  "announce": [
+   {
+    "key": "vi|当报幕员，宣布参加竞选",
+    "reason": "「当报幕员」是美式职业细分义，「宣布参加竞选」只是 announce 的搭配用法而非独立词义，均非通用高频义。",
+    "source": "Kaikki vi: 'To act or work as an announcer'（US 标签）；current 同条混入「宣布参加竞选」搭配"
+   }
+  ],
+  "approve": [
+   {
+    "key": "vt|赞成，称许",
+    "reason": "与保留的 vi|赞成，称许 中文释义逐字重复；vt 槽位更常用的是「批准」，保留 vi 的「赞成」与 vt 的「批准」即可。",
+    "source": "current 重复：vi|赞成，称许 与 vt|赞成，称许；Kaikki 分列 transitive 'To regard as good' 与 intransitive 'To consider worthy (to)'，同属赞成义"
+   }
+  ],
+  "approximate": [
+   {
+    "key": "vi|接近于",
+    "reason": "与保留的 vt「接近，使接近，粗略估计」中的「接近」同义，只是及物/不及物的重复条目。",
+    "source": "current vt 义已含「接近」；Kaikki 动词义 'To come near to; to approach' 为及物、'To estimate' 为 ambitransitive，无独立不及物义"
+   }
+  ],
+  "asleep": [
+   {
+    "key": "adv|熟睡地",
+    "reason": "asleep 是表语形容词（predicative adjective），不作副词；「熟睡地」是机械加「地」的词典噪声。",
+    "source": "Kaikki 仅列 adj 义项（not-comparable, predicative），无 adv 词性；current adv|熟睡地 无标准用法依据"
+   }
+  ],
+  "assess": [
+   {
+    "key": "vt|对估价",
+    "reason": "释义残缺（应为「对…估价」），显示出来不成句，且与保留的「评价，评论」同属评估/估价义。",
+    "source": "current「对估价」缺宾语占位；Kaikki 'To determine, estimate or judge the value of' 已由「评价，评论」覆盖"
+   }
+  ],
+  "avoid": [
+   {
+    "key": "vt|撤销",
+    "reason": "「撤销」是合同/法律语境下「使无效」（avoid a contract）的专门义，非日常高频义。",
+    "source": "Kaikki verb: 'To make void, to annul; to refute (especially a contract)'，为法律/合同专用义；常用义为「避免，躲开」"
+   }
+  ],
+  "awkward": [
+   {
+    "key": "adj|不灵巧的",
+    "reason": "「不灵巧的」与保留的「笨拙的，尴尬的」中的「笨拙的」完全重复。",
+    "source": "Kaikki 首义 'Lacking dexterity in the use of the hands or of tools' 即「笨拙/不灵巧」；current 两条 adj 义重复"
+   }
+  ],
+  "bad": [
+   {
+    "key": "n|坏",
+    "reason": "名词释义只有「坏」一个字，不成义；bad 的名词用法（the bad）也不是高频教学义。",
+    "source": "Kaikki 该词条只列 adj 义项，无 noun；current「坏」为机械派生/词典噪声"
+   },
+   {
+    "key": "adv|坏地",
+    "reason": "「坏地」是机械副词化；bad 作副词仅限非正式口语（want it bad），非标准教学义。",
+    "source": "Kaikki 无 adv 义项；current「坏地」为机械派生；语言常识判断"
+   }
+  ],
+  "basic": [
+   {
+    "key": "|(计算机)BASIC语言",
+    "reason": "BASIC 是编程语言专名/缩写，不是 basic 的形容词词义，属缩略语噪声。",
+    "source": "当前条 pos 为空且释义为专名；Kaikki basic 仅列 4 个形容词义和 3 个名词义，无编程语言义"
+   }
+  ],
+  "basis": [
+   {
+    "key": "n|原则",
+    "reason": "「原则」与已保留的 n|基础，根据 语义重叠，不是独立义项；basis 的核心义是基础/根据/底层条件。",
+    "source": "Kaikki basis 8 个名词义为 physical foundation / basis for an argument / underlying condition / regular frequency / commodity basis / vector-space basis / investment cost / topology basis，无独立「原则」义"
+   }
+  ],
+  "basket": [
+   {
+    "key": "vt|装入篮",
+    "reason": "「装入篮」是字面派生的低频动词用法，现代英语几乎没有日常用例，CET6 学习者不需要。",
+    "source": "Kaikki 抓取到的 20 条（已达抓取上限）全为名词义，未见独立动词义；ECDICT/当前仅列字面派生义，属极低频用法（语言常识判断）"
+   }
+  ],
+  "beef": [
+   {
+    "key": "vt|养(牛)，宰(牛)",
+    "reason": "罕用的农业/屠宰动词义，且「养(牛)」并非 beef 作动词的通行义；日常英语基本不用。",
+    "source": "Kaikki beef 的 7 个动词义为 complain / add weight / fart / cry / fail / feud / shout，无「饲养/宰杀牛」义；该义为罕用农业/屠宰用法（语言常识判断）"
+   }
+  ],
+  "bitter": [
+   {
+    "key": "v|(使)变苦",
+    "reason": "动词「使变苦」是古旧用法，现代英语不再使用。",
+    "source": "Kaikki verb: 'To make bitter.' tags: archaic"
+   }
+  ],
+  "blog": [
+   {
+    "key": "n|部落格",
+    "reason": "「部落格」是 blog 的台湾音译，与已保留的 n|博客 完全同义重复。",
+    "source": "与当前 n|博客 重复；Kaikki blog 仅有 website 与 individual post 两个名词义，无独立「部落格」义"
+   },
+   {
+    "key": "n|网络日志",
+    "reason": "「网络日志」是 blog 的直译，与已保留的 n|博客 完全同义重复。",
+    "source": "与当前 n|博客 重复；Kaikki blog 仅有 website 与 individual post 两个名词义"
+   }
+  ],
+  "bone": [
+   {
+    "key": "vi|专心致志",
+    "reason": "「专心致志」来自短语 bone up (on)，不是 bone 的独立不及物动词义，当前写法会误导学习者。",
+    "source": "Kaikki bone 的 4 个动词义为剔骨/施骨肥/装鲸骨/整平，无「专心」义；该义仅存在于短语动词 bone up（语言常识判断）"
+   }
+  ],
+  "born": [
+   {
+    "key": "|bear的过去分词",
+    "reason": "这是语法形式注记（bear 的过去分词），不是 born 的独立词义。",
+    "source": "Kaikki 标注 tags: form-of, participle, past；adj|天生的 才是独立义项"
+   }
+  ],
+  "bring": [
+   {
+    "key": "vi|生产",
+    "reason": "生僻的不及物用法，语义与同一词的 vt「产生」重叠，现代英语基本不用",
+    "source": "Kaikki 动词义均为及物/双及物，仅 'To produce in exchange; to sell for; to fetch' 属罕用商业义，无独立的不及物「生产」义"
+   }
+  ],
+  "broad": [
+   {
+    "key": "adv|宽阔地",
+    "reason": "罕见的副词用法，标准英语用 broadly，本义项无常见用例",
+    "source": "Kaikki broad 仅列 adj 与 noun 词性条目，无 adv；相同抓取口径下该词条仅 18 条，未触及抓取上限，数据完整"
+   },
+   {
+    "key": "n|宽阔部分",
+    "reason": "生僻名词义，现代英语不使用",
+    "source": "Kaikki noun 义项均为方言/专业/古旧义（英国方言「浅湖」、车床刀具、1656 年历史金币、archaic/slang「纸牌/女人」等），无一般性「宽阔部分」义"
+   }
+  ],
+  "candle": [
+   {
+    "key": "vt|对着光检查",
+    "reason": "照蛋/透光检查的专门技术义，普通学习者不需要",
+    "source": "Kaikki verb: 'To observe the growth of an embryo inside an egg, using a bright light source'；同类还有烘干坯体、检查信封等专业义"
+   }
+  ],
+  "castle": [
+   {
+    "key": "vt|置于城堡中，盘踞于",
+    "reason": "生僻动词义；castle 的常用动词义是国际象棋「王车易位」，本键未收",
+    "source": "Kaikki verb: 'To house or keep in a castle' / 'To protect or separate in a similar way' 属罕用义，象棋义 'To move the king 2 squares...' 另列"
+   }
+  ],
+  "cease": [
+   {
+    "key": "n|停止",
+    "reason": "古旧名词用法，仅残留于 without cease 固定短语",
+    "source": "Kaikki noun: 'Cessation; extinction (see without cease)' 标注 obsolete"
+   }
+  ],
+  "chance": [
+   {
+    "key": "vi|偶然发生",
+    "reason": "古旧不及物用法，现代英语已不用",
+    "source": "Kaikki verb: 'To happen by chance, to occur' 标注 archaic,intransitive"
+   }
+  ],
+  "charm": [
+   {
+    "key": "vi|用符咒，有魅力",
+    "reason": "charm 的动词义均为及物；不及物「用符咒」与 vt「行魔法」重复，「有魅力」与 n「吸引力」重复，非独立高频义。",
+    "source": "Kaikki charm 动词义均标 transitive 或无不及物对应义；current 与 vt/n 义重复"
+   }
+  ],
+  "choice": [
+   {
+    "key": "|该命令用于提示用户作出选择，决定批处理文件的流程",
+    "reason": "这是 DOS/批处理 choice 命令的说明，不是英语单词 choice 的词义，属词典噪声。",
+    "source": "current 该条为命令说明；ECDICT 对应条目标为「[计] DOS内部命令:在批处理文件中」"
+   }
+  ],
+  "church": [
+   {
+    "key": "vt|使人接受宗教仪式",
+    "reason": "动词 church 指历史上的「产后/新婚宗教仪式」，属罕见的历史用法，现代英语几乎不用。",
+    "source": "Kaikki verb gloss 'To conduct a religious service for (a woman after childbirth, or a newly married couple).' 标注 historical"
+   }
+  ],
+  "climate": [
+   {
+    "key": "n|风土，地带",
+    "reason": "「地带/地区」是古旧的「气候带、地球区域」义，与保留的「气候」重叠，现代高频用法不需要。",
+    "source": "Kaikki 对应 'An area of the earth's surface between two parallels of latitude' 与 'A region of the Earth' 两义均标注 obsolete"
+   }
+  ],
+  "company": [
+   {
+    "key": "vt|陪伴",
+    "reason": "company 作及物动词「陪伴」是古旧用法，现代英语用 accompany。",
+    "source": "Kaikki verb 'To accompany, keep company with.' 标注 archaic"
+   },
+   {
+    "key": "vi|交往",
+    "reason": "company 作不及物动词「交往」是古旧用法，现代英语不用。",
+    "source": "Kaikki verb 'To associate.' 标注 archaic"
+   }
+  ],
+  "comprehensive": [
+   {
+    "key": "adj|理解的",
+    "reason": "comprehensive 的现代常用义是「广泛的、综合的」；「有理解力的/理解的」是古旧义，且易与 comprehensible 混淆。",
+    "source": "Kaikki 仅列 'Broadly or completely covering; including a large proportion of something'，无「有理解力的」义；ECDICT 该译法为旧义"
+   }
+  ],
+  "consumption": [
+   {
+    "key": "n|肺病",
+    "reason": "「肺病」（肺结核）义被 Kaikki 明确标为 dated，现代英语已基本不用；本词的高频义是消耗/消费。",
+    "source": "Kaikki noun gloss 'Pulmonary tuberculosis and other diseases that cause wasting away...' tags: dated"
+   }
+  ],
+  "continent": [
+   {
+    "key": "adj|自制的",
+    "reason": "形容词义指克制欲望或控制大小便，属正式/医学用法，现代使用频率远低于名词「大陆，洲」；CET6 核心只需名词义。",
+    "source": "Kaikki adj gloss 'Exercising self-restraint; controlled, temperate...' / 'Having voluntary control over one’s urination or defecation.'（无 rare 标签，按高频标准判断）"
+   }
+  ],
+  "cop": [
+   {
+    "key": "vt|抓住",
+    "reason": "「抓住/逮捕」动词义被 Kaikki 标为 dated + informal；现代 cop 的高频用法是名词「警察」。",
+    "source": "Kaikki verb gloss 'To capture or arrest someone.' tags: dated, informal"
+   }
+  ],
+  "cotton": [
+   {
+    "key": "vi|和谐，有好感，理解",
+    "reason": "该义来自非正式英式习语 cotton on/to（理解、喜欢），不是 cotton 的常用义；所提供的 Kaikki 动词释义均为「装棉花/填棉」类，未收此习语义。",
+    "source": "Kaikki 动词释义无此义；语言常识判断（非正式习语义，低频）"
+   }
+  ],
+  "course": [
+   {
+    "key": "v|追，(使)跑",
+    "reason": "动词义「追猎/奔跑」偏古旧或文学用法，现代 course 的高频用法是名词（课程、路线、过程等）；所提供的 Kaikki 数据也只列名词义。",
+    "source": "所提供的 Kaikki 数据仅列名词义；语言常识判断（动词义低频/古旧）"
+   }
+  ],
+  "destruction": [
+   {
+    "key": "n|消灭",
+    "reason": "「消灭」与保留的「破坏，毁灭」是同义重复，不构成独立的英文义项",
+    "source": "current 两条名词义近义重复；Kaikki destruction 仅有两条名词义：'The act of destroying' 与 'The results of a destructive event'，无独立「消灭」义；ECDICT 亦仅列「破坏, 毁灭」"
+   }
+  ],
+  "detail": [
+   {
+    "key": "n|零件",
+    "reason": "「零件」是低频且易误导的汉译；detail 指细节、详情或分遣人员，现代英语不用于指机械零件",
+    "source": "ECDICT detail 释义为「细节, 详情；vt 详述, 选派；vi 画详图」，无「零件」义；Kaikki detail 名词义为 small part / personal information / temporary unit / narrative，无机械零件义（语言常识判断）"
+   }
+  ],
+  "device": [
+   {
+    "key": "n|设计",
+    "reason": "「设计」对应古旧的 contrivance/invention 义，且与保留的「手段，策略」语义重叠，不是现代高频义",
+    "source": "Kaikki device: 'Power of devising; invention; contrivance' 标注 archaic；现代常用名词义为 equipment（器械/装置）与 stratagem/scheme（手段/策略），后者已保留"
+   }
+  ],
+  "dialogue": [
+   {
+    "key": "vi|对话",
+    "reason": "动词「对话」属低频、非正式用法，现代英语以名词为主，CET 学习者不需要单独练此义",
+    "source": "Kaikki verb: 'To discuss or negotiate so that all parties can reach an understanding' 标注 informal；名词义 'A conversation...' 才是常用义（语言常识判断）"
+   },
+   {
+    "key": "vt|用对话表达",
+    "reason": "「用对话表达」是罕用的书面/文学动词义（把作品写成对话体），非日常高频义",
+    "source": "Kaikki verb: 'To put into dialogue form' 为罕用及物义，另有 obsolete 'To take part in a dialogue; to dialogize'；语料中动词用法远低于名词（语言常识判断）"
+   }
+  ],
+  "directory": [
+   {
+    "key": "n|工商行名录",
+    "reason": "「工商行名录」只是名录的一种，与「人名地址录」同属 Kaikki 的单一义项（a list of names, addresses etc），不是独立的常用义项",
+    "source": "Kaikki: \"A list of names, addresses etc, of specific classes of people or organizations\"；与当前 n|人名地址录 重复"
+   }
+  ],
+  "discover": [
+   {
+    "key": "vi|发现",
+    "reason": "与 vt|发现，找到 完全同义，仅为及物/不及物的拆分；Kaikki 主释义标 transitive，不及物用法罕见",
+    "source": "Kaikki: \"To find or learn something for the first time\" tags=[transitive]；与当前 vt|发现，找到 重复"
+   }
+  ],
+  "dominant": [
+   {
+    "key": "adj|居高临下的，高耸的",
+    "reason": "「居高临下、高耸」是低频的书面/地理描述义，CET 学习者基本用不到；核心义是「占优势的、支配的」",
+    "source": "Kaikki adj 仅列 ruling/predominant、生理与音乐义，未收「高耸」义；该义仅见 ECDICT 当前释义"
+   }
+  ],
+  "drunk": [
+   {
+    "key": "|drink的过去分词",
+    "reason": "「drink 的过去分词」是词形变化说明，不是独立词义；且 pos 为空，属于词条噪声",
+    "source": "Kaikki: \"past participle of drink\" tags=[form-of,participle,past]；当前 key 无词性"
+   }
+  ],
+  "ear": [
+   {
+    "key": "vi|抽穗",
+    "reason": "「抽穗」是谷物长穗的农业专业义，CET 通用学习者不需要；名词「穗」已保留在 n|耳朵，倾听，听觉，穗 中",
+    "source": "Kaikki: \"To put forth ears in growing; to form ears, as grain does\"（grain 义）"
+   }
+  ],
+  "electronic": [
+   {
+    "key": "n|电子学",
+    "reason": "「电子学」是 electronics 的名词义；electronic 本身不是名词「电子学」，属于与派生词混淆的错误义项",
+    "source": "Kaikki: electronic 仅列形容词义，名词只有罕用 \"A device which runs on electricity\"；「电子学」对应 electronics"
+   },
+   {
+    "key": "n|电子设备",
+    "reason": "名词用法罕用（Kaikki 仅一条 \"a device which runs on electricity\"），通用英语用 electronics 表示电子设备，CET 学习者不需要",
+    "source": "Kaikki: 名词释义仅 \"A device which runs on electricity\"；与 electronics 混淆"
+   }
+  ],
+  "entertainment": [
+   {
+    "key": "n|招待，款待，请客",
+    "reason": "「招待、款待」义在现代英语中已废弃，entertainment 的高频义是「娱乐、文娱节目」。",
+    "source": "Kaikki 名词释义 \"A reception; a (provision of) food to guests or travellers\"、\"Maintenance or support\" 等均标 obsolete。"
+   }
+  ],
+  "entire": [
+   {
+    "key": "n|整个，全部",
+    "reason": "名词「整个、全部」为古旧用法，现代 entire 主要作形容词「全部的、完整的」。",
+    "source": "Kaikki 名词释义 \"The whole of something; the entirety\" 标 archaic。"
+   }
+  ],
+  "environment": [
+   {
+    "key": "n|围绕",
+    "reason": "「围绕」与已保留的「环境、外界」重复，且是动词 environ 的意思，名词 environment 无此独立义项。",
+    "source": "当前义项与 n|环境、n|外界 重复；Kaikki 各释义均为 surroundings/自然世界/系统环境等，无「围绕」义。"
+   }
+  ],
+  "essay": [
+   {
+    "key": "vt|试图",
+    "reason": "动词「试图」为过时、书面罕用义，现代 essay 主要用作名词「短文、随笔」。",
+    "source": "Kaikki 动词 \"To attempt or try\" 标 dated（transitive）。"
+   }
+  ],
+  "expedition": [
+   {
+    "key": "n|迅速，动作敏捷",
+    "reason": "「迅速、动作敏捷」为古旧义，现代高频义是「旅行、远征、考察队」。",
+    "source": "Kaikki \"The quality of being expedite; speed, quickness\" 标 archaic；\"The act of expediting something; prompt execution\" 标 obsolete。"
+   }
+  ],
+  "expense": [
+   {
+    "key": "n|开支，业务费用",
+    "reason": "「开支、业务费用」与已保留的「花费，消费，费用」是同义重复，不是独立的英文义项。",
+    "source": "当前两条名词义均对应 Kaikki 单一名词义 \"A spending or consuming, often a disbursement of funds\"，属同义重复。"
+   }
+  ],
+  "extreme": [
+   {
+    "key": "adj|最后的",
+    "reason": "「最后的」是被 Kaikki 标为古旧的义项，现代 extreme 的高频义是形容词「极度的」和名词「极端」。",
+    "source": "Kaikki adj 'Ultimate, final or last.' tags: archaic"
+   }
+  ],
+  "familiar": [
+   {
+    "key": "n|熟友，常客",
+    "reason": "名词「密友」义已被 Kaikki 标为 obsolete，「常客」也不是现代常用义；familiar 的高频用法是形容词。",
+    "source": "Kaikki noun 'A close friend.' tags: obsolete；其余名词义为 familiar spirit、历史上的宗教裁判所官员"
+   }
+  ],
+  "fate": [
+   {
+    "key": "vt|注定",
+    "reason": "主动动词「注定」在现代英语中罕见，常见的是被动/分词 fated；CET6 高频只需名词「命运」。",
+    "source": "Kaikki verb 仅一条 'To foreordain or predetermine' 无频率标签，但现代实际使用几乎限于 fated（语言常识判断）"
+   }
+  ],
+  "feather": [
+   {
+    "key": "vi|长羽毛",
+    "reason": "Kaikki 的动词义项没有不及物「长羽毛」，只有「覆以羽毛/使呈羽状/调整桨叶」等，该义属低频派生。",
+    "source": "Kaikki verb gloss 为 'To cover or furnish with feathers'、'To arrange in the manner or appearance of feathers' 等，无 'grow feathers'；语言常识判断"
+   }
+  ],
+  "fee": [
+   {
+    "key": "vt|付费给",
+    "reason": "动词 fee 在现代英语中罕用，词典释义偏「付报酬/雇用/贿赂」等古旧用法；高频用法是名词「费用」。",
+    "source": "Kaikki verb 'To reward for services performed... to hire or keep in hire; hence, to bribe'；现代常见为名词义（语言常识判断）"
+   }
+  ],
+  "flesh": [
+   {
+    "key": "vt|以肉喂，激起...的杀戳情绪，使肥，赋以血肉",
+    "reason": "这是狩猎/驯犬的专业动词义（用猎物的肉奖励猎犬），另有「使肥」等低频义，通用学习者不需要。",
+    "source": "Kaikki verb 'To reward (a hound, bird of prey etc.) with flesh...' 为狩猎专业义；'To put flesh on; to fatten' 亦低频"
+   },
+   {
+    "key": "vi|长胖",
+    "reason": "Kaikki 的 flesh 动词义项中没有不及物「长胖」，该义罕见且非现代常用义。",
+    "source": "Kaikki flesh 动词仅列喂肉/使肥/使习惯于等（均少见），无不及物「长胖」义；语言常识判断"
+   }
+  ],
+  "former": [
+   {
+    "key": "n|起形成作用的人(或物)，模型，样板",
+    "reason": "名词义指「形成者、制模/样板」，是 form + -er 的罕用同形义，与常用形容词「从前的、前者」无关；CET 学习者不需要。",
+    "source": "Kaikki noun: 'Someone who forms something; a maker; a creator or founder.' / 'An object used to form something, such as a template, gauge, or cutting die.'；ECDICT pos=d:99/n:1（名词仅约 1%）"
+   }
+  ],
+  "found": [
+   {
+    "key": "|find的过去式和过去分词",
+    "reason": "这是 find 的词形变化说明，不是 found 的独立词义，且词性为空，属于词条噪声。",
+    "source": "Kaikki: 'simple past and past participle of find' tags=[form-of,participle,past]；current pos 为空"
+   }
+  ],
+  "fresh": [
+   {
+    "key": "n|开始，泛滥",
+    "reason": "名词义指洪水/淡水涌流（a rush of water, flood），属低频书面/水文用法；「开始」也不对应常见名词义，CET 学习只需形容词与副词义。",
+    "source": "Kaikki noun: 'A rush of water, along a river or onto the land; a flood.' / 'A stream or spring of fresh water.'；ECDICT pos=j:100（未计名词义）"
+   }
+  ],
+  "fur": [
+   {
+    "key": "vt|以毛皮制作，使生苔，使生水垢",
+    "reason": "动词义主要是锅炉/容器结水垢、苔状覆盖的技术义，通用英语几乎不用；「以毛皮制作」也属低频。",
+    "source": "Kaikki noun: 'The deposit formed on the interior of boilers and other vessels by hard water.'；verb: 'To cover with fur or a fur-like coating.'；ECDICT pos=n:100"
+   },
+   {
+    "key": "vi|生苔，积水垢",
+    "reason": "与 vt 同属锅炉水垢/苔状覆盖的技术义，CET 学习者不需要；保留名词「毛皮」即可。",
+    "source": "Kaikki verb: 'To become covered with fur or a fur-like coating.'；名词技术义 'The deposit formed on the interior of boilers and other vessels by hard water.'；ECDICT pos=n:100"
+   }
+  ],
+  "garage": [
+   {
+    "key": "vt|把车送入修车场",
+    "reason": "动词义低频，且中文「送入修车场」与 Kaikki 的「把车停入车库」不符（修车场是 garage 的名词义之一），属词典噪声。",
+    "source": "Kaikki verb: 'To store in a garage.'；名词 garage 才有 'A place where cars are serviced and repaired'（Commonwealth, dated）；ECDICT pos=n:100"
+   }
+  ],
+  "garbage": [
+   {
+    "key": "n|无用的资料",
+    "reason": "这是 ECDICT 标注 [计] 的「无用信息」技术义，且与保留的「垃圾，废物」「废话」语义重叠，不是独立的高频日常义。",
+    "source": "ECDICT: '[计] 无用信息'；Kaikki noun: 'Data that are misinterpreted as another kind of data.'（技术义）"
+   }
+  ],
+  "gather": [
+   {
+    "key": "n|集合，聚集",
+    "reason": "名词「集合，聚集」是动词义的名词化；现代英语中名词 gather 主要见于缝纫褶裥、轴倾角等专门用法，属低频，且与保留的 vi/vt 重复。",
+    "source": "Kaikki noun: 'A gathering.' / 'A plait or fold in cloth...' 等低频/专门义；ECDICT pos=n:1/v:99；current 与 vi|聚集，集合，渐增、vt|使聚集，搜集，积聚 重复"
+   }
+  ],
+  "gender": [
+   {
+    "key": "vt|产生",
+    "reason": "「产生」对应古旧的 engender 义，Kaikki 明确标 archaic；现代 gender 的高频用法是名词「性别」。",
+    "source": "Kaikki verb: 'To engender.' tags=[archaic]；ECDICT pos=n:100；名词义 'Sex...' / 'Identification as a man, a woman...' 为常用义"
+   }
+  ],
+  "genetic": [
+   {
+    "key": "n|遗传学",
+    "reason": "genetic 是形容词「遗传的」；「遗传学」的名词是 genetics，此义项属与派生词混淆的错误义项。",
+    "source": "Kaikki 抓取超时无数据；语言常识判断（genetic 无「遗传学」名词义，对应 genetics）；ECDICT 仅列形容词义"
+   }
+  ],
+  "ghost": [
+   {
+    "key": "v|鬼似地游荡",
+    "reason": "「鬼似地游荡」是低频文学用法；ghost 的高频用法是名词「鬼、幽灵」，现代动词 ghost 的常见义（突然失联）也非此义。",
+    "source": "ECDICT pos=v:2/n:98；所提供的 Kaikki 数据仅列名词义项；语言常识判断（低频/文学性动词义）"
+   }
+  ],
+  "give": [
+   {
+    "key": "n|弹性，适应性",
+    "reason": "名词 give 指「弹性、伸缩性」（如绳子的松紧），是低频专门义；CET 学习以动词 give 为主。",
+    "source": "ECDICT pos=v:100；所提供的 Kaikki 数据仅列动词义项；语言常识判断（名词「弹性」为低频义）"
+   }
+  ],
+  "glass": [
+   {
+    "key": "vt|装玻璃于，反射，反映",
+    "reason": "「装玻璃于」是建筑/门窗工种的低频动词义；「反射，反映」在 Kaikki 动词义中无对应，属词典噪声。",
+    "source": "Kaikki verb: 'To fit with glass; to glaze.' / 'To enclose in glass.' 等，无「反射，反映」义；ECDICT pos=v:1/n:99"
+   },
+   {
+    "key": "vi|成玻璃状",
+    "reason": "「成玻璃状」是低频技术义，非通用英语用法；保留名词「玻璃，玻璃杯，透镜」即可。",
+    "source": "Kaikki 动词义均为及物（fit/enclose with glass）或专业用法，无常用 vi「成玻璃状」义；ECDICT pos=v:1/n:99；语言常识判断"
+   }
+  ],
+  "go": [
+   {
+    "key": "vt|以...打赌，对付，忍受，出产，为被捕者出(保释金)",
+    "reason": "这一及物义项是低频习语义堆砌，其中「为被捕者出保释金」尤为生僻；go 的高频用法是不及物动词与名词。",
+    "source": "ECDICT 当前 vt 义列出「为被捕者出保释金」等罕见法律/口语习语；Kaikki 摘录以 intransitive/copulative 义为主；语言常识判断"
+   }
+  ],
+  "god": [
+   {
+    "key": "vt|使神化",
+    "reason": "动词「使神化」即 deify，属低频/书面用法；现代 god 的高频用法是名词「上帝，神」。",
+    "source": "Kaikki verb: 'To deify.' / 'To idolize.'（transitive，非日常高频）；ECDICT pos=n:100；名词 'A deity or supreme being...' 为常用义"
+   }
+  ],
+  "guy": [
+   {
+    "key": "vi|逃跑",
+    "reason": "“逃跑”为罕见/方言性动词义，现代英语不用 guy 表示逃跑，CET6 学习者无需掌握。",
+    "source": "Kaikki 动词义仅列 Guy Fawkes 像/取笑/支索，无“逃跑”；语言常识判断"
+   }
+  ],
+  "habit": [
+   {
+    "key": "vt|使穿衣",
+    "reason": "动词“给…穿衣”为古旧书面用法，现代英语基本不用（名词“习惯”才是常用义）。",
+    "source": "Kaikki verb gloss 'To clothe'（书面/古旧语境）；语言常识判断"
+   }
+  ],
+  "heart": [
+   {
+    "key": "vt|鼓励",
+    "reason": "“鼓励”义已废弃，现代英语不用 heart 表示鼓励。",
+    "source": "Kaikki verb gloss 'To give heart to; to hearten; to encourage' tagged obsolete"
+   }
+  ],
+  "hell": [
+   {
+    "key": "vi|狂饮，飞驰",
+    "reason": "动词义为罕用口语（“匆忙、疾行”之类），且“狂饮”并非其通用义，考试与日常英语均不用。",
+    "source": "Kaikki verb senses 标 colloquial（'To hurry, rush' 等），未列“狂饮”；语言常识判断"
+   }
+  ],
+  "hill": [
+   {
+    "key": "vt|作成土堆，堆成小丘",
+    "reason": "动词为农业技术义（给植物培土、堆土），通用英语罕用。",
+    "source": "Kaikki verb gloss 'To heap or draw earth around plants'（农业技术义）；语言常识判断"
+   }
+  ],
+  "holy": [
+   {
+    "key": "n|神圣的东西",
+    "reason": "名词义为古旧用法，几乎只出现在 Holy of Holies 短语中，不是通用名词义。",
+    "source": "Kaikki noun gloss tagged archaic，'used almost exclusively in Holy of Holies'"
+   }
+  ],
+  "horse": [
+   {
+    "key": "vi|骑马，取笑",
+    "reason": "动词义罕见且口语化（horse around 一类“胡闹、取笑”），通用英语不用 horse 表示骑马。",
+    "source": "Kaikki 仅列名词义，未收动词条目；语言常识判断"
+   },
+   {
+    "key": "vt|使骑马，系马于",
+    "reason": "“使骑马／系马于”为罕用书面技术义，不是通用动词义。",
+    "source": "Kaikki 仅列名词义，未收动词条目；语言常识判断"
+   }
+  ],
+  "house": [
+   {
+    "key": "vi|住，躲藏",
+    "reason": "不及物动词“居住／躲藏”为罕用书面义，现代英语用 live/stay/hide 表达。",
+    "source": "语言常识判断（intransitive 'to take shelter/dwell' 罕用）"
+   }
+  ],
+  "hundred": [
+   {
+    "key": "adj|一百的，许多的",
+    "reason": "形容词词性不成立：hundred 是数词，作定语时仍是数词；「许多的」只是 a hundred 的口语夸张用法，与已保留的数词义重复。",
+    "source": "Kaikki hundred 仅有 num/noun 义（num: \"A numerical value equal to 100\"），无 adj 条目；当前 adj 释义与 num|百，百个 重复"
+   }
+  ],
+  "hunger": [
+   {
+    "key": "vt|使挨饿",
+    "reason": "「使挨饿」是古旧的使动用法，现代英语用 starve 表达；常见的不及物「挨饿、渴望」已保留。",
+    "source": "Kaikki verb \"To make hungry; to famish.\" tags: archaic, transitive"
+   }
+  ],
+  "husband": [
+   {
+    "key": "vt|节俭，使成丈夫，持有",
+    "reason": "动词义整体罕用且偏古旧：「使成丈夫」为古旧用法，「节俭/持有」为书面罕用义；CET6 学习者掌握名词「丈夫」即可。",
+    "source": "Kaikki verb \"To till; cultivate; farm\" 标 obsolete，\"To provide with a husband\" 标 archaic；economise/conserve 两条为罕用书面义"
+   }
+  ],
+  "impress": [
+   {
+    "key": "n|印象，特征，印记",
+    "reason": "名词 impress 在现代英语中罕用，表示「印象」通常用 impression；impress 的高频用法是动词「使有印象」。",
+    "source": "Kaikki noun 义为 \"The act of impressing\"、\"An impression; an impressed image or copy\" 等书面罕用说法；语言常识判断"
+   }
+  ],
+  "innocent": [
+   {
+    "key": "n|天真的人，笨蛋",
+    "reason": "名词用法罕用，「笨蛋」对应已废弃的「傻子」义；innocent 在 CET6 的高频用法是形容词「无罪的、天真的」。",
+    "source": "Kaikki noun \"One who is innocent, especially a young child\"（罕用名词化）与 \"A harmless simple-minded person; an idiot.\" tags: obsolete"
+   }
+  ],
+  "integrate": [
+   {
+    "key": "adj|完整的，完全的",
+    "reason": "形容词义已废弃，现代 integrate 只作动词「整合、使成整体、融入」。",
+    "source": "Kaikki adj \"composite\" 与 \"whole, complete, perfect\" 两条均 tags: obsolete"
+   }
+  ],
+  "island": [
+   {
+    "key": "vt|使成岛状，孤立",
+    "reason": "由名词派生的动词义在通用英语中罕用，CET6 学习者掌握名词「岛」即可。",
+    "source": "Kaikki 动词义为 'To surround with water; make into an island' / 'To isolate'，属低频派生用法；语言常识判断"
+   }
+  ],
+  "jacket": [
+   {
+    "key": "vt|给...穿夹克，给...装护套",
+    "reason": "名词派生的罕用动词义，日常英语几乎不用；核心义是名词「夹克／护套」。",
+    "source": "Kaikki 动词仅列 'To confine (someone) to a straitjacket' / 'To enclose or encase in a jacket'，无独立高频用法；语言常识判断"
+   }
+  ],
+  "journey": [
+   {
+    "key": "vt|游历",
+    "reason": "journey 的动词在现代英语中只作不及物（vi|旅行）；及物「游历」为罕见/古旧用法。",
+    "source": "Kaikki 动词仅列 intransitive 'To travel, to make a trip or voyage'，无及物义"
+   }
+  ],
+  "joy": [
+   {
+    "key": "vt|使快乐，令人高兴",
+    "reason": "及物动词「使快乐」为废弃用法，现代英语中 joy 主要作名词；不及物 vi|欢喜 保留。",
+    "source": "Kaikki 及物义 'To give joy to; to congratulate'、'To gladden; to make joyful' 均标注 obsolete（'To enjoy' 标 archaic）"
+   }
+  ],
+  "king": [
+   {
+    "key": "vt|使...成为君主",
+    "reason": "「立…为王」是极罕见的仪式性动词义，学习者只需名词「国王」。",
+    "source": "Kaikki 动词义 'To crown king, to make (a person) king'，无高频用例；语言常识判断"
+   },
+   {
+    "key": "vi|君临，统治",
+    "reason": "「君临／统治」的动词用法罕见且偏书面，现代英语通常用 rule/reign。",
+    "source": "Kaikki 动词义 'To rule over as king' / 'To perform the duties of a king'；语言常识判断"
+   }
+  ],
+  "lake": [
+   {
+    "key": "v|(使)血球溶解",
+    "reason": "细胞反复冻融裂解的实验室技术义，通用学习者不需要。",
+    "source": "Kaikki 动词义 'To subject biological cells to repeated cycles of freezing and thawing until lysis'（专业术语）"
+   }
+  ],
+  "lamb": [
+   {
+    "key": "v|产羊羔",
+    "reason": "畜牧场景专用的动词义（母羊产羔），CET6 通用学习只需名词「羔羊」。",
+    "source": "Kaikki 动词义 'Of a sheep, to give birth' / 'To assist (sheep) to give birth'（畜牧专用）；语言常识判断"
+   }
+  ],
+  "large": [
+   {
+    "key": "adv|大大地，夸大地",
+    "reason": "副词用法罕见（现代主要见于 loom large 一类固定搭配），「夸大地」属古旧书面义。",
+    "source": "Kaikki 副词仅列航海义 'Before the wind'，无一般「大大地／夸大地」义；语言常识判断"
+   }
+  ],
+  "law": [
+   {
+    "key": "v|起诉",
+    "reason": "law 作动词「起诉」是方言/罕见用法，现代标准英语用 sue。",
+    "source": "Kaikki 无 law 的动词词条；语言常识判断"
+   }
+  ],
+  "leg": [
+   {
+    "key": "vi|走，跑",
+    "reason": "「走，跑」仅见于英式口语 leg it，Kaikki 该词条只收名词义，没有动词条目；不是 CET6 学习者需要的高频义。",
+    "source": "Kaikki leg 仅列 noun 义（腿、支撑物、赛程等），无 verb 条目；leg it 为英式口语（语言常识判断）"
+   }
+  ],
+  "licence": [
+   {
+    "key": "vt|许可，特许，认可",
+    "reason": "英式英语中 licence 是名词，动词应拼作 license；Kaikki 明确把动词 licence 标为 license 的拼写错误/非标准形式，把该动词义放进核心层会教错拼写。",
+    "source": "Kaikki verb 'Misspelling of license.' tags=[Canada,South-Africa,UK,alt-of,misspelling,nonstandard]；名词义才是本词条的标准用法"
+   }
+  ],
+  "lie": [
+   {
+    "key": "vt|谎骗",
+    "reason": "「说谎」义只有不及物用法（lie to sb），标准英语没有及物「谎骗」义；该义属词典噪声，不是常用义。",
+    "source": "Kaikki 两个 lie 动词均标 [intransitive]（躺／位于；说谎／造成假象），无及物义；语言常识判断"
+   }
+  ],
+  "lord": [
+   {
+    "key": "vt|使成贵族",
+    "reason": "「授予贵族头衔」是历史制度性的罕用及物义，普通学习者不需要；lord 的常用义是名词「统治者／阁下／上帝」以及 lord it over（已由 vi|称王，作威作福 覆盖）。",
+    "source": "Kaikki verb gloss 'To invest with the dignity, power, and privileges of a lord; to grant the title of lord'（历史制度义，非高频）；语言常识判断"
+   }
+  ],
+  "lot": [
+   {
+    "key": "vt|划分",
+    "reason": "「划分／分配」是被 Kaikki 标为 dated 的及物动词义，现代英语罕用；高频义是名词「许多／签／份额」。",
+    "source": "Kaikki verb 'To allot; to sort; to apportion.' tags=[dated,transitive]"
+   },
+   {
+    "key": "vi|抽签，抓阄",
+    "reason": "Kaikki 未收不及物「抽签／抓阄」义，且该义与已保留的 n|运气，签，抽签，份额，许多，一堆 重复，属低频动词义。",
+    "source": "Kaikki 动词义仅 'To allot; to sort; to apportion.'（dated, transitive）与 'To count or reckon (on or upon)'（US, dated, informal）；无不及物抽签义"
+   }
+  ],
+  "luck": [
+   {
+    "key": "vi|靠好运成功",
+    "reason": "动词 luck 为口语用法，且只用于 luck into/on/onto/upon 的狭窄结构，不是 CET6 学习者需要的高频义；核心义是名词「运气」。",
+    "source": "Kaikki verb tags=[informal,intransitive]，gloss 'To find something through good fortune; used with into, on, onto or upon'"
+   }
+  ],
+  "mad": [
+   {
+    "key": "n|狂怒",
+    "reason": "mad 没有标准名词「狂怒」义；Kaikki 只列形容词、副词及废弃动词，当前名词义属词典噪声。",
+    "source": "Kaikki mad 无 noun 词性条目（仅 adj、adv 及 obsolete verb）；语言常识判断"
+   }
+  ],
+  "massive": [
+   {
+    "key": "adj|大块的",
+    "reason": "与「大的，大而重的」同义重复，无独立高频用法",
+    "source": "current 重复；Kaikki 'Substantial in mass; bulky, heavy and solid' 为同一 bulky 义"
+   }
+  ],
+  "maybe": [
+   {
+    "key": "n|可能性",
+    "reason": "名词义为口语化的「可能的事」，使用频率很低，非 CET 核心义",
+    "source": "Kaikki：名词三条义项均标 informal"
+   }
+  ],
+  "meal": [
+   {
+    "key": "vi|进餐",
+    "reason": "动词义罕用，现代英语通常说 have/eat a meal",
+    "source": "Kaikki：meal 动词仅列 obsolete 'To yield or be plentiful in meal'，无现代「进餐」义"
+   }
+  ],
+  "medicine": [
+   {
+    "key": "vt|给...用药",
+    "reason": "动词义废弃罕用，现代英语不再这样用",
+    "source": "Kaikki：verb 'To treat with medicine' 标 obsolete, rare"
+   }
+  ],
+  "medieval": [
+   {
+    "key": "adj|中古的",
+    "reason": "与「中世纪的」同义重复",
+    "source": "current 重复：adj|中世纪的 已覆盖同一义"
+   }
+  ],
+  "medium": [
+   {
+    "key": "n|传导体",
+    "reason": "与「媒质，媒介物」重复，且为生硬的技术译法",
+    "source": "current 重复；Kaikki 'materials or empty space through which signals, waves, or forces pass' 即媒介义"
+   }
+  ],
+  "melt": [
+   {
+    "key": "v|溶化",
+    "reason": "与「融化」近义重复，同一核心义无独立高频用法",
+    "source": "current 重复：melt 的核心义已由「融化」覆盖"
+   }
+  ],
+  "metal": [
+   {
+    "key": "vt|以金属覆盖",
+    "reason": "动词义罕见，现代英语少用",
+    "source": "Kaikki：动词仅列 'To make a road using crushed rock'，无「以金属覆盖」常用义；语言常识判断"
+   }
+  ],
+  "million": [
+   {
+    "key": "n|百万，无数",
+    "reason": "名词义与 num|百万 重复；「无数」为口语夸张用法",
+    "source": "current 重复；Kaikki 'An unspecified very large number' 标 colloquial, excessive"
+   }
+  ],
+  "missile": [
+   {
+    "key": "adj|可发射的",
+    "reason": "形容词用法极罕见，一般词典不收",
+    "source": "Kaikki：仅 noun 两条义项，无 adj 词性"
+   }
+  ],
+  "modern": [
+   {
+    "key": "n|现代人，有思想的人",
+    "reason": "名词义低频，且「有思想的人」释义可疑、生硬",
+    "source": "Kaikki：noun 仅 'Someone who lives in modern times'，「有思想的人」无对应"
+   }
+  ],
+  "moon": [
+   {
+    "key": "vt|虚度",
+    "reason": "仅见于罕用短语 moon away，不是独立常用义",
+    "source": "Kaikki：动词仅 'To spend time idly'（对应 vi|闲荡），无「虚度」独立义；语言常识判断"
+   }
+  ],
+  "more": [
+   {
+    "key": "n|更多",
+    "reason": "名词义与 adj/adv 义重复，现代英语无独立名词用法",
+    "source": "current 重复；Kaikki：名词义为 obsolete/dialectal（carrot、root）或 nonstandard（singular of mores）"
+   }
+  ],
+  "mouth": [
+   {
+    "key": "vi|装腔作势说话，做鬼脸",
+    "reason": "「做鬼脸」为废弃义，且「装腔作势说话」与 vt|说出，做作地说 重复",
+    "source": "Kaikki：'a wry face; grimace' 标 obsolete；current 与 vt 义重复"
+   }
+  ],
+  "neat": [
+   {
+    "key": "n|牛",
+    "reason": "古旧义项，「neat」作名词指牛/牛群已废弃，CET6 学习者不需要",
+    "source": "Kaikki noun: \"A bull or cow.\" [archaic]；\"Cattle collectively.\" [archaic, plural-only]"
+   }
+  ],
+  "necessary": [
+   {
+    "key": "adj|必需的",
+    "reason": "与保留的「adj|必要的」同义重复，语义上没有独立区别",
+    "source": "当前释义重复：必要的/必需的中文同义；Kaikki 对应同一义项 \"Required, essential\"（无独立第二义）"
+   }
+  ],
+  "neck": [
+   {
+    "key": "vt|割颈",
+    "reason": "俚语/罕用的「绞死、掐死」义，且中文「割颈」不是该词常见义，一般学习者不需要",
+    "source": "Kaikki verb: \"To hang by the neck; strangle; kill, eliminate.\" [slang, transitive]；未见常用的「cut the throat」义"
+   }
+  ],
+  "nevertheless": [
+   {
+    "key": "conj|然而",
+    "reason": "与保留的「adv|然而，虽然如此」完全同义重复，仅是词性标注差异",
+    "source": "当前释义重复：adv 与 conj 中文均为「然而」；Kaikki 仅列 adv（conjunctive, not-comparable）"
+   }
+  ],
+  "none": [
+   {
+    "key": "adj|没有的",
+    "reason": "「none」作形容词/限定词属方言或非标准用法，标准英语中为代词/副词",
+    "source": "Kaikki det: \"Not any; no (usually used only before a vowel or h).\" [West-Country]（地域方言）"
+   }
+  ],
+  "nothing": [
+   {
+    "key": "adv|毫不，决不",
+    "reason": "「nothing」作副词表「毫不」属古旧书面用法，现代英语少见",
+    "source": "Kaikki adv: \"Not at all; in no way.\" [archaic, not-comparable]"
+   }
+  ],
+  "nowadays": [
+   {
+    "key": "n|现在，现时，当今",
+    "reason": "词性标注错误：「nowadays」只作副词，该名词条与副词条释义重复",
+    "source": "Kaikki 仅列 adv: \"At the present time; in the current era.\" [not-comparable]；当前 adv|时下，现今 已覆盖同一义"
+   }
+  ],
+  "onion": [
+   {
+    "key": "vt|因洋葱使掉泪",
+    "reason": "「因洋葱使掉泪」不是英语常用动词义，属汉英词典生造的动词化释义；onion 在现代英语中只作名词",
+    "source": "Kaikki onion 词条仅有名词义（植物、球茎、俚语等），无任何 verb 义项；当前词库也无其他佐证"
+   }
+  ],
+  "participate": [
+   {
+    "key": "vt|分享，分担",
+    "reason": "「分享，分担」是过时的及物用法，现代 participate 只作不及物（participate in），且与已保留的 vi「参加，分享，参与」重复",
+    "source": "Kaikki: 'To share, to take part in (something).' tags: obsolete, transitive；'To share (something) with others' tags: obsolete"
+   }
+  ],
+  "passage": [
+   {
+    "key": "vi|通过，经过，航行，横渡，争吵",
+    "reason": "passage 的动词用法整体罕用；「航行，横渡」对应标为 rare 的 to cross 义，其余动词义是马术/传代等专业义，「争吵」在英文中无对应，属词典噪声",
+    "source": "Kaikki verb: 'To make a passage, especially by sea; to cross.' tags: rare；其余为 dressage 与 serial passage 等专业义，无 quarrel 义"
+   },
+   {
+    "key": "vt|(使)马以斜横步前进，使传代",
+    "reason": "「(使)马以斜横步前进」是盛装舞步术语，「使传代」是病原/细胞传代的实验技术义，均非 CET 学习者常用义",
+    "source": "Kaikki: 'A movement in classical dressage...'；'To pass something, such as a pathogen or stem cell, through a host or medium.'"
+   }
+  ],
+  "peace": [
+   {
+    "key": "vi|安静下来，不作声",
+    "reason": "peace 的高频义只有名词「和平、安宁」；「安静下来，不作声」实为古旧感叹词 Peace!（安静！）的动词化，现代英语无此动词用法",
+    "source": "Kaikki 动词仅 'To make peace; to put at peace; to be at peace'，无「安静下来」义；感叹词 'Shut up!, silence!' tags: archaic"
+   }
+  ],
+  "peer": [
+   {
+    "key": "vt|与...同等，封为贵族",
+    "reason": "「封为贵族」在现代英语无对应用法；「与...同等」对应罕用的及物义 to make equal in rank，CET6 核心只需名词「同辈/贵族」与 vi「凝视」",
+    "source": "Kaikki 及物动词仅 'To make equal in rank'，未见「封为贵族」义；高频义为名词 'a noble...' / 'same age' 与 vi 'To look with difficulty'"
+   }
+  ],
+  "piece": [
+   {
+    "key": "vi|吃零食",
+    "reason": "「吃零食」是方言用法，不是通用高频义项；动词的核心义（拼合、修补）已由 vt 覆盖。",
+    "source": "Kaikki noun gloss「A slice or other quantity of bread, eaten on its own; a sandwich or light snack.」tags 含 Ireland, Scotland, UK, US, dialectal"
+   }
+  ],
+  "pity": [
+   {
+    "key": "vi|觉得可怜，有同情心",
+    "reason": "该不及物义与保留的 vt「同情，怜悯」重复，且 Kaikki 的 pity 动词各义项全部标为及物，没有独立的不及物义。",
+    "source": "Kaikki verb 条目「To feel pity for (someone or something).」等均标 transitive；与 current「vt|同情，怜悯」重复"
+   }
+  ],
+  "possible": [
+   {
+    "key": "n|可能性，可能的事物",
+    "reason": "「possible」的名词用法罕见且口语化，通用学习者不需要；核心的「可能的」形容词义已保留。",
+    "source": "Kaikki noun 义项「A possible choice…」「That which is possible for somebody.」标 colloquial, rare；「A particular event that may happen.」标 rare"
+   }
+  ],
+  "prior": [
+   {
+    "key": "n|小隐修院院长，大隐修院副院长",
+    "reason": "宗教职衔义，专用于隐修院/修道会，非 CET 通用高频义。",
+    "source": "Kaikki：noun 义项均为 high-ranking member of a religious house、Bayesian prior 或 historical/obsolete，无通用义。"
+   }
+  ],
+  "prison": [
+   {
+    "key": "vt|监禁",
+    "reason": "动词义罕用，现代英语通常用 imprison。",
+    "source": "Kaikki：verb 仅列 'To imprison'（无高频标注）；语言常识判断。"
+   }
+  ],
+  "privacy": [
+   {
+    "key": "n|个人自由",
+    "reason": "与另一条 noun「隐私，私生活，私事」实际重复，不是独立常见义。",
+    "source": "current 重复；Kaikki 仅列 seclusion / freedom from disturbance / freedom from publicity，无独立 'personal freedom' 义。"
+   }
+  ],
+  "prominent": [
+   {
+    "key": "adj|凸出的",
+    "reason": "与「突起的」同义重复，均对应 projecting/protuberant。",
+    "source": "current 重复：adj|突起的 已覆盖同一义；Kaikki 该义仅一条 'Standing out, or projecting'。"
+   }
+  ],
+  "proper": [
+   {
+    "key": "adv|完全地，彻底地",
+    "reason": "英式口语强调用法（如 proper good），非标准高频副词义。",
+    "source": "Kaikki：仅列 adj，无 adv 词条；adj 中 'Utter, complete' 标 colloquial。"
+   }
+  ],
+  "purple": [
+   {
+    "key": "v|(使)成紫色",
+    "reason": "低频文学动词，日常用 turn purple 表达。",
+    "source": "Kaikki 摘录以 noun/adj 为主，未见独立高频 verb 义；语言常识判断。"
+   }
+  ],
+  "queen": [
+   {
+    "key": "vt|立为女王",
+    "reason": "「立为女王」为罕用动词义，非通用表达。",
+    "source": "Kaikki 摘录无 verb 条目；queen 作动词主要见于国际象棋等专业语境（语言常识判断）。"
+   },
+   {
+    "key": "vi|做女王",
+    "reason": "「做女王」为罕用动词义，现代英语基本不用。",
+    "source": "Kaikki 摘录无 verb 条目；语言常识判断。"
+   }
+  ],
+  "quick": [
+   {
+    "key": "n|新长出的肉，要害，核心，感觉敏锐部位",
+    "reason": "名词义指指甲下嫩肉/要害等，属文学或专业用法，非 CET 高频义。",
+    "source": "Kaikki：noun 'Raw or sensitive flesh…'、'the life; the mortal point…'，另有 archaic 'living'。"
+   }
+  ],
+  "rare": [
+   {
+    "key": "adv|非常",
+    "reason": "rare 作副词表示「非常」是英式口语/方言强调用法，非标准高频副词义，掌握形容词「稀有的」即可。",
+    "source": "Kaikki：仅列 adj 与 noun，无 adv 词条；adj 的 'Good; enjoyable'/'Cool; excellent' 标 UK/US slang。"
+   }
+  ],
+  "rat": [
+   {
+    "key": "vt|弄蓬松",
+    "reason": "「弄蓬松」指用梳子把头发逆梳蓬起（backcomb），是罕用的美发专门义，不是通用动词义。",
+    "source": "Kaikki：verb 'To backcomb (hair).' 标 US；其余动词义为捕鼠、变节/告发。"
+   }
+  ],
+  "real": [
+   {
+    "key": "n|实数，现实",
+    "reason": "real 作名词主要是数学「实数」等专门用法；泛指「现实」通常用 reality，该名词义非 CET 高频。",
+    "source": "Kaikki：noun 列 'A real number'（数学）、货币单位、商品等义项，无通用高频名词义；current 与常用形容词义分离。"
+   }
+  ],
+  "realize": [
+   {
+    "key": "vi|变卖",
+    "reason": "不及物「变卖」是 realize on assets 一类的金融/商业用法，与保留的 vt 义项中的「变卖」重复，不必单列。",
+    "source": "current 重复：vt|了解，实现，使显得逼真，变卖 已含「变卖」；Kaikki：intransitive 主要是 become aware，资产变现义为从属/专业用法。"
+   }
+  ],
+  "regard": [
+   {
+    "key": "vi|注视，注意",
+    "reason": "「注视」是古旧的 look/gaze 义，「注意」又与 vt 的「注意」重复；现代 regard 以及物动词为主。",
+    "source": "Kaikki：verb 'To look at; to observe' 为及物，'To take notice of' 标 archaic；current 与 vt|视为，注意… 重复。"
+   }
+  ],
+  "reject": [
+   {
+    "key": "n|被拒货品，不合格产品",
+    "reason": "名词 reject 主要指生产线上被剔除的次品（口语/工业语境），CET 高频义是动词「拒绝」，此名词义较窄。",
+    "source": "Kaikki：noun 'A rejected defective product in a production line' 标 colloquial，另有 derogatory slang 'An unpopular person'。"
+   }
+  ],
+  "remove": [
+   {
+    "key": "vi|迁移，移动，搬家",
+    "reason": "不及物「迁移/搬家」是古旧或正式英式用法（remove to...），日常英语用 move house。",
+    "source": "Kaikki：intransitive 'To depart, to leave' / 'To change one's residence' 均标 archaic。"
+   },
+   {
+    "key": "n|班级，升级，移动，搬家，间距",
+    "reason": "名词 remove 主要是英国公学的年级、dated「搬家」等低频义；「间距」仅见于 at one remove 固定短语，不是独立高频名词义。",
+    "source": "Kaikki：noun 义项为 historical dish、UK school division、'At one remove'、dated transfer 等，无通用高频名词义。"
+   }
+  ],
+  "repair": [
+   {
+    "key": "vi|修理，修补，补救，恢复，去，常去，集合",
+    "reason": "该不及物条目前半是与 vt 重复的「修理」义，后半「去，常去，集合」对应书面/古旧的 repair to（前往）用法，非独立高频义。",
+    "source": "current 重复：vt|修理，修补，补救，恢复，补偿 已覆盖修理义；Kaikki：verb 'To transfer oneself to another place' 为单独的低频/书面义。"
+   }
+  ],
+  "resist": [
+   {
+    "key": "n|防染材料",
+    "reason": "名词 resist 指印染/光刻中的防染或保护涂层，是工艺技术义，通用英语几乎不用。",
+    "source": "Kaikki：noun 仅 'A protective coating or covering'（countable/uncountable），无通用高频名词义；ECDICT 亦以动词为主。"
+   }
+  ],
+  "retire": [
+   {
+    "key": "n|隐居",
+    "reason": "名词“隐居”对应“the act of retiring, or the state of being retired”，Kaikki 标注 rare；日常用 retirement，非高频名词义。",
+    "source": "Kaikki noun gloss tags=[rare]；retire 的高频用法是动词“退休/退出”。"
+   }
+  ],
+  "revise": [
+   {
+    "key": "n|校订，修正，改样",
+    "reason": "revise 主要作动词；名词义仅为“a review or a revision”，另一义“second proof sheet”是印刷校样术语，非通用高频义。",
+    "source": "Kaikki noun glosses：\"A review or a revision\" / \"A second proof sheet\"（印刷）；名词罕用（语言常识判断）。"
+   }
+  ],
+  "rice": [
+   {
+    "key": "vt|将...压成米粒状",
+    "reason": "仅为烹饪器具 ricer 的专业用法“squeeze through a ricer; mash into rice-sized pieces”，普通学习者不需要。",
+    "source": "Kaikki verb gloss（cooking，transitive）：\"To squeeze through a ricer; to mash or make into rice-sized pieces\"。"
+   }
+  ],
+  "rise": [
+   {
+    "key": "vt|使飞起",
+    "reason": "及物“使飞起”是狩猎中使猎物飞起的罕见用法；现代英语 rise 基本为不及物。",
+    "source": "Kaikki 及物义仅 \"To go up; to ascend; to climb\"，无“使飞起”的常用搭配（语言常识判断）。"
+   }
+  ],
+  "rope": [
+   {
+    "key": "vi|拧成绳状",
+    "reason": "不及物“拧成绳状”是罕见/技术用法；Kaikki 的不及物义为“攀绳”，未见该义。",
+    "source": "Kaikki intransitive gloss：\"To climb by means of a rope or ropes\"；当前义无对应常用义（语言常识判断）。"
+   }
+  ],
+  "rubber": [
+   {
+    "key": "vt|用橡胶制造，涂橡胶于",
+    "reason": "“涂橡胶/用橡胶制造”是罕见技术义；Kaikki 动词仅列俚语“窃听电话”，不支持该义为常用。",
+    "source": "Kaikki verb gloss（slang）：\"To eavesdrop on a telephone call\"；当前义为技术用法（语言常识判断）。"
+   }
+  ],
+  "salary": [
+   {
+    "key": "vt|给...加薪",
+    "reason": "salary 作动词“按周期付薪”罕用，日常只用名词；且动词义并非“加薪”。",
+    "source": "Kaikki verb gloss：\"To pay on the basis of a period of a week or longer...\"；名词为高频义。"
+   }
+  ],
+  "scary": [
+   {
+    "key": "adj|惊慌的，害怕的",
+    "reason": "“scary=感到害怕的”是非标准口语用法，标准应为 scared；Kaikki 将其标注 US/colloquial。",
+    "source": "Kaikki adj gloss \"Subject to sudden alarm; easily frightened\"，tags=[US, colloquial]。"
+   },
+   {
+    "key": "adj|胆小的，易受惊的",
+    "reason": "“易受惊的”同属口语/方言性用法，非标准高频义，学习者应学 scared。",
+    "source": "Kaikki adj gloss \"Subject to sudden alarm; easily frightened\"，tags=[US, colloquial]。"
+   }
+  ],
+  "seat": [
+   {
+    "key": "vi|安装在底座上",
+    "reason": "Kaikki 未列 seat 的不及物动词义；该机械安装义极罕见，日常 seat 为名词或及物动词。",
+    "source": "Kaikki 动词仅列及物义（fix in place / provide with a seat），无不及物义（语言常识判断）。"
+   }
+  ],
+  "secure": [
+   {
+    "key": "vi|停止操作，船抛锚",
+    "reason": "航海/机械“停止操作、抛锚”为极罕见不及物用法；Kaikki 未列 secure 的不及物义。",
+    "source": "Kaikki 仅列形容词与及物动词义，无该不及物义（语言常识判断）。"
+   }
+  ],
+  "see": [
+   {
+    "key": "n|主教的职位",
+    "reason": "名词 see 指主教职位/教区，属教会专用古旧义，CET6 通用词汇学习不需要",
+    "source": "Kaikki 该词条仅收录动词义项，未列名词；语言常识判断"
+   }
+  ],
+  "sex": [
+   {
+    "key": "vt|区别...的性别，引起...的性欲",
+    "reason": "动词 sex 仅有“判断动物性别”的技术义和口语“与…性交”义；当前“引起…的性欲”与词典释义不符，属低频且失准的义项",
+    "source": "Kaikki verb: “To determine the sex of (an animal)”（技术义）/ colloquial “To have sex with”"
+   }
+  ],
+  "sharp": [
+   {
+    "key": "n|半升音调，利刃，骗子",
+    "reason": "名词 sharp 为零散低频义（音乐半音记号、刀刃、“骗子”来自 sharper 的古旧/方言用法），通用学习不需要",
+    "source": "Kaikki 该词条只列形容词义项，未给名词义；语言常识判断"
+   }
+  ],
+  "shut": [
+   {
+    "key": "n|关闭",
+    "reason": "名词 shut 极少使用，Kaikki 未收名词义；“关闭”已由动词义完整覆盖",
+    "source": "Kaikki 该词条仅列动词/形容词义；语言常识判断"
+   }
+  ],
+  "sick": [
+   {
+    "key": "vt|呕吐，追击，使(狗)去攻击",
+    "reason": "动词 sick 的“呕吐”为英澳口语，“追击/放狗咬”实为 sic 的罕见异拼，非通用高频义",
+    "source": "Kaikki: “To vomit” 标 Australia/UK colloquial；“Alternative spelling of sic” 标 rare"
+   }
+  ],
+  "simple": [
+   {
+    "key": "n|出身低微者，傻子",
+    "reason": "名词 simple 指“傻子/出身低微者”为古旧用法，形容词义已覆盖“简单、朴素”等常用义",
+    "source": "Kaikki 该词条仅列形容词义项；语言常识判断"
+   }
+  ],
+  "sing": [
+   {
+    "key": "n|嗖嗖声",
+    "reason": "名词 sing 本身低频，“嗖嗖声”是罕见的拟声义；常用义为动词“唱”",
+    "source": "Kaikki noun 义为“唱歌的行为/类似歌声”；语言常识判断"
+   }
+  ],
+  "sister": [
+   {
+    "key": "vt|姐妹般对待",
+    "reason": "动词 sister 为罕见技术义（加固梁）及 obsolete “to be sister to”，“姐妹般对待”非通用义",
+    "source": "Kaikki verb: “To strengthen (a supporting beam)”（技术义）；obsolete “To be sister to”"
+   }
+  ],
+  "sit": [
+   {
+    "key": "n|坐，衣服合身",
+    "reason": "名词 sit 低频；“衣服合身”实为动词 to fit 的用法，不是名词义",
+    "source": "Kaikki noun 仅列“An act of sitting”等低频义；语言常识判断"
+   }
+  ],
+  "sky": [
+   {
+    "key": "vt|击向空中，挂在高处",
+    "reason": "动词 sky 的义项多标 dated/informal/slang（把画挂高处、抛硬币、把球击高），非通用高频义",
+    "source": "Kaikki verb: “To hang (a picture…) near the top” 标 dated/informal；“To toss uppermost” 标 dated/slang"
+   },
+   {
+    "key": "vi|高涨",
+    "reason": "动词 sky 的不及物义项均属低频/边缘用法（快速移动、把球击高、抬桨过高），非通用高频义",
+    "source": "Kaikki verb 义项标 informal/dated/slang；语言常识判断"
+   }
+  ],
+  "small": [
+   {
+    "key": "n|狭小部分",
+    "reason": "名词义“狭小部分”为罕见用法，非日常/考试常用义；现代 small 主要作形容词。",
+    "source": "Kaikki noun 义项 “Any part of something that is smaller or slimmer than the rest” 标注 rare；ECDICT pos 为 r:1/j:99，无名词占比。"
+   }
+  ],
+  "soft": [
+   {
+    "key": "n|柔软的东西，笨人，纸币",
+    "reason": "名词义（柔软之物/笨人/纸币）为罕见、口语或词典边缘义，现代英语 soft 主要作形容词。",
+    "source": "Kaikki 仅收录形容词义项、无名词义项；ECDICT pos 为 j:100，无名词占比。"
+   }
+  ],
+  "sole": [
+   {
+    "key": "vt|上鞋底，触底",
+    "reason": "动词义仅指给鞋上底一类鞋匠窄义，“触底”也不是 sole 的常用义，CET6 学习者不需要。",
+    "source": "Kaikki verb 仅有 “To put a sole on a shoe or a boot”；ECDICT pos 为 j:75/n:25，无动词占比。"
+   }
+  ],
+  "stage": [
+   {
+    "key": "vi|适于上演，乘驿车旅行",
+    "reason": "“乘驿车旅行”为已过时的 stagecoach 义，“适于上演”为罕见不及物用法；现代 stage 主要作名词和及物动词。",
+    "source": "Kaikki verb 义项均为及物（“To produce on a stage”等），stagecoach 义标注 dated；ECDICT pos 为 v:8/n:92。"
+   }
+  ],
+  "statistic": [
+   {
+    "key": "adj|统计的，统计学的",
+    "reason": "形容词 statistic 是 statistical 的罕见替代形式，标准形容词为 statistical。",
+    "source": "Kaikki adj 标注 alt-of/alternative：“Alternative form of statistical”；ECDICT pos 为 n:100，无形容词占比。"
+   }
+  ],
+  "statue": [
+   {
+    "key": "vt|以雕像装饰",
+    "reason": "名词「雕像」是核心义；动词「以雕像装饰／把…做成雕像」是罕见的派生用法，CET 学习者不需要。",
+    "source": "Kaikki verb 仅一条：\"To form a statue of; to make into a statue.\"，属低频派生义。"
+   }
+  ],
+  "steep": [
+   {
+    "key": "n|浸渍，悬崖",
+    "reason": "名词义「陡坡／悬崖」和「浸渍（液）」都属低频；形容词「陡峭的」、动词「浸泡」已覆盖常用义。",
+    "source": "Kaikki noun：\"The steep side of a mountain etc.\"、\"A liquid used in a steeping process\"、\"A rennet bag\"，均非高频义。"
+   }
+  ],
+  "stiff": [
+   {
+    "key": "n|死尸，醉鬼，钞票",
+    "reason": "名词义「死尸／醉鬼／钞票」全部是俚语，不是通用正式义。",
+    "source": "Kaikki noun 各义均标 slang：cadaver、average person、dupe、flop、dine-and-dasher。"
+   },
+   {
+    "key": "vt|不肯付...小费",
+    "reason": "「不肯付小费」是俚语动词用法，CET6 学习者不需要。",
+    "source": "ECDICT 该 vt 为俚语 stiff sb（out of a tip）；Kaikki 该词条未列此动词义。"
+   }
+  ],
+  "stimulate": [
+   {
+    "key": "vi|起刺激作用",
+    "reason": "「起刺激作用」是词典派生的罕见不及物用法；现代通用英语 stimulate 基本作及物动词。",
+    "source": "Kaikki verb 仅 \"To encourage into action.\"、\"To arouse an organism to functional activity.\"，未列独立不及物义项。"
+   }
+  ],
+  "sudden": [
+   {
+    "key": "n|突然，忽然",
+    "reason": "名词 sudden 在现代英语已废，仅存于固定短语 all of a sudden；与保留的形容词义「突然的」重复。",
+    "source": "Kaikki noun：\"An unexpected occurrence; a surprise.\"，tag 为 obsolete。"
+   }
+  ],
+  "sugar": [
+   {
+    "key": "vi|制成糖",
+    "reason": "不及物「制成糖」是罕见／技术用法（如熬制枫糖），日常 sugar 主要作名词和及物动词。",
+    "source": "Kaikki verb 的相关义仅 \"In making maple sugar…\"（Canada/US regional）及 \"To apply sugar to trees\"，无通用「变成糖」的不及物义。"
+   }
+  ],
+  "super": [
+   {
+    "key": "n|跑龙套角色，冗员，特级品，特大号，管理人",
+    "reason": "名词 super 各义都是口语缩略（supernumerary、superintendent 等），零散且低频；核心用法是形容词／副词。",
+    "source": "Kaikki noun 各义均标 abbreviation/clipping/colloquial：supernumerary、superintendent、supercomputer、superhive 等。"
+   }
+  ],
+  "supply": [
+   {
+    "key": "vi|替代",
+    "reason": "不及物「替代」是罕见的书面用法；日常 supply 主要作及物动词和名词，CET 学习者不需要该义。",
+    "source": "Kaikki intransitive 仅有 \"To act as a substitute.\"，属低频边缘义（语言常识判断）。"
+   }
+  ],
+  "surround": [
+   {
+    "key": "n|围绕物",
+    "reason": "名词「围绕物／围栏」是英式低频具体义，学习者掌握动词「包围」即可。",
+    "source": "Kaikki noun 仅一条：\"Anything, such as a fence or border, that surrounds something.\"（标 UK），属低频。"
+   }
+  ],
+  "swear": [
+   {
+    "key": "vi|发誓，诅咒",
+    "reason": "与 vt 义项重复：同样覆盖发誓/咒骂，仅为及物性拆分",
+    "source": "current duplicate；Kaikki 该两义均标 ambitransitive，vt 义项已覆盖 oath 与 profane language"
+   }
+  ],
+  "tall": [
+   {
+    "key": "adv|夸大地",
+    "reason": "罕见副词用法，且“夸大的”已包含在 adj 义项中，属重复",
+    "source": "Kaikki 无 tall 的 adverb 词条；“夸张、难以置信”对应 adj 义 tall story/tale，current 的 adj|高的，长的，夸大的 已覆盖"
+   }
+  ],
+  "telescope": [
+   {
+    "key": "vt|使叠缩，使缩短",
+    "reason": "与 vi 义项为同一义的使役/及物拆分，内容重复",
+    "source": "current duplicate；Kaikki 该义标 ambitransitive（to extend or contract / slide one within another），vi|叠缩，嵌进，缩短 已覆盖"
+   }
+  ],
+  "tent": [
+   {
+    "key": "vt|用帐篷遮盖，使住帐篷，用塞条嵌入",
+    "reason": "字面及物用法罕见；“塞条嵌入”为外科探条技术义",
+    "source": "Kaikki 动词义仅列 go camping / form a tent-like shape 等，无“cover with a tent”；surgical tent（探条）为医学专门义"
+   }
+  ],
+  "testify": [
+   {
+    "key": "vt|作证，证明",
+    "reason": "与 vi|作证，证明 释义完全相同，属及物性拆分的重复",
+    "source": "current duplicate；Kaikki 该义标 ambitransitive, 无需另立 vt 义项"
+   }
+  ],
+  "thank": [
+   {
+    "key": "n|谢意，感谢",
+    "reason": "名词单数 thank 为古旧/形式条目，日常用复数 thanks；动词义已覆盖",
+    "source": "Kaikki: “singular of thanks” 标注 form-of, obsolete"
+   }
+  ],
+  "then": [
+   {
+    "key": "conj|然后，当时",
+    "reason": "与 adv 义项释义完全重复；then 并非现代连词",
+    "source": "current duplicate；Kaikki 的 conj 条目仅为 than 的过时拼写/误拼（alt-of, obsolete/misspelling）"
+   }
+  ],
+  "throat": [
+   {
+    "key": "vt|用喉音说，开沟于",
+    "reason": "罕见/方言/废弃动词义，非通用词汇需要",
+    "source": "Kaikki: “To utter in or with the throat” 标 uncommon；“To mow (beans)” 标 UK, dialectal, obsolete"
+   }
+  ],
+  "throw": [
+   {
+    "key": "vi|丢，掷，抛",
+    "reason": "与 vt|投，掷，抛…… 完全重复，仅为及物性拆分",
+    "source": "current duplicate；Kaikki 的 hurl/release 义标 transitive，vt 义项已覆盖"
+   }
+  ],
+  "toe": [
+   {
+    "key": "vi|动脚尖",
+    "reason": "与保留的 vt「以趾踏触，用脚尖走」重复：Kaikki 只有一条动词义「To touch, tap or kick with the toes」，同时标 intransitive/transitive，current 把同一动词义拆成了两条。",
+    "source": "Kaikki verb：'To touch, tap or kick with the toes.' tags=[intransitive, transitive]；current 中 vt/vi 同源。"
+   }
+  ],
+  "toilet": [
+   {
+    "key": "vi|梳妆，打扮，上厕所",
+    "reason": "toilet 的动词「梳妆打扮」是过时用法；「上厕所」作动词也罕见。名词「厕所」已覆盖日常高频义。",
+    "source": "Kaikki verb：'To dress and groom oneself.' tags=[dated]；另有较罕见的 'To use (urinate or defecate in) a toilet.'。"
+   },
+   {
+    "key": "vt|给...梳妆打扮",
+    "reason": "「给…梳妆打扮」同样是过时的动词用法，现代英语几乎不用 toilet 作及物动词。",
+    "source": "Kaikki verb 中梳妆义标 dated；名词「厕所」为高频核心义。"
+   }
+  ],
+  "tongue": [
+   {
+    "key": "vt|舔，斥责，发...的音",
+    "reason": "现代英语 tongue 基本只作名词；动词「舔、斥责、发出…的音」属罕见的书面/专门用法，不是 CET 学习者需要的高频义。",
+    "source": "Kaikki 该词仅有 noun 词条（20 条，无 verb）；动词义无词典支持（语言常识判断）。"
+   },
+   {
+    "key": "vi|使用舌头，吹管乐器",
+    "reason": "「吹管乐器」指 tonguing（管乐吐音）的专门技法，极罕见；「使用舌头」也不是通用不及物义。",
+    "source": "Kaikki 无 verb 词条；current 动词义为专门/罕用（语言常识判断）。"
+   }
+  ],
+  "tooth": [
+   {
+    "key": "vt|装以齿，将...切成齿状",
+    "reason": "「装齿、切出齿状」是机械/加工领域的罕用动词义，普通学习者只需名词「牙齿/齿状物」。",
+    "source": "Kaikki verb：'To provide or furnish with teeth.' / 'To indent; to jag.'（技术义）。"
+   },
+   {
+    "key": "vi|啮合",
+    "reason": "「啮合」专指齿轮互相咬合，是机械术语，不是通用高频义。",
+    "source": "Kaikki verb：'To lock into each other, like gear wheels.'（齿轮技术义）。"
+   }
+  ],
+  "tough": [
+   {
+    "key": "n|恶棍",
+    "reason": "名词 tough 指「暴徒/恶棍」是较边缘的名词用法，CET 高频用法是形容词「强硬的/艰苦的」，此名词义一般学习者不需要。",
+    "source": "Kaikki noun 仅 'A person who obtains things by force; a thug or bully.'；核心为 adj 词条。"
+   }
+  ],
+  "tree": [
+   {
+    "key": "vt|把...赶上树",
+    "reason": "「把…赶上树」只用于追猎动物或人上树的罕见场景，现代英语 tree 基本作名词。",
+    "source": "Kaikki verb：'To chase (an animal or person) up a tree.' / place in a tree 等狭义动词义，无通用高频用法。"
+   }
+  ],
+  "tribe": [
+   {
+    "key": "n|族",
+    "reason": "「族」与保留的「部落」是同一个族群义项的简写重复，Kaikki 的族裔群体义已由「部落」覆盖，无需单列。",
+    "source": "current 重复：n|部落 与 n|族 同指 Kaikki 'An ethnic group larger than a band or clan…'。"
+   }
+  ],
+  "ugly": [
+   {
+    "key": "n|丑陋的人(或物)",
+    "reason": "名词「丑陋的人/物」是口语/俚语用法，CET 高频义是形容词「丑陋的/险恶的」。",
+    "source": "Kaikki noun：'An ugly person or thing.' tags=[countable, slang, uncountable]。"
+   }
+  ],
+  "umbrella": [
+   {
+    "key": "vt|用伞遮掩",
+    "reason": "umbrella 的动词义（如伞般遮盖/保护）罕用，日常英语几乎只作名词和定语；保留名词与「包罗万象的」形容词义即可。",
+    "source": "Kaikki verb：'To cover or protect, as if by an umbrella.' 等比喻义，无常见动词搭配。"
+   }
+  ],
+  "unless": [
+   {
+    "key": "prep|除...之外",
+    "reason": "unless 的介词用法非标准；权威词典与 Kaikki 均只列连词，『除...之外』实为 except 的误配，连词义已完全覆盖。",
+    "source": "Kaikki 仅 3 条 conj 义项（Except on a specified condition 等），无 prep 条目；current 该条为词典误分类"
+   }
+  ],
+  "vague": [
+   {
+    "key": "adj|暧昧的",
+    "reason": "与已保留的「不明确的」「含糊的」同义重复；且中文「暧昧」常带男女关系含义，容易误导。",
+    "source": "current 重复；Kaikki 各义项均为 not clearly expressed/defined/understood，无「暧昧关系」义"
+   }
+  ],
+  "variation": [
+   {
+    "key": "n|变奏",
+    "reason": "音乐专业义（变奏），CET 通用核心义是「变化、变动、变异」，一般学习者不需要。",
+    "source": "Kaikki: 'A technique where material is repeated with alterations to the melody, harmony...'（音乐义）；current 另有通用义"
+   }
+  ],
+  "vice": [
+   {
+    "key": "n|虎钳",
+    "reason": "「虎钳」是工具/机械专业义，且此处为 vise 的英式同形拼写；vice 的核心高频义是「罪恶、恶习」。",
+    "source": "Kaikki: 'Alternative spelling of vise (mechanical screw apparatus used for clamping)' tags Commonwealth/alt-of"
+   }
+  ],
+  "visible": [
+   {
+    "key": "n|可见物",
+    "reason": "名词化的罕见用法「可见物」；核心义是形容词「看得见的/明显的」。",
+    "source": "Kaikki visible 仅有 adj 条目，无 noun 义；current 该条为罕见名词化"
+   }
+  ],
+  "wage": [
+   {
+    "key": "vi|进行",
+    "reason": "与已保留的 vt「开展，进行」重复，且 wage 没有常用不及物用法。",
+    "source": "current 重复；Kaikki wage 动词仅列及物 'To conduct or carry out (a war or other contest)'"
+   }
+  ],
+  "wealth": [
+   {
+    "key": "n|财产",
+    "reason": "与已保留的「财富」几乎同义重复；wealth 的核心义已由「财富」和「丰富」覆盖。",
+    "source": "current 重复；Kaikki 仅 'Riches; a great amount of valuable assets or material possessions' 与 'A great amount; abundance' 两义"
+   }
+  ],
+  "whether": [
+   {
+    "key": "pron|两个中的哪一个",
+    "reason": "代词义已废弃；现代 whether 只作连词表示“是否/不论”。",
+    "source": "Kaikki pron \"Which of two.\" 标注 obsolete（det 同义亦 obsolete）"
+   }
+  ],
+  "wide": [
+   {
+    "key": "n|大千世界",
+    "reason": "并非 wide 的常用名词义，属词典杂项；“大千世界”不是独立名词义项。",
+    "source": "Kaikki noun 仅列板球术语 \"a wide ball\"（打歪的球），无对应“大千世界”名词义"
+   }
+  ],
+  "within": [
+   {
+    "key": "n|内部，里头",
+    "reason": "名词化用法罕见；现代英语 within 主要作介词和副词，学习者无需单列。",
+    "source": "Kaikki within 仅有 prep/adv/adj 条目，无名词义"
+   }
+  ],
+  "without": [
+   {
+    "key": "adv|在外面，户外",
+    "reason": "古旧/书面副词义（outside），现代英语 without 基本只作介词。",
+    "source": "Kaikki adv \"Outside, externally.\" 标注 archaic, literary"
+   },
+   {
+    "key": "n|外面，外部",
+    "reason": "罕见名词化用法，非日常或考试常用义。",
+    "source": "Kaikki noun \"Someone or something lacking in something.\" 标注 uncommon；current 的“外面”义亦属古旧名词用法"
+   }
+  ],
+  "woman": [
+   {
+    "key": "vt|贬称...为女人，使成女人腔",
+    "reason": "罕见且带贬义的动词用法（贬称某人为女人/使女人腔），非高频义。",
+    "source": "Kaikki verb \"To call (a person) “woman” in a disrespectful fashion.\" 与 \"To make effeminate or womanish.\"，均属边缘用法"
+   }
+  ],
+  "wood": [
+   {
+    "key": "vt|植林于，给...添加木柴",
+    "reason": "罕见的动词义（植林/供木柴），日常与考试只需名词“木材”。",
+    "source": "Kaikki verb \"To cover or plant with trees.\"、\"To supply with wood\"，属词典完整收录的罕用义"
+   },
+   {
+    "key": "vi|收集木材",
+    "reason": "罕见不及物动词义（拾柴），非高频用法。",
+    "source": "Kaikki verb \"To take or get a supply of wood.\" 标注 intransitive，属罕用义"
+   }
   ]
  },
  "limitations": "未列入排除表的词/义项默认保留；core+ 新增但不在 core 中的词尚未逐义项核对。"
