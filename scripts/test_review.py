@@ -601,6 +601,66 @@ class LevelTest(unittest.TestCase):
         self.assertGreater(len(levels["core+"]), 4700)
 
 
+class CoreSenseTest(unittest.TestCase):
+    def setUp(self):
+        self.old_levels = vocabtype._CORE_LEVELS
+        self.old_excl = vocabtype._CORE_SENSE_EXCLUSIONS
+        vocabtype._CORE_LEVELS = {"core": {"a"}, "core+": {"a"}}
+        vocabtype._CORE_SENSE_EXCLUSIONS = {"a": {"n|乙"}}
+        self.addCleanup(setattr, vocabtype, "_CORE_LEVELS", self.old_levels)
+        self.addCleanup(setattr, vocabtype, "_CORE_SENSE_EXCLUSIONS", self.old_excl)
+        self.entries = [entry("a", senses=[sense("n", "甲", "jia"),
+                                           sense("n", "乙", "yi")])]
+        self.s0, self.s1 = self.entries[0]["senses"]
+
+    def test_excluded_sense_is_not_selectable(self):
+        args = SimpleNamespace(count=10, level="core", weak=False,
+                               new=False, all_senses=True)
+        items = vocabtype.select_items(
+            self.entries, {"words": {}, "review": {}}, args)
+        self.assertEqual({s["cn"] for _e, s in items}, {"甲"})
+
+    def test_excluded_sense_is_not_in_review_pool(self):
+        stats = {"review": {"a": {"n|乙": {
+            "state": "learning", "level": 0, "due": "2000-01-01"}}}}
+        args = SimpleNamespace(intervals=(1, 3, 7, 15, 30),
+                               level="core", quiz_size=0, review_known=None)
+        scope = vocabtype.build_quiz_scope(self.entries, stats, args)
+        self.assertEqual(scope, [])
+
+    def test_sense_allowed_only_for_core(self):
+        self.assertFalse(vocabtype.sense_allowed(
+            self.entries[0], self.s1, "core"))
+        self.assertTrue(vocabtype.sense_allowed(
+            self.entries[0], self.s0, "core"))
+        self.assertTrue(vocabtype.sense_allowed(
+            self.entries[0], self.s1, "all"))
+
+    def test_core_sense_exclusion_file_is_valid(self):
+        old = vocabtype._CORE_SENSE_EXCLUSIONS
+        vocabtype._CORE_SENSE_EXCLUSIONS = None
+        self.addCleanup(setattr, vocabtype, "_CORE_SENSE_EXCLUSIONS", old)
+        exclusions = vocabtype.core_sense_exclusions()
+        self.assertGreater(len(exclusions), 600)
+        # Real data check: every excluded key must exist and never remove all senses.
+        import json as _json
+        data = _json.load(open(vocabtype.DEFAULT_DATA, encoding="utf-8"))
+        data_words = {e["word"]: e for e in data["words"]}
+        for word, keys in exclusions.items():
+            entry = data_words[word]
+            valid = {f"{s.get('pos', '')}|{s['cn']}" for s in entry["senses"]}
+            self.assertTrue(keys <= valid, word)
+            self.assertLess(len(keys), len(valid), word)
+
+    def test_review_counts_honors_excluded_senses(self):
+        stats = {"review": {"a": {"n|乙": {
+            "state": "learning", "level": 0, "due": "2000-01-01"}}}}
+        result = vocabtype.review_counts(
+            stats, excluded_senses={"a": {"n|乙"}})
+        self.assertEqual(result[:3], (0, 0, 0))
+        self.assertEqual(result[5], 0)
+
+
 class ProfileTest(unittest.TestCase):
     def with_paths(self, root):
         old_stats = vocabtype.DEFAULT_STATS

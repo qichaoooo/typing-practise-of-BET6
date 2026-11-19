@@ -317,12 +317,18 @@ vocabtype --profile core5k --profile-level core+
   扩展 3。
 - **core+**：core 再并入 Oxford 5000 的额外词和 COCA 排名 ≤8000 的词。
   共 4,810 词：CET4 4,061 · CET6 731 · 扩展 18。
-- 这是**词级**筛选。词库没有义项级频率数据，所以义项仍按原有顺序加权；
-  不声称某条具体义项的频率来自语料。
+- 在 `core` 词级范围之上，已对 **952 个高风险词**（带领域标签或 4 个以上义项）
+  逐义项核对，排除 **674 个词的 838 个**低频/专业/古旧/重复义项；数据在
+  `data/core_sense_exclusions.json`。其余核心词保留全部义项。
+- `core+` 新增的词（不在 `core` 中的约 1,795 词）尚未逐义项核对，沿用全部义项。
+- 这是**词级范围 + 已核对义项排除**，不是全量义项白名单。词库没有义项级频率
+  数据，未列入排除表的义项仍按原有顺序加权；不声称义项频率来自语料。
 - 这些是多个来源的并集，不是每个来源都逐词认可；这样做的目的是尽量不漏掉
   现代高频词，同时保持一个可控的学习量。
 
-数据保存在 `data/core_words.json`，来源、生成日期和规则也记录在该文件里。
+词级范围在 `data/core_words.json`；义项排除表在
+`data/core_sense_exclusions.json`，每条排除都记录原因和来源（Kaikki/Wiktionary、
+ECDICT/当前词库；不确定时保留）。
 参考来源：[NGSL 1.2](https://www.newgeneralservicelist.com/new-general-service-list)、
 [Oxford 3000/5000](https://www.oxfordlearnersdictionaries.com/about/wordlists/oxford3000-5000)、
 [Longman Communication 3000](https://www.lextutor.ca/freq/lists_download/longman_3000_list.pdf)、

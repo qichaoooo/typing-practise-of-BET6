@@ -1,0 +1,5576 @@
+{
+ "generated": "2026-11-19",
+ "scope": "core 核心词中带有领域标签或 4 个以上义项的高风险词；其他核心词保留全部义项。",
+ "method": "逐词对照当前中文义项、Kaikki/Wiktionary 英文义项及标签、ECDICT/词库释义；只排除明确重复、低频、古旧、俚俗、专业噪声或缩写展开，拿不准时保留。",
+ "reviewed_words": 952,
+ "words_with_exclusions": 674,
+ "excluded_senses": 838,
+ "sources": [
+  {
+   "name": "Kaikki.org / English Wiktionary",
+   "url": "https://kaikki.org/dictionary/English/"
+  },
+  {
+   "name": "ECDICT",
+   "url": "https://github.com/skywind3000/ECDICT"
+  }
+ ],
+ "excluded": {
+  "a": [
+   {
+    "key": "art|[计] 累加器，加法器，地址，振幅，模拟，区域，面积，汇编，组件，异步",
+    "reason": "这是字母 A 的计算机缩略语展开堆砌，不是 a 作冠词的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项（仅列字母、冠词等）；current 该条为 [计] 缩略语展开"
+   }
+  ],
+  "act": [
+   {
+    "key": "|[计] 先进通信技术，先进计算机工艺，自动代码翻译技术",
+    "reason": "ACT 的缩略语展开，不是 act 的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项；current 该条为 [计] 缩略语展开"
+   }
+  ],
+  "actor": [
+   {
+    "key": "|[医] 作用物，反应物",
+    "reason": "医学专业域义，非通用高频义；actor 的常用义是演员/行动者。",
+    "source": "Kaikki 无医学义（仅 doer/performer 及已废弃法律义）"
+   }
+  ],
+  "actual": [
+   {
+    "key": "|[医] 实际死亡率",
+    "reason": "「实际死亡率」是短语而非 actual 的词义，属于专业域词典条目。",
+    "source": "Kaikki 无此义项；current 该条为 [医] 短语"
+   }
+  ],
+  "add": [
+   {
+    "key": "|[计] 加法",
+    "reason": "与已保留的 vi「做加法」重复，且为 [计] 标签的技术条目。",
+    "source": "ECDICT/current sense duplicate；Kaikki 名词义罕见，非通用义"
+   }
+  ],
+  "advice": [
+   {
+    "key": "|[经] 通知书，通知，建议",
+    "reason": "与已保留的 n「通知」重复，[经] 为金融文书专业条目。",
+    "source": "Kaikki: financial advisory document 属专业义；current 与「通知」重复"
+   }
+  ],
+  "agriculture": [
+   {
+    "key": "|[机] 农业，农学",
+    "reason": "与已保留的 n「农业」重复，[机] 标签条目为技术重复。",
+    "source": "Kaikki 仅一个通用义项；current 该条为 [机] 重复条目"
+   }
+  ],
+  "aim": [
+   {
+    "key": "|[计] 医学文摘索引，存取隔离机构，高级信息管理程序，先进接口模块",
+    "reason": "AIM 的计算机缩略语展开，不是 aim 的词义。",
+    "source": "Kaikki 将 AIM 单列为 initialism（AOL Instant Messenger），非本词义；current 为 [计] 缩略语展开"
+   },
+   {
+    "key": "|应用接口模块，医学人工智能，相联索引法，异步接口模块",
+    "reason": "AIM 缩略语展开堆砌，不是 aim 的词义。",
+    "source": "Kaikki 将 AIM 单列为 initialism，非本词义；current 为缩略语展开"
+   },
+   {
+    "key": "|自动化信息管理，自动化综合制造，自动化库存管理",
+    "reason": "AIM 缩略语展开堆砌，不是 aim 的词义。",
+    "source": "Kaikki 将 AIM 单列为 initialism，非本词义；current 为缩略语展开"
+   }
+  ],
+  "aircraft": [
+   {
+    "key": "|[机] 航空器",
+    "reason": "与已保留的 n「航空器，飞机」重复，[机] 为标签重复条目。",
+    "source": "Kaikki 仅一个通用义项；current 该条为 [机] 重复"
+   }
+  ],
+  "airport": [
+   {
+    "key": "|[机] 航空站，机场",
+    "reason": "与已保留的 n「飞机场」重复，[机] 为标签重复条目。",
+    "source": "Kaikki 仅一个通用义项；current 该条为 [机] 重复"
+   }
+  ],
+  "allow": [
+   {
+    "key": "|[计] 允许命令",
+    "reason": "与已保留的 vt「允许」重复，[计] 为技术条目。",
+    "source": "ECDICT/current sense duplicate；Kaikki 无此技术义"
+   }
+  ],
+  "ambulance": [
+   {
+    "key": "|[医] 救护车",
+    "reason": "与已保留的 n「救护车」完全重复。",
+    "source": "ECDICT/current sense duplicate；Kaikki 仅载救护车义"
+   }
+  ],
+  "and": [
+   {
+    "key": "|[计] 与",
+    "reason": "逻辑运算中的「与」是 and 的技术用法，与已保留的 conj「和，与」重复。",
+    "source": "Kaikki: logic connective 为专业技术义；current 与主义项重复"
+   }
+  ],
+  "animal": [
+   {
+    "key": "|[医] 动物",
+    "reason": "与已保留的 n「动物」完全重复。",
+    "source": "ECDICT/current sense duplicate；Kaikki 仅载动物义"
+   }
+  ],
+  "ankle": [
+   {
+    "key": "|[医] 踝，踝关节",
+    "reason": "与已保留的 n「踝」重复，且为 [医] 标签条目。",
+    "source": "Kaikki 仅一个通用义项；current 该条与「踝」重复"
+   }
+  ],
+  "answer": [
+   {
+    "key": "|[计] 用户问题及答案新闻组",
+    "reason": "这是 Usenet 新闻组名称的缩略/描述，不是 answer 的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项；current 该条为 [计] 新闻组短语"
+   }
+  ],
+  "app": [
+   {
+    "key": "|相联并行处理器",
+    "reason": "APP 的计算机缩略语展开，与 app（应用程序）无关，属于词典噪声。",
+    "source": "Kaikki 无此义项（仅 application/appetizer 等）；current 该条为缩略语展开"
+   }
+  ],
+  "apparent": [
+   {
+    "key": "|[电] 外在的",
+    "reason": "与已保留的 adj「表面上的」重复，[电] 为专业域条目。",
+    "source": "Kaikki 无电学义；current 该条与「表面上的」重复"
+   }
+  ],
+  "appear": [
+   {
+    "key": "|[法] 出庭，到案，出现",
+    "reason": "其中「出现」与已保留的 vi「出现」重复，[法] 为法律专业条目。",
+    "source": "Kaikki 的 court 义为法律专业义；current 与主义项「出现」重复"
+   }
+  ],
+  "apple": [
+   {
+    "key": "|[医] 苹果",
+    "reason": "与已保留的 n「苹果」完全重复。",
+    "source": "ECDICT/current sense duplicate；Kaikki 仅载苹果义"
+   }
+  ],
+  "appoint": [
+   {
+    "key": "|[法] 派，派任，任命",
+    "reason": "与已保留的 vt「任命」重复，[法] 为标签重复条目。",
+    "source": "Kaikki 的「name someone to a post」即已保留的任命义；current 为 [法] 重复"
+   }
+  ],
+  "area": [
+   {
+    "key": "|[计] 区域",
+    "reason": "与已保留的 n「区域」重复，[计] 为技术条目。",
+    "source": "ECDICT/current sense duplicate；Kaikki 无独立计算机义"
+   }
+  ],
+  "arm": [
+   {
+    "key": "|[计] ARM 处理器",
+    "reason": "ARM 是处理器专有名词/缩略语，不是 arm 的词义。",
+    "source": "Kaikki 无此义项；current 该条为专有缩略语"
+   },
+   {
+    "key": "|异步应答方式",
+    "reason": "ARM 的缩略语展开，不是 arm 的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项；current 该条为缩略语展开"
+   },
+   {
+    "key": "|自动货品销路管理",
+    "reason": "ARM 的缩略语展开，不是 arm 的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项；current 该条为缩略语展开"
+   }
+  ],
+  "art": [
+   {
+    "key": "|[计] 实际保持时间，特许权和资源表，平均检索时间，平均运行时间",
+    "reason": "ART 的计算机缩略语展开堆砌，不是 art 的词义，属于词典噪声。",
+    "source": "Kaikki 无此义项；current 该条为 [计] 缩略语展开"
+   }
+  ],
+  "article": [
+   {
+    "key": "|[计] 信件",
+    "reason": "[计] 领域标签的条目，article 并无「信件」这一常用义，属词典噪声",
+    "source": "current [计] 标签；Kaikki 仅列文章/物件/冠词/法律条款等义，无 letter 义"
+   }
+  ],
+  "as": [
+   {
+    "key": "|[计] 高级系统，先进系统，辅助存储器，自治系统",
+    "reason": "AS 首字母缩写扩展，不是 as 这个词的义项",
+    "source": "Kaikki: as 仅有 adv/prep/conj 义；current [计] 条为缩写扩展"
+   }
+  ],
+  "at": [
+   {
+    "key": "|[计] 地址转换器，异常传输，自动订票",
+    "reason": "AT 首字母缩写扩展，不是 at 这个词的义项",
+    "source": "Kaikki: at 仅有介词义；current [计] 条为缩写扩展"
+   }
+  ],
+  "attention": [
+   {
+    "key": "|[计] 引起注意信号",
+    "reason": "计算机/通信技术义，非 CET 学习者需要的日常义",
+    "source": "current [计] 标签；Kaikki 仅列注意/关注/军姿/神经网络等技术义"
+   }
+  ],
+  "attorney": [
+   {
+    "key": "|[经] 律师，代理人",
+    "reason": "与 n|代理人，律师 完全重复，仅多一个领域标签",
+    "source": "current 重复义项；Kaikki: lawyer / agent or representative"
+   }
+  ],
+  "available": [
+   {
+    "key": "adj|联系的",
+    "reason": "释义与 available 任何常见义都不符，疑为词典噪声/错配",
+    "source": "Kaikki 义项为 usable/obtainable/valid/archaic effective/free，无「联系」义；语言常识判断"
+   }
+  ],
+  "baby": [
+   {
+    "key": "|[医] 婴儿",
+    "reason": "与 n|婴孩 重复，仅多一个 [医] 领域标签",
+    "source": "current 重复义项；Kaikki: a very young human"
+   }
+  ],
+  "bar": [
+   {
+    "key": "|[计] 棒形图",
+    "reason": "bar chart 的复合词译名，不是独立词义，与 n|条，棒 重复",
+    "source": "current [计] 标签；Kaikki: bar chart 属 long narrow rectangle（条/棒）的具体用法"
+   }
+  ],
+  "base": [
+   {
+    "key": "|[计] 基准",
+    "reason": "计算机术语，与 n|底部，垒，基础，基地 中的「基础」重复",
+    "source": "current [计] 标签；Kaikki: foundation/basis 义已由名词条覆盖"
+   }
+  ],
+  "baseball": [
+   {
+    "key": "|[计] 棒球系统",
+    "reason": "[计] 标签下的词典噪声，不是 baseball 的词义",
+    "source": "Kaikki: 仅球类运动/球/扑克变体；current 该条无对应义"
+   }
+  ],
+  "bat": [
+   {
+    "key": "|[计] 成批",
+    "reason": "BAT（batch）缩写/命令名，不是 bat 这个词的义项",
+    "source": "Kaikki: bat 仅蝙蝠/球棒等名词及击打动词义；current [计] 条为缩写"
+   }
+  ],
+  "bath": [
+   {
+    "key": "|[医] 浴",
+    "reason": "与 n|沐浴，浴室 重复，仅多一个 [医] 领域标签",
+    "source": "current 重复义项；Kaikki: act of bathing / bathtub"
+   }
+  ],
+  "battery": [
+   {
+    "key": "|[化] 蓄电池",
+    "reason": "与 n|电池，殴打 中的「电池」重复，仅多一个 [化] 领域标签",
+    "source": "current 重复义项；Kaikki: device used to power electric devices"
+   }
+  ],
+  "be": [
+   {
+    "key": "|[计] 后端，总线允许",
+    "reason": "BE 首字母缩写扩展，不是 be 这个词的义项",
+    "source": "Kaikki: be 仅有动词（系动词/助动词）义；current [计] 条为缩写扩展"
+   }
+  ],
+  "bean": [
+   {
+    "key": "|[化] 油嘴",
+    "reason": "石油/机械技术义，不是 bean 的常用义，CET 学习不需要",
+    "source": "current [化] 标签；Kaikki 义项为豆/豆状物及俚语义，无 oil nozzle 义"
+   },
+   {
+    "key": "|豆",
+    "reason": "与 n|豆子 重复",
+    "source": "current 重复义项；Kaikki: edible seed of Fabaceae"
+   }
+  ],
+  "beat": [
+   {
+    "key": "|beat的过去式",
+    "reason": "这是语法形式说明而非词义，已由词形变化覆盖",
+    "source": "current 条目为形态说明；Kaikki: beat 的过去式仍为 beat"
+   },
+   {
+    "key": "|[计] 拍",
+    "reason": "计算机术语，与 n|…拍子 重复",
+    "source": "current [计] 标签；Kaikki: basic time unit of a piece（拍）已由名词条覆盖"
+   },
+   {
+    "key": "|节拍",
+    "reason": "与 n|心跳(声)，打，敲打声，拍子 中的「拍子/节拍」重复",
+    "source": "current 重复义项；Kaikki: beat = basic time unit / rhythm"
+   }
+  ],
+  "beer": [
+   {
+    "key": "|[化] 啤酒",
+    "reason": "与 n|啤酒 完全重复，仅多一个 [化] 领域标签",
+    "source": "current 重复义项；Kaikki: alcoholic drink fermented from starch"
+   }
+  ],
+  "begin": [
+   {
+    "key": "|[计] 开始",
+    "reason": "与 v|开始 重复，仅多一个 [计] 领域标签",
+    "source": "current 重复义项；Kaikki: to start / initiate"
+   }
+  ],
+  "bell": [
+   {
+    "key": "|[计] 响铃命令",
+    "reason": "终端响铃字符的技术义，CET 学习者不需要",
+    "source": "current [计] 标签；Kaikki: the bell character（技术义）"
+   }
+  ],
+  "belt": [
+   {
+    "key": "|[医] 带，腰带，束带，地带，区",
+    "reason": "与 n|带子，地带 重复，仅多 [医] 领域标签及同义铺陈",
+    "source": "current 重复义项；Kaikki: band worn around the waist / region"
+   }
+  ],
+  "bench": [
+   {
+    "key": "|[机] 台",
+    "reason": "机械领域标签的笼统条目，与 n|长椅子 不对应且非独立常用义",
+    "source": "current [机] 标签；Kaikki 主要义为 long seat，无对应 machine 义项"
+   }
+  ],
+  "bias": [
+   {
+    "key": "|[计] 偏流",
+    "reason": "电子学的偏置电流技术义，CET 学习不需要",
+    "source": "Kaikki: a voltage or current applied to an electronic device（电子技术义）"
+   },
+   {
+    "key": "|偏压",
+    "reason": "电子学的偏置电压技术义，CET 学习不需要",
+    "source": "Kaikki: a voltage or current applied to an electronic device（电子技术义）"
+   },
+   {
+    "key": "|偏磁",
+    "reason": "电子/磁记录的技术义，CET 学习不需要",
+    "source": "Kaikki: bias 的电子技术义；current 无独立常用义"
+   }
+  ],
+  "bin": [
+   {
+    "key": "|[计] 二进制，商业信息网",
+    "reason": "BIN 首字母缩写扩展，不是 bin 这个词的义项",
+    "source": "Kaikki: bin 为容器/垃圾箱等名词义；current [计] 条为缩写扩展"
+   }
+  ],
+  "bind": [
+   {
+    "key": "|[计] 赋值，绑定",
+    "reason": "编程技术义，非 CET 学习者需要的日常义",
+    "source": "current [计] 标签；Kaikki 所列 tie/cohere/restrain/oblige/装订等义中无赋值义"
+   }
+  ],
+  "biology": [
+   {
+    "key": "|[化] 生物",
+    "reason": "biology 是「生物学」而非「生物」，该条错配且带 [化] 标签",
+    "source": "Kaikki: the study of all life or living matter；语言常识判断"
+   },
+   {
+    "key": "|生物学",
+    "reason": "与 n|生物学 完全重复",
+    "source": "current 重复义项；Kaikki: the study of all life"
+   }
+  ],
+  "birth": [
+   {
+    "key": "|[医] 生产，分娩",
+    "reason": "与 n|出生，起源 中的「出生」重复，仅多 [医] 领域标签",
+    "source": "current 重复义项；Kaikki: the process of childbearing / beginning of life"
+   }
+  ],
+  "biscuit": [
+   {
+    "key": "|[化] 素坯",
+    "reason": "陶瓷『素坯』属专业冷僻义，不是通用高频义",
+    "source": "Kaikki gloss 'A form of unglazed earthenware'（无常用标记）；语言常识判断"
+   },
+   {
+    "key": "|饼干",
+    "reason": "与 n|饼干 完全重复",
+    "source": "ECDICT/current sense duplicate of n|饼干"
+   }
+  ],
+  "bit": [
+   {
+    "key": "vt|给马上嚼子，控制",
+    "reason": "给马装嚼子的罕见动词义，非高频用法",
+    "source": "Kaikki 该词仅列名词义、无对应动词义；语言常识判断"
+   },
+   {
+    "key": "|bite的过去式和过去分词",
+    "reason": "仅为 bite 的过去式/过去分词，不是独立词义",
+    "source": "语言常识判断（形态变化）"
+   }
+  ],
+  "blade": [
+   {
+    "key": "|[医] 页[片]，叶片，刀片，刀刃，刀口",
+    "reason": "与 n|叶片，刀锋，刀口，剑 重复的 [医] 标注义",
+    "source": "ECDICT/current sense duplicate of n|叶片，刀锋，刀口，剑"
+   }
+  ],
+  "block": [
+   {
+    "key": "|[计] 块，数据块",
+    "reason": "计算机『数据块』技术义，与 n|街区，木块，石块，块 的『块』重叠",
+    "source": "Kaikki gloss 'A logical data storage unit containing one or more physical sectors'；ECDICT/current sense duplicate"
+   }
+  ],
+  "board": [
+   {
+    "key": "|[计] 板",
+    "reason": "计算机/电路板技术义，与 n|木板，甲板，膳食，会议桌 的『板』重复",
+    "source": "Kaikki 'Short for … circuit board …'；ECDICT/current sense duplicate"
+   }
+  ],
+  "body": [
+   {
+    "key": "vt|赋以形体",
+    "reason": "『赋以形体』为罕用文学性动词义",
+    "source": "Kaikki 该词仅列名词义；语言常识判断"
+   },
+   {
+    "key": "|[计] 体",
+    "reason": "计算机『体』技术义，与 n|身体，人，尸体，主要部分，团体 重复",
+    "source": "ECDICT/current sense duplicate of n|身体，人，尸体，主要部分，团体"
+   }
+  ],
+  "book": [
+   {
+    "key": "|[计] 工作簿",
+    "reason": "『工作簿』已在 n|书，书籍，帐簿，名册，工作簿 中收录",
+    "source": "ECDICT/current sense duplicate of n|书，书籍，帐簿，名册，工作簿"
+   }
+  ],
+  "bore": [
+   {
+    "key": "|bear的过去式",
+    "reason": "仅为 bear 的过去式，不是独立词义",
+    "source": "语言常识判断（形态变化）"
+   },
+   {
+    "key": "|[计] 内径",
+    "reason": "[计]『内径』技术义，与 n|…孔、枪膛 重复",
+    "source": "Kaikki gloss 'The diameter of such a hole'；ECDICT/current sense duplicate"
+   },
+   {
+    "key": "|孔径",
+    "reason": "与 [计] 内径 及 n|…孔 重复",
+    "source": "ECDICT/current sense duplicate"
+   }
+  ],
+  "borrow": [
+   {
+    "key": "|[计] 借位",
+    "reason": "减法『借位』为专门算术/计算机义，非通用高频义",
+    "source": "Kaikki gloss 'In a subtraction, to deduct …'；语言常识判断"
+   },
+   {
+    "key": "|借位数",
+    "reason": "与 [计] 借位 重复的技术义",
+    "source": "ECDICT/current sense duplicate"
+   }
+  ],
+  "bottom": [
+   {
+    "key": "vt|给...装底，查明真相",
+    "reason": "『给…装底、查明真相』为罕用动词义",
+    "source": "Kaikki 以名词义为主，动词义低频；语言常识判断"
+   },
+   {
+    "key": "vi|到达底部，建立基础",
+    "reason": "『到达底部、建立基础』为低频动词义",
+    "source": "Kaikki 以名词义为主，动词义低频；语言常识判断"
+   }
+  ],
+  "boundary": [
+   {
+    "key": "|[计] 边界",
+    "reason": "与 n|边界，分界线 重复的 [计] 标注义",
+    "source": "ECDICT/current sense duplicate of n|边界，分界线"
+   }
+  ],
+  "box": [
+   {
+    "key": "|[计] 方框",
+    "reason": "『方框』已在 n|盒子，箱，方框，一巴掌 中收录",
+    "source": "ECDICT/current sense duplicate of n|盒子，箱，方框，一巴掌"
+   }
+  ],
+  "boy": [
+   {
+    "key": "|[法] 男孩，少年，儿子",
+    "reason": "与 n|男孩 重复，且 [法] 标注属于词典噪声",
+    "source": "ECDICT/current sense duplicate of n|男孩"
+   }
+  ],
+  "branch": [
+   {
+    "key": "vt|分割，用枝状叶脉刺绣花纹装饰",
+    "reason": "『用枝状叶脉刺绣花纹装饰』为冷僻专业义，非通用高频义",
+    "source": "Kaikki 动词仅列 'arise from … / produce branches'；语言常识判断"
+   },
+   {
+    "key": "|[计] 分支，目录分支",
+    "reason": "『目录分支』为计算机义，与 vi|分支，出枝 重复",
+    "source": "Kaikki gloss 'A sequence of code that is conditionally executed'；ECDICT/current sense duplicate"
+   }
+  ],
+  "break": [
+   {
+    "key": "n|分隔符",
+    "reason": "『分隔符』并非 break 的通含义项，疑为词典噪声",
+    "source": "Kaikki 无 delimiter/separator 义；语言常识判断"
+   }
+  ],
+  "breath": [
+   {
+    "key": "|[医] 呼气，呵气，口气，呼吸",
+    "reason": "与 n|呼吸，气息，瞬间 重复的 [医] 标注义",
+    "source": "ECDICT/current sense duplicate of n|呼吸，气息，瞬间"
+   }
+  ],
+  "bridge": [
+   {
+    "key": "|[计] 桥，网桥，桥接器",
+    "reason": "『网桥、桥接器』为计算机技术义，与 n|桥，舰桥，桥梁，桥牌 重复",
+    "source": "Kaikki 'A device which connects two or more computer buses'；ECDICT/current sense duplicate"
+   }
+  ],
+  "broadcast": [
+   {
+    "key": "adv|经广播，四散地",
+    "reason": "『四散地』为古旧/罕用副词义",
+    "source": "Kaikki adv 'Widely in all directions; abroad'，播种义标 archaic"
+   },
+   {
+    "key": "|[计] 广播命令，广播",
+    "reason": "与 n|广播，传播、v|广播 重复的 [计] 标注义",
+    "source": "ECDICT/current sense duplicate of n|广播，传播 / v|广播"
+   }
+  ],
+  "brush": [
+   {
+    "key": "|[计] 电刷",
+    "reason": "『电刷』为专门电气部件义，非通用高频义",
+    "source": "Kaikki gloss 'A piece of conductive material … electrical contact'；语言常识判断"
+   }
+  ],
+  "bullet": [
+   {
+    "key": "|[医] 弹，子弹，距节(马)",
+    "reason": "与 n|子弹 重复，且含冷僻『距节(马)』义",
+    "source": "ECDICT/current sense duplicate of n|子弹"
+   }
+  ],
+  "bunch": [
+   {
+    "key": "|[医] 骨肿块(马)",
+    "reason": "『骨肿块(马)』为罕见兽医义",
+    "source": "Kaikki gloss 'A protuberance; a hunch; a knob or lump; a hump'（低频）；语言常识判断"
+   }
+  ],
+  "burst": [
+   {
+    "key": "|[计] 二进制位组",
+    "reason": "计算机『二进制位组』技术义，非通用高频义",
+    "source": "Kaikki 无对应常用义；语言常识判断"
+   },
+   {
+    "key": "|字符组",
+    "reason": "与 [计] 二进制位组 重复的技术义",
+    "source": "ECDICT/current sense duplicate"
+   },
+   {
+    "key": "|脉冲串",
+    "reason": "『脉冲串』为技术义，与 burst 的通用义无关",
+    "source": "Kaikki 无对应义；语言常识判断"
+   }
+  ],
+  "bus": [
+   {
+    "key": "|[计] 总线",
+    "reason": "计算机『总线』技术义，非通用高频义",
+    "source": "Kaikki gloss 'An electrical conductor or interface …'；语言常识判断"
+   },
+   {
+    "key": "|汇流条",
+    "reason": "电气『汇流条』技术义，与 [计] 总线 重复",
+    "source": "ECDICT/current sense duplicate"
+   },
+   {
+    "key": "|母线",
+    "reason": "『母线』电气技术义，与 [计] 总线/汇流条 重复",
+    "source": "ECDICT/current sense duplicate"
+   }
+  ],
+  "bush": [
+   {
+    "key": "|[化] 管衬",
+    "reason": "『管衬』为机械/化工专业冷僻义",
+    "source": "Kaikki 无 bushing 常用义；语言常识判断"
+   }
+  ],
+  "business": [
+   {
+    "key": "|[经] 企业，商业，营业",
+    "reason": "与 n|生意，事情，业务，商业，商行，职责 重复的 [经] 标注义",
+    "source": "ECDICT/current sense duplicate of n|生意，事情，业务，商业，商行，职责"
+   }
+  ],
+  "busy": [
+   {
+    "key": "|[计] 忙",
+    "reason": "计算机『忙』技术义，与 vi|忙碌 重复",
+    "source": "ECDICT/current sense duplicate of vi|忙碌"
+   },
+   {
+    "key": "|忙碌",
+    "reason": "与 [计] 忙 重复，无独立信息",
+    "source": "ECDICT/current sense duplicate"
+   }
+  ],
+  "button": [
+   {
+    "key": "|[计] 按钮",
+    "reason": "『按钮』已在 n|钮扣，按钮 中收录",
+    "source": "ECDICT/current sense duplicate of n|钮扣，按钮"
+   }
+  ],
+  "calendar": [
+   {
+    "key": "|[计] 日历",
+    "reason": "与 n|日历，日程表 重复的 [计] 标注义",
+    "source": "ECDICT/current sense duplicate of n|日历，日程表"
+   }
+  ],
+  "camera": [
+   {
+    "key": "|[计] 摄影",
+    "reason": "「[计] 摄影」是「摄影机」的领域重复，非独立高频义项",
+    "source": "current sense duplicate of「照相机，摄影机」；[计] 领域标签"
+   }
+  ],
+  "can": [
+   {
+    "key": "|[计] 作废字符",
+    "reason": "「作废字符」是控制字符 CAN 的技术缩写义，不是 can 的常用词义",
+    "source": "Kaikki 无此义项；[计] 领域标签"
+   }
+  ],
+  "cap": [
+   {
+    "key": "vi|脱帽致意",
+    "reason": "「脱帽致意」为古旧/罕见用法，非现代高频义",
+    "source": "Kaikki: 'A respectful uncovering of the head' tagged obsolete；语言常识判断"
+   },
+   {
+    "key": "|[计] 调用程序分析，容量，代码分析程序，计算机辅助生产，计算机辅助印刷",
+    "reason": "整条为 CAP 缩写扩展（计算机辅助生产/印刷等），不是 cap 的词义",
+    "source": "Kaikki 无此义项；[计] 领域标签（缩写扩展）"
+   }
+  ],
+  "capture": [
+   {
+    "key": "|[计] 截获命令",
+    "reason": "「[计] 截获命令」是计算机领域重复义，非通用高频义",
+    "source": "current sense duplicate of「抓取」；[计] 领域标签"
+   }
+  ],
+  "car": [
+   {
+    "key": "|[机] 车",
+    "reason": "「[机] 车」与「汽车，客车」重复，且为机械领域标签",
+    "source": "current sense duplicate；[机] 领域标签"
+   }
+  ],
+  "carbon": [
+   {
+    "key": "|[化] 碳",
+    "reason": "「[化] 碳」与主义项「碳」完全重复",
+    "source": "current sense duplicate；[化] 领域标签"
+   }
+  ],
+  "card": [
+   {
+    "key": "|[计] 卡片，卡",
+    "reason": "「[计] 卡片，卡」与主义项「卡片」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   }
+  ],
+  "career": [
+   {
+    "key": "|[法] 职业，专业，履历",
+    "reason": "「[法] 职业，专业，履历」与主义项「事业，生涯」重复",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "carrot": [
+   {
+    "key": "|[医] 胡萝卜",
+    "reason": "「[医] 胡萝卜」与主义项「胡萝卜」完全重复",
+    "source": "current sense duplicate；[医] 领域标签"
+   }
+  ],
+  "carry": [
+   {
+    "key": "|[计] 进位",
+    "reason": "「[计] 进位」与名词主义项「进位」重复，属计算机领域标签",
+    "source": "current sense duplicate of「进位，射程，运载」；[计] 领域标签"
+   },
+   {
+    "key": "|进位数",
+    "reason": "「进位数」与「进位」重复，无独立义项",
+    "source": "current sense duplicate of「[计] 进位」"
+   }
+  ],
+  "cat": [
+   {
+    "key": "vi|呕吐",
+    "reason": "「呕吐」为俚语/方言罕见动词义，非通用高频义",
+    "source": "Kaikki 未列该动词义；语言常识判断"
+   },
+   {
+    "key": "|计算机辅助教育，计算机辅助测试，计算机辅助翻译，计算机辅助排版",
+    "reason": "整条为 CAT 缩写扩展（计算机辅助教育/测试/翻译/排版），不是 cat 的词义",
+    "source": "Kaikki 无此义项；缩写扩展，非单词义"
+   },
+   {
+    "key": "|[计] 计算机辅助教学，计算机辅助翻译，计算机辅助排字，计算机辅助测试",
+    "reason": "同为 CAT 缩写扩展，与前一条重复",
+    "source": "current sense duplicate；[计] 领域标签（缩写扩展）"
+   }
+  ],
+  "category": [
+   {
+    "key": "|[计] 分类",
+    "reason": "「[计] 分类」与主义项「种类，类项」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   }
+  ],
+  "cell": [
+   {
+    "key": "|[计] 单元",
+    "reason": "「[计] 单元」与主义项「单元」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   }
+  ],
+  "cent": [
+   {
+    "key": "|[经] 美分",
+    "reason": "「[经] 美分」与「分」是同一货币单位，重复",
+    "source": "current sense duplicate；[经] 领域标签"
+   }
+  ],
+  "ceremony": [
+   {
+    "key": "|[法] 典礼，仪式",
+    "reason": "「[法] 典礼，仪式」与主义项完全重复",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "certain": [
+   {
+    "key": "|[法] 确凿的，无疑的，可靠的",
+    "reason": "「[法] 确凿的，无疑的，可靠的」与「确定的，必然的」重复",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "chairman": [
+   {
+    "key": "|[经] 主席",
+    "reason": "「[经] 主席」与主义项「主席」完全重复",
+    "source": "current sense duplicate；[经] 领域标签"
+   }
+  ],
+  "chapter": [
+   {
+    "key": "|[计] 章",
+    "reason": "「[计] 章」与主义项「章，篇」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   },
+   {
+    "key": "|段",
+    "reason": "「段」与「章，篇」重复，属拆分噪声",
+    "source": "current sense duplicate；Kaikki 无独立 '段' 义项"
+   }
+  ],
+  "character": [
+   {
+    "key": "n|性质",
+    "reason": "「性质」与「性格，特性」重复（Kaikki 同一 gloss）",
+    "source": "Kaikki gloss 'A distinguishing feature; characteristic; trait; nature'；current sense duplicate"
+   }
+  ],
+  "charity": [
+   {
+    "key": "|[法] 宽大，宽恕，慈善机关",
+    "reason": "「慈善机关」与「慈善团体」重复，「宽大，宽恕」为 [法] 古旧/法律义",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "chart": [
+   {
+    "key": "|[计] 图表",
+    "reason": "「[计] 图表」与主义项「图表」完全重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   }
+  ],
+  "check": [
+   {
+    "key": "|[计] 复选",
+    "reason": "「复选」为计算机界面术语，与「检查，核对」重复，非核心高频义",
+    "source": "current sense duplicate of「核对」；[计] 领域标签"
+   }
+  ],
+  "cheek": [
+   {
+    "key": "|[医] 颊",
+    "reason": "「[医] 颊」与主义项「颊」完全重复",
+    "source": "current sense duplicate；[医] 领域标签"
+   }
+  ],
+  "cheese": [
+   {
+    "key": "|[化] 干酪",
+    "reason": "「[化] 干酪」与主义项「乳酪」重复",
+    "source": "current sense duplicate；[化] 领域标签"
+   }
+  ],
+  "chemistry": [
+   {
+    "key": "|[化] 化学",
+    "reason": "「[化] 化学」与主义项「化学」完全重复",
+    "source": "current sense duplicate；[化] 领域标签"
+   }
+  ],
+  "chest": [
+   {
+    "key": "|[医] 胸，胸廓",
+    "reason": "「[医] 胸，胸廓」与主义项「胸，胸部」重复",
+    "source": "current sense duplicate；[医] 领域标签"
+   }
+  ],
+  "child": [
+   {
+    "key": "|[医] 儿童",
+    "reason": "「[医] 儿童」与主义项「孩子」重复",
+    "source": "current sense duplicate；[医] 领域标签"
+   }
+  ],
+  "choose": [
+   {
+    "key": "|[计] 选取",
+    "reason": "「[计] 选取」与「选择」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   }
+  ],
+  "circuit": [
+   {
+    "key": "|[计] 线路",
+    "reason": "「[计] 线路」与主义项「电路」重复",
+    "source": "current sense duplicate；[计] 领域标签"
+   },
+   {
+    "key": "|电路",
+    "reason": "「电路」与主义项「电路」完全重复",
+    "source": "current sense duplicate"
+   }
+  ],
+  "citizen": [
+   {
+    "key": "|[法] 公民，国民，市民",
+    "reason": "「[法] 公民，国民，市民」与主义项完全重复",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "city": [
+   {
+    "key": "|[法] 都市，城市，市",
+    "reason": "「[法] 都市，城市，市」与主义项完全重复",
+    "source": "current sense duplicate；[法] 领域标签"
+   }
+  ],
+  "civil": [
+   {
+    "key": "|[法] 公民的，国民的，民用的",
+    "reason": "与保留的 adj 义项重复，属 [法] 领域重复条目",
+    "source": "保留义项已含「市民的，公民的」；Kaikki 的 'Having to do with people and government office...' 已覆盖公民/民事义，无独立法律义"
+   }
+  ],
+  "class": [
+   {
+    "key": "|[计] 类别",
+    "reason": "「类别」与保留义项中的「种类」重复，[计] 领域条目",
+    "source": "Kaikki class 无独立计算机义项；保留义项「班级，阶级，种类，课」已覆盖 category 义"
+   },
+   {
+    "key": "|类",
+    "reason": "单字片段「类」，是「种类」的重复",
+    "source": "与保留义项「班级，阶级，种类，课」中的「种类」重复；Kaikki 无对应独立义项"
+   },
+   {
+    "key": "|种类",
+    "reason": "与保留义项中的「种类」完全重复",
+    "source": "保留义项「班级，阶级，种类，课」已含「种类」；Kaikki 的 'group, collection, category' 已覆盖"
+   },
+   {
+    "key": "|类程",
+    "reason": "「类程」为生造/讹误片段，非独立常用义",
+    "source": "Kaikki class 无对应义项；词形与释义疑为词典机翻噪声"
+   }
+  ],
+  "clause": [
+   {
+    "key": "|[计] 子句",
+    "reason": "与保留义项「子句，条款」重复，[计] 领域条目",
+    "source": "Kaikki clause 无独立计算机义项；保留义项已覆盖语法「子句」义"
+   }
+  ],
+  "clear": [
+   {
+    "key": "|[计] 清除",
+    "reason": "与保留义项 vt「澄清，清除障碍」重复，[计] 领域条目",
+    "source": "Kaikki clear 无独立计算机义项；保留的 vt 义项已覆盖「清除」"
+   }
+  ],
+  "clinic": [
+   {
+    "key": "|[医] 诊所(门诊部)",
+    "reason": "与保留义项「诊所」重复，[医] 领域条目",
+    "source": "Kaikki 'A medical facility... especially for outpatients' 已被保留义项覆盖，无独立医学义"
+   },
+   {
+    "key": "|临床(讲解)",
+    "reason": "与保留义项中的「临床教学」重复",
+    "source": "Kaikki clinic 义项无独立的「临床讲解」义；属重复细分"
+   },
+   {
+    "key": "|临床(学)科",
+    "reason": "医学专科细分，且与「临床教学」重复，一般学习者不需要",
+    "source": "Kaikki 无独立对应义项（仅有 'group practice'、'school/class' 等），属 [医] 领域细分"
+   }
+  ],
+  "clock": [
+   {
+    "key": "|[计] 时钟",
+    "reason": "与保留义项「时钟，计时器」重复，[计] 领域条目",
+    "source": "Kaikki clock 无独立计算机义项；保留义项已覆盖「时钟」"
+   }
+  ],
+  "close": [
+   {
+    "key": "|[计] 关闭",
+    "reason": "与保留义项 vt「关…」/vi「关闭」重复，[计] 领域条目",
+    "source": "Kaikki close 无独立计算机义项；保留的动词义项已覆盖「关闭」"
+   }
+  ],
+  "closet": [
+   {
+    "key": "vt|把…引进密室会谈",
+    "reason": "罕见书卷用法，并非常用义",
+    "source": "Kaikki closet 只有名词义项（壁橱/私室等），无任何动词义项"
+   }
+  ],
+  "cloth": [
+   {
+    "key": "|[建] 布",
+    "reason": "与保留义项「布料，织品，布」重复，[建] 领域条目",
+    "source": "Kaikki cloth 义项为织物/台布等，无独立建筑义；该条为领域重复"
+   }
+  ],
+  "code": [
+   {
+    "key": "|[计] 代码",
+    "reason": "与保留义项 n「代码」重复，[计] 领域条目",
+    "source": "Kaikki 的 'Instructions for a computer, written in a programming language' 已由保留义项「代码，密码，法规，法典」覆盖"
+   }
+  ],
+  "coffee": [
+   {
+    "key": "|[医] 咖啡，咖啡豆",
+    "reason": "「咖啡」与保留义项重复，[医] 标签属领域噪声",
+    "source": "Kaikki coffee 义项（饮品/豆/粉/植物）已由保留义项「咖啡，咖啡色」及常用义覆盖，无独立医学义"
+   }
+  ],
+  "column": [
+   {
+    "key": "|[计] 列，柱形图",
+    "reason": "「列」与保留义项重复，柱形图为计算机/图表细分",
+    "source": "Kaikki 'A vertical line of entries in a table' 已覆盖「列」义；该条为 [计] 领域重复"
+   }
+  ],
+  "comment": [
+   {
+    "key": "|[计] 备注",
+    "reason": "与保留义项 n 中的「备注」重复，[计] 领域条目",
+    "source": "Kaikki 'A remark embedded in source code' 已被保留义项「注解，批评，评论，备注」覆盖"
+   }
+  ],
+  "common": [
+   {
+    "key": "|[计] 公用块",
+    "reason": "Fortran COMMON block 等编程专用术语，一般学习者不需要",
+    "source": "Kaikki common 各义项无「公用块」；仅当前 [计] 标签条目，属技术细分"
+   }
+  ],
+  "concert": [
+   {
+    "key": "|[计] 美国北卡罗来纳州Internet网",
+    "reason": "CONCERT 缩写的误收条目，与 concert 词义无关",
+    "source": "Kaikki concert 只有动词（协调）与名词（音乐会/和声/一致）义项，无网络义；该释义为缩写噪声"
+   }
+  ],
+  "condition": [
+   {
+    "key": "|[计] 条件",
+    "reason": "与保留义项「情况，条件」重复，[计] 领域条目",
+    "source": "Kaikki condition 无独立计算机义项；保留义项已覆盖「条件」"
+   }
+  ],
+  "content": [
+   {
+    "key": "|[计] 内容",
+    "reason": "与保留义项 n「内容」重复，[计] 领域条目",
+    "source": "Kaikki 的 'Subject matter; semantic information...' 已由保留义项「内容，满足，意义，要旨」覆盖"
+   }
+  ],
+  "context": [
+   {
+    "key": "n|上下文",
+    "reason": "与保留义项「上下文，背景，来龙去脉」完全重复",
+    "source": "当前两条名词义项重复；Kaikki 'The text in which a word or passage appears...' 已被保留义项覆盖"
+   },
+   {
+    "key": "|[计] 上下文",
+    "reason": "与保留义项「上下文」重复，且为编程细分",
+    "source": "Kaikki 有 'data needed to switch to another thread of execution' 计算义，但中文释义与通用「上下文」重复，一般学习者无需单列 [计] 条目"
+   }
+  ],
+  "control": [
+   {
+    "key": "|[计] 控制",
+    "reason": "与保留的 n|控制… / vt|控制… 义项完全重复的计算机领域条目",
+    "source": "current 中已保留 n|控制，管理，克制，控制器，操纵装置 与 vt|控制，操纵，抑制；ECDICT [计] 标签重复条目"
+   },
+   {
+    "key": "|控制器",
+    "reason": "控制器 已包含在保留的 n|控制，管理，克制，控制器，操纵装置 中，属重复罗列",
+    "source": "current 重复：保留义项含「控制器」"
+   }
+  ],
+  "convenient": [
+   {
+    "key": "|[法] 适当的，合理而可行的，方便的",
+    "reason": "「方便的」与保留义项重复，法律域拆分无独立价值",
+    "source": "current 重复：adj|方便的，合宜的；[法] 标签"
+   }
+  ],
+  "cookie": [
+   {
+    "key": "|[建] 糕点",
+    "reason": "[建]（建筑）标签与 cookie 无关，且 糕点 与保留义项重复，属词库噪声",
+    "source": "current 重复 n|饼干，小甜点；[建] 标签与词义不符"
+   }
+  ],
+  "corner": [
+   {
+    "key": "|[计] 边角",
+    "reason": "边角 与保留的 角落/转角 义项重复，属计算机标签冗余",
+    "source": "current 重复：n|角落，转角，窘境；[计] 标签"
+   }
+  ],
+  "corporation": [
+   {
+    "key": "|[法] 法人团体，社团，法人",
+    "reason": "法人团体 已包含在保留义项中，法律域拆分属重复",
+    "source": "current 重复：n|公司，合作，法人团体；[法] 标签"
+   }
+  ],
+  "correspond": [
+   {
+    "key": "|[法] 符合，一致，相当",
+    "reason": "与保留的 vi|符合，通信，相当 重复，仅法律标签差异",
+    "source": "current 重复；Kaikki 仅列「equivalent/similar」「exchange messages」等通用义"
+   }
+  ],
+  "count": [
+   {
+    "key": "|[计] 计数",
+    "reason": "计数 与保留的 vi|计数、n|…计数 完全重复",
+    "source": "current 重复：vi|计数 与 n|计算，合计，计数，伯爵"
+   }
+  ],
+  "cousin": [
+   {
+    "key": "|[法] 同辈表亲或堂亲",
+    "reason": "与保留义项同义的重复条目，cousin 无「法」域专义",
+    "source": "current 重复：n|堂兄弟姊妹，表兄弟姊妹；[法] 标签"
+   }
+  ],
+  "cream": [
+   {
+    "key": "|[医] 乳油，乳皮",
+    "reason": "乳油/乳皮 与保留的 奶油 义项重复，医药标签冗余",
+    "source": "current 重复：n|乳酪，奶油，面霜；[医] 标签"
+   },
+   {
+    "key": "|乳膏，霜",
+    "reason": "「霜」已包含在保留义项的 面霜 中，属重复罗列",
+    "source": "current 重复：n|乳酪，奶油，面霜"
+   }
+  ],
+  "cross": [
+   {
+    "key": "|[计] 交叉，十字标",
+    "reason": "交叉、十字标 与保留的名词/动词义项重复",
+    "source": "current 重复：n|…交叉，十字标… 与 v|交叉，横过，越过"
+   }
+  ],
+  "cruel": [
+   {
+    "key": "|[法] 残忍的，残酷的",
+    "reason": "与保留义项完全重复，cruel 无独立法律义",
+    "source": "current 重复：adj|残酷的，令人极痛苦的；[法] 标签"
+   }
+  ],
+  "currency": [
+   {
+    "key": "|[计] 货币，货币型",
+    "reason": "货币 与保留义项重复，货币型 为计算机数据类型的领域冗余",
+    "source": "current 重复：n|货币，通货，流通，通用；[计] 标签"
+   }
+  ],
+  "curriculum": [
+   {
+    "key": "|[医] 课程，学程",
+    "reason": "与保留的 n|课程 重复，curriculum 与医学无关",
+    "source": "current 重复：n|课程；Kaikki 义为 the set of courses/standards"
+   }
+  ],
+  "custom": [
+   {
+    "key": "|[计] 定制",
+    "reason": "定制 与保留的 adj|定制的 重复",
+    "source": "current 重复：adj|定制的；[计] 标签"
+   },
+   {
+    "key": "|自定义",
+    "reason": "自定义 已包含在保留的 n|习惯，风俗，海关，自定义 中",
+    "source": "current 重复：n|习惯，风俗，海关，自定义"
+   }
+  ],
+  "customer": [
+   {
+    "key": "|[化] 顾客",
+    "reason": "[化]（化学）标签与 customer 无关，顾客 与保留的 消费者 重复，属词库噪声",
+    "source": "current 重复：n|消费者；[化] 标签与词义不符"
+   }
+  ],
+  "danger": [
+   {
+    "key": "|[法] 危险，危险物，危机",
+    "reason": "危险 与保留义项重复，属法律域冗余罗列",
+    "source": "current 重复：n|危险，威胁；[法] 标签"
+   }
+  ],
+  "day": [
+   {
+    "key": "|[医] 日(一昼夜)，昼，白天",
+    "reason": "昼/白天 与保留的 白天 完全重复，医学标签无独立义",
+    "source": "current 重复：n|天，日子，白天，工作日；[医] 标签"
+   }
+  ],
+  "deaf": [
+   {
+    "key": "|[医] 聋的",
+    "reason": "与保留义项完全相同的重复条目",
+    "source": "current 重复：adj|聋的；[医] 标签"
+   }
+  ],
+  "deal": [
+   {
+    "key": "|[计] 发牌",
+    "reason": "发牌 与保留的 vt|…发牌… 重复",
+    "source": "current 重复：vt|分配，发牌，给予；[计] 标签"
+   }
+  ],
+  "death": [
+   {
+    "key": "|[医] 死亡",
+    "reason": "与保留义项完全相同的重复条目",
+    "source": "current 重复：n|死亡；[医] 标签"
+   }
+  ],
+  "debt": [
+   {
+    "key": "|[经] 借款，欠款，债务",
+    "reason": "债务 等与保留义项重复，经济标签冗余",
+    "source": "current 重复：n|债务，罪过；[经] 标签"
+   }
+  ],
+  "deck": [
+   {
+    "key": "|[计] 纸牌背面图案",
+    "reason": "[计] 标签与 deck 的计算机义不符（应为牌组/演示文稿/磁带仓等），属词库噪声",
+    "source": "Kaikki：deck 计算机相关义为 slide deck / tape deck / 纸牌组；current [计] 标签与词义不符"
+   }
+  ],
+  "defend": [
+   {
+    "key": "|[法] 作...的辩护律师，辩护，为...答辩",
+    "reason": "辩护 已包含在保留义项中，法律域拆分属重复",
+    "source": "current 重复：vt|防护，辩护，防卫；[法] 标签"
+   }
+  ],
+  "definite": [
+   {
+    "key": "|[法] 明确的，确切的，一定的",
+    "reason": "[法] 领域标签义，与已保留的 adj「明确的，一定的」完全重复。",
+    "source": "current 已含 adj|明确的，一定的；本条仅多出 [法] 标签和「确切的」，无独立语义。"
+   }
+  ],
+  "degree": [
+   {
+    "key": "|[医] 度，程度",
+    "reason": "[医] 领域标签重复义，已被 n「程度，度数，学位，度」覆盖。",
+    "source": "current 主义项含「程度、度」；Kaikki 的 degree 通用义为课程学位、角度/温度单位、阶段等，无独立医学义。"
+   }
+  ],
+  "delay": [
+   {
+    "key": "|[计] 延迟，延时",
+    "reason": "[计] 领域标签重复义，与 n「耽搁，迟滞」、v「耽搁，延迟」重复。",
+    "source": "current 已含 n/v 的「延迟」义；Kaikki 仅列通用名词/动词延迟义，无独立计算机义。"
+   }
+  ],
+  "deliver": [
+   {
+    "key": "|[经] 交运",
+    "reason": "[经] 领域标签义，与 vt「递送、投递、交付」语义重叠，非独立常用义。",
+    "source": "current 主义项已含递送/交付；Kaikki 对应义为 \"To bring or transport something to its destination\" 与 \"To hand over or surrender\"。"
+   }
+  ],
+  "democracy": [
+   {
+    "key": "|[法] 民主，民主政治，民主政体",
+    "reason": "[法] 领域标签重复义，与 n「民主政治，民主主义」重复。",
+    "source": "current 主义项已覆盖「民主政治」；Kaikki 的 democracy 义为 rule by the people / 民主政体，无独立法律义。"
+   }
+  ],
+  "department": [
+   {
+    "key": "|[医] 部，科",
+    "reason": "[医] 领域标签重复义；医院「科」只是「部门」的下位用法，已被 n「部门，系，机关」覆盖。",
+    "source": "current 主义项含「部门」；Kaikki 的 department 通用义为 a subdivision of an organization，无独立医学名词义。"
+   }
+  ],
+  "depth": [
+   {
+    "key": "|[计] 深度",
+    "reason": "[计] 领域标签重复义，与 n「深度，深处，深奥」完全重复。",
+    "source": "current 主义项已含「深度」；Kaikki 的 depth 通用义为 vertical distance / intensity 等，无独立计算机义。"
+   }
+  ],
+  "design": [
+   {
+    "key": "vt|预定，指定",
+    "reason": "「预定、指定」对应 designate/assign 的古老义，Kaikki 明确标为 obsolete，现代英语不常用。",
+    "source": "Kaikki verb: \"To assign, appoint (something to someone); to designate.\" tags=[obsolete, transitive]；\"To plan (to do something).\" tags=[intransitive, obsolete]。"
+   }
+  ],
+  "diamond": [
+   {
+    "key": "|[计] 菱形",
+    "reason": "[计] 领域标签重复义，与 n「钻石，菱形」中的「菱形」重复。",
+    "source": "current 主义项已含「菱形」；Kaikki 对应义为 \"A rhombus...\"，无独立计算机义。"
+   }
+  ],
+  "diary": [
+   {
+    "key": "|[经] 日记簿",
+    "reason": "[经] 会计领域义（日记账/daybook），非通用义，且与「日记」重复。",
+    "source": "current 主义项「日记」；Kaikki 的 diary 义为 daily log of experiences / appointment diary，未列会计账簿义。"
+   }
+  ],
+  "dictionary": [
+   {
+    "key": "|[计] 词典",
+    "reason": "[计] 领域标签重复义，与 n「字典，词典」完全重复。",
+    "source": "current 主义项已含「词典」；Kaikki 的 dictionary 通用义为 reference work，无独立计算机义。"
+   }
+  ],
+  "differ": [
+   {
+    "key": "|[机] 差异，不同",
+    "reason": "[机] 领域标签重复义，与 vi「不一致，不同」重复。",
+    "source": "current 主义项已含「不同」；Kaikki 的 differ 义为 to be unalike/distinct，无独立机械义。"
+   }
+  ],
+  "dig": [
+   {
+    "key": "|[计] 数字，数位",
+    "reason": "「数字、数位」不是 dig 的义项，而是 digit 的释义，属词典条目错配噪声。",
+    "source": "Kaikki 的 dig 全部义项均为挖掘/发掘/戳刺类（\"To move hard-packed earth...\"、\"To get by digging\" 等），无「数字/数位」义。"
+   }
+  ],
+  "dirt": [
+   {
+    "key": "|[化] 污垢",
+    "reason": "[化] 领域标签重复义，与 n「污垢，泥土」重复。",
+    "source": "current 主义项已含「污垢」；Kaikki 的 dirt 义为 soil/stain 等通用义，无独立化学专义。"
+   }
+  ],
+  "disagree": [
+   {
+    "key": "|[法] 抵触，不同意，争执",
+    "reason": "[法] 领域标签重复义，与 vi「不一致，不适宜」重复。",
+    "source": "current 主义项已含「不一致」；Kaikki 的 disagree 义为 fail to agree / fail to conform，无独立法律义。"
+   }
+  ],
+  "discuss": [
+   {
+    "key": "|[医] 讨论，辩论",
+    "reason": "[医] 领域标签重复义，与 vt「讨论，论述」重复。",
+    "source": "current 主义项已含「讨论」；Kaikki 的 discuss 义为 converse/debate concerning a topic，无独立医学义。"
+   }
+  ],
+  "dish": [
+   {
+    "key": "|[医] 皿，碟",
+    "reason": "[医] 领域标签重复义，与 n「盘子，碟，菜肴」中的「碟」重复。",
+    "source": "current 主义项已含「碟」；Kaikki 的 dish 义为 vessel such as a plate，无独立医学义。"
+   }
+  ],
+  "disk": [
+   {
+    "key": "|[计] 磁盘",
+    "reason": "[计] 领域标签重复义，与 n「圆盘，磁盘」完全重复。",
+    "source": "current 主义项已含「磁盘」；Kaikki 的 disk 义含 \"Ellipsis of hard disk/floppy disk\"，无额外语义。"
+   }
+  ],
+  "distance": [
+   {
+    "key": "|[计] 位距",
+    "reason": "「位距」是编码理论中的技术义（如 Hamming distance），非通用义，且与 n「距离」重复。",
+    "source": "current 的 [计] 标签；Kaikki 的 distance 通用义均为空间/时间/抽象距离，无「位距」这一常用义。"
+   }
+  ],
+  "distribute": [
+   {
+    "key": "|[经] 分配，分发",
+    "reason": "[经] 领域标签重复义，与 vt「分配，散布，分发」完全重复。",
+    "source": "current 主义项已含「分配、分发」；Kaikki 的 distribute 义为 divide and dispense / deliver，无独立经济义。"
+   }
+  ],
+  "district": [
+   {
+    "key": "|[医] 地区，地段",
+    "reason": "[医] 领域标签重复义，与 n「区域，地方」重复。",
+    "source": "current 主义项已含「区域、地方」；Kaikki 的 district 义为 administrative division / area or region，无独立医学义。"
+   }
+  ],
+  "disturb": [
+   {
+    "key": "|[法] 滋扰，扰乱",
+    "reason": "[法] 领域标签重复义，与 vt「扰乱，妨碍，使不安」重复。",
+    "source": "current 主义项已含「扰乱」；Kaikki 的 disturb 义为 to confuse a calm state / cause distress，无独立法律义。"
+   }
+  ],
+  "divide": [
+   {
+    "key": "|[计] 除",
+    "reason": "[计] 领域标签重复义，与 vt「分，分开，分裂，除」中的「除」重复。",
+    "source": "current 主义项已含「除」；Kaikki 的 divide 义含 to calculate the quotient，无独立计算机义。"
+   }
+  ],
+  "document": [
+   {
+    "key": "|[计] 文档",
+    "reason": "[计] 领域标签重复义，与 n「文件，公文，文档」完全重复。",
+    "source": "current 主义项已含「文档」；Kaikki 的 document 义含 \"A file that contains text\"，无额外语义。"
+   }
+  ],
+  "dollar": [
+   {
+    "key": "|[经] 纯经济的，美元，元",
+    "reason": "[经] 领域标签重复义，「美元、元」与 n 主义项重复；「纯经济的」语义不明，属词典噪声。",
+    "source": "current 主义项为「美元，元(加、澳等国货币单位)」；Kaikki 的 dollar 义为货币单位及 money generally，无「纯经济的」这一义。"
+   }
+  ],
+  "dot": [
+   {
+    "key": "|[计] 点",
+    "reason": "[计] 领域标签重复义，与 n「点，圆点，小数点…」中的「点」重复。",
+    "source": "current 主义项已含「点」；Kaikki 的 dot 通用义为 small round spot / punctuation 等，无独立计算机义。"
+   }
+  ],
+  "double": [
+   {
+    "key": "|[计] 双精度型",
+    "reason": "[计] 专业义（double precision 数据类型），与 adj「两倍的，双重的」重复，通用学习不需要。",
+    "source": "current 的 [计] 标签；Kaikki 的 double 通用义为 twice the quantity / made up of two matching elements，无独立计算机数据类型义。"
+   }
+  ],
+  "down": [
+   {
+    "key": "|[计] 向下，退下命令",
+    "reason": "[计] 领域义：「向下」与 adv 重复，「退下命令」是命令行操作义，属技术用语。",
+    "source": "current adv 已含「下，下去，降下」；Kaikki 的 down 义为 from a higher to a lower position，无独立计算机命令义。"
+   }
+  ],
+  "draw": [
+   {
+    "key": "|[计] 翻牌，绘图",
+    "reason": "[计] 领域标签义：「绘图」与 vt「画」重复，「翻牌」为计算机界面操作义，非通用义项。",
+    "source": "current vt 已含「画」；Kaikki 的 draw 动词义为 pull/drag/attract/make a drawing 等，未见与「翻牌」对应的通用义。"
+   }
+  ],
+  "drawer": [
+   {
+    "key": "|[计] 抽屉",
+    "reason": "[计] 领域标签重复义，与 n「抽屉，开票人」中的「抽屉」完全重复。",
+    "source": "current 主义项已含「抽屉」；Kaikki 的首义即 \"An open-topped box that can be slid in and out...\"。"
+   }
+  ],
+  "drive": [
+   {
+    "key": "|[计] 驱动器",
+    "reason": "[计] 领域标签重复义，与 n「…驱动，…驱动器」完全重复。",
+    "source": "current 主义项（n）已含「驱动器」；本条无新语义。"
+   }
+  ],
+  "drop": [
+   {
+    "key": "|[计] 投入，投入点，接入点，分接点",
+    "reason": "[计]/通信领域技术义（接入点、分接点），与 n「滴，微量，落下」及动词各义重复，通用场景不需要。",
+    "source": "current 的 [计] 标签；Kaikki 的 drop 通用义为 a small quantity of liquid / a fall 等，无独立网络分接点义。"
+   }
+  ],
+  "drum": [
+   {
+    "key": "|[计] 磁鼓",
+    "reason": "计算机专业义（磁鼓存储），非通用高频义",
+    "source": "Kaikki 名词义项无磁鼓/存储义（仅乐器、桶、建筑鼓形、俚语等）；[计] 领域补充义"
+   }
+  ],
+  "dumb": [
+   {
+    "key": "|[医] 哑的",
+    "reason": "与 adj 义项「哑的」完全重复，仅加 [医] 领域标签",
+    "source": "重复义项 adj|哑的，不说话的，无声音的；Kaikki adj 'Unable to speak; lacking power of speech' 已被该义项覆盖"
+   }
+  ],
+  "dump": [
+   {
+    "key": "|[计] 转出",
+    "reason": "计算机专业义（转储/转出），非通用高频义",
+    "source": "Kaikki 技术义 'A formatted listing of the contents of program storage'；[计] 领域补充义"
+   },
+   {
+    "key": "|转储",
+    "reason": "计算机术语「转储」，与 [计] 转出同指存储转储的技术义",
+    "source": "Kaikki 技术义 'formatted listing of the contents of program storage'；与 [计] 转出 语义重复"
+   },
+   {
+    "key": "|倾卸",
+    "reason": "与 vt 义项「倾倒」重复（倾卸≈倾倒）",
+    "source": "重复义项 vt|倾倒，倾销；Kaikki verb 'To empty by drawing or letting out the contents' 已被覆盖"
+   },
+   {
+    "key": "|切断电源",
+    "reason": "罕见电气/机械专业义，学习者不需掌握",
+    "source": "Kaikki 全部义项无「切断电源」对应释义（仅垃圾场、转储、俚语、矿堆等），属词典技术补充"
+   }
+  ],
+  "duty": [
+   {
+    "key": "|[化] 职责",
+    "reason": "与 n 义项中的「责任/职务」重复，仅加 [化] 标签",
+    "source": "重复义项 n|责任，关税，职务，尊敬；Kaikki 'That which one is morally or legally obligated to do' 已被覆盖"
+   }
+  ],
+  "earn": [
+   {
+    "key": "|[计] 欧州科学研究网",
+    "reason": "EARN 是机构缩写（European Academic and Research Network），不是 earn 的词义，属缩写误配噪声",
+    "source": "Kaikki 仅有动词义「通过努力获得/赚得」，无缩写或网络义"
+   }
+  ],
+  "economic": [
+   {
+    "key": "n|经济学",
+    "reason": "名词形式为罕用/过时用法，现代英语用 economics 表示经济学",
+    "source": "Kaikki 名词义项均标 obsolete/historical/rare（household management 等），无现代「经济学」名词义"
+   },
+   {
+    "key": "n|经济状况",
+    "reason": "不是 economic 的现代名词义；表示经济状况的是 economics",
+    "source": "Kaikki 名词义项均标 obsolete/rare/historical，且无「经济状况」义；该义见于 economics 的复数/财务用法"
+   }
+  ],
+  "economics": [
+   {
+    "key": "|[经] 经济学",
+    "reason": "与 n|经济学 完全重复，仅加 [经] 领域标签",
+    "source": "重复义项 n|经济学；Kaikki 'The study of resource and wealth allocation...' 已被覆盖"
+   }
+  ],
+  "effect": [
+   {
+    "key": "|[计] 效果",
+    "reason": "与 n 义项中的「效果」重复，属 [计] 领域补充",
+    "source": "重复义项 n|结果，影响，效果，印象；Kaikki noun 'The result or outcome of a cause' 已被覆盖"
+   }
+  ],
+  "empty": [
+   {
+    "key": "|[计] 空",
+    "reason": "与 adj 义项「空的」完全重复，仅加 [计] 标签",
+    "source": "重复义项 adj|空的，空虚的，空腹的，空洞的；Kaikki adj 'Devoid of content' 已被覆盖"
+   }
+  ],
+  "enable": [
+   {
+    "key": "|[计] 允许，使能，打开",
+    "reason": "计算机/电子专业义（使能信号），与 vt「使能够」重复",
+    "source": "重复义项 vt|使能够；Kaikki 'To activate, to make operational' 属技术义，非通用高频"
+   }
+  ],
+  "end": [
+   {
+    "key": "|[计] 端",
+    "reason": "计算机网络专业义「端」，与 n 义项中的「末端」重复",
+    "source": "重复义项 n|结束，终点，目标，末端，梢，死亡，残余；[计] 领域补充义"
+   },
+   {
+    "key": "|结束",
+    "reason": "与 n/v 义项「结束」完全重复",
+    "source": "重复义项 v|结束，终结，终止；Kaikki verb 'To come to an end' 已被覆盖"
+   }
+  ],
+  "energy": [
+   {
+    "key": "|[化] 能",
+    "reason": "与 n 义项中的「能量」重复，仅加 [化] 标签",
+    "source": "重复义项 n|精力，精神，活力，能量；Kaikki 'The capacity to do work' 已被覆盖"
+   },
+   {
+    "key": "|能量",
+    "reason": "与 n 义项中的「能量」完全重复",
+    "source": "重复义项 n|精力，精神，活力，能量"
+   }
+  ],
+  "enjoy": [
+   {
+    "key": "|[法] 享受，享有，获得某种利益",
+    "reason": "与 vt 义项「享受」重复，仅加 [法] 领域标签",
+    "source": "重复义项 vt|享受，喜欢，欣赏；Kaikki 'To receive pleasure or satisfaction from something' 已被覆盖"
+   }
+  ],
+  "ensure": [
+   {
+    "key": "|[经] 确保，确定",
+    "reason": "与 vt 义项「确定，保证」重复，仅加 [经] 领域标签",
+    "source": "重复义项 vt|确定，保证，担保，保护；Kaikki 'To make sure or certain of something' 已被覆盖"
+   }
+  ],
+  "enter": [
+   {
+    "key": "|[计] 输入，回车",
+    "reason": "与 vt 义项中的「输入，回车」完全重复，仅加 [计] 标签",
+    "source": "重复义项 vt|进入，参加，开始，输入，回车"
+   }
+  ],
+  "enterprise": [
+   {
+    "key": "|[计] 企业",
+    "reason": "与 n 义项「企业」重复，仅加 [计] 领域标签",
+    "source": "重复义项 n|企业，事业心，进取心，干事业"
+   }
+  ],
+  "envelope": [
+   {
+    "key": "|[医] 膜，包袋",
+    "reason": "医学/解剖专业义（包膜），非通用高频义，且与 n 义项「封套」语义重叠",
+    "source": "[医] 标签；Kaikki 'An enclosing structure or cover, such as a membrane' 属解剖/技术义"
+   }
+  ],
+  "episode": [
+   {
+    "key": "|[医] 插话，插曲，发作",
+    "reason": "医学专业义「发作」（一次病程），且「插话/插曲」与 n 义项重复",
+    "source": "[医] 标签；重复义项 n|插曲，插话，有趣的事件，一段情节"
+   }
+  ],
+  "equal": [
+   {
+    "key": "|[计] 等长度编码",
+    "reason": "计算机编码/缩写噪声，不是 equal 的通用词义",
+    "source": "[计] 标签；Kaikki 无任何「等长度编码」义项（仅相等的、对手、等于、比得上等）"
+   }
+  ],
+  "even": [
+   {
+    "key": "|[计] 偶数，偶校验",
+    "reason": "与 n|偶数，偶校验 完全重复，仅加 [计] 标签",
+    "source": "重复义项 n|偶数，偶校验"
+   }
+  ],
+  "event": [
+   {
+    "key": "|[计] 事件",
+    "reason": "与 n 义项「事件」重复，仅加 [计] 领域标签",
+    "source": "重复义项 n|事件，结果，事情的进程，竞赛项目"
+   }
+  ],
+  "everyone": [
+   {
+    "key": "|[计] 系统中的一个组名",
+    "reason": "计算机系统组名（Everyone 组），不是 everyone 的词义，属技术噪声",
+    "source": "[计] 标签；Kaikki 仅有代词义 'Every individual in a set; every person'"
+   }
+  ],
+  "example": [
+   {
+    "key": "|[化] 实例",
+    "reason": "与 n 义项中的「实例」完全重复，仅加 [化] 标签",
+    "source": "重复义项 n|例子，样本，实例；Kaikki 'Something that is representative' 已被覆盖"
+   }
+  ],
+  "export": [
+   {
+    "key": "|[计] 导出",
+    "reason": "计算机专业义「导出」，与 vt 义项「输出」重复",
+    "source": "重复义项 vt|输出，出口；[计] 领域补充义"
+   }
+  ],
+  "extend": [
+   {
+    "key": "|[计] 扩展",
+    "reason": "与 v 义项「扩充」重复，仅加 [计] 领域标签",
+    "source": "重复义项 v|扩充，延伸，伸展，扩大"
+   }
+  ],
+  "face": [
+   {
+    "key": "|[计] 现场可改变的控制元件",
+    "reason": "FACE 缩写的展开（Field Alterable Control Element），不是 face 的词义，属缩写噪声",
+    "source": "[计] 标签；Kaikki 无此义项（仅脸、表情、正面、面对等）"
+   }
+  ],
+  "facility": [
+   {
+    "key": "|[计] 设施",
+    "reason": "与 n 义项中的「设备」重复，仅加 [计] 领域标签",
+    "source": "重复义项 n|容易，灵巧，设备；Kaikki 'physical means... equipment, infrastructure' 已被覆盖"
+   },
+   {
+    "key": "|设备",
+    "reason": "与 n 义项中的「设备」完全重复",
+    "source": "重复义项 n|容易，灵巧，设备"
+   },
+   {
+    "key": "|装备",
+    "reason": "与 n 义项中的「设备」重复（装备≈设备）",
+    "source": "重复义项 n|容易，灵巧，设备；Kaikki 'required equipment, infrastructure'"
+   }
+  ],
+  "factory": [
+   {
+    "key": "|[经] 工厂，代理店，商行在国外的代理处",
+    "reason": "与 n 义项「工厂，代理店」重复，仅加 [经] 领域标签",
+    "source": "重复义项 n|工厂，产生地，代理店；Kaikki 'A building or other place where manufacturing takes place'"
+   }
+  ],
+  "fade": [
+   {
+    "key": "adj|平淡的",
+    "reason": "形容词义「平淡的/无味的」为古旧用法，非现代高频义",
+    "source": "Kaikki adj 'Weak; insipid; tasteless.' 标注 archaic"
+   }
+  ],
+  "fantastic": [
+   {
+    "key": "adj|难以相信的",
+    "reason": "Kaikki 对应义项标注 archaic（不可信、只可能存在于幻想中），现代英语非常用义",
+    "source": "Kaikki: 'Not believable; implausible; seemingly only possible in fantasy.' tags: archaic"
+   },
+   {
+    "key": "adj|奇异的，古怪的",
+    "reason": "Kaikki 对应 'irregular; grotesque' 义标注 archaic，属古旧用法",
+    "source": "Kaikki: 'Resembling fantasies in irregularity, caprice, or eccentricity; irregular; grotesque.' tags: archaic"
+   }
+  ],
+  "fat": [
+   {
+    "key": "n|文件分配表",
+    "reason": "FAT 缩略语（File Allocation Table）的计算机术语，非单词通用义，且与 [计] 条目重复",
+    "source": "与当前 '|[计] 文件分配表' 义项重复；Kaikki 未列该义"
+   },
+   {
+    "key": "|[计] 文件分配表",
+    "reason": "与已保留的 'n|文件分配表' 重复；[计] 领域缩略语义，通用学习不需要",
+    "source": "current 中 'n|文件分配表' 已同义；[计] 领域标注"
+   }
+  ],
+  "fault": [
+   {
+    "key": "vi|产生断层，弄错",
+    "reason": "「产生断层」为地质学专业义，「弄错」又与名词义重复，该不及物用法非常用",
+    "source": "Kaikki 未列该不及物地质义；语言常识判断"
+   },
+   {
+    "key": "|[计] 故障",
+    "reason": "与已保留的 'n|过错，故障，毛病' 中「故障」完全重复",
+    "source": "current 中 'n|过错，故障，毛病' 已含「故障」；[计] 领域标注"
+   }
+  ],
+  "feed": [
+   {
+    "key": "|[计] 送纸",
+    "reason": "打印机送纸的专业义，与通用「喂、饲料」义无关，[计] 领域噪声",
+    "source": "[计] 领域标注；Kaikki 未把「送给机器处理」单列为常用独立义"
+   }
+  ],
+  "feedback": [
+   {
+    "key": "|[计] 反馈",
+    "reason": "与已保留的 'n|反馈，反应' 完全重复",
+    "source": "current 中 'n|反馈，反应' 已含「反馈」；[计] 领域标注"
+   }
+  ],
+  "fetch": [
+   {
+    "key": "n|取得，拿，诡计，魂",
+    "reason": "名词条目混入「诡计、魂」等废弃/方言语义；Kaikki 名词只列「取回动作/风区」等，通用名词义很低频",
+    "source": "Kaikki 名词义为 'An act of fetching...' 等，无 trick/soul 义；语言常识判断"
+   },
+   {
+    "key": "|[计] 取",
+    "reason": "与动词义「取来」重复的计算机术语，非独立通用义",
+    "source": "current 中 vt 已含「接来、取来」；[计] 领域标注"
+   }
+  ],
+  "fiber": [
+   {
+    "key": "|[化] 纤维",
+    "reason": "与已保留的 'n|纤维，构造，纤维制品' 完全重复",
+    "source": "current 中 'n|纤维，构造，纤维制品' 已含「纤维」；[化] 领域标注"
+   }
+  ],
+  "field": [
+   {
+    "key": "|[计] 域，字段",
+    "reason": "与已保留的 n 义项中「域」重复，计算机领域标注",
+    "source": "current 中 'n|领域，田地，场地，战场，场，域' 已含「域」；[计] 领域标注"
+   }
+  ],
+  "file": [
+   {
+    "key": "|[计] 文件",
+    "reason": "与已保留的 n 义项中「文件」完全重复",
+    "source": "current 中 'n|档案，公文箱，文件夹，文件，卷宗，锉刀' 已含「文件」；[计] 领域标注"
+   }
+  ],
+  "fill": [
+   {
+    "key": "vt|填充",
+    "reason": "与已保留的 'vt|装满，填充，弥漫，供给，满足，供应' 完全重复",
+    "source": "current 中 'vt|装满，填充，弥漫，供给，满足，供应' 已含「填充」"
+   },
+   {
+    "key": "vi|填充",
+    "reason": "与已保留的 'vi|充满，变得沉重' 语义重复，无独立义",
+    "source": "current 中 'vi|充满，变得沉重' 已含同类义"
+   },
+   {
+    "key": "|[计] 填充",
+    "reason": "与前两条 vt/vi 义项重复的领域标注",
+    "source": "current 中 vt/vi 已含「填充」；[计] 领域标注"
+   }
+  ],
+  "filter": [
+   {
+    "key": "|[计] 过滤器，筛选",
+    "reason": "与已保留的 n 义项中「过滤器」及 vt「过滤」重复",
+    "source": "current 中 'n|滤波器，过滤器，滤光器，过滤嘴，去尘器' 已含「过滤器」；[计] 领域标注"
+   }
+  ],
+  "find": [
+   {
+    "key": "|寻找指定的字符串，将符合条件的行或行数输出到标准输出设备上",
+    "reason": "Unix find 命令的说明文字，属命令/分词噪声，不是词义",
+    "source": "词条无词性、内容为命令行描述；语言常识判断"
+   }
+  ],
+  "fine": [
+   {
+    "key": "vi|变清，变细",
+    "reason": "「变清/变细」为罕见的不及物用法，通用场景不学",
+    "source": "语言常识判断"
+   },
+   {
+    "key": "|[计] 精细",
+    "reason": "与 adj 义项中「精细的」重复的领域标注",
+    "source": "current 中 'adj|好的，晴朗的，健康的，细小的，精细的' 已含「精细」；[计] 领域标注"
+   }
+  ],
+  "finger": [
+   {
+    "key": "|[计] 网络命令",
+    "reason": "Unix finger 命令，非单词通用义",
+    "source": "[计] 领域标注；词条为命令描述"
+   }
+  ],
+  "finish": [
+   {
+    "key": "|[计] 完成",
+    "reason": "与 n/v 义项中「完成」重复",
+    "source": "current 中 'n|完成，结束，末道漆，磨光，完美' 已含「完成」；[计] 领域标注"
+   }
+  ],
+  "fit": [
+   {
+    "key": "|[计] 非特",
+    "reason": "「非特」不成词义，疑为 FIT 缩略语噪声",
+    "source": "[计] 领域标注；释义无法对应 Kaikki 'fit' 的任何常用义；语言常识判断"
+   }
+  ],
+  "flag": [
+   {
+    "key": "|[计] 标志",
+    "reason": "与已保留的 n 义项中「标志」重复，计算机领域标注",
+    "source": "current 中 'n|标志，旗标，旗子，信号旗，菖蒲' 已含「标志」；[计] 领域标注"
+   },
+   {
+    "key": "|属性标记命令",
+    "reason": "命令行 flag 参数说明，属命令噪声，不是词义",
+    "source": "词条无词性、内容为命令描述；语言常识判断"
+   }
+  ],
+  "flame": [
+   {
+    "key": "|[计] 无聊邮件，无益邮件",
+    "reason": "网络「攻击性言论」义的 [计] 标注，与通用「火焰」义无关；Kaikki 该义标 Internet/dated",
+    "source": "Kaikki: 'An aggressively insulting criticism or remark.' tags: Internet, dated；[计] 领域标注"
+   }
+  ],
+  "floor": [
+   {
+    "key": "n|地面，地板，基底",
+    "reason": "与已保留的 'n|地板，楼层，底部，底价' 高度重复（地板/底部）",
+    "source": "current 中 'n|地板，楼层，底部，底价' 已含「地板、底部」"
+   },
+   {
+    "key": "|[计] 基底",
+    "reason": "与上一 n 义项中「基底」重复的领域标注",
+    "source": "current 中 'n|地面，地板，基底' 已含「基底」；[计] 领域标注"
+   }
+  ],
+  "flour": [
+   {
+    "key": "|[医] 面粉，麦粉",
+    "reason": "与已保留的 'n|面粉，粉沫，碎粉' 重复",
+    "source": "current 中 'n|面粉，粉沫，碎粉' 已含「面粉」；[医] 领域标注"
+   }
+  ],
+  "fly": [
+   {
+    "key": "adj|敏捷的",
+    "reason": "fly 作形容词的「敏捷/机警」义已罕见，现代多为俚语「时髦」义，非 CET6 常用义",
+    "source": "语言常识判断；Kaikki 该词条未列此常用形容词义"
+   }
+  ],
+  "food": [
+   {
+    "key": "|[医] 食物，食品",
+    "reason": "与已保留的 'n|食物，养料' 重复",
+    "source": "current 中 'n|食物，养料' 已含「食物」；[医] 领域标注"
+   }
+  ],
+  "forecast": [
+   {
+    "key": "|[计] 趋势预测",
+    "reason": "与 n/v 义项中「预测」重复的领域标注",
+    "source": "current 中 'n|预想，预测，预报' 已含「预测」；[计] 领域标注"
+   }
+  ],
+  "foreign": [
+   {
+    "key": "|[机] 外来的",
+    "reason": "与 adj 义项中「外来的」重复",
+    "source": "current 中 'adj|外国的，外交的，外省的，外来的，不相关的' 已含「外来的」；[机] 领域标注"
+   }
+  ],
+  "forgive": [
+   {
+    "key": "|[法] 免除，宽恕，原谅",
+    "reason": "与 'vt|原谅，宽恕，免除' 三个释义完全重复",
+    "source": "current 中 'vt|原谅，宽恕，免除' 已含全部释义；[法] 领域标注"
+   }
+  ],
+  "form": [
+   {
+    "key": "n|表单",
+    "reason": "「表单」为计算/软件术语，与已保留的「表格」义重复",
+    "source": "current 中 'n|形状，形体，类型，方式，表格，形式' 已含「表格」；Kaikki 未单列「表单」义"
+   },
+   {
+    "key": "|[计] 表单",
+    "reason": "与 'n|表单' 重复的领域标注",
+    "source": "current 中 'n|表单' 已同义；[计] 领域标注"
+   }
+  ],
+  "fortune": [
+   {
+    "key": "|[法] 命运，财产，大量财产",
+    "reason": "与 'n|财富，运气，兴隆，大量财产，好运，命运' 完全重复",
+    "source": "current 中 n 义项已含「命运、财产、大量财产」；[法] 领域标注"
+   }
+  ],
+  "forward": [
+   {
+    "key": "|[计] 前推，转信",
+    "reason": "与 vt 义项中「转寄」及邮件转发义重复",
+    "source": "current 中 'vt|促进...的生长，转寄，运送' 已含「转寄」；[计] 领域标注"
+   }
+  ],
+  "foundation": [
+   {
+    "key": "|[化] 地基",
+    "reason": "与 'n|基础，根据，建立' 语义重复（地基/基础）",
+    "source": "current 中 'n|基础，根据，建立' 已含「基础」；[化] 领域标注"
+   }
+  ],
+  "four": [
+   {
+    "key": "|[机] 四冲程循环",
+    "reason": "「四冲程循环」是内燃机专业术语，不是 four 的词义",
+    "source": "[机] 领域标注；语言常识判断"
+   }
+  ],
+  "fragment": [
+   {
+    "key": "|[计] 段落",
+    "reason": "计算机 fragment 义被误译为「段落」，与 n 义项「片段」重复",
+    "source": "current 中 'n|碎片，破片，片段' 已含「片段」；[计] 领域标注"
+   },
+   {
+    "key": "|片段",
+    "reason": "与 n 义项中「片段」完全重复，且无词性标注",
+    "source": "current 中 'n|碎片，破片，片段' 已含「片段」；词条无词性（分词噪声）"
+   },
+   {
+    "key": "|分段",
+    "reason": "无词性标注的计算机/分词噪声，与「片段」义重复",
+    "source": "词条无词性；current 中 n 义项已含「片段」"
+   }
+  ],
+  "frame": [
+   {
+    "key": "|[计] 框架，图文框，帧",
+    "reason": "与 n 义项「框、结构」重复，[计] 领域标注",
+    "source": "current 中 'n|框，结构，体格' 已含「框/结构」；[计] 领域标注"
+   }
+  ],
+  "framework": [
+   {
+    "key": "|[医] 构架组织",
+    "reason": "医学专业义，与主义项「结构，骨架」重复，普通学习者不需单独记忆",
+    "source": "当前 [医] 义项与 n|结构，骨架，参照标准，准则，观点 重复；Kaikki 对应释义仅为一般支撑结构"
+   }
+  ],
+  "freeze": [
+   {
+    "key": "|[计] 冻结",
+    "reason": "计算机术语，与 vi 义项中的「冻结」重复",
+    "source": "当前 [计] 义项重复 vi|冻结，冷冻，僵硬，楞住；Kaikki 该义为机器/系统停止运行的比喻用法"
+   }
+  ],
+  "friend": [
+   {
+    "key": "|[法] 朋友，友人，赞助者",
+    "reason": "[法] 标记义项与主义项「朋友，支持者，赞助者」完全重复",
+    "source": "当前 [法] 义项逐字重复 n|朋友，支持者，赞助者；Kaikki 无独立法律义"
+   }
+  ],
+  "frog": [
+   {
+    "key": "|[医] 蛙，马蹄叉",
+    "reason": "「蛙」与主义项重复，「马蹄叉」为马蹄解剖/兽医专用义",
+    "source": "当前 [医] 义项重复 n|青蛙；Kaikki 'organ on the bottom of a horse's hoof' 为专业义"
+   }
+  ],
+  "fruit": [
+   {
+    "key": "|[医] 果实，种实",
+    "reason": "植物学/医学专用义，与主义项「水果，果类」重复",
+    "source": "当前 [医] 义项重复 n|水果，果类，结果；Kaikki 的植物学释义已由主义项覆盖"
+   }
+  ],
+  "full": [
+   {
+    "key": "vt|把(衣服等)缝得宽松，漂洗",
+    "reason": "罕见的裁缝/织物处理义，普通学习者不需要",
+    "source": "Kaikki 该词仅列形容词义、无动词义；当前为词典罕见义"
+   },
+   {
+    "key": "|[计] 完整",
+    "reason": "与 n|全部，完整 / adj|完全的 重复",
+    "source": "当前 [计] 义项重复 n|全部，完整；Kaikki 的 'complete' 即普通形容词义"
+   }
+  ],
+  "gain": [
+   {
+    "key": "|[计] 增益",
+    "reason": "计算机/信号术语，与名词义项中的「增益」重复",
+    "source": "当前 [计] 义项重复 n|增益，获得，利润，收获，增加；Kaikki 仅列信号增益为一般名词义"
+   }
+  ],
+  "gallery": [
+   {
+    "key": "|[计] 图库",
+    "reason": "与主义项中的「图库」重复，计算机专指义",
+    "source": "当前 [计] 义项重复 n|走廊，最高楼座，画廊，收集，图库；Kaikki 'browsable collection of images' 已含于主义项"
+   }
+  ],
+  "game": [
+   {
+    "key": "|[计] 博弈",
+    "reason": "计算机/博弈论术语，与「游戏，比赛」义重复",
+    "source": "当前 [计] 标记；Kaikki 名词义为 'playful or competitive activity'，无独立博弈义"
+   },
+   {
+    "key": "|对策",
+    "reason": "「对策」不是 game 的常用释义，疑似词典噪声",
+    "source": "Kaikki 15 条名词释义均无「对策」义；「对策论」才与 game（博弈论）相关"
+   }
+  ],
+  "gap": [
+   {
+    "key": "vi|豁开",
+    "reason": "罕见的不及物动词义，Kaikki 只列及物动词义",
+    "source": "Kaikki 动词义仅 'to notch' / 'to make an opening in'（均为及物），无不及物义"
+   },
+   {
+    "key": "|[计] 通用汇编程序，图形应用程序，间距",
+    "reason": "GAP 缩写（通用汇编程序等）造成的词典噪声，且「间距」重复主义项",
+    "source": "当前 [计] 义项含缩写释义；主义项已有「间距」，Kaikki 无对应缩写义"
+   }
+  ],
+  "garlic": [
+   {
+    "key": "|[化] 大蒜",
+    "reason": "与主义项「大蒜」完全重复",
+    "source": "当前 [化] 义项逐字重复 n|大蒜；Kaikki 仅列植物/食材义"
+   }
+  ],
+  "gas": [
+   {
+    "key": "|[化] 气体",
+    "reason": "与主义项「气体」重复",
+    "source": "当前 [化] 义项重复 n|气体，汽油，瓦斯；Kaikki 物理义 'matter in ... state' 即气体"
+   },
+   {
+    "key": "|瓦斯",
+    "reason": "与主义项中已列的「瓦斯」重复",
+    "source": "当前主义项 n|气体，汽油，瓦斯 已含「瓦斯」；Kaikki 无独立瓦斯义"
+   }
+  ],
+  "gate": [
+   {
+    "key": "vt|装门于",
+    "reason": "罕见的字面动词义「装门于」，普通学习者不需要",
+    "source": "Kaikki 该词仅列 15 条名词义、无动词义；当前为词典罕见义"
+   },
+   {
+    "key": "|[计] 门",
+    "reason": "与主义项「门」完全重复",
+    "source": "当前 [计] 义项重复 n|门，牌楼，大门，通道，闸 中的「门」"
+   },
+   {
+    "key": "|栅",
+    "reason": "「栅」与主义项「门，通道，闸」重复，为冗余短释义",
+    "source": "当前主义项已含「门，通道，闸」；Kaikki 名词义为 doorway/barrier，无独立「栅」义"
+   }
+  ],
+  "gene": [
+   {
+    "key": "|[化] 基因(遗传因子)",
+    "reason": "与主义项「基因」重复",
+    "source": "当前 [化] 义项重复 n|基因；Kaikki 仅列遗传单位义"
+   }
+  ],
+  "general": [
+   {
+    "key": "|[计] 常规",
+    "reason": "与 n|常规 完全重复",
+    "source": "当前 [计] 义项逐字重复 n|常规；Kaikki 名词义为将军/一般事实等"
+   }
+  ],
+  "generation": [
+   {
+    "key": "|[医] 生殖，世代",
+    "reason": "医学/生物专业义，「世代」已含于主义项「一代，一世」",
+    "source": "当前 [医] 义项重复主义项；Kaikki procreation 义为一般释义，无独立医学义"
+   }
+  ],
+  "geography": [
+   {
+    "key": "|[医] 地理",
+    "reason": "与主义项「地理学，地理」重复",
+    "source": "当前 [医] 义项重复 n|地理学，地理；Kaikki 仅列地理学研究义"
+   }
+  ],
+  "get": [
+   {
+    "key": "n|(网球等)救球，生殖，幼兽",
+    "reason": "名词义（救球、幼兽/后代）罕见且古旧，普通学习者不需要",
+    "source": "Kaikki 该词仅列动词义、无名词义；当前名词义含古旧/体育罕用义"
+   },
+   {
+    "key": "|[计] 取得指令，获取文件",
+    "reason": "GET 指令/文件获取的计算机噪声，与「得到，获得」重复",
+    "source": "当前 [计] 义项；Kaikki 动词义 'to obtain; to acquire' 已覆盖"
+   }
+  ],
+  "goods": [
+   {
+    "key": "|[经] 货物，商品，动产",
+    "reason": "与 n|货物 重复；「动产」为法律/经济专业义",
+    "source": "当前 [经] 义项重复 n|货物；Kaikki 仅列货物/商品义"
+   }
+  ],
+  "grammar": [
+   {
+    "key": "|[计] 语法检查",
+    "reason": "「语法检查」不是 grammar 的名词义，属计算机功能名噪声",
+    "source": "Kaikki 仅列语法系统/语法书等义，无「检查」义；当前 [计] 标记"
+   }
+  ],
+  "grand": [
+   {
+    "key": "|[法] 重大的，主要的，伟大的",
+    "reason": "与 adj 义项中的「重大的」等重复",
+    "source": "当前 [法] 义项重复 adj|庄重的，壮观的，显赫的，重大的…；Kaikki 形容词义无独立法律义"
+   }
+  ],
+  "graph": [
+   {
+    "key": "|[计] 图形",
+    "reason": "与主义项「图形」重复",
+    "source": "当前 [计] 义项重复 n|曲线图，图表，图形；Kaikki 名词义为图表/图形"
+   }
+  ],
+  "grass": [
+   {
+    "key": "|[医] 草，禾本",
+    "reason": "「禾本」为植物学分类义，「草」与主义项重复",
+    "source": "当前 [医] 义项重复 n|草，草原，牧场；Kaikki Poaceae 义已由「草」覆盖"
+   }
+  ],
+  "ground": [
+   {
+    "key": "|grind的过去式和过去分词",
+    "reason": "仅为 grind 的过去式/过去分词形式说明，与 adj|磨过的 重复",
+    "source": "当前形式说明重复 adj|磨过的；Kaikki 该义即 grind 的过去分词用法"
+   }
+  ],
+  "group": [
+   {
+    "key": "|[计] 创建组",
+    "reason": "计算机界面命令，不是独立词义；与 n|组 重复",
+    "source": "当前 [计] 义项；Kaikki group 名词义已含「组/团体」"
+   },
+   {
+    "key": "|组，用户组",
+    "reason": "与 n|组 重复；用户组为计算机专业义",
+    "source": "当前主义项已有「组」；Kaikki 'users with the same rights' 为专业义"
+   }
+  ],
+  "guest": [
+   {
+    "key": "|[化] 客体",
+    "reason": "化学「客体」（主客体化学）专业义，普通学习者不需要",
+    "source": "当前 [化] 标记；Kaikki 仅列宾客/寄居生物义，无化学义"
+   }
+  ],
+  "guide": [
+   {
+    "key": "|[计] 辅助线",
+    "reason": "设计软件中的「辅助线」专业义，普通学习者不需要",
+    "source": "当前 [计] 标记；Kaikki 仅列向导/指南/导向装置义"
+   }
+  ],
+  "guideline": [
+   {
+    "key": "|[经] 指导路线，方针，准则",
+    "reason": "与主义项「指导路线，方针」重复",
+    "source": "当前 [经] 义项重复 n|指导路线，方针，指标；Kaikki 仅列指导原则义"
+   }
+  ],
+  "gun": [
+   {
+    "key": "|[医] 枪",
+    "reason": "与主义项「枪」完全重复",
+    "source": "当前 [医] 义项逐字重复 n|枪；Kaikki 仅列枪械义"
+   }
+  ],
+  "hair": [
+   {
+    "key": "|[医] 毛，发",
+    "reason": "与主义项「头发，毛发」重复",
+    "source": "当前 [医] 义项重复 n|头发，毛发，些微；Kaikki 仅列毛发义"
+   }
+  ],
+  "handle": [
+   {
+    "key": "n|句柄",
+    "reason": "计算机「句柄」专业义，普通 CET6 学习者不需要",
+    "source": "Kaikki 释义 'A reference to an object or structure that can be stored in a variable' 为编程专业义"
+   },
+   {
+    "key": "|[计] 句柄",
+    "reason": "与 n|句柄 完全重复",
+    "source": "当前 [计] 义项逐字重复 n|句柄"
+   }
+  ],
+  "handy": [
+   {
+    "key": "|[化] 便于使用的",
+    "reason": "与 adj|便利的 重复；handy 无化学义",
+    "source": "当前 [化] 义项重复 adj|便利的，敏捷的，容易取得的；Kaikki 无化学义"
+   },
+   {
+    "key": "|易操作的",
+    "reason": "与 adj|便利的，容易取得的 重复",
+    "source": "当前义项与 adj|便利的… 重复；Kaikki 'Easy to use, useful'"
+   }
+  ],
+  "head": [
+   {
+    "key": "|[计] 磁头",
+    "reason": "计算机/录音设备专业义，普通学习者不需要",
+    "source": "当前 [计] 标记；Kaikki 抽取的名词义未单列磁头义"
+   },
+   {
+    "key": "|冲头",
+    "reason": "机械工具「冲头」专业义，普通学习者不需要",
+    "source": "当前义项为机械专业义；Kaikki 相关义仅为工具/紧固件的端部"
+   }
+  ],
+  "headache": [
+   {
+    "key": "|[医] 头痛",
+    "reason": "与主义项「头痛」重复",
+    "source": "当前 [医] 义项重复 n|头痛，令人头痛之事；Kaikki 仅列头痛义"
+   }
+  ],
+  "headquarters": [
+   {
+    "key": "|[经] 本部，总部，总署",
+    "reason": "与主义项「总部，司令部」重复",
+    "source": "当前 [经] 义项重复 n|总部，司令部，总部人员；Kaikki 仅列指挥/组织中心义"
+   }
+  ],
+  "health": [
+   {
+    "key": "|[医] 健康",
+    "reason": "与主义项「健康」重复",
+    "source": "当前 [医] 义项重复 n|健康，卫生，蓬勃，健康状态；Kaikki 仅列健康状态义"
+   }
+  ],
+  "height": [
+   {
+    "key": "|[化] 高度",
+    "reason": "与主义项「高度」完全重复，[化] 标签无独立含义",
+    "source": "现有义项重复：n|高度，海拔，高地，顶点；Kaikki 该词各义均为 distance/altitude/high point 等，无化学专义"
+   }
+  ],
+  "hide": [
+   {
+    "key": "|[计] 隐藏",
+    "reason": "与 vt 义项中的「隐藏」重复，[计] 仅为领域标签",
+    "source": "现有义项重复：vt|藏，隐瞒，遮避，剥...的皮，隐藏；Kaikki 仅列 put out of sight / skin of an animal 等，无计算机专义"
+   }
+  ],
+  "highway": [
+   {
+    "key": "|[法] 公路，大路",
+    "reason": "与主义项「公路，大道」重复，且 [法] 标签与词义不符",
+    "source": "现有义项重复：n|公路，大道，捷径；Kaikki 义为 main public road / any public road，无法律专义"
+   }
+  ],
+  "hip": [
+   {
+    "key": "vt|使忧郁，给(屋顶)造屋脊",
+    "reason": "「造屋脊」为专业建筑义、动词 hip 罕用；「使忧郁」无对应释义来源",
+    "source": "Kaikki verb: 'To make with a hip or hips, as a roof'（屋顶术语）；etymology 与其他 gloss 均不支持「使忧郁」"
+   }
+  ],
+  "his": [
+   {
+    "key": "|[化] 组氨酸",
+    "reason": "「组氨酸」是化学缩写 His 的含义，不是英语单词 his 的义项",
+    "source": "Kaikki 仅列 det/pron（Belonging to him 等），无化学义；属缩写混入噪声"
+   }
+  ],
+  "history": [
+   {
+    "key": "|[计] 历史记录",
+    "reason": "与主义项末尾的「历史记录」重复，[计] 仅为领域标签",
+    "source": "现有义项重复：n|历史，过去，经历，发展过程，历史学，过去的事，历史记录；Kaikki 有 browser history 义但已被主义项覆盖"
+   }
+  ],
+  "hit": [
+   {
+    "key": "|[计] 击中",
+    "reason": "与 vt/vi 的「打中」重复，属计算机领域标签噪声",
+    "source": "现有义项重复：vt|打，打击，碰撞，打中，袭击，偶然碰上；Kaikki 无独立计算机专义"
+   },
+   {
+    "key": "|瞬时打扰",
+    "reason": "释义不成正常词义，疑为词典/缩写噪声",
+    "source": "Kaikki 动词义为 strike/come into contact/light upon 等，无「瞬时打扰」对应义；vt/vi 已覆盖打、碰撞、偶然碰上"
+   }
+  ],
+  "hold": [
+   {
+    "key": "n|保留",
+    "reason": "与 vt「保存、持有」义重复，名词 hold 无独立的「保留」义",
+    "source": "现有义项重复：vt|保存，握住，拿住，占据，持有，拥有；Kaikki 名词义为 grasp/control/delay 等，无「保留」"
+   },
+   {
+    "key": "|[计] 保留",
+    "reason": "与 n|保留 完全重复，[计] 仅为领域标签",
+    "source": "现有义项重复：n|保留（同词条）；Kaikki 无计算机专义"
+   }
+  ],
+  "home": [
+   {
+    "key": "|[计] 返回始位",
+    "reason": "Home 键/终端术语，非 home「家」的常用义项",
+    "source": "Kaikki 义为 dwelling/native land/goal 等，无键盘「返回始位」专义；属领域标签噪声"
+   }
+  ],
+  "homework": [
+   {
+    "key": "|[经] 家庭作业",
+    "reason": "与主义项完全重复，且 [经] 标签与词义无关",
+    "source": "现有义项重复：n|家庭作业，家里做的工作；Kaikki 无经济学专义"
+   }
+  ],
+  "hook": [
+   {
+    "key": "|[计] 钩",
+    "reason": "与名词主义项「钩」完全重复，[计] 仅为领域标签",
+    "source": "现有义项重复：n|钩，钩状，镰刀，陷阱；Kaikki 各义为 rod/fishhook/snare 等，无独立计算机专义"
+   }
+  ],
+  "horror": [
+   {
+    "key": "|[医] 恐怖，恐惧",
+    "reason": "与主义项「惊骇，恐怖」重复，[医] 仅为领域标签",
+    "source": "现有义项重复：n|惊骇，恐怖，惨状；Kaikki 义为 intense fear/repugnance 等，无独立医学专义"
+   }
+  ],
+  "hospital": [
+   {
+    "key": "|[医] 医院",
+    "reason": "与主义项「医院」完全重复，[医] 仅为领域标签",
+    "source": "现有义项重复：n|医院；Kaikki 仅列 medical facility（及古义 almshouse/lodging），该重复无新增信息"
+   }
+  ],
+  "idea": [
+   {
+    "key": "|[医] 观念，思想",
+    "reason": "与主义项中的「思想，概念」重复，[医] 仅为领域标签",
+    "source": "现有义项重复：n|主意，办法，理想，思想，概念，意见；Kaikki 各义为 thought/notion/plan 等，无独立医学专义"
+   }
+  ],
+  "identity": [
+   {
+    "key": "|[计] (打)标记，标识",
+    "reason": "释义带残缺括号，属词典/计算机标注噪声，且与「身份」义重复",
+    "source": "现有义项重复：n|身份，相同，一致，特性，恒等式；Kaikki 无独立计算机专义，gloss 为 sameness/selfhood/equation 等"
+   }
+  ],
+  "image": [
+   {
+    "key": "n|图像",
+    "reason": "与主义项中的「图像」完全重复",
+    "source": "现有义项重复：n|影像，肖像，想象，图像，形象，翻版（已含「图像」）"
+   },
+   {
+    "key": "|[计] 图象",
+    "reason": "与主义项的「图像」重复（且「图象」为异体写法），[计] 仅为领域标签",
+    "source": "现有义项重复：n|影像，肖像，想象，图像，形象，翻版；Kaikki 的 image file 义已被该义项覆盖"
+   }
+  ],
+  "immediate": [
+   {
+    "key": "|[医] 直接的，立即的",
+    "reason": "与主义项「立即的，直接的」完全重复，[医] 仅为领域标签",
+    "source": "现有义项重复：adj|立即的，直接的，接近的；Kaikki 义为 happening right away / direct or adjacent，无独立医学专义"
+   }
+  ],
+  "import": [
+   {
+    "key": "|[计] 引入",
+    "reason": "与 vt 义项中的「引入，输入」重复，[计] 仅为领域标签",
+    "source": "现有义项重复：vt|输入，引入，进口，含...的意思，重要；Kaikki 的 load a file 义已被该义项覆盖"
+   }
+  ],
+  "important": [
+   {
+    "key": "|[计] 要点",
+    "reason": "important 是形容词，「要点」不是其词义，属词典/缩写混入噪声",
+    "source": "Kaikki 仅列形容词义 'Having relevant and crucial value' / 'Pompous; self-important'（obsolete），无名词「要点」义"
+   }
+  ],
+  "in": [
+   {
+    "key": "n|执政者，交情",
+    "reason": "名词 in（the ins）为罕用义，「交情」尤偏，非六级常用义",
+    "source": "语言常识判断；Kaikki 该条仅列介词义（location/inclusion 等），未见对应的常用名词义"
+   }
+  ],
+  "income": [
+   {
+    "key": "|[经] 收益",
+    "reason": "与主义项中的「收益」重复，[经] 仅为领域标签",
+    "source": "现有义项重复：n|收入，收益，流入；Kaikki 义为 money one earns / money coming in，该标签无新增信息"
+   }
+  ],
+  "index": [
+   {
+    "key": "|[计] 下标",
+    "reason": "数组/数据结构「下标」为专业计算机义，一般学习者不需要",
+    "source": "Kaikki noun: 'An integer or other key indicating the location of data'（especially，计算机专业义）"
+   },
+   {
+    "key": "|附标",
+    "reason": "「附标」为残缺的词典片段，不是独立常用义",
+    "source": "Kaikki 无对应 gloss；疑为词典标注噪声"
+   },
+   {
+    "key": "|变址",
+    "reason": "「变址」为计算机体系结构术语，一般学习者不需要",
+    "source": "Kaikki 计算/数学专义（index of data、index number 等）之外的罕用技术义"
+   },
+   {
+    "key": "|索引",
+    "reason": "与名词主义项「索引」完全重复",
+    "source": "现有义项重复：n|索引，指针，指数，指标（已含「索引」）"
+   },
+   {
+    "key": "|编索引",
+    "reason": "与 vt「编入索引中」、vi「做索引」重复",
+    "source": "现有义项重复：vt|编入索引中，指出；vi|做索引；Kaikki verb: 'To arrange an index for something'"
+   }
+  ],
+  "indicate": [
+   {
+    "key": "|[医] 指示",
+    "reason": "与主义项中的「指示」重复，[医] 仅为领域标签",
+    "source": "现有义项重复：vt|显示，象征，指示，指出；Kaikki 义为 point out/show by symptoms，无独立医学专义"
+   }
+  ],
+  "industry": [
+   {
+    "key": "|[经] 工业，实业",
+    "reason": "与主义项中的「工业，产业」重复，[经] 仅为领域标签",
+    "source": "现有义项重复：n|勤劳，工业，企业，产业，有组织的劳动；Kaikki 的 businesses/economy sector 义已被覆盖"
+   }
+  ],
+  "injure": [
+   {
+    "key": "|[医] 损伤",
+    "reason": "与主义项「伤害，损害」重复，[医] 仅为领域标签",
+    "source": "现有义项重复：vt|伤害，损害，使受冤屈；Kaikki 义为 wound/damage/do injustice to，无独立医学专义"
+   }
+  ],
+  "intend": [
+   {
+    "key": "|[法] 想要，打算，意旨",
+    "reason": "与主义项「打算」重复，[法] 标签与词义不符",
+    "source": "现有义项重复：vt|计划，打算，意思是；Kaikki 义为 fix the mind upon，无法律专义"
+   }
+  ],
+  "international": [
+   {
+    "key": "n|国别设定",
+    "reason": "「国别设定」(locale) 是计算机术语误植，international 无此名词义",
+    "source": "Kaikki noun 义为 sportsperson / game between nations / transnational organization，无 locale 义"
+   },
+   {
+    "key": "|[计] 国别设定",
+    "reason": "与 n|国别设定 重复，属计算机术语噪声",
+    "source": "现有义项重复：n|国别设定；Kaikki 无 locale 或计算机专义"
+   }
+  ],
+  "interval": [
+   {
+    "key": "|[计] 时间间隔",
+    "reason": "与主义项「间隔，间歇」重复，[计] 仅为领域标签",
+    "source": "现有义项重复：n|间隔，距离，间歇，间隙；Kaikki 义为 distance in space / period of time，已覆盖"
+   }
+  ],
+  "introduce": [
+   {
+    "key": "|[法] 引进，输入，介绍",
+    "reason": "与主义项「介绍，引入，输入」完全重复，[法] 标签与词义不符",
+    "source": "现有义项重复：vt|介绍，引入，采用，输入；Kaikki 义为 acquaint/add to a system/bring into practice，无法律专义"
+   }
+  ],
+  "invent": [
+   {
+    "key": "|[机] 发明",
+    "reason": "与主义项「发明」完全重复，[机] 仅为领域标签",
+    "source": "现有义项重复：vt|发明，创作，虚构；Kaikki 仅列 design a new process / create something fictional，无机械专义"
+   }
+  ],
+  "it": [
+   {
+    "key": "|[计] 信息论，输入终端，智能终端，内捕获",
+    "reason": "系 IT（Information Technology）缩写及计算机术语堆砌，不是代词 it 的义项",
+    "source": "Kaikki 仅列 pronoun/det 义（third-person singular neuter 等），无信息论或终端义"
+   }
+  ],
+  "join": [
+   {
+    "key": "|[计] 连接",
+    "reason": "与 n|连接，结合，接合点 及 vt|连接，结合，参加，加入 重复的计算机领域条目",
+    "source": "current 已保留 n|连接，结合，接合点、vt|连接，结合，参加，加入；Kaikki verb 'To connect or combine into one; to put together' 已被覆盖；[计] 标签重复"
+   },
+   {
+    "key": "|汇合指令",
+    "reason": "计算机指令术语，与 join 的通用「连接/加入」义无关，非高频通用义",
+    "source": "Kaikki 无「汇合指令」或指令义项（仅有连接、会合、数据库连接、结婚等）；属词典技术补充"
+   }
+  ],
+  "journal": [
+   {
+    "key": "|[化] 轴颈",
+    "reason": "机械/转动轴专业义（journal bearing 的轴颈），通用学习者不需要；[化] 标签与机械义也不符",
+    "source": "Kaikki noun 'the part of a rotating shaft or axle that rests on the bearing'；与「日记，杂志，日报」无关"
+   }
+  ],
+  "jump": [
+   {
+    "key": "|[计] 转移，跳转",
+    "reason": "计算机程序跳转专业义，通用高频义已有 vi|跳跃，跳，跳动，暴涨",
+    "source": "Kaikki jump 义项为跳跃、暴涨、棋类走子、排队前移等，无程序跳转义；[计] 技术补充"
+   }
+  ],
+  "key": [
+   {
+    "key": "|[计] 键，密钥",
+    "reason": "「键」与 n|钥匙，键… 重复，「密钥」为密码学专业义",
+    "source": "current 已保留 n|钥匙，键，解答，关键，要害…；Kaikki 'A piece of information (e.g., a password or passphrase) used to encode or decode' 属技术延伸；[计] 标签重复"
+   }
+  ],
+  "keyboard": [
+   {
+    "key": "|[计] 键盘",
+    "reason": "与 n|键盘 完全重复，仅加 [计] 领域标签",
+    "source": "重复义项 n|键盘；Kaikki noun 'A set of keys laid out in a gridlike pattern, used for typing' 已被覆盖"
+   }
+  ],
+  "kitchen": [
+   {
+    "key": "|[医] 厨房",
+    "reason": "与 n|厨房，全套炊具 重复，仅加 [医] 标签",
+    "source": "重复义项 n|厨房，全套炊具；Kaikki noun 'A room or area for preparing food' 已被覆盖"
+   }
+  ],
+  "lab": [
+   {
+    "key": "|[医] 凝乳酶",
+    "reason": "罕见「rennet（凝乳酶）」义，与 laboratory 缩略的常用义无关，学习者不需掌握",
+    "source": "Kaikki 未列凝乳酶义（仅 laboratory、Labrador retriever 等口语义）；属词库罕见技术义"
+   }
+  ],
+  "lamp": [
+   {
+    "key": "|[计] 逻辑模拟分析系统",
+    "reason": "LAMP 缩略语展开，不是 lamp 的词义，属缩写噪声",
+    "source": "Kaikki 仅有灯/灯具名词义与俚语、夜间打猎、制灯等动词义，无「逻辑模拟分析系统」"
+   }
+  ],
+  "land": [
+   {
+    "key": "|[计] 连接盘",
+    "reason": "电子/PCB 专业义（land，焊盘），非通用高频义",
+    "source": "Kaikki noun 'A conducting area on a board or chip which can be used for connecting wires'；[计] 技术补充"
+   },
+   {
+    "key": "|焊盘",
+    "reason": "PCB 焊盘专业义，与 [计] 连接盘 同指电子连接盘，普通学习者不需要",
+    "source": "Kaikki noun 'A conducting area on a board or chip which can be used for connecting wires'；与 [计] 连接盘 语义重复"
+   }
+  ],
+  "landlord": [
+   {
+    "key": "|[经] 业主，地主，房东",
+    "reason": "与 n|房东，地主 完全重复，且「业主」只是同义扩展",
+    "source": "重复义项 n|房东，地主；Kaikki 'A person that leases real property; a lessor' 已被覆盖"
+   }
+  ],
+  "landscape": [
+   {
+    "key": "|[计] 横向",
+    "reason": "印刷/显示「横向排版」专业义，不是景观/风景的通用高频义；[计] 标签为技术补充",
+    "source": "Kaikki noun 'a mode of printing where the horizontal sides are longer than the vertical sides'；current 已保留 n|风景，山水，风景画"
+   }
+  ],
+  "language": [
+   {
+    "key": "|[计] 语言",
+    "reason": "与 n|语言… 重复的计算机领域条目（编程语言），通用义已覆盖",
+    "source": "重复义项 n|语言，文字，措辞；Kaikki 'A computer language; a machine language' 属 language 的子义；[计] 标签重复"
+   }
+  ],
+  "lawn": [
+   {
+    "key": "|[机] 细筛",
+    "reason": "机械「细筛」义不在 Kaikki 的 lawn 义项中，属词典技术噪声，非通用义",
+    "source": "Kaikki lawn 仅有草坪、林地空地、琼脂培养、细麻布等义，无筛子义；[机] 技术补充"
+   }
+  ],
+  "lawsuit": [
+   {
+    "key": "|[法] 诉讼，诉讼案件",
+    "reason": "与 n|诉讼 完全重复，仅加 [法] 标签",
+    "source": "重复义项 n|诉讼；Kaikki 'a case where two or more people disagree and one or more of the parties take the case to a court' 已被覆盖"
+   }
+  ],
+  "lawyer": [
+   {
+    "key": "|[经] 律师",
+    "reason": "与 n|律师 完全重复，仅加 [经] 标签",
+    "source": "重复义项 n|律师；Kaikki 'A professional person qualified... authorized to practice law' 已被覆盖"
+   }
+  ],
+  "lemon": [
+   {
+    "key": "|[医] 柠檬",
+    "reason": "与 n|柠檬，柠檬树，柠檬色 完全重复，仅加 [医] 标签",
+    "source": "重复义项 n|柠檬，柠檬树，柠檬色；Kaikki noun 'A yellowish citrus fruit' 已被覆盖"
+   }
+  ],
+  "less": [
+   {
+    "key": "|[计] 最低成本估算与调度法",
+    "reason": "LESS 缩略语展开（成本估算与调度方法），不是 less 的词义，属缩写噪声",
+    "source": "Kaikki 仅有 little 的比较级、介词 minus、古旧动词、方言连词等义，无该方法名"
+   }
+  ],
+  "letter": [
+   {
+    "key": "|[计] 字母",
+    "reason": "与 n|…字母… 完全重复的计算机领域条目",
+    "source": "重复义项 n|信，字母，证书，字面意义，铅字…；Kaikki 'A symbol in an alphabet' 已被覆盖"
+   }
+  ],
+  "level": [
+   {
+    "key": "|[计] 级别",
+    "reason": "与 n|水平，水准，平地 中的层级/级别义重复，属计算机标签冗余",
+    "source": "重复义项 n|水平，水准，平地；Kaikki noun 'Degree or amount' 与 'Achievement or qualification' 已被覆盖"
+   }
+  ],
+  "library": [
+   {
+    "key": "|[计] 库",
+    "reason": "「库」与 n|图书馆，藏书，库 重复；计算机程序库是同一「库」义的领域延伸",
+    "source": "重复义项 n|图书馆，藏书，库；Kaikki 'A collection of software routines...' 属集合义延伸；[计] 标签重复"
+   }
+  ],
+  "life": [
+   {
+    "key": "|[医] 生活，生存，生命，寿命",
+    "reason": "与 n|生活，生命，人生…寿命… 高度重复，仅加 [医] 标签",
+    "source": "重复义项 n|生活，生命，人生，世事，生物，寿命…；Kaikki 生命/生存义已被覆盖"
+   }
+  ],
+  "line": [
+   {
+    "key": "|[计] 线路",
+    "reason": "与 n|…电线，线路，路线，航线… 重复的计算机/电信领域条目",
+    "source": "重复义项 n|…电线，线路，路线，航线…；Kaikki 'The wire connecting one telegraphic station with another... network connection' 已被覆盖"
+   }
+  ],
+  "link": [
+   {
+    "key": "|[计] 连接，链路",
+    "reason": "「连接」与 vt|连结，联合 及 n|连结物，链接 重复，「链路」为网络专业义",
+    "source": "current 已保留 vt|连结，联合，挽住 与 n|环，连结物，链接；Kaikki 'A connection between places, people, events, things, or ideas' 已被覆盖；[计] 标签重复"
+   }
+  ],
+  "lip": [
+   {
+    "key": "|[计] 大型互连网信息包",
+    "reason": "缩写展开／词库噪声，不是 lip 的通用词义",
+    "source": "Kaikki lip 仅有唇、边缘、容器口、俚语顶嘴等义，无网络信息包义"
+   }
+  ],
+  "list": [
+   {
+    "key": "|[计] 列表，序列，数据清单",
+    "reason": "与 n|…列表，序列，数据清单 完全重复，仅加 [计] 标签",
+    "source": "重复义项 n|目录，名单，明细表，布条…列表，序列，数据清单；Kaikki 'A codified representation of a list used to store data' 已被覆盖"
+   }
+  ],
+  "load": [
+   {
+    "key": "|[计] 加载，装入程序",
+    "reason": "「加载」与 n|…加载 重复，「装入程序」为计算机专业义",
+    "source": "重复义项 n|负荷，担子，重担，装载量，负载，工作量，加载；Kaikki noun 'The volume of work required to be performed' 等已覆盖；[计] 技术补充"
+   }
+  ],
+  "local": [
+   {
+    "key": "|[计] 本地的",
+    "reason": "与 adj|…本地的 完全重复，仅加 [计] 标签",
+    "source": "重复义项 adj|地方性的，当地的，局部的，乡土的，本地的；Kaikki 'Connected directly to a particular computer, processor, etc.' 属「本地」延伸"
+   },
+   {
+    "key": "|局部",
+    "reason": "与 adj|…局部的 重复（仅列「局部」二字，无独立词性或新义）",
+    "source": "重复义项 adj|地方性的，当地的，局部的，乡土的，本地的；Kaikki 无独立「局部」名词义"
+   }
+  ],
+  "log": [
+   {
+    "key": "|[计] 日志",
+    "reason": "与 n|记录，圆木，日志，计程仪 中的「日志」完全重复，仅加 [计] 标签",
+    "source": "重复义项 n|记录，圆木，日志，计程仪；Kaikki 'A logbook, or journal of a vessel's (or aircraft's) progress' 已被覆盖"
+   }
+  ],
+  "logic": [
+   {
+    "key": "|[计] 逻辑",
+    "reason": "与 n|逻辑，逻辑学，推理… 完全重复，仅加 [计] 标签",
+    "source": "重复义项 n|逻辑，逻辑学，推理的方法，推理，逻辑性；Kaikki 'The part of a system... boolean logic operations' 属逻辑义延伸"
+   }
+  ],
+  "long": [
+   {
+    "key": "|[计] 长，长整型",
+    "reason": "「长」是普通义重复，「长整型」为编程数据类型专业义，通用学习者不需要",
+    "source": "重复义项 n|长时间，长信号，长整型 与 adj|长的…；Kaikki 无编程类型义；[计] 技术补充"
+   }
+  ],
+  "loose": [
+   {
+    "key": "n|发射，放任，放纵",
+    "reason": "名词义「发射、放任」罕见，不是通用学习者需要的高频义。",
+    "source": "Kaikki 的 loose 词条只列 verb/adj，无 noun 义项；相关「To set sail」「To solve」均标 obsolete。"
+   }
+  ],
+  "lorry": [
+   {
+    "key": "|[化] 载重汽车",
+    "reason": "与 n|卡车，货车 完全重复，且 [化] 领域标签与本义无关。",
+    "source": "当前 n|卡车，货车 已含该义；Kaikki「a large and heavy motor vehicle designed to carry goods...a truck」同义。"
+   }
+  ],
+  "lung": [
+   {
+    "key": "|[医] 肺",
+    "reason": "与 n|肺，肺脏，空地 重复的 [医] 义项。",
+    "source": "当前 n 义项已含「肺」；Kaikki「biological organ...controls breathing and oxygenates the blood」同义。"
+   }
+  ],
+  "magazine": [
+   {
+    "key": "|[计] 卡片箱，介质装卸程序",
+    "reason": "[计] 领域的罕见专业义，「介质装卸程序」不是 magazine 的常用义。",
+    "source": "当前 n|杂志，仓库，弹盒，胶卷盒 已覆盖仓库/弹盒义；Kaikki 只有「ammunition storehouse」「reservoir or supply chamber」等，无「介质装卸程序」义。"
+   }
+  ],
+  "mail": [
+   {
+    "key": "|[计] 邮件",
+    "reason": "与 n|邮件，邮政，邮递，盔甲 重复的 [计] 义项。",
+    "source": "当前 n|邮件... 已含「邮件」；Kaikki「Electronic mail, e-mail...service for sending, storing, and forwarding electronic messages」。"
+   }
+  ],
+  "main": [
+   {
+    "key": "|[计] 主群组",
+    "reason": "与 n|主要部分，干线，体力，力量，主群组 重复的 [计] 专业义。",
+    "source": "当前 n 义项已含「主群组」；Kaikki 仅列 chief portion / utility pipe / main course 等，无该 [计] 义。"
+   }
+  ],
+  "major": [
+   {
+    "key": "|[计] 主要，主要刻度",
+    "reason": "与 adj|主要的，重要的，全力的 重复的 [计] 义项。",
+    "source": "当前 adj 已含「主要的」；Kaikki 只列 greater in importance/number/rank 等义，无「主要刻度」义。"
+   }
+  ],
+  "man": [
+   {
+    "key": "|[计] 城域网，手册",
+    "reason": "缩写噪声：MAN=城域网，「手册」疑为 manual 混入，均非 man 的常用义。",
+    "source": "Kaikki 的 man 词条没有「城域网/手册」义；MAN 是 Metropolitan Area Network 的缩写。"
+   }
+  ],
+  "manner": [
+   {
+    "key": "|[法] 方式，方法，样式",
+    "reason": "与 n|样子，礼貌，风格 中的「方式/方法」义重复，且 [法] 标签错误。",
+    "source": "当前 n 义项已含方式方法义；Kaikki「Mode of action; way of performing or doing anything」同义。"
+   }
+  ],
+  "map": [
+   {
+    "key": "|[计] 实用程序，映射，制造自动化协议",
+    "reason": "缩写噪声：MAP=制造自动化协议；「映射」已由 vt 义覆盖。",
+    "source": "Kaikki 无「实用程序/制造自动化协议」义；MAP 是 Manufacturing Automation Protocol 的缩写。"
+   }
+  ],
+  "mark": [
+   {
+    "key": "|[计] 标志",
+    "reason": "与 n|标志，分数，马克... 重复的 [计] 义项。",
+    "source": "当前 n 义项已含「标志」；Kaikki「A visible impression or sign; a blemish, scratch, or stain」等。"
+   },
+   {
+    "key": "|标记",
+    "reason": "与 n 义项「记号」、vt「做标记于」重复。",
+    "source": "当前 n|...记号... 与 vt|做标记于... 已覆盖「标记」义；Kaikki「A visible impression or sign」。"
+   },
+   {
+    "key": "|传号",
+    "reason": "罕见专业义，普通词典读者不需要，疑为电信术语噪声。",
+    "source": "Kaikki 的 mark 词条无「传号」义。"
+   }
+  ],
+  "match": [
+   {
+    "key": "|[计] 比较",
+    "reason": "与 n|比赛，火柴，对手 及 vt|使相配... 重复的 [计] 义项。",
+    "source": "当前 n/vt 义项已含「比赛/相配」；Kaikki 无独立的「比较」[计] 义。"
+   }
+  ],
+  "mayor": [
+   {
+    "key": "|[法] 市长",
+    "reason": "与 n|市长 完全重复，且 [法] 标签与本义无关。",
+    "source": "当前 n|市长 已含该义；Kaikki「The chief executive of the municipal government of a city」。"
+   }
+  ],
+  "means": [
+   {
+    "key": "|[经] 方法，手段，工具",
+    "reason": "与 n|方法，手段，工具，财产，收入 重复的 [经] 义项。",
+    "source": "当前 n 义项已含「方法，手段，工具」；Kaikki「An instrument or condition to achieve a result」。"
+   },
+   {
+    "key": "|意谓",
+    "reason": "是 mean 的第三人称单数动词变形，不是 means 的独立名词义，属变形噪声。",
+    "source": "Kaikki 的 means 动词条目标注「third-person singular simple present indicative of mean」（form-of）。"
+   }
+  ],
+  "meat": [
+   {
+    "key": "|[经] 肉类",
+    "reason": "与 n|肉，餐，食物 重复，且 [经] 标签与本义无关。",
+    "source": "当前 n 义项已含「肉」；Kaikki「The flesh (muscle tissue) of a killed animal used as food」。"
+   }
+  ],
+  "meeting": [
+   {
+    "key": "|[法] 会议，会谈，集会",
+    "reason": "与 n|会议，会面 重复的 [法] 义项。",
+    "source": "当前 n 义项已含「会议」；Kaikki「A gathering of persons for a purpose; an assembly」。"
+   }
+  ],
+  "memory": [
+   {
+    "key": "|[计] 存储器，内存，查看内存实用程序",
+    "reason": "与 n|内存 及 n 义项中的「存储」重复，且「查看内存实用程序」是软件工具名噪声。",
+    "source": "当前 n|记忆，记忆力，回忆，纪念，存储 与 n|内存 已覆盖；Kaikki 只列「part of a computer that stores variable executable code or data」。"
+   }
+  ],
+  "menu": [
+   {
+    "key": "|[计] 菜单",
+    "reason": "与 n|菜单，(功能)选择单 重复的 [计] 义项。",
+    "source": "当前 n 义项已含「菜单」；Kaikki「A list from which the user may select an operation to be performed」。"
+   }
+  ],
+  "message": [
+   {
+    "key": "|[计] 报文",
+    "reason": "[计] 专业义，普通学习者不需要，且已在 n 义项「讯息/信息」范围内。",
+    "source": "Kaikki 只列「A communication, or what is communicated; any concept or information conveyed」，无「报文」义。"
+   },
+   {
+    "key": "|消息",
+    "reason": "与 n|消息，通讯，讯息... 重复。",
+    "source": "当前 n 义项已含「消息」；Kaikki「A communication, or what is communicated」。"
+   },
+   {
+    "key": "|信息",
+    "reason": "与 n 义项中的「讯息」重复。",
+    "source": "当前 n|消息，通讯，讯息... 已覆盖信息义；Kaikki「any concept or information conveyed」。"
+   }
+  ],
+  "method": [
+   {
+    "key": "|[医] [方]法",
+    "reason": "与 n|方法，办法，条理，秩序 重复，释义标签残缺，属噪声。",
+    "source": "当前 n 义项已含「方法」；Kaikki「A process by which a task is completed; a way of doing something」。"
+   }
+  ],
+  "metre": [
+   {
+    "key": "|[医] 米，公尺",
+    "reason": "与 n|公尺，格律，韵律 重复，且 [医] 标签与本义无关。",
+    "source": "当前 n 义项已含「公尺」；Kaikki「The basic unit of length in the International System of Units」。"
+   }
+  ],
+  "mile": [
+   {
+    "key": "|[机] 英里，哩",
+    "reason": "与 n|英里，很大距离 重复，且 [机] 标签与本义无关。",
+    "source": "当前 n 义项已含「英里」；Kaikki「The international mile: a unit of length...」。"
+   }
+  ],
+  "millimetre": [
+   {
+    "key": "|[机] 公厘",
+    "reason": "与 n|毫米 重复（公厘即毫米），且 [机] 标签冗余。",
+    "source": "当前 n|毫米 已含该义；Kaikki「the length of 1/1000 of a metre」。"
+   }
+  ],
+  "minor": [
+   {
+    "key": "|[计] 次要",
+    "reason": "与 adj|较小的，二流的，未成年的 中的「次要/较小」义重复。",
+    "source": "当前 adj 义项已含「较小的」；Kaikki「Lesser, smaller in importance, size, degree, seriousness, or significance」。"
+   }
+  ],
+  "missing": [
+   {
+    "key": "|[法] 行踪不明的，失踪的，遗失的",
+    "reason": "与 adj|不见的，缺少的 重复的 [法] 义项。",
+    "source": "当前 adj 义项已含「不见的」；Kaikki「Not able to be located; gone, misplaced」。"
+   }
+  ],
+  "mistake": [
+   {
+    "key": "|[计] 错误",
+    "reason": "与 n|错误，误会 重复的 [计] 义项。",
+    "source": "当前 n 义项已含「错误」；Kaikki「An error」。"
+   }
+  ],
+  "model": [
+   {
+    "key": "|[计] 模型",
+    "reason": "与 n|模型，模范，模特儿 重复的 [计] 义项。",
+    "source": "当前 n 义项已含「模型」；Kaikki「A representation of a physical object」。"
+   }
+  ],
+  "moment": [
+   {
+    "key": "|[医] 片刻，瞬间，时机，因素，矩",
+    "reason": "与 n|片刻，瞬间，重要，阶段，力矩 重复的 [医] 义项，术语标签错误。",
+    "source": "当前 n 义项已含「片刻，瞬间，力矩」；Kaikki「A particular point of time; an instant」「product of a distance and another physical quantity」。"
+   }
+  ],
+  "money": [
+   {
+    "key": "|[经] 货币，金钱，财产",
+    "reason": "与 n|金钱，一笔款，财富，货币，金额 重复的 [经] 义项。",
+    "source": "当前 n 义项已含「货币，金钱，财富」；Kaikki「A generally accepted means of exchange」。"
+   }
+  ],
+  "month": [
+   {
+    "key": "|[经] 月",
+    "reason": "与「n|月」完全重复，只多了[经]领域标签",
+    "source": "current 已有 n|月；Kaikki 仅列 ‘a period into which a year is divided’ 同一义"
+   }
+  ],
+  "mood": [
+   {
+    "key": "|[医] 心境",
+    "reason": "与「n|心情，气氛，生气，基调」中的心境义重复，[医] 标签",
+    "source": "current n 义项已覆盖；Kaikki ‘a mental or emotional state’ 为同一义"
+   }
+  ],
+  "mount": [
+   {
+    "key": "|[计] 安装",
+    "reason": "与 vt「爬上，使上马，装上，装裱，安放…」中的安装义重复，[计] 标签",
+    "source": "current vt 义项已含装上/安放；Kaikki ‘To place oneself on…/mount an object’ 同一义"
+   }
+  ],
+  "mouse": [
+   {
+    "key": "vt|探出",
+    "reason": "mouse 没有通用的及物「探出」义，疑为词典噪声",
+    "source": "Kaikki mouse 的及物动词仅有 ‘To close the mouth of a hook…’ 制钩技术义，无「探出」；[计] 之外的动词也仅捕鼠/窥探"
+   },
+   {
+    "key": "|[计] 鼠标",
+    "reason": "与「n|老鼠，胆小羞怯的人，鼠标」中的鼠标义重复，[计] 标签",
+    "source": "current n 义项已含鼠标；Kaikki computing sense ‘An input device…’ 同一义"
+   }
+  ],
+  "muscle": [
+   {
+    "key": "|[医] 肌",
+    "reason": "与「n|肌肉，臂力」重复，[医] 标签",
+    "source": "current n 义项已含肌肉；Kaikki ‘A contractile form of tissue’ 同一义"
+   }
+  ],
+  "my": [
+   {
+    "key": "|[医] 迈尔(热容单位)",
+    "reason": "「迈尔」是热容单位名，不是英语 my 的常用义，属单位/缩写噪声",
+    "source": "Kaikki my 只列限定词及感叹词，无此单位义"
+   }
+  ],
+  "naked": [
+   {
+    "key": "|[医] 裸露的",
+    "reason": "与「adj|裸体的，无装饰的，无保护的，赤贫的」重复，[医] 标签",
+    "source": "current adj 义项已含裸体的；Kaikki ‘Bare, not covered by clothing’ 同一义"
+   }
+  ],
+  "name": [
+   {
+    "key": "|[计] 名称，文件名，姓名",
+    "reason": "与 n 义项「名字，名称，姓名…文件名」完全重复，[计] 标签",
+    "source": "current n 义项已含名称/文件名/姓名；Kaikki ‘Any nounal word…’ 与 ‘An identifier’ 同一义"
+   }
+  ],
+  "nation": [
+   {
+    "key": "|[法] 民族，国家",
+    "reason": "与「n|国家，民族」完全重复，[法] 标签",
+    "source": "current n 义项已含该义；Kaikki 同一 nation/state 义"
+   }
+  ],
+  "nature": [
+   {
+    "key": "|[医] 自然，大自然",
+    "reason": "与「n|自然，大自然，本性，性格，性质」重复，[医] 标签",
+    "source": "current n 义项已含自然/大自然；Kaikki ‘the totality of all things in the physical universe’ 同一义"
+   },
+   {
+    "key": "|本性，性能",
+    "reason": "与 n 义项中的「本性」重复，且该行无词性，属词典重复条目",
+    "source": "current n|自然…本性… 已含；Kaikki ‘essential or innate characteristics’ 同一义"
+   }
+  ],
+  "needle": [
+   {
+    "key": "|[计] 探针",
+    "reason": "探针属技术领域义，通用 CET 学习不需要",
+    "source": "[计] 标签；Kaikki needle 名词义项（针、尖状物、指针、唱针、针叶等）中没有通用的「探针/probe」义"
+   }
+  ],
+  "net": [
+   {
+    "key": "|[计] 网络，网络分析程序",
+    "reason": "网络义与「n|网，网状物」重复，「网络分析程序」偏技术，[计] 标签",
+    "source": "current n 已含网/网状物；Kaikki ‘A system that interconnects…’ 同一网络义"
+   }
+  ],
+  "network": [
+   {
+    "key": "|[计] 网络",
+    "reason": "与「n|网络，广播网，网状物」重复，[计] 标签",
+    "source": "current n 义项已含网络；Kaikki 同一 interconnected group/system 义"
+   }
+  ],
+  "never": [
+   {
+    "key": "|[法] 永不，决不，从来没有",
+    "reason": "与「adv|从不，决不，不曾」重复，[法] 标签",
+    "source": "current adv 义项已含；Kaikki ‘At no time; on no occasion’ 同一义"
+   }
+  ],
+  "new": [
+   {
+    "key": "|[法] 新发现的，新的，重新开始的",
+    "reason": "与「adj|新的，陌生的，最近的，不熟悉的」重复，[法] 标签",
+    "source": "current adj 义项已含新的；Kaikki ‘Recently made, or created’/‘recently discovered’ 同一义"
+   }
+  ],
+  "news": [
+   {
+    "key": "|[法] 新闻，消息，新闻报导",
+    "reason": "与「n|新闻，消息，报导」重复，[法] 标签",
+    "source": "current n 义项已含；Kaikki ‘New information of interest’ 同一义"
+   }
+  ],
+  "next": [
+   {
+    "key": "|[计] 近邻干扰",
+    "reason": "「近邻干扰」是 NEXT 缩写的技术义，不是 next 的通用义",
+    "source": "[计] 标签；Kaikki next 的副词/形容词/名词义项中没有「近邻干扰」（near-end crosstalk）义"
+   }
+  ],
+  "night": [
+   {
+    "key": "|[法] 夜，黑夜，黑暗",
+    "reason": "与「n|夜，夜晚，晚上，黑暗…」重复，[法] 标签",
+    "source": "current n 义项已含夜/黑暗；Kaikki 同一 night/darkness 义"
+   }
+  ],
+  "nightmare": [
+   {
+    "key": "|[医] 梦魇，恶梦",
+    "reason": "与「n|梦魇，恶梦，可怕的事物…」重复，[医] 标签",
+    "source": "current n 义项已含梦魇/恶梦；Kaikki ‘a very unpleasant or frightening dream’ 同一义"
+   }
+  ],
+  "noise": [
+   {
+    "key": "|[计] 噪声",
+    "reason": "与「n|噪音，杂音，响声，喧闹」重复，[计] 标签",
+    "source": "current n 义项已含噪声；Kaikki 同一 unwanted sounds 义"
+   }
+  ],
+  "nor": [
+   {
+    "key": "|[计] 或非",
+    "reason": "「或非」是逻辑门缩写 NOR 的技术义，不是 nor 的连词义",
+    "source": "[计] 标签；Kaikki nor 只列连词义及 ‘Alternative form of NOR’"
+   }
+  ],
+  "normal": [
+   {
+    "key": "|[计] 标准，普通",
+    "reason": "与 n「常态，标准，正常，普通」及 adj「正常的…标准的」重复",
+    "source": "current n/adj 义项已含标准/普通；Kaikki 同一 according to norms/regular pattern 义"
+   }
+  ],
+  "not": [
+   {
+    "key": "|[计] 非",
+    "reason": "与「adv|不，非，未」重复，且属逻辑运算缩写义",
+    "source": "current adv 义项已含「非」；Kaikki 仅列副词义及 NOT 的 alternative form"
+   }
+  ],
+  "nuclear": [
+   {
+    "key": "|[医] 核的",
+    "reason": "与「adj|核子的，原子能的，核的，中心的」重复，[医] 标签",
+    "source": "current adj 义项已含核的；Kaikki ‘Pertaining to the nucleus’ 同一义"
+   }
+  ],
+  "number": [
+   {
+    "key": "|[计] 数字",
+    "reason": "与「n|数，数字，数目，号码」重复，[计] 标签",
+    "source": "current n 义项已含数字；Kaikki 同一 numeral/number 义"
+   }
+  ],
+  "ocean": [
+   {
+    "key": "|[法] 海洋，海",
+    "reason": "与「n|海洋，广阔，许多，一大片」重复，[法] 标签",
+    "source": "current n 义项已含海洋/海；Kaikki ‘large bodies of water’ 同一义"
+   }
+  ],
+  "odd": [
+   {
+    "key": "|[计] 奇数，奇校验，光数据数字转换器",
+    "reason": "奇数义与 adj「奇数的…」重复，奇校验/光数据数字转换器为技术与缩写噪声",
+    "source": "current adj 已含奇数；[计] 标签；Kaikki odd 无「奇校验/光数据数字转换器」义"
+   }
+  ],
+  "off": [
+   {
+    "key": "|[计] 关闭，清屏命令",
+    "reason": "关闭义与 adj「关着的」/n「关闭状态」重复，清屏命令偏技术",
+    "source": "current adj/n 义项已含关闭状态；Kaikki ‘Into a state of non-operation’ 同一义"
+   },
+   {
+    "key": "vt|杀死",
+    "reason": "off 作「杀死」是俚语，通用 CET 学习不需要",
+    "source": "语言常识判断（to off someone）；Kaikki 所收 off 义项为副词/形容词，无此义"
+   }
+  ],
+  "office": [
+   {
+    "key": "|[化] 办公室",
+    "reason": "与「n|办公室，部，公职，职责」重复，[化] 标签明显错配",
+    "source": "current n 义项已含办公室；Kaikki ‘A room, set of rooms, or building used for non-manual work’ 同一义"
+   }
+  ],
+  "on": [
+   {
+    "key": "|[计] 打开",
+    "reason": "带 [计] 标签的计算机术语，与常见介词/副词义无关，Kaikki 也未列该名词义。",
+    "source": "Kaikki on 词条仅有 adj/adv 义；当前义项带 [计] 领域标签"
+   }
+  ],
+  "once": [
+   {
+    "key": "adj|从前的",
+    "reason": "『从前的』实为副词 formerly 的释义，once 并非常用形容词。",
+    "source": "Kaikki once 词条仅有 adv/conj/noun 义，无形容词义"
+   }
+  ],
+  "open": [
+   {
+    "key": "|[计] 打开指令",
+    "reason": "带 [计] 标签的计算机命令术语，与已保留的 vt|打开，公开，开放 重复。",
+    "source": "当前义项带 [计] 标签；Kaikki 未列该计算机义"
+   },
+   {
+    "key": "|打开语句",
+    "reason": "计算机语句术语，语义与 vt|打开，公开，开放 重复，属词典噪声。",
+    "source": "当前义项无词性且与 vt 义重复；Kaikki 未列该义"
+   }
+  ],
+  "opinion": [
+   {
+    "key": "|[经] 意见",
+    "reason": "带 [经] 标签，与 n|意见，评价，主张 中的『意见』完全重复。",
+    "source": "当前 n 义项已含『意见』；Kaikki 无独立经济义"
+   }
+  ],
+  "or": [
+   {
+    "key": "|[计] 或",
+    "reason": "带 [计] 标签的逻辑运算术语，与 conj|或，或者 重复。",
+    "source": "当前 conj 义项已含『或』；Kaikki 无独立计算机名词义"
+   }
+  ],
+  "order": [
+   {
+    "key": "|[计] 顺序，阶数",
+    "reason": "带 [计] 标签，与 n|顺序，阶数 完全重复。",
+    "source": "当前 n|顺序，阶数 已存在；义项带 [计] 标签"
+   }
+  ],
+  "organ": [
+   {
+    "key": "|[电] 风琴",
+    "reason": "带 [电] 标签，与 n|风琴，器官，元件，机构，机关 中的『风琴』重复。",
+    "source": "当前 n 义项已含『风琴』；Kaikki 仅列 musical instrument 义"
+   }
+  ],
+  "organic": [
+   {
+    "key": "|[医] 器官的，有生命的，有机的，器质的",
+    "reason": "带 [医] 标签，与 adj|器官的，有机的，组织的，根本的 重复。",
+    "source": "当前 adj 义项已含『器官的/有机的』；Kaikki 无独立医学义"
+   }
+  ],
+  "ounce": [
+   {
+    "key": "|[医] 英两",
+    "reason": "带 [医] 标签的医学旧称，与 n|盎司，少量，雪豹 中的『盎司』重复。",
+    "source": "当前 n 义项已含『盎司』；Kaikki ounce 为重量/容量单位义"
+   }
+  ],
+  "outer": [
+   {
+    "key": "|[机] 外部的，外面的，外侧的",
+    "reason": "带 [机] 标签，与 adj|外部的，外面的，在外的，远离中心的 完全重复。",
+    "source": "当前 adj 义项已含相同释义；Kaikki 仅列 outside/external 义"
+   }
+  ],
+  "outstanding": [
+   {
+    "key": "|[经] 未解决的，未偿付",
+    "reason": "带 [经] 标签，与 adj|杰出的，突出的，未偿付的，未决定的 中的释义重复。",
+    "source": "当前 adj 义项已含『未偿付的，未决定的』；义项带 [经] 标签"
+   }
+  ],
+  "oven": [
+   {
+    "key": "|[化] 烘箱",
+    "reason": "带 [化] 标签的实验室设备术语，与『烤箱』义重复。",
+    "source": "当前 n|烤箱，灶，子宫 已含该义；Kaikki 仅列 chamber for baking or heating"
+   }
+  ],
+  "over": [
+   {
+    "key": "vt|越过",
+    "reason": "over 的动词用法罕见，且与 prep/adv 中的『越过』重复。",
+    "source": "语言常识判断（over 主要作 prep/adv/adj；当前 vt 义与 prep|在...之上，遍于...之上，越过 重复）"
+   }
+  ],
+  "overtime": [
+   {
+    "key": "vt|使超过时间",
+    "reason": "『使超过时间』不是常用动词义；Kaikki 的动词义仅为计时错误的技术用法。",
+    "source": "Kaikki verb: \"To measure something incorrectly, as taking more time than it actually did\""
+   }
+  ],
+  "pack": [
+   {
+    "key": "|[计] 压缩",
+    "reason": "带 [计] 标签的压缩术语，不是 pack 的日常常用义。",
+    "source": "当前义项带 [计] 标签；Kaikki pack 名词义均为 bundle/group 类"
+   }
+  ],
+  "packet": [
+   {
+    "key": "|[计] 分组，分组报文，数据分组",
+    "reason": "带 [计] 标签的网络报文术语，n|小包，一批信件，大量，信息包 已含『信息包』。",
+    "source": "当前义项带 [计] 标签；Kaikki 网络义为 a small fragment of data"
+   }
+  ],
+  "pad": [
+   {
+    "key": "|[计] 焊接点",
+    "reason": "带 [计] 标签的电子焊接术语，与常用 pad（衬垫/便签本/步行）无关。",
+    "source": "当前义项带 [计] 标签；Kaikki pad 词条未列焊接义"
+   },
+   {
+    "key": "|包装配/拆卸",
+    "reason": "键名语义不通，疑似缩写或词典乱码，不是独立词义。",
+    "source": "当前义项无词性且中文释义不成义，属词典噪声"
+   }
+  ],
+  "page": [
+   {
+    "key": "|[计] 页",
+    "reason": "带 [计] 标签，与 n|页，记录，事件，专栏，男侍 中的『页』重复。",
+    "source": "当前 n 义项已含『页』；义项带 [计] 标签"
+   }
+  ],
+  "pale": [
+   {
+    "key": "n|栅栏，界线，范围",
+    "reason": "名词义（栅栏/界域）古旧，现代主要保留在 beyond the pale 等固定表达中。",
+    "source": "Kaikki: palisade 标 archaic，jurisdiction/territory 标 archaic/historical；仅 limits/bounds 为 broadly"
+   }
+  ],
+  "parcel": [
+   {
+    "key": "adj|部分的",
+    "reason": "parcel 的形容词『部分的』罕用，Kaikki 未列形容词义。",
+    "source": "Kaikki parcel 无 adj 义；相关副词义标 obsolete"
+   },
+   {
+    "key": "adv|局部地",
+    "reason": "Kaikki 明确将该副词义标为 obsolete（废弃）。",
+    "source": "Kaikki adv: \"Part or half; in part; partially.\" tags: obsolete"
+   }
+  ],
+  "parent": [
+   {
+    "key": "|[法] 父亲，母亲，根源",
+    "reason": "带 [法] 标签，与 n|父母，父母亲，根源 重复。",
+    "source": "当前 n 义项已含『父母/根源』；义项带 [法] 标签"
+   }
+  ],
+  "parliament": [
+   {
+    "key": "|[法] 会议，国会，议院",
+    "reason": "带 [法] 标签，与 n|国会，议会 重复。",
+    "source": "当前 n 义项已含『国会/议会』；义项带 [法] 标签"
+   }
+  ],
+  "pass": [
+   {
+    "key": "|[计] 遍",
+    "reason": "带 [计] 标签的编译/扫描术语（一遍），不是 pass 的日常义。",
+    "source": "当前义项带 [计] 标签；Kaikki pass 动词义为经过/传递等"
+   }
+  ],
+  "passenger": [
+   {
+    "key": "|[经] 乘客，旅客",
+    "reason": "带 [经] 标签，与 n|乘客，旅客 完全重复。",
+    "source": "当前 n 义项完全相同；义项带 [经] 标签"
+   }
+  ],
+  "passport": [
+   {
+    "key": "|[法] 通行证，护照",
+    "reason": "带 [法] 标签，与 n|护照，手段，通行证 重复。",
+    "source": "当前 n 义项已含『护照/通行证』；义项带 [法] 标签"
+   }
+  ],
+  "past": [
+   {
+    "key": "|pass的过去分词",
+    "reason": "语法形式注记而非独立词义；past 也并非 pass 的现代过去分词（应为 passed）。",
+    "source": "Kaikki 将该 form-of 义标为 obsolete"
+   }
+  ],
+  "peak": [
+   {
+    "key": "vi|达到最大值",
+    "reason": "与 vi|达到高峰 同义重复，均为 reach a peak/maximum。",
+    "source": "Kaikki verb: \"To reach a highest degree or maximum\"；当前两条 vi 义同义"
+   },
+   {
+    "key": "adj|最大值的",
+    "reason": "与 adj|高峰的 同义重复，均为『高峰的/最大值的』。",
+    "source": "当前两条 adj 义同义重复；Kaikki 名词义为 highest value/point"
+   }
+  ],
+  "penny": [
+   {
+    "key": "|[经] 便士",
+    "reason": "带 [经] 标签，与 n|便士，一分，小钱，点滴 中的『便士』重复。",
+    "source": "当前 n 义项已含『便士』；义项带 [经] 标签"
+   }
+  ],
+  "pepper": [
+   {
+    "key": "|[化] 胡椒",
+    "reason": "带 [化] 标签，与 n|胡椒粉，胡椒，辣椒 中的『胡椒』重复。",
+    "source": "当前 n 义项已含『胡椒』；义项带 [化] 标签"
+   },
+   {
+    "key": "|辣椒",
+    "reason": "与 n|胡椒粉，胡椒，辣椒 中的『辣椒』重复，无独立信息。",
+    "source": "当前 n 义项已含『辣椒』"
+   },
+   {
+    "key": "|花椒",
+    "reason": "pepper 通常指胡椒/辣椒，『花椒』（Sichuan pepper）不是其常用独立义。",
+    "source": "Kaikki 名词义为 Piperaceae 胡椒与 capsicum 辣椒，未列花椒"
+   }
+  ],
+  "per": [
+   {
+    "key": "|[经] 每，按照",
+    "reason": "带 [经] 标签，与 prep|每一，通过，经，按照 重复。",
+    "source": "当前 prep 义项已含『每/按照』；义项带 [经] 标签"
+   }
+  ],
+  "percent": [
+   {
+    "key": "|[机] 百分率",
+    "reason": "与主义项“百分比、百分数”重复，[机]领域标注",
+    "source": "当前义项 n|百分比，百分数，部分 已含“百分数”；Kaikki noun 义为 percentage/proportion，无额外机械义"
+   }
+  ],
+  "person": [
+   {
+    "key": "|[法] 人，法人，人身",
+    "reason": "“人、人身”与主义项重复；“法人”为法律专业义，非通用高频",
+    "source": "当前义项 n|人，人身，人称 已含“人、人身”；Kaikki 法律义为 'standing before the courts' 的专业用法"
+   }
+  ],
+  "personnel": [
+   {
+    "key": "|[经] 人事，全体人员，职工",
+    "reason": "与主义项“人员、人事部门”重复，[经]领域标注",
+    "source": "当前义项 n|人员，人事部门，人事科(处)；Kaikki 义为 collection of people / human resources department"
+   }
+  ],
+  "petrol": [
+   {
+    "key": "|[经] 汽油，挥发油，石油",
+    "reason": "“汽油”与主义项重复；“石油、挥发油”是 petroleum 的松散译法，[经]领域标注",
+    "source": "当前义项 n|汽油；Kaikki 仅列 motor fuel 义（Commonwealth），无经济专义"
+   }
+  ],
+  "phrase": [
+   {
+    "key": "|[计] 短语",
+    "reason": "与名词主义项“词组、短语”重复",
+    "source": "当前义项 n|惯用语，词组，成语，措词，乐句 已含“词组”；Kaikki noun 'group of words functioning as a single unit'"
+   }
+  ],
+  "physician": [
+   {
+    "key": "|[医] 主治医师",
+    "reason": "与主义项“医师、内科医师”重复，“主治医师”比原义更窄",
+    "source": "当前义项 n|医师，内科医师，解除痛苦者；Kaikki gloss 'A medical doctor trained in human medicine'"
+   }
+  ],
+  "physics": [
+   {
+    "key": "|[化] 物理",
+    "reason": "与主义项“物理学”重复，且[化]标签与物理学科不符（词典噪声）",
+    "source": "当前义项 n|物理学，物理过程，物理现象；Kaikki 仅列 branch of science 义"
+   },
+   {
+    "key": "|物理学",
+    "reason": "与主义项首项“物理学”完全重复",
+    "source": "当前义项 n|物理学，物理过程，物理现象 首项即为“物理学”"
+   }
+  ],
+  "pick": [
+   {
+    "key": "|[计] 拾取",
+    "reason": "与动词主义项“挑选”重复，[计]领域引申义",
+    "source": "当前义项 v|摘，掘，凿，挖，挑选 已含“挑选”；Kaikki 无 computing pick 义"
+   }
+  ],
+  "picture": [
+   {
+    "key": "|[计] 图象",
+    "reason": "与主义项“图画、照片”重复",
+    "source": "当前义项 n|图画，照片…；Kaikki noun 'representation/image/photograph'"
+   },
+   {
+    "key": "|字形",
+    "reason": "“字形”为排版/字形专业义，非 picture 的通用高频义",
+    "source": "语言常识判断；Kaikki 所列为图画、形象、照片、影片等义，未见“字形”"
+   }
+  ],
+  "pilot": [
+   {
+    "key": "|[计] 引导",
+    "reason": "与“引导、导向器”重复，属[计]领域义",
+    "source": "当前义项 adj|引导的，控制的，试点的 与 vt|领航，驾驶，引导，试用 已含“引导”；Kaikki 无 computing bootstrap 义"
+   }
+  ],
+  "pint": [
+   {
+    "key": "|[医] 量磅，品脱",
+    "reason": "与主义项“品脱”重复，“量磅”为旧译名",
+    "source": "当前义项 n|品脱(干量或液量的单位)；Kaikki 义为 unit of volume"
+   }
+  ],
+  "pipe": [
+   {
+    "key": "|[计] 管道",
+    "reason": "与名词主义项“管、导管”重复",
+    "source": "当前义项 n|管，导管，输送管…；Kaikki 'rigid tube that transports fluid'"
+   }
+  ],
+  "plain": [
+   {
+    "key": "adv|清楚地，显然地",
+    "reason": "该副词义在现代英语中罕用、偏古旧",
+    "source": "Kaikki adv 义 'Plainly; distinctly.' 标注 archaic"
+   },
+   {
+    "key": "|[计] 无格式",
+    "reason": "与名词义项中的“无格式”重复",
+    "source": "当前义项 n|平原，草原，朴实无华的东西，无格式 已含“无格式”；Kaikki adj 'containing no extended or nonprinting characters (plain text)'"
+   }
+  ],
+  "platform": [
+   {
+    "key": "|[计] 平台",
+    "reason": "与主义项“平台”重复",
+    "source": "当前义项 n|站台，月台，讲台，论坛，平台 已含“平台”"
+   }
+  ],
+  "plot": [
+   {
+    "key": "|[计] 绘制",
+    "reason": "与动词义项“绘图”重复",
+    "source": "当前义项 vt|划分，绘图，密谋 已含“绘图”；Kaikki verb 'trace out (a graph or diagram)'"
+   }
+  ],
+  "plus": [
+   {
+    "key": "|[计] 正差",
+    "reason": "“正差”生僻且疑似词典/领域噪声，非通用义",
+    "source": "语言常识判断；Kaikki noun 义为正数、加号、附加物，无“正差”"
+   }
+  ],
+  "policy": [
+   {
+    "key": "|[医] 凭单，保险单",
+    "reason": "“保险单”与主义项重复，[医]标签亦不符",
+    "source": "当前义项 n|政策，方针，策略，保险单 已含“保险单”；Kaikki 'contract of insurance'"
+   }
+  ],
+  "politics": [
+   {
+    "key": "|[法] 政治，政治学，政纲",
+    "reason": "“政治、政治学”与主义项重复，[法]领域标注",
+    "source": "当前义项 n|政治，政治学，政见，政治活动；Kaikki 义为 political activities/stands"
+   }
+  ],
+  "poll": [
+   {
+    "key": "|[计] 轮询",
+    "reason": "与动词义项“轮询”重复",
+    "source": "当前义项 vt|对...进行民意测验，获得...票，剪树枝，轮询 已含“轮询”；Kaikki verb 义为投票/剪枝，无 computing polling 义"
+   },
+   {
+    "key": "adj|剪过毛的，修过枝的",
+    "reason": "形容词义为畜牧/园艺“去角、剪枝”用法，非通用高频义",
+    "source": "语言常识判断；Kaikki 未列形容词义，仅动词有 cut hair/horns 义"
+   }
+  ],
+  "poor": [
+   {
+    "key": "|[经] 低劣的，不良的",
+    "reason": "与主形容词义项“拙劣的”重复",
+    "source": "当前义项 adj|贫穷的，贫乏的，不幸的，可怜的，拙劣的，卑鄙的 已含“拙劣的”；Kaikki 'Of low quality'"
+   }
+  ],
+  "pop": [
+   {
+    "key": "|[计] 出现点，邮局协议",
+    "reason": "“邮局协议”为 POST 缩写、“出现点”为领域术语，属缩写/词典噪声",
+    "source": "语言常识判断；Kaikki noun 义为爆裂声、汽水、流行音乐等，无 POST 缩写义"
+   }
+  ],
+  "popular": [
+   {
+    "key": "|[经] 大众的，通俗的，普及的",
+    "reason": "与主义项重复，[经]领域标注",
+    "source": "当前义项 adj|通俗的，流行的，受欢迎的，大众的…；Kaikki 'common among the general public'"
+   }
+  ],
+  "population": [
+   {
+    "key": "|[化] 群体",
+    "reason": "“群体”为生态/统计专业义，与“人口”主义项无关，[化]标签亦牵强",
+    "source": "当前义项 n|人口，人口数；Kaikki 'collection of organisms' 等为专业义"
+   }
+  ],
+  "port": [
+   {
+    "key": "vt|左转舵，持(枪)",
+    "reason": "航海/军事操练义（左转舵、持枪），非通用高频",
+    "source": "Kaikki verb gloss 'To turn or put to the left ... said of the helm'，标注 imperative"
+   },
+   {
+    "key": "vi|左转舵",
+    "reason": "同上，航海操舵专用义",
+    "source": "Kaikki verb gloss 'said of the helm'，标注 imperative"
+   }
+  ],
+  "position": [
+   {
+    "key": "|[计] 位置",
+    "reason": "与主义项“位置”重复",
+    "source": "当前义项 n|位置，地位，身分，形势… 首项即“位置”"
+   }
+  ],
+  "post": [
+   {
+    "key": "vi|快速行进",
+    "reason": "古义“驿马疾行”，现代英语罕用",
+    "source": "语言常识判断；Kaikki 所列动词义为张贴、公布、公开指责，未列疾行义"
+   },
+   {
+    "key": "adv|急速地",
+    "reason": "古义/短语残留（post-haste），非独立高频副词义",
+    "source": "语言常识判断；Kaikki 无对应副词义"
+   },
+   {
+    "key": "|[计] 记入",
+    "reason": "与动词义项“登入帐”重复",
+    "source": "当前义项 vt|张帖，邮递，公布，登入帐，使熟悉，布置 已含记帐义；Kaikki 无 computing 义"
+   },
+   {
+    "key": "|登记，上电自检",
+    "reason": "“上电自检”为 POST 缩写噪声，“登记”与“登入帐”重复",
+    "source": "语言常识判断；POST = Power-On Self-Test 缩写，Kaikki 无该义"
+   }
+  ],
+  "practical": [
+   {
+    "key": "|[法] 事实上的，实际上的，接近...的",
+    "reason": "“实际上的”与主义项重复，“事实上的/接近…的”为法律或生硬译法，[法]标注",
+    "source": "当前义项 adj|实际的，现实的，实用性的；Kaikki 'relating to practice rather than theory'"
+   }
+  ],
+  "prefer": [
+   {
+    "key": "|[法] 给予优先权，优先偿还，提出",
+    "reason": "“提出”与主义项重复；“优先权/优先偿还”为法律金融专业义，[法]标注",
+    "source": "当前义项 vt|宁可，较喜欢，提出 已含“提出”；Kaikki 仅见 'prefer charges' 的法律用法"
+   }
+  ],
+  "pregnant": [
+   {
+    "key": "|[医] 妊娠的，有孕的",
+    "reason": "与主义项“怀孕的”重复",
+    "source": "当前义项 adj|怀孕的，充满的…；Kaikki 'Carrying developing offspring within the body'"
+   }
+  ],
+  "present": [
+   {
+    "key": "vi|举枪瞄准",
+    "reason": "军事操练用语（present arms），非通用高频义",
+    "source": "语言常识判断；Kaikki noun 义 'The position of a soldier in presenting arms' 证实为军事操练义"
+   }
+  ],
+  "president": [
+   {
+    "key": "|[经] 总经理，董事长，总裁",
+    "reason": "与主义项“总裁、董事长”重复",
+    "source": "当前义项 n|总统，总裁，董事长，(学院)院长… 已含“总裁、董事长”；Kaikki 'presiding over a corporation'"
+   }
+  ],
+  "private": [
+   {
+    "key": "|[计] 私人的",
+    "reason": "与 adj 义项「私人的，秘密的……」重复，[计] 标签只是域重复，无独立信息",
+    "source": "current duplicate：adj|私人的，秘密的，私立的，隐蔽的 已含「私人的」；条目带 [计] 域标签"
+   }
+  ],
+  "proceed": [
+   {
+    "key": "|[法] 所得，收入，收益",
+    "reason": "「所得，收入，收益」是复数名词 proceeds 的义项，被误挂在动词 proceed 下，属词典串条",
+    "source": "Kaikki proceed 仅有动词义项（advance / pass on / legal process 等），无名词「收益」义；[法] 条目应为 proceeds 混入"
+   }
+  ],
+  "product": [
+   {
+    "key": "|[化] 生产物",
+    "reason": "与名词义项「产品，结果」重复，化学「生产物」只是其子义",
+    "source": "current duplicate：n|产品，结果，乘积 已涵盖；Kaikki 化学义 'A chemical substance formed as a result of a chemical reaction' 归在 'Anything that is produced; a result' 之下"
+   }
+  ],
+  "profile": [
+   {
+    "key": "|[计] 提问档",
+    "reason": "「提问档」是旧式 [计] 生硬译法，非通用义项；现代计算机义为「用户档案/配置文件」而非此译",
+    "source": "Kaikki 无「提问档」对应义项；[计] 标签旧词典译法（语言常识判断）"
+   },
+   {
+    "key": "|剖面图法",
+    "reason": "工程制图方法名，属专业技术义，一般 CET6 学习者无需",
+    "source": "Kaikki 对应义 'A drawing exhibiting a vertical section of the ground along a surveyed line...'，属工程/地质专业用法"
+   },
+   {
+    "key": "|剖面法",
+    "reason": "与「剖面图法」重复的专业技术义",
+    "source": "current duplicate：与 |剖面图法 同义重复；Kaikki 同一条工程剖面 gloss"
+   }
+  ],
+  "program": [
+   {
+    "key": "|[计] 程序",
+    "reason": "与名词义项「程序」完全相同，[计] 标签重复",
+    "source": "current duplicate：n|节目，节目单，程序，纲要，大纲，计划 已含「程序」"
+   }
+  ],
+  "protect": [
+   {
+    "key": "|[法] 庇护，保护，警戒",
+    "reason": "与 vt 义项「防卫，保护，警戒」重复，[法] 标签无独立义",
+    "source": "current duplicate：vt|防卫，保护，警戒 已含「庇护/保护/警戒」；条目带 [法] 域标签"
+   }
+  ],
+  "province": [
+   {
+    "key": "|[法] 省，地方，领域",
+    "reason": "与名词义项「省，地方，职权，领域」几乎完全相同，纯属重复",
+    "source": "current duplicate：n|省，地方，职权，领域；条目带 [法] 域标签"
+   }
+  ],
+  "psychology": [
+   {
+    "key": "|[医] 心理学",
+    "reason": "与名词义项「心理学」重复，[医] 标签无独立义",
+    "source": "current duplicate：n|心理学，心理状态；条目带 [医] 域标签"
+   }
+  ],
+  "pupil": [
+   {
+    "key": "|[医] 瞳孔",
+    "reason": "与名词义项中的「瞳孔」重复，[医] 标签无独立义",
+    "source": "current duplicate：n|学生，门生，未成年人，瞳孔 已含「瞳孔」；条目带 [医] 域标签"
+   }
+  ],
+  "pure": [
+   {
+    "key": "|[医] 的，纯净的",
+    "reason": "「的，纯净的」是残缺的 [医] 词条，与 adj 义项重复且文字残缺",
+    "source": "current duplicate：adj|纯的，纯净的…… 已含该义；条目本身残缺（以「的」开头）且带 [医] 标签"
+   }
+  ],
+  "put": [
+   {
+    "key": "vi|出发，航行，发芽",
+    "reason": "「出发，航行」为古旧/书面边缘用法，「发芽」实为 put forth 短语义，不是 put 的常用独立 vi 义",
+    "source": "Kaikki put 动词义项以「放置/表达/使处于某状态」为主，无 'germinate' 独立义；'to steer; to direct one's course' 属边缘用法（语言常识判断）"
+   },
+   {
+    "key": "|[计] 发送文件",
+    "reason": "'PUT' 是 FTP/协议命令缩写，不是 put 的通用词义",
+    "source": "Kaikki 无「发送文件」义；[计] 标签为命令缩写混入"
+   }
+  ],
+  "quality": [
+   {
+    "key": "|[计] 品质",
+    "reason": "与名词义项「品质」重复，[计] 标签无独立义",
+    "source": "current duplicate：n|品质，特性，才能，质量；条目带 [计] 域标签"
+   }
+  ],
+  "quantity": [
+   {
+    "key": "|[计] 数量",
+    "reason": "与名词义项「数量」重复，[计] 标签无独立义",
+    "source": "current duplicate：n|量，数量，总量；条目带 [计] 域标签"
+   },
+   {
+    "key": "|量",
+    "reason": "只重复「量」，无任何独立信息",
+    "source": "current duplicate：n|量，数量，总量 已含「量」"
+   }
+  ],
+  "question": [
+   {
+    "key": "|[计] 询问",
+    "reason": "与名词义项「询问」重复，[计] 标签无独立义",
+    "source": "current duplicate：n|问题，询问；条目带 [计] 域标签"
+   }
+  ],
+  "queue": [
+   {
+    "key": "|[计] 队列",
+    "reason": "与名词义项「队列」重复，[计] 标签无独立义",
+    "source": "current duplicate：n|辫子，一队人，队列 已含「队列」；条目带 [计] 域标签"
+   }
+  ],
+  "quit": [
+   {
+    "key": "n|离开",
+    "reason": "名词化的「离开」罕用；Kaikki 的 quit 名词义实为一种鸟名（异源），不支持该名词义",
+    "source": "Kaikki noun gloss 仅 'Any of numerous species of small passerine birds'，无「离开」名词义；名词化罕用（语言常识判断）"
+   }
+  ],
+  "race": [
+   {
+    "key": "|[计] 竞争",
+    "reason": "与「比赛，竞赛」义重复，[计] 只是 race condition 术语",
+    "source": "current duplicate：n|种族，人种，赛跑，比赛…… 与 vi|赛跑，竞赛；条目带 [计] 域标签"
+   },
+   {
+    "key": "|追赶",
+    "reason": "与「赛跑，竞赛，疾走」义重叠，Kaikki 无独立的「追赶」义",
+    "source": "Kaikki 动词义为 'to take part in a race / to move at high speed'，无独立「追赶」义（语言常识判断）"
+   },
+   {
+    "key": "|欧州高级通信研究开发计划",
+    "reason": "RACE 是欧盟科研计划缩写，属缩写噪音，且「欧州」为「欧洲」笔误",
+    "source": "缩写混入；Kaikki 无此义项；词条含错别字「欧州」"
+   }
+  ],
+  "railway": [
+   {
+    "key": "|[经] 铁路",
+    "reason": "与名词义项「铁路」重复，[经] 标签无独立义",
+    "source": "current duplicate：n|铁路，轨道；条目带 [经] 域标签"
+   }
+  ],
+  "range": [
+   {
+    "key": "|[计] 量程",
+    "reason": "与名词义项「范围，射程」重复，[计] 标签只是计量术语",
+    "source": "current duplicate：n|排，行，山脉，范围，行列，射程；条目带 [计] 域标签"
+   },
+   {
+    "key": "|范围",
+    "reason": "与名词义项「范围」完全重复",
+    "source": "current duplicate：n|……范围……已含「范围」"
+   },
+   {
+    "key": "|域",
+    "reason": "与「范围」重复，且「域」为数学/术语性简写",
+    "source": "current duplicate：n|……范围…… 与 |范围 同义；Kaikki 数学义 'The set of values (points) which a function can obtain'"
+   },
+   {
+    "key": "|距离",
+    "reason": "与名词义项「射程」重复，无独立信息",
+    "source": "current duplicate：n|……射程 已含距离义；Kaikki 'The distance from a person or sensor...'"
+   }
+  ],
+  "ratio": [
+   {
+    "key": "|[医] 比，比率，比例",
+    "reason": "与名词义项「比，比率」重复，[医] 标签无独立义",
+    "source": "current duplicate：n|比，比率；条目带 [医] 域标签"
+   }
+  ],
+  "raw": [
+   {
+    "key": "n|擦伤处，半成品",
+    "reason": "「擦伤处，半成品」为罕见名词化用法，一般语料几乎不用",
+    "source": "Kaikki raw 名词仅列 'An unprocessed sugar'，无「擦伤处/半成品」义（语言常识判断）"
+   },
+   {
+    "key": "vt|擦伤",
+    "reason": "动词「擦伤」罕用，Kaikki 无 raw 动词词条",
+    "source": "Kaikki raw 无 verb 词条；语言常识判断"
+   },
+   {
+    "key": "|[计] 写后读",
+    "reason": "RAW 是 read-after-write 缩写，属术语噪音，不是 raw 的词义",
+    "source": "Kaikki 无此义；[计] 标签为缩写混入"
+   }
+  ],
+  "react": [
+   {
+    "key": "|[医] 应答，发生反应",
+    "reason": "与 vi 义项「起反应，起作用」重复，[医] 标签无独立义",
+    "source": "current duplicate：vi|起反应，起作用，反攻；条目带 [医] 域标签"
+   }
+  ],
+  "read": [
+   {
+    "key": "|[计] 读取",
+    "reason": "与动词/名词义项「读，阅读」「读取」重复，[计] 标签无独立义",
+    "source": "current duplicate：v|读，阅读，理解 与 n|读取，阅读；条目带 [计] 域标签"
+   }
+  ],
+  "ready": [
+   {
+    "key": "adv|预先，迅速",
+    "reason": "「ready」作副词（预先/迅速）为古旧或方言用法，现代英语几乎不用",
+    "source": "Kaikki ready 仅有 adj/verb/noun 词条，无 adverb 义项（语言常识判断）"
+   }
+  ],
+  "receive": [
+   {
+    "key": "|[计] 接收",
+    "reason": "与 vt 义项「收到，接到……」重复，[计] 标签无独立义",
+    "source": "current duplicate：vt|收到，接到，得到……；条目带 [计] 域标签"
+   }
+  ],
+  "recent": [
+   {
+    "key": "|[经] 最近的，新进的",
+    "reason": "与 adj 义项「最近的，近代的，最新的」重复，[经] 标签无独立义",
+    "source": "current duplicate：adj|最近的，近代的，最新的；条目带 [经] 域标签"
+   }
+  ],
+  "recommend": [
+   {
+    "key": "|[经] 建议，推荐",
+    "reason": "与 vt 义项「推荐，介绍，劝告……」重复，[经] 标签无独立义",
+    "source": "current duplicate：vt|推荐，介绍，劝告，使受欢迎，托付；条目带 [经] 域标签"
+   }
+  ],
+  "record": [
+   {
+    "key": "|[计] 录制，记录",
+    "reason": "与动词/名词义项「记录，录音」重复，[计] 标签无独立义",
+    "source": "current duplicate：vt|记录，记载……将...录音 与 n|记录……；条目带 [计] 域标签"
+   }
+  ],
+  "red": [
+   {
+    "key": "|[计] 简化，减少",
+    "reason": "RED 是 reduce 的缩写，属缩写噪音，不是 red 的词义",
+    "source": "Kaikki 无此义；[计] 标签为缩写混入"
+   }
+  ],
+  "reduce": [
+   {
+    "key": "|[计] 缩小",
+    "reason": "带 [计] 标签，与 vi 义项「减少…缩小」重复，属同一义项的技术词典重复条目。",
+    "source": "当前义项重复（与 vi|减少，减肥，缩小 同义）；所给 Kaikki 仅列通用减少/降级/分解义，无独立计算机义。"
+   }
+  ],
+  "refrigerator": [
+   {
+    "key": "|[计] 冷冻机",
+    "reason": "带 [计] 标签，与「电冰箱，冷藏库」重复，实为同一制冷设备。",
+    "source": "当前义项重复；Kaikki 义项均为制冷设备（household or commercial appliance / device for non-food items），无独立计算机义。"
+   },
+   {
+    "key": "|致冷器",
+    "reason": "「致冷器」即制冷机/冰箱，与首义项重复的旧式译名。",
+    "source": "当前义项重复；Kaikki 'A household or commercial appliance used for keeping food fresh using refrigeration'。"
+   }
+  ],
+  "regular": [
+   {
+    "key": "|[计] 正常体",
+    "reason": "与 n|正常体 完全重复，仅多一个 [计] 标签。",
+    "source": "当前义项重复；所给 Kaikki 中该义项无对应独立名词义（仅形容词与「正规军」类名词义）。"
+   }
+  ],
+  "regulate": [
+   {
+    "key": "|[经] 控制，管理",
+    "reason": "带 [经] 标签，与 vt 义项「管理，控制…」重复。",
+    "source": "当前义项重复；Kaikki 动词义均为 dictate policy / control or direct / adjust，无独立经济义。"
+   }
+  ],
+  "remark": [
+   {
+    "key": "|[计] 注释",
+    "reason": "带 [计] 标签，与「评论」义重复，指程序中的注释。",
+    "source": "当前义项重复；Kaikki 仅列 notice / observation / comment / state 等通用义，无计算机义。"
+   }
+  ],
+  "remote": [
+   {
+    "key": "adj|绝少的",
+    "reason": "与「微乎其微的」同义（均指机会/可能性极小），属重复义项。",
+    "source": "Kaikki 对 remote 形容词仅有一条 'Slight.' 释义；当前「绝少的」「微乎其微的」两条对应同一义。"
+   }
+  ],
+  "rent": [
+   {
+    "key": "|rend的过去式和过去分词",
+    "reason": "仅为 rend 的过去式/过去分词词形注记，不是独立词义。",
+    "source": "Kaikki 'simple past and past participle of rend'，tags 为 form-of / past / participle。"
+   }
+  ],
+  "repeat": [
+   {
+    "key": "|[计] 重复",
+    "reason": "带 [计] 标签，与 n|重复，反复 完全重复。",
+    "source": "当前义项重复；Kaikki 仅列通用重复/复述义，无独立计算机义。"
+   }
+  ],
+  "reply": [
+   {
+    "key": "|[计] 答复",
+    "reason": "带 [计] 标签，与 n|答复，回答 完全重复。",
+    "source": "当前义项重复；Kaikki 仅列通用回答/回应义，无独立计算机义。"
+   }
+  ],
+  "report": [
+   {
+    "key": "|[计] 报告",
+    "reason": "带 [计] 标签，与 n|报告 完全重复。",
+    "source": "当前义项重复；Kaikki 仅列通用报告/报道义，无独立计算机义。"
+   }
+  ],
+  "request": [
+   {
+    "key": "|[计] 请求",
+    "reason": "带 [计] 标签，与 n|请求 完全重复。",
+    "source": "当前义项重复；Kaikki 未把网络请求单列为独立常用义，通用 'ask for' 义已覆盖。"
+   }
+  ],
+  "require": [
+   {
+    "key": "|[法] 需要，要求，命令",
+    "reason": "带 [法] 标签，与 vt 义项「需要，命令，要求」完全重复。",
+    "source": "当前义项重复；Kaikki 义项均为 demand / need / ask，无独立法律义。"
+   }
+  ],
+  "resource": [
+   {
+    "key": "|[计] 资源",
+    "reason": "带 [计] 标签，与 n|资源 完全重复。",
+    "source": "当前义项重复；Kaikki 'Hardware or software that is accessible by a computer…' 是「资源」同一概念的领域变体。"
+   }
+  ],
+  "result": [
+   {
+    "key": "|[计] 结果",
+    "reason": "带 [计] 标签，与 n|结果 完全重复。",
+    "source": "当前义项重复；Kaikki 仅列通用结果/后果义，无独立计算机义。"
+   }
+  ],
+  "return": [
+   {
+    "key": "|[计] 返回",
+    "reason": "带 [计] 标签，与 vi|返回 重复。",
+    "source": "当前义项重复；Kaikki 仅列通用返回/归还义，无独立计算机义。"
+   }
+  ],
+  "revolution": [
+   {
+    "key": "|[化] 回转",
+    "reason": "带 [化] 标签，「回转」与首义项中的「旋转」重复。",
+    "source": "当前义项重复；Kaikki 'Rotation: the turning of an object around an axis' 已含于 n|革命，大变革，旋转…。"
+   }
+  ],
+  "rid": [
+   {
+    "key": "|[法] 免除，清除，摆脱",
+    "reason": "带 [法] 标签，与 vt 义项「免除，清除，使摆脱」完全重复。",
+    "source": "当前义项重复；Kaikki 义项均为 free / remove / clear 类，无独立法律义。"
+   }
+  ],
+  "right": [
+   {
+    "key": "|[计] 右，权利",
+    "reason": "带 [计] 标签，与 n|权利，右边 完全重复。",
+    "source": "当前义项重复；Kaikki 的 right/权利与方向义已由 n 与 adj 义项覆盖。"
+   }
+  ],
+  "river": [
+   {
+    "key": "|[法] 河流，江河，内河",
+    "reason": "带 [法] 标签，与 n|河，江 完全重复。",
+    "source": "当前义项重复；Kaikki 仅列河流及引申义，无独立法律义。"
+   }
+  ],
+  "road": [
+   {
+    "key": "|[法] 公路，道路，行车道",
+    "reason": "带 [法] 标签，与 n|路，道路，公路 重复。",
+    "source": "当前义项重复；Kaikki 仅列道路及引申义，无独立法律义。"
+   }
+  ],
+  "robot": [
+   {
+    "key": "|[计] 机器人",
+    "reason": "带 [计] 标签，与「机械人，自动机械」义重复。",
+    "source": "当前义项重复；Kaikki 'An intelligent mechanical being…' / 'A machine built to carry out… tasks' 已覆盖。"
+   },
+   {
+    "key": "|自动机",
+    "reason": "「自动机」与首义项中的「自动机械」同义重复。",
+    "source": "当前义项重复；Kaikki 'A machine built to carry out some complex task… by physically moving' 即自动机械。"
+   }
+  ],
+  "rose": [
+   {
+    "key": "vt|使成玫瑰色",
+    "reason": "「使成玫瑰色」不是现代英语常用动词义，属罕见词典义，CET6 学习者无需掌握。",
+    "source": "所给 Kaikki 数据中 rose 仅列名词义项，无动词用法（语言常识判断）。"
+   },
+   {
+    "key": "|rise的过去式",
+    "reason": "仅为 rise 的过去式词形注记，属语法形态信息，不是独立义项。",
+    "source": "词形变化注记（rise 的过去式），非词典释义条目（语言常识判断）。"
+   }
+  ],
+  "route": [
+   {
+    "key": "|[计] 传递，路由设定程序",
+    "reason": "[计] 标签的专业义，与名词『路径，途径，路线』重复",
+    "source": "当前义项带 [计] 标签，且与 n|路径，途径，路线 重复；Kaikki noun: 'A specific entry in a router that tells the router how to transmit the data it receives'"
+   }
+  ],
+  "row": [
+   {
+    "key": "|[计] 行",
+    "reason": "[计] 标签义项，与 n|排，行 重复",
+    "source": "当前义项带 [计] 标签且与 n|排，行 重复；Kaikki noun: 'A horizontal line of entries in a table, etc., going from left to right'"
+   }
+  ],
+  "rule": [
+   {
+    "key": "|[计] 规则，水线",
+    "reason": "[计] 标签义项，与名词『规则』重复，『水线』为排版专业义",
+    "source": "当前义项带 [计] 标签且与 n|规则，统治… 重复；Kaikki noun: 'A thin plate of brass or other metal… used for printing lines' 标注 dated，属排版专业义"
+   }
+  ],
+  "run": [
+   {
+    "key": "adj|熔化的，融化的，浇铸的",
+    "reason": "罕用形容词义，CET 学习者不需要",
+    "source": "语言常识判断：Kaikki 该词条只列动词义，未收此形容词义；『熔化的』为罕用用法（常用 runny）"
+   },
+   {
+    "key": "|run的过去式和过去分词",
+    "reason": "词形变化说明而非义项，且内容有误（run 的过去式是 ran）",
+    "source": "语言常识判断：释义为词形变化说明而非词义；run 的过去式应为 ran，本条属词典噪声"
+   },
+   {
+    "key": "|[计] 运行",
+    "reason": "[计] 标签义项，与 vt|…运行 重复",
+    "source": "当前义项带 [计] 标签，且与 vt|…管理，经营，使流出，运行 重复"
+   }
+  ],
+  "rural": [
+   {
+    "key": "|[法] 农村的，乡村的，有关农业的",
+    "reason": "[法] 标签义项，与形容词义完全重复",
+    "source": "当前义项带 [法] 标签且与 adj|乡下的，田园的，乡村风味的 重复；Kaikki adj: 'Relating to the countryside or to agriculture'"
+   }
+  ],
+  "sale": [
+   {
+    "key": "|[经] 卖，出售",
+    "reason": "[经] 标签义项，与名词义重复",
+    "source": "当前义项带 [经] 标签且与 n|出售，卖，拍卖… 重复；Kaikki noun: 'An exchange of goods or services for currency or credit'"
+   },
+   {
+    "key": "|销售(货)",
+    "reason": "与名词『出售，卖』重复的词典罗列义",
+    "source": "当前义项与 n|出售，卖，拍卖，销售额，廉价出售 重复，无独立词义"
+   }
+  ],
+  "satellite": [
+   {
+    "key": "|[医] 伴行静脉，陪静脉，陪病部，随体，卫星",
+    "reason": "[医] 标签的解剖学专业义，与常用义『人造卫星』无关",
+    "source": "当前义项带 [医] 标签，为医学/解剖学专业义；Kaikki 该词条未收此解剖义，CET 学习者不需要"
+   }
+  ],
+  "save": [
+   {
+    "key": "|[计] 保存",
+    "reason": "[计] 标签义项，与 vt|…保存 重复",
+    "source": "当前义项带 [计] 标签且与 vt|解救，挽救，储蓄，保存，节省，保留 中的『保存』重复；Kaikki verb: 'To write (a file) to disk or other storage medium'"
+   }
+  ],
+  "scenario": [
+   {
+    "key": "|[计] 方案",
+    "reason": "[计] 标签义项，与名词义『方案』重复",
+    "source": "当前义项带 [计] 标签且与 n|…方案，事态 重复"
+   }
+  ],
+  "scene": [
+   {
+    "key": "|[化] 现场",
+    "reason": "[化] 标签义项，与名词『发生地点』重复",
+    "source": "当前义项带 [化] 标签且与 n|场，情景，镜头，发生地点… 重复；Kaikki noun: 'The location of an event that attracts attention'"
+   }
+  ],
+  "science": [
+   {
+    "key": "|[医] 科学",
+    "reason": "[医] 标签义项，与名词义完全重复",
+    "source": "当前义项带 [医] 标签且与 n|科学，学科，学问，自然科学 重复"
+   }
+  ],
+  "score": [
+   {
+    "key": "vt|画线于",
+    "reason": "罕用动词义（在表面刻线/做记号），非 CET 常用义",
+    "source": "语言常识判断：Kaikki 该词条仅列名词义；名词 'A notch or incision… tally mark' 对应此罕用刻线义，日常不用"
+   }
+  ],
+  "screen": [
+   {
+    "key": "|[计] 筛选",
+    "reason": "[计] 标签义项，与 vt|…筛，甄别 重复",
+    "source": "当前义项带 [计] 标签且与 vt|掩蔽，放映，拍摄，掩护，筛，甄别 中的『筛，甄别』重复；Kaikki noun: 'Searching through a sample for a target; an act of screening'"
+   }
+  ],
+  "script": [
+   {
+    "key": "|[计] 手写体，小型程序",
+    "reason": "[计] 标签义项，『手写体』与名词义重复，『小型程序』为计算机专业义",
+    "source": "当前义项带 [计] 标签，『手写体』与 n|手迹，手稿，正本，手写体 重复；Kaikki noun: 'A brief and simple program' 为计算机义"
+   }
+  ],
+  "sea": [
+   {
+    "key": "|[法] 海，海洋",
+    "reason": "[法] 标签义项，与名词义完全重复",
+    "source": "当前义项带 [法] 标签且与 n|海，海洋，海浪，大量 重复"
+   }
+  ],
+  "search": [
+   {
+    "key": "|[计] 搜索，路径检索程序",
+    "reason": "[计] 标签义项，与动词『搜索』重复，且含程序名罗列",
+    "source": "当前义项带 [计] 标签且与 v|…搜索 重复；Kaikki 无『路径检索程序』这一独立名词义"
+   }
+  ],
+  "secondary": [
+   {
+    "key": "|[化] 仲(指CH-3...CH(CH-3)-型支链烃基或指二元胺及R-2CHOH型的醇)",
+    "reason": "[化] 标签的有机化学专业义，CET 学习者不需要",
+    "source": "当前义项带 [化] 标签；Kaikki adj: 'Derived from a parent compound by replacement of two atoms of hydrogen by organic radicals'，属化学专业义"
+   },
+   {
+    "key": "|第二",
+    "reason": "与形容词义『第二的』重复",
+    "source": "当前义项与 adj|中级的，中等的，次要的，第二的… 中的『第二的』重复，无独立词义"
+   }
+  ],
+  "secretary": [
+   {
+    "key": "|[经] 秘书",
+    "reason": "[经] 标签义项，与名词义『秘书』重复",
+    "source": "当前义项带 [经] 标签且与 n|秘书，书记，大臣 中的『秘书』重复"
+   }
+  ],
+  "section": [
+   {
+    "key": "|[计] 扇区",
+    "reason": "[计] 标签义项，与名词义『扇区』重复",
+    "source": "当前义项带 [计] 标签且与 n|区段，部分，区域，节，截面，处，科，区，扇区 中的『扇区』重复"
+   }
+  ],
+  "sector": [
+   {
+    "key": "vt|把...分成扇形",
+    "reason": "罕用动词义，Kaikki 未收该动词义",
+    "source": "语言常识判断：Kaikki 该词条仅列名词义，未收『把…分成扇形』这一罕用动词用法"
+   },
+   {
+    "key": "|[计] 扇面",
+    "reason": "[计] 标签义项，与名词『扇形/扇区』重复",
+    "source": "当前义项带 [计] 标签且与 n|扇形…段，区段 中的『扇形』重复；Kaikki noun: 'A fixed-sized unit… stored on a track of a digital medium'"
+   },
+   {
+    "key": "|扇区",
+    "reason": "与名词义『扇区』重复",
+    "source": "当前义项与 n|扇形，部门，部分，函数尺，象限仪，段，区段 中的『区段/扇区』重复"
+   },
+   {
+    "key": "|段",
+    "reason": "与名词义『段』重复",
+    "source": "当前义项与 n|…段，区段 中的『段』重复"
+   },
+   {
+    "key": "|区段",
+    "reason": "与名词义『区段』重复",
+    "source": "当前义项与 n|…段，区段 中的『区段』重复"
+   }
+  ],
+  "seek": [
+   {
+    "key": "|[计] 查找",
+    "reason": "[计] 标签义项，与动词『寻找，搜索』重复",
+    "source": "当前义项带 [计] 标签且与 vt|寻求，寻找，探索…搜索 及 vi|寻找，搜索 重复"
+   }
+  ],
+  "select": [
+   {
+    "key": "n|被挑选者，精萃",
+    "reason": "罕用名词义，Kaikki 未收该名词义",
+    "source": "语言常识判断：Kaikki 该词条仅列形容词和动词义，未收名词『被挑选者，精萃』"
+   },
+   {
+    "key": "|[计] 选定",
+    "reason": "[计] 标签义项，与动词『选择，挑选』重复",
+    "source": "当前义项带 [计] 标签且与 v|选择，挑选 重复"
+   }
+  ],
+  "self": [
+   {
+    "key": "vt|使近亲繁殖，使自花授精",
+    "reason": "生物学专业义，CET 学习者不需要",
+    "source": "Kaikki verb: 'To fertilize by the same strain; to inbreed'，属生物学专业用法"
+   },
+   {
+    "key": "vi|自花授精",
+    "reason": "生物学专业义，CET 学习者不需要",
+    "source": "Kaikki verb: 'To fertilize by the same individual; to self-fertilize or self-pollinate'，属植物学专业用法"
+   },
+   {
+    "key": "adj|同一的",
+    "reason": "古旧形容词义",
+    "source": "Kaikki adj 'Same, identical' 标注 obsolete（古旧）"
+   }
+  ],
+  "send": [
+   {
+    "key": "n|(船的)上升运动",
+    "reason": "罕用航海名词义",
+    "source": "语言常识判断：Kaikki 该词条名词义只有数据传输和屏幕『发送』图标，未收航海『上升运动』义"
+   },
+   {
+    "key": "|[计] 发送",
+    "reason": "[计] 标签义项，与 vt|发送 重复",
+    "source": "当前义项带 [计] 标签且与 vt|发送，使进入，寄… 中的『发送』重复"
+   }
+  ],
+  "sense": [
+   {
+    "key": "|[计] 阅读",
+    "reason": "释义『阅读』与 sense 常用义不符，疑为词典噪声",
+    "source": "Kaikki 各义项均无『阅读』义；当前条带 [计] 标签且释义与词义不对应，属词典噪声"
+   },
+   {
+    "key": "|检测",
+    "reason": "与动词义『检测』重复",
+    "source": "当前义项与 vt|感觉，觉察，检测 中的『检测』重复"
+   }
+  ],
+  "sentence": [
+   {
+    "key": "|[计] 句子",
+    "reason": "[计] 标签义项，与名词『句子』重复",
+    "source": "当前义项带 [计] 标签且与 n|句子，命题，宣判 中的『句子』重复"
+   }
+  ],
+  "separate": [
+   {
+    "key": "n|独立件，抽印本",
+    "reason": "罕用名词义（期刊抽印本/单件商品）",
+    "source": "Kaikki noun: 'A printing of an article from a periodical as its own distinct publication'；属出版/零售专业义，非 CET 常用义"
+   }
+  ],
+  "serious": [
+   {
+    "key": "|[电] 严重的",
+    "reason": "[电] 标签义项，与形容词『严重的』重复",
+    "source": "当前义项带 [电] 标签且与 adj|严肃的，认真的，重要的，严重的 中的『严重的』重复"
+   }
+  ],
+  "servant": [
+   {
+    "key": "|[法] 受雇人，服务者，公务员",
+    "reason": "[法] 标签义项，与名词『公务员，雇员』重复",
+    "source": "当前义项带 [法] 标签且与 n|仆人，有用物，公务员，雇员 中的『公务员，雇员』重复"
+   }
+  ],
+  "session": [
+   {
+    "key": "|[计] 会话，对话，会晤，通用任务程序",
+    "reason": "[计] 标签义项，与『会议』义重复，且『通用任务程序』为词典噪声",
+    "source": "当前义项带 [计] 标签，『会话，对话，会晤』与 n|期间，开庭期，会议，学期 的会议义重叠；Kaikki 计算机义为 'The sequence of interactions between client and server'，『通用任务程序』无对应来源"
+   }
+  ],
+  "setting": [
+   {
+    "key": "|[计] 设置",
+    "reason": "[计] 标签义项，与名词『调整』重复",
+    "source": "当前义项带 [计] 标签且与 n|环境，背景，布景，镶嵌，调整… 中的『调整』重复；Kaikki noun: 'A level or placement to which a knob or control is set'"
+   }
+  ],
+  "shade": [
+   {
+    "key": "|[计] 底纹",
+    "reason": "与 n 义项中的「底纹」完全重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|荫，阴暗，遮光物，灯罩，帘，浓淡，微量，底纹 已含「底纹」；Kaikki noun 仅有 'A variety of a color' 等颜色义，无独立计算机义。"
+   }
+  ],
+  "shadow": [
+   {
+    "key": "|[计] 阴影",
+    "reason": "与 n 义项中的「阴影」完全重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|阴影，荫，影子…… 已含「阴影」；Kaikki noun 首义即 'A dark image projected onto a surface'，无独立计算机义。"
+   }
+  ],
+  "shape": [
+   {
+    "key": "|[计] 形状",
+    "reason": "与 n 义项中的「形状」完全重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|形状，形态，外形，形式，身材 已含「形状」；Kaikki noun 有 'A graphical representation of an object's form'，无独立计算机义。"
+   }
+  ],
+  "share": [
+   {
+    "key": "|文件锁定及检测磁盘更动和对超过32MB硬盘分区的支持",
+    "reason": "这是 DOS/NetWare SHARE 命令的说明文字，不是词义，属词典噪声。",
+    "source": "该文字描述文件锁定与磁盘分区支持，与 Kaikki 的份额/分享/股份义均不对应，明显为命令行说明混入。"
+   }
+  ],
+  "sheet": [
+   {
+    "key": "|[计] 工作表",
+    "reason": "[计] 计算机表格术语，与「床单/纸张/薄片」等常用义无关，普通学习者不需要。",
+    "source": "Kaikki noun 仅列床单、纸张、薄片、帆脚索等义，无 'worksheet' 义；[计] 标签为专业词典增补。"
+   }
+  ],
+  "shelf": [
+   {
+    "key": "|[化] 架子",
+    "reason": "与 n 义项「架子」完全重复，[化] 标签不成立，化学中无此常用义。",
+    "source": "当前 n|架子，搁板 已覆盖；Kaikki noun 仅有 'A flat, rigid structure...' 等，无化学义。"
+   }
+  ],
+  "shock": [
+   {
+    "key": "adj|蓬乱浓密的",
+    "reason": "罕见的形容词义（毛发蓬乱浓密），不属于通用高频义。",
+    "source": "Kaikki adj 仅列 'Causing intense surprise, horror, etc.'，无「蓬乱浓密」义，该义为低频词典义。"
+   }
+  ],
+  "shot": [
+   {
+    "key": "vt|装弹，使成颗粒状",
+    "reason": "罕见/技术性动词义（装弹、制粒），非通用词义。",
+    "source": "Kaikki 中 shot 的 verb 仅有 'simple past and past participle of shoot'，无「装弹/制粒」义；该 vt 为低频专业义。"
+   },
+   {
+    "key": "adj|杂色的，交织着的，渗透的，点焊的，破旧的",
+    "reason": "整体为低频专业/俚语形容词义（杂色织物、点焊、破旧），CET 核心不需要。",
+    "source": "Kaikki adj 虽有 'woven from warp and weft strands of different colours' 与 colloquial 'Worn out or broken'，但均为低频细分义，非高频常用义。"
+   }
+  ],
+  "show": [
+   {
+    "key": "|[计] 显示",
+    "reason": "与 n 义项「显示」及 vt 义项「显示」重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|显示，表现…… 与 vt|表示，显示…… 均已含「显示」；Kaikki verb 首义 'To display, convey or exhibit' 已覆盖。"
+   }
+  ],
+  "shy": [
+   {
+    "key": "n|惊跳，惊避",
+    "reason": "名词「惊跳/惊避」为低频义（多指马受惊），通用学习不需要。",
+    "source": "Kaikki noun 'A sudden start aside, as by a horse' 属低频具体义；常用义为形容词「羞怯」。"
+   },
+   {
+    "key": "vt|乱投，乱掷",
+    "reason": "及物动词「乱投/乱掷」为罕见义，常用的是 vi 的 shy away。",
+    "source": "Kaikki verb 'To throw sideways with a jerk; to fling' 为低频义，且无常用标注；语言常识判断。"
+   }
+  ],
+  "sight": [
+   {
+    "key": "adj|即席的，见票即付的",
+    "reason": "金融/票据领域的形容词义（即期、见票即付），非通用义。",
+    "source": "Kaikki 无形容词词性条目；该义仅见于 sight draft 等金融短语，普通学习者不需要。"
+   }
+  ],
+  "sign": [
+   {
+    "key": "|[计] 正负号",
+    "reason": "与 n 义项中的「正负号」重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|符号，招牌，征兆，正负号，手势 已含「正负号」；Kaikki 'Positive or negative polarity' 已覆盖。"
+   },
+   {
+    "key": "|符号",
+    "reason": "与 n 义项中的「符号」重复，且无词性，属重复条目。",
+    "source": "当前 n|符号，招牌…… 已含「符号」；Kaikki 'A mark or another symbol used to represent something' 已覆盖。"
+   },
+   {
+    "key": "|符号字符",
+    "reason": "与 n 义项「符号」重复的变体条目，无词性，属词典条目噪声。",
+    "source": "当前 n|符号，招牌…… 已含「符号」；Kaikki 无 'symbol character' 这一独立义项。"
+   }
+  ],
+  "silent": [
+   {
+    "key": "|[医] 静止的，无症状的",
+    "reason": "与 adj 义项中的「静止的」重复，[医] 为同一形容词的医学细分。",
+    "source": "adj|沉默的，安静的，无声的，静止的 已含「静止的」；Kaikki adj 'Undiagnosed or undetected because of an absence of symptoms' 对应「无症状的」，属医学细分而非独立词义。"
+   }
+  ],
+  "single": [
+   {
+    "key": "vi|击出一垒打",
+    "reason": "棒球专项义（击出一垒打），普通学习者不需要。",
+    "source": "Kaikki 无动词义，仅名词 'A hit in baseball where the batter advances to first base'；该 vi 为专业延伸义。"
+   },
+   {
+    "key": "|[计] 单精度型",
+    "reason": "[计] 计算机术语（单精度），与单身的/单一的等常用义无关。",
+    "source": "Kaikki 无「单精度」义；[计] 标签为专业词典增补。"
+   }
+  ],
+  "situation": [
+   {
+    "key": "|[医] 情境，处境",
+    "reason": "与 n 义项中的「情形，境遇」重复，[医] 标签为重复条目。",
+    "source": "n|情形，境遇，位置 已覆盖；Kaikki noun 首义 'The combination of circumstances...' 即情形/处境，无独立医学义。"
+   }
+  ],
+  "skill": [
+   {
+    "key": "|[化] 技能",
+    "reason": "与 n 义项中的「技能」完全重复，[化] 标签不成立。",
+    "source": "当前 n|技术，技巧，技能…… 已含「技能」；Kaikki noun 'A capacity to do something well' 已覆盖，无化学义。"
+   }
+  ],
+  "slave": [
+   {
+    "key": "|[计] 从设备",
+    "reason": "与 n 义项中的「从动装置」为同一义项，[计] 标签重复。",
+    "source": "当前 n|奴隶，从动装置，卑鄙的人 已含从动装置义；Kaikki 'A device ... subject to the control of another (a master)' 同一义。"
+   }
+  ],
+  "snap": [
+   {
+    "key": "|[计] 子网访问协议",
+    "reason": "SNAP 是 SubNetwork Access Protocol 的缩写，不是 snap 的词义，属缩写噪声。",
+    "source": "该条为网络协议缩写；Kaikki 的 snap 名词义（啪声、猛咬、快照等）无此义。"
+   }
+  ],
+  "soap": [
+   {
+    "key": "|[计] 评语",
+    "reason": "与肥皂义无关，疑为缩写或词典噪声。",
+    "source": "Kaikki soap 无「评语」义（仅有肥皂、肥皂剧、俚语贿赂等）；[计] 标签下条目与词义不符。"
+   }
+  ],
+  "sock": [
+   {
+    "key": "adj|非常成功的",
+    "reason": "dated 俚语义（非常成功的），不属于通用高频义。",
+    "source": "Kaikki adj 'Extremely successful' 明确标注 dated + slang。"
+   }
+  ],
+  "software": [
+   {
+    "key": "|[计] 软设备",
+    "reason": "与 n|软件 重复的过时/直译计算机术语。",
+    "source": "Kaikki 仅 'Encoded computer instructions...' 即软件；[计]「软设备」为重复直译，不是独立义项。"
+   }
+  ],
+  "solar": [
+   {
+    "key": "|[医] 太阳的",
+    "reason": "与 adj 义项「太阳的」完全重复，[医] 为重复标签。",
+    "source": "adj|太阳的，日光的，源自太阳的 已含「太阳的」；Kaikki adj 首义 'Of or pertaining to the sun' 已覆盖，无独立医学义。"
+   },
+   {
+    "key": "|腹腔丛的",
+    "reason": "解剖学术语片段（solar plexus 腹腔丛），无词性，非通用形容义词义。",
+    "source": "Kaikki adj 各义均为太阳/日光相关，无「腹腔丛」义；该条为专业短语截取。"
+   }
+  ],
+  "solid": [
+   {
+    "key": "|[计] 原色",
+    "reason": "[计] 术语「原色」与 adj「纯质的/纯色的」重复且译名可疑，属词典噪声。",
+    "source": "Kaikki 无「原色」义；adj 'Of a single color throughout' 对应纯色，[计] 条目为重复/误译。"
+   }
+  ],
+  "solve": [
+   {
+    "key": "|[计] 求解",
+    "reason": "与 vt|求解、vi|求解 重复，是带 [计] 标签的重复条目。",
+    "source": "当前 vt|求解 与 vi|求解 已覆盖；Kaikki 'To find the values of variables that satisfy a system of equations' 即求解。"
+   }
+  ],
+  "son": [
+   {
+    "key": "|[法] 儿子，女婿，养子",
+    "reason": "与 n 义项中的「儿子，女婿」重复，[法] 标签为法律细分/重复条目。",
+    "source": "n|儿子，女婿，子孙 已含儿子与女婿；Kaikki 'One's male offspring' 等已覆盖，无独立法律义。"
+   }
+  ],
+  "sort": [
+   {
+    "key": "|对它以行为单位进行排序，然后在标准输出设备上输出",
+    "reason": "这是 Unix sort 命令的说明文字，不是词义，属词典噪声。",
+    "source": "该文字描述按行排序并输出到标准输出，与 Kaikki 的种类/分类义不对应，明显为命令行说明混入。"
+   }
+  ],
+  "sound": [
+   {
+    "key": "|[计] 声音",
+    "reason": "与 n 义项「声音」完全重复，是带 [计] 标签的重复条目。",
+    "source": "当前 n|声音，语音…… 已含「声音」；Kaikki noun 首义 'A sensation perceived by the ear' 已覆盖。"
+   }
+  ],
+  "source": [
+   {
+    "key": "|[计] 来源，源程序",
+    "reason": "与 n 义项「来源」重复，并混入「源程序」这一计算机专业细分。",
+    "source": "当前 n|来源，水源，根源…… 已含「来源」；Kaikki 'Source code' 为计算机义，与 n 义的「源」重叠，[计] 条目为重复。"
+   }
+  ],
+  "south": [
+   {
+    "key": "vi|转向南方",
+    "reason": "动词「转向南方」为低频/专门用法，通用学习不需要。",
+    "source": "Kaikki verb 'To turn or move toward the south; to veer toward the south' 属低频用法；south 的常用词性为名词/形容词/副词；语言常识判断。"
+   }
+  ],
+  "space": [
+   {
+    "key": "|[计] 空白，空格校验",
+    "reason": "「空白」已含于 n 义项「位置，空间…空白…」，[计] 只是领域重复标签。",
+    "source": "current: n|位置，空间，距离，太空，空白，间隔… 已含「空白」；标签[计]"
+   }
+  ],
+  "specify": [
+   {
+    "key": "|[计] 指定",
+    "reason": "「指定」已含于 vt 义项「详列，指定，说明」，[计] 为领域重复。",
+    "source": "current: vt|详列，指定，说明 已含「指定」；标签[计]"
+   }
+  ],
+  "speech": [
+   {
+    "key": "|[医] 言语，语言",
+    "reason": "「言语，语言」已含于 n 义项，[医] 为领域重复标签。",
+    "source": "current: n|演讲，说话，谈话，言语，引语，民族语言 已含「言语」；标签[医]"
+   }
+  ],
+  "speed": [
+   {
+    "key": "|[计] 中央处理机速度设置程序",
+    "reason": "「中央处理机速度设置程序」是软件/CPU 设置工具的专用义，不是 speed 的一般词义。",
+    "source": "标签[计]；Kaikki 的 speed 义项为速度、曝光、快门等，无「CPU 速度设置程序」一般义"
+   }
+  ],
+  "spider": [
+   {
+    "key": "|[化] 星形轮",
+    "reason": "「星形轮」是机械/化学专用部件义，与「蜘蛛」无关，一般学习者不需要。",
+    "source": "标签[化]；Kaikki: 「A skeleton or frame with radiating arms or members…」为机械专用义"
+   }
+  ],
+  "split": [
+   {
+    "key": "|[计] 拆分",
+    "reason": "「拆分」与 vi/vt 的「分开、分裂」重复，[计] 只是领域重复。",
+    "source": "current: vi|分离，分开，裂开…；vt|劈开，切开，使分裂… 已含「分开/分裂」；标签[计]"
+   }
+  ],
+  "spread": [
+   {
+    "key": "adj|双唇展开的，伸展的",
+    "reason": "「双唇展开的」是语音学专用描述，「伸展的」又与 vt/vi 的「展开、伸展」重复。",
+    "source": "Kaikki spread 仅有 verb/noun 词条，无 adjective；「双唇展开」为语音学术语；current vt|展开… vi|展开… 已含「展开/伸展」"
+   },
+   {
+    "key": "|[计] 展开",
+    "reason": "「展开」已含于 vt/vi 义项，[计] 为领域重复。",
+    "source": "current: vt|展开，铺开…；vi|展开，扩大… 已含「展开」；标签[计]"
+   }
+  ],
+  "stadium": [
+   {
+    "key": "|[医] 期，病期",
+    "reason": "「期，病期」是疾病分期的医学专用义，一般学习者不需要。",
+    "source": "标签[医]；Kaikki: 「A life stage of an organism.」为生物学/医学专用义"
+   }
+  ],
+  "standard": [
+   {
+    "key": "|[计] 标准",
+    "reason": "「标准」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|标准，规格，旗，军旗，本位 已含「标准」；标签[计]"
+   }
+  ],
+  "start": [
+   {
+    "key": "|[计] 起始",
+    "reason": "「起始」与 n 义项的「开端、起点」重复，[计] 为领域重复。",
+    "source": "current: n|惊起，出发，开端，起点… 已含「开端/起点」；标签[计]"
+   }
+  ],
+  "state": [
+   {
+    "key": "|[计] 状态",
+    "reason": "「状态」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|州，状态，情形… 已含「状态」；标签[计]"
+   }
+  ],
+  "station": [
+   {
+    "key": "|[计] 站",
+    "reason": "「站」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|车站，站，局… 已含「站」；标签[计]"
+   }
+  ],
+  "steal": [
+   {
+    "key": "vt|vi. 窃取",
+    "reason": "释义本身混入「vi.」词性标记，属词典串行噪声，且与「偷窃」重复。",
+    "source": "current: cn 以「vi. 」开头属词性串行；与 vt|偷窃 重复"
+   },
+   {
+    "key": "vt|[棒球]偷垒",
+    "reason": "棒球专用义（盗垒），不属于通用高频义。",
+    "source": "Kaikki verb: 「To advance safely to (another base) during the delivery of a pitch…」为棒球专用"
+   },
+   {
+    "key": "vt|n. [口]偷窃",
+    "reason": "释义混入「n. [口]」词性/语域标记，属词典噪声，且与「偷窃」重复。",
+    "source": "current: cn 以「n. [口]」开头属词性/语域串行；与 vt|偷窃 重复"
+   },
+   {
+    "key": "vt|偷垒",
+    "reason": "与「vt|[棒球]偷垒」完全重复，且为棒球专用义。",
+    "source": "current: 与 vt|[棒球]偷垒 重复"
+   },
+   {
+    "key": "vt|[篮球]断球",
+    "reason": "篮球专用义（抢断），不属于通用高频义。",
+    "source": "Kaikki noun: 「A situation in which a defensive player actively takes possession of the ball or puck…」为球类专用"
+   }
+  ],
+  "step": [
+   {
+    "key": "|[计] 步骤",
+    "reason": "「步骤」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|步骤，步，步幅… 已含「步骤」；标签[计]"
+   }
+  ],
+  "store": [
+   {
+    "key": "|[计] 存储器操作",
+    "reason": "「存储器操作」是计算机专用操作义，「存储器」已含于 n 义项。",
+    "source": "标签[计]；current n|商店，贮藏，仓库，备用品，存储器 已含「存储器」"
+   },
+   {
+    "key": "|存储",
+    "reason": "「存储」与 vt「储存，贮藏」重复，且无词性，属领域重复条目。",
+    "source": "current: vt|储存，贮藏，供给 已含「存储」；无词性的重复条目"
+   }
+  ],
+  "stretch": [
+   {
+    "key": "|[计] 伸展",
+    "reason": "「伸展」已含于 vt/vi 义项，[计] 为领域重复。",
+    "source": "current: vt|伸展，张开…；vi|伸展，延伸 已含「伸展」；标签[计]"
+   }
+  ],
+  "strict": [
+   {
+    "key": "|[法] 严格的，精确的，绝对的",
+    "reason": "与 adj 义项「严厉的，绝对的，详尽的，严格的，精确的」逐项重复，[法] 为领域重复。",
+    "source": "current: adj|严厉的，绝对的，详尽的，严格的，精确的；标签[法]"
+   }
+  ],
+  "style": [
+   {
+    "key": "n|风格，样式",
+    "reason": "与首条 n 义项「风格，时尚，文体…」重复。",
+    "source": "current: n|风格，时尚，文体，风度，字体，类型 已含「风格/样式」"
+   },
+   {
+    "key": "|[计] 风格，样式",
+    "reason": "与 n 义项的「风格，样式」重复，[计] 为领域重复。",
+    "source": "current: n 义项已含「风格/样式」；标签[计]"
+   }
+  ],
+  "subject": [
+   {
+    "key": "|[计] 主题，主体",
+    "reason": "「主题，主体」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|科目，主题… 已含「主题」；标签[计]"
+   }
+  ],
+  "suggest": [
+   {
+    "key": "|[法] 建议，提出，提议",
+    "reason": "与 vt 义项「提议，建议…」重复，[法] 为领域重复。",
+    "source": "current: vt|提议，建议，促成… 已含「建议/提议」；标签[法]"
+   }
+  ],
+  "sum": [
+   {
+    "key": "|[计] 系统实用程序和维护",
+    "reason": "「系统实用程序和维护」是 SUM 工具名的缩写噪声，不是 sum 的词义。",
+    "source": "标签[计]；为软件工具名缩写，Kaikki 的 sum 义项中无对应一般义"
+   }
+  ],
+  "summary": [
+   {
+    "key": "|[计] 摘要",
+    "reason": "「摘要」已含于 n 义项，[计] 为领域重复。",
+    "source": "current: n|摘要，概要 已含「摘要」；标签[计]"
+   },
+   {
+    "key": "|概要",
+    "reason": "与 n 义项「摘要，概要」完全重复，且无词性。",
+    "source": "current: n|摘要，概要 已含「概要」；无词性的重复条目"
+   }
+  ],
+  "summer": [
+   {
+    "key": "|[计] 加法器",
+    "reason": "「加法器」是计算机/硬件专用义（summer 作求和器），一般学习者不需要。",
+    "source": "标签[计]；Kaikki: 「A machine or algorithm that sums.」为专用义"
+   }
+  ],
+  "supermarket": [
+   {
+    "key": "|[经] 超级市场，自助售货商店",
+    "reason": "与 n 义项「超级市场」重复，[经] 为领域重复。",
+    "source": "current: n|超级市场；标签[经]"
+   }
+  ],
+  "support": [
+   {
+    "key": "|[计] 后援",
+    "reason": "「后援」是计算机专用义，「支持/支援」已含于 n/vt 义项。",
+    "source": "标签[计]；current n|支持，支撑，援助…；vt|支援，支撑… 已含对应义"
+   },
+   {
+    "key": "|支持",
+    "reason": "与 n/vt 义项的「支持」完全重复，且无词性。",
+    "source": "current: n|支持…；vt|支持… 已含「支持」；无词性的重复条目"
+   }
+  ],
+  "suspend": [
+   {
+    "key": "|[计] 暂停",
+    "reason": "[计] 领域重复条，“暂停”义与 vt/vi 已收义项完全重复",
+    "source": "当前 vt|悬，吊，使悬浮，暂停，中止，推迟 与 vi|暂停，中止，悬浮，停止偿付债务 已含此义；Kaikki 'To halt something temporarily.'"
+   }
+  ],
+  "switch": [
+   {
+    "key": "|开关",
+    "reason": "与名词义项“开关”重复",
+    "source": "当前 n|开关，电闸，转换，软枝，鞭子，道岔 已含“开关”；Kaikki 'A device to turn electric current on and off'"
+   },
+   {
+    "key": "|翻转",
+    "reason": "与 vt“切换/转换”重复，仅用词不同",
+    "source": "当前 vt|转变，切换，摆动，转换，使转轨 与 n|…转换… 已含此义"
+   },
+   {
+    "key": "|转移",
+    "reason": "与 vt“转变/转换”重复",
+    "source": "当前 vt|转变，切换，摆动，转换，使转轨 已含“转变、转换”"
+   }
+  ],
+  "symptom": [
+   {
+    "key": "|[医] 症状",
+    "reason": "[医] 领域条与名词义项“症状”完全重复",
+    "source": "当前 n|症状，征候，征兆；Kaikki 'a symptom is felt or experienced by the patient'"
+   }
+  ],
+  "system": [
+   {
+    "key": "|[计] 系统",
+    "reason": "[计] 领域条与名词义项“系统”完全重复",
+    "source": "当前 n|系统，体系，制度，方式，秩序，分类原则 已含“系统”"
+   },
+   {
+    "key": "|体制",
+    "reason": "与名词义项“制度”重复",
+    "source": "当前 n|系统，体系，制度，方式，秩序，分类原则 已含“制度、体系”"
+   },
+   {
+    "key": "|体系",
+    "reason": "与名词义项“体系”重复",
+    "source": "当前 n|系统，体系，制度，方式，秩序，分类原则 已含“体系”"
+   }
+  ],
+  "table": [
+   {
+    "key": "|[计] 表格，模拟运算表",
+    "reason": "[计] 领域重复条，“表格”与名词义项重复，“模拟运算表”为软件术语",
+    "source": "当前 n|桌子，餐桌，工作台，铭文，表格，表，高原，平地层 已含“表格”；Kaikki 'A two-dimensional presentation of data'"
+   }
+  ],
+  "tablet": [
+   {
+    "key": "|[化] 片剂",
+    "reason": "[化] 领域条，“片剂”即名词义项中的“药片”，属重复",
+    "source": "当前 n|平板，门牌，笔记簿，碑，匾，药片；Kaikki 'A pill; a small, easily swallowed portion of a substance'"
+   }
+  ],
+  "tackle": [
+   {
+    "key": "n|辘轳，滑车",
+    "reason": "滑车组为航海/机械专业义，CET6 通用场景很少用",
+    "source": "Kaikki noun: 'A block and tackle.'；另一名词义 'Equipment (rod, reel, line, lure, etc.) used when angling.' 已覆盖常用的“钓具”"
+   }
+  ],
+  "tale": [
+   {
+    "key": "|[法] 虚语，诽语，谣言",
+    "reason": "[法] 领域重复条；“谣言”与名词义项重复，“虚语/诽语”非现代汉语常用词",
+    "source": "当前 n|故事，谎言，谣言，陈述，叙述 已含“谎言、谣言”；Kaikki 'an idle or malicious story; … a lie'"
+   }
+  ],
+  "talk": [
+   {
+    "key": "|[计] 对话类，聊天",
+    "reason": "[计] 领域重复条，“聊天”与名词/动词的交谈义重复",
+    "source": "当前 n|谈话，交谈，会谈… 与 vi|讲话，演讲，说话，谈话…；Kaikki noun 'A conversation or discussion'"
+   }
+  ],
+  "tap": [
+   {
+    "key": "|[计] 接头",
+    "reason": "[计] 专业重复条，“接头/分接”与 vt 义项重复",
+    "source": "当前 vt|…分接… 已含此义；Kaikki noun 'A connection made to an electrical or fluid conductor without breaking it'（专业）"
+   }
+  ],
+  "tape": [
+   {
+    "key": "|[计] 带",
+    "reason": "[计] 领域重复条，“带”与名词义项“带子/磁带”重复",
+    "source": "当前 n|带子，录音带，磁带，窄带，卷尺 已含“带、磁带”"
+   }
+  ],
+  "task": [
+   {
+    "key": "|[计] 任务",
+    "reason": "[计] 领域条与名词义项“任务”完全重复",
+    "source": "当前 n|工作，任务，作业，困难的工作 已含“任务”；Kaikki 'A piece of work done as part of one’s duties.'"
+   }
+  ],
+  "tea": [
+   {
+    "key": "|[医] 茶，茶剂，浸剂",
+    "reason": "[医] 领域重复条，“茶”重复常用义，茶剂/浸剂为药学专业义",
+    "source": "当前 n|茶，茶叶 已含“茶”；Kaikki 'Any similar drink made by infusing parts of various other plants.'"
+   }
+  ],
+  "technical": [
+   {
+    "key": "|[化] 技巧",
+    "reason": "词性/词义错配：technical 是形容词，“技巧”是名词（technique），并非 technical 的义项",
+    "source": "Kaikki adj 各义（'Specifically related to a particular discipline.' 等）均无“技巧”名词义；[化] 标签明显误配"
+   }
+  ],
+  "technique": [
+   {
+    "key": "|[化] 工艺方法",
+    "reason": "[化] 领域重复条，与名词义项“技术、方法”重复",
+    "source": "当前 n|技巧，技术，方法；Kaikki 'A method of achieving something or carrying something out'"
+   },
+   {
+    "key": "|技巧",
+    "reason": "与名词义项“技巧”完全重复",
+    "source": "当前 n|技巧，技术，方法 已含“技巧”"
+   }
+  ],
+  "technology": [
+   {
+    "key": "|[医] 技术学，工艺学",
+    "reason": "[医] 领域重复条，“技术学/工艺学”与主义项“技术、工业技术”重复，标签也与语义不符",
+    "source": "当前 n|技术，工业技术，术语；Kaikki 'The study of or a collection of techniques.'（literary）"
+   }
+  ],
+  "temperature": [
+   {
+    "key": "|[化] 温度",
+    "reason": "[化] 领域条与名词义项“温度”完全重复",
+    "source": "当前 n|温度，发烧，热度 已含“温度”；Kaikki 'A measure of cold or heat'"
+   }
+  ],
+  "temporary": [
+   {
+    "key": "|[计] 临时",
+    "reason": "[计] 领域重复条，“临时”与形容词义项重复",
+    "source": "当前 adj|暂时的，临时的 已含“临时的”；Kaikki 'Not permanent; existing only for a period or periods of time.'"
+   }
+  ],
+  "term": [
+   {
+    "key": "|[计] 检索词",
+    "reason": "[计] 领域重复条，“检索词”是“术语”在检索场景的说法",
+    "source": "当前 n|术语，专有名词，期限，学期… 已含“术语”；Kaikki 'A word or phrase… especially one from a specialised area of knowledge'"
+   },
+   {
+    "key": "|项",
+    "reason": "重复条，“项”已包含在名词义项中",
+    "source": "当前 n|术语，专有名词，期限，学期，任期，条件，价钱，关系，地位，项，界石 已含“项”；Kaikki 'Any value (variable or constant)… in an overall expression'"
+   }
+  ],
+  "terror": [
+   {
+    "key": "|[医] 惊吓，惊悸",
+    "reason": "[医] 领域重复条，“惊吓”与“恐怖”重复，“惊悸”为医学专业说法",
+    "source": "当前 n|恐怖，可怕的人；Kaikki 'Intense dread, fright, or fear.'"
+   }
+  ],
+  "text": [
+   {
+    "key": "|[计] 电文",
+    "reason": "[计] 领域条；“电文”不是 text 的常用义，与“文本”重复且语义错配",
+    "source": "当前 n|文本，正文，课文… 已含“文本”；Kaikki 各名词义无“电报/电文”义"
+   },
+   {
+    "key": "|文本",
+    "reason": "与名词义项“文本”完全重复",
+    "source": "当前 n|文本，正文，课文，主题，圣经文句，乐谱 已含“文本”"
+   },
+   {
+    "key": "|正文",
+    "reason": "与名词义项“正文”完全重复",
+    "source": "当前 n|文本，正文，课文，主题，圣经文句，乐谱 已含“正文”"
+   }
+  ],
+  "theory": [
+   {
+    "key": "|[化] 理论",
+    "reason": "[化] 领域条与名词义项“理论”完全重复",
+    "source": "当前 n|理论，学说，原理，意见，推测 已含“理论”；Kaikki 'A coherent statement or set of ideas that explains observed facts'"
+   }
+  ],
+  "therapy": [
+   {
+    "key": "|[医] 疗法，治疗",
+    "reason": "[医] 领域条与名词义项“治疗”完全重复",
+    "source": "当前 n|治疗；Kaikki 'Attempted remediation of a health problem following a diagnosis, usually synonymous with treatment.'"
+   }
+  ],
+  "thick": [
+   {
+    "key": "|[计] 暗，粗线",
+    "reason": "[计] 排版/图形软件术语，不是 thick 的通用义项",
+    "source": "Kaikki adj 各义（'Relatively great in extent…'、'Densely crowded…' 等）无“暗/粗线”义"
+   }
+  ],
+  "thief": [
+   {
+    "key": "|[化] 取样",
+    "reason": "语义错配：thief 不表示“取样”，属 [化] 标签噪声",
+    "source": "Kaikki 仅 'One who carries out a theft.' / 'One who steals another person's property…'；疑为取样器（thief sampler）误配"
+   }
+  ],
+  "third": [
+   {
+    "key": "|[机] 第三",
+    "reason": "[机] 领域条与数词义项“第三”完全重复，标签也无意义",
+    "source": "当前 num|第三，三分之一 已含“第三”"
+   },
+   {
+    "key": "|第三的",
+    "reason": "与数词义项“第三”重复，只是改写成形容词形式",
+    "source": "当前 num|第三，三分之一 已含“第三”"
+   }
+  ],
+  "threat": [
+   {
+    "key": "|[经] 威胁",
+    "reason": "[经] 领域条与名词义项“威胁”完全重复",
+    "source": "当前 n|恐吓，恶兆，威胁 已含“威胁”；Kaikki 'An expression of intent to injure or punish another.'"
+   }
+  ],
+  "throughout": [
+   {
+    "key": "|[计] 吞吐量",
+    "reason": "词义误配：throughout 表示“遍及/自始至终”，不表示“吞吐量”",
+    "source": "Kaikki prep/adv 仅 'In every part of; all through.' / 'In every part; everywhere.' 等；“吞吐量”是 throughput"
+   }
+  ],
+  "thus": [
+   {
+    "key": "|[医] 乳香",
+    "reason": "词形误配：乳香对应 thuris，与副词 thus 无关",
+    "source": "Kaikki 仅副词义 'In this way or manner.' / 'As a result.'；名词条为 'Alternative form of thuris.'"
+   }
+  ],
+  "tin": [
+   {
+    "key": "|[计] tin阅读程序",
+    "reason": "专名/软件噪声：tin 是 Usenet 阅读器名称，不是 tin 的词义",
+    "source": "Kaikki noun/verb/adj 各义（金属锡、罐头、镀锡等）均无“阅读程序”义"
+   }
+  ],
+  "tip": [
+   {
+    "key": "|[计] 终端接口处理器，提示，技巧",
+    "reason": "计算机领域缩写（TIP=Terminal Interface Processor）及「提示/技巧」义重复主名词义项中的「指点」，非独立常用义",
+    "source": "Kaikki 无此义；当前 n 义项已含「指点」，[计] 条为重复+缩写噪声"
+   }
+  ],
+  "title": [
+   {
+    "key": "|[计] 标题",
+    "reason": "仅重复名词义项中的「标题」，无新增含义",
+    "source": "当前 n|头衔…标题… 已收；[计] 标签为重复义"
+   }
+  ],
+  "ton": [
+   {
+    "key": "|[经] 吨",
+    "reason": "与名词义项「吨」完全重复",
+    "source": "当前 n|吨 已收；[经] 条为重复义"
+   }
+  ],
+  "tone": [
+   {
+    "key": "|[计] 双音频",
+    "reason": "电信技术义（DTMF 双音多频），非通用学习者需要，且与主名词义项「音调」同源",
+    "source": "Kaikki 无此技术义；[计] 标签为专门技术义"
+   }
+  ],
+  "top": [
+   {
+    "key": "|[计] TOP协议",
+    "reason": "网络协议缩写噪声，不是 top 的通用词义",
+    "source": "Kaikki 无协议义；[计] TOP协议为缩写噪声"
+   }
+  ],
+  "toss": [
+   {
+    "key": "vt|掷",
+    "reason": "与同词性义项「扔，抛，掷」完全重复",
+    "source": "当前 vt|扔，抛，掷 已收；Kaikki \"To throw with an initial upward direction\" 单一义"
+   }
+  ],
+  "town": [
+   {
+    "key": "|[法] 城镇，城市，闹市",
+    "reason": "与名词义项「城镇，市，镇」重复，仅多「闹市」一词",
+    "source": "当前 n|城镇，市，镇 已收；[法] 条为重复义"
+   }
+  ],
+  "track": [
+   {
+    "key": "|[计] 跟踪",
+    "reason": "重复动词义项「追踪」及名词「轨迹」，无新增含义",
+    "source": "当前 n 含「轨迹」、vi 含「追踪」；[计] 标签为重复义"
+   }
+  ],
+  "tradition": [
+   {
+    "key": "|[法] 传统，惯例，移交",
+    "reason": "与名词义项「传统，交付」重复（移交=交付）",
+    "source": "当前 n|传说，传统，交付 已收；[法] 条为重复义"
+   }
+  ],
+  "traffic": [
+   {
+    "key": "|[计] 通信量，传输量",
+    "reason": "重复名词义项中的「通信量」，属技术细分",
+    "source": "当前 n 义项已含「通信量」；[计] 条为重复义"
+   }
+  ],
+  "tragedy": [
+   {
+    "key": "|[法] 惨事，灾难，不辛",
+    "reason": "重复名词义项「惨案」，且「不辛」为「不幸」错字",
+    "source": "当前 n|悲剧，惨案，悲剧作品 已收；[法] 条为重复+错字"
+   }
+  ],
+  "translate": [
+   {
+    "key": "|[计] 转换",
+    "reason": "重复及物义项中的「转化，转变为」",
+    "source": "当前 vt 义项已含「转化，转变为」；[计] 条为重复义"
+   }
+  ],
+  "trap": [
+   {
+    "key": "|[计] 俘获",
+    "reason": "计算机异常/陷阱义的直译，与名词「陷阱」重复，非独立常用义",
+    "source": "当前 n|圈套，陷阱 已收；Kaikki 计算机义为 \"An exception generated by the processor\" 技术义"
+   },
+   {
+    "key": "|陷井",
+    "reason": "「陷阱」的错字写法，与名词义项完全重复",
+    "source": "当前 n|圈套，陷阱，诡计，存水弯 已收；「陷井」为错字重复条"
+   }
+  ],
+  "tray": [
+   {
+    "key": "|[化] 淋盘",
+    "reason": "化学实验专用器皿义，非通用义，且是「托盘」的专门化重复",
+    "source": "Kaikki 仅列 a flat object / container 等通用义，无化学专义；[化] 标签为专门技术义"
+   }
+  ],
+  "trust": [
+   {
+    "key": "|[计] 委托，信任",
+    "reason": "重复名词「信任」及「受托」，无新增含义",
+    "source": "当前 n|信任，信赖…受托… 已收；[计] 条为重复义"
+   }
+  ],
+  "truth": [
+   {
+    "key": "|[法] 真实，真相，事实",
+    "reason": "与名词义项「事实，实情」重复",
+    "source": "当前 n|事实，实情 已收；[法] 条为重复义"
+   }
+  ],
+  "tube": [
+   {
+    "key": "|[计] 管子",
+    "reason": "仅重复名词义项「管，软管」，无技术新增义",
+    "source": "当前 n|管，软管，隧道 已收；[计] 条为重复义"
+   }
+  ],
+  "undertake": [
+   {
+    "key": "|[化] 承包",
+    "reason": "与及物义项中的「承担」重复，[化] 标签亦与该义无关",
+    "source": "当前 vt 义项已含「承担」；[化] 条为重复义"
+   },
+   {
+    "key": "|承担",
+    "reason": "与及物义项中的「承担」完全重复",
+    "source": "当前 vt|试图，从事，保证，承担… 已收；该条为重复义"
+   }
+  ],
+  "unemployed": [
+   {
+    "key": "|[经] 没有被雇用的，失业的，没有被利用的",
+    "reason": "与形容词义项「失业的，未被利用的」完全重复",
+    "source": "当前 adj|失业的，未被利用的 已收；[经] 条为重复义"
+   }
+  ],
+  "union": [
+   {
+    "key": "|[化] 联合",
+    "reason": "重复名词义项中的「联合」",
+    "source": "当前 n|联盟，联合，结合，工会 已收；[化] 条为重复义"
+   },
+   {
+    "key": "|联管节",
+    "reason": "机械管件专名义（pipe union），非通用义，且与「活接头」重复",
+    "source": "Kaikki \"A joint or other connection uniting parts of machinery\" 为机械专义；两条中译重复"
+   },
+   {
+    "key": "|活接头",
+    "reason": "同上，机械管件专名义，与「联管节」重复",
+    "source": "Kaikki 机械连接义；当前 |联管节 为同一义的另一译名"
+   }
+  ],
+  "unit": [
+   {
+    "key": "|[计] 单元常数",
+    "reason": "计算机术语噪声，重复名词义项中的「单元」",
+    "source": "当前 n|单位…单元，部件，装置 已收；[计] 条为重复+技术义"
+   },
+   {
+    "key": "|部件",
+    "reason": "与名词义项中的「部件」完全重复",
+    "source": "当前 n 义项已含「部件」；该单独条为重复义"
+   }
+  ],
+  "urgent": [
+   {
+    "key": "|[经] 紧急的，急迫的",
+    "reason": "与形容词义项「紧急的，急迫的」完全重复",
+    "source": "当前 adj|紧急的，急迫的，催逼的 已收；[经] 条为重复义"
+   }
+  ],
+  "us": [
+   {
+    "key": "|[经] 美国",
+    "reason": "US（United States）缩写噪声，不是代词 us 的词义",
+    "source": "Kaikki pron 义均为「我们」类；[经] 美国 为缩写误收"
+   }
+  ],
+  "vacation": [
+   {
+    "key": "|[法] 假期，停审期，休庭期",
+    "reason": "主体「假期」重复名词义项，余为法院休庭专门义，通用学习者不需要",
+    "source": "当前 n|假期，休假 已收；Kaikki \"A period during which official activity... is suspended\" 为专门义"
+   }
+  ],
+  "valley": [
+   {
+    "key": "|[医] 谷",
+    "reason": "解剖学专名义，仅重复名词义项中的「谷」，非独立常用义",
+    "source": "当前 n|山谷，溪谷，流域，凹地 已收；[医] 标签为专门义"
+   }
+  ],
+  "value": [
+   {
+    "key": "|[计] 计算结果",
+    "reason": "重复名词义项中的「计算结果」",
+    "source": "当前 n 义项已含「计算结果」；[计] 条为重复义"
+   }
+  ],
+  "verb": [
+   {
+    "key": "|[计] 动词",
+    "reason": "仅重复名词义项「动词」，无技术新增义",
+    "source": "当前 n|动词 已收；[计] 条为重复义"
+   }
+  ],
+  "vessel": [
+   {
+    "key": "|[医] 管，脉管，(容)器",
+    "reason": "与名词义项「船，容器，脉管」重复",
+    "source": "当前 n|船，容器，脉管 已收；[医] 条为重复义"
+   }
+  ],
+  "via": [
+   {
+    "key": "|[医] 病毒灭活剂",
+    "reason": "缩写 VIA（viral inactivation agent）误收，与介词 via 无关",
+    "source": "Kaikki prep 义为 by way of / by means of；该条为缩写噪声"
+   }
+  ],
+  "view": [
+   {
+    "key": "|[计] 视图",
+    "reason": "重复名词义项中的「视图」",
+    "source": "当前 n 义项已含「视图」；[计] 条为重复义"
+   }
+  ],
+  "virus": [
+   {
+    "key": "|[化] 病毒",
+    "reason": "与名词义项「病毒」完全重复",
+    "source": "当前 n|病毒，滤过性病毒，毒害 已收；[化] 条为重复义"
+   }
+  ],
+  "vitamin": [
+   {
+    "key": "|[化] 维生素",
+    "reason": "与名词义项「维生素」完全重复",
+    "source": "当前 n|维生素 已收；[化] 条为重复义"
+   }
+  ],
+  "wait": [
+   {
+    "key": "|[计] 等待",
+    "reason": "[计] 技术义，与名词义项「等待，等候」重复，非独立常用义。",
+    "source": "当前 n|等待，等候 已含此义；Kaikki noun 仅有 delay/ambush，wait state 标为 abbreviation/ellipsis/alt-of"
+   }
+  ],
+  "wall": [
+   {
+    "key": "|[计] 背景墙",
+    "reason": "[计] 技术义，指桌面/屏幕壁纸，与名词「墙」重复，一般学习者不需要。",
+    "source": "当前 n|墙，墙壁… 已含墙义；Kaikki 无「背景墙/壁纸」独立义项"
+   }
+  ],
+  "whisky": [
+   {
+    "key": "|[化] 威士忌酒",
+    "reason": "[化] 标签义与名词义项「威士忌酒」完全重复。",
+    "source": "当前 n|威士忌酒，轻便马车 已含此义；Kaikki 仅 'alternative form of whiskey, an alcoholic liquor'，无化学义"
+   }
+  ],
+  "wife": [
+   {
+    "key": "|[法] 妻子，已婚妇女",
+    "reason": "[法] 标签义与名词义项「妻子，太太，夫人」重复。",
+    "source": "当前 n|妻子，太太，夫人 已含此义；Kaikki 仅 'a married woman'，无专门法律义"
+   }
+  ],
+  "window": [
+   {
+    "key": "|[计] 窗口",
+    "reason": "[计] 技术义与名词义项中的「窗口」重复。",
+    "source": "当前 n|窗户，窗子，窗口 已含「窗口」；Kaikki 计算机义为 'rectangular area on a computer screen'，即已收的窗口义"
+   }
+  ],
+  "wise": [
+   {
+    "key": "vi|知道",
+    "reason": "古旧/方言动词义，现代英语「wise」不再作「知道」使用，CET 学习者不需要。",
+    "source": "Kaikki 动词义仅 'To become wise'、slang 'wise up' 及 dialectal 'To instruct/advise/guide'，无 'to know' 义"
+   },
+   {
+    "key": "vt|教导，告诉，劝导",
+    "reason": "方言/古旧动词义，现代标准英语不用。",
+    "source": "Kaikki 将 'To instruct'、'To advise; induce'、'To show the way, guide' 等标为 dialectal"
+   },
+   {
+    "key": "n|方法，方式",
+    "reason": "古旧名词义，现代英语已不用。",
+    "source": "Kaikki noun 'Way, manner, or method' 标为 archaic"
+   },
+   {
+    "key": "|[计] 教育信息系统",
+    "reason": "明显是缩写 WISE（教育信息系统）的误配噪声，并非 wise 的词义。",
+    "source": "Kaikki 无任何「教育信息系统」义项；该释义与单词 wise 无关"
+   }
+  ],
+  "wool": [
+   {
+    "key": "|[医] 羊毛，绒毛，棉[花]",
+    "reason": "[医] 标签义与名词义项重复，且「棉花」并非 wool 的释义，属词典噪声。",
+    "source": "当前 n|羊毛，毛织物… 已含羊毛/绒毛义；Kaikki 无医学义，亦无 'cotton/棉花' 义，cotton 与 wool 是不同纤维"
+   }
+  ],
+  "word": [
+   {
+    "key": "|[计] 字",
+    "reason": "[计] 技术义与名词义项中的「词」重复，属专业术语。",
+    "source": "当前 n|话，消息，词… 已含「词」；Kaikki 计算机义为 'fixed-size group of bits'，技术义且已由「字/词」涵盖"
+   }
+  ],
+  "world": [
+   {
+    "key": "|[法] 世界，地球，世人",
+    "reason": "[法] 标签义与名词义项「世界，地球，宇宙，…世人」完全重复。",
+    "source": "当前 n|世界，地球，宇宙… 已含此义；Kaikki 无专门法律义项"
+   }
+  ],
+  "wrap": [
+   {
+    "key": "|[计] 换行",
+    "reason": "[计] 技术义与名词义项中的「换行」重复。",
+    "source": "当前 n|外套，围巾，…换行 已含「换行」；Kaikki 'To break a continuous line (of text) onto the next line' 属技术义，已包含在名词条中"
+   }
+  ],
+  "write": [
+   {
+    "key": "|[计] 书写器",
+    "reason": "「书写器」是软件名/缩写噪声，并非 write 的独立常用义。",
+    "source": "Kaikki 无对应名词义（名词仅 'act or style of writing' 与 'operation of storing data'）"
+   }
+  ],
+  "yard": [
+   {
+    "key": "|[化] 堆置场",
+    "reason": "[化] 标签义与名词义项中的「工场」重复，属专业场地义。",
+    "source": "当前 n|码，庭院，工场 已含「工场」；Kaikki 'enclosed outdoors area designated for a specific purpose' 无化学专门义"
+   }
+  ],
+  "year": [
+   {
+    "key": "|[经] 年度",
+    "reason": "[经] 标签义与名词义项中的「年度」完全重复。",
+    "source": "当前 n|年，年度，年龄 已含「年度」；Kaikki 无经济专门义项"
+   }
+  ],
+  "youngster": [
+   {
+    "key": "|[法] 儿童，少年，青年",
+    "reason": "[法] 标签义与名词义项「小孩，年轻人，少年」重复。",
+    "source": "当前 n|小孩，年轻人，少年 已含此义；Kaikki 仅 'a young person'，无专门法律义"
+   }
+  ],
+  "youth": [
+   {
+    "key": "|[法] 青年，青年时期，青春时期",
+    "reason": "[法] 标签义与名词义项「年轻，青年时代，青年们，青春」重复。",
+    "source": "当前 n|年轻，青年时代… 已含此义；Kaikki 无专门法律义项"
+   }
+  ],
+  "zero": [
+   {
+    "key": "|[计] 零",
+    "reason": "[计] 技术义与名词义项「零…」重复。",
+    "source": "当前 n|零，零点，零度… 已含「零」；Kaikki 无独立计算机专义"
+   }
+  ],
+  "zone": [
+   {
+    "key": "|[计] 卡片顶部的三行区",
+    "reason": "过时的穿孔卡片技术义，且与名词「地带，带，地区」重复，一般学习者不需要。",
+    "source": "当前 n|地带，带，地区 已含区域义；Kaikki 无穿孔卡片相关义项"
+   },
+   {
+    "key": "|区",
+    "reason": "单词残片，与名词义项「地带，带，地区」重复，不构成独立义项。",
+    "source": "当前 n|地带，带，地区 已含「区」义；Kaikki noun 仅 region/area 一类释义"
+   },
+   {
+    "key": "|区域",
+    "reason": "与名词义项「地带，带，地区」重复，不构成独立义项。",
+    "source": "当前 n|地带，带，地区 已含「区域」义；Kaikki noun 仅 region/area 一类释义"
+   }
+  ]
+ },
+ "manual_rescues": {
+  "firm": [
+   "adv|稳固地"
+  ],
+  "core": [
+   "|[计] 内核，核心网"
+  ],
+  "cut": [
+   "|[计] 剪切"
+  ],
+  "address": [
+   "|[计] 地址，寻址"
+  ],
+  "switch": [
+   "|[计] 交换机"
+  ]
+ },
+ "limitations": "未列入排除表的词/义项默认保留；core+ 新增但不在 core 中的词尚未逐义项核对。"
+}

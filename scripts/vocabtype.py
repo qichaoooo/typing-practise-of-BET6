@@ -41,6 +41,8 @@ from datetime import date, timedelta
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DATA = os.path.join(PROJECT_DIR, "data", "cet6.json")
 CORE_DATA = os.path.join(PROJECT_DIR, "data", "core_words.json")
+CORE_SENSES_DATA = os.path.join(
+    PROJECT_DIR, "data", "core_sense_exclusions.json")
 DEFAULT_STATS = os.path.join(
     os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share")),
     "vocabtype", "stats.json")
@@ -173,6 +175,58 @@ def word_stat(stats, word):
 
 
 _CORE_LEVELS = None
+_CORE_SENSE_EXCLUSIONS = None
+
+
+def core_sense_exclusions():
+    """加载 core/core+ 难度要排除的低频/专业义项。"""
+    global _CORE_SENSE_EXCLUSIONS
+    if _CORE_SENSE_EXCLUSIONS is None:
+        try:
+            with open(CORE_SENSES_DATA, encoding="utf-8") as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            data = {}
+        except (OSError, json.JSONDecodeError) as exc:
+            sys.exit(f"无法读取义项排除表 {CORE_SENSES_DATA}：{exc}")
+        raw = data.get("excluded", {}) if isinstance(data, dict) else {}
+        if not isinstance(raw, dict):
+            sys.exit(f"义项排除表格式错误：{CORE_SENSES_DATA}")
+        parsed = {}
+        for word, items in raw.items():
+            if not isinstance(items, list):
+                continue
+            keys = set()
+            for item in items:
+                if isinstance(item, str):
+                    keys.add(item)
+                elif isinstance(item, dict) and item.get("key"):
+                    keys.add(str(item["key"]))
+            if keys:
+                parsed[str(word).lower()] = keys
+        _CORE_SENSE_EXCLUSIONS = parsed
+    return _CORE_SENSE_EXCLUSIONS
+
+
+def core_sense_exclusions_for_level(level):
+    if level in ("core", "core+"):
+        return core_sense_exclusions()
+    return {}
+
+
+def scoped_sense_entries(entries, level):
+    """返回只保留该难度可用义项的词条副本（用于明细界面）。"""
+    if level not in ("core", "core+"):
+        return entries
+    out = []
+    for entry in entries:
+        senses = [s for s in entry.get("senses", [])
+                  if sense_allowed(entry, s, level)]
+        if senses:
+            copy = dict(entry)
+            copy["senses"] = senses
+            out.append(copy)
+    return out
 
 
 def core_levels():
@@ -192,6 +246,14 @@ def core_levels():
             for name, words in raw.items() if isinstance(words, list)
         }
     return _CORE_LEVELS
+
+
+def sense_allowed(entry, sense, selected):
+    """core/core+ 难度下按义项排除表过滤低频/专业义项。"""
+    if selected not in ("core", "core+"):
+        return True
+    excluded = core_sense_exclusions().get((entry.get("word") or "").lower())
+    return not excluded or sense_key(sense) not in excluded
 
 
 def level_matches(entry, selected):
@@ -430,6 +492,8 @@ def select_items(entries, stats, args):
         senses = entry.get("senses") or []
         picked = []
         for idx, s in enumerate(senses):
+            if not sense_allowed(entry, s, args.level):
+                continue
             if include_known or not sense_is_known(stats, entry, s):
                 picked.append((s, 1.0 / (idx + 1)))
         total = sum(w for _, w in picked)
@@ -1000,7 +1064,8 @@ def build_quiz_scope(entries, stats, args, session_items=None):
             for skey, rec in recs.items():
                 sense = sense_map.get(skey)
                 if (sense is not None and isinstance(rec, dict)
-                        and rec.get("state") == "known"):
+                        and rec.get("state") == "known"
+                        and sense_allowed(entry, sense, args.level)):
                     pool.append((entry, sense, rec))
         return random.sample(pool, min(n_known, len(pool)))
 
@@ -1009,7 +1074,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
     if session_items:
         for entry, sense in session_items:
             key = (entry["word"], sense_key(sense))
-            if key in seen:
+            if key in seen or not sense_allowed(entry, sense, args.level):
                 continue
             scope.append((entry, sense, None))
             seen.add(key)
@@ -1026,7 +1091,8 @@ def build_quiz_scope(entries, stats, args, session_items=None):
             sense = sense_map.get(skey)
             if not isinstance(rec, dict):
                 continue
-            if sense is None or (word, skey) in seen:
+            if (sense is None or (word, skey) in seen
+                    or not sense_allowed(entry, sense, args.level)):
                 continue
             state = rec.get("state")
             if state == "learning":
@@ -1546,10 +1612,11 @@ def quiz_one_split(term, sq, idx, total):
             return ok
 
 
-def review_counts(stats, day=None, allowed_words=None):
+def review_counts(stats, day=None, allowed_words=None, excluded_senses=None):
     """按义项统计：生词 / 熟词 / 待复习 / 覆盖词数。
 
     allowed_words 为可选的单词小写集合；用于只统计某个难度范围。
+    excluded_senses 为可选的「小写单词 → 排除义项 key 集合」映射。
     返回值第一项是旧数据里残留的「未测」义项数，正常应为 0。
     """
     new_count = 0
@@ -1563,8 +1630,11 @@ def review_counts(stats, day=None, allowed_words=None):
             continue
         if not isinstance(recs, dict) or "state" in recs:
             continue
-        for rec in recs.values():
+        for skey, rec in recs.items():
             if not isinstance(rec, dict):
+                continue
+            if (excluded_senses
+                    and skey in excluded_senses.get(word.lower(), ())):
                 continue
             words.add(word)
             state = rec.get("state")
@@ -1597,7 +1667,8 @@ def run_quiz(args, kind="review", session_items=None):
             print("没有需要检测的单词（生词表为空，且今天没有到期熟词）。")
         return
 
-    all_options = [(e, s) for e in entries for s in e.get("senses", [])]
+    all_options = [(e, s) for e in entries for s in e.get("senses", [])
+                   if sense_allowed(e, s, args.level)]
     label = "四选一" if args.check == "single" else "拆分多选"
     print(f"\n{BOLD}──── 释义检测（{label}）────{RESET}")
     if kind == "known":
@@ -2346,8 +2417,9 @@ def show_profiles(args):
         level = get_profile_level(path)
         level_entries = [e for e in entries if level_matches(e, level)]
         allowed = {e["word"].lower() for e in level_entries}
+        excluded = core_sense_exclusions_for_level(level)
         _new_count, learning, known, _levels, due, words = review_counts(
-            stats, allowed_words=allowed)
+            stats, allowed_words=allowed, excluded_senses=excluded)
         suffix = "" if os.path.exists(path) else f"  {DIM}(空){RESET}"
         tags = []
         if name == "default":
@@ -2381,8 +2453,9 @@ def show_stats(args):
     print(f"词库: CET6 {counts['cet6']} · CET4 {counts['cet4']} · "
           f"扩展 {counts['extra']}")
     normalize_review(stats, entries)
+    excluded = core_sense_exclusions_for_level(args.level)
     _new_count, learning, known, levels, due, words = review_counts(
-        stats, allowed_words=allowed)
+        stats, allowed_words=allowed, excluded_senses=excluded)
     level_text = " / ".join(f"L{k} {v}" for k, v in sorted(levels.items()))
     print(f"复习条目: 生词 {learning} · 熟词 {known}"
           f"{('（' + level_text + '）') if level_text else ''} · "
@@ -2431,7 +2504,8 @@ def show_stats(args):
         sys.stdout.write("\r\033[K")
         sys.stdout.flush()
         if k in (ord("d"), ord("D")):
-            show_review_detail(level_entries, stats)
+            show_review_detail(
+                scoped_sense_entries(level_entries, args.level), stats)
 
 
 class ChineseArgumentParser(argparse.ArgumentParser):
