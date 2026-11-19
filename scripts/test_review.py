@@ -314,6 +314,11 @@ class SelectionTest(unittest.TestCase):
         items = vocabtype.select_items(self.entries, self.stats, self.args)
         self.assertEqual(self.senses(items), {("b", "丙")})
 
+    def test_cet4_plus_6_filter(self):
+        self.args.level = "cet4+6"
+        items = vocabtype.select_items(self.entries, self.stats, self.args)
+        self.assertEqual(self.senses(items), {("a", "乙"), ("b", "丙")})
+
     def test_new_filters_at_word_level(self):
         self.stats["words"]["a"] = {"n": 1}
         self.args.new = True
@@ -544,6 +549,16 @@ class FormTest(unittest.TestCase):
                          ["比较级 remoter", "最高级 remotest"])
 
 
+class LevelTest(unittest.TestCase):
+    def test_level_choices(self):
+        self.assertTrue(vocabtype.level_matches("cet4", "all"))
+        self.assertTrue(vocabtype.level_matches("cet4", "cet4+6"))
+        self.assertTrue(vocabtype.level_matches("cet6", "cet4+6"))
+        self.assertFalse(vocabtype.level_matches("extra", "cet4+6"))
+        self.assertTrue(vocabtype.level_matches("cet6", "cet6"))
+        self.assertFalse(vocabtype.level_matches("cet4", "cet6"))
+
+
 class ProfileTest(unittest.TestCase):
     def with_paths(self, root):
         old_stats = vocabtype.DEFAULT_STATS
@@ -594,6 +609,23 @@ class ProfileTest(unittest.TestCase):
             self.with_paths(root)
             with self.assertRaises(SystemExit):
                 vocabtype.set_current_profile("../bad")
+
+    def test_profile_level_defaults_to_all(self):
+        with tempfile.TemporaryDirectory() as root:
+            path = os.path.join(root, "new.json")
+            self.assertEqual(vocabtype.get_profile_level(path), "all")
+
+    def test_profile_level_persists(self):
+        with tempfile.TemporaryDirectory() as root:
+            path = os.path.join(root, "new.json")
+            vocabtype.set_profile_level(path, "cet4+6")
+            self.assertEqual(vocabtype.get_profile_level(path), "cet4+6")
+
+    def test_invalid_profile_level_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            path = os.path.join(root, "new.json")
+            with self.assertRaises(SystemExit):
+                vocabtype.set_profile_level(path, "cet5")
 
     def test_profile_paths_lists_default_and_valid_files(self):
         with tempfile.TemporaryDirectory() as root:

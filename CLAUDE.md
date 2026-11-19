@@ -57,7 +57,9 @@
   和检测。
 - `--all-senses`：拼写选词时从全部词库按义项抽取（包含熟词）。默认只抽还没变熟
   的义项。
-- `--level all|cet6|cet4|extra`：按官方级别筛选候选词，默认 `all`。
+- `--level all|cet4+6|cet6|cet4|extra`：按官方级别筛选候选词。`cet4+6` 表示
+  四级+六级（不含扩展）。未显式指定时使用当前存档绑定的难度；默认存档无绑定时
+  为 `all`。
 - 头部显示 `CET4` / `CET6` / `扩展` 标签；级别来自 `level` 字段。
 - 阶段 1 的比较目标是 `typing` 字段（纯 ASCII），显示仍是 `word`。带重音或短语
   的词条按 `typing` 敲，例如 `coup d'état` 敲 `coup d'etat`、`cliché` 敲 `cliche`；
@@ -192,7 +194,8 @@
   一次）、只登记已检测义项、练到即预登记且不降级熟词、检测提前退出的降级规则、
   义项明细行展开/状态标签/筛选/未学习义项枚举/到期文案/单词与全拼搜索、旧格式
   迁移、拼音模糊匹配（前缀/拼错/少拼/多项匹配收窄到唯一）、拆分多选的片段
-  切分/正确片段标记，以及存档名解析/非法名拒绝/存档列表/当前存档持久化与回退。
+  切分/正确片段标记，以及存档名解析/非法名拒绝/存档列表/当前存档持久化与回退、
+  难度匹配与存档难度绑定。
 
 ### 统计与按键
 
@@ -206,11 +209,15 @@
   及生词/熟词/待复习/覆盖词数，并标出当前存档。`--profile` 与 `--stats-file`
   互斥；名称必须匹配 `[A-Za-z0-9][A-Za-z0-9._-]{0,39}`，防止路径穿越。各存档
   完全独立，首次保存时创建文件。
-- 参数：`-n/--count`、`--mode show|recall`、`--level all|cet6|cet4|extra`、
+- 存档难度：档案 JSON 的 `profile.level` 保存绑定（`all`/`cet4+6`/`cet6`/
+  `cet4`/`extra`）。`--profile-level` 可新建或修改绑定；未显式传 `--level` 时
+  使用该绑定，显式 `--level` 只覆盖本次运行。`--profile-level` 不能与
+  `--stats-file` 或 `--profiles` 同用。`--profiles` 和 `--stats` 会显示绑定难度。
+- 参数：`-n/--count`、`--mode show|recall`、`--level all|cet4+6|cet6|cet4|extra`、
   `--no-pinyin`、`--all-senses`、`--weak`、`--new`、`--no-requeue`、`--review`、
   `--review-known`、`--check single|split`、`--no-quiz`、`--quiz-size`、
   `--no-retry`、`--intervals`、`--stats`、`--profiles`、`--profile`、
-  `--stats-file`、`--seed`、`-f/--file`。
+  `--profile-level`、`--stats-file`、`--seed`、`-f/--file`。
   `--weak`/`--new` 在 `--level` 过滤后的池子里按义项选；复习模式不支持它们。
 - `--help` 输出必须为中文（用法、选项说明、示例），新增参数时同步更新。
 - 按键：`Esc`/`Ctrl-C` 退出；退格删除；`Ctrl-U` 清空当前输入。

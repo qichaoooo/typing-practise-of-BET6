@@ -56,6 +56,7 @@ UNDERLINE = "\033[4m"
 RESET = "\033[0m"
 
 LEVEL_LABEL = {"cet6": "CET6", "cet4": "CET4", "extra": "扩展"}
+LEVEL_CHOICES = ("all", "cet4+6", "cet6", "cet4", "extra")
 
 DEFAULT_INTERVALS = (1, 3, 7, 15, 30)  # 熟词 5 级复习间隔（天）
 
@@ -132,6 +133,26 @@ def set_current_profile(name):
         sys.exit(f"无法保存当前存档选择：{exc}")
 
 
+def get_profile_level(path):
+    """读取存档绑定的难度；没有绑定或数据非法时回退 all。"""
+    stats = load_stats(path)
+    config = stats.get("profile")
+    if isinstance(config, dict):
+        level = config.get("level")
+        if level in LEVEL_CHOICES:
+            return level
+    return "all"
+
+
+def set_profile_level(path, level):
+    """设置存档绑定的难度，并保留存档里的其他数据。"""
+    if level not in LEVEL_CHOICES:
+        sys.exit(f"不支持的存档难度：{level}")
+    stats = load_stats(path)
+    stats.setdefault("profile", {})["level"] = level
+    save_stats(path, stats)
+
+
 def profile_paths():
     """返回已有存档名与路径，default 始终列在最前。"""
     rows = [("default", DEFAULT_STATS)]
@@ -148,6 +169,15 @@ def profile_paths():
 
 def word_stat(stats, word):
     return stats["words"].setdefault(word, {"r": 0, "w": 0, "n": 0, "t": 0.0})
+
+
+def level_matches(level, selected):
+    """判断词条级别是否符合 --level 选择。"""
+    if selected == "all":
+        return True
+    if selected == "cet4+6":
+        return level in ("cet4", "cet6")
+    return level == selected
 
 
 def parse_intervals(text):
@@ -365,7 +395,7 @@ def select_items(entries, stats, args):
     n = args.count
     include_known = getattr(args, "all_senses", False)
     level_pool = [e for e in entries
-                  if args.level == "all" or e.get("level") == args.level]
+                  if level_matches(e.get("level"), args.level)]
     if not level_pool:
         sys.exit(f"没有 level={args.level} 的单词。")
 
@@ -937,7 +967,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
             entry = by_word.get(word)
             if not entry or not isinstance(recs, dict) or "state" in recs:
                 continue
-            if args.level != "all" and entry.get("level") != args.level:
+            if not level_matches(entry.get("level"), args.level):
                 continue
             sense_map = {sense_key(s): s for s in entry.get("senses", [])}
             for skey, rec in recs.items():
@@ -962,7 +992,7 @@ def build_quiz_scope(entries, stats, args, session_items=None):
         entry = by_word.get(word)
         if not entry or not isinstance(recs, dict) or "state" in recs:
             continue
-        if args.level != "all" and entry.get("level") != args.level:
+        if not level_matches(entry.get("level"), args.level):
             continue
         sense_map = {sense_key(s): s for s in entry.get("senses", [])}
         for skey, rec in recs.items():
@@ -2291,7 +2321,8 @@ def show_profiles(args):
         if name == current:
             tags.append("当前")
         tag = f"{DIM}{'/'.join(tags)}{RESET} " if tags else ""
-        print(f"  {name:<20} {tag}生词 {learning} · 熟词 {known} · "
+        level = get_profile_level(path)
+        print(f"  {name:<20} [{level}] {tag}生词 {learning} · 熟词 {known} · "
               f"待复习 {due} · 覆盖 {words} 词{suffix}")
     print(f"{DIM}当前存档：{current} · 进度目录："
           f"{os.path.dirname(DEFAULT_STATS)}{RESET}")
@@ -2300,6 +2331,9 @@ def show_profiles(args):
 def show_stats(args):
     entries = load_words(args.file)
     stats = load_stats(args.stats_file)
+    if getattr(args, "profile_name", None):
+        print(f"存档: {args.profile_name} · 难度: "
+              f"{get_profile_level(args.stats_file)}")
     ws = stats["words"]
     practiced = sum(1 for w, s in ws.items() if s.get("n"))
     right = sum(s.get("r", 0) for s in ws.values())
@@ -2381,6 +2415,8 @@ def main():
   vocabtype --stats                 查看复习进度
   vocabtype --profiles              列出多个学习存档
   vocabtype --profile cet6          切换并记住名为 cet6 的存档
+  vocabtype --profile cet4only --profile-level cet4
+                                    新建存档并绑定四级难度
   vocabtype --profile default       切回默认存档
 """
     p = ChineseArgumentParser(
@@ -2396,10 +2432,10 @@ def main():
                         "recall=只看释义拼写")
     p.add_argument("--no-pinyin", action="store_true",
                    help="标准模式不进行第二阶段的释义全拼")
-    p.add_argument("--level", choices=["all", "cet6", "cet4", "extra"],
-                   default="all",
-                   help="按官方级别筛选：all=全部（默认），cet6=六级★词，"
-                        "cet4=四级词，extra=大纲外扩展词")
+    p.add_argument("--level", choices=LEVEL_CHOICES, default=None,
+                   help="按官方级别筛选：all=全部（无绑定时默认），cet4+6="
+                        "四级+六级（不含扩展），cet6=六级★词，cet4=四级词，"
+                        "extra=大纲外扩展词；未指定时使用当前存档的绑定难度")
     p.add_argument("--weak", action="store_true", help="优先练错误率最高的词")
     p.add_argument("--new", action="store_true", help="只练尚未练过的词")
     p.add_argument("--all-senses", action="store_true",
@@ -2427,19 +2463,34 @@ def main():
                    help="列出全部学习存档及进度概况，并标出当前存档")
     p.add_argument("--profile", metavar="NAME",
                    help="切换并记住当前存档（default 即原 stats.json）")
+    p.add_argument("--profile-level", choices=LEVEL_CHOICES, metavar="LEVEL",
+                   help="设置当前/指定存档绑定的难度：all、cet4+6、cet6、"
+                        "cet4、extra；新建存档时可用")
     p.add_argument("--stats-file", default=None,
                    help="自定义进度文件路径；不能与 --profile 同用")
     p.add_argument("--seed", type=int, default=None, help="固定随机种子")
     args = p.parse_args()
-    if args.profiles and args.profile:
-        sys.exit("--profiles 与 --profile 不能同用。")
+    if args.profiles and (args.profile or args.profile_level):
+        sys.exit("--profiles 不能与 --profile / --profile-level 同用。")
+    if args.profile_level and args.stats_file:
+        sys.exit("--profile-level 不能与 --stats-file 同用。")
     if args.profile and args.stats_file:
         sys.exit("--profile 与 --stats-file 不能同用。")
     if args.profile:
         set_current_profile(args.profile)
         args.stats_file = profile_stats_path(args.profile)
-    elif args.stats_file is None:
-        args.stats_file = profile_stats_path(current_profile_name())
+        args.profile_name = args.profile
+    elif args.stats_file is not None:
+        args.profile_name = None
+    else:
+        name = current_profile_name()
+        args.stats_file = profile_stats_path(name)
+        args.profile_name = name
+    if args.profile_level:
+        set_profile_level(args.stats_file, args.profile_level)
+    if args.level is None:
+        args.level = (get_profile_level(args.stats_file)
+                      if args.profile_name else "all")
     args.intervals = parse_intervals(args.intervals)
     if args.quiz_size < 0:
         sys.exit("--quiz-size 不能为负数")

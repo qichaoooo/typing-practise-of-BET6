@@ -235,6 +235,8 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
 ```sh
 vocabtype --profiles              # 查看已有存档，标出当前存档
 vocabtype --profile cet6          # 切换到 cet6，之后的运行都使用它
+vocabtype --profile cet4only --profile-level cet4
+                                  # 新建存档并绑定四级难度
 vocabtype --profile default       # 切回默认存档
 vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 ```
@@ -244,6 +246,10 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 - 名称只能使用字母、数字、点、下划线和短横线，最长 40 个字符。
 - `--profile` 会记住选择：之后再直接运行 `vocabtype`，使用的仍是该存档。
   当前存档记录在 `~/.local/share/vocabtype/current_profile`。
+- `--profile-level` 给存档绑定默认难度：`all`、`cet4+6`、`cet6`、`cet4` 或
+  `extra`。新建存档时可以一起指定；之后不写 `--level` 就用这个难度。
+- 显式写 `--level` 只覆盖本次运行，不改变存档绑定。例如存档绑定 `cet4+6` 时，
+  `vocabtype --level cet6` 本次只练六级词，下次仍回到 `cet4+6`。
 - `--profile default` 切回默认存档；各存档互不影响。可以直接复制这些 JSON 文件
   做备份或迁移。
 
@@ -255,7 +261,8 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 ```
 -n, --count N       普通模式本次拼写练习的义项数（默认 30）
 --mode show|recall  拼写练习模式
---level LEVEL       all（默认）| cet6 | cet4 | extra，按官方级别筛选
+--level LEVEL       all | cet4+6 | cet6 | cet4 | extra，按官方级别筛选；
+                    未指定时使用当前存档绑定难度
 --no-pinyin         标准模式跳过全拼释义阶段
 --all-senses        拼写选词包含熟词，从全部词库按释义抽取
 --weak              按历史错误率优先挑选
@@ -271,6 +278,8 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 --stats             显示累计统计
 --profiles          列出全部学习存档
 --profile NAME      切换并记住当前存档（default=原 stats.json）
+--profile-level LEVEL
+                    设置存档绑定难度：all/cet4+6/cet6/cet4/extra
 --stats-file FILE   自定义进度文件（不能与 --profile 同用）
 -f FILE             换用其他单词数据文件
 --seed N            固定随机顺序（复现同一组词）
