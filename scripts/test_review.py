@@ -386,6 +386,13 @@ class ScopeTest(unittest.TestCase):
             self.entries, self.stats, self.args)
         self.assertEqual(scope, [])
 
+    def test_level_filter_keeps_due_matching_word(self):
+        self.stats["review"]["c"]["n|丙"]["due"] = "2000-01-01"
+        self.args.level = "cet4"
+        scope = vocabtype.build_quiz_scope(
+            self.entries, self.stats, self.args)
+        self.assertEqual(self.scope_senses(scope), {("c", "丙")})
+
     def test_quiz_size_cap(self):
         self.args.quiz_size = 1
         scope = vocabtype.build_quiz_scope(
@@ -457,7 +464,6 @@ class KnownReviewTest(unittest.TestCase):
         scope = vocabtype.build_quiz_scope(
             self.entries, self.stats, self.args)
         self.assertEqual(scope, [])
-
 
 class FuzzyTest(unittest.TestCase):
     def setUp(self):
