@@ -548,10 +548,13 @@ class ProfileTest(unittest.TestCase):
     def with_paths(self, root):
         old_stats = vocabtype.DEFAULT_STATS
         old_dir = vocabtype.PROFILES_DIR
+        old_pointer = vocabtype.PROFILE_POINTER
         vocabtype.DEFAULT_STATS = os.path.join(root, "stats.json")
         vocabtype.PROFILES_DIR = os.path.join(root, "profiles")
+        vocabtype.PROFILE_POINTER = os.path.join(root, "current_profile")
         self.addCleanup(setattr, vocabtype, "DEFAULT_STATS", old_stats)
         self.addCleanup(setattr, vocabtype, "PROFILES_DIR", old_dir)
+        self.addCleanup(setattr, vocabtype, "PROFILE_POINTER", old_pointer)
 
     def test_default_profile_keeps_legacy_path(self):
         self.assertEqual(vocabtype.profile_stats_path("default"),
@@ -567,6 +570,30 @@ class ProfileTest(unittest.TestCase):
         for name in ("", "../x", "a/b", "-x", "x" * 41):
             with self.assertRaises(SystemExit):
                 vocabtype.profile_stats_path(name)
+
+    def test_current_profile_defaults_when_pointer_missing(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            self.assertEqual(vocabtype.current_profile_name(), "default")
+
+    def test_set_current_profile_persists_choice(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            vocabtype.set_current_profile("work")
+            self.assertEqual(vocabtype.current_profile_name(), "work")
+
+    def test_invalid_pointer_falls_back_to_default(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            with open(vocabtype.PROFILE_POINTER, "w", encoding="utf-8") as f:
+                f.write("../bad\n")
+            self.assertEqual(vocabtype.current_profile_name(), "default")
+
+    def test_set_invalid_profile_name_is_rejected(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.with_paths(root)
+            with self.assertRaises(SystemExit):
+                vocabtype.set_current_profile("../bad")
 
     def test_profile_paths_lists_default_and_valid_files(self):
         with tempfile.TemporaryDirectory() as root:

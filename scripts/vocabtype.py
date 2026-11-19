@@ -44,6 +44,7 @@ DEFAULT_STATS = os.path.join(
     os.environ.get("XDG_DATA_HOME", os.path.expanduser("~/.local/share")),
     "vocabtype", "stats.json")
 PROFILES_DIR = os.path.join(os.path.dirname(DEFAULT_STATS), "profiles")
+PROFILE_POINTER = os.path.join(os.path.dirname(DEFAULT_STATS), "current_profile")
 PROFILE_NAME_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,39}\Z")
 
 GREEN = "\033[32m"
@@ -94,14 +95,41 @@ def save_stats(path, stats):
     os.replace(tmp, path)
 
 
+def validate_profile_name(name):
+    if not PROFILE_NAME_RE.fullmatch(name):
+        sys.exit("存档名只能使用字母、数字、点、下划线和短横线，"
+                 "需以字母或数字开头，最长 40 个字符。")
+    return name
+
+
 def profile_stats_path(name):
     """把存档名解析为进度文件路径；default 保持旧版 stats.json。"""
     if name == "default":
         return DEFAULT_STATS
-    if not PROFILE_NAME_RE.fullmatch(name):
-        sys.exit("存档名只能使用字母、数字、点、下划线和短横线，"
-                 "需以字母或数字开头，最长 40 个字符。")
-    return os.path.join(PROFILES_DIR, name + ".json")
+    return os.path.join(PROFILES_DIR, validate_profile_name(name) + ".json")
+
+
+def current_profile_name():
+    """读取当前存档；文件缺失或内容非法时回退到 default。"""
+    try:
+        with open(PROFILE_POINTER, encoding="utf-8") as f:
+            name = f.read().strip()
+    except OSError:
+        return "default"
+    return name if name == "default" or PROFILE_NAME_RE.fullmatch(name) else "default"
+
+
+def set_current_profile(name):
+    """持久化当前存档选择。"""
+    validate_profile_name(name)
+    try:
+        os.makedirs(os.path.dirname(PROFILE_POINTER), exist_ok=True)
+        tmp = PROFILE_POINTER + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            f.write(name + "\n")
+        os.replace(tmp, PROFILE_POINTER)
+    except OSError as exc:
+        sys.exit(f"无法保存当前存档选择：{exc}")
 
 
 def profile_paths():
@@ -2247,16 +2275,26 @@ def show_review_detail(entries, stats):
 def show_profiles(args):
     """列出全部存档及复习概况。"""
     entries = load_words(args.file)
-    print(f"{BOLD}存档{RESET}{DIM}（用 --profile 名称 选择）{RESET}")
-    for name, path in profile_paths():
+    current = current_profile_name()
+    rows = profile_paths()
+    if current not in {name for name, _path in rows}:
+        rows.append((current, profile_stats_path(current)))
+    print(f"{BOLD}存档{RESET}{DIM}（用 --profile 名称 切换）{RESET}")
+    for name, path in rows:
         stats = load_stats(path)
         normalize_review(stats, entries)
         _new_count, learning, known, _levels, due, words = review_counts(stats)
         suffix = "" if os.path.exists(path) else f"  {DIM}(空){RESET}"
-        label = f"{DIM}默认{RESET} " if name == "default" else ""
-        print(f"  {name:<20} {label}生词 {learning} · 熟词 {known} · "
+        tags = []
+        if name == "default":
+            tags.append("默认")
+        if name == current:
+            tags.append("当前")
+        tag = f"{DIM}{'/'.join(tags)}{RESET} " if tags else ""
+        print(f"  {name:<20} {tag}生词 {learning} · 熟词 {known} · "
               f"待复习 {due} · 覆盖 {words} 词{suffix}")
-    print(f"{DIM}进度目录：{os.path.dirname(DEFAULT_STATS)}{RESET}")
+    print(f"{DIM}当前存档：{current} · 进度目录："
+          f"{os.path.dirname(DEFAULT_STATS)}{RESET}")
 
 
 def show_stats(args):
@@ -2342,7 +2380,8 @@ def main():
   vocabtype --all-senses            拼写选词包含熟词，从全部词库按释义抽取
   vocabtype --stats                 查看复习进度
   vocabtype --profiles              列出多个学习存档
-  vocabtype --profile cet6          使用名为 cet6 的存档练习
+  vocabtype --profile cet6          切换并记住名为 cet6 的存档
+  vocabtype --profile default       切回默认存档
 """
     p = ChineseArgumentParser(
         description="CET-6 单词 + 打字练习 + 释义检测",
@@ -2385,9 +2424,9 @@ def main():
                         "默认 1,3,7,15,30")
     p.add_argument("--stats", action="store_true", help="显示累计进度")
     p.add_argument("--profiles", action="store_true",
-                   help="列出全部学习存档及进度概况")
+                   help="列出全部学习存档及进度概况，并标出当前存档")
     p.add_argument("--profile", metavar="NAME",
-                   help="使用命名存档（default 即原 stats.json）")
+                   help="切换并记住当前存档（default 即原 stats.json）")
     p.add_argument("--stats-file", default=None,
                    help="自定义进度文件路径；不能与 --profile 同用")
     p.add_argument("--seed", type=int, default=None, help="固定随机种子")
@@ -2397,9 +2436,10 @@ def main():
     if args.profile and args.stats_file:
         sys.exit("--profile 与 --stats-file 不能同用。")
     if args.profile:
+        set_current_profile(args.profile)
         args.stats_file = profile_stats_path(args.profile)
     elif args.stats_file is None:
-        args.stats_file = DEFAULT_STATS
+        args.stats_file = profile_stats_path(current_profile_name())
     args.intervals = parse_intervals(args.intervals)
     if args.quiz_size < 0:
         sys.exit("--quiz-size 不能为负数")

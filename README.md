@@ -18,7 +18,7 @@ vocabtype --review-known 20   # 熟词加练：从熟词里抽 20 个义项，�
 vocabtype --all-senses        # 拼写选词包含熟词，从全部词库按释义抽取
 vocabtype --stats             # 查看拼写、生词/熟词和到期数量
 vocabtype --profiles          # 查看多个学习存档
-vocabtype --profile cet6      # 使用名为 cet6 的存档
+vocabtype --profile cet6      # 切换到 cet6，之后的运行都使用它
 vocabtype -n 50 --mode recall # 只看中文释义，凭记忆拼写英文
 vocabtype --weak              # 专练错误率最高的词
 ```
@@ -233,15 +233,19 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
 用 `--profile 名称` 使用独立存档，适合分开练不同考试、不同学习阶段：
 
 ```sh
-vocabtype --profiles              # 查看已有存档及进度
-vocabtype --profile cet6          # 使用名为 cet6 的存档
-vocabtype --profile cet6 --stats  # 只看该存档的统计
+vocabtype --profiles              # 查看已有存档，标出当前存档
+vocabtype --profile cet6          # 切换到 cet6，之后的运行都使用它
+vocabtype --profile default       # 切回默认存档
+vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 ```
 
 - `default` 使用原来的 `~/.local/share/vocabtype/stats.json`，兼容已有进度。
 - 其他名称保存在 `~/.local/share/vocabtype/profiles/名称.json`，首次保存时自动创建。
 - 名称只能使用字母、数字、点、下划线和短横线，最长 40 个字符。
-- `--profile` 只作用于本次运行；各存档互不影响。可以直接复制这些 JSON 文件做备份。
+- `--profile` 会记住选择：之后再直接运行 `vocabtype`，使用的仍是该存档。
+  当前存档记录在 `~/.local/share/vocabtype/current_profile`。
+- `--profile default` 切回默认存档；各存档互不影响。可以直接复制这些 JSON 文件
+  做备份或迁移。
 
 注意：普通模式刚看完释义就检测，测的是短期记忆；真正的长期检验靠复习模式的
 间隔复习。
@@ -266,7 +270,7 @@ vocabtype --profile cet6 --stats  # 只看该存档的统计
 --intervals LIST    熟词各级间隔（天），默认 1,3,7,15,30
 --stats             显示累计统计
 --profiles          列出全部学习存档
---profile NAME      使用命名存档（default=原 stats.json）
+--profile NAME      切换并记住当前存档（default=原 stats.json）
 --stats-file FILE   自定义进度文件（不能与 --profile 同用）
 -f FILE             换用其他单词数据文件
 --seed N            固定随机顺序（复现同一组词）
