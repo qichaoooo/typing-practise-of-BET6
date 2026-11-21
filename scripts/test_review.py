@@ -508,6 +508,25 @@ class SplitTest(unittest.TestCase):
             [(p["cn"], vocabtype.sense_pinyin(p)) for p in pieces],
             [("甲", "jia"), ("乙", "yi")])
 
+    def test_same_pinyin_correct_pieces_merge(self):
+        correct = piece_sense(
+            "他们，它们",
+            [["他", "ta"], ["们", "men"], ["，", ""],
+             ["它", "ta"], ["们", "men"]])
+        distractors = [
+            piece_sense("丙，丁", [["丙", "bing"], ["，", ""], ["丁", "ding"]]),
+            piece_sense("戊", [["戊", "wu"]]),
+        ]
+        question = {"entry": entry("a"), "correct": correct,
+                    "options": [correct] + distractors, "correct_index": 0}
+        sq = vocabtype.build_split_question(question)
+        self.assertIsNotNone(sq)
+        self.assertEqual(len(sq["correct"]), 1)
+        option = sq["options"][next(iter(sq["correct"]))]
+        self.assertEqual(option["cn"], "他们 / 它们")
+        self.assertEqual(vocabtype.sense_pinyin(option), "tamen")
+        self.assertEqual(len(vocabtype.fuzzy_matches("tamen", sq["options"])[0]), 1)
+
     def test_build_split_question_marks_all_correct_pieces(self):
         correct = piece_sense("甲，乙", [["甲", "jia"], ["，", ""], ["乙", "yi"]])
         distractors = [
