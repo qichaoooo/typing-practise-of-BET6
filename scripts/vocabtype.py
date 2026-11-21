@@ -1211,21 +1211,6 @@ def split_sense_pieces(sense):
     return pieces
 
 
-def merge_same_pinyin_pieces(pieces):
-    """合并同拼音且同正确性的片段，避免无法用拼音逐个选中。"""
-    groups = {}
-    merged = []
-    for piece in pieces:
-        key = (sense_pinyin(piece), bool(piece.get("correct")))
-        if key in groups:
-            groups[key]["cn"] += " / " + piece["cn"]
-        else:
-            copy = dict(piece)
-            groups[key] = copy
-            merged.append(copy)
-    return merged
-
-
 def build_split_question(question):
     """把四选一的候选释义逐个按逗号拆成片段，返回多选题目。"""
     options = question["options"]
@@ -1245,7 +1230,6 @@ def build_split_question(question):
                 pieces.append(piece)
     if not pieces:
         return None
-    pieces = merge_same_pinyin_pieces(pieces)
     random.shuffle(pieces)
     correct = {i for i, piece in enumerate(pieces) if piece.get("correct")}
     if not correct:
