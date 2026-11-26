@@ -16,6 +16,7 @@ vocabtype --no-quiz           # 只做拼写练习，不做释义检测
 vocabtype --check single      # 释义检测改用四选一（默认是拆分多选）
 vocabtype --review            # 复习模式：只检测生词和今天到期的熟词
 vocabtype --review-known 20   # 熟词加练：从熟词里抽 20 个义项，不看是否到期
+vocabtype -l 50               # 抽 50 个未学习义项加入生词表，随后进入复习模式
 vocabtype --all-senses        # 拼写选词包含熟词，从全部词库按释义抽取
 vocabtype --stats             # 查看拼写、生词/熟词和到期数量
 vocabtype --profiles          # 查看多个学习存档
@@ -167,7 +168,8 @@ ln -s "$PWD/vocabtype" ~/.local/bin/vocabtype
   熟词保持不变（仍是熟词，继续等待正常复习）。普通模式本次练过的词在检测前
   已经是生词，所以退出后自然保留在生词表。
 - 默认检测范围：普通模式 = 本次练习的义项 + 复习池（生词义项 + 今天到期的
-  熟词义项）；复习模式 = 复习池。
+  熟词义项）；复习模式 = 复习池；`-l N` 先登记 N 个未学习义项，再按复习模式
+  测完整复习池。
 - 默认全部刷完；`--quiz-size N` 限制题数（0 = 全部）。普通模式会优先保留本次
   练习的义项。
 - 加 `--no-quiz` 时不会预登记生词（本次只当打字练习，不写复习进度）。
@@ -205,6 +207,30 @@ vocabtype --review-known 20 --level cet6 # 只在六级熟词里抽
 - 中途退出时，未作答的熟词会按检测退出规则记入生词表（已经到期的熟词除外），
   之后可以在普通复习里重新确认。
 - 不能与 `--review`、`--no-quiz`、`--new`、`--weak`、`--quiz-size` 同用。
+
+### 预置生词（`-l` / `--learn N`）
+
+从当前难度范围直接抽 N 个**还没有学习记录**的义项加入生词表，随后进入常规
+复习模式：
+
+```sh
+vocabtype -l 50                          # 当前存档范围抽 50 个
+vocabtype -l 30 --level cet6 --seed 1    # 只在六级词里抽，固定随机种子
+```
+
+- 抽取复用普通模式规则：难度过滤、`core`/`core+` 义项排除、词内 Zipf 权重
+  （每个词总权重为 1）。同一词的不同义项可以各占一个名额。
+- “未学习”指没有 `learning`/`known` 记录；旧版 `new` 记录按未学习处理。
+  已经是生词或熟词的义项不会被再次抽中或降级。
+- 加入的记录为 `learning`、L0、当天到期；不写 `quiz_sessions`，不计练习次数、
+  WPM 或错误率，只增加生词表和覆盖词数。
+- 不足 N 个时加入全部；一个都没有时提示并退出，不进入复习。
+- 加完后进入的是**完整复习模式**（新加入义项 + 原有生词/到期熟词），可用
+  `--quiz-size` 限制题数；不会只测刚加入的 N 个。
+- 与 `-n/--count`、`--review`、`--review-known`、`--no-quiz`、`--new`、
+  `--weak`、`--all-senses`、`--stats`、`--profiles`、`--profile-level` 互斥；
+  可使用 `--level`、`--profile`、`--stats-file`、`--seed`、`--check`、
+  `--quiz-size` 等。
 
 ### 进度与义项明细
 
@@ -278,6 +304,7 @@ vocabtype --profile cet6 --stats  # 切换并查看该存档的统计
 --no-requeue        错词不在本次重复
 --review            复习模式：只做释义检测
 --review-known N    熟词加练：从熟词义项中抽 N 个，不看到期日
+-l, --learn N       抽 N 个未学习义项加入生词表，然后进入常规复习模式
 --check single|split 检查方式：split=拆分多选（默认）；single=四选一
 --no-quiz           普通模式跳过释义检测
 --quiz-size N       释义检测最多几题（0=全部）

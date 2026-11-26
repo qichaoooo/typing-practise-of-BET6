@@ -473,6 +473,19 @@ def sense_is_known(stats, entry, sense):
     return isinstance(rec, dict) and rec.get("state") == "known"
 
 
+def sense_is_unlearned(stats, entry, sense):
+    """该义项是否还没有任何学习/熟词记录。
+
+    旧版遗留的 new 记录也算未学习；只有 learning/known 表示已经登记过。
+    """
+    recs = stats.get("review", {}).get(entry["word"])
+    if not isinstance(recs, dict) or "state" in recs:
+        return True
+    rec = recs.get(sense_key(sense))
+    return not (isinstance(rec, dict)
+                and rec.get("state") in ("learning", "known"))
+
+
 def select_items(entries, stats, args):
     """返回本次要练的 [(entry, sense)]，按释义抽取。
 
@@ -531,6 +544,37 @@ def select_items(entries, stats, args):
     else:
         pool = [item for e in level_pool for item in weighted_senses(e)]
     return weighted_sample(pool, n)
+
+
+def select_unlearned_items(entries, stats, args, n):
+    """从当前范围抽取 n 个从未学习/检测过的义项。
+
+    复用普通选词的难度过滤、core/core+ 义项排除和词内 Zipf 权重：
+    每个词的总权重为 1，词内第 i 个义项权重为 1/(i+1)。只保留没有
+    learning/known 记录的义项；旧版 new 记录视为未学习。
+    """
+    level_pool = [e for e in entries
+                  if level_matches(e, args.level)]
+    pool = []
+    for entry in level_pool:
+        picked = []
+        for idx, s in enumerate(entry.get("senses") or []):
+            if not sense_allowed(entry, s, args.level):
+                continue
+            if sense_is_unlearned(stats, entry, s):
+                picked.append((s, 1.0 / (idx + 1)))
+        total = sum(w for _, w in picked)
+        if total:
+            pool.extend(((entry, s), w / total) for s, w in picked)
+    return weighted_sample(pool, n)
+
+
+def add_unlearned_to_review(entries, stats, args, n, day=None):
+    """把 n 个未学习义项登记为生词（learning / L0 / 当天到期）。"""
+    items = select_unlearned_items(entries, stats, args, n)
+    for entry, sense in items:
+        register_encountered(stats, entry, sense, day=day)
+    return items
 
 
 def fmt_time(seconds):
@@ -2516,6 +2560,22 @@ class ChineseArgumentParser(argparse.ArgumentParser):
                     .replace("positional arguments:", "位置参数:"))
 
 
+def learn_then_review(args, n):
+    """把 n 个未学习义项加入生词表，然后进入常规复习模式。"""
+    entries = load_words(args.file)
+    stats = load_stats(args.stats_file)
+    normalize_review(stats, entries)
+    items = add_unlearned_to_review(entries, stats, args, n)
+    if not items:
+        print(f"当前范围（{args.level}）没有可加入的未学习义项。")
+        return
+    save_stats(args.stats_file, stats)
+    suffix = "" if len(items) == n else f"（可抽的未学习义项只有 {len(items)} 个）"
+    print(f"已把 {len(items)} 个未学习义项加入生词表{suffix}。")
+    print(f"{DIM}接下来进入常规复习模式；新义项已按生词（L0，今天到期）登记。{RESET}")
+    run_quiz(args, kind="review")
+
+
 def main():
     epilog = """\
 示例:
@@ -2525,6 +2585,8 @@ def main():
   vocabtype --review                复习模式：检测生词和到期熟词
   vocabtype --review --quiz-size 50 本次最多检测 50 个
   vocabtype --review-known 20       从熟词中抽 20 个义项加练（不看是否到期）
+  vocabtype -l 50                   抽 50 个未学习义项加入生词表并进入复习
+  vocabtype -l 30 --level core      只在当前 core 范围抽未学习义项
   vocabtype --all-senses            拼写选词包含熟词，从全部词库按释义抽取
   vocabtype --stats                 查看复习进度
   vocabtype --profiles              列出多个学习存档
@@ -2541,8 +2603,13 @@ def main():
         epilog=epilog, add_help=False)
     p.add_argument("-h", "--help", action="help", help="显示本帮助并退出")
     p.add_argument("-f", "--file", default=DEFAULT_DATA, help="单词数据文件")
-    p.add_argument("-n", "--count", type=int, default=30,
-                   help="普通模式本次拼写练习的义项数（默认 30）")
+    count_group = p.add_mutually_exclusive_group()
+    count_group.add_argument("-n", "--count", type=int, default=30,
+                             help="普通模式本次拼写练习的义项数（默认 30）")
+    count_group.add_argument("-l", "--learn", type=int, metavar="N",
+                             default=None,
+                             help="从未学习义项中按现有规则抽 N 个加入生词表，"
+                                  "然后进入常规复习模式")
     p.add_argument("--mode", choices=["show", "recall"], default="show",
                    help="show=显示单词照着打（含全拼释义阶段）；"
                         "recall=只看释义拼写")
@@ -2588,6 +2655,23 @@ def main():
                    help="自定义进度文件路径；不能与 --profile 同用")
     p.add_argument("--seed", type=int, default=None, help="固定随机种子")
     args = p.parse_args()
+    if args.learn is not None:
+        if args.learn < 1:
+            sys.exit("-l/--learn 需要正整数 N，例如 -l 50")
+        if args.review:
+            sys.exit("-l/--learn 加完后会自动进入复习模式，不能与 --review 同用。")
+        if args.review_known is not None:
+            sys.exit("-l/--learn 不能与 --review-known 同用。")
+        if args.no_quiz:
+            sys.exit("-l/--learn 加完后要进入复习模式，不能与 --no-quiz 同用。")
+        if args.new or args.weak:
+            sys.exit("-l/--learn 不支持 --new / --weak；它只抽未学习义项。")
+        if args.all_senses:
+            sys.exit("-l/--learn 只抽未学习义项，不能与 --all-senses 同用。")
+        if args.stats or args.profiles:
+            sys.exit("-l/--learn 不能与 --stats / --profiles 同用。")
+        if args.profile_level:
+            sys.exit("-l/--learn 不能与 --profile-level 同用。")
     if args.profiles and (args.profile or args.profile_level):
         sys.exit("--profiles 不能与 --profile / --profile-level 同用。")
     if args.profile_level and args.stats_file:
@@ -2625,6 +2709,9 @@ def main():
             sys.exit("--review-known 已指定题数，不能与 --quiz-size 同用。")
     if args.seed is not None:
         random.seed(args.seed)
+    if args.learn is not None:
+        learn_then_review(args, args.learn)
+        return
     if args.profiles:
         show_profiles(args)
         return

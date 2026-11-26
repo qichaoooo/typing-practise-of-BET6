@@ -348,6 +348,70 @@ class SelectionTest(unittest.TestCase):
         self.assertEqual(len(items), 3)
 
 
+class UnlearnedSelectionTest(unittest.TestCase):
+    def setUp(self):
+        self.day = date(2026, 11, 27)
+        self.args = SimpleNamespace(level="all")
+        self.entries = [
+            entry("a", senses=[sense("n", "甲", "jia"),
+                               sense("v", "乙", "yi"),
+                               sense("v", "丙", "bing")]),
+            entry("b", level="cet4", senses=[sense("n", "丁", "ding")]),
+        ]
+        self.stats = {"words": {}, "review": {
+            "a": {"n|甲": {"state": "known", "level": 1,
+                           "due": "2999-01-01"},
+                  "v|乙": {"state": "learning", "level": 0,
+                           "due": "2026-11-27"}},
+        }}
+
+    def senses(self, items):
+        return {(e["word"], s["cn"]) for e, s in items}
+
+    def test_only_unlearned_senses_are_selected(self):
+        items = vocabtype.select_unlearned_items(
+            self.entries, self.stats, self.args, 10)
+        self.assertEqual(self.senses(items), {("a", "丙"), ("b", "丁")})
+
+    def test_same_word_can_yield_multiple_senses(self):
+        stats = {"words": {}, "review": {}}
+        items = vocabtype.select_unlearned_items(
+            [self.entries[0]], stats, self.args, 3)
+        self.assertEqual(self.senses(items), {("a", "甲"), ("a", "乙"),
+                                              ("a", "丙")})
+
+    def test_old_new_record_counts_as_unlearned(self):
+        self.stats["review"]["a"]["n|甲"] = {
+            "state": "new", "level": 0, "due": "2999-01-01"}
+        items = vocabtype.select_unlearned_items(
+            self.entries, self.stats, self.args, 10)
+        self.assertIn(("a", "甲"), self.senses(items))
+
+    def test_level_filter(self):
+        self.args.level = "cet4"
+        items = vocabtype.select_unlearned_items(
+            self.entries, self.stats, self.args, 10)
+        self.assertEqual(self.senses(items), {("b", "丁")})
+
+    def test_fewer_than_requested_returns_all_available(self):
+        items = vocabtype.select_unlearned_items(
+            self.entries, self.stats, self.args, 10)
+        self.assertEqual(len(items), 2)
+
+    def test_add_registers_learning_l0_due_today(self):
+        items = vocabtype.add_unlearned_to_review(
+            self.entries, self.stats, self.args, 10, day=self.day)
+        self.assertEqual(self.senses(items), {("a", "丙"), ("b", "丁")})
+        for e, s in items:
+            rec = rec_for(self.stats, e["word"], s)
+            self.assertEqual(rec["state"], "learning")
+            self.assertEqual(rec["level"], 0)
+            self.assertEqual(rec["due"], "2026-11-27")
+        # 已有熟词/生词记录不被改写
+        self.assertEqual(self.stats["review"]["a"]["n|甲"]["state"], "known")
+        self.assertEqual(self.stats["review"]["a"]["v|乙"]["state"], "learning")
+
+
 class ScopeTest(unittest.TestCase):
     def setUp(self):
         self.args = SimpleNamespace(intervals=(1, 3, 7, 15, 30),

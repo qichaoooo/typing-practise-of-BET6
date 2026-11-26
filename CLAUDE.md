@@ -114,6 +114,18 @@
   **不升级、不改 due**（避免加练刷等级）；答错走正常逻辑回生词（L0，当天到期）。
   不能与 `--review`、`--no-quiz`、`--new`、`--weak`、`--quiz-size` 同用；
   熟词不足 N 时抽全部，没有熟词时给明确提示。`quiz_sessions.kind` 记为 `known`。
+- `-l N` / `--learn N` 预置生词：从当前范围按义项抽 N 个**未学习**义项（没有
+  `learning`/`known` 记录；旧版 `new` 视为未学习），用 `register_encountered`
+  登记为生词（`learning`、L0、当天到期），保存后直接进入**常规复习模式**。
+  抽取复用普通模式规则：`level_matches` + `sense_allowed` + 词内 Zipf 权重
+  `1/(i+1)` 并按词归一化；同一词的不同义项可各占一个名额。加入步骤不写
+  `quiz_sessions`、不计 WPM/练习次数/错误率，只增加生词和覆盖词数。复习范围是
+  完整复习池（新加入 + 原有生词/到期熟词），不是只测刚加入的 N 个；可用
+  `--quiz-size` 限制。不足 N 个加入全部；0 个时提示并退出，不进入复习。
+  N 必须为正整数；不能与 `-n/--count`、`--review`、`--review-known`、
+  `--no-quiz`、`--new`、`--weak`、`--all-senses`、`--stats`、`--profiles`、
+  `--profile-level` 同用；可用 `--level`、`--profile`、`--stats-file`、
+  `--seed`、`--check`、`--quiz-size` 等。
 - 检测范围：
   - 普通模式 = 本次练习的义项 + 复习池（生词义项 + 今天到期的熟词义项）。
   - 复习模式 = 复习池。没练过的义项不在池里。
@@ -198,7 +210,9 @@
   义项明细行展开/状态标签/筛选/未学习义项枚举/到期文案/单词与全拼搜索、旧格式
   迁移、拼音模糊匹配（前缀/拼错/少拼/多项匹配收窄到唯一）、拆分多选的片段
   切分/正确片段标记，以及存档名解析/非法名拒绝/存档列表/当前存档持久化与回退、
-  难度匹配（含 core/core+）、核心义项排除与存档难度绑定。
+  难度匹配（含 core/core+）、核心义项排除与存档难度绑定，以及 `-l/--learn`
+  的未学习义项抽取（旧 `new` 视为未学习、同词多义项、难度过滤、登记为
+  `learning` L0 当天到期且不改写已有生词/熟词）。
 
 ### 统计与按键
 
@@ -216,12 +230,14 @@
   `cet4`/`extra`）。`--profile-level` 可新建或修改绑定；未显式传 `--level` 时
   使用该绑定，显式 `--level` 只覆盖本次运行。`--profile-level` 不能与
   `--stats-file` 或 `--profiles` 同用。`--profiles` 和 `--stats` 会显示绑定难度。
-- 参数：`-n/--count`、`--mode show|recall`、`--level all|core|core+|cet4+6|cet6|cet4|extra`、
-  `--no-pinyin`、`--all-senses`、`--weak`、`--new`、`--no-requeue`、`--review`、
+- 参数：`-n/--count`、`-l/--learn N`、`--mode show|recall`、
+  `--level all|core|core+|cet4+6|cet6|cet4|extra`、`--no-pinyin`、
+  `--all-senses`、`--weak`、`--new`、`--no-requeue`、`--review`、
   `--review-known`、`--check single|split`、`--no-quiz`、`--quiz-size`、
   `--no-retry`、`--intervals`、`--stats`、`--profiles`、`--profile`、
   `--profile-level`、`--stats-file`、`--seed`、`-f/--file`。
   `--weak`/`--new` 在 `--level` 过滤后的池子里按义项选；复习模式不支持它们。
+  `-n/--count` 与 `-l/--learn` 互斥。
 - `--help` 输出必须为中文（用法、选项说明、示例），新增参数时同步更新。
 - 高频难度：`core` 为 NGSL 1.2 + Oxford 3000 + Longman Communication 3000 的
   并集，再并入 COCA 排名 ≤3000 的词；`core+` 再并入 Oxford 5000 额外词和
