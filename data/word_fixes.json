@@ -6,7 +6,17 @@
     "pos": "n",
     "cn": "爱滋病(获得性免疫缺陷综合征)"
    }
-  ]
+  ],
+  "method": "联想：AIDS 是 Acquired Immune Deficiency Syndrome 的首字母缩写，即‘获得性免疫缺陷综合征’（艾滋病）。"
+ },
+ "April": {
+  "method": "联想：April 读作“诶普柔”——四月春风柔和。"
+ },
+ "August": {
+  "method": "联想：August 读作“奥古斯特”——记八月；“威严的”可联想八月烈日令人敬畏。"
+ },
+ "Bible": {
+  "method": "联想：读音 /ˈbaɪbl/ 近「拜宝」——信徒拜读的宝书，专指《圣经》。"
  },
  "Buddhism": {
   "method": "联想：Buddha(佛陀)＋-ism(教义、主义) → 佛教"
@@ -49,11 +59,17 @@
    }
   ]
  },
+ "a": {
+  "method": "联想：A 是字母表第一个字母，故有‘第一’义；作冠词表示‘一个’（不定指）。"
+ },
  "abbreviation": {
   "method": "ab-(ad，向) ＋ brev(短，拉丁 brevis) ＋ iation → 使变短 → 缩写，缩写词"
  },
  "abide": {
   "method": "a-(加强) + bide(停留、等待) → 留下来 → 停留；遵守；忍受"
+ },
+ "able": {
+  "method": "拉丁 habilis‘易掌握、灵巧’（源自 habēre‘拿、持’）→ 有能力的、能干的。"
  },
  "aboard": {
   "method": "a-（在…上）+ board（甲板、船舷）→ 在船上；泛化为在火车、飞机上。",
@@ -71,14 +87,26 @@
  "abort": {
   "method": "ab(不/离开) ＋ ori(产生，拉丁 orīrī) ＋ t → 未能产生 → 流产，中途失败"
  },
+ "about": {
+  "method": "古英语 on + be + out（在外围）→ 在周围、四处、大约；涉及某事 → 关于。"
+ },
+ "above": {
+  "method": "古英语 on + bī + ufan（在上）→ 在上方、在上面；高于、超出；前面说过的 → 上述的。"
+ },
  "abreast": {
   "method": "a(在) ＋ breast(胸) → 胸与胸齐平 → 并肩地，并列地"
+ },
+ "abroad": {
+  "method": "a-（在）+ broad（宽广）：到宽广处 → 到室外、到处；走出国界 → 往国外。"
  },
  "absence": {
   "method": "拉丁语 ab（离开）+ sum（在）：人不在→缺席、不在；离开的那段时间→外出期；某物不在→缺乏、不存在。"
  },
  "absent": {
   "method": "拉丁 ab-（离开）+ sum（在、存在）：人不在场 → 缺席的、缺乏的"
+ },
+ "absolute": {
+  "method": "拉丁 ab-（离开）+ solv（松开）：解开束缚、不受限制 → 绝对的、完全的、独立的；权力不受限 → 专制的。"
  },
  "academic": {
   "method": "源自希腊 Akadēmia——柏拉图讲学的学园（与 Akadēmos 有关）：学园的 → 学院的、学术的；也指纯理论的；名词指大学教师。"
@@ -89,6 +117,9 @@
  "accent": {
   "method": "词根：拉丁 ad-（向）+ canō（唱）→ accentus“配唱、声调”；引申为重音、口音。"
  },
+ "accept": {
+  "method": "拉丁 ad-（向）+ capiō（拿）：拿过来 → 接受、接纳；心里接受 → 承认、同意、相信；承担、承兑由此引申。"
+ },
  "acceptance": {
   "method": "accept（接受）+ -ance（名词后缀）：接受的行为 → 接受、承认；也指容忍。"
  },
@@ -97,6 +128,9 @@
  },
  "accordance": {
   "method": "accord（一致、符合）+ -ance（名词后缀）→ 一致、和谐；常用 in accordance with（依照）。"
+ },
+ "according to": {
+  "method": "联想：according to 就是‘依照……（所说/所定）’→ 根据、按照；据某人所说；结果随条件而定 → 取决于。"
  },
  "accordingly": {
   "method": "according(依照)＋ly(地) → 依照前面所说的情况 → 相应地，因此"
@@ -120,23 +154,47 @@
    }
   ]
  },
+ "achieve": {
+  "method": "古法语 a-（到）+ chief（头、末端）：做到尽头 → 完成、达到；努力达成心愿 → 如愿以偿。"
+ },
  "achievement": {
   "method": "achieve（完成、达到）+ -ment：把事情做完→完成，做完的成果→成就、成绩。"
  },
  "acre": {
   "method": "古英语 æcer(田地)，与 agriculture 同源 → 一块田的面积 → 英亩"
  },
+ "across": {
+  "method": "a-（在）+ cross（十字）：成十字、交叉；从一边到另一边 → 穿过、越过、在对面。"
+ },
+ "act": {
+  "method": "拉丁 agere（做、行动）→ act：行动、行为；戏剧分‘幕’、立法成‘法案’，都是一种行动；动词表演、假装。"
+ },
  "activate": {
   "method": "active(活动的) ＋ -ate(使…) → 使活动起来"
  },
+ "active": {
+  "method": "act（行动）+ -ive（…的）→ 爱行动的：活跃的、积极的、主动的；正在起作用的 → 有效的、现行的、现役的；主动语态。"
+ },
+ "actor": {
+  "method": "act（行动、表演）+ -or（人）→ 行动者；在戏里行动的人 → 演员（男演员）。"
+ },
+ "actual": {
+  "method": "act（行动、实际做）+ -ual（…的）：实际做出来的 → 真实的、实际的、现行的。"
+ },
  "acupuncture": {
   "method": "acu(针，拉丁 acus) ＋ puncture(刺，穿刺) → 用针刺 → 针刺，针刺疗法"
+ },
+ "add": {
+  "method": "拉丁 addō‘加、增添’：增加、添加；把数字加起来 → 做加法、计算总和；补充一句 → 附带说明。"
  },
  "addition": {
   "method": "addit(加)+ion：添加的动作→加法；添上去的东西→附加物。"
  },
  "additional": {
   "method": "addition（增加）+ -al（…的）→附加的、追加的，在原物之外再加一份。"
+ },
+ "address": {
+  "method": "拉丁 ad-（向）+ directus（弄直、对准）：把话对准某人 → 演说；把信对准某处 → 地址；针对问题 → 对付、处理。"
  },
  "adjective": {
   "method": "拉丁语 adiectīvus＝ad-（向）+ iaciō（投）→ 附加到名词上的词，即形容词。",
@@ -157,8 +215,17 @@
  "admire": {
   "method": "ad(向) ＋ mir(惊奇，拉丁 mirari) → 对着惊叹 → 钦佩，赞美"
  },
+ "adult": {
+  "method": "拉丁 adultus（已长成，adolescō‘长大’的过去分词）→ 成年的、成熟的；名词指成人、成虫。"
+ },
+ "advance": {
+  "method": "拉丁 ab + ante（在前）→ 向前：前进、进展；使提前 → 预先的、预付；提高、上涨。"
+ },
  "advent": {
   "method": "源自拉丁 adventus(到达) → 来到，来临；advent calendar 即降临历"
+ },
+ "adventure": {
+  "method": "拉丁 adventurus（将要来临的，adveniō‘到来’的将来分词）+ -ure：未知的将来 → 冒险、冒险经历。"
  },
  "adverb": {
   "method": "ad-（附加）+ verb（词、动词）+ -ium；拉丁语 adverbium 指附加在其他词上的词→副词。"
@@ -168,6 +235,18 @@
  },
  "advertise": {
   "method": "经中古英语 advertisen 来自古法语 advertir（通知、警告）：把消息告知众人 → 做广告、公布。"
+ },
+ "advice": {
+  "method": "古法语 avis‘看法’，出自 ce m'est a vis‘在我看来’（vis 源自拉丁 vīsus‘看’）→ 意见、忠告；旧义还有消息、通知。"
+ },
+ "advise": {
+  "method": "ad-（向）+ 拉丁 visō（看）：先‘看清、考虑’，再给意见 → 劝告、建议；正式告知即通知。"
+ },
+ "affair": {
+  "method": "法语 faire（做）+ a-：要做的事 → 事务、事情；affaire de cœur（感情之事）→ 恋爱事件。"
+ },
+ "affect": {
+  "method": "ad-（向）+ facere（做）→ afficere‘作用于’→ 影响；作用于情感 → 感动；古义亦指假装、装作。"
  },
  "affection": {
   "method": "affect（影响、感动）+ -ion（名词后缀）：被触动而产生的状态 → 感情、爱慕。"
@@ -181,11 +260,44 @@
  "afloat": {
   "method": "a(在) ＋ float(漂浮) → 在水上漂着 → 飘浮着的，在海上的"
  },
+ "afraid": {
+  "method": "古法语 es-（出）+ freer（保平安）→ 打破安宁、受惊 → 害怕的；I'm afraid 委婉表‘恐怕、遗憾’。"
+ },
+ "after": {
+  "method": "PIE *h₂epo‘离开’→ *h₂epoteros‘更靠后’→ 古英语 æfter：时间上在后 → 在…之后；由‘随后’引申出‘由于’。"
+ },
  "aftermath": {
   "method": "after(之后) ＋ math(割草) → 割草后再生之草 → 结果，后果"
  },
+ "afternoon": {
+  "method": "after（在…之后）+ noon（正午）→ 正午之后 → 下午、午后。"
+ },
+ "afterwards": {
+  "method": "after（之后）+ -wards（表方向）→ 朝后、之后 → 然后、后来；英式常用 afterwards。"
+ },
+ "again": {
+  "method": "古英语 onġēan‘对着、反向’，与 against 同源：再对着来一次 → 再一次、又；也指回到原处。"
+ },
+ "against": {
+  "method": "由 again（对着）加 -st 演变而来，与 again 同源：对着 → 反对、逆着；倚靠、靠着。"
+ },
+ "age": {
+  "method": "拉丁 aevum‘一生’→ aetās → 古法语 aage：活过的年数 → 年龄；人生的一段 → 时代；v. 变老。"
+ },
  "agitate": {
   "method": "ag(驱动，拉丁 agere) ＋ it ＋ ate(反复) → 反复驱动 → 搅动，使激动"
+ },
+ "ago": {
+  "method": "a- + go 的过去分词 gone：‘已经走过、过去’→ 以前；two days ago 即两天前。"
+ },
+ "agree": {
+  "method": "拉丁 ad（向）+ gratum（合意的）→ 意见相合 → 同意、赞成；事物相合 → 适合、一致。"
+ },
+ "agriculture": {
+  "method": "拉丁 ager（田地）+ cultūra（耕作）→ 耕种田地 → 农业。"
+ },
+ "ahead": {
+  "method": "a-（在…）+ head（头、船头）→ 在船头之前 → 向前、领先；时间在前 → 预先、将来。"
  },
  "aid": {
   "method": "经古法语 aide 源自拉丁语 adiūtāre‘帮助’：帮助、援助、救护；帮忙的人或手段→助手、辅助手段。"
@@ -196,14 +308,29 @@
  "ail": {
   "method": "联想：ail 与 ill(生病)只差一个字母；生病使人苦恼 → 使苦恼，生病"
  },
+ "aim": {
+  "method": "拉丁 ad-（向）+ aestimare（估量）→ 估量目标 → 瞄准；引申为目标、打算。"
+ },
+ "air": {
+  "method": "希腊 ἀήρ‘空气’→ 拉丁 āēr → 空气；引申为气氛、态度；音乐中 air 又指曲调。"
+ },
  "air-condition": {
   "method": "air(空气) ＋ condition(调节) → 调节空气 → 设以空调设备，用空调调节"
  },
  "airborne": {
   "method": "air(空气) ＋ borne(被携带) → 由空气携带 → 升空的，空运的，空降的"
  },
+ "aircraft": {
+  "method": "air（空中）+ craft（技艺、航行器）→ 空中航行之器 → 航空器、飞机。"
+ },
+ "airline": {
+  "method": "air（空中）+ line（线路）→ 航线；经营航线的公司 → 航空公司。"
+ },
  "airplane": {
   "method": "air（空中）+ plane（飞机）→ 飞机；由 aeroplane 缩改而来"
+ },
+ "airport": {
+  "method": "air（空中）+ port（港口）→ 空中的港口 → 机场、飞机场。"
  },
  "akin": {
   "method": "a-(＝of) ＋ kin(亲属) → 同族的 → 同类的，同源的"
@@ -223,6 +350,12 @@
  "alike": {
   "method": "古英语 ġelīċ'相似的'（与 like 同源），又混入古诺斯语 álíkr；词源上相当于 a- + like。"
  },
+ "alive": {
+  "method": "a-（在…中）+ life（生命）→ 处于生命之中 → 活着的；引申为活泼的、热闹的。"
+ },
+ "all": {
+  "method": "联想：all 就是‘全部、所有’；古英语作 eall，可把三个字母想成把一切全包住，adv. 完全地。"
+ },
  "allergic": {
   "method": "all(其他、异，希腊 allos) ＋ erg(作用，ergon) ＋ -ic → 对异物起反应 → 过敏的，极反感的"
  },
@@ -232,17 +365,35 @@
  "allot": {
   "method": "al(去) ＋ lot(份额/抽签) → 按份分给 → 分配，分摊"
  },
+ "allow": {
+  "method": "古法语 alouer 混合拉丁 allaudāre（称赞、认可）与 allocāre（分配）：认可 → 允许、承认；分配 → 给予。"
+ },
  "allude": {
   "method": "ad(向) ＋ lud(玩，戏弄) → 朝着某处戏弄地指向 → 暗指，提及"
  },
  "allure": {
   "method": "al(＝ad，向) ＋ lure(诱饵) → 用诱饵把…引过来 → 引诱，吸引"
  },
+ "ally": {
+  "method": "拉丁 ad-（向）+ ligō（捆绑）→ 绑在一起 → 结盟、联合；同盟者、同盟国。"
+ },
  "almighty": {
   "method": "al(全) ＋ might(力量) ＋ y → 拥有全部力量 → 万能的，全能的"
  },
+ "almost": {
+  "method": "all（全部）+ most（最）→ 几乎全部 → 几乎、差不多。"
+ },
  "aloft": {
   "method": "a(在…上，古诺斯语 á) ＋ loft(天空、高处) → 在高处，在上"
+ },
+ "alone": {
+  "method": "all（全）+ one（一）→ 全是独自一人 → 孤独的、单独的；adv. 独自地。"
+ },
+ "along": {
+  "method": "古英语 and-（对着、沿）+ lang（长）→ 沿着长的方向 → 沿着；向前。"
+ },
+ "alongside": {
+  "method": "along（沿着）+ side（边）→ 沿着旁边 → 在旁边；与…一起、同时。"
  },
  "aloud": {
   "method": "a-（处于…状态）+ loud（大声）→ 处于出声的状态 → 出声地、大声地。"
@@ -256,11 +407,26 @@
    }
   ]
  },
+ "already": {
+  "method": "al-（完全）+ ready（准备好）→ 早已准备好 → 已经、早已。"
+ },
+ "also": {
+  "method": "all（完全）+ so（如此）→ 完全如此、同样 → 也、并且。"
+ },
+ "although": {
+  "method": "all（加强语气）+ though（虽然）→ 虽然、尽管。"
+ },
  "altitude": {
   "method": "拉丁 altus（高的）+ -tūdō（名词后缀）→ 高度、海拔；alt- 即「高」。"
  },
+ "altogether": {
+  "method": "al-（全部）+ together（一起）→ 全部合在一起 → 完全地；总的说来。"
+ },
  "aluminum": {
   "method": "名字取自拉丁语 alumen（明矾）+ 金属后缀 -um：铝曾从明矾中提炼 → 铝。"
+ },
+ "always": {
+  "method": "all（全）+ way(s)（路）→ 一路如此、所有时候 → 总是、始终。"
  },
  "am": {
   "trans": [
@@ -268,7 +434,8 @@
     "pos": "",
     "cn": "be的单数第一人称"
    }
-  ]
+  ],
+  "method": "古英语 eom，源自 PIE *h₁ésmi‘我是、存在’，是 be 的第一人称单数：I am。"
  },
  "amass": {
   "method": "a(ad 向) ＋ mass(一团，堆) → 堆成一团 → 积聚，堆积"
@@ -294,6 +461,15 @@
  "amiable": {
   "method": "ami(爱，拉丁 amō) ＋ able(可…的) → 可爱的 → 亲切的，和蔼可亲的"
  },
+ "amid": {
+  "method": "a-（在…）+ mid（中间）→ 在…中间、在其中。"
+ },
+ "among": {
+  "method": "古英语 on（在）+ ġemang（人群、混合）→ 在人群之中 → 在…之中。"
+ },
+ "amount": {
+  "method": "拉丁 ad montem‘向山上去’→ 古法语 amonter‘上升、累计到’→ 总数、总额；v. 总计、等于。"
+ },
  "ample": {
   "method": "拉丁语 amplus 意为「宽大的、充足的」，ample 直接由此而来，即大量的、充足的。"
  },
@@ -312,6 +488,9 @@
  "anchor": {
   "method": "联想：anchor 读音近“安靠”——抛锚后船安然靠停。词源上经拉丁语 ancora 借自希腊语 ἄγκυρα，本义就是锚。"
  },
+ "and": {
+  "method": "古英语 and，源自 PIE *h₂énti‘在对面、靠近’→ 把两样东西并到一起 → 和、与。"
+ },
  "anecdote": {
   "method": "an-(不) ＋ ek-(出) ＋ dot(给，希腊 didónai) → 未公开的事 → 轶事，奇闻"
  },
@@ -321,8 +500,17 @@
  "angel": {
   "method": "希腊语 angelos(信使) → 上帝的使者 → 天使，守护神"
  },
+ "angle": {
+  "method": "拉丁 angulus‘角落’→ 角、角度、角落。钓鱼义是另一个词（古英语 angel‘鱼钩’），与‘角’无关，分开记。"
+ },
+ "angry": {
+  "method": "anger（愤怒）+ -y（形容词后缀）→ 生气的、愤怒的。"
+ },
  "anguish": {
   "method": "拉丁 angere(挤压) → angustus(狭窄) → 被紧紧挤压的痛 → 剧痛，痛苦"
+ },
+ "animal": {
+  "method": "拉丁 anima（呼吸、生命、灵魂）+ -al → 有呼吸、有生命的东西 → 动物。"
  },
  "animate": {
   "method": "anim(呼吸、灵魂，拉丁 anima) ＋ ate → 给…注入气息 → 使有生气，赋予生命"
@@ -332,6 +520,18 @@
  },
  "annex": {
   "method": "an(＝ad，向) ＋ nex(绑，拉丁 nectere) → 绑到主体上 → 附加物；并吞"
+ },
+ "announce": {
+  "method": "ad-（向）+ nūntius（信使）→ 派信使向大家报告 → 宣布、声称；预告。"
+ },
+ "another": {
+  "method": "an（一个）+ other（另外的）→ 另一个、再一个；不同的。"
+ },
+ "answer": {
+  "method": "古英语 and-（对着）+ swerian（发誓）→ 对着指控起誓辩白 → 回答、答复；答案。"
+ },
+ "ant": {
+  "method": "联想：古英语 ǣmete → 中古 ampte → 现代 ant，拼写丢掉 m/p，短小的 ant 正像小蚂蚁。"
  },
  "antagonism": {
   "method": "ant(相反) ＋ agon(竞赛) ＋ ism → 对着干 → 对立，敌对，敌意"
@@ -345,8 +545,29 @@
  "antonym": {
   "method": "ant-(相反，希腊 anti-) ＋ onym(名称、词) → 意思相反的词 → 反义词"
  },
+ "anxious": {
+  "method": "拉丁 angō（使窒息、使痛苦）→ anxius‘焦虑的’→ 忧虑的、发愁的；也指渴望的。"
+ },
+ "any": {
+  "method": "古英语 ǣniġ = one（一）+ -y → 任意一个 → 任何的；pron. 任何。"
+ },
  "anyhow": {
   "method": "any（任何）+ how（方式）：以任何方式→无论如何；退一步说→至少。"
+ },
+ "anyone": {
+  "method": "any（任何）+ one（人）→ 任何人。"
+ },
+ "anything": {
+  "method": "any（任何）+ thing（事物）→ 任何事物、任何事。"
+ },
+ "anyway": {
+  "method": "any（任何）+ way（方式、路）→ 用任何方式都行 → 无论如何；至少。"
+ },
+ "anywhere": {
+  "method": "any（任何）+ where（哪里）→ 任何地方、无论何处。"
+ },
+ "apart": {
+  "method": "a-（拉丁 ad，向）+ part（部分/一边）→ 在一边、分开；成零碎、分离的。"
  },
  "ape": {
   "method": "联想：ape 作动词是“模仿”，猿猴最会模仿人 → 无尾猿"
@@ -354,17 +575,35 @@
  "apology": {
   "method": "希腊语 apo-（离开）+ logos（言说）→ 为自身辩白的发言；本义是“辩护”，后来才转为“道歉”。"
  },
+ "app": {
+  "method": "application（应用程序）的缩略→ 手机应用 app。"
+ },
  "appal": {
   "method": "a(使) ＋ pal(苍白) ＋ l → 吓得脸发白 → 使惊骇，使吓坏"
+ },
+ "apparent": {
+  "method": "与 appear 同源：拉丁 appārēns 是 appāreō（显现）的现在分词→ 显现出来的：显然的、可见的；表面上的。"
+ },
+ "appear": {
+  "method": "ap-（拉丁 ad，向）+ pear（pāreō，显现）→ 出现、来到；显得。"
  },
  "appetite": {
   "method": "词源：ap-（ad，朝向）+ petere（追求）→ 追求食物就是食欲；引申为欲望、爱好。"
  },
+ "apple": {
+  "method": "联想：apple 音近“阿婆”——阿婆递来一个苹果。"
+ },
  "application": {
   "method": "apply（应用；申请）+ -ication：贴上→施用、涂抹；把理论用于实际→应用、实施、实用性；递交申请→申请（书）。"
  },
+ "appoint": {
+  "method": "ap-（ad，向）+ point（点）→ 把时间、地点“定点”：指定、约定；进而任命。"
+ },
  "appraise": {
   "method": "ap(向) ＋ prais(价格) ＋ e → 给出价格 → 评价，估价"
+ },
+ "appreciate": {
+  "method": "ap-（ad，向）+ preci（pretium，价格）+ -ate → 给东西估价：鉴别、赏识、欣赏、感激；价值上升即增值。"
  },
  "apprentice": {
   "method": "古法语 aprendre(学习) ＋ -is(人) → 来学的人 → 学徒，生手"
@@ -391,11 +630,23 @@
  "arch": {
   "method": "arc(弓、弧) → 弓形 → 拱门，拱形"
  },
+ "architect": {
+  "method": "archi（首席）+ tect（希腊语 tektōn，建造者）→ 首席建造者：建筑师；引申为缔造者、设计者。"
+ },
+ "architecture": {
+  "method": "architect（建筑师）+ -ure（名词后缀）→ 建筑学、建筑式样；也指体系结构。"
+ },
  "archive": {
   "method": "词源：希腊 arkheion 原指官署、公共档案馆 → 档案；把…存档"
  },
  "ardent": {
   "method": "ard(拉丁 ardere“燃烧”)＋ent → 燃烧的 → 热心的，炽热的"
+ },
+ "area": {
+  "method": "联想：are + a——“是(are)一块地(a)”，即区域、面积、范围、空地。"
+ },
+ "arise": {
+  "method": "a- + rise（升起）→ 起来、升起；引申为站立、出现、发生。"
  },
  "aristocrat": {
   "method": "aristo(最好) ＋ crat(统治) → 最优秀者统治 → 贵族"
@@ -403,17 +654,41 @@
  "arithmetic": {
   "method": "希腊语 arithmós（数）+ -tikós（学科/形容词后缀）→ 算术；arithm- 就是“数”的词根。"
  },
+ "arm": {
+  "method": "联想：arm 指手臂；手臂能持械，故又指武器、武装——两义同形，一起记。"
+ },
+ "army": {
+  "method": "源自拉丁 armāta（武装力量），与 arm（武器）同源→ 军队、陆军。"
+ },
+ "around": {
+  "method": "a-（on，在）+ round（圆、圈）→ 绕成一圈：在…周围、四处；兜着圈子。"
+ },
  "arrangement": {
   "method": "arrange（安排、排列）+ -ment：整理、排列这件事；复数常指为某事做的准备工作。"
  },
  "array": {
   "method": "与 ready 同源：古法语 arraier 本义「使就序」→ 排列，一系列；陈列，展示"
  },
+ "arrive": {
+  "method": "拉丁 adrīpāre 本义“靠岸”，rīpa 即河岸→ 到达岸边：抵达、到达。"
+ },
  "arrow": {
   "method": "源自原始日耳曼语 *arhwō「箭」，与 arc（弧、弓）同源——弓上搭的正是箭。"
  },
+ "art": {
+  "method": "联想：A 像画架——art 就是架上作画：艺术、美术，也指技艺、人文科学。"
+ },
+ "article": {
+  "method": "拉丁 articulus（关节、部分）← artus（关节）→ 一节一节：条款、物品、文章；也指冠词。"
+ },
  "artifact": {
   "method": "arte(技艺) ＋ fact(制作) → 用技艺做出的东西 → 人工制品"
+ },
+ "as": {
+  "method": "as 是 also 的缩略：古英语 eallswā 意为“just so”→ 像…一样、当作、当…之时、因为。"
+ },
+ "ash": {
+  "method": "联想：灰姑娘 Cinderella 终日与灰烬为伴——ash 即灰、灰烬。"
  },
  "ashamed": {
   "method": "a-（处于…状态）+ shame（羞耻）+ -ed：处于羞耻状态，即惭愧的、羞耻的。"
@@ -421,11 +696,20 @@
  "ashore": {
   "method": "a-（在、向）+ shore（岸）：在岸上、向岸，故为副词“向岸，在岸上”。"
  },
+ "aside": {
+  "method": "a-（在）+ side（旁边）→ 在一边：离开、另外；旁白、小声说的话。"
+ },
+ "ask": {
+  "method": "联想：ask 谐音“爱思考”——爱思考就多问、多要求。"
+ },
  "asleep": {
   "method": "a(处于…状态) ＋ sleep(睡眠) → 睡着的，熟睡的"
  },
  "aspire": {
   "method": "拉丁 aspīrō(向…吹气、追求) → 心向着目标 → 渴望，立志于"
+ },
+ "ass": {
+  "method": "联想：驴（ass）以固执闻名，故引申指笨蛋、傻瓜；俚语又指屁股。"
  },
  "assassinate": {
   "method": "词源：assassin 源自阿拉伯语 hashishin(传说中吸大麻的刺客) ＋ -ate → 暗杀，行刺"
@@ -438,6 +722,9 @@
  },
  "assimilation": {
   "method": "联想：assimilation 含 simil(相似) → 使变得相似 → 同化；也指消化吸收"
+ },
+ "assist": {
+  "method": "as-（拉丁 ad，到）+ sist（站）→ 站到旁边帮忙：帮助、协助、促进。"
  },
  "assistance": {
   "method": "assist（协助）+ -ance：拉丁语 assistō 意为“站到旁边”——站到你身边帮一把，就是协助、援助。"
@@ -475,6 +762,9 @@
  "asylum": {
   "method": "a(不) ＋ syl(夺取) → 不可被夺走之地 → 庇护，收容所"
  },
+ "at": {
+  "method": "联想：at 短促如手指点在一个点上——“在”某处、向某处、对某物。"
+ },
  "atom": {
   "method": "希腊语 a-（不）+ tomos（切）→ 不可再切分的最小单位 → 原子。"
  },
@@ -484,8 +774,17 @@
  "atrocity": {
   "method": "atroc(凶恶，拉丁 atrōx，源于 āter「黑」) ＋ -ity → 凶恶之举 → 残暴，暴行"
  },
+ "attend": {
+  "method": "at-（ad，向）+ tend（伸展、引向）→ 把心思伸向：注意、照料；到场、参加。"
+ },
+ "attention": {
+  "method": "attend（把心思伸向）+ -tion（名词后缀）→ 注意、注意力。"
+ },
  "attic": {
   "method": "源自希腊 Attica（阿提卡）：顶层仿“阿提卡式”建筑装饰，后指阁楼、顶楼。"
+ },
+ "attorney": {
+  "method": "源自古法语 atorner（指派、安排）的过去分词，指“被指派的人”→ 代理人、律师。"
  },
  "attractive": {
   "method": "attract（吸引）+ -ive（…的）：有吸引力的、引起注意的。"
@@ -507,6 +806,9 @@
  },
  "augment": {
   "method": "aug(增加) + -ment → 增加，增长"
+ },
+ "aunt": {
+  "method": "源自拉丁 amita，本指父亲的姐妹→ 姑妈；英语中泛指姨妈、舅妈、伯母等。"
  },
  "author": {
   "method": "拉丁 auctor 源自 augeō'使增长、创始'：使作品诞生的人→作者、著作家。"
@@ -542,6 +844,9 @@
   ],
   "method": "法语 auto-（自己，希腊语 autós）+ mobile（可动的，拉丁 mōbilis）→ 自己会动的 → 汽车。"
  },
+ "autumn": {
+  "method": "源自拉丁 autumnus（秋天）；也指事物成熟的后期、成熟期。"
+ },
  "auxiliary": {
   "method": "auxili(帮助) ＋ ary → 提供帮助的 → 辅助的，辅助者；助动词"
  },
@@ -551,20 +856,41 @@
  "avenue": {
   "method": "拉丁 ad-（向）+ venīre（来）→「来路、通道」→ 大街、途径。"
  },
+ "average": {
+  "method": "源自法语 avarie（海损）：损失按比例分摊→ 平均、平均数；引申为一般水平。"
+ },
  "await": {
   "method": "古法语 a-(朝向) + waitier(看守，等待) → 守着等 → 等候"
  },
  "awake": {
   "method": "由 a- + wake（醒）构成，古英语 āwacan 即“醒来”；记“醒着的”，也可作动词“唤醒”。"
  },
+ "aware": {
+  "method": "古英语 ġewær‘警觉的’，词根 *wer-‘留意、当心’：留意到了 → 知道的、意识到的。"
+ },
+ "away": {
+  "method": "a-（on，在）+ way（路）→ 上路离开：离去、走开。"
+ },
+ "awe": {
+  "method": "联想：awe 像一声“哦”的惊叹——面对宏大之物，既害怕又敬服。"
+ },
  "awesome": {
   "method": "awe（敬畏）+ -some（……的）→ 令人敬畏的、可怕的；口语又表示「极好的」。"
+ },
+ "awful": {
+  "method": "awe（敬畏）+ -ful（充满）→ 令人敬畏的、庄严的；后世贬义化为“可怕的、糟糕的”。"
+ },
+ "baby": {
+  "method": "babe（婴儿）+ -y/-ie（昵称、小称后缀）→ 婴孩。"
  },
  "babyboom": {
   "method": "联想：baby（婴儿）+ boom（激增）→ 婴儿激增 → 生育高峰期。"
  },
  "bachelor": {
   "method": "联想：bachelor 兼指单身汉与学士——本科毕业的学士；经古法语 bacheler 来自中世纪拉丁语。"
+ },
+ "back": {
+  "method": "联想：back 是后背——在背后撑着就是 support（支持）；向后即倒退，也指后面的。"
  },
  "background": {
   "method": "back（后面）+ ground（地面）：身后那片地→画的背景、底子；引申为人的出身经历与背景资料。"
@@ -604,14 +930,23 @@
  "bacteria": {
   "method": "新拉丁 bacteria 是 bacterium 的复数，源自希腊语 baktērion「小棍」→ 杆状细菌。"
  },
+ "bad": {
+  "method": "联想：bad 与 bed 只差一个字母——赖在床上(bed)不起，就是不好(bad)。"
+ },
  "badge": {
   "method": "联想：bad（坏）+ ge（哥）——干了坏事的哥哥被别上标记徽章。"
+ },
+ "badly": {
+  "method": "bad（坏）+ -ly（副词后缀）→ 恶劣地、严重地；口语中表示“极度地”。"
  },
  "badminton": {
   "method": "联想：Badminton House（英国格洛斯特郡庄园）是这项运动最早开展的地方，故以地名命名。"
  },
  "baffle": {
   "method": "联想：一块 baffle(挡板)挡住去路，让人一头雾水 → 困惑，为难"
+ },
+ "bag": {
+  "method": "联想：pack a bag（收拾行李）——bag 就是袋子、袋状物。"
  },
  "baggage": {
   "method": "bag（包）+ -age（名词后缀）→ 一堆包 → 行李；baggage 不可数。"
@@ -636,17 +971,29 @@
    }
   ]
  },
+ "bake": {
+  "method": "联想：bake 音近“焙”（bèi）——烘焙、烤；烤面包。"
+ },
+ "balance": {
+  "method": "bi-（二）+ lanx（拉丁语“秤盘”）→ 两个秤盘的天平：平衡；也指账目差额。"
+ },
  "balcony": {
   "method": "词源：意大利语 balcone 源自伦巴第语 balk（梁）——由梁撑出的平台→ 阳台、戏院楼厅。"
  },
  "bald": {
   "method": "联想（词源不确定）：bald 形似 ball(球)，头顶光圆如球 → 秃头的，光秃的"
  },
+ "ball": {
+  "method": "原始日耳曼语 *balluz 源自 PIE *bʰel-（吹胀）→ 球、球状物；舞会义可另记 ballroom。"
+ },
  "balloon": {
   "method": "ball（球）+ -oon（大）→ 大球→ 充气的气球；动词义“膨胀、激增”也由此而来。"
  },
  "ballot": {
   "method": "词根：意大利语 ballotta“投票用小球” < balla（球）+ -otta（指小后缀）→ 最初用小球表决→投票、选票。"
+ },
+ "ban": {
+  "method": "原始日耳曼语 *bannaną 意为“宣告、命令”→ 宣告禁止：禁令、禁止、取缔。"
  },
  "banana": {
   "method": "联想：按 ba-na-na 三段念，中间两个 na 像两根并排的香蕉；一串香蕉念起来就是「巴拿拿」。"
@@ -657,6 +1004,9 @@
  "bang": {
   "method": "词源：古诺斯语 banga(捶打)，源自日耳曼语 *bangōną(击打)——猛击并发出『砰』的一声。"
  },
+ "bank": {
+  "method": "联想：银行(bank)源自兑换商的长凳(banca)；河岸(bank)则像长凳横在河边。"
+ },
  "banknote": {
   "method": "bank（银行）+ note（票据）→ 银行开出的票据 → 钞票。"
  },
@@ -665,6 +1015,9 @@
  },
  "banner": {
   "method": "源自古法语 baniere（旗帜），与 band（一队人）同源：一队人共举的标识，即旗帜。"
+ },
+ "bar": {
+  "method": "联想：bar 是一根横杆——拦在门口成障碍、禁止；柜台后卖酒便是酒吧。"
  },
  "barbecue": {
   "method": "联想：俗称 BBQ，谐音「巴比Q」；源自泰诺语 barbakoa（架起的木架），原指在木架上烤肉。"
@@ -696,8 +1049,17 @@
  "barrel": {
   "method": "联想：木桶由一根根 bar(木条) 箍成 → 桶"
  },
+ "base": {
+  "method": "希腊 basis（基座）→ 底部、基础、基地、垒；“卑鄙、低劣”义只作联想：被踩在低处的人。"
+ },
+ "baseball": {
+  "method": "base（垒）+ ball（球）→ 棒球。"
+ },
  "basement": {
   "method": "base（底部）+ -ment（名词后缀）→ 地下部分、地下室。"
+ },
+ "basic": {
+  "method": "base（基础；化学“碱”）+ -ic（形容词后缀）→ 基本的、基本原理；碱性的。"
  },
  "basin": {
   "method": "古法语 bacin，源自俗拉丁 *baccinum'宽盆'→盆；地形上引申为盆地。",
@@ -718,11 +1080,23 @@
  "basket": {
   "method": "联想：bas 与 base(底)形近，篮有平底 → 篮，篮子"
  },
+ "basketball": {
+  "method": "basket（篮子）+ ball（球）：把球投进篮筐的运动，即篮球。"
+ },
  "bass": {
   "method": "base(低、基础) 受意大利语 basso(低) 影响改拼为 bass → 低沉的声音，男低音"
  },
+ "bat": {
+  "method": "联想：球棒 bat 一挥击球；蝙蝠倒挂像球棒。「眨眼」只见于 not bat an eye（眼都不眨）。"
+ },
+ "bath": {
+  "method": "词根 *bʰeh₁- 意为「加热」：热水泡身即沐浴；盛水的浴缸、浴室也是 bath。"
+ },
  "bathe": {
   "method": "与 bath（洗澡）同源，古英语 baþian 即“洗澡”；bathe 是动词，意为沐浴、用水洗。"
+ },
+ "bathroom": {
+  "method": "bath（沐浴）+ room（房间）：洗澡的房间，即浴室；家里也常用来指厕所。"
  },
  "battalion": {
   "method": "联想：与 battle（战斗）同以 bat- 开头（词源只追溯到法语 battaillon）；记“上战场以营为单位”。"
@@ -730,11 +1104,29 @@
  "battery": {
   "method": "batter(连续猛打) ＋ -y → 一组炮台齐轰 → 电池组；保留原义「殴打」"
  },
+ "battle": {
+  "method": "源自拉丁语 battuō（打、击）→ 古法语 bataille：打起来的战役；作动词即战斗。"
+ },
+ "bay": {
+  "method": "联想：海湾边一棵月桂，猎狗对着树吠——一词串起三义：海湾、月桂、狗吠（动词亦为吠）。"
+ },
+ "be": {
+  "method": "联想：最基础的系动词，记句型 I am / you are / he is：表「是」；there is 表「在、存在」。"
+ },
+ "beach": {
+  "method": "词源：古英语 bēce 原指小溪，后指溪边沙岸 → 海滩；记「水边那条沙带」。"
+ },
  "bead": {
   "method": "词源：古英语 bedu 是「祈祷」，念珠用来数祈祷次数 → 珠子；水珠如珠 → 滴"
  },
  "beak": {
   "method": "词源：高卢语 *bekkos(喙、口鼻)，经拉丁语 beccus 进入英语 → 鸟嘴、喙"
+ },
+ "bean": {
+  "method": "词根 *bʰabʰ- 就是「豆」：与德语 Bohne 同源；bean 即豆子、豆荚。"
+ },
+ "bear": {
+  "method": "联想：熊 bear 力大能承受重物，母熊会生育小熊——同形记「熊」与「忍受、承载、生育」。"
  },
  "beard": {
   "method": "联想：beard 中间藏着 ear（耳朵）——胡须一直长到耳朵边；b-ear-d。"
@@ -751,14 +1143,44 @@
  "beast": {
   "method": "联想：《Beauty and the Beast》（美女与野兽）里的 beast 就是野兽；也可指畜生、兽性。"
  },
+ "beat": {
+  "method": "词根 *bautaną 意为「推、打」：打 → 拍打、打败；心跳与乐曲的「拍子」也是 beat。"
+ },
+ "beauty": {
+  "method": "词根：拉丁 bellus「美的」→ 古法语 beauté；同族有 beau/belle，记「美、美人」。"
+ },
+ "because": {
+  "method": "由 by + cause 组合：为着某个原因 → 因为；记 by + cause（原因）。"
+ },
  "beckon": {
   "method": "beckon 与 beacon(信号) 同源，原始日耳曼语 *baukn → 发出信号 → 招手示意，召唤，吸引"
+ },
+ "become": {
+  "method": "be-（趋向）+ come（来）：来到某状态即「变成」；「适合」义受中古英语 cweme（合适）影响。"
+ },
+ "bed": {
+  "method": "词源 *badją（休息之处）→ 床；记「垫在下面的一层」→ 河床、底座。"
+ },
+ "bee": {
+  "method": "词根 *bʰey- 即「蜂」，与德语 Biene 同源；bee 也指邻里一起干活的聚会（sewing bee）。"
  },
  "beef": {
   "method": "拉丁 bōs/bovem（牛）→ 古法语 buef → 牛肉、肌肉"
  },
+ "beer": {
+  "method": "联想：中文「啤酒」的「啤」就是 beer 的音译；看到「啤」便想起 beer。"
+ },
  "beetle": {
   "method": "bite(咬) ＋ le → 爱咬的虫 → 甲虫；另一源 beat(打) ＋ le → 大槌"
+ },
+ "before": {
+  "method": "be- + 古英语 foran（在前）：位于时间或空间的前面 → 在……之前。"
+ },
+ "beg": {
+  "method": "联想：beg 与 bag 形近——乞丐举着袋子 bag 乞求；记「乞求、乞讨、请求」。"
+ },
+ "begin": {
+  "method": "源自古英语 beginnan，由 be- + ginnan（开始）构成：开始、着手。"
  },
  "behalf": {
   "method": "be-（在）+ half（古义“一边”）：站在某人一边，就是代表其利益；on behalf of 即“代表”。",
@@ -770,8 +1192,41 @@
  "behavior": {
   "method": "behave（举止、表现）+ -ior（名词后缀，仿 havour）：行为、举止、表现。"
  },
+ "behind": {
+  "method": "be- + hind（后面的）：在后方 → 在后面；作介词即「在……背后」。"
+ },
+ "being": {
+  "method": "be（存在）+ -ing（名词后缀）：存在；存在之物即生物、人，也指本性。"
+ },
+ "belief": {
+  "method": "与 believe 同源；名词词尾读 /f/、动词读 /v/，如 grief/grieve、proof/prove：信念、相信、信仰。"
+ },
+ "believe": {
+  "method": "词源可拆 be- + leave（允许）；由「准许、认可」联想到「相信」，名词为 belief。"
+ },
+ "bell": {
+  "method": "词源 *bellǭ 即「钟、铃」，与荷兰语 bel 同源；记 ring the bell（按铃）。"
+ },
+ "belong": {
+  "method": "be- + 古英语 langian（适合、属于）：合宜地归于某处 → 属于；也指「合适」。"
+ },
  "beloved": {
   "method": "由古词 belove（深爱）+ -ed 构成：被深爱的 → 心爱的；也可作名词“心爱的人”。"
+ },
+ "below": {
+  "method": "be- + low（低）：在低处 → 在下面；可作介词或副词。"
+ },
+ "belt": {
+  "method": "源自拉丁语 balteus（腰带）：系在腰间的带子；绕成一圈的地带也叫 belt。"
+ },
+ "bench": {
+  "method": "词源 *bankiz 指长凳，与 bank 同源（doublet）：公园、教室里的长椅。"
+ },
+ "bend": {
+  "method": "与 bind（绑）同根 *bʰendʰ-：把弓弦绑弯 → 弯曲；被绑住般受制 → 屈服。"
+ },
+ "beneath": {
+  "method": "be- + neath（下方）：在……的下方；也可单用作副词。"
  },
  "benevolent": {
   "method": "bene(好) ＋ vol(意愿) ＋ ent → 怀着好意 → 善意的，慈善的"
@@ -785,8 +1240,17 @@
  "beset": {
   "method": "be(在周围)＋set(放置) → 放在四周 → 围绕；困扰"
  },
+ "beside": {
+  "method": "be- + side（边）：在……旁边；by the side of 正是它的来源。"
+ },
+ "besides": {
+  "method": "beside + 副词后缀 -s：在旁边 → 另外；作介词「除……之外」，作副词「而且」。"
+ },
  "besiege": {
   "method": "be(周围) ＋ siege(围攻) → 围在四周 → 围攻，包围"
+ },
+ "best": {
+  "method": "good 的最高级，与 better 同源 *bat-（好）：最好的、最好地、最好的人。"
  },
  "best-seller": {
   "method": "best（最好）+ seller（卖得…的东西）→ 卖得最好的书或唱片 → 畅销书。",
@@ -797,6 +1261,15 @@
    }
   ]
  },
+ "bet": {
+  "method": "联想：赌注 bet，口语 You bet! 意为「当然」；下注就是拿输赢打赌。"
+ },
+ "better": {
+  "method": "good 的比较级，与 best 同源 *bat-（好）：较好的、更好地。"
+ },
+ "between": {
+  "method": "be- + twain（二），字面「靠着两者」：在两者之间。"
+ },
  "beware": {
   "method": "be(处于) ＋ ware(警觉，同 aware) → 保持警觉 → 小心，谨防"
  },
@@ -806,8 +1279,29 @@
  "bicycle": {
   "method": "法语 bi-（二）+ cycle（轮，源自希腊 κύκλος'圆环'）→两轮车→自行车。"
  },
+ "bid": {
+  "method": "源自古英语 biddan「请求、命令」，又与 bēodan「提供、宣布」义合并：出价、投标、吩咐。"
+ },
+ "big": {
+  "method": "联想：big 与 bag 形近——装满东西的袋子 bag 显得很大 big；记「大的、重要的」。"
+ },
+ "bike": {
+  "method": "bike 是 bicycle 的截短词，1882 年已出现：自行车、脚踏车。"
+ },
  "bilateral": {
   "method": "bi(二、两边) ＋ lateral(侧的) → 两侧的 → 双边的，双方的"
+ },
+ "bill": {
+  "method": "联想：一「张」纸串起义项——账单、清单、钞票、法案、广告都是纸；鸟嘴扁平如纸片。"
+ },
+ "billion": {
+  "method": "bi-（二）+ -illion（百万）：百万的二次方，美式即十亿（10⁹）。"
+ },
+ "bin": {
+  "method": "词源：古英语 binn 指饲料槽、储物箱 → 容器、箱子，英式也指垃圾桶。"
+ },
+ "bind": {
+  "method": "词根 *bʰendʰ- 意为「捆、绑」：绑住 → 约束；把书页绑在一起即装订。"
  },
  "binoculars": {
   "method": "构词：bi-(双) ＋ ocular(眼的) ＋ -s → 双眼用的 → 双目镜，双筒望远镜"
@@ -827,11 +1321,23 @@
  "biotechnology": {
   "method": "由 bio-（希腊语 βίος，生命）+ technology（技术、学科）构成：研究生命的技术——生物技术、生物工艺学。"
  },
+ "bird": {
+  "method": "词源：古英语 bridd 原指雏鸟，14 世纪起取代 fowl 泛指鸟；羽毛球也称 birdie。"
+ },
+ "birth": {
+  "method": "bear（生育、承载）+ -th（名词后缀）→ 出生；事物的「起源」也是 birth。"
+ },
+ "birthday": {
+  "method": "birth（出生）+ day（日子）：出生的日子 → 生日。"
+ },
  "biscuit": {
   "method": "源自拉丁语 bis（两次）+ coctus（烤过的）→ 烤两次的面食，便于保存 → 饼干。"
  },
  "bishop": {
   "method": "epi(在上) ＋ scop(看) → 在上面看的人 → 主教，监督者"
+ },
+ "bit": {
+  "method": "词根 *bʰeyd-「切分」→ 古英语 bita 一小块：a bit of 一点；计算机 bit（比特）是另一义。"
  },
  "bitch": {
   "method": "源自古英语 biċċe，本义“母狗”，与 bicker（争吵）同源；引申为对女性的贬称，属粗俗用语，慎用。"
@@ -841,6 +1347,9 @@
  },
  "bitter": {
   "method": "bitter 与 bite(咬) 同源 → 咬到舌头、刺舌的味道 → 苦的；痛苦、怀恨"
+ },
+ "black": {
+  "method": "词源 *blakaz 意为「烧焦的」：烧焦发黑 → 黑色；black 即黑色、黑色的。"
  },
  "blackboard": {
   "method": "black（黑）+ board（板）→ 黑板；早期黑板多用黑色石板。"
@@ -1056,6 +1565,9 @@
  "buffet": {
   "method": "词源：自助餐义经法语 buffet(餐台、碗橱)而来；殴打、冲击义另源自古法语 buffe。记住「餐台自助」即可",
   "phonetic": "'bʌfeit"
+ },
+ "bug": {
+  "method": "联想：bug 原指小虫：叮咬 → 小病；虫子钻进机器 → 故障、缺陷；像虫子般缠人 → 烦扰、纠缠。"
  },
  "bulb": {
   "method": "源自希腊语 βολβός，指地下球状的鳞茎（洋葱状）；由“球状物”引申出电灯泡一义。"
@@ -1306,6 +1818,9 @@
  },
  "chalk": {
   "method": "古英语 ċealc 借自拉丁 calx『石灰岩』，再上溯希腊 khálix『石子』——石灰质的小棒就是粉笔、白垩。"
+ },
+ "challenge": {
+  "method": "拉丁 calumnia（诬告、指控）：提出指控、质疑 → 怀疑、质问、反对；进而叫板 → 向…挑战、邀请比赛；棘手的事 → 艰巨任务。"
  },
  "chamber": {
   "method": "camera(拱顶房间) → chamber 室，房间，枪膛"
@@ -1590,6 +2105,9 @@
  "commerce": {
   "method": "联想：commerce 中的 merce 近似 market 的 merc，大家共同（com-）在市场做买卖 → 商业、贸易。"
  },
+ "commercial": {
+  "method": "commerce（商业）+ -ial（…的）→ 商业的、商务的；以营利为目的 → 商品化的、商业性的。"
+ },
  "commitment": {
   "method": "commit（交付、承诺）+ -ment：把自己交付出去→承诺、保证；交付心力→信奉、献身；因此背上的义务。"
  },
@@ -1627,6 +2145,9 @@
  },
  "competent": {
   "method": "源自拉丁语 competens（competō 的现在分词），意为“相称、够格、有能力”，即能胜任的。"
+ },
+ "competition": {
+  "method": "compete（竞争）+ -ition（名词后缀）：彼此竞争 → 竞争；一场竞争就是比赛。"
  },
  "competitive": {
   "method": "源自 competere(竞争)+ive：与竞争有关的→竞争的、比赛的；好胜的；有竞争力的。"
@@ -1703,6 +2224,9 @@
  "conjunction": {
   "method": "源自拉丁语 coniūnctiō“连接、联合”，动词 coniungere 意为“结合”；语法中起连接作用的词即连词。"
  },
+ "connection": {
+  "method": "con-（共同）+ nect（绑）+ -ion：绑在一起 → 连接、联系；起连接作用的东西 → 连接点；有联系的人 → 亲戚。"
+ },
  "connotation": {
   "method": "con(一起、附带) ＋ not(标记) ＋ ation → 附带的意义 → 内涵，含蓄"
  },
@@ -1719,6 +2243,9 @@
  },
  "consequently": {
   "method": "consequent(随之发生的) ＋ -ly(副词后缀) → 因而，因此，所以"
+ },
+ "conservative": {
+  "method": "conserve（保存）+ -ative（…的）：倾向保存旧事物的 → 保守的、守旧的、传统的；名词指保守的人。"
  },
  "considerate": {
   "method": "联想：consider（考虑）+ -ate（形容词后缀），凡事替别人考虑→ 考虑周到的、体贴的。",
@@ -1738,6 +2265,9 @@
  },
  "consumer": {
   "method": "consume(消耗、消费)+er(者)：消耗商品或资源的人→消费者、用户、消耗者。"
+ },
+ "consumption": {
+  "method": "consume（消耗、消费）+ -tion（名词后缀）→ 消耗、消费；也指消耗量。"
  },
  "contagious": {
   "method": "con(相互) ＋ tag(接触) ＋ ious → 一接触就传 → 触染性的，会蔓延的"
@@ -1785,6 +2315,9 @@
  "coordinate": {
   "method": "co-（共同）+ 拉丁 ōrdinō（排列）→ 一起排列→ 协调；坐标即“并列定位”。"
  },
+ "cope": {
+  "method": "联想：cope 借自法语 coper‘砍、击’；想象迎面招架打击 → 应付、处理（cope with）。"
+ },
  "copper": {
   "method": "拉丁 aes Cyprium「塞浦路斯之铜」→ cuprum → copper；该岛是古代铜产地。"
  },
@@ -1822,6 +2355,9 @@
  "correspondence": {
   "method": "correspond（相符、通信）+ -ence（名词后缀）→ 通信、信件；彼此相符即「一致」。"
  },
+ "correspondent": {
+  "method": "拉丁 correspondēns（correspondere‘通信、相符’的现在分词）：与报社通信、供稿的人 → 通信者、通讯员、记者。"
+ },
  "corresponding": {
   "method": "correspond（相符、通信）+ -ing——能对得上的，即相应的、符合的。"
  },
@@ -1842,6 +2378,9 @@
  },
  "cough": {
   "method": "拟声：模仿咳嗽的「喀」声，古英语 *cohhian 即由此而来；注意 -ough 在这里读 /f/。"
+ },
+ "council": {
+  "method": "拉丁 consilium（商议、计划）：一起商议办事的机构 → 理事会、委员会；注意与 counsel（忠告）区分。"
  },
  "countdown": {
   "method": "count（计数）+ down（向下）→ 数字往下数，倒计数、倒计时。",
@@ -1959,6 +2498,9 @@
  "cricket": {
   "method": "拟声：crick(咔嗒) ＋ et(小) → 会叫的小虫 → 蟋蟀；板球"
  },
+ "criminal": {
+  "method": "crimen（拉丁‘罪’）+ -al：犯罪的、刑事的；作名词指犯人、罪犯。"
+ },
  "critical": {
   "method": "critic（批评家、评判者）+ -al：评判的 → 批评的；关乎判断、转折的 → 决定性的、关键的。"
  },
@@ -2036,6 +2578,9 @@
  },
  "curl": {
   "method": "联想：curl 读似‘卷儿’，头发卷成圈就是 curl；c 的形状也像弯钩。"
+ },
+ "current": {
+  "method": "拉丁 currere（跑）+ -ent：正在跑的 → 当前的；水流、电流在‘跑’ → 潮流、电流；流行、趋势皆由此引申。"
  },
  "curtail": {
   "method": "curt(短) + -ail → 使变短 → 缩减，剥夺"
@@ -2354,6 +2899,9 @@
  },
  "distress": {
   "method": "拉丁 dis-（分开）+ stringere（拉紧）：身心被向两边拉扯 → 痛苦、苦恼"
+ },
+ "distribution": {
+  "method": "dis-（分开）+ tribuere（分配）+ -ion：分开来分配 → 分发、分配；散开的状态 → 分布。"
  },
  "disturb": {
   "method": "dis(加强) ＋ turb(搅动，拉丁 turbare) → 搅乱 → 扰乱，使不安"
@@ -3028,6 +3576,9 @@
  "flash": {
   "method": "拟声：fl- 模拟光一闪或水花四溅 → 闪光、闪现、一瞬间"
  },
+ "flat": {
+  "method": "词根 flat（平，源自 PIE *pleth₂-‘平’）：平的、平直地；价格定平 → 固定；轮胎压平 → 漏气；语调平 → 单调、沉闷；浅的；英式还指一套公寓。"
+ },
  "flavor": {
   "method": "fla(吹，拉丁语 flare) ＋ -vor → 随风飘来的气味 → 滋味，调味品"
  },
@@ -3099,6 +3650,9 @@
  },
  "forbid": {
   "method": "for-（离开、禁止）+ bid（吩咐、宣告）——宣告不许做，即禁止；古英语作 forbēodan。"
+ },
+ "force": {
+  "method": "拉丁 fortis（强壮的）：力量 → 力气、武力、军队；以强力相逼 → 强迫；影响力、效力也是一种力。"
  },
  "forecast": {
   "method": "fore-（预先、在前）+ cast（投、抛）→ 预先抛出判断 → 预报、预测。",
@@ -3186,6 +3740,9 @@
  },
  "freight": {
   "method": "与 fraught 同源，来自中古荷兰语 vrecht「货物、运费」；gh 不发音，别按拼写读。"
+ },
+ "frequency": {
+  "method": "frequent（频繁的）+ -cy（名词后缀）：发生的频繁程度 → 频率、次数；也指‘经常发生’。"
  },
  "frequent": {
   "method": "frequ(拥挤、密集，拉丁语 frequens) ＋ -ent → 反复密集出现 → 时常发生的，常见的"
@@ -4243,6 +4800,9 @@
   "method": "德语 Kinder（儿童，Kind 的复数）+ Garten（花园）：儿童的花园→幼儿园。",
   "phonetic": "'kindəgɑ:tən"
  },
+ "kit": {
+  "method": "联想：kit 源自中古荷兰语‘木桶、篮子’，后指士兵背包里的一整套行装 → 成套工具、配套元件；动词即‘装备’。"
+ },
  "kite": {
   "method": "古英语 cȳta 指鸢（一种猛禽）；风筝因像鸢一样在空中盘旋而得名，后来又有「空头支票」等义。",
   "trans": [
@@ -4677,6 +5237,9 @@
  },
  "massage": {
   "method": "法语 masser（按摩、揉）+ -age（名词后缀）→ 按摩；masser 更早的来源有阿拉伯语、葡萄牙语两说。"
+ },
+ "massive": {
+  "method": "mass（大块、大量）+ -ive（…的）→ 大的、大而重的；大量的、大规模的。"
  },
  "mate": {
   "method": "mate 与 meat(食物) 同源：*ga-(共同) ＋ *matiz(食物) → 同桌吃饭的人 → 伙伴，配偶"
@@ -5224,6 +5787,9 @@
  "obey": {
   "method": "源自拉丁语 oboedire：ob-（朝向）+ audire（听）→ 听从、听命于人，即服从、遵从。"
  },
+ "objection": {
+  "method": "object（反对）+ -ion（名词后缀）→ 反对、异议；提出反对的话 → 反对的理由。"
+ },
  "objective": {
   "method": "object(对象、客体)+ive：指向客体而非自我→客观的、无偏见的；名词'目标'。"
  },
@@ -5395,6 +5961,9 @@
  "overcoat": {
   "method": "over-（在外、覆盖）+ coat（外套）：穿在外面的 coat——大衣。"
  },
+ "overcome": {
+  "method": "over-（越过）+ come（来）：越过障碍来到对面 → 战胜、克服；也指（情绪等）压倒、使受不了。"
+ },
  "overdue": {
   "method": "over（超过）+ due（到期应付的）→ 超过期限还没付/没到，即过期的、迟到的。",
   "phonetic": ".əuvə'dju:"
@@ -5445,6 +6014,9 @@
  },
  "overwhelming": {
   "method": "over(在上、越过) + whelm(淹没、盖过) + -ing → 铺天盖地压过来 → 压倒性的，势不可挡的"
+ },
+ "owe": {
+  "method": "与 own（拥有）同源，古英语 āgan‘拥有’：欠着本该属于别人的 → 欠；把好处归于某人 → 归功于；由此心怀感激。"
  },
  "owl": {
   "method": "拟声：猫头鹰的叫声「呜—呜」，古日耳曼语即模仿其鸣声 → 猫头鹰"
@@ -5603,6 +6175,9 @@
  },
  "peg": {
   "method": "联想：peg 与「配」谐音 → 配一根小钉把牌子挂住 → 小钉，挂物钉，桩"
+ },
+ "penalty": {
+  "method": "拉丁 poena（惩罚）→ penalty：处罚、惩罚；用钱抵罚 → 罚金。"
  },
  "pencil": {
   "method": "古法语 pincil < 拉丁 pēnicillum'小刷子'（pēniculus 的指小形式，本义'尾巴'）→铅笔；与 pen 无关。"
@@ -5859,6 +6434,9 @@
  },
  "precaution": {
   "method": "pre-（预先）+ caution（小心，拉丁 cavere『提防』）→ 预先提防 → 预防、留心、警戒。"
+ },
+ "precise": {
+  "method": "拉丁 prae-（在前）+ caedere（切）：切得干净利落 → 精确的、准确的；过分守规矩 → 严谨的。"
  },
  "predator": {
   "method": "praed(猎物、掠夺) ＋ -ator(者) → 掠夺者，捕食者 → 食肉动物，掠夺者"
@@ -6213,6 +6791,9 @@
  "reassess": {
   "method": "re(再) ＋ assess(评估) → 再评估一次 → 再评价"
  },
+ "recall": {
+  "method": "re-（回）+ call（叫）：把东西叫回来 → 召回、收回；把记忆叫回来 → 回忆。"
+ },
  "receipt": {
   "method": "拉丁 re-（回）+ capere（拿取）→ receptus「收到」→ 收据；p 为仿拉丁后加，不发音。"
  },
@@ -6221,6 +6802,9 @@
  },
  "reconciliation": {
   "method": "re(再) ＋ concili(使和好) ＋ ation(名词) → 重新和好 → 和解，调和"
+ },
+ "recovery": {
+  "method": "recover（恢复；追回）+ -y（名词后缀）→ 恢复、痊愈；把失去的追回来 → 追回、收复。"
  },
  "redundant": {
   "method": "red(回) + und(波浪，拉丁 unda) + ant → 波浪回涌溢出 → 多余的，过剩的"
@@ -6559,6 +7143,9 @@
  "sausage": {
   "method": "源自拉丁 salsus（盐腌的），与 salt（盐）同源 → 用盐腌制的肉肠 → 香肠。"
  },
+ "scale": {
+  "method": "拉丁 scala（梯子、台阶，源自 scandō‘攀登’）：一级一级 → 刻度、等级、规模、比例；攀登。另记：scale 也指鳞、天平。"
+ },
  "scarce": {
   "method": "联想：scarce 与 scare（害怕）只差一个字母 c——物资短缺让人害怕；意为稀少的、缺乏的。",
   "phonetic": "skeəs"
@@ -6610,6 +7197,9 @@
  },
  "secular": {
   "method": "secul(拉丁 saeculum：世代、世间) ＋ ar → 属于世间而非教会的 → 世俗的；修道院外的教士"
+ },
+ "security": {
+  "method": "se-（无）+ cura（忧虑）→ 无忧 → 安全、保障；用来作保的东西 → 抵押品；可作保障的票据 → 证券。"
  },
  "seduce": {
   "method": "se(离开，偏) ＋ duc(引导) → 把人引到邪路 → 引诱，唆使，怂恿"
@@ -8184,6 +8774,9 @@
  "virtually": {
   "method": "virtual（实际上的）+ -ly（副词）：实际上、事实上、实质上。"
  },
+ "virtue": {
+  "method": "拉丁 vir（男人）+ -tus：男子气概、勇气 → 美德、善；也指人或物的优点、长处。"
+ },
  "visa": {
   "method": "词源：拉丁语 visa 意为“被看过的（文件）”，来自 vidēre（看）→ 签证；与 vision、video 同源。",
   "phonetic": "'vi:zə"
@@ -8287,6 +8880,9 @@
  },
  "wealthy": {
   "method": "wealth(财富) ＋ -y(形容词后缀) → 拥有财富的 → 富的，富裕的"
+ },
+ "weapon": {
+  "method": "联想：w 像挥起的兵器；古英语 wǣpn 即‘武器’，与德语 Waffe 同源，更深词源不明。"
  },
  "weave": {
   "method": "源自原始印欧语 *webʰ-“编、织”；同根词 web（网）就是“编织成网”。引申为编排故事、迂回行进。"
