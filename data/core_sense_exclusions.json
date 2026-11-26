@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-19",
+ "generated": "2026-11-27",
  "scope": "core/core+ 中所有多义词（2+ 义项）及带领域标签的词；单义词无需拆分。",
  "method": "逐词对照当前中文义项、Kaikki/Wiktionary 英文义项及标签、ECDICT/词库释义；只排除明确重复、低频、古旧、俚俗、专业噪声或缩写展开，拿不准时保留。",
  "reviewed_words": 3681,
- "words_with_exclusions": 1218,
- "excluded_senses": 1444,
+ "words_with_exclusions": 1222,
+ "excluded_senses": 1449,
  "sources": [
   {
    "name": "Kaikki.org / English Wiktionary",
@@ -9286,8 +9286,13 @@
    },
    {
     "key": "|碳酸钠",
-    "reason": "与已保留的“|[化] 纯碱”同指 sodium carbonate，且为系统化学名，属重复的化学义项。",
-    "source": "Kaikki noun 'Sodium carbonate'；当前义项 |[化] 纯碱"
+    "reason": "与 n|苏打，碳酸水 中的“苏打”同指 sodium carbonate，且为系统化学名，属重复的化学义项。",
+    "source": "Kaikki noun \"Sodium carbonate\"；当前义项 n|苏打，碳酸水"
+   },
+   {
+    "key": "|[化] 纯碱",
+    "reason": "与 n|苏打，碳酸水 中的“苏打”同指 sodium carbonate，属重复的化学义项。",
+    "source": "Kaikki soda 义为 sodium carbonate / carbonated water；当前义项重复。"
    }
   ],
   "sodium": [
@@ -9690,6 +9695,34 @@
     "key": "|[医] 腕",
     "reason": "与首义「手腕，腕关节」中的「腕」重复，只多一个[医]域标签。",
     "source": "current 义项重复；Kaikki 仅列腕关节及机械销义，无独立医学义"
+   }
+  ],
+  "bank": [
+   {
+    "key": "|[医] 库",
+    "reason": "仅用于 blood bank/sperm bank 等复合词的“库”，脱离复合词不是独立高频义项；银行、河岸两个常用义已保留。",
+    "source": "Kaikki 的 bank 名词义为金融机构、河岸、store/supply（如 blood bank）；语言常识判断。"
+   }
+  ],
+  "member": [
+   {
+    "key": "|[医] 肢，肢体",
+    "reason": "member 的“肢体”是正式/解剖学古义，CET 高频义是“成员”；与 n|成员，会员 分列会产生低价值义项。",
+    "source": "Kaikki 列 member 为团体成员及肢体（formal/archaic）；语言常识判断。"
+   }
+  ],
+  "elite": [
+   {
+    "key": "n|[总称]出类拔萃的人，精英",
+    "reason": "与“n|[总称] 上层人士，掌权人物，实力集团”语义重复，同词性近义。",
+    "source": "当前义项重复；Kaikki elite 名词义为处于权力/财富顶层的特殊群体。"
+   }
+  ],
+  "confuse": [
+   {
+    "key": "|[法] 混淆",
+    "reason": "与 vt|使混乱，使狼狈，使困惑 中的“混淆”重复，且 [法] 领域标签不适用。",
+    "source": "Kaikki confuse 动词义为 mix up / make unclear；未列法律专义。"
    }
   ]
  },
