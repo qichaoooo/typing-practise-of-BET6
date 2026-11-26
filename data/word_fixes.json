@@ -1360,6 +1360,9 @@
  "blade": {
   "method": "古英语 blæd 意为「叶」，与 bloom(开花) 同源 → 叶片；刀身扁平如叶 → 刀锋，刀片"
  },
+ "blame": {
+  "method": "源自古法语 blasmer‘说坏话、责骂’，出自晚期拉丁语 blastēmāre（与 blaspheme 同源）：责骂→责备、归咎于；应负的责任→过失。"
+ },
  "blank": {
   "method": "源自古法语 blanc（白），与 blanch（漂白）同源：一片白、什么也没写 → 空白的"
  },
@@ -1381,8 +1384,14 @@
  "bless": {
   "method": "古英语 bletsian 原指「以血祝圣」，词源与 blood（血）相关；由「祝圣」引申为祝福、祈佑。"
  },
+ "blind": {
+  "method": "源自古英语 blind‘看不见的’：眼睛看不见→瞎的、失明；思想上不分是非→盲目的、不加思考的；遮光的东西→窗帘、蒙蔽物；使看不见→蒙蔽、遮暗。"
+ },
  "bloc": {
   "method": "bloc 借自法语「块」，与 block 同源 → 抱成一团的一块势力 → 集团"
+ },
+ "block": {
+  "method": "源自中古荷兰语 blok‘树干、大块木料’（经古法语 bloc）：大块木头或石头→木块、石块、块；连成一片的建筑→街区；堵住通道→阻塞、封锁。"
  },
  "blog": {
   "method": "拆解：web(网络) ＋ log(日志，源自 logbook) → weblog，缩略为 blog → 网络日志，博客"
@@ -1390,11 +1399,20 @@
  "blond": {
   "method": "联想：源自古法语 blond，日耳曼语 *blund 指金与浅棕的“混合色”，与 blend（混合）同源→ 金发的。"
  },
+ "blood": {
+  "method": "源自古英语 blōd‘血’：体内流动的血→血、流血；同一血脉→血统；古人视血为生命与性情的所在→生命、气质；用血涂、使出血。"
+ },
  "bloom": {
   "method": "联想：bloom 与 blossom 同义近形，都以 blo- 开头，指开花。"
  },
  "blouse": {
   "method": "联想：blouse 开头 blou- 拼写近似 blue——想象一件蓝色宽松上衣。"
+ },
+ "blow": {
+  "method": "联想：古英语 blāwan 是‘吹、鼓气’：用嘴吹→吹响，风在吹→风吹；花苞像被气吹开→花开；‘打击、殴打’另记：一拳吹过去。"
+ },
+ "blue": {
+  "method": "源自古法语 bleu，出自法兰克语 *blāu‘蓝色’：颜色蓝→蓝色、蓝色的、染蓝、变蓝；blue 表情绪低落→忧郁的；blue 影视俚语→下流的。"
  },
  "blueprint": {
   "method": "blue（蓝）+ print（印、图）：印成蓝色的工程图，即蓝图、设计图，也指周详的计划。"
@@ -1405,8 +1423,17 @@
  "blush": {
   "method": "词源：古英语 blysċan「发红、发亮」，本与火光、燃烧义相关 → 脸发红 → 脸红"
  },
+ "board": {
+  "method": "源自古英语 bord‘木板；桌面’：木板→甲板、用板覆盖；桌旁议事→会议桌；桌旁供饭→膳食、供膳食；登上甲板→乘船；寄宿搭伙。"
+ },
  "boast": {
   "method": "联想：boast 可能与日耳曼语 *bausuz（膨胀、鼓起）有关——吹牛就是把自己『吹胀』。"
+ },
+ "boat": {
+  "method": "源自古英语 bāt‘小船’，可追到原始印欧语 *bʰeyd-‘劈开’（船劈开水面）：船；乘船；用船运。"
+ },
+ "body": {
+  "method": "联想：古英语 bodiġ 本义就是‘身体’，无可拆词根：身体→人、尸体；主体部分→主要部分；一群人有组织地结合→团体。"
  },
  "boil": {
   "method": "来自拉丁语 bulla（气泡）→ bullīre（冒泡）→ 煮沸、沸腾；水冒泡就是开了。疖义另源自古英语 bȳl。"
@@ -1420,14 +1447,53 @@
  "bolt": {
   "method": "古英语 bolt 指短箭、门闩，来源只能追到日耳曼语 *bultaz，更深词源不确定。联想：b + old，旧（old）门上横一根铁闩；闪电像天降之箭，故也指闪电。"
  },
+ "bomb": {
+  "method": "拟声：拉丁语 bombus‘轰隆声’，源出希腊语 βόμβος，模仿爆炸/嗡鸣声：炸弹、轰炸；演出砸了→失败。"
+ },
+ "bond": {
+  "method": "源自古英语 bend‘带子、镣铐’，词根义‘捆绑’：捆缚→捆绑物、结合、使黏合、粘合剂；有约束力的文书→契约、债券、保证人；原子间的连接→键；保税存放→关栈保留。"
+ },
+ "bone": {
+  "method": "源自古英语 bān‘骨’，同源词根义‘挺直’：骨头→骨、骨制品；把骨头去掉→剔骨。"
+ },
+ "book": {
+  "method": "源自古英语 bōc‘书’：成册的书→书籍；记账、登记的本子→帐簿、名册、工作簿；写进册子→登记、预订。"
+ },
  "boom": {
   "method": "拟声：boom 模仿隆隆声 → 发出隆隆声；经济「轰」地兴起 → 激增，繁荣"
+ },
+ "boot": {
+  "method": "联想：boot 是长靴：用靴子踢→踢；一脚踢走→解雇；计算机 bootstrap（拉靴带自举）→引导；to boot 表‘此外/有用’来自古英语 bōt‘补救’。"
  },
  "bore": {
   "method": "古英语 borian 本义“钻孔”；“使厌烦”是后起引申（一说像“钻耳朵”般难受）；“激浪”义另来自古诺斯语 bára，与钻孔无关。"
  },
+ "born": {
+  "method": "bear（生育）的过去分词：与生俱来的→天生的；be born 表示‘出生’。"
+ },
+ "borrow": {
+  "method": "源自古英语 borgian‘以抵押担保借入’，词根义‘看管、担保’：借入需担保→借、借入、借用（borrow 借入，lend 借出）。"
+ },
+ "boss": {
+  "method": "联想：荷兰语 baas‘一家之主、师傅’→老板、上司，动词→指挥、控制；岩瘤、浮雕是同形词，本义‘凸起、肿包’，联想成鼓出来的一块。"
+ },
  "botany": {
   "method": "联想：botanical(植物的)去掉 -ical 即 botany；如 botanical garden 植物园 → 植物学"
+ },
+ "both": {
+  "method": "源自古英语 bā þā‘两者都（那两）’，是印欧语双数形式的残留：两者、两者的、两者都（both...and...）。"
+ },
+ "bother": {
+  "method": "联想：源自苏格兰语 bauther，来源不明；可联想 brother：兄弟老来烦你→烦扰、迷惑、烦恼、操心；惹来的麻烦事、讨厌的人。"
+ },
+ "bottle": {
+  "method": "源自晚期拉丁语 butticula‘小桶’，出自 buttis‘桶’：盛液体的瓶子、酒瓶；装瓶；把情绪封进瓶里→抑制；把敌人围住→围困。"
+ },
+ "bottom": {
+  "method": "源自古英语 botm‘底、地基’，可追到原始印欧语 *bʰudʰmḗn‘底部’：最下面的部分→底部、底部的。"
+ },
+ "boundary": {
+  "method": "bound（界限）+ -ary（名词后缀）：划出界限的东西→边界、分界线。"
  },
  "bouquet": {
   "method": "bochet(小树林，古法语；源自法兰克语 *busk) → bouquet 花束；一丛花"
@@ -1435,14 +1501,32 @@
  "bout": {
   "method": "原义「弯曲、转折」 → 一次转身交锋 → 一回，回合，较量"
  },
+ "bow": {
+  "method": "联想：bow 本义‘弯曲的弓形’（古英语 boga）：弓→用弓拉琴；人弯下身子→鞠躬、屈服；眼镜的弓形部件→眼镜框、镜腿。"
+ },
+ "bowl": {
+  "method": "联想：古英语 bolla 指圆形的‘碗、大酒杯’→碗；同形词 bowl‘球’（法语 boule）→木球、滚木球；车像球一样快而稳地行驶→疾驶。"
+ },
+ "box": {
+  "method": "联想：古英语 box‘盒子’（源自希腊语 pyxis 木盒）→盒子、箱、方框，装盒；另一同形词 box‘打一拳’→打耳光、拳击。"
+ },
  "boxing": {
   "method": "box 作动词是‘用拳打’，加 -ing 构成名词 boxing，即拳击。"
+ },
+ "boy": {
+  "method": "源自中古英语 boye‘仆人、年轻人’，可追到日耳曼语‘弟弟、年轻男性亲属’：男孩。"
  },
  "brag": {
   "method": "联想：谐音「不赖哥」——哥自夸「不赖吧」，就是吹牛。"
  },
+ "brain": {
+  "method": "源自古英语 bræġn‘脑’，可追到原始印欧语 *mregʰ-n̥：脑；砸碎脑袋→打碎脑部。"
+ },
  "brake": {
   "method": "联想：brake 比 break 只差一个字母——刹车就是让车「断」住；词源上二者可能同源，但不确定。"
+ },
+ "branch": {
+  "method": "联想：由主干分出的‘树枝’→支店、支流、分部；动词→分支、出枝。词源仅追到拉丁语 branca‘脚印、爪’，来源不明。"
  },
  "brand": {
   "method": "本义'火、烧'（与 burn 同源）：烧红的烙铁打标记→商标、牌子；打烙印→铭刻；加污名、谴责。"
@@ -1459,6 +1543,9 @@
  },
  "brave": {
   "method": "联想：意大利语 bravo 是喝彩『好样的』，勇敢的人值得全场喊 bravo；brave 的最终词源不明。"
+ },
+ "bread": {
+  "method": "源自古英语 brēad，本义‘碎块、一口食物’，后指面包：面包；糊口之物→生计、食物；裹面包屑。"
  },
  "break": {
   "trans": [
@@ -1478,7 +1565,20 @@
     "pos": "n",
     "cn": "分隔符"
    }
-  ]
+  ],
+  "method": "源自古英语 brecan‘打破’，词根义即‘破’：打破、弄坏；中断→休息、暂停；关系破裂→绝交；天破晓→破晓；突破常规→突变。"
+ },
+ "breakfast": {
+  "method": "break（打破）+ fast（禁食）：打破一夜的禁食→早餐。"
+ },
+ "breast": {
+  "method": "源自古英语 brēost‘胸’，可追到原始印欧语 *bʰrews-‘鼓起’：胸部、乳房；胸怀；以胸对着→面对。"
+ },
+ "breath": {
+  "method": "源自古英语 brǣþ‘呼气、气味’：呼出的气→呼吸、气息；一口气的工夫→瞬间。"
+ },
+ "breathe": {
+  "method": "由 breath（气息）加 -e 构成的动词：呼吸；活着就要呼吸→生存；像气息一样轻轻说出→低语、低声说；发散。"
  },
  "breed": {
   "method": "词根：古英语 brēdan < 原始日耳曼语 *brōdijaną“孵、育” < PIE *bʰreh₁-“温暖”→ 孵化、养育→繁殖、培育。"
@@ -1496,17 +1596,32 @@
    }
   ]
  },
+ "brick": {
+  "method": "源自中古低地德语/荷兰语 bricke‘碎砖、瓦石’，与 break（打碎）同源：烧硬的黏土块→砖块、积木；用砖做的；用砖砌。"
+ },
  "bride": {
   "method": "古英语 brȳd 就是“新娘”，源自日耳曼语 *brūdiz，没有可靠的词根拆分。联想：b + ride，骑马（ride）迎娶新娘（bride）。"
  },
  "bridegroom": {
   "method": "古英语 brȳd（新娘）+ guma（男人）= 新郎；guma 后来被民间词源改成了 groom。"
  },
+ "bridge": {
+  "method": "联想：桥→架桥、跨越；船上高起的驾驶台像桥→舰桥；桥牌是另一种同形词，只能整体记。"
+ },
  "brief": {
   "method": "拉丁 brevis'短'：时间短→短暂的；话少→简短的；名词概要；动词做简要介绍。"
  },
  "brigade": {
   "method": "词源：经法语 brigade 借入，原指一队人 → 旅，队"
+ },
+ "bright": {
+  "method": "源自古英语 beorht‘明亮、光辉’，可追到原始印欧语 *bʰerHǵ-‘发光’：明亮→鲜明的、欢快的；脑子发光→聪明的；副词明亮地、欢快地。"
+ },
+ "bring": {
+  "method": "源自古英语 bringan‘带来’，可追到原始印欧语 *bʰrenk-：把人或物带到这→带来；带来结果→产生、促使；把意见带到桌上→提出。"
+ },
+ "broad": {
+  "method": "源自古英语 brād‘宽、广’：空间宽→宽广的、辽阔的；范围广→广大的；差别或影响明显→显著的。"
  },
  "broadcast": {
   "method": "broad（广泛）+ cast（撒、投）→ 广泛撒播；原指撒种，后指广播。"
@@ -1520,6 +1635,9 @@
  "broom": {
   "method": "源自古英语 brōm（灌木、枝条）：用枝条扎成的扫帚→扫帚；金雀花也是这种灌木。"
  },
+ "brother": {
+  "method": "源自古英语 brōþor，可追到原始印欧语 *bʰréh₂tēr‘兄弟’：同父母或同父/同母的男性→兄弟。"
+ },
  "brow": {
   "method": "联想：eyebrow（眉毛）里的 brow 就是眉、额；皱眉时额上的纹路也归 brow。",
   "trans": [
@@ -1528,6 +1646,9 @@
     "cn": "眉毛，额"
    }
   ]
+ },
+ "brown": {
+  "method": "源自古英语 brūn‘褐色、暗色’：褐色；褐色的；（使）变褐。"
  },
  "browse": {
   "method": "源自古法语 brouster「啃食嫩芽、嫩枝」，本指牛羊吃草；后来把在信息里挑着看比作吃草 → 浏览。"
@@ -1569,11 +1690,17 @@
  "bug": {
   "method": "联想：bug 原指小虫：叮咬 → 小病；虫子钻进机器 → 故障、缺陷；像虫子般缠人 → 烦扰、纠缠。"
  },
+ "build": {
+  "method": "源自古英语 byldan‘建造’，与‘居住的房屋’同源（原始印欧语 *bʰuH-‘生长、居住’）：建筑、建立；造出来的结构→构造、体格。"
+ },
  "bulb": {
   "method": "源自希腊语 βολβός，指地下球状的鳞茎（洋葱状）；由“球状物”引申出电灯泡一义。"
  },
  "bulk": {
   "method": "古诺斯语 búlki(船上货物，堆) → 堆成一大块 → 体积，大批；变大"
+ },
+ "bullet": {
+  "method": "源自古法语 bullete，是 boule‘球’的指小形式：小圆球→子弹（子弹本是小球）。"
  },
  "bumper": {
   "method": "bump（碰撞）+ -er（物）：车上吸收碰撞的装置——缓冲器；也可指斟满的酒杯。",
@@ -1587,6 +1714,9 @@
     "cn": "巨大的，丰盛的"
    }
   ]
+ },
+ "bunch": {
+  "method": "联想：中古英语 bunche 本义‘隆起、一坨’，来源不确定：许多同类聚成一坨→串、束。"
  },
  "bundle": {
   "method": "bund- 与“捆绑”有关（中古英语 byndelle 意为 binding）→ 捆、束；动词包扎。"
@@ -1603,11 +1733,32 @@
  "burglar": {
   "method": "来源：拉丁 burgus「城堡」→ 破城堡行窃者 → 窃贼；-l- 或受 latro「盗贼」影响"
  },
+ "burn": {
+  "method": "源自古诺斯语 brinna‘燃烧’，词根与‘沸腾’有关：烧、燃烧；身体发烫→发热；烧坏→烧毁；烧到→烧伤；留下的痕迹→烙印。"
+ },
  "burst": {
   "method": "burst 源自原始印欧语 bʰres-（破裂、裂开）→ 爆裂，突发，爆发"
  },
+ "bury": {
+  "method": "源自古英语 byrġan‘掩藏、保护’，词根义‘保护、看管’：把遗体藏入土中→埋葬；把东西藏起来→埋藏。"
+ },
+ "bus": {
+  "method": "omnibus（拉丁语‘给所有人’，omnis‘所有’的与格复数）的缩略：为所有人乘坐的车→公共汽车。"
+ },
+ "bush": {
+  "method": "源自古英语 *busċ‘灌木丛’，可能追到原始印欧语 *bʰuH-‘生长’：长不高、多枝的木头→矮树丛。"
+ },
+ "business": {
+  "method": "busy（忙）+ -ness（名词后缀）：忙着做的事→事情、业务；谋生的营生→生意、商业、商行；分内该做的→职责。"
+ },
  "businessman": {
   "method": "business(生意，商业) + man(人) → 做生意的人 → 商人，实业家"
+ },
+ "busy": {
+  "method": "源自古英语 bisiġ‘忙于…的、勤勉的’：忙碌的、没空的；场所人来人往→热闹的；使忙、忙碌。"
+ },
+ "but": {
+  "method": "古英语 būtan 相当于 be- + out，本义“在……之外”：由此得“除了”“仅仅”；转折“但是”是进一步引申。"
  },
  "butcher": {
   "method": "古法语 bouchier 本指「宰羊的人」，来自 bouc（公山羊）→ 屠夫、肉商；动词即屠宰、屠杀。"
@@ -1615,11 +1766,26 @@
  "butt": {
   "method": "源自日耳曼语 *buttaz(末端、块) → 粗大的一头；烟头"
  },
+ "butter": {
+  "method": "希腊语 boûs“牛”＋tyrós“奶酪”→boútūron“牛奶酪”，经拉丁语入英语→黄油；动词“涂黄油于”。"
+ },
  "butterfly": {
   "method": "古英语 buterflēoge = butere（黄油）+ flēoge（飞虫），字面就是“黄油飞虫”。"
  },
+ "button": {
+  "method": "古法语 bouter“推、顶”是来源：被按的“按钮”、被顶过扣眼的“钮扣”；动词“扣住、钉扣”。"
+ },
+ "buy": {
+  "method": "联想：buy 与 by 只差一个字母——“经过(by)商店就买(buy)”；过去式 bought。"
+ },
+ "by": {
+  "method": "古英语 bī 本义“在近旁、经过”：在……之旁、经过、由；被动句“被”由“经由某人”引申。"
+ },
  "bystander": {
   "method": "by（在旁边）+ stander（站立者）→ 站在一旁看的人，旁观者。"
+ },
+ "cab": {
+  "method": "联想：cab 是 cabriolet（敞篷马车）的截短，由“出租马车”转指“出租车”；动词“乘出租车”。"
  },
  "cabbage": {
   "method": "借自盎格鲁-诺曼语 caboche（头）——卷心菜像一颗大头；更早是否来自拉丁 caput 尚无定论。",
@@ -1649,6 +1815,9 @@
  "cage": {
   "method": "联想：cage 与 jail（监狱）相关——笼子就是关动物的小监狱；c 像围住动物的栏杆。"
  },
+ "cake": {
+  "method": "联想：cake 与 cook 同以 c 开头，烤(cook)出来的是蛋糕(cake)；a cake of soap 即“一块肥皂”。"
+ },
  "calculate": {
   "method": "calc（石灰石 calx → 小石子 calculus）+ -ul-（指小）+ -ate：古人用小石子计数 → 计算、推算；美式口语也指计划、打算。"
  },
@@ -1672,7 +1841,8 @@
     "pos": "vi",
     "cn": "叫喊，访问，叫牌"
    }
-  ]
+  ],
+  "method": "原始日耳曼语 *kalzōną“呼喊”（印欧 *gelH-“发声”）→呼叫、召唤、打电话；“访问、叫牌”为引申。"
  },
  "calling": {
   "method": "call（呼唤）+ -ing（名词后缀）：被“召唤”去做的事→职业、使命；字面义是呼唤、召集。"
@@ -1683,17 +1853,31 @@
  "camel": {
   "method": "源自闪米特语 *gamal-（阿拉伯语 jamal 即骆驼），经希腊语 kámēlos、拉丁语 camēlus 进入英语。"
  },
+ "camera": {
+  "method": "拉丁语 camera“房间”：camera obscura“暗室”→暗箱→照相机；法庭“密谈室”保留“房间”原义。"
+ },
+ "camp": {
+  "method": "拉丁语 campus“田野、平地”→野外扎营处→营地、帐篷；动词“露营、扎营”。同源 campus。"
+ },
+ "campaign": {
+  "method": "法语 campagne 来自拉丁语 campus“田野”：田野上的军事行动→战役；引申为竞选、宣传“运动”。"
+ },
  "campus": {
   "forms": {
    "s": "campuses"
-  }
+  },
+  "method": "拉丁语 campus“田野”→学校所在场地→校园；也可指“大学生活”。与 camp、campaign 同源。"
  },
  "can": {
   "forms": {
    "s": "cans",
    "p": "could",
    "3": "cans"
-  }
+  },
+  "method": "联想：表“能”的 can 源自古英语 cunnan“知道如何做”；“罐头、装罐”是同形异源词（古英语 canne“容器”）。"
+ },
+ "canal": {
+  "method": "拉丁语 canna“芦苇”→canālis“管、水道”→运河、沟渠；体内“管”也称 canal；动词“开运河”。"
  },
  "cancel": {
   "method": "拉丁 cancelli(格子栏杆) → 画格子线划掉 → 取消，撤销，删去"
@@ -1717,6 +1901,21 @@
  "canteen": {
   "method": "联想：can + teen——青少年（teen）能（can）在食堂、小卖部买东西；实际借自法语 cantine。"
  },
+ "cap": {
+  "method": "拉丁语 caput“头”→cappa“头巾、帽子”→帽子；引申为瓶盖等“盖子”、动词“覆盖”；“胜过”由“盖过”引申。"
+ },
+ "capital": {
+  "method": "拉丁语 caput“头”→capitālis“头等的”：首要城市即首都；词首的大写字母；中世纪按牛的头数计财→资本。"
+ },
+ "captain": {
+  "method": "晚期拉丁语 capitāneus 来自 caput“头”→“头领”：船长、指挥官、上校、首领；动词“率领、指挥”。"
+ },
+ "capture": {
+  "method": "拉丁语 captūra“捕获”（capt-“抓取”，源自 capere）→抓取、捕获；引申为“获得、迷住”。"
+ },
+ "car": {
+  "method": "拉丁语 carrus“双轮马车”（凯尔特语源）→有轮的车→汽车；火车客车厢也叫 car。"
+ },
  "caravan": {
   "method": "词源：波斯语 kârvân 指丝路上结队而行的商旅 → 旅行队"
  },
@@ -1726,6 +1925,9 @@
  "carbon": {
   "method": "carbon 源自拉丁 carbo（木炭）→ 碳；早期复写纸用炭黑制成 → 副本，复写纸"
  },
+ "card": {
+  "method": "联想：card 的“卡片”义来自希腊语 khártēs“纸”，与 chart 同源；“梳棉机、梳理”是同形异源词。"
+ },
  "cardboard": {
   "method": "拆解：card(卡片) ＋ board(板) → 可做卡片的厚纸板 → 薄纸板，卡纸板",
   "trans": [
@@ -1734,6 +1936,12 @@
     "cn": "薄纸板"
    }
   ]
+ },
+ "care": {
+  "method": "古英语 caru“忧虑、关心”→小心、照料、忧虑；动词“关心、介意、在意”。"
+ },
+ "career": {
+  "method": "法语 carrière“道路、跑道”，源自拉丁语 carrus“车”→人生的跑道→生涯、事业。"
  },
  "cargo": {
   "method": "源自西班牙语 cargo“负载”，来自 cargar“装货”，与 charge（装载、收费）同源；船装的货就是 cargo。",
@@ -1748,6 +1956,9 @@
   "method": "源自拉丁语 carpentum（双轮马车），本指造车的人，后指木匠；car 与它同源。",
   "phonetic": "'kɑ:pəntə"
  },
+ "carpet": {
+  "method": "联想：car（车）＋pet（宠物）——给车里的宠物铺一块地毯；动词“铺地毯、铺盖”。"
+ },
  "carriage": {
   "method": "carri(运载，源自古法语 carier) ＋ -age(名词后缀) → 用来运载人的车 → 马车，客车"
  },
@@ -1756,6 +1967,9 @@
  },
  "carrot": {
   "method": "联想：car（汽车）+ rot（腐烂）——车上堆的胡萝卜烂了。词源上借自希腊语 karōton，此拆分只作记忆钩子。"
+ },
+ "carry": {
+  "method": "拉丁语 carrus“车”→用车装运→携带、运送；抽象义“支持、包含”，数学“进位”是把数搬到高位。"
  },
  "cart": {
   "method": "源自古诺斯语 kartr「货车、大车」，与古英语 cræt「战车」合并成词。"
@@ -1768,6 +1982,12 @@
  },
  "carve": {
   "method": "与德语 kerben(刻痕) 同源，本义「刮、刻」→ 雕刻；切碎"
+ },
+ "case": {
+  "method": "联想：case 的“情形、案例、病例”来自拉丁语 cāsus“发生的事”；“箱子”是同形异源义（同 cash 的“箱”）。"
+ },
+ "cash": {
+  "method": "法语 caisse“钱箱”来自拉丁语 capsa“箱子”：箱里的钱→现金；动词“把支票兑现”。"
  },
  "cashier": {
   "method": "联想：cash（现金）+ -ier（表人）→ 管现金的人，出纳员。注意这是记忆拆分，词源上借自法语 caissier。",
@@ -1788,14 +2008,47 @@
  "cast": {
   "method": "源自古诺斯语 kasta‘投、扔’：投、抛；把金属液倒入模子→浇铸、铸件；把角色投给演员→演员表；固定伤处的石膏绷带。"
  },
+ "castle": {
+  "method": "拉丁语 castellum“小堡垒”，是 castrum“营地、要塞”的指小形式→城堡；国际象棋塔形棋子也叫 castle。"
+ },
+ "cat": {
+  "method": "联想：c 像蜷成一圈的猫，a 是猫脸，t 是竖起的尾巴；cat 也指“恶妇”。"
+ },
+ "catalogue": {
+  "method": "希腊语 kata-“逐一”＋legein“说、列”→逐条列出→目录；“大学情况一览”即学校目录。"
+ },
+ "catch": {
+  "method": "拉丁语 capere“抓取”→晚期拉丁语 captiāre→捕捉；“赶上、感染、听清楚”都是“抓住”的引申。"
+ },
+ "category": {
+  "method": "希腊语 katēgoría（kata-“对着”＋agorā“集会、当众说”）原指“当众断言、归类”→种类、类项。"
+ },
+ "cattle": {
+  "method": "拉丁语 caput“头”→中世纪按“头”数计家产→牲畜→牛；与 capital、chattel 同源。"
+ },
  "cauliflower": {
   "method": "cole(甘蓝，源自拉丁 caulis) ＋ flower(花) → 甘蓝的花球 → 花椰菜"
+ },
+ "cause": {
+  "method": "联想：because 就是 by the cause——“因为这个原因”；cause 即原因，动词“引起、使产生”。"
  },
  "cave": {
   "method": "拉丁 cavus(中空的) → cava(空腔) → 洞，穴；洞穴义沿用至今"
  },
+ "cease": {
+  "method": "拉丁语 cessō“停止、离开”，是 cēdō“走开”的反复形式→停止、终了；同源词 secede 也含 ced-。"
+ },
+ "ceiling": {
+  "method": "ceil“遮盖”（源自古法语 celer“隐藏”）＋-ing→盖在头顶的遮盖物→天花板；引申为“上限、顶点”。"
+ },
+ "celebrate": {
+  "method": "拉丁语 celeber“人多的、热闹的”→celebrō“众人聚集庆贺”→庆祝、祝贺；也可指“举行”仪式。"
+ },
  "celebrity": {
   "method": "celebr(庆祝，闻名) ＋ ity → 被大家庆祝的人 → 名人"
+ },
+ "cell": {
+  "method": "拉丁语 cella“小房间、隔间”→一个个小隔间→细胞、电池；“单元”也是小隔间之意。"
  },
  "cement": {
   "method": "拉丁 caementum（碎石、石屑）← caedō（切割）→ 碎石拌成的胶结材料 → 水泥。"
@@ -1811,6 +2064,30 @@
  },
  "centimetre": {
   "method": "centi-（百分之一）+ metre（米）：百分之一米 = 厘米，也叫公分；英式拼写保留 -re。"
+ },
+ "centre": {
+  "method": "希腊语 kéntron 原指“尖刺、圆规针尖”→圆心→中心；引申为“集中、居中、中锋”。"
+ },
+ "century": {
+  "method": "拉丁语 centum“一百”→centuria“百人队”→一百年即一个世纪。"
+ },
+ "ceremony": {
+  "method": "联想：毕业典礼 graduation ceremony——穿礼服、按流程走，就是“典礼、仪式、礼节”。"
+ },
+ "certain": {
+  "method": "拉丁语 certus“已定的、确定的”（源自 cernere“分辨、判定”）→确定的、必然的；“某一个”指已定而不明说。"
+ },
+ "certificate": {
+  "method": "中世纪拉丁语 certificātum：certus“确定”＋facere“做”→使确定的东西→证书；动词“发证书”。"
+ },
+ "chain": {
+  "method": "拉丁语 catēna“链子”→链条；引申为“枷锁、束缚”；动词“用链锁住、束缚、囚禁”。"
+ },
+ "chair": {
+  "method": "希腊语 kathedra（kata“向下”＋hedra“座位”）→拉丁语 cathedra→椅子；“主席、要职”引申自“坐上席位”。"
+ },
+ "chairman": {
+  "method": "chair“席位”＋man“人”→坐主席席位的人→主席、会长。"
  },
  "chairperson": {
   "phonetic": "",
@@ -1837,11 +2114,23 @@
    }
   ]
  },
+ "chance": {
+  "method": "拉丁语 cadere“落下”→俗拉丁语 cadentia“偶然落下的事”→意外、机会、可能性；动词“冒险”。"
+ },
  "chancellor": {
   "method": "cancell(栅栏) ＋ or(人) → 守在栅栏边办事的人 → 大臣，校长"
  },
+ "change": {
+  "method": "拉丁语 cambīre“交换、以物易物”→更换、改变；“找回的零钱”是交换后找回的钱。"
+ },
+ "channel": {
+  "method": "拉丁语 canālis“沟槽、水道”→海峡、航道；信息流通的“频道、信道”是比喻义。"
+ },
  "chaos": {
   "method": "词源：希腊语 χάος“巨大裂隙、虚空”→ 宇宙未分化的混沌→大混乱；与 gas 是同源双借词。"
+ },
+ "chapter": {
+  "method": "拉丁语 caput“头”→capitulum“小标题”→书的一节→章、篇；“重要章节”是引申。"
  },
  "character": {
   "method": "希腊语 kharaktḗr 本指“刻下的印记”（kharássō 雕刻）：刻在内心是性格，刻在纸上是字符，刻在故事里是人物。"
@@ -1855,8 +2144,14 @@
  "charge": {
   "method": "源自拉丁 carricō'装载'（与 car 同源）：装货→负荷、充满、充电、收费、费用；记：受托重担→管理，罪名如负担→控告；另有'向前冲'义。"
  },
+ "charity": {
+  "method": "拉丁语 cārus“珍爱的”→cāritās“仁爱”→慈悲、博爱；引申为慈善团体、施舍。"
+ },
  "charm": {
   "method": "源自拉丁 carmen（歌、咒语），经古法语 charme 进入英语：念咒施法→魔力、吸引力，动词义'迷住'。"
+ },
+ "chart": {
+  "method": "源自拉丁 charta（纸、图纸），经中古法语 charte（地图）：画在纸上的图 → 图表、海图；动词制成图表。"
  },
  "charter": {
   "method": "chart(文书，纸) ＋ -er → 官方写在纸上授予权利的文书 → 特许状，执照，宪章"
@@ -1864,11 +2159,23 @@
  "chat": {
   "method": "拟声：chatter 模仿人叽叽喳喳的说话声，chat 是它的缩略——闲聊、聊天。"
  },
+ "cheap": {
+  "method": "古英语 cēap 意为‘交易、市价’；good cheap 即‘买得划算’，故 cheap 指便宜的、廉价的，引申为不值钱的、可鄙的；副词便宜地。"
+ },
  "cheat": {
   "method": "与 escheat（财产复归国家）同源，源于 ex- + cadere（落）：可联想经手者侵吞→欺骗、作弊。"
  },
+ "check": {
+  "method": "源自波斯语 shāh（国王），经国际象棋‘将军’入英语：将军即制止对方 → 阻止、检查、核对；美式又指支票、寄存、托运。"
+ },
+ "cheek": {
+  "method": "古英语 ċēace 指‘颊、颚’，或与‘咀嚼’同源：脸两侧的柔软部分 → 颊、脸蛋；引申为厚颜。"
+ },
  "cheer": {
   "method": "源自古法语 chiere“脸、面容”：脸色好→心情愉快→欢呼、打气；晚期拉丁 cara 也是“头、脸”。"
+ },
+ "cheese": {
+  "method": "源自拉丁 cāseus（奶酪），经西日耳曼语入古英语 ċīese：乳酪。"
  },
  "chef": {
   "method": "法语 chef ← 拉丁 caput(头) → 厨房的头儿 → 厨师；与 chief(首领) 同源"
@@ -1889,8 +2196,17 @@
    }
   ]
  },
+ "chest": {
+  "method": "源自希腊 kístē（箱子）→ 拉丁 cista → 古英语 ċest：箱、柜 → 衣柜；同一词也指胸、胸部。"
+ },
  "chew": {
   "method": "古英语 ċēowan“咀嚼”，与德语 kauen 同源；咀嚼食物时可引申为“细想、琢磨”。"
+ },
+ "chicken": {
+  "method": "联想：由 chick（小鸡）记 chicken，末尾多 -en 帮助记拼写；古英语 ċicen 来源不确定：小鸡、鸡肉。"
+ },
+ "child": {
+  "method": "古英语 ċild 源自日耳曼语 *kelþaz（子宫、胎儿）：从母体生出的人 → 孩子；引申为产物、追随者。"
  },
  "chill": {
   "method": "与 cool、cold 同源，PIE *gel- 表“寒冷”；chill 是一阵寒意，也可作动词“使变冷”。"
@@ -1901,6 +2217,12 @@
  },
  "chin": {
   "method": "联想：chin 读音近“亲”，亲亲下巴；注意与 shin（小腿）只差首字母。"
+ },
+ "china": {
+  "method": "源自国名 China（中国）：中国产的瓷器 → 瓷器；作形容词指中国的。"
+ },
+ "chocolate": {
+  "method": "联想：音译词，按 cho-co-late 三段记拼写，choco 也让人想到可可：巧克力；形容词巧克力制的。"
  },
  "choice": {
   "trans": [
@@ -1916,13 +2238,17 @@
     "pos": "",
     "cn": "该命令用于提示用户作出选择，决定批处理文件的流程"
    }
-  ]
+  ],
+  "method": "源自古法语 chois（选择），与 choose 同源：选出来的 → 选择、选择权、精选品；形容词精选的、上等的、挑三拣四的。"
  },
  "choir": {
   "method": "chor(希腊语 khoros 歌舞队) 受 chorus 影响拼作 choir → 唱诗班"
  },
  "choke": {
   "method": "联想：读音像“抽咳”——喉咙被堵住时又抽气又咳嗽，即噎住、窒息；引申为阻塞、抑制。"
+ },
+ "choose": {
+  "method": "古英语 ċēosan 源自日耳曼语 *keusaną（检验、挑选），印欧词根 *ǵews- 意为‘品尝、尝试’：尝过再挑 → 选择、宁愿；不及物作出选择、愿意。"
  },
  "chop": {
   "method": "拟声：chop 读音短促，收尾的 -p 像刀“咔嚓”砍下，故为剁、砍。"
@@ -1940,14 +2266,29 @@
  "chronicle": {
   "method": "chron(时间，希腊语 khronos) ＋ -icle(名词后缀) → 按时间顺序记录 → 编年史，年代记"
  },
+ "church": {
+  "method": "源自希腊 kyriakós（属于主的），kyrios 意为主、统治者：主的房屋 → 教堂、教会、礼拜；形容词教堂的。"
+ },
  "cigar": {
   "method": "联想：cigar 形似 cigarette（香烟）去掉 -ette；更粗大的那根就是雪茄。"
+ },
+ "cigarette": {
+  "method": "法语 cigare（雪茄）+ -ette（指小）：小雪茄 → 香烟、纸烟。"
  },
  "cinema": {
   "method": "cinématographe 的缩略：希腊 kinema(运动) + graph(记录) → 记录运动的影像 → 电影，电影院"
  },
+ "circle": {
+  "method": "拉丁 circulus 是 circus（圆圈）的指小形式，源自希腊 kírkos（环）：圆周、圈子、范围、循环；动词环绕、盘旋。"
+ },
+ "circuit": {
+  "method": "拉丁 circum（环绕）+ ire（走）→ circuitus：绕行一圈 → 环行道、巡回；电流绕行的路径 → 电路。"
+ },
  "circulate": {
   "method": "拉丁语 circulus 是“圆圈”：circulāre 绕圈、使成环 → circulate 循环、流通；消息绕圈传开→传播。"
+ },
+ "citizen": {
+  "method": "古法语 cite（城市）+ -ien（人）：城里人 → 市民；享有权利的城邦成员 → 公民。"
  },
  "citizenship": {
   "method": "citizen（公民）+ -ship（身份、状态）→ 公民身份；也指公民的权利与义务。",
@@ -1958,8 +2299,14 @@
    }
   ]
  },
+ "city": {
+  "method": "拉丁 cīvitās（公民全体）源自 cīvis（公民）：公民聚居之地 → 城市。"
+ },
  "civic": {
   "method": "civ(公民) ＋ ic → 公民的"
+ },
+ "civil": {
+  "method": "拉丁 cīvīlis 源自 cīvis（公民）：公民的、市民的；公民相处应有的 → 有礼貌的。"
  },
  "civilian": {
   "method": "civil(公民的)＋ian(人) → 公民身份的人 → 平民，百姓"
@@ -1969,6 +2316,9 @@
  },
  "clap": {
   "method": "拟声：clap 读起来像「啪」的一声——拍手、鼓掌，也指啪地关上。"
+ },
+ "class": {
+  "method": "拉丁 classis 原指被召集的公民队伍（印欧词根 *kelh₁- 呼叫）：被划出的一群 → 阶级、种类、班级、课；动词分类。"
  },
  "classic": {
   "method": "class（等级）+ -ic：属于最高等级的→最优秀的、典型的、标准的；最高等级的文艺作品→经典、名著；传统典雅的。"
@@ -1982,14 +2332,26 @@
  "classmate": {
   "method": "class（班级）+ mate（同伴）：在同一个班级里的同伴，即同班同学。"
  },
+ "classroom": {
+  "method": "class（班级、课）+ room（房间）：上课的房间 → 教室。"
+ },
+ "clause": {
+  "method": "拉丁 clausula 源自 claudere（关闭）：闭合的语段 → 子句；合同里的一条 → 条款。"
+ },
  "claw": {
   "method": "古英语 clawu（爪），源自原始日耳曼语 *klawō；claw 即爪、用爪抓。"
  },
  "clay": {
   "method": "源自 PIE 词根 *gleyH-“粘、贴”，与 glue（胶水）同源——黏土（clay）就是能粘住的东西。"
  },
+ "clean": {
+  "method": "古英语 clǣne 意为‘洁净、纯净、清楚’，或与印欧‘闪光’有关：干净的、清白的、简洁的；动词清理；副词清洁地，名词打扫。"
+ },
  "cleanse": {
   "method": "clean(干净)＋-se(动词后缀) → 使干净 → 清洁，净化"
+ },
+ "clear": {
+  "method": "拉丁 clārus（明亮、清楚）经古法语 cler 入英语：清澈的、清楚的、明确的；动词澄清、清除；不及物放晴，名词空隙。"
  },
  "clear-cut": {
   "method": "clear（清楚、明确）+ cut（切）→ 切得干净利落、边界分明 → 轮廓清晰的、明确的。",
@@ -2027,8 +2389,14 @@
  "climate": {
   "method": "希腊语 klíma 本义'倾斜'，原指纬度：由纬度决定的冷热→气候；引申风气、气氛。"
  },
+ "climb": {
+  "method": "古英语 climban 源自日耳曼语 *klimbaną（攀爬），与‘黏附’同源：手脚贴住往上 → 攀登、爬、上升；名词攀登、爬升。"
+ },
  "cling": {
   "method": "源自古英语 clingan「粘住、依附」，与 clump 同源 → 紧紧抓住、依恋、坚持。"
+ },
+ "clinic": {
+  "method": "希腊 klinē（床）+ -ikos：床边诊治 → 诊所；临床教学。"
  },
  "clip": {
   "method": "一词两源：夹住义来自古英语 clyppan（紧抱、扣住）；剪义来自古诺尔斯语 klippa（剪羊毛、剪发）。"
@@ -2036,8 +2404,14 @@
  "cloak": {
   "method": "cloak 与 clock 同源，源自中世纪拉丁 clocca「钟」：斗篷张开像钟形 → 斗篷；引申为掩护"
  },
+ "clock": {
+  "method": "中世纪拉丁 clocca（钟）可能源自凯尔特语：报时的钟 → 时钟、计时器；动词记时、记录时间。"
+ },
  "clog": {
   "method": "词源（一说）：中古英语 clog 指拴在牲畜腿上的坠物 → 拖住脚步 → 阻塞，障碍"
+ },
+ "close": {
+  "method": "拉丁 claudere（关闭）经古法语 clos 入英语：关上 → 关闭、结束；关得近 → 靠近的、亲密的、严密的、秘密的；名词结束，副词接近地。"
  },
  "cloth": {
   "method": "古英语 clāþ(布、衣物) → 布；与 clothes(衣服) 同源"
@@ -2045,14 +2419,35 @@
  "clothe": {
   "method": "古英语 *clāþian，源自原始日耳曼语 *klaiþōną「给……穿衣」，与 cloth（布）、clad（穿……的）同源——用布裹身即穿衣。"
  },
+ "clothes": {
+  "method": "cloth（布）的复数 clothes：用布做成的东西 → 衣服。"
+ },
+ "cloud": {
+  "method": "古英语 clūd 本指‘石堆、土丘’（日耳曼语 *klūtaz 团块）：后指天上成团的云；引申为阴影、烟雾、疑团；动词笼罩、使阴沉。"
+ },
  "clown": {
   "method": "联想：clown 与 crown（王冠）形近——戴不上王冠的乡下人，成了马戏团小丑；原义指笨拙的乡下人。"
+ },
+ "club": {
+  "method": "古诺尔斯语 klubba（棍棒）源自日耳曼语 *klumpô（团块）：木棍、球棒；联想：一群人聚成团 → 俱乐部；动词用棍打、联合。"
  },
  "clumsy": {
   "method": "联想：clum- 像「笨手笨脚被绊住」；词源不确定，一般认为与古词 clumse「笨拙的人」有关 → 笨拙的。"
  },
+ "coach": {
+  "method": "源自匈牙利小镇 Kocs：当地造的四轮马车 → 四轮大马车；联想：教练像驾车人把学员带向目标，故又指教练、训练、指导。"
+ },
+ "coal": {
+  "method": "古英语 col 源自日耳曼语 *kulą（炭），印欧词根 *ǵwelH- 意为‘燃烧、发光’：煤、木炭；动词加煤。"
+ },
  "coarse": {
   "method": "由 course（常规、进程）的形容词用法分化而来：寻常的 → 普通的 → 不精细的 → 粗糙、粗俗。"
+ },
+ "coast": {
+  "method": "拉丁 costa（肋骨、侧边）经古法语 coste 入英语：陆地的侧边 → 海岸；沿坡滑行 → 滑坡；动词沿海岸而行、滑行。"
+ },
+ "coat": {
+  "method": "古法语 cotte（外衣）源自拉丁 cotta，日耳曼语 *kuttô 意为‘毛织物’：外套；引申为覆盖层 → 涂上、覆盖。"
  },
  "cock": {
   "method": "词源：可能为拟声词，模仿公鸡的啼叫 → 公鸡、雄禽；引申指龙头、头目，另有干草堆义"
@@ -2063,8 +2458,14 @@
  "coconut": {
   "method": "coco(椰子树) ＋ nut(坚果) → 椰子（椰树结的坚果）"
  },
+ "code": {
+  "method": "拉丁 cōdex 本指‘树干、木板’，古人涂蜡写字其上 → 法典、法规；按规则编排 → 代码、密码；动词编码。"
+ },
  "coexist": {
   "method": "co(共同) ＋ exist(存在) → 共同存在 → 共存"
+ },
+ "coffee": {
+  "method": "经荷兰语 koffie、意大利语 caffè、土耳其语 kahve 源自阿拉伯语 qahwa：咖啡；也指咖啡色。"
  },
  "cohesion": {
   "method": "拉丁语 cohaesiō 来自 cohaereō：co-（一起）+ haereō（黏附）+ -iō（名词后缀）→ 黏在一起，即结合、内聚。"
@@ -2072,8 +2473,14 @@
  "coil": {
   "method": "联想：coil 中含 oil（油），想象一圈圈浸油的线圈；故 coil＝线圈、盘绕。"
  },
+ "coin": {
+  "method": "拉丁 cuneus（楔子）→ 古法语 coigne（铸币模子）：模子压出的钱 → 硬币、货币；动词铸币，引申为创造、杜撰。"
+ },
  "coincidence": {
   "method": "coincide(同时发生、一致) ＋ -ence(名词后缀) → 巧合；一致"
+ },
+ "cold": {
+  "method": "古英语 cald 源自日耳曼语 *kaldaz（冷），印欧词根 *gel- 意为‘结冰’：寒冷的、冷淡的、冷静的；名词感冒、寒冷；副词完全地。"
  },
  "collaborate": {
   "method": "拉丁 col-（con-，共同）+ labōrāre（劳作）→ 一起干活 → 合作；也可指勾结。"
@@ -2081,8 +2488,14 @@
  "collar": {
   "method": "来自拉丁语 collum（脖子）：套在脖子上的东西 → 衣领、颈圈；动词即“抓住衣领” → 控制。"
  },
+ "collect": {
+  "method": "拉丁 com-（一起）+ legere（收集）→ colligere：收拢到一起 → 收集、聚集、搜集；形容词/副词由收件人付款（的）。"
+ },
  "collective": {
   "method": "col(共同，com-) ＋ lect(收集) ＋ -ive → 收集到一起的 → 集体的，共同的"
+ },
+ "college": {
+  "method": "拉丁 collēgium 源自 collēga（同僚）：同僚团体 → 学会；后指学院、大学。"
  },
  "colon": {
   "method": "联想：冒号（:）；冒号义源自希腊语 kōlon（分句、肢体），结肠义来自另一个词 kólon（大肠），同形不同源。"
@@ -2093,14 +2506,29 @@
  "colony": {
   "method": "拉丁 colonus(耕种者) ← colere(耕作) → 外出垦殖的人群 → 移民队；殖民地"
  },
+ "colour": {
+  "method": "联想：colour 是 color 的英式拼写，多一个 u，读音相同：颜色、面色、颜料；动词上色、变色、粉饰。"
+ },
+ "column": {
+  "method": "拉丁 columna（柱）源自 columen（顶端、顶峰）：支撑顶部的立柱 → 圆柱、柱形物；排成竖列 → 专栏、纵队、列。"
+ },
  "comb": {
   "method": "古英语 camb，词根义为“齿”（PIE *ǵómbʰos）；梳齿如牙 → 梳子；注意 b 不发音。"
+ },
+ "come": {
+  "method": "古英语 cuman 源自日耳曼语 *kwemaną（来），印欧词根 *gʷem- 意为‘迈步、到达’：过来、来、到达；引申为出现、开始；感叹词喂。"
  },
  "comedy": {
   "method": "komos(狂欢)＋oid(歌) → 狂欢之歌 → 喜剧，有趣的事情"
  },
+ "comfort": {
+  "method": "源自晚期拉丁 confortō（使强壮、安慰）：给予力量 → 安慰；身心安适 → 舒适、安慰者。"
+ },
  "comma": {
   "method": "希腊 κόμμα 原意“切下的一块”（κόπτω“切”）：句子被切开的停顿记号——逗号。"
+ },
+ "comment": {
+  "method": "拉丁 commentum 本指‘发明、编造’，晚期拉丁转指注释、解说：加在文后的说明 → 评论、注解、批评、备注。"
  },
  "commerce": {
   "method": "联想：commerce 中的 merce 近似 market 的 merc，大家共同（com-）在市场做买卖 → 商业、贸易。"
@@ -2113,6 +2541,9 @@
  },
  "committee": {
   "method": "commit（委托；拉丁 con- 共同 + mittere 送）+ -ee（受委托者）：被委派办事的一群人 → 委员会、全体委员。"
+ },
+ "common": {
+  "method": "拉丁 com-（共同）+ 印欧 *mey-（交换）→ commūnis：共同持有的 → 共同的、公共的、通常的、通俗的。"
  },
  "commune": {
   "method": "名词「公社、社区」源自拉丁 communis「共同的」；动词「亲密交谈」也由「共享」引申。",
@@ -2130,6 +2561,9 @@
  },
  "communication": {
   "method": "communicate(共享、交流)+ion：共享信息→通讯、交流、交际；通信工具、交通联系。"
+ },
+ "company": {
+  "method": "古法语 compaignie = compaignon（同伴）+ -ie：同伴关系 → 陪伴、交往、友伴；一群人共同做事 → 公司、连队、一群。"
  },
  "comparable": {
   "method": "compare（比较）＋-able（可…的）：可以拿来比较的；彼此比得上，也就成了类似的。"
@@ -2158,6 +2592,9 @@
  "complaint": {
   "method": "源自拉丁 planctus（哀叹；同源词 plaint 哀诉），经古法语 compleindre 入英语：哀叹不满 → 抱怨、怨言；也指控告。"
  },
+ "complete": {
+  "method": "拉丁 com-（加强）+ pleō（填满）→ complētus：填满的 → 完全的、十足的、完成的；动词完成、使圆满。"
+ },
  "complicate": {
   "method": "com-（一起）+ plic（折叠，拉丁 plicāre）→ 层层折在一起 → 弄复杂、使错综。"
  },
@@ -2169,6 +2606,9 @@
  },
  "compress": {
   "method": "com(一起) ＋ press(压) → 压在一起 → 压缩，压紧"
+ },
+ "comprise": {
+  "method": "古法语 compris 是 comprendre（包含）的过去分词，源自拉丁 comprehendere（com- 一起 + prehendere 抓住）：抓在一起 → 包含、构成。"
  },
  "comrade": {
   "method": "源自西班牙语 camarada「同屋的人」（camera 房间）→ 同志、伙伴。"
@@ -2185,11 +2625,17 @@
  "concentration": {
   "method": "con-（共同）+ centr（中心）+ -ation：聚到同一中心 → 集中、专注；液体变浓 → 浓缩、浓度。"
  },
+ "concert": {
+  "method": "联想：concert 与 concerto（协奏曲）同源：音乐会上乐手一起演奏，声音和谐而成和声，步调一致；动词即协力、协调。"
+ },
  "concrete": {
   "method": "con(共同) ＋ cret(生长，拉丁 crescere) → 一起长成 → 凝结，混凝土；引申为具体的"
  },
  "concurrent": {
   "method": "con(一起)＋curr(跑，拉丁 currere)＋ent → 一起跑 → 同时发生的"
+ },
+ "condition": {
+  "method": "联想：签合同先谈“条件”，条件决定情况与状态；condition 作动词指以…为条件、决定，也指训练使适应、使健康。"
  },
  "condolence": {
   "method": "con(共同) ＋ dol(痛苦) ＋ ence → 共同分担痛苦 → 哀悼，吊唁"
@@ -2224,6 +2670,9 @@
  "conjunction": {
   "method": "源自拉丁语 coniūnctiō“连接、联合”，动词 coniungere 意为“结合”；语法中起连接作用的词即连词。"
  },
+ "connect": {
+  "method": "con-（一起）+ nect（拉丁 nectere 绑）：把两样东西绑在一起→连接、联合、联系；同源 knot、knit（打结、编织）。"
+ },
  "connection": {
   "method": "con-（共同）+ nect（绑）+ -ion：绑在一起 → 连接、联系；起连接作用的东西 → 连接点；有联系的人 → 亲戚。"
  },
@@ -2246,6 +2695,9 @@
  },
  "conservative": {
   "method": "conserve（保存）+ -ative（…的）：倾向保存旧事物的 → 保守的、守旧的、传统的；名词指保守的人。"
+ },
+ "consider": {
+  "method": "联想：买大件前把价格、需要放在心里仔细想→考虑、思考；心里给某人定了位→认为、把…看作。"
  },
  "considerate": {
   "method": "联想：consider（考虑）+ -ate（形容词后缀），凡事替别人考虑→ 考虑周到的、体贴的。",
@@ -2272,6 +2724,15 @@
  "contagious": {
   "method": "con(相互) ＋ tag(接触) ＋ ious → 一接触就传 → 触染性的，会蔓延的"
  },
+ "contain": {
+  "method": "con-（一起）+ tain（拉丁 tenēre 握住）：把东西握在一起、装在里面→包含、容纳；把自己按住→控制、克制、自制。"
+ },
+ "content": {
+  "method": "与 contain 同源：con-（一起）+ tent（tenēre 握住）→被装在里面的是内容、要旨；心里被填满→满足的；动词使满足、使安心。"
+ },
+ "context": {
+  "method": "联想：一个词看不懂，就把它放回前后的 text（文本）里一起看→上下文、背景、来龙去脉。"
+ },
  "continent": {
   "method": "拉丁 con-（一起）+ tenēre（握持）→ continēre「连成一体」→ 大陆、洲。"
  },
@@ -2281,6 +2742,9 @@
  "continual": {
   "method": "continue（继续）+ -al：源自拉丁语 continuus“连续的”，故为连续的，也指频频发生的。"
  },
+ "continue": {
+  "method": "con-（一起）+ tin（拉丁 tenēre 握住）：一直握在一起、不断开→继续、延续；使继续、使延长。"
+ },
  "contrary": {
   "method": "contra（相反、对抗）+ -ary（形容词后缀）→ 相反的；同根 contrast、contradict。"
  },
@@ -2289,6 +2753,9 @@
  },
  "contrive": {
   "method": "联想：古法语 trover(找到) → 找到办法 → 谋划，设法做到"
+ },
+ "control": {
+  "method": "contra-（相反、对照）+ rotul（拉丁 rotulus 卷轴）：用对照账册核查→控制、管理；引申克制、控制器、操纵装置。"
  },
  "controversial": {
   "method": "contro(相反) ＋ vers(转) ＋ -ial → 双方对着转、针锋相对 → 有争议的"
@@ -2306,14 +2773,23 @@
  "convoy": {
   "method": "con(共同) ＋ voy(路，拉丁语 via) → 一同上路 → 护送，护卫"
  },
+ "cook": {
+  "method": "古英语 cōc 借自拉丁 cocus，源自 PIE *pekʷ-‘煮、变熟’：做饭的人→厨师；动词烹调、煮饭、加热。"
+ },
  "cookie": {
   "method": "荷兰语 koek(蛋糕) ＋ ie(小称后缀) → 小蛋糕 → 饼干，小甜点"
+ },
+ "cool": {
+  "method": "古英语 cōl 源自 PIE *gel-‘冷’：温度低→凉爽；人冷静不发热→冷静的、冷淡的；动词使冷却、平息。"
  },
  "cooperate": {
   "method": "co-（共同）+ oper（工作，拉丁 opus/operis）+ -ate → 一起工作 → 合作、配合。"
  },
  "coordinate": {
   "method": "co-（共同）+ 拉丁 ōrdinō（排列）→ 一起排列→ 协调；坐标即“并列定位”。"
+ },
+ "cop": {
+  "method": "联想：cop 作动词有“抓住、逮住”的口语义，负责抓人的就是 cop：警官。"
  },
  "cope": {
   "method": "联想：cope 借自法语 coper‘砍、击’；想象迎面招架打击 → 应付、处理（cope with）。"
@@ -2331,7 +2807,8 @@
     "pos": "v",
     "cn": "复印，抄袭，复制"
    }
-  ]
+  ],
+  "method": "拉丁 cōpia 本义‘大量、丰富’（co- 一起 + ops 财富）：抄写使副本增多→副本、一册；动词复印、复制、抄袭。"
  },
  "copyright": {
   "method": "copy（复制）+ right（权利）→ 复制的权利→ 版权、著作权。"
@@ -2342,12 +2819,27 @@
  "cord": {
   "method": "拉丁 chorda 来自希腊语 khordē（肠线、琴弦）：用肠衣搓成的细绳 → 索、粗线"
  },
+ "core": {
+  "method": "联想：吃苹果啃到中间是果心（core），由果心引申事物最中心的部分→核心、要点；动词挖去果核。"
+ },
+ "corn": {
+  "method": "古英语 corn 源自 PIE *ǵr̥h₂nóm‘谷粒’：谷物、谷类；美语常指玉米；脚上磨出的硬粒→鸡眼。"
+ },
+ "corner": {
+  "method": "古法语 corne 源自拉丁 cornū‘角’：两墙相交成的角→角落、转角；把人逼到角里→使陷入绝境。"
+ },
  "cornerstone": {
   "method": "corner（墙角）+ stone（石头）：砌在墙角、承托两墙交会的石头——奠基石；喻指基础。",
   "phonetic": "'kɔ:nəstəun"
  },
  "corporal": {
   "method": "下士义源自法语 caporal ← 意大利语 caporale ← capo(头目)：一个小队的头目 → 下士（与「肉体的」同形不同源）"
+ },
+ "corporation": {
+  "method": "拉丁 corpus（身体）+ -ation：法律上被当作一个“整体之身”、独立于成员的组织→公司、法人团体。"
+ },
+ "correct": {
+  "method": "con-（一起）+ rect（拉丁 regere 使直）：把弯的弄直→改正、订正；弄直后无误→正确的、合适的。"
  },
  "correspond": {
   "method": "cor(=com，共同)＋respond(回应) → 彼此回应 → 符合，通信，相当"
@@ -2361,6 +2853,9 @@
  "corresponding": {
   "method": "correspond（相符、通信）+ -ing——能对得上的，即相应的、符合的。"
  },
+ "corridor": {
+  "method": "意大利语 corridore 源自 correre‘跑’：让人奔走的长通道→走廊、回廊；也指狭长的地带。"
+ },
  "cosmetic": {
   "method": "cosm(秩序、装饰) + -etic → 用于修饰打扮 → 化妆品"
  },
@@ -2369,6 +2864,12 @@
  },
  "cosmos": {
   "method": "源自希腊语 kosmos，本义「秩序」，由井然有序的整体引申为「宇宙」；大波斯菊也同源。"
+ },
+ "cost": {
+  "method": "拉丁 constō（con- 一起 + stāre 站立）：价格“站定”在那里→费用、代价；动词花费、使失去。"
+ },
+ "cottage": {
+  "method": "古法语 cot（小屋）+ -age（处所）：搭起来的小屋→小屋、茅舍。"
  },
  "cotton": {
   "method": "联想：cotton 发音像“可弹”，棉花可弹成松软棉絮 → 棉花"
@@ -2379,8 +2880,14 @@
  "cough": {
   "method": "拟声：模仿咳嗽的「喀」声，古英语 *cohhian 即由此而来；注意 -ough 在这里读 /f/。"
  },
+ "could": {
+  "method": "源自古英语 cūþe，是 can 的过去式（能够）；拼写里的 l 是 16 世纪仿 should、would 添上去的，并不发音。"
+ },
  "council": {
   "method": "拉丁 consilium（商议、计划）：一起商议办事的机构 → 理事会、委员会；注意与 counsel（忠告）区分。"
+ },
+ "count": {
+  "method": "计算义源自拉丁 computō‘计算’（com- 一起 + putō 估量）：把数合在一起→计算、计数、合计、视为；‘伯爵’是同形另一词。"
  },
  "countdown": {
   "method": "count（计数）+ down（向下）→ 数字往下数，倒计数、倒计时。",
@@ -2410,13 +2917,26 @@
     "pos": "adj",
     "cn": "乡下的，农村的"
    }
-  ]
+  ],
+  "method": "古法语 contree 源自俗拉丁 *(terra) contrāta‘对面铺展的土地’（contrā 对着）：眼前那片地方→国家、地区、乡村。"
+ },
+ "countryside": {
+  "method": "country（乡村、国家）+ -side（一带）：城市外的那片乡野→乡下地方、乡村，也指乡下居民。"
+ },
+ "county": {
+  "method": "古法语 counté 源自拉丁 comitātus‘伯爵的辖区’，comes 即伯爵：伯爵管辖的地方→郡、县。"
  },
  "coup d'état": {
   "method": "coup(打击) ＋ d'(的) ＋ état(国家) → 对国家的一击 → 政变"
  },
+ "couple": {
+  "method": "联想：couple 本指“一对”：情侣成对、夫妇成双，a couple of 引申为几个；动词把两样东西配成一对→连接、使成婚。"
+ },
  "courage": {
   "method": "拉丁 cor(心) + -age → 发自心底的力量 → 勇气，胆量"
+ },
+ "course": {
+  "method": "拉丁 cursus 源自 currō‘跑’：跑的路→路线、道路；跑完的流程→过程、课程；上菜一道也算一程。"
  },
  "court": {
   "trans": [
@@ -2437,6 +2957,15 @@
  },
  "courtyard": {
   "method": "court（庭院）+ yard（场地）→ 围起来的场地，即庭院、天井。"
+ },
+ "cousin": {
+  "method": "联想：英语的 cousin 不分堂表、不分男女，凡是同辈的旁系亲属都叫 cousin：堂/表兄弟姐妹。"
+ },
+ "cover": {
+  "method": "拉丁 cooperiō（co- 加强 + operīre 盖上）：完全盖住→覆盖；盖子、封面；掩盖、掩护、包括。"
+ },
+ "cow": {
+  "method": "古英语 cū 源自 PIE *gʷṓws‘牛’：母牛、母兽；同形动词 cow 另有来源，义为吓唬、威胁。"
  },
  "cowboy": {
   "method": "cow（牛）+ boy（男孩、小伙）→ 放牛的男孩 → 牛仔、牧童。"
@@ -2462,6 +2991,9 @@
     "cn": "[计] 破解者，入侵者"
    }
   ]
+ },
+ "craft": {
+  "method": "古英语 cræft‘力量、技能’：手上功夫→技艺、手艺；心思用在歪处→诡计；动词精心制作。"
  },
  "cram": {
   "method": "来源：古英语 crammian「塞满」← 日耳曼语「填塞」→ 塞满，猛吃"
@@ -2489,6 +3021,18 @@
  "crave": {
   "method": "词源：古英语 crafian(恳求、索求) → 强烈地想要 → 渴望，热望；恳求"
  },
+ "crazy": {
+  "method": "craze（压碎、使裂）+ -y：脑子像被压裂一样→发狂的；对某事热到失去理智→狂热的。"
+ },
+ "cream": {
+  "method": "古法语 creme 源自晚期拉丁 crāmum‘奶油’，并受 chrisma‘油膏’影响：牛奶上层→奶油；涂脸的油膏→面霜。"
+ },
+ "create": {
+  "method": "拉丁 creō‘创造、生出’的过去分词 creātus → create：创造、建造；引申引起、任命。"
+ },
+ "creature": {
+  "method": "create（创造）+ -ure（名词后缀）：被创造出来的东西→生物、动物、创造物；口语也可指人。"
+ },
  "credential": {
   "method": "cred(相信) ＋ -ential(…的) → 让人相信的东西 → 凭据，证明书，国书"
  },
@@ -2513,11 +3057,20 @@
  "crocodile": {
   "method": "联想：croc 是英语口语里「鳄鱼」的简称，记住 croc 就能带出 crocodile；-odile 顺读近「呆尔」——呆呆趴在河边的鳄鱼。"
  },
+ "crop": {
+  "method": "古英语 cropp 指植物顶端、鸟的嗉囊：从顶上收下的谷物→农作物、收成；剪到齐顶→平头；动词收割、修剪。"
+ },
+ "cross": {
+  "method": "拉丁 crux‘十字架’经古诺斯语 kross 进入英语：十字形→交叉、十字路口；背十字架→磨难；交叉而过→横过；动植物的交叉→杂交；脾气拧着→生气的。"
+ },
  "crouch": {
   "method": "crouch 与 crook(弯曲、钩) 同源 → 身子弯钩下去 → 蹲伏，蜷缩"
  },
  "crow": {
   "method": "拟声：crow 模仿乌鸦粗哑的叫声 → 啼叫；乌鸦"
+ },
+ "crown": {
+  "method": "古法语 corone 源自拉丁 corōna‘王冠、花环’：王冠→王权、顶点；动词加冕、使成王、居…之顶。"
  },
  "crude": {
   "method": "源自拉丁 crudus「生的、未加工的」，与 raw(生的)同源 → 天然的、粗糙的"
@@ -2537,6 +3090,9 @@
  "crust": {
   "method": "词源：拉丁 crusta(坚硬外层) → 外壳、面包皮、地壳；结硬皮"
  },
+ "cry": {
+  "method": "古法语 crier 源自俗拉丁 *crītāre‘呼喊’：大声叫→叫喊、叫声；哭出眼泪→哭、哭声。"
+ },
  "crystal": {
   "method": "希腊 krystallos(清冰) ← kryos(霜) → 像冰一样透明的石头 → 水晶；结晶"
  },
@@ -2552,6 +3108,9 @@
  "cucumber": {
   "method": "联想：cucu 重复音节来自拉丁语 cucumis（黄瓜）；口语可简称 cuke，短语 cool as a cucumber 意为「十分冷静」。"
  },
+ "cue": {
+  "method": "联想：舞台上演员等提示，提示人给一个词（cue）他就接下去→提示、线索；动词给…暗示。"
+ },
  "cuisine": {
   "method": "cuisine ← 拉丁 coquīna(厨房) → 厨房里做出的东西 → 烹饪，烹调风格"
  },
@@ -2563,6 +3122,9 @@
  },
  "cunning": {
   "method": "词源：古英语 cunnan(知道、会) ＋ -ing → 精明会来事 → 狡猾的，巧妙的"
+ },
+ "cup": {
+  "method": "古英语 cuppe 借自晚期拉丁 cuppa，源自拉丁 cūpa‘桶、容器’：杯子、茶杯；优胜杯；动词使成杯状。"
  },
  "cupboard": {
   "method": "词根：cup（杯子）+ board（板、桌）→ 放杯盘的板/柜；拼写保留 cup，读音却同化成 /ˈkʌbəd/。"
@@ -2579,11 +3141,23 @@
  "curl": {
   "method": "联想：curl 读似‘卷儿’，头发卷成圈就是 curl；c 的形状也像弯钩。"
  },
+ "currency": {
+  "method": "current（流通的、当前的）+ -cy：正在流通的东西→通货、货币；也指流通、通用。"
+ },
  "current": {
   "method": "拉丁 currere（跑）+ -ent：正在跑的 → 当前的；水流、电流在‘跑’ → 潮流、电流；流行、趋势皆由此引申。"
  },
+ "curriculum": {
+  "method": "拉丁 curriculum 本义‘跑道、路线’（源自 currō 跑）：跑完的一圈圈课程→全部课程。"
+ },
  "curtail": {
   "method": "curt(短) + -ail → 使变短 → 缩减，剥夺"
+ },
+ "curtain": {
+  "method": "古法语 cortine 源自晚期拉丁 cōrtīna‘帘子’：遮窗的布→窗帘、幕；动词装帘子、遮蔽。"
+ },
+ "curve": {
+  "method": "拉丁 curvus‘弯曲的’：弯成的线→曲线；动词使弯曲、成曲形；棒球里的曲线球。"
  },
  "cushion": {
   "method": "拉丁语 coxa（髋、大腿）→ 垫在臀髋下的软垫；引申为缓冲、掩盖。"
@@ -2591,9 +3165,18 @@
  "custody": {
   "method": "custod(源自拉丁 custos：看守者) ＋ y → 看守、保管 → 监护；拘留"
  },
+ "custom": {
+  "method": "拉丁 consuētūdō（con- 一起 + suēscō 变得习惯）：长期形成的做法→习惯、风俗；海关；形容词定制的。"
+ },
+ "customer": {
+  "method": "custom（习惯）+ -er：习惯来同一家商店买东西的人→顾客、消费者。"
+ },
  "customs": {
   "forms": {},
   "method": "custom（习俗、惯例）的复数；customs 专指海关、关税，可联系“按惯例征收的税”。"
+ },
+ "cut": {
+  "method": "联想：cut 短促像刀切；切口、割伤；减少、削减、删节都像从整体“切掉一块”；抄近路是切过街区。"
  },
  "cute": {
   "method": "由 acute（敏锐的）去掉词首 a 缩成：原指精明敏锐，19 世纪美国学生语转指娇小可爱、漂亮。"
@@ -2603,6 +3186,9 @@
  },
  "cylinder": {
   "method": "kylind(滚动) → 滚成圆筒 → 圆柱体，气缸"
+ },
+ "dad": {
+  "method": "拟声：婴儿最早会发的 da-da 声，很多语言都拿它叫爸爸；dad 即爸爸、爹爹。"
  },
  "dairy": {
   "method": "dey（挤奶女工）+ -ery（场所）→ 挤奶、卖奶的地方 → 乳牛场、乳品店。"
